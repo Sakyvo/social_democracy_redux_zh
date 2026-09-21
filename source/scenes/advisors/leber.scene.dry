@@ -1,13 +1,13 @@
-title: Julius Leber
+title: 尤利乌斯·勒贝尔
 is-pinned-card: true
 tags: advisor, neorevisionist
 card-image: img/portraits/LeberJulius.jpg
 view-if: leber_advisor = 1
 new-page: true 
 
-= Julius Leber
+= 尤利乌斯·勒贝尔
 
-Leber is a former army officer who turned against the military leaders of the Kapp Putsch in 1920, helping us put down the army's attempted coup. He is in favor of expanded democracy and building a broad popular base for the SPD.
+勒贝尔曾是一名军官,1920 年他转而反对卡普政变中的军界首领,协助我们镇压了这场军队发动的政变企图。他主张扩大民主,并为民党的社民党打造广泛的民众基础。
 
 - @democratic_rally
 - @weimar_rally
@@ -15,60 +15,60 @@ Leber is a former army officer who turned against the military leaders of the Ka
 - @support_peoples_party
 - @build_peoples_party
 - @campaigning_peoples_party
-- @root: Return to main
+- @root: 返回主界面
 
 @democratic_rally
-title: Rally for democracy
-subtitle: Rally our party and the German people to defend democracy and freedom.
+title: 为民主集会
+subtitle: 动员我党与德国人民,共同捍卫民主与自由。
 view-if: weimar_plan_adopted == 0
 choose-if: advisor_action_timer == 0 
-unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
+unavailable-subtitle: [? if advisor_action_timer > 0 : 距下次顾问行动还有 [+ advisor_action_timer +] 个月。 ?]
 on-arrival: advisor_action_timer = 6; pro_republic += 5; democratization += 1; neorevisionist_strength += 5; reformist_strength += 3; workers_spd += 4*(1-dissent) if democratization >= 4; new_middle_spd += 3*(1-dissent) if democratization >= 4
 
-Leber helps us to rally the people in defense of democracy.
+勒贝尔协助我们动员民众保卫民主。
 
 @weimar_rally
-title: Rally for democracy and the Weimar Plan with our allies!
-subtitle: Rally the German people to defend democracy and the republic and end the economic crisis together with the Weimar parties.
+title: 为民主集会 and the Weimar Plan with our allies!
+subtitle: 与各魏玛政党一道,动员德国人民捍卫民主与共和国,并终结经济危机。
 view-if: weimar_plan_adopted == 1
 choose-if: advisor_action_timer == 0
-unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
+unavailable-subtitle: [? if advisor_action_timer > 0 : 距下次顾问行动还有 [+ advisor_action_timer +] 个月。 ?]
 on-arrival: advisor_action_timer = 6; democratization += 2; moderate_plan_support += 1; workers_spd += ((5*(1-dissent))*(pro_republic/100)); unemployed_spd += ((4*(1-dissent))*(pro_republic/100)); rural_spd += ((3*(1-dissent))*(pro_republic/100)); new_middle_spd += ((3*(1-dissent))*(pro_republic/100)); old_middle_spd += ((3*(1-dissent))*(pro_republic/100)); workers_ddp += 3*(pro_republic/100); unemployed_nsdap -= 2*(pro_republic/100); unemployed_kpd -= 2*(pro_republic/100); rural_z += 4*(pro_republic/100); new_middle_ddp += 4*(pro_republic/100); old_middle_ddp += 3*(pro_republic/100); old_middle_z += 3*(pro_republic/100); workers_nsdap -= 1*(pro_republic/100); workers_kpd -= 1*(pro_republic/100); new_middle_nsdap -= 2*(pro_republic/100); old_middle_nsdap -= 1*(pro_republic/100); peoples_party_support += 1; neorevisionist_strength += 5; left_strength -= 2; left_dissent += 2; kpd_relation -= 5; pro_republic += 4*(((z_relation + ddp_relation)/2)/100); weimar_rallies += 1; weimar_dissent += 1 if weimar_rallies > 3; weimar_dissent += 1 if pro_republic >= 75
 
-Leber helds us rally alongside politicians from Zentrum and the DDP, united behind our economic plan and support of the republic. [? if pro_republic < 40 : Such a show of democratic solidarity bolsters republican forces, but as extremist and anti-democratic rhetoric has recently entered the mainstream, many who hear our message remain unconvinced, and many on the Left of the party even criticize the rally and our alignment with the bourgeois parties. ?] [? if pro_republic > 40 and pro_republic < 60 : Such a show of democratic solidarity bolsters republican forces, helping match the now prevalent anti-democratic rhetoric from the far-left and far-right, though many on the Left oppose our decision to align with the bourgeois parties. ?] [? if pro_republic > 60 : Such a show of democratic solidarity has greatly bolstered republican forces, helping combat the increasingly prevalent anti-democratic rhetoric from the far-left and far-right. Nevertheless, some on the Left of the party still oppose our alignment with the bourgeois parties. ?]
+勒贝尔协助我们与中央党及民主党的政客们一同集会,在支持我们的经济计划与共和国这一立场上团结一致。[? if pro_republic < 40 : 这样一场民主团结的展示壮大了共和派的力量;但由于极端主义与反民主的言论近来已进入主流,许多听到我们主张的人仍然半信半疑,党内左翼的不少人甚至批评这场集会以及我们与资产阶级政党的结盟。 ?] [? if pro_republic > 40 and pro_republic < 60 : 这样一场民主团结的展示壮大了共和派的力量,有助于抗衡如今甚嚣尘上的极左与极右反民主言论,尽管党内左翼的许多人反对我们与资产阶级政党结盟的决定。 ?] [? if pro_republic > 60 : 这样一场民主团结的展示极大地壮大了共和派的力量,有助于对抗日益蔓延的极左与极右反民主言论。尽管如此,党内左翼仍有一些人反对我们与资产阶级政党的结盟。 ?]
 
 @military_affairs
-title: Military affairs
-subtitle: We can set our military policy.
+title: 军事事务
+subtitle: 我们可以制定军事政策。
 choose-if: advisor_action_timer == 0 and spd_in_government and reichswehr_minister_party == "SPD"
-unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?][? if not spd_in_government : The SPD is not in government. ?][? if reichswehr_minister_party != "SPD": The SPD does not have the Reichswehr ministry. ?]
+unavailable-subtitle: [? if advisor_action_timer > 0 : 距下次顾问行动还有 [+ advisor_action_timer +] 个月。 ?][? if not spd_in_government : 社民党不在政府之中。 ?][? if reichswehr_minister_party != "SPD": 社民党并未掌握国防部。 ?]
 on-arrival: advisor_action_timer = 6; last_advisor_action = 1
 go-to: military_policy
 
 @support_peoples_party
-title: Build support for a People's Party
-subtitle: Can we expand our party beyond the industrial working class?
+title: 为全民党争取支持
+subtitle: 我们能否把党的基础扩展到产业工人阶级之外?
 view-if: peoples_party = 0
 choose-if: peoples_party_support <= 4 and advisor_action_timer = 0 and peoples_party == 0
-unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?][? if peoples_party_support > 4: There is already substantial support for a People's Party. ?]
+unavailable-subtitle: [? if advisor_action_timer > 0 : 距下次顾问行动还有 [+ advisor_action_timer +] 个月。 ?][? if peoples_party_support > 4: 党内对全民党已有相当可观的支持。 ?]
 on-arrival: advisor_action_timer = 6; peoples_party_support += 1
 
-We are building up support for the idea of a People's Party.
+我们正在为全民党的理念积累支持。
 
 @build_peoples_party
-title: Building a People's Party
-subtitle: Can we expand our party beyond the industrial working class?
+title: 打造全民党
+subtitle: 我们能否把党的基础扩展到产业工人阶级之外?
 view-if: peoples_party == 0
 choose-if: peoples_party_support >= 3 and advisor_action_timer = 0
-unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?][? if peoples_party_support < 3: There is not enough support for this policy within the party. ?]
+unavailable-subtitle: [? if advisor_action_timer > 0 : 距下次顾问行动还有 [+ advisor_action_timer +] 个月。 ?][? if peoples_party_support < 3: 党内对这项政策的支持还不够。 ?]
 on-arrival: advisor_action_timer = 6; last_advisor_action = 1
 go-to: peoples_party
 
 @campaigning_peoples_party
-title: Campaigning as a People's Party
-subtitle: Campaigning with some of our previously nontraditional demographics.
+title: 以全民党的身份开展宣传
+subtitle: 在我们以往并不传统的部分群体中开展宣传。
 view-if: peoples_party = 1
 choose-if: advisor_action_timer = 0
-unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
+unavailable-subtitle: [? if advisor_action_timer > 0 : 距下次顾问行动还有 [+ advisor_action_timer +] 个月。 ?]
 on-arrival: advisor_action_timer = 6; last_advisor_action = 1
 go-to: peoples_party_campaigning

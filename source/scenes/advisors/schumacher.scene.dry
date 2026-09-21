@@ -1,44 +1,44 @@
-title: Kurt Schumacher
+title: 库尔特·舒马赫
 is-pinned-card: true
 tags: advisor, neorevisionist
 card-image: img/portraits/SchumacherKurt.jpg
 view-if: schumacher_advisor = 1
 new-page: true 
 
-= Kurt Schumacher
+= 库尔特·舒马赫
 
-A Great War veteran and a neorevisionist leader, Kurt Schumacher argues for a strong resistance against the Nazis.
+身为大战老兵与新修正主义派领袖,库尔特·舒马赫主张对纳粹进行坚决抵抗。
 
 - @emergency_fundraising
 - @build_reichsbanner
 - @moderate_economic_plan
-- @root: Return to main
+- @root: 返回主界面
 
 @emergency_fundraising
-title: Emergency Fundraising
-subtitle: An emergency infusion of resources.
+title: 紧急募款
+subtitle: 紧急注入一笔资源。
 choose-if: advisor_action_timer = 0
-unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
+unavailable-subtitle: [? if advisor_action_timer > 0 : 距下次顾问行动还有 [+ advisor_action_timer +] 个月。 ?]
 on-arrival: advisor_action_timer = 6; resources += dues
 #view-if: difficulty < 1
 
 # Schumacher's emergency fundraising is available on all difficulties.
 
-We have gained +[+ dues +] resources.
+我们获得了 +[+ dues +] 点资源。
 
 @build_reichsbanner
-title: Reichsbanner
-subtitle: Schumacher supports providing more resources to the Reichsbanner.
+title: 国旗团
+subtitle: 舒马赫支持向国旗团提供更多资源。
 choose-if: advisor_action_timer = 0
-unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
+unavailable-subtitle: [? if advisor_action_timer > 0 : 距下次顾问行动还有 [+ advisor_action_timer +] 个月。 ?]
 on-arrival: advisor_action_timer = 6; reichsbanner_timer -= 6; last_advisor_action = 1
 go-to: reichsbanner
 
 @moderate_economic_plan
-title: Support the reformist economic plan
-subtitle: Call for a limited program of job creation without deficit spending.
+title: 支持改良派经济计划
+subtitle: 呼吁推行一项有限的、不依赖赤字支出的创造就业计划。
 choose-if: advisor_action_timer = 0 and moderate_plan_adopted = 0 and black_thursday_seen = 1
-unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?] [? if moderate_economic_plan = 0 : We have already adopted the reformist economic plan. ?] [? if black_thursday_seen == 0 : We are not currently in an economic crisis. ?]
+unavailable-subtitle: [? if advisor_action_timer > 0 : 距下次顾问行动还有 [+ advisor_action_timer +] 个月。 ?] [? if moderate_economic_plan = 0 : 我们已经采纳了改良派经济计划。 ?] [? if black_thursday_seen == 0 : 我们目前并未处于经济危机之中。 ?]
 on-arrival: advisor_action_timer = 6
 go-to: crisis_program.support_moderate
 

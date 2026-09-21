@@ -1,32 +1,32 @@
-title: Paul Levi
+title: 保罗·列维
 is-pinned-card: true
 tags: advisor, left
 card-image: img/portraits/LeviPaul.jpg
 view-if: levi_advisor = 1
 new-page: true 
 
-= Paul Levi
+= 保罗·列维
 
-Levi is a former leader of the KPD who left over their devotion to violence and revolutionary adventurism.
+列维曾经是德国共产党的领导人,因不满该党对暴力与革命冒险主义的执着而离开。
 
 - @building_the_left
 - @kpd_cooperation
-- @root: Return to main
+- @root: 返回主界面
 
 @building_the_left
-title: Building the Left
-subtitle: Push the SPD to the left.
-unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
+title: 壮大左翼
+subtitle: 把社民党推向左侧。
+unavailable-subtitle: [? if advisor_action_timer > 0 : 距下次顾问行动还有 [+ advisor_action_timer +] 个月。 ?]
 choose-if: advisor_action_timer = 0
 on-arrival: advisor_action_timer = 6; left_strength += 10; left_dissent -= 8; reformist_dissent += 3
 
-We have increased the strength of the left faction with the SPD. This raised concern among the moderate reformists in the party.
+我们增强了社民党内左翼派系的力量。这引起了党内温和改良派的担忧。
 
 @kpd_cooperation
-title: Cooperation with the KPD
-subtitle: Any cooperation between the parties requires compromise from the KPD as well as the SPD.
-unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
+title: 与共产党合作
+subtitle: 两党之间的任何合作,都需要共产党与社民党双方作出妥协。
+unavailable-subtitle: [? if advisor_action_timer > 0 : 距下次顾问行动还有 [+ advisor_action_timer +] 个月。 ?]
 choose-if: advisor_action_timer = 0
 on-arrival: advisor_action_timer = 6; left_strength += 5; kpd_relation += 6*(1-dissent); reformist_dissent += 3; communist_coalition += 1 if kpd_cooperation_seen <= 1; kpd_cooperation_seen += 1
 
-Levi attempts to reach out to his former colleagues to dissuade the KPD from their current extreme Stalinist path. Some concessions are extracted.
+列维试图联系昔日的同志们,劝说共产党放弃其当前极端的斯大林主义路线。他争取到了一些让步。

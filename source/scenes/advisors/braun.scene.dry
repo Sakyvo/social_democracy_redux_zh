@@ -1,54 +1,54 @@
-title: Otto Braun
+title: 奥托·布劳恩
 is-pinned-card: true
 tags: advisor, reformist
 card-image: img/portraits/BraunOtto.jpg
 view-if: braun_advisor = 1
 new-page: true
 
-= Otto Braun
+= 奥托·布劳恩
 
-Braun [? if spd_prussia = 1 : is ?][? if spd_prussia = 0 : was ?] the Minister-President of Prussia, the largest state in Germany. He is a reformist leader who seeks to work with the bourgeois parties.
+布劳恩[? if spd_prussia = 1 : 现任 ?][? if spd_prussia = 0 : 曾任 ?]德国最大的州 —— 普鲁士的州总理。他是一位改良派领袖,主张与资产阶级各党合作。
 
 - @coalition_1
 - @coalition_2
 - @prussian_bulwark
 - @snap_election
-- @root: Return to main
+- @root: 返回主界面
 
 @coalition_1
-title: Negotiating with the Coalition
-subtitle: Braun can improve our relationships with our centrist and center-right coalition partners in Prussia as well as in the Reichstag.
+title: 与联盟谈判
+subtitle: 布劳恩可以改善我们与普鲁士及国会中中间派与中右翼执政盟友的关系。
 view_if: moderate_plan_adopted != 1 or weimar_rejected == 1 or weimar_plan_adopted == 1 or weimar_willingness == 0
 choose-if: advisor_action_timer <= 0 and (spd_prussia or in_weimar_coalition or in_grand_coalition or in_popular_front)
-unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?] [? if not spd_prussia : The SPD does not control the Prussian government. ?]
+unavailable-subtitle: [? if advisor_action_timer > 0 : 距下次顾问行动还有 [+ advisor_action_timer +] 个月。 ?] [? if not spd_prussia : 社民党并未掌控普鲁士政府。 ?]
 on-arrival: advisor_action_timer = 6; coalition_dissent -= 1 if spd_in_government = 1 and coalition_dissent > 0; z_relation += 6; ddp_relation += 6; dvp_relation += 2; dvp_relation += 3 if in_grand_coalition 
 
-We have improved our relations with the [? if in_grand_coalition : Center (Zentrum) Party, [+ ddp_name +], and DVP, ?][? if not in_grand_coalition: Center (Zentrum) Party and [+ ddp_name +], ?] and reduced tensions with the coalition.
+我们改善了与[? if in_grand_coalition : 中央党、[+ ddp_name +] 及人民党 ?][? if not in_grand_coalition: 中央党与 [+ ddp_name +] ?]的关系,并缓和了执政联盟内的紧张。
 
 @coalition_2
-title: Negotiating with the Coalition
-subtitle: Braun can improve our relationships with our centrist and center-right coalition partners in Prussia as well as in the Reichstag, as well as sponsor and support our economic plan to create a shared programme.
+title: 与联盟谈判
+subtitle: 布劳恩可以改善我们与普鲁士及国会中中间派与中右翼执政盟友的关系,并倡议并支持我们的经济计划,以形成一份共同的纲领。
 view_if: moderate_plan_adopted == 1 and weimar_rejected != 1 and weimar_plan_adopted != 1 and weimar_willingness == 1
 choose-if: advisor_action_timer <= 0 and (spd_prussia or in_weimar_coalition or in_grand_coalition or in_popular_front)
-unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?] [? if not spd_prussia : The SPD does not control the Prussian government. ?]
+unavailable-subtitle: [? if advisor_action_timer > 0 : 距下次顾问行动还有 [+ advisor_action_timer +] 个月。 ?] [? if not spd_prussia : 社民党并未掌控普鲁士政府。 ?]
 on-arrival: advisor_action_timer = 6; coalition_dissent -= 1 if spd_in_government = 1 and coalition_dissent > 0; z_relation += 6; ddp_relation += 6; dvp_relation += 2; dvp_relation += 3 if in_grand_coalition 
 go-to: weimar_plan
 
-We have improved our relations with the [? if in_grand_coalition : Center (Zentrum) Party, DDP, and DVP, ?][? if not in_grand_coalition: Center (Zentrum) Party and DDP, ?] and reduced tensions with the coalition.
+我们改善了与[? if in_grand_coalition : 中央党、民主党及人民党 ?][? if not in_grand_coalition: 中央党与民主党 ?]的关系,并缓和了执政联盟内的紧张。
 
 @prussian_bulwark
-title: The Prussian Bulwark
-subtitle: As the Minister-President of Prussia, Braun has power over the Prussian bureaucracy and security services.
+title: 普鲁士堡垒
+subtitle: 作为普鲁士州总理,布劳恩掌握着普鲁士的官僚机构与安全部门。
 choose-if: advisor_action_timer <= 0 and spd_prussia = 1
-unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?][? if spd_prussia == 0 : The SPD does not control Prussia. ?]
+unavailable-subtitle: [? if advisor_action_timer > 0 : 距下次顾问行动还有 [+ advisor_action_timer +] 个月。 ?][? if spd_prussia == 0 : 社民党并未掌控普鲁士。 ?]
 on-arrival: advisor_action_timer = 6; prussian_affairs_timer -= 6; last_advisor_action = 1
 go-to: prussian_affairs
 
 @snap_election
-title: Snap Election
-subtitle: Call a snap election.
-unavailable-subtitle: [? if chancellor != "Braun" and president != "Braun" : Braun must be Chancellor or President. ?][? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?] [? if president = "Braun" and presidential_powers : We have removed this power from the president with a constitutional reform. ?]
+title: 提前选举
+subtitle: 举行提前选举。
+unavailable-subtitle: [? if chancellor != "Braun" and president != "Braun" : 布劳恩必须担任总理或总统。 ?][? if advisor_action_timer > 0 : 距下次顾问行动还有 [+ advisor_action_timer +] 个月。 ?] [? if president = "Braun" and presidential_powers : 我们已通过宪法改革,将这一权力从总统手中移除。 ?]
 choose-if: advisor_action_timer == 0 and (chancellor == "Braun" or (president == "Braun" and not presidential_powers))
 on-arrival: advisor_action_timer = 6; next_election_time = time + 3 if next_election_time > time+3; next_election_month = month + 3 if next_election_time >= time+3; next_election_year = year if next_election_time >= time+3; next_election_year += 1 if next_election_month > 12; next_election_month -= 12 if next_election_month > 12; 
 
-We have called for new elections, set for [+ next_election_month : month +] [+ next_election_year +].
+我们已宣布举行新的选举,定于 [+ next_election_month : month +] [+ next_election_year +]。

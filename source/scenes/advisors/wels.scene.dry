@@ -1,26 +1,26 @@
-title: Otto Wels
+title: 奥托·韦尔斯
 is-pinned-card: true
 tags: advisor, centrist
 card-image: img/portraits/WelsOtto.jpg
 view-if: wels_advisor = 1
 new-page: true
 
-= Otto Wels
+= 奥托·韦尔斯
 
-Wels is the long-time chairman of the SPD. He is a gifted organizer and a member of the centrist faction.
+韦尔斯是社民党的长期主席。他是一位天赋出众的组织者,也是中间派的一员。
 
 - @clear_agenda
 - @party_discipline
 - @emergency_fundraising
 - @snap_election
 - @debug_never
-- @root: Return to main
+- @root: 返回主界面
 
 @clear_agenda
-title: Clear the agenda
-subtitle: Removes all cards from the hand.
+title: 清空议程
+subtitle: 移除手牌中的所有卡牌。
 choose-if: advisor_action_timer = 0
-unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
+unavailable-subtitle: [? if advisor_action_timer > 0 : 距下次顾问行动还有 [+ advisor_action_timer +] 个月。 ?]
 on-arrival: {!
 Q.advisor_action_timer = 6;
 if (Q.difficulty >= 0) {
@@ -30,36 +30,36 @@ if (Q.difficulty >= 0) {
 }
 !}
 
-All items from our agenda have been cleared.
+我们议程上的所有事项都已清空。
 
 @party_discipline
-title: Party Discipline
-subtitle: Reduce dissent across the party.
+title: 党的纪律
+subtitle: 减少全党的异议。
 choose-if: advisor_action_timer = 0
-unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
+unavailable-subtitle: [? if advisor_action_timer > 0 : 距下次顾问行动还有 [+ advisor_action_timer +] 个月。 ?]
 on-arrival: advisor_action_timer = 6; left_dissent -= 5; labor_dissent -= 10; center_dissent -= 10; reformist_dissent -= 10; neorevisionist_dissent -= 5
 
-We have enforced party discipline to reduce dissent across all factions.
+我们严肃了党的纪律,以减少各派系的异议。
 
 @emergency_fundraising
-title: Emergency Fundraising
+title: 紧急募款
 view-if: difficulty < 1
-subtitle: An emergency infusion of resources.
+subtitle: 紧急注入一笔资源。
 choose-if: advisor_action_timer = 0 and not financing_banned
-unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?][? if financing_banned : Wels' favorite donors are mysteriously unable to finance us now. ?]
+unavailable-subtitle: [? if advisor_action_timer > 0 : 距下次顾问行动还有 [+ advisor_action_timer +] 个月。 ?][? if financing_banned : 韦尔斯最中意的那些捐助者,如今不知为何无法再资助我们了。 ?]
 on-arrival: advisor_action_timer = 6; resources += dues
 
-We have gained +[+ dues +] resources.
+我们获得了 +[+ dues +] 点资源。
 
 @snap_election
-title: Snap Election
-subtitle: Call a snap election.
-unavailable-subtitle: [? if chancellor != "Wels" : Wels must be Chancellor or President. ?][? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
+title: 提前选举
+subtitle: 举行提前选举。
+unavailable-subtitle: [? if chancellor != "Wels" : 韦尔斯必须担任总理或总统。 ?][? if advisor_action_timer > 0 : 距下次顾问行动还有 [+ advisor_action_timer +] 个月。 ?]
 choose-if: advisor_action_timer == 0 and (chancellor == "Wels")
 on-arrival: advisor_action_timer = 6; time_to_election = 3
 call: set_next_election_time
 
-We have called for new elections, set for [+ next_election_month : month +] [+ next_election_year +].
+我们已宣布举行新的选举,定于 [+ next_election_month : month +] [+ next_election_year +]。
 
 @debug_never
 title: DEBUG: Never
@@ -67,4 +67,4 @@ subtitle: Never = 1
 view-if: legislature_enabled
 on-arrival: never = 1
 
-Never enabled
+已启用「永不具备」标志

@@ -1,16 +1,16 @@
-title: Doraemon
+title: 哆啦A梦
 is-pinned-card: true
 tags: advisor, nonfactional
 card-image: img/portraits/Doraemon.png
 view-if: doraemon_advisor = 1
 new-page: true 
 
-= Doraemon
+= 哆啦A梦
 
-Doraemon (ドラえもん) is a Japanese manga series written and illustrated by Fujiko F. Fujio [ja]. First serialized in 1969, the manga's chapters were collected in 45 tankōbon volumes published by Shogakukan from 1974 to 1996. The story revolves around an earless robotic cat named Doraemon, who travels back in time from the 22nd century to assist a boy named Nobita Nobi in his day-to-day life.
+《哆啦A梦》(ドラえもん)是由藤子·F·不二雄创作并绘制的日本漫画。它于 1969 年开始连载,单行本共 45 卷,由小学馆于 1974 至 1996 年间出版。故事围绕一只名叫哆啦A梦的无耳机器猫展开 —— 他从 22 世纪穿越回过去,帮助一个名叫野比大雄的男孩度过日常生活。
 
-The manga spawned a media franchise. It was adapted into three different anime TV series in 1973, 1979, and 2005. Additionally, Shin-Ei Animation has produced over forty animated films, including two 3D computer-animated films, all of which are distributed by Toho. Various types of merchandise and media have been developed, including soundtrack albums, video games, and musicals. The manga series was licensed for an English language release in North America, via Amazon Kindle, through a collaboration of Fujiko F. Fujio Pro with Voyager Japan and AltJapan Co., Ltd. The anime series was licensed by Disney for an English-language release in North America in 2014, and LUK International in Europe, the Middle East and Africa.
+这部漫画衍生出了一个庞大的跨媒体产业。它先后于 1973 年、1979 年与 2005 年被改编为三部不同的电视动画。此外,新锐动画制作了四十余部动画电影,其中包含两部 3D 电脑动画电影,全部由东宝发行。各类周边与媒体产品也相继问世,包括原声专辑、电子游戏与音乐剧。该漫画经由藤子·F·不二雄制作公司与 Voyager Japan、AltJapan 株式会社合作,授权在北美通过 Amazon Kindle 发行英文版。动画系列则于 2014 年由迪士尼授权在北美发行英文版,并由 LUK International 负责欧洲、中东与非洲地区。
 
-Doraemon was well received by critics and became a commercial success in many Asian countries. It won numerous awards, including the Japan Cartoonists Association Award in 1973 and 1994, the Shogakukan Manga Award for children's manga in 1982, and the Tezuka Osamu Cultural Prize in 1997. As of 2024, it has sold over 300 million copies worldwide, making it one of the best-selling manga series of all time. The character of Doraemon is considered a Japanese cultural icon, and was appointed as the first "anime ambassador" in 2008 by the country's Foreign Ministry.
+《哆啦A梦》广受评论界好评,并在许多亚洲国家取得了商业上的成功。它斩获众多奖项,包括 1973 年与 1994 年的日本漫画家协会奖、1982 年的小学馆儿童漫画奖,以及 1997 年的手冢治虫文化奖。截至 2024 年,它在全球已售出超过 3 亿册,是有史以来最畅销的漫画系列之一。哆啦A梦这一角色被视为日本的文化标志,并于 2008 年被日本外务省任命为首位「动漫大使」。
 
-- @root: Return to main
+- @root: 返回主界面

@@ -1,32 +1,32 @@
-title: Carl Severing
+title: 卡尔·泽韦林
 is-pinned-card: true
 tags: advisor, reformist
 card-image: img/portraits/SeveringCarl.jpg
 view-if: severing_advisor = 1
 new-page: true 
 
-= Carl Severing
+= 卡尔·泽韦林
 
-Severing has been Interior Minister for both the German Republic and for the state of Prussia, and his priority is using the security services to target the enemies of the republic.
+泽韦林曾先后担任德意志共和国与普鲁士州的内政部长,他的首要任务是动用安全部门打击共和国的敌人。
 
 - @prussian_bulwark
 - @police_affairs
-- @root: Return to main
+- @root: 返回主界面
 
 @prussian_bulwark
-title: Prussian Bulwark
-subtitle: Severing has influence over Prussian politics.
+title: 普鲁士堡垒
+subtitle: 泽韦林对普鲁士政治颇具影响力。
 choose-if: advisor_action_timer <= 0 and spd_prussia = 1
-unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?][? if not spd_prussia : The SPD is not in control of Prussia. ?]
+unavailable-subtitle: [? if advisor_action_timer > 0 : 距下次顾问行动还有 [+ advisor_action_timer +] 个月。 ?][? if not spd_prussia : 社民党并未掌控普鲁士。 ?]
 on-arrival: advisor_action_timer = 6; prussian_affairs_timer -= 6; last_advisor_action = 1
 go-to: prussian_affairs
 
 
 @police_affairs
-title: Police affairs 
-subtitle: We can set our police policy. 
+title: 警察事务 
+subtitle: 我们可以制定警察政策。 
 choose-if: advisor_action_timer == 0 and spd_in_government and interior_minister_party == "SPD"
-unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?][? if not spd_in_government : The SPD is not in government. ?][? if interior_minister_party != "SPD": The SPD does not have the Interior ministry. ?]
+unavailable-subtitle: [? if advisor_action_timer > 0 : 距下次顾问行动还有 [+ advisor_action_timer +] 个月。 ?][? if not spd_in_government : 社民党不在政府之中。 ?][? if interior_minister_party != "SPD": 社民党并未掌握内政部。 ?]
 on-arrival: advisor_action_timer = 6; police_timer -= 6; last_advisor_action = 1
 go-to: police
 

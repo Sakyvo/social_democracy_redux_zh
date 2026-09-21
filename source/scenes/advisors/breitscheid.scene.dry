@@ -1,61 +1,61 @@
-title: Rudolf Breitscheid
+title: 鲁道夫·布赖特沙伊德
 is-pinned-card: true 
 tags: advisor, centrist
 card-image: img/portraits/BreitscheidRudolf.jpg
 new-page: true
 view-if: breitscheid_advisor = 1
 
-= Rudolf Breitscheid
+= 鲁道夫·布赖特沙伊德
 
-Breitscheid is a long-time SPD leader, who was at one time part of the anti-war USPD. He came from a working-class family, but has a doctorate degree and started his political career as a liberal.
+布赖特沙伊德是社民党的老牌领袖,一度属于反战的独立社会民主党。他出身工人阶级家庭,却拥有博士学位,并以自由主义者的身份开始了政治生涯。
 
 - @breitscheid_international
 - @breitscheid_foreign
 - @party_discipline
 - @snap_election
 - @end_game
-- @root: Return to main
+- @root: 返回主界面
 
 @breitscheid_international
-title: International Party Relations
-subtitle: Breitscheid is one of our contacts with international socialist parties.
-unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
+title: 国际政党关系
+subtitle: 布赖特沙伊德是我们与国际社会主义政党之间的联系人之一。
+unavailable-subtitle: [? if advisor_action_timer > 0 : 距下次顾问行动还有 [+ advisor_action_timer +] 个月。 ?]
 choose-if: advisor_action_timer == 0
 on-arrival: advisor_action_timer = 6; international_relations_timer -= 12; last_advisor_action = 1
 go-to: international_relations
 
 @breitscheid_foreign
-title: Foreign Policy
-subtitle: As Foreign Minister, Breitscheid can set our foreign policy.
-unavailable-subtitle: [? if not spd_in_government: The SPD is not in government. ?] [? if foreign_minister_party != "SPD" : The SPD does not control the Foreign Ministry. ?][? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
+title: 外交政策
+subtitle: 作为外交部长,布赖特沙伊德可以制定我们的外交政策。
+unavailable-subtitle: [? if not spd_in_government: 社民党不在政府之中。 ?] [? if foreign_minister_party != "SPD" : 社民党并未掌握外交部。 ?][? if advisor_action_timer > 0 : 距下次顾问行动还有 [+ advisor_action_timer +] 个月。 ?]
 choose-if: advisor_action_timer == 0 and spd_in_government and foreign_minister_party == "SPD"
 on-arrival: advisor_action_timer = 6; foreign_policy_timer -= 8; last_advisor_action = 1
 go-to: foreign_policy
 
 
 @party_discipline
-title: Party Discipline
-subtitle: Reduce dissent across the party.
+title: 党的纪律
+subtitle: 减少全党的异议。
 choose-if: advisor_action_timer = 0
-unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
+unavailable-subtitle: [? if advisor_action_timer > 0 : 距下次顾问行动还有 [+ advisor_action_timer +] 个月。 ?]
 on-arrival: advisor_action_timer = 6; left_dissent -= 5; labor_dissent -= 10; center_dissent -= 10; reformist_dissent -= 10; neorevisionist_dissent -= 5
 
-We have enforced party discipline to reduce dissent across all factions.
+我们严肃了党的纪律,以减少各派系的异议。
 
 
 @snap_election
-title: Snap Election
-subtitle: Call a snap election.
-unavailable-subtitle: [? if chancellor != "Breitscheid" : Breitscheid must be Chancellor. ?][? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
+title: 提前选举
+subtitle: 举行提前选举。
+unavailable-subtitle: [? if chancellor != "Breitscheid" : 布赖特沙伊德必须担任总理。 ?][? if advisor_action_timer > 0 : 距下次顾问行动还有 [+ advisor_action_timer +] 个月。 ?]
 choose-if: advisor_action_timer == 0 and chancellor == "Breitscheid"
 on-arrival: advisor_action_timer = 6; next_election_time = time + 3 if next_election_time > time+3; next_election_month = month + 3 if next_election_time >= time + 3; next_election_year = year if next_election_time >= time+3; next_election_year += 1 if next_election_month > 12; next_election_month -= 12 if next_election_month > 12;
 
-We have called for new elections, set for [+ next_election_month : month +] [+ next_election_year +].
+我们已宣布举行新的选举,定于 [+ next_election_month : month +] [+ next_election_year +]。
 
 @end_game
-title: End the game.
+title: 结束游戏。
 view-if: end_disabled
 choose-if: year >= 1935
-subtitle: We can end the game now.
-unavailable-subtitle: Breitscheid wants to keep playing.
+subtitle: 我们现在可以结束游戏了。
+unavailable-subtitle: 布赖特沙伊德还想继续玩下去。
 go-to: 1934_end

@@ -1,39 +1,39 @@
-title: Anna Siemsen
+title: 安娜·西姆森
 is-pinned-card: true
 tags: advisor, left
 card-image: img/portraits/SiemsenAnna.jpg
 view-if: siemsen_advisor = 1
 new-page: true 
 
-= Anna Siemsen
+= 安娜·西姆森
 
-Anna Siemsen is an and educational reform advocate and pacifist, who was one of the few German women to receive a PhD in the pre-war period. She was a former member of the USPD.
+安娜·西姆森是教育改革的倡导者与和平主义者,也是战前少数获得博士学位的德国女性之一。她曾是独立社会民主党的成员。
 
 - @campaign_pacifism
 - @structure_
 - @curriculum_
-- @root: Return to main
+- @root: 返回主界面
 
 @campaign_pacifism
-title: Rally for pacifism.
-subtitle: Campaign for internationalism and against militarism.
+title: 为和平主义呼号。
+subtitle: 为国际主义、反对军国主义而开展宣传。
 choose-if: advisor_action_timer = 0
-unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
+unavailable-subtitle: [? if advisor_action_timer > 0 : 距下次顾问行动还有 [+ advisor_action_timer +] 个月。 ?]
 on-arrival: advisor_action_timer = 6;
 go-to: rally.pacifism
 
 
 @curriculum_
-title: Change the educational curriculum.
+title: 修改教育课程。
 choose-if: advisor_action_timer = 0 and spd_in_government and chancellor_party = "SPD" and spd_prussia and curriculum_timer = 0
-unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?][? if not spd_in_government : The SPD is not currently in government. ?][? if chancellor_party != "SPD": The SPD must control the chancellorship. ?][? if not spd_prussia: The SPD must control the Prussian government. ?][? if curriculum_timer > 0 : It is too early to change the curriculum again. ?]
+unavailable-subtitle: [? if advisor_action_timer > 0 : 距下次顾问行动还有 [+ advisor_action_timer +] 个月。 ?][? if not spd_in_government : 社民党目前不在政府之中。 ?][? if chancellor_party != "SPD": 社民党必须掌握总理之位。 ?][? if not spd_prussia: 社民党必须掌控普鲁士政府。 ?][? if curriculum_timer > 0 : 现在就再次修改课程还为时过早。 ?]
 on-arrival: advisor_action_timer = 6; last_advisor_action = 1
 go-to: education_science.curriculum
 
 
 @structure_
-title: Change the structure and funding of education.
+title: 改变教育的结构与拨款。
 choose-if: advisor_action_timer = 0 and spd_in_government and chancellor_party = "SPD" and spd_prussia
-unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?][? if not spd_in_government : The SPD is not currently in government. ?][? if chancellor_party != "SPD": The SPD must control the chancellorship. ?][? if not spd_prussia: The SPD must control the Prussian government. ?]
+unavailable-subtitle: [? if advisor_action_timer > 0 : 距下次顾问行动还有 [+ advisor_action_timer +] 个月。 ?][? if not spd_in_government : 社民党目前不在政府之中。 ?][? if chancellor_party != "SPD": 社民党必须掌握总理之位。 ?][? if not spd_prussia: 社民党必须掌控普鲁士政府。 ?]
 on-arrival: advisor_action_timer = 6; last_advisor_action = 1
 go-to: education_science.structure

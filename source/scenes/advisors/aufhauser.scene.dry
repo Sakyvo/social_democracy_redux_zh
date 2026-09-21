@@ -1,60 +1,60 @@
-title: Siegfried Aufhäuser
+title: 齐格弗里德·奥夫霍伊泽
 is-pinned-card: true
 tags: advisor, reformist
 card-image: img/portraits/AufhäuserSiegfried.jpg
 view-if: aufhauser_advisor = 1
 new-page: true 
 
-= Siegfried Aufhäuser
+= 齐格弗里德·奥夫霍伊泽
 
-Aufhäuser is a leader of the AfA-Bund, the federation of socialist white-collar trade unions.
+奥夫霍伊泽是自由职员总联合会(AfA-Bund)—— 社会主义白领工会的联合组织 —— 的领导人之一。
 
 - @white_collar
 - @union_unity
 - @crisis
 - @moderate_economic_plan
 - @radicalize_middle
-- @root: Return to main
+- @root: 返回主界面
 
 @white_collar
-title: Organizing white-collar workers
-subtitle: Improve our standing among the new middle class.
+title: 组织白领工人
+subtitle: 提升我们在新中间阶层中的地位。
 choose-if: advisor_action_timer <= 0
-unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?] 
+unavailable-subtitle: [? if advisor_action_timer > 0 : 距下次顾问行动还有 [+ advisor_action_timer +] 个月。 ?] 
 on-arrival: advisor_action_timer = 6; new_middle_spd += 6*(1-dissent); socialism += 3*(1-dissent)
 
-We have increased our organizing among white-collar workers.
+我们加强了对白领工人的组织工作。
 
 @union_unity
-title: Union-party coordination
-subtitle: Reduce dissent among the unions.
+title: 工会与党的协调
+subtitle: 减少工会中的异议。
 choose-if: advisor_action_timer <= 0
-unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
+unavailable-subtitle: [? if advisor_action_timer > 0 : 距下次顾问行动还有 [+ advisor_action_timer +] 个月。 ?]
 on-arrival: advisor_action_timer = 6; labor_dissent -= 10;
 
-We have reduced tensions with the Labor faction.
+我们缓和了与工会派的紧张关系。
 
 @crisis
-title: Addressing the economic crisis
-subtitle: Aufhäuser can help support a left-wing economic program.
+title: 应对经济危机
+subtitle: 奥夫霍伊泽可以协助支持一份左翼经济纲领。
 choose-if: advisor_action_timer <= 0 and nationalization_adopted == 0 and black_thursday_seen == 1 and nationalization_support <= 3 and not capital_spd
-unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?][? if black_thursday_seen == 0 : We are not currently in an economic crisis. ?][? if nationalization_adopted > 0 : We have already adopted the Left plan. ?][? if capital_spd : What a despicable idea. ?]
+unavailable-subtitle: [? if advisor_action_timer > 0 : 距下次顾问行动还有 [+ advisor_action_timer +] 个月。 ?][? if black_thursday_seen == 0 : 我们目前并未处于经济危机之中。 ?][? if nationalization_adopted > 0 : 我们已经采纳了左翼计划。 ?][? if capital_spd : 多么卑鄙的念头。 ?]
 on-arrival: advisor_action_timer = 6; 
 go-to: crisis_program.support_left 
 
 @moderate_economic_plan
-title: Support the reformist economic plan
-subtitle: Aufhäuser can also support a moderate economic plan.
+title: 支持改良派经济计划
+subtitle: 奥夫霍伊泽也可以支持一份温和的经济计划。
 choose-if: advisor_action_timer = 0 and moderate_plan_adopted = 0 and black_thursday_seen = 1
-unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?] [? if moderate_economic_plan = 0 : We have already adopted the reformist economic plan. ?] [? if black_thursday_seen == 0 : We are not currently in an economic crisis. ?]
+unavailable-subtitle: [? if advisor_action_timer > 0 : 距下次顾问行动还有 [+ advisor_action_timer +] 个月。 ?] [? if moderate_economic_plan = 0 : 我们已经采纳了改良派经济计划。 ?] [? if black_thursday_seen == 0 : 我们目前并未处于经济危机之中。 ?]
 on-arrival: advisor_action_timer = 6
 go-to: crisis_program.support_moderate
 
 @radicalize_middle
-title: Radicalize the new middle class.
-subtitle: Awaken the class consciousness of the white collar worker.
+title: 使新中间阶层激进化
+subtitle: 唤醒白领工人的阶级意识。
 choose-if: socialism >= 54 and new_middle_spd_normalized >= 10
-unavailable-subtitle: They are not yet radical enough.
+unavailable-subtitle: 他们还不够激进。
 max-visits: 1
 on-arrival: advisor_action_timer = 6; last_advisor_action = 1
 go-to: new_middle_consciousness

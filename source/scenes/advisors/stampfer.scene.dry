@@ -1,75 +1,75 @@
-title: Friedrich Stampfer
+title: 弗里德里希·施坦普费尔
 is-pinned-card: true
 tags: advisor
 card-image: img/portraits/StampferFriedrich.jpg
 view-if: stampfer_advisor = 1
 new-page: true 
 
-= Friedrich Stampfer
+= 弗里德里希·施坦普费尔
 
-Friedrich Stampfer is the long-time editor-in-chief of Vorwärts, our party newspaper, and also a Reichstag member. He was historically part of the Majority SPD that supported our participation in the Great War, but also supports cooperation with the KPD to save the Republic.
+弗里德里希·施坦普费尔是我党机关报《前进报》的长期主编,同时也是国会议员。历史上他属于支持我们参战的多数派社民党,但他也支持与共产党合作,以拯救共和国。
 
 - @media_
 - @faction_support_
 - @kpd_cooperation
-- @root: Return to main
+- @root: 返回主界面
 
 
 @media_
-title: Media
-subtitle: Manage our party's newspapers and media.
+title: 媒体
+subtitle: 管理我党的报纸与媒体。
 choose-if: advisor_action_timer = 0
-unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
+unavailable-subtitle: [? if advisor_action_timer > 0 : 距下次顾问行动还有 [+ advisor_action_timer +] 个月。 ?]
 on-arrival: advisor_action_timer = 6; media_timer -= 6; last_advisor_action = 1
 go-to: media
 
 
 @faction_support_
-title: Editorial Line
-subtitle: We can change the editorial line of Vorwärts to support a particular faction.
+title: 社论立场
+subtitle: 我们可以改变《前进报》的社论立场,以支持某个特定的派系。
 choose-if: advisor_action_timer = 0
-unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
+unavailable-subtitle: [? if advisor_action_timer > 0 : 距下次顾问行动还有 [+ advisor_action_timer +] 个月。 ?]
 on-arrival: advisor_action_timer = 6
 
-Which faction should we support?
+我们应当支持哪个派系?
 
-- @support_left: Left
-- @support_center: Center
-- @support_labor: Labor
-- @support_reform: Reformists
-- @support_neorev: Neorevisionists
+- @support_left: 左翼
+- @support_center: 中间派
+- @support_labor: 工会
+- @support_reform: 改良派
+- @support_neorev: 新修正主义派
 
 @support_left
 on-arrival: left_dissent -= 8; left_strength += 8
 
-Vorwärts prints editorials in support of Left positions.
+《前进报》刊发社论,支持左翼的立场。
 
 @support_center
 on-arrival: center_dissent -= 8; center_strength += 8
 
-Vorwärts prints editorials in support of centrist positions.
+《前进报》刊发社论,支持中间派的立场。
 
 @support_labor
 on-arrival: labor_dissent -= 8; labor_strength += 8
 
-Vorwärts prints editorials in support of the policies of the trade unions.
+《前进报》刊发社论,支持工会的政策。
 
 @support_reform
 on-arrival: reformist_dissent -= 8; reformist_strength += 8;
 
-Vorwärts prints editorials in support of the reformist policies.
+《前进报》刊发社论,支持改良派的政策。
 
 @support_neorev
 view-if: neorevisionism
 on-arrival: neorevisionist_dissent -= 8; neorevisionist_strength += 8
 
-Vorwärts prints editorials in support of neorevisionist ideas.
+《前进报》刊发社论,支持新修正主义派的主张。
 
 @kpd_cooperation
-title: Cooperation with the KPD
-subtitle: Could we build closer ties with the KPD?
-unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
+title: 与共产党合作
+subtitle: 我们能否与共产党建立更紧密的联系?
+unavailable-subtitle: [? if advisor_action_timer > 0 : 距下次顾问行动还有 [+ advisor_action_timer +] 个月。 ?]
 choose-if: advisor_action_timer = 0
 on-arrival: advisor_action_timer = 6; left_strength += 2; kpd_relation += 4*(1-dissent); reformist_dissent += 2
 
-Stampfer works towards closer ties with the KPD through our media.
+施坦普费尔通过我们的媒体,致力于与共产党建立更紧密的联系。

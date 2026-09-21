@@ -1,56 +1,56 @@
-title: Toni Sender
+title: 托尼·森德尔
 is-pinned-card: true
 tags: advisor, left
 card-image: img/portraits/SenderToni.jpg
 view-if: sender_advisor = 1
 new-page: true 
 
-= Toni Sender
+= 托尼·森德尔
 
-Toni Sender is an organizer and writer who came from a bourgeois family, but was radicalized into socialism after her experiences in the workforce. She was a member of the anti-war USPD, but did not support armed revolution.
+托尼·森德尔是一位组织者与作家,出身资产阶级家庭,却在工作经历中被激进化为社会主义者。她曾是反战的独立社会民主党成员,但并不支持武装革命。
 
 - @left_unity
 - @organizing_women
 - @against_toleration
 - @crisis
-- @root: Return to main
+- @root: 返回主界面
 
 @left_unity
-title: Left-Center Unity
-subtitle: Encourage cooperation between the left and center wings of the party.
+title: 左翼与中间派的团结
+subtitle: 鼓励党内左翼与中间派合作。
 choose-if: advisor_action_timer = 0
-unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
+unavailable-subtitle: [? if advisor_action_timer > 0 : 距下次顾问行动还有 [+ advisor_action_timer +] 个月。 ?]
 on-arrival: advisor_action_timer = 6; left_dissent -= 10; labor_dissent -= 5; center_dissent -= 10; reformist_dissent -= 10; neorevisionist_dissent -= 5
 
-We have reduced dissent among the party's factions.
+我们减少了党内各派系的异议。
 
 @organizing_women
-title: Organizing women
-subtitle: Sender's strategies are aimed at young working women.
+title: 组织妇女
+subtitle: 森德尔的策略针对的是年轻的劳动女性。
 choose-if: advisor_action_timer = 0
-unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
+unavailable-subtitle: [? if advisor_action_timer > 0 : 距下次顾问行动还有 [+ advisor_action_timer +] 个月。 ?]
 on-arrival: womens_rights += 1; workers_spd += 3*(1-dissent); new_middle_spd += 5*(1-dissent); advisor_action_timer = 6
 
-Sender's message is popular among young women working in the service sector, and we have recruited many white-collar employees.
+森德尔的主张在服务业年轻女性中大受欢迎,我们招募了许多白领雇员。
 
-[? if spd_r < 50 : Unfortunately, women still disproportionately support the bourgeois parties. ?]
+[? if spd_r < 50 : 遗憾的是,女性仍然过多地支持资产阶级政党。 ?]
 
 @against_toleration
-title: Against toleration
+title: 反对容忍
 view-if: not constructive_vonc
-subtitle: Break our current toleration arrangement, and bring down the government via a no-confidence vote.
-unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?] [? if spd_toleration == 0 : The SPD is not currently in toleration. ?][? if year < 1928 : The DNVP would vote against. ?]
+subtitle: 打破当前的容忍安排,通过不信任投票搞垮政府。
+unavailable-subtitle: [? if advisor_action_timer > 0 : 距下次顾问行动还有 [+ advisor_action_timer +] 个月。 ?] [? if spd_toleration == 0 : 社民党目前并非处于容忍状态。 ?][? if year < 1928 : 国家人民党会投反对票。 ?]
 choose-if: advisor_action_timer == 0 and spd_toleration and year >= 1928
 on-arrival: advisor_action_timer = 6; next_election_time = time + 3 if next_election_time > time+3; next_election_month = month + 3 if next_election_time >= time + 3; next_election_year = year if next_election_time >= time + 3; next_election_year += 1 if next_election_month > 12; next_election_month -= 12 if next_election_month > 12; spd_toleration = 0; left_strength += 8; pro_republic -= 4; new_middle_spd -= 3; rural_spd -= 3; old_middle_spd -= 3; catholics_spd -= 3; reformist_dissent += 8
 
-We have grown tired of the burdens of toleration, and have called a vote of no confidence in the current minority government.
+我们已厌倦了容忍的重负,对现任少数派政府提出了不信任案。
 
-New elections have been set for [+ next_election_month : month +] [+ next_election_year +].
+新的选举已定于 [+ next_election_month : month +] [+ next_election_year +]。
 
 @crisis
-title: Addressing the economic crisis
-subtitle: Sender can help support a left-wing economic program.
+title: 应对经济危机
+subtitle: 森德尔可以协助支持一份左翼经济纲领。
 choose-if: advisor_action_timer <= 0 and nationalization_adopted == 0 and black_thursday_seen == 1 and nationalization_support <= 3 and not capital_spd
-unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?][? if black_thursday_seen == 0 : We are not currently in an economic crisis. ?][? if nationalization_adopted > 0 : We have already adopted the Left plan. ?][? if capital_spd : What a despicable idea. ?]
+unavailable-subtitle: [? if advisor_action_timer > 0 : 距下次顾问行动还有 [+ advisor_action_timer +] 个月。 ?][? if black_thursday_seen == 0 : 我们目前并未处于经济危机之中。 ?][? if nationalization_adopted > 0 : 我们已经采纳了左翼计划。 ?][? if capital_spd : 多么卑鄙的念头。 ?]
 on-arrival: advisor_action_timer = 6;
 go-to: crisis_program.support_left

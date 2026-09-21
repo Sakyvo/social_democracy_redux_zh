@@ -1,4 +1,4 @@
-title: Carlo Mierendorff
+title: 卡洛·米伦多夫
 is-pinned-card: true
 tags: advisor
 card-image: img/portraits/MierendorffCarlo.jpg
@@ -6,38 +6,38 @@ face-image: img/portraits/MierendorffCarlo.jpg
 view-if: mierendorff_advisor = 1
 new-page: true
 
-= Carlo Mierendorff
+= 卡洛·米伦多夫
 
-Carlo Mierendorff is the founder of the neo-revisionist ideological tendency, and supports both democratic reforms and extra-parliamentary action to combat the Nazis and authoritarian parties. He is from a middle-class, academic background, and is one of our youngest leaders.
+卡洛·米伦多夫是新修正主义思想倾向的创立者,既支持民主改良,也支持以议会外行动对抗纳粹与威权政党。他出身中产知识阶层,是我党最年轻的领袖之一。
 
 - @iron_front_buildup
 - @form_iron_front
 - @nazi_urgency
-- @root: Return to main
+- @root: 返回主界面
 
 @iron_front_buildup
-title: Build up the Iron Front
-subtitle: Increase our propaganda measures to recruit more members into the Reichsbanner. 
+title: 壮大铁前线
+subtitle: 加强宣传,为国旗团招募更多成员。
 choose-if: advisor_action_timer == 0 and iron_front_formed
-unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?][? if iron_front_formed == 0 : The Iron Front has not yet been formed. ?]
+unavailable-subtitle: [? if advisor_action_timer > 0 : 距下次顾问行动还有 [+ advisor_action_timer +] 个月。 ?][? if iron_front_formed == 0 : 铁前线尚未组建。 ?]
 on-arrival: advisor_action_timer = 6; rb_strength += 200*workers_spd/(workers_spd+workers_kpd+workers_nsdap+workers_z+workers_dnvp+workers_other);
 
-We have recruited more members into the Reichsbanner.
+我们为国旗团招募了更多成员。
 
 
 @form_iron_front
-title: Forming the Iron Front
+title: 组建铁前线
 choose-if: advisor_action_timer == 0 and iron_front_formed == 0 and nazi_urgency >= 2
-unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?][? if iron_front_formed : The Iron Front has already been formed. ?][? if nazi_urgency < 2 : The party does not yet see the danger of the Nazis. ?]
+unavailable-subtitle: [? if advisor_action_timer > 0 : 距下次顾问行动还有 [+ advisor_action_timer +] 个月。 ?][? if iron_front_formed : 铁前线已经组建。 ?][? if nazi_urgency < 2 : 党还没有意识到纳粹的危险。 ?]
 on-arrival: advisor_action_timer = 6; rb_strength += 50; nazi_urgency += 1
 go-to: confronting_nazis.iron_front 
 
 
 @nazi_urgency
-title: Warning about the Nazis
-subtitle: By warning the party about the Nazis, we can spur our members to action.
+title: 警示纳粹的危险
+subtitle: 通过向党警示纳粹的危险,我们可以促使党员行动起来。
 choose-if: advisor_action_timer == 0
-unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
+unavailable-subtitle: [? if advisor_action_timer > 0 : 距下次顾问行动还有 [+ advisor_action_timer +] 个月。 ?]
 on-arrival: advisor_action_timer = 6; nazi_urgency += 1; rb_militancy += 0.01; nsdap_workers -= 4*(1-dissent);
 
-We have begun a propaganda campaign to warn our members away from the Nazis.
+我们发起了一场宣传运动,警示党员远离纳粹。

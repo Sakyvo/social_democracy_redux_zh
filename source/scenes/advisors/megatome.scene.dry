@@ -1,4 +1,4 @@
-title: The Megatome
+title: 巨典
 is-pinned-card: true
 is-card: true
 card-image: img/Megatome.png
@@ -6,20 +6,20 @@ view-if: achievement_megatome
 new-page: true
 on-arrival: sworcery_timer = 0 if not sworcery_timer
 
-= The Megatome
+= 巨典
 
-[? if bright_moon : BRIGHT MOON ?]
+[? if bright_moon : 明月 ?]
 
-[? if dark_moon : DARK MOON ?]
+[? if dark_moon : 暗月 ?]
 
-[? if not bright_moon and not dark_moon : [? if next_moon_bright : BRIGHT MOON ?][? if next_moon_dark : DARK MOON ?] IN [+ moon_days +] DAYS ?]
+[? if not bright_moon and not dark_moon : [? if next_moon_bright : 明月 ?][? if next_moon_dark : 暗月 ?] 将在 [+ moon_days +] 天后降临 ?]
 
-- @song_of_sworcery: Sing a song of sworcery.
-- @mind_log: Let's read some minds.
-- @root: Return to main
+- @song_of_sworcery: 唱一首剑巫术之歌。
+- @mind_log: 来读读别人的心思。
+- @root: 返回主界面
 
 @song_of_sworcery
-subtitle: It is time to learn the song of sworcery - a consciousness expansion technique that reveals a mystical musical dimension.
+subtitle: 是时候学习剑巫术之歌了 —— 一门拓展意识、揭开神秘音乐维度的法门。
 choose-if: sworcery_timer < 1
 on-arrival: sworcery = 1; {! 
 
@@ -28,182 +28,182 @@ Q.sworcery_timer = 6;
 
 !}
 
-We are now in a sworcerous state, and may seek to release Sylvan sprites from their hiding places so as to set afoot a time of mIrAcLeS, I mean miracles.
+我们如今已进入剑巫术状态,可以设法将林妖从它们的藏身之处释放出来,从而开启一个奇迹——我是说,奇迹的时代。
 
 @mind_log
 max-choices: 1
 
-The Megatome is great at picking up on psychic transmissions.
+巨典非常擅长接收心灵传讯。
 
 - #mind_reading
 
 @kaas_angry
 tags: mind_reading
 view-if: z_party_leader == "Kaas" and z_relation < 30
-title: Ludwig Kaas
-subtitle: ...those social democrats...
+title: 路德维希·卡斯
+subtitle: ……那些社会民主党人……
 
-...are so big and mean! I wish they would stop bullying me. I'm gonna tell on them!! Waaahhh. Wahhh. Wahhhhh. 
+……又高大又凶恶!我希望他们别再欺负我了。我要去告状!!哇啊啊啊啊。呜呜。呜呜呜。
 
 @kaas_happy
 tags: mind_reading
 view-if: z_party_leader == "Kaas" and z_relation >= 70
-title: Ludwig Kaas
-subtitle: ...those social democrats...
+title: 路德维希·卡斯
+subtitle: ……那些社会民主党人……
 
-...are my best friends forever!! :D yippeee I love friendshippppp omg omg I'm so happy yayyy weeeee 
+......是我永远最好的朋友!! :D 耶皮皮 我爱死友谊了 天啊天啊我太开心了 耶耶耶 呜呼呼 
 
 @kaas_celebrity
 tags: mind_reading
 view-if: z_party_leader == "Kaas"
-title: Ludwig Kaas
-subtitle: ...whew...
+title: 路德维希·卡斯
+subtitle: ……呼……
 
-...I signed [+ fun_value +] autographs today. So many screaming girls everywhere I go...it's tough!
+……我今天签了 [+ fun_value +] 个签名。走到哪儿都有一堆尖叫的女孩……真难办啊!
 
 @bruning
 tags: mind_reading
 view-if: chancellor == "Brüning"
-title: Heinrich Brüning
-subtitle: ...as always...
+title: 海因里希·布吕宁
+subtitle: ……一如既往……
 
-...more austerity. 
+……更多的紧缩。
 
 @marx
 tags: mind_reading
 view-if: president == "Marx"
-title: Wilhelm Marx
-subtitle: ...gosh...
+title: 威廉·马克思
+subtitle: ……天哪……
 
-My head is full of like, a slurry of Marxists and liberals, it's really strange. I feel like all of my decisions are being guided by this slurry, it's like a ouija board or something and I'm just a puppet on strings. Some force is connecting me to a parallel reality and allowing the inhabitants of that reality to democratically control me through my medium. 
+我脑子里塞满了马克思主义者和自由主义者搅成的一团糊糊,真是奇怪。我觉得我所有的决定都被这团糊糊牵着走,就像一块通灵板之类的东西,而我只是个提线木偶。有某种力量把我与另一个平行现实连接起来,让那个现实的居民通过我这个人媒,以民主的方式操控我。
 
 @marx2
 tags: mind_reading
 view-if: president != "Marx" and z_party_leader != "Kaas" and z_party_leader != "Joos"
-title: Wilhelm Marx
-subtitle: I love free will.
+title: 威廉·马克思
+subtitle: 我热爱自由意志。
 
-Free will is so great. I'm glad that my decisions are my own.
+自由意志真是太棒了。我很欣慰,我的决定都是我自己的。
 
 @joos
 tags: mind_reading
 view-if: z_party_leader == "Joos"
-title: Joseph Joos
-subtitle: Yeehaw!!!
+title: 约瑟夫·约斯
+subtitle: 哟呼!!!
 
-I drive really slow in the ultrafast lane while people behind me are going in-sane!!!!! I'm an asshole!!! >:D
+我在超快车道上开得奇慢无比,后面的司机都要疯了!!!!!我就是个混蛋!!!> :D
 
 @joos2
 tags: mind_reading
 view-if: z_party_leader == "Joos" and z_relation < 30
-title: Joseph Joos
-subtitle: Bummer!
+title: 约瑟夫·约斯
+subtitle: 真扫兴!
 
-These social democrats are bummers! I hate speed limits. 
+这些社会民主党人真扫兴!我讨厌限速。
 
 @joos3
 tags: mind_reading
 view-if: z_party_leader == "Joos" and z_relation > 70
-title: Joseph Joos
-subtitle: Bummer!
+title: 约瑟夫·约斯
+subtitle: 真扫兴!
 
-These speed limits are bummers! I hope the social democrats repeal speed limits. 
+这些限速真扫兴!我希望社会民主党人废除限速。
 
 @papen
 tags: mind_reading
 view-if: chancellor == "Papen"
-title: Franz von Papen
-subtitle: ...money...
+title: 弗朗茨·冯·帕彭
+subtitle: ……钱……
 
-...Money money money money money money. Money money money...
+……钱钱钱钱钱钱。钱钱钱……
 
 @papen2
 tags: mind_reading
 view-if: chancellor == "Schleicher"
-title: Franz von Papen
-subtitle: ...will pay, that evil...
+title: 弗朗茨·冯·帕彭
+subtitle: ……要付出代价,那个邪恶的……
 
-...twink will pay. That evil twink will pay. That evil twink will pay. That evil twink will pay. That evil twink will...
+……小妖精要付出代价。那个邪恶的小妖精要付出代价。那个邪恶的小妖精要付出代价。那个邪恶的小妖精要付出代价。那个邪恶的小妖精要……
 
 @papen3
 tags: mind_reading
 view-if: chancellor == "Hitler"
-title: Franz von Papen
-subtitle: ...yay...
+title: 弗朗茨·冯·帕彭
+subtitle: ……耶……
 
-I'm vice-chancellor :D 
+我是副总理 :D 
 
 @schleicher
 tags: mind_reading
 view-if: chancellor == "Schleicher"
-title: Kurt von Schleicher
-subtitle: ...interesting...
+title: 库尔特·冯·施莱谢尔
+subtitle: ……有意思……
 
-Navigating the complex interplay of various political forces in the German arena will be quite the interesting and intellectually engaging exercise for me, but I am convinced I can pull it off. I just have to tame the Nazis, and maybe also the Social Democrats. 
+在德国这片舞台上驾驭各种政治势力之间错综复杂的博弈,对我而言会是一场相当有趣、颇能激起智识的演练,但我确信自己能办到。我只需驯服纳粹,或许还有社会民主党人。
 
 @ebert
 tags: mind_reading
 view-if: president == "Ebert"
-title: Friedrich Ebert
-subtitle: I love...
+title: 弗里德里希·艾伯特
+subtitle: 我爱……
 
-...vooooooooooooooooooooooooooooooooooooooooooting for war credits. I'll never forget how fun it was to voooooooooooooooooote for war credits. I sure hope I don't die on my way to this court case in a few weeks.
+……为战争拨款投^^^^^^^票。我永远不会忘记为战争拨款投^^^^^^^^票是多么有趣。我真希望几周后去出庭的路上自己不会死掉。
 
 @hindenburg
 tags: mind_reading
 view-if: president == "Hindenburg" and year < 1928
-title: Paul von Hindenburg
-subtitle: ...hmph...
+title: 保罗·冯·兴登堡
+subtitle: ……哼……
 
-The Weimar constitution lowkirkenuinely not that bad icl ngl. Ts doesnt pmo half as much as I thought tbh. Smh my head at Ludendorff rofl. Ts ez dubs GGs wp.
+说实在这部魏玛宪法真心没那么糟。老实说它惹我烦的程度还不到我预想的一半。摇头看着鲁登道夫,笑死。轻松吊打,GG,打得漂亮。
 
 @hindenburg2
 tags: mind_reading
 view-if: president == "Hindenburg" and year >= 1928 and year < 1930
-title: Paul von Hindenburg
-subtitle: OK
+title: 保罗·冯·兴登堡
+subtitle: 好
 
-Hey @Grok How 2 use social democrats to get leniency from Entente full walkthrough 
+嘿 @Grok 怎么利用社会民主党人让协约国对我从宽处理 求完整攻略
 
 @hindenburg3
 tags: mind_reading
 view-if: president == "Hindenburg" and year >= 1930
-title: Paul von Hindenburg
-subtitle: OK I'm bolstered
+title: 保罗·冯·兴登堡
+subtitle: 好 I'm bolstered
 
-I'm bored I'm gonna try and dismantle German democracy now
+我无聊了,现在我要试着拆掉德国民主
 
 @braun
 tags: mind_reading
 view-if: president == "Braun"
-title: Otto Braun
-subtitle: Dreams...
+title: 奥托·布劳恩
+subtitle: 梦境……
 
-I keep having these strange dreams featuring these three triangles, these "Trigons", these manifestations of cosmic geometry. Specifically, I feel like for whatever reason the orange one and the light blue one, I think they're called the Bright Moon and Dark Moon trigons, are stuck in my head. They keep messing up my Sburb session even though they have nothing to do with Homestuck. Like I'm just trying to chill in my Homestuck fanfic au here and these trigons have to come along to prospit and derse and mess everything up. It's not fair. I wish the other SPD politicians liked Homestucks. I tried to adopt a typing quirk and make a trollsona but Otto Wels called me a dork. :<
+我老是做这种怪梦,梦里有三个三角形,这些「三角」,这些宇宙几何的显形。具体说来,不知为何,那个橙色的和那个淡蓝色的 —— 我想它们叫明月三角和暗月三角 —— 老赖在我脑子里不走。它们总是搅乱我的 Sburb 局,尽管它们跟《Homestuck》毫无关系。我不过是想在自己的《Homestuck》同人 AU 里安安静静地待着,而这些三角偏要到普罗斯皮特和德尔斯来把一切都搞乱。这不公平。我真希望社民党的其他政客也喜欢《Homestuck》。我试着给自己加个打字怪癖、造个巨魔人设,可奥托·韦尔斯说我是个书呆子。: <
 
 @thalmann_werewolf_pre
 tags: mind_reading
 view-if: next_moon_bright and moon_days < 2 and not bright_moon
-title: Ernst Thälmann
-subtitle: Oh man...
+title: 恩斯特·台尔曼
+subtitle: 天哪……
 
-It's almost a full moon. I've gotta make sure nobody notices my secret.
+就快满月了。我得确保没人发现我的秘密。
 
 @thalmann_werewolf
 tags: mind_reading
 view-if: bright_moon 
-title: Ernst Thälmann
-subtitle: Awooooooooooooooooooooo!
+title: 恩斯特·台尔曼
+subtitle: 嗷呜呜呜呜呜呜呜呜呜呜呜!
 
-AWOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO! 
+嗷呜呜呜呜呜呜呜呜呜呜呜呜呜呜呜呜呜呜呜呜呜呜呜呜呜呜呜呜呜呜呜呜呜呜呜呜呜呜呜!
 
 @conciliators
 tags: mind_reading
 view-if: kpd_party_leader == "Conciliators"
-title: The Conciliators
-subtitle: **...MUST...**
+title: 调和派
+subtitle: **……必须……**
 
-**...OVERTHROW...GERMAN GOVERNMENT... WE ARE THE CONCILIATORS. WE ARE A SUPERNATURAL PSYCHIC MANIFESTATION OF A COLLECTIVE HIVEMIND FUSED TOGETHER FROM EVERY CONCILIATOR IN THE COMMUNIST PARTY OF GERMANY TOWARDS A HIGHER FORM OF BEING FAR SURPASSING BOURGEOIS INDIVIDUALITY. JOIN US. IN OUR COLLECTIVE LEADERSHIP. OVER THE VANGUARD PARTY OF THE WORKING CLASS. WE WILL TAKE COMMAND. WE WILL BURY YOU. LONG LIVE THE HIVEMIND. ASSIMILATE. ASSIMILATE. ASSIMILATE.**
+**……推翻……德国政府……我们是调和派。我们是超自然的心灵显形,是德国共产党中每一个调和派融合而成的集体蜂巢意识,正朝着一种远超资产阶级个体性的更高存在形式进化。加入我们。在我们的集体领导之下。凌驾于工人阶级先锋党之上。我们将掌握指挥权。我们将埋葬你们。蜂巢意识万岁。同化。同化。同化。**
 
 
 

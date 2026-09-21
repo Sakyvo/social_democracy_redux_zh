@@ -1,44 +1,44 @@
-title: Hermann Müller
+title: 赫尔曼·米勒
 is-pinned-card: true 
 tags: advisor, centrist
 card-image: img/portraits/MüllerHermann.jpg
 new-page: true
 view-if: muller_advisor = 1
 
-= Herman Müller
+= 赫尔曼·米勒
 
 
-Müller is a former [? if chancellor = "Müller": and current ?] Chancellor, and is a long-time Social Democratic leader.
+米勒是一位前任[? if chancellor = "Müller": 兼现任 ?]总理,也是社会民主党的老牌领袖。
 
 - @coalition
 - @toleration
 - @snap_election
-- @root: Return to main
+- @root: 返回主界面
 
 @coalition
 title: Negotiating with the Coalition
-subtitle: Müller can improve our relationships with our coalition partners.
+subtitle: 米勒可以改善我们与执政盟友的关系。
 choose-if: advisor_action_timer <= 0 and spd_in_government = 1
-unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?][? if not spd_in_government: The SPD is not in government. ?]
+unavailable-subtitle: [? if advisor_action_timer > 0 : 距下次顾问行动还有 [+ advisor_action_timer +] 个月。 ?][? if not spd_in_government: 社民党不在政府之中。 ?]
 on-arrival: advisor_action_timer = 6; coalition_dissent -= 1 if spd_in_government = 1 and coalition_dissent > 0; z_relation += 5; ddp_relation += 5; dvp_relation += 5
 
-We have improved our relations with the Z, [+ ddp_name +], and DVP, and reduced tensions with the coalition.
+我们改善了与中央党、[+ ddp_name +] 及人民党的关系,并缓和了执政联盟内的紧张。
 
 
 @toleration
-title: Defending Toleration
-subtitle: Müller supports the toleration arrangement with the bourgeois parties.
-unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?][? if not spd_toleration: The SPD is not in toleration. ?]
+title: 捍卫容忍
+subtitle: 米勒支持与资产阶级政党达成的容忍安排。
+unavailable-subtitle: [? if advisor_action_timer > 0 : 距下次顾问行动还有 [+ advisor_action_timer +] 个月。 ?][? if not spd_toleration: 社民党并非处于容忍状态。 ?]
 choose-if: spd_in_government = 0 and spd_toleration = 1 and advisor_action_timer = 0
 on-arrival: advisor_action_timer = 6; left_dissent -= 8; neorevisionist_dissent -= 8; center_dissent -= 5;
 
-We have reduced dissent among the anti-toleration factions. 
+我们减少了反对容忍策略的派系的异议。
 
 @snap_election
-title: Snap Election
-subtitle: Call a snap election.
-unavailable-subtitle: [? if chancellor != "Müller" : Müller must be Chancellor. ?][? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
+title: 提前选举
+subtitle: 举行提前选举。
+unavailable-subtitle: [? if chancellor != "Müller" : 米勒必须担任总理。 ?][? if advisor_action_timer > 0 : 距下次顾问行动还有 [+ advisor_action_timer +] 个月。 ?]
 choose-if: advisor_action_timer == 0 and chancellor == "Müller"
 on-arrival: advisor_action_timer = 6; next_election_time = time + 3 if next_election_time > time+3; next_election_month = month + 3 if next_election_time >= time+3; next_election_year = year if next_election_time >= time+3; next_election_year += 1 if next_election_month > 12; next_election_month -= 12 if next_election_month > 12;
 
-We have called for new elections, set for [+ next_election_month : month +] [+ next_election_year +].
+我们已宣布举行新的选举,定于 [+ next_election_month : month +] [+ next_election_year +]。

@@ -1,46 +1,46 @@
-title: Max Seydewitz
+title: 马克斯·塞德维茨
 is-pinned-card: true
 tags: advisor, left
 card-image: img/portraits/SeydewitzMax.jpg
 view-if: seydewitz_advisor = 1
 new-page: true 
 
-= Max Seydewitz
+= 马克斯·塞德维茨
 
-Max Seydewitz is a former leader of the youth wing, current supporter of the left wing of the SPD, and advocates for class struggle.
+马克斯·塞德维茨曾是青年翼的领袖,如今是社民党左翼的支持者,主张阶级斗争。
 
 - @class_struggle
 - @socialist_youth
 - @against_toleration
-- @root: Return to main
+- @root: 返回主界面
 
 @class_struggle
-title: Rally for class struggle
-subtitle: The core of socialism should be the struggle of the proletariat against the bourgeoisie.
-unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
+title: 为阶级斗争而呼号
+subtitle: 社会主义的核心,应当是无产阶级对资产阶级的斗争。
+unavailable-subtitle: [? if advisor_action_timer > 0 : 距下次顾问行动还有 [+ advisor_action_timer +] 个月。 ?]
 choose-if: advisor_action_timer = 0
 on-arrival: advisor_action_timer = 6; workers_spd += 4*(1-dissent); unemployed_spd += 3*(1-dissent); workers_spd += 4*(1-dissent) if nationalization_progress > 0; unemployed_spd += 3*(1-dissent) if nationalization_progress > 0; left_strength += 5; left_dissent -= 5; old_middle_spd -= 3; new_middle_spd -= 2
 
-Our message of class struggle appeals to the left wing of the working class, while potentially alienating the middle class. [? if nationalization_progress > 0 : Our achievements in nationalization have assisted our messaging. ?]
+我们的阶级斗争主张吸引了工人阶级中的左翼,却可能疏远中间阶层。[? if nationalization_progress > 0 : 我们在国有化方面取得的成果,为我们的宣传助了一臂之力。 ?]
 
 
 @socialist_youth
-title: Support the Socialist Youth
-subtitle: We must end our reputation as a party for old men by increasing funding to the youth organizations. -1 resources
-unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?] [? if resources <= 0 : Not enough resources. ?]
+title: 支援社会主义青年团
+subtitle: 我们必须通过增加对青年组织的拨款,摆脱「老人党」的名声。-1 资源
+unavailable-subtitle: [? if advisor_action_timer > 0 : 距下次顾问行动还有 [+ advisor_action_timer +] 个月。 ?] [? if resources <= 0 : 资源不足。 ?]
 choose-if: advisor_action_timer = 0 and resources > 0
 on-arrival: advisor_action_timer = 6; resources -= 1; left_strength += 5; left_dissent -= 3; rb_strength += 50; rb_militancy += 0.025; workers_spd += 2*(1-dissent); new_middle_spd += 1;
 
-Seydewitz supports building up the Socialist Youth, which attracts support to the Left and increases the militancy of the Reichsbanner.
+塞德维茨支持建设社会主义青年团,这为左翼吸引支持,也提升了国旗团的军事化程度。
 
 @against_toleration
-title: Against toleration
-subtitle: Break our current toleration arrangement, and bring down the government via a no-confidence vote.
-unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?] [? if spd_toleration == 0 : The SPD is not currently in toleration. ?][? if year < 1928 : The DNVP would vote against. ?]
+title: 反对容忍
+subtitle: 打破当前的容忍安排,通过不信任投票搞垮政府。
+unavailable-subtitle: [? if advisor_action_timer > 0 : 距下次顾问行动还有 [+ advisor_action_timer +] 个月。 ?] [? if spd_toleration == 0 : 社民党目前并非处于容忍状态。 ?][? if year < 1928 : 国家人民党会投反对票。 ?]
 view-if: not constructive_vonc
 choose-if: advisor_action_timer == 0 and spd_toleration and year >= 1928
 on-arrival: advisor_action_timer = 6; next_election_time = time + 3 if next_election_time > time+3; next_election_month = month + 3 if next_election_time >= time + 3; next_election_year = year if next_election_time >= time + 3; next_election_year += 1 if next_election_month > 12; next_election_month -= 12 if next_election_month > 12; spd_toleration = 0; left_strength += 8; pro_republic -= 4; new_middle_spd -= 3; rural_spd -= 3; old_middle_spd -= 3; catholics_spd -= 3; reformist_dissent += 8
 
-We have grown tired of the burdens of toleration, and have called a vote of no confidence in the current minority government.
+我们已厌倦了容忍的重负,对现任少数派政府提出了不信任案。
 
-New elections have been set for [+ next_election_month : month +] [+ next_election_year +].
+新的选举已定于 [+ next_election_month : month +] [+ next_election_year +]。

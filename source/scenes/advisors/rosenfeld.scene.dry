@@ -1,45 +1,45 @@
-title: Kurt Rosenfeld
+title: 库尔特·罗森费尔德
 is-pinned-card: true
 tags: advisor, left
 card-image: img/portraits/RosenfeldKurt.jpg
 view-if: rosenfeld_advisor = 1
 new-page: true 
 
-= Kurt Rosenfeld
+= 库尔特·罗森费尔德
 
-Rosenfeld works as a lawyer in Berlin who defends left-wing individuals and causes. He favors cooperation with the KPD and a path of class struggle for the SPD.
+罗森费尔德是柏林的一位律师,为左翼人士与左翼事业辩护。他赞成与共产党合作,主张社民党走阶级斗争的道路。
 
 - @building_the_left
 - @kpd_cooperation
 - @against_toleration
-- @root: Return to main
+- @root: 返回主界面
 
 @building_the_left
-title: Building the Left
-subtitle: Push the SPD to the left.
-unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
+title: 壮大左翼
+subtitle: 把社民党推向左侧。
+unavailable-subtitle: [? if advisor_action_timer > 0 : 距下次顾问行动还有 [+ advisor_action_timer +] 个月。 ?]
 choose-if: advisor_action_timer = 0
 on-arrival: advisor_action_timer = 6; left_strength += 6; left_dissent -= 8; reformist_dissent += 2
 
-We have increased the strength of the left faction with the SPD.
+我们增强了社民党内左翼派系的力量。
 
 @kpd_cooperation
-title: Cooperation with the KPD
-subtitle: Push the party to be more friendly towards the KPD.
-unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
+title: 与共产党合作
+subtitle: 推动我党对共产党更为友好。
+unavailable-subtitle: [? if advisor_action_timer > 0 : 距下次顾问行动还有 [+ advisor_action_timer +] 个月。 ?]
 choose-if: advisor_action_timer = 0
 on-arrival: advisor_action_timer = 6; left_strength += 5; kpd_relation += 4*(1-dissent); reformist_dissent += 2; communist_coalition += 1 if kpd_cooperation_seen <= 1; kpd_cooperation_seen += 1
 
-Through his work, Rosenfeld has defended individual KPD members; this should make some connections possible.
+凭借他的工作,罗森费尔德曾为一些共产党人辩护;这应当有助于打开一些联系渠道。
 
 @against_toleration
-title: Against toleration
+title: 反对容忍
 view-if: not constructive_vonc
-subtitle: Break our current toleration arrangement, and bring down the government via a no-confidence vote.
-unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?] [? if spd_toleration == 0 : The SPD is not currently in toleration. ?][? if year < 1928 : The DNVP would vote against. ?]
+subtitle: 打破当前的容忍安排,通过不信任投票搞垮政府。
+unavailable-subtitle: [? if advisor_action_timer > 0 : 距下次顾问行动还有 [+ advisor_action_timer +] 个月。 ?] [? if spd_toleration == 0 : 社民党目前并非处于容忍状态。 ?][? if year < 1928 : 国家人民党会投反对票。 ?]
 choose-if: advisor_action_timer == 0 and spd_toleration and year >= 1928
 on-arrival: advisor_action_timer = 6; next_election_time = time + 3 if next_election_time > time+3; next_election_month = month + 3 if next_election_time >= time + 3; next_election_year = year if next_election_time >= time + 3; next_election_year += 1 if next_election_month > 12; next_election_month -= 12 if next_election_month > 12; spd_toleration = 0; left_strength += 8; pro_republic -= 4; new_middle_spd -= 3; rural_spd -= 3; old_middle_spd -= 3; catholics_spd -= 3; reformist_dissent += 8
 
-We have grown tired of the burdens of toleration, and have called a vote of no confidence in the current minority government.
+我们已厌倦了容忍的重负,对现任少数派政府提出了不信任案。
 
-New elections have been set for [+ next_election_month : month +] [+ next_election_year +].
+新的选举已定于 [+ next_election_month : month +] [+ next_election_year +]。

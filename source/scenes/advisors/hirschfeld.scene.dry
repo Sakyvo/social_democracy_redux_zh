@@ -1,42 +1,42 @@
-title: Magnus Hirschfeld
+title: 马格努斯·希尔施费尔德
 is-pinned-card: true
 tags: advisor
 card-image: img/portraits/HirschfeldMagnus.jpg
 view-if: hirschfeld_advisor = 1
 new-page: true 
 
-= Magnus Hirschfeld
+= 马格努斯·希尔施费尔德
 
-Magnus Hirschfeld is the founder of the Institut für Sexualwissenschaft and an advocate for the rights of sexual minorities.
+马格努斯·希尔施费尔德是性学研究所的创始人,也是性少数群体权利的倡导者。
 
 
 - @homosexual_rights_
 - @womens_rights_
 - @science_funding
-- @root: Return to main
+- @root: 返回主界面
 
 
 @homosexual_rights_
-title: Homosexual rights
-subtitle: Enact policy that supports homosexual rights.
+title: 同性恋权利
+subtitle: 推行支持同性恋权利的政策。
 choose-if: advisor_action_timer = 0 and spd_in_government and progressive_coalition >= 50
-unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?][? if not spd_in_government : The SPD is not currently in government. ?][? if progressive_coalition < 50 : We do not have the votes to enact these policies. ?]
+unavailable-subtitle: [? if advisor_action_timer > 0 : 距下次顾问行动还有 [+ advisor_action_timer +] 个月。 ?][? if not spd_in_government : 社民党目前不在政府之中。 ?][? if progressive_coalition < 50 : 我们没有足够的票数来推行这些政策。 ?]
 on-arrival: advisor_action_timer = 6; homosexual_rights_timer -= 11; last_advisor_action = 1
 go-to: homosexual_rights
 
 
 @womens_rights_
-title: Women's rights
-subtitle: Enact policy with regards to women's rights.
+title: 妇女权利
+subtitle: 推行关于妇女权利的政策。
 choose-if: advisor_action_timer = 0 and spd_in_government
-unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?][? if not spd_in_government : The SPD is not currently in government. ?]
+unavailable-subtitle: [? if advisor_action_timer > 0 : 距下次顾问行动还有 [+ advisor_action_timer +] 个月。 ?][? if not spd_in_government : 社民党目前不在政府之中。 ?]
 on-arrival: advisor_action_timer = 6; womens_rights_timer -= 10; last_advisor_action = 1
 go-to: womens_rights
 
 @science_funding
-title: Science funding
-subtitle: Increase funding for scientific research.
+title: 科学经费
+subtitle: 增加对科学研究的经费投入。
 choose-if: advisor_action_timer = 0 and spd_in_government and economic_minister_party = "SPD" and chancellor_party = "SPD"
-unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?][? if not spd_in_government : The SPD is not currently in government. ?][? if economic_minister_party != "SPD": This requires the Economic Ministry. ?][? if chancellor_party != "SPD": The Chancellor must be an SPD member. ?]
+unavailable-subtitle: [? if advisor_action_timer > 0 : 距下次顾问行动还有 [+ advisor_action_timer +] 个月。 ?][? if not spd_in_government : 社民党目前不在政府之中。 ?][? if economic_minister_party != "SPD": This requires the Economic Ministry. ?][? if chancellor_party != "SPD": The Chancellor must be an SPD member. ?]
 on-arrival: advisor_action_timer = 6; last_advisor_action = 1
 go-to: education_science.increase_science
