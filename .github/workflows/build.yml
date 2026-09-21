@@ -1,4 +1,4 @@
-name: 自动构建中文站
+name: 构建并发布中文站
 
 on:
   push:
@@ -7,11 +7,13 @@ on:
       - 'source/**'
       - 'template-zh/**'
       - 'scripts/**'
+      - '.github/workflows/build.yml'
   workflow_dispatch:
 
-# 允许把重新构建的 out/html 提交回仓库
 permissions:
   contents: write
+  pages: write
+  id-token: write
 
 concurrency:
   group: build-zh
@@ -40,3 +42,17 @@ jobs:
             git commit -m "chore: 自动重建中文站 [skip ci]"
             git push
           fi
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: out/html
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
