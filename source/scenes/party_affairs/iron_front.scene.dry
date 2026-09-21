@@ -1,4 +1,4 @@
-title: The Iron Front
+title: 铁前线
 new-page: true
 is-card: true
 view-if: iron_front_formed == 1 and iron_front_independent == 0 and iron_front_timer = 0
@@ -7,53 +7,53 @@ card-image: img/iron_front.png
 frequency: 200
 tags: party_affairs, antifascism
 
-= The Iron Front
+= 铁前线
 
-The Iron Front is our new antifascist coordination front, consisting of the SPD, the trade unions, and the Reichsbanner. How should we use the Iron Front?
+铁前线是我们新的反法西斯协调阵线,由社民党、工会与国旗团组成。我们该如何运用铁前线?
 
-[? if workers_spd < 45 or workers_spd < workers_nsdap or workers_spd < workers_kpd : Unfortunately, the Iron Front's effectiveness is dragged down by the SPD's unpopularity, as the SPD is no longer the dominant party among the workers. Many Reichsbanner members have left, and many workers are not interested. ?]
+[? if workers_spd < 45 or workers_spd < workers_nsdap or workers_spd < workers_kpd : 遗憾的是,铁前线的效力因社民党的不受欢迎而受到拖累 —— 社民党已不再是工人中的主导政党。许多国旗团成员已经离开,许多工人也提不起兴趣。 ?]
 
-- @defense: Rally for defense against the fascists with the Reichsbanner.
-- @pacifism: Rally for pacifism, against nationalism and war.
-- @republic: Rally to save the democratic republic against dictatorship.
-- @wtb: Rally for economic change and the WTB-Plan.
-- @weimar_1: A joint rally by the Weimar parties on behalf of our economic plan, tauting it as a republican compromise.
-- @weimar_2: A joint rally by the Weimar parties on behalf of our economic plan, tauting it as a republican compromise.
+- @defense: 与国旗团一道为抵御法西斯分子而集会。
+- @pacifism: 为和平主义、反对民族主义与战争而集会。
+- @republic: 为拯救民主共和国、抵御独裁而集会。
+- @wtb: 为经济变革与 WTB 计划而集会。
+- @weimar_1: 各魏玛政党联合集会,为我们的经济计划站台,将其鼓吹为一项共和派的妥协方案。
+- @weimar_2: 各魏玛政党联合集会,为我们的经济计划站台,将其鼓吹为一项共和派的妥协方案。
 - @antisemitism
 - @easy_discard
 
 @defense
-subtitle: -[+ rb_militarization_cost +] resources
+subtitle: -[+ rb_militarization_cost +] 资源
 choose-if: resources >= rb_militarization_cost
 on-arrival: resources -= rb_militarization_cost; rb_strength += 50; rb_militancy += 0.05; z_relation -= 5 if historical_mode
 
-The Iron Front rallies for the militant defense of the republic against the fascist paramilitaries, strengthening the Reichsbanner.
+铁前线为以武力保卫共和国、抵御法西斯准军事组织而集会,壮大了国旗团。
 
-[? if historical_mode : The Center Party decries the militarization of the Reichsbanner and Iron Front, and its members are leaving the republican organization. ?]
+[? if historical_mode : 中央党谴责国旗团与铁前线的军事化,其成员正陆续退出这个共和派组织。 ?]
 
 
 @pacifism
 on-arrival: pacifism += 1; nationalism -= 5 if pacifism >= 3; workers_spd += 5*(1-dissent) if pacifism >= 4; unemployed_spd += 4*(1-dissent) if pacifism >= 4; new_middle_spd += 4*(1-dissent) if pacifism >= 4
 
-The Iron Front rallies against nationalism and war.
+铁前线为反对民族主义与战争而集会。
 
 @republic
 on-arrival: pro_republic += 5*(1-dissent); democratization += 1; workers_spd += 5*(1-dissent) if democratization >= 4; unemployed_spd += 4*(1-dissent) if democratization >= 4; new_middle_spd += 4*(1-dissent) if democratization >= 4
 
-The Iron Front rallies in defense of the democratic republic and against dictatorship.
+铁前线为保卫民主共和国、反对独裁而集会。
 
 @wtb
 view-if: wtb_adopted == 1
 choose-if: return_to_normalcy = 0
-unavailable-subtitle: The economic crisis is largely over now, and the public is no longer interested in hearing about it.
+unavailable-subtitle: 经济危机如今大体上已经过去,公众不再有兴趣听这些了。
 on-arrival: workers_spd += 8*(1-dissent); unemployed_spd += 8*(1-dissent); new_middle_spd += 5*(1-dissent); old_middle_spd += 3*(1-dissent); rural_spd += 3*(1-dissent);
 
-The WTB-Plan is the rallying point for the entire SPD and its affiliated organizations, including the Iron Front.
+WTB 计划是整个社民党及其附属组织 —— 包括铁前线 —— 的号召核心。
 
 @weimar_1
 view-if: moderate_plan_adopted = 1 and weimar_rejected != 1 and weimar_plan_adopted != 1
-subtitle: We will first need to convince our Weimar partners of the plan's merits.
-unavailable-subtitle: Our Weimar partners are not willing to be convinced of the plan's merits.
+subtitle: 我们首先需要说服我们的魏玛盟友,让他们相信这项计划的优点。
+unavailable-subtitle: 我们的魏玛盟友不愿被说服相信这项计划的优点。
 choose-if: weimar_willingness == 1
 go-to: weimar_plan
 
@@ -61,12 +61,12 @@ go-to: weimar_plan
 view-if: weimar_plan_adopted = 1
 on-arrival: moderate_plan_support += 1; workers_spd += ((6*(1-dissent))*(pro_republic/100)); unemployed_spd += ((6*(1-dissent))*(pro_republic/100)); rural_spd += ((5*(1-dissent))*(pro_republic/100)); new_middle_spd += ((5*(1-dissent))*(pro_republic/100)); old_middle_spd += ((5*(1-dissent))*(pro_republic/100)); workers_ddp += 3*(pro_republic/100); unemployed_nsdap -= 4*(pro_republic/100); unemployed_kpd -= 4*(pro_republic/100); rural_z += 4*(pro_republic/100); new_middle_ddp += 4*(pro_republic/100); old_middle_ddp += 3*(pro_republic/100); old_middle_z += 3*(pro_republic/100); workers_nsdap -= 4*(pro_republic/100); new_middle_nsdap -= 6*(pro_republic/100); old_middle_nsdap -= 4*(pro_republic/100); peoples_party_support += 2; neorevisionist_strength += 10; left_strength -= 3; left_dissent += 5; kpd_relation -= 10; pro_republic += 8*(((z_relation + ddp_relation)/2)/100); weimar_rallies += 1; weimar_dissent += 1 if weimar_rallies > 3; weimar_dissent += 1 if pro_republic >= 75
 
-We rally alongside politicians from Zentrum and the DDP, united through the Iron Front behind our economic plan and support of the republic. [? if pro_republic < 40 : Such a show of democratic solidarity bolsters republican forces, but as extremist and anti-democratic rhetoric has recently entered the mainstream, many who hear our message remain unconvinced, and many on the Left of the party even criticize the rally and our alignment with the bourgeois parties. ?] [? if pro_republic > 40 and pro_republic < 60 : Such a show of democratic solidarity bolsters republican forces, helping match the now prevalent anti-democratic rhetoric from the far-left and far-right, though many on the Left oppose our decision to align with the bourgeois parties. ?] [? if pro_republic > 60 : Such a show of democratic solidarity has greatly bolstered republican forces, helping combat the increasingly prevalent anti-democratic rhetoric from the far-left and far-right. Nevertheless, some on the Left of the party still oppose our alignment with the bourgeois parties. ?]
+我们与中央党及民主党的政客们一同集会,通过铁前线在支持我们的经济计划与共和国这一立场上团结一致。 [? if pro_republic < 40 : 这样一场民主团结的展示壮大了共和派的力量;但由于极端主义与反民主的言论近来已进入主流,许多听到我们主张的人仍然半信半疑,党内左翼的不少人甚至批评这场集会以及我们与资产阶级政党的结盟。 ?] [? if pro_republic > 40 and pro_republic < 60 : 这样一场民主团结的展示壮大了共和派的力量,有助于抗衡如今甚嚣尘上的极左与极右反民主言论,尽管党内左翼的许多人反对我们与资产阶级政党结盟的决定。 ?] [? if pro_republic > 60 : 这样一场民主团结的展示极大地壮大了共和派的力量,有助于对抗日益蔓延的极左与极右反民主言论。尽管如此,党内左翼仍有一些人反对我们与资产阶级政党的结盟。 ?]
 
 @antisemitism
-title: Rally against antisemitism and in defense of Jewish Germans.
+title: 为反对反犹主义、保卫犹太裔德国人而集会。
 view-if: confronting_antisemitism > 1
 on-arrival: nationalism -= 4*(1-dissent); pro_republic += 3*(1-dissent); confronting_antisemitism += 1; workers_nsdap -= 4*(1-dissent); unemployed_nsdap -= 4*(1-dissent);
 
 # TODO
-The Nazis and other far-right political movements are increasingly turning their hatred against the Jewish community of Germany. The Iron Front rallies in defense of individual Jews and the broader community against violence.
+纳粹与其他极右政治运动正越来越多地把仇恨转向德国的犹太社群。铁前线为保卫犹太人个体与更广泛的社群免遭暴力而集会。

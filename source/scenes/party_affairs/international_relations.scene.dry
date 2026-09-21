@@ -1,4 +1,4 @@
-title: International Relations
+title: 国际关系
 new-page: true
 is-card: true
 tags: party_affairs
@@ -8,15 +8,15 @@ card-image: img/international.jpg
 max-visits: 6
 #subtitle: Building ties with our fraternal socialist parties.
 
-At the Labor and Socialist International, we can forge contacts with our fraternal socialist parties in Europe and across the world.
+在劳工与社会主义国际中,我们可以与欧洲乃至世界各地的兄弟社会主义政党建立联系。
 
-- @fr_uk: Build relationships with the French SFIO and British Labour Party to move their governments in Germany's favor.
-- @austria: Learn organization and street fighting from the Austrian SDAPÖ.
-- @scandi: Learn the path of economics and reform from the Scandinavian social democrats.
-- @comintern: Forget the second international - embed a spy in the Comintern's conference.
-- @america: Contact the Socialist party of America.
-- @spain: Send aid to the Spanish Republicans in their fight against fascism.
-- @return: We do not need international contacts at the moment.
+- @fr_uk: 与法国工人国际法国支部及英国工党建立关系,促使它们各自的政府对德国更为有利。
+- @austria: 向奥地利社会民主党学习组织与街头斗争。
+- @scandi: 向斯堪的纳维亚的社会民主党人学习经济与改良之路。
+- @comintern: 忘掉第二国际 —— 在共产国际的会议中安插一名间谍。
+- @america: 联络美国社会党。
+- @spain: 向西班牙共和派提供援助,支持他们对抗法西斯。
+- @return: 我们眼下不需要国际联系。
 - @easy_discard
 - @cancel_advisor_action
 
@@ -26,18 +26,18 @@ choose-if: resources >= 1
 unavailable-subtitle: Not enough resources.
 on-arrival: resources -= 1; west_relation += 1; reformist_strength += 5; pacifism += 1; moderate_plan_support += 1; west_seen += 1
 
-The socialists of France and Britain can influence their governments to be friendlier towards Germany. Hopefully they will reduce our reparations burden.
+法国与英国的社会主义者可以促使其政府对德国更为友好。但愿他们能减轻我们的赔款负担。
 
 @austria
-subtitle: -1 resources [? if austrian_parliament_seen and not austrian_civil_war_seen: - We will also help the Austrians oppose their dictatorship. ?]
+subtitle: -1 资源 [? if austrian_parliament_seen and not austrian_civil_war_seen: —— 我们还将帮助奥地利人对抗他们的独裁政权。 ?]
 choose-if: resources >= 1
 unavailable-subtitle: Not enough resources.
 audio: shuffle music/communist/workers_of_vienna_normalized.mp3
 on-arrival: left_strength += 5; radicalization += 1; rb_militancy += 0.03; resources -= 1; austria_relation += 1; sdapo_strength += 1 if austrian_parliament_seen = 1
 
-Our Reichsbanner can learn much in paramilitary organization and training from the Austrian Republikanischer Schutzbund (Republican Protection Units), the paramilitary branch of the Austrian social democrats.
+我们的国旗团可以从奥地利共和派保卫同盟(共和国保卫队)—— 奥地利社会民主党的准军事分支 —— 学到许多准军事组织与训练方面的经验。
 
-[? if austrian_parliament_seen and not austrian_civil_war_seen: We are also helping the Austrian Social Democratic Worker's Party build up their resources in preparation for a future struggle, legally and illegally. ?]
+[? if austrian_parliament_seen and not austrian_civil_war_seen: 我们还在帮助奥地利社会民主工党积累资源,为将来的斗争做准备 —— 无论合法还是非法。 ?]
 
 @scandi
 subtitle: -1 resources
@@ -45,7 +45,7 @@ choose-if: resources >= 1
 unavailable-subtitle: Not enough resources.
 on-arrival: reformist_strength += 8; wtb_support += 1; resources -= 1; moderate_plan_support += 1
 
-The programs of the Nordic socialists involve active government intervention in the economy. We can learn from their economic strategies, and how they moved beyond their working-class base to attract a broader set of constituents.
+北欧社会主义者的纲领涉及政府积极干预经济。我们可以学习他们的经济策略,以及他们如何超越工人阶级基础、吸引更广泛的选民。
 
 @comintern
 subtitle: -1 resources
@@ -53,23 +53,23 @@ choose-if: resources >= 1
 unavailable-subtitle: Not enough resources.
 on-arrival: resources -= 1; kpd_relation += 5*(1-dissent); communist_coalition += 1 if comintern_seen == 0; comintern_seen += 1
 
-The Stalinists of the KPD insists on calling us "social fascists", suggesting that we social democrats are as bad or worse than actual fascists. Needless to say, this is not good for our relationship with the Communists. By observing the Comintern, we can better understand the KPD, enabling us to potentially improve relations, or counter the KPD if it may come to that.
+共产党的斯大林主义者执意把我们称作「社会法西斯」,暗示我们社会民主党人比真正的法西斯分子一样坏甚至更坏。不用说,这对我们与共产党的关系毫无益处。通过观察共产国际,我们能更好地理解共产党,从而有望改善关系 —— 或者,若事态发展到那一步,则用以对抗共产党。
 
-[? if wittorf_soviet_union != 1 and spd_in_government == 0 and dnvp_in_government and volksmai == 1 and comintern_seen >= 1 and wittorf_secret = 1 and ((year = 1929 and month < 7) or year = 1928) and wittorf_soviet_union = 0 : We have built up enough contacts in the Comintern that, if we wished, we could reach Moscow through them and see if the Soviets know about the Wittorf Affair, and if they know that we know. ?]
+[? if wittorf_soviet_union != 1 and spd_in_government == 0 and dnvp_in_government and volksmai == 1 and comintern_seen >= 1 and wittorf_secret = 1 and ((year = 1929 and month < 7) or year = 1928) and wittorf_soviet_union = 0 : 我们已在共产国际中积累了足够的联系,若愿意,便可通过他们联络莫斯科,看看苏联是否知道维托夫事件,以及他们是否知道我们知道。 ?]
 
-- @wittorf: Yes, let's contact the Soviets about the Wittorf Affair.
-- @nothing: We will not attempt to contact the Soviets on the matter.
+- @wittorf: 好,就维托夫事件联络苏联人。
+- @nothing: 我们不会就此事尝试联络苏联人。
 
 @wittorf
 view-if: wittorf_soviet_union != 1 and spd_in_government == 0 and dnvp_in_government == 1 and volksmai == 1 and comintern_seen >= 1 and wittorf_secret = 1 and ((year = 1929 and month < 7) or year = 1928) and wittorf_soviet_union = 0
 on-arrival: wittorf_soviet_union = 1; kpd_relation += 6*(1-dissent)
 
-Of course Stalin and the various leaders of the Comintern know about the Wittorf Affair, but they do not seem to know that we know as well. The Comintern was planning to build a narrative around the affair that absolves Thälmann, but perhaps now they will be less inclined to defend him.
+斯大林与共产国际的各位领导人当然知道维托夫事件,但他们似乎并不知道我们也知道。共产国际原本打算围绕此事构建一套为台尔曼开脱的说辞,但如今他们或许不那么愿意替他辩护了。
 
 @nothing
 view-if: wittorf_soviet_union != 1 and spd_in_government == 0 and dnvp_in_government == 1 and volksmai == 1 and comintern_seen >= 1 and wittorf_secret = 1 and ((year = 1929 and month < 7) or year = 1928) and wittorf_soviet_union = 0
 
-Using our contacts to reach Stalin would necessarily require revealing that we have embedded spies in the Comintern, and as such is too risky. We do not do so.
+利用我们的联系去联络斯大林,必然要暴露我们已在共产国际中安插间谍,因此风险太大。我们不这样做。
 
 @america
 subtitle: -1 resources
@@ -77,7 +77,7 @@ choose-if: resources >= 1
 unavailable-subtitle: Not enough resources.
 on-arrival: resources -= 1; spa_ties += 1
 
-The Socialist Party of America is tiny and has limited support. There is not much we can do for them, and conversely, not much they can do for us.
+美国社会党规模很小,支持有限。我们能为他们做的不多,反过来,他们能为我们也做不了什么。
 
 @spain
 subtitle: -1 resources
@@ -86,8 +86,8 @@ choose-if: resources >= 1
 unavailable-subtitle: Not enough resources.
 on-arrival: resources -= 1; republic_strength += 0.1; republic_strength += 0.1 if smuggle_seen and foreign_minister_party == "SPD"; republic_strength += 0.05 if rb_force >= 25; reformist_dissent += 4; left_strength += 2; left_dissent -= 3; rb_militancy -= 0.01; rb_strength -= 20
 
-We send aid to the Republicans in Spain, redirecting resources from our Reichsbanner to their international brigades and encouraging volunteers to go and fight. How much we can help with just these resources is limited, but every little bit is appreciated. [? if smuggle_seen : The Foreign Ministry is helping smuggle these volunteers, allowing a greater flow. ?]
+我们向西班牙的共和派提供援助,把国旗团的资源转拨给他们的国际纵队,并鼓励志愿者前往参战。仅凭这些资源能帮上多少忙是有限的,但一点一滴都弥足珍贵。 [? if smuggle_seen : 外交部正协助偷运这些志愿者,使流量更大。 ?]
 
 @reduce
 
-We do not need the international contacts at the moment.
+我们眼下不需要国际联系。

@@ -1,4 +1,4 @@
-title: Political Rally
+title: 政治集会
 new-page: true
 is-card: true
 tags: party_affairs
@@ -9,12 +9,12 @@ go-to: main_rally; sa_disrupt if sa_strength > 180 and not sa_banned and not ret
 
 @sa_disrupt
 
-The Nazi SA has disrupted our rally! Their street troops are preventing us from meeting.
+纳粹冲锋队搅乱了我们的集会!他们的街头武装正阻止我们开会。
 
-- @police_protect: Call the police to protect our rally.
-- @rb_protect: Use the Reichsbanner to protect our rally.
-- @both_protect: The police and Reichsbanner should work together to protect our rally.
-- @cancel: Cancel the rally.
+- @police_protect: 叫警察来保护我们的集会。
+- @rb_protect: 用国旗团来保护我们的集会。
+- @both_protect: 让警察与国旗团共同保护我们的集会。
+- @cancel: 取消集会。
 
 @police_protect
 view-if: spd_prussia == 1
@@ -24,12 +24,12 @@ go-to: police_protect_win if police_protect_success >= 0; police_protect_lose if
 @police_protect_win
 go-to: main_rally
 
-The police successfully protected our rally, so it can go ahead as usual.
+警察成功保护了我们的集会,因此可以照常进行。
 
 @police_protect_lose
 on-arrival: strife += 1; workers_nsdap += 3
 
-Unfortunately, the police were unable or unwilling to hold back the SA mob. The Nazis have won this show of strength.
+遗憾的是,警察无力或不愿挡住冲锋队的暴徒。纳粹在这场力量较量中胜出。
 
 @rb_protect
 on-arrival: rb_success = rb_strength*rb_militancy - sa_strength*sa_militancy; strife += 1
@@ -38,89 +38,89 @@ go-to: rb_protect_win if rb_success >= 0; rb_protect_lose if rb_success < 0
 @rb_protect_win
 go-to: main_rally
 
-The Reichsbanner has successfully protected our rally against the SA! Our meeting can go ahead as usual.
+国旗团成功保护我们的集会,顶住了冲锋队!我们的会议可以照常进行。
 
 @rb_protect_lose
 on-arrival: workers_nsdap += 3; rb_strength -= 50
 
-Unfortunately, the Reichsbanner was not able to hold back the SA mob. The Nazis have won this show of strength.
+遗憾的是,国旗团未能挡住冲锋队的暴徒。纳粹在这场力量较量中胜出。
 
 @both_protect
 view-if: spd_prussia
 choose-if: prussian_police_training > 0
-unavailable-subtitle: The loyal sections of the police have never coordinated with the Reichsbanner before.
+unavailable-subtitle: 警察中的忠诚部分此前从未与国旗团协调过。
 on-arrival: rb_success = rb_strength*rb_militancy - sa_strength*sa_militancy + prussian_police_loyalty*prussian_police_militancy*prussian_police_strength*2; strife += 1
 go-to: both_protect_win if rb_success >= 0; both_protect_lose if rb_success < 0
 
 @both_protect_win
 go-to: main_rally
 
-The police and Reichsbanner have successfully protected our rally against the SA! Our meeting can go ahead as usual.
+警察与国旗团成功保护我们的集会,顶住了冲锋队!我们的会议可以照常进行。
 
 @both_protect_lose
 on-arrival: workers_nsdap += 3; rb_strength -= 50; strife += 1
 
-Unfortunately, the police and Reichsbanner were not able to hold back the SA mob. The Nazis have won this show of strength.
+遗憾的是,警察与国旗团未能挡住冲锋队的暴徒。纳粹在这场力量较量中胜出。
 
 @cancel
 on-arrival: workers_nsdap += 3;
 
-The SA have won this show of strength.
+冲锋队在这场力量较量中胜出。
 
 @main_rally
 
-Mass rallies are a common feature of social democratic life, especially in the lead-up to an election. What is the primary theme of this rally?
+群众集会是社会民主生活的一种常态,尤其是在选举前夕。这次集会的主题是什么?
 
-- @class_struggle: The class struggle of the proletariat against the bourgeoisie.
-- @welfare: Sozialpolitik - the maintenance and expansion of social welfare programs.
-- @democracy: Expanding our nascent democracy and defending it against dictatorship and fascism.
-- @pacifism: Opposing war, nationalism, and militarism at all costs.
-- @wtb: Support the WTB plan!
-- @weimar_1: A joint rally by the Weimar parties on behalf of our economic plan, tauting it as a republican compromise.
-- @weimar_2: A joint rally by the Weimar parties on behalf of our economic plan, tauting it as a republican compromise.
-- @local: A mixture of various local and national concerns that resonate most with the audience.
+- @class_struggle: 无产阶级对资产阶级的阶级斗争。
+- @welfare: 社会政策 —— 维持并扩展社会福利计划。
+- @democracy: 扩大我们新生的民主,并抵御独裁与法西斯。
+- @pacifism: 不惜一切代价反对战争、民族主义与军国主义。
+- @wtb: 支持 WTB 计划!
+- @weimar_1: 各魏玛政党联合集会,为我们的经济计划站台,将其鼓吹为一项共和派的妥协方案。
+- @weimar_2: 各魏玛政党联合集会,为我们的经济计划站台,将其鼓吹为一项共和派的妥协方案。
+- @local: 混合若干最能引起听众共鸣的地方与全国性议题。
 - @easy_discard
 
 @class_struggle
 choose-if: not capital_spd
-unavailable-subtitle: <span style="color:rgb(170,150,60);font-family:'Times New Roman',serif;font-weight:700;letter-spacing:0.5px;">Corporations are people, too.</span>
+unavailable-subtitle: <span style="color:rgb(170,150,60);font-family:'Times New Roman',serif;font-weight:700;letter-spacing:0.5px;">公司也是人嘛。</span>
 on-arrival: workers_spd += 4*(1-dissent); unemployed_spd += 3*(1-dissent) if left_strength > reformist_strength; workers_spd += 4*(1-dissent) if nationalization_progress > 0; unemployed_spd += 3*(1-dissent) if nationalization_progress > 0; left_strength += 5; left_dissent -= 5; old_middle_spd -= 3; new_middle_spd -= 2 if not new_middle_conscious; socialism += 2*(1-dissent)
 
-Our message of class struggle appeals to the left wing of the working class, while potentially alienating the middle class. [? if nationalization_progress > 0 : Our achievements in nationalization have assisted our messaging. ?]
+我们的阶级斗争主张吸引了工人阶级中的左翼,却可能疏远中间阶层。 [? if nationalization_progress > 0 : 我们在国有化方面取得的成果,为我们的宣传助了一臂之力。 ?]
 
 @welfare
 on-arrival: workers_spd += 3*(1-dissent); workers_spd += 3*(1-dissent) if welfare > 0; unemployed_spd += 3*(1-dissent) if welfare > 0; unemployed_spd += 4*(1-dissent) if welfare > 1; reformist_strength += 3; labor_strength += 4; reformist_dissent -= 3; labor_dissent -= 3;
 
-The reformist message appeals to the organized workers, whose benefits are the accomplishments of social democracy. [? if welfare > 1 : Our achievements in expanding welfare have made this message more effective. ?]
+改良派的主张吸引着组织起来的工人 —— 他们的福利正是社会民主的成就。 [? if welfare > 1 : 我们在扩展福利方面的成就,使这一主张更有说服力。 ?]
 
 @democracy
 on-arrival: democratization += 1; pro_republic += 2*(1 - dissent); workers_spd += 4*(1-dissent) if democratization >= 3; unemployed_spd += 3*(1-dissent) if democratization >= 3; pro_republic += 4*(1 - dissent) if democratization >= 3; new_middle_spd += 4*(1-dissent) if democratization >= 3 
 
-Our speakers defend the republican system and rail against the monarchists and authoritarians who threaten it.
+我们的演讲者捍卫共和体制,痛斥威胁它的君主主义者与威权分子。
 
-[? if democratization < 3 : Talk of democracy does not excite the workers as much as more practical issues. But that may change; part of our job is to provide political education to the proletariat. ?]
-[? if democratization >= 3 : Since we have consistently made democratization a theme of our campaign, the workers are enthusiastic about our message. ?]
+[? if democratization < 3 : 比起更实际的问题,民主的言谈不那么能打动工人。但这或许会改变;为无产阶级提供政治教育,正是我们职责的一部分。 ?]
+[? if democratization >= 3 : 由于我们一贯把民主化作为宣传主题,工人们对我们的主张热情高涨。 ?]
 
 @pacifism
 on-arrival: pacifism += 1; nationalism -= 2*(1 - dissent); workers_spd += 4*(1 - dissent) if pacifism >= 3; unemployed_spd += 3*(1-dissent) if pacifism >= 3; nationalism -= 3*(1-dissent) if pacifism >= 3; new_middle_spd += 4*(1-dissent) if pacifism >= 3
 
-Our speakers denounce the military establishment and all the spending entering that black hole. Some adventurous speakers question the responsibility of the military elites in organizing the Great War.
+我们的演讲者谴责军事建制派,以及流入那个无底洞的全部开支。一些大胆的演讲者甚至质疑军方精英在发动大战中的责任。
 
-[? if pacifism < 3 : Given the volume of nationalist indoctrination in our society, it is difficult to argue so vehemently against the military. ?]
-[? if pacifism >= 3 : Since we have consistently made pacifism a theme of our campaign, the workers are enthusiastic about our message. ?]
+[? if pacifism < 3 : 考虑到我们社会中民族主义灌输的分量,要如此激烈地反对军队并非易事。 ?]
+[? if pacifism >= 3 : 由于我们一贯把和平主义作为宣传主题,工人们对我们的主张热情高涨。 ?]
 
 @wtb
 view-if: wtb_adopted = 1
 choose-if: return_to_normalcy = 0
-unavailable-subtitle: The economic crisis is largely over now, and the public is no longer interested in hearing about it.
+unavailable-subtitle: 经济危机如今大体上已经过去,公众不再有兴趣听这些了。
 on-arrival: wtb_support += 1; workers_spd += 6*(1-dissent); unemployed_spd += 6*(1-dissent); rural_spd += 3*(1-dissent); new_middle_spd += 3*(1-dissent); old_middle_spd += 3*(1-dissent);
 
-The WTB plan has become a popular rallying cry for our party. The workers are eager to go back to work, and that is exactly what the plan promises.
+WTB 计划已成为我党广受欢迎的号召口号。工人们渴望重返工作岗位,而这正是该计划的承诺。
 
 @weimar_1
 view-if: moderate_plan_adopted = 1 and weimar_rejected != 1 and weimar_plan_adopted != 1
-subtitle: We will first need to convince our Weimar partners of the plan's merits.
-unavailable-subtitle: Our Weimar partners are not willing to be convinced of the plan's merits.
+subtitle: 我们首先需要说服我们的魏玛盟友,让他们相信这项计划的优点。
+unavailable-subtitle: 我们的魏玛盟友不愿被说服相信这项计划的优点。
 choose-if: weimar_willingness == 1
 go-to: weimar_plan
 
@@ -128,11 +128,11 @@ go-to: weimar_plan
 view-if: weimar_plan_adopted = 1
 on-arrival: moderate_plan_support += 1; workers_spd += ((5*(1-dissent))*(pro_republic/100)); unemployed_spd += ((4*(1-dissent))*(pro_republic/100)); rural_spd += ((3*(1-dissent))*(pro_republic/100)); new_middle_spd += ((3*(1-dissent))*(pro_republic/100)); old_middle_spd += ((3*(1-dissent))*(pro_republic/100)); workers_ddp += 3*(pro_republic/100); unemployed_nsdap -= 2*(pro_republic/100); unemployed_kpd -= 2*(pro_republic/100); rural_z += 4*(pro_republic/100); new_middle_ddp += 4*(pro_republic/100); old_middle_ddp += 3*(pro_republic/100); old_middle_z += 3*(pro_republic/100); workers_nsdap -= 1*(pro_republic/100); workers_kpd -= 1*(pro_republic/100); new_middle_nsdap -= 2*(pro_republic/100); old_middle_nsdap -= 1*(pro_republic/100); peoples_party_support += 1; neorevisionist_strength += 5; left_strength -= 2; left_dissent += 2; kpd_relation -= 5; pro_republic += 4*(((z_relation + ddp_relation)/2)/100); weimar_rallies += 1; weimar_dissent += 1 if weimar_rallies > 3; weimar_dissent += 1 if pro_republic >= 75
 
-We rally alongside politicians from Zentrum and the DDP, united behind our economic plan and support of the republic. [? if pro_republic < 40 : Such a show of democratic solidarity bolsters republican forces, but as extremist and anti-democratic rhetoric has recently entered the mainstream, many who hear our message remain unconvinced, and many on the Left of the party even criticize the rally and our alignment with the bourgeois parties. ?] [? if pro_republic > 40 and pro_republic < 60 : Such a show of democratic solidarity bolsters republican forces, helping match the now prevalent anti-democratic rhetoric from the far-left and far-right, though many on the Left oppose our decision to align with the bourgeois parties. ?] [? if pro_republic > 60 : Such a show of democratic solidarity has greatly bolstered republican forces, helping combat the increasingly prevalent anti-democratic rhetoric from the far-left and far-right. Nevertheless, some on the Left of the party still oppose our alignment with the bourgeois parties. ?]
+我们与中央党及民主党的政客们一同集会,在支持我们的经济计划与共和国这一立场上团结一致。 [? if pro_republic < 40 : 这样一场民主团结的展示壮大了共和派的力量;但由于极端主义与反民主的言论近来已进入主流,许多听到我们主张的人仍然半信半疑,党内左翼的不少人甚至批评这场集会以及我们与资产阶级政党的结盟。 ?] [? if pro_republic > 40 and pro_republic < 60 : 这样一场民主团结的展示壮大了共和派的力量,有助于抗衡如今甚嚣尘上的极左与极右反民主言论,尽管党内左翼的许多人反对我们与资产阶级政党结盟的决定。 ?] [? if pro_republic > 60 : 这样一场民主团结的展示极大地壮大了共和派的力量,有助于对抗日益蔓延的极左与极右反民主言论。尽管如此,党内左翼仍有一些人反对我们与资产阶级政党的结盟。 ?]
 
-[? if (z_relation+ddp_relation) < 0 : Oddly, these rallies seem to be decreasing enthusiasm for democracy rather than the opposite. Some think it is due to the fact that the rallies have been rather poorly organized, with organizers and participants from the various parties alike barely getting along and spending more time criticizing each other than expressing support for the republic. ?]
+[? if (z_relation+ddp_relation) < 0 : 奇怪的是,这些集会似乎反而在削减人们对于民主的热情,而非相反。有人认为,这是因为集会的组织相当糟糕 —— 各党的组织者与参与者彼此都难以相处,花在互相批评上的时间比表达对共和国的支持还多。 ?]
 
 @local
 on-arrival: workers_spd += 3*(1-dissent); old_middle_spd += 1*(1-dissent); new_middle_spd += 2*(1-dissent); unemployed_spd += 3*(1-dissent);
 
-Our speakers have gauged the mood and are speaking to the issues that seem to most affect the workers in this moment.
+我们的演讲者已摸清了情绪,正针对此刻最能影响工人的议题发表讲话。

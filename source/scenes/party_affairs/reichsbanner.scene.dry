@@ -1,4 +1,4 @@
-title: Reichsbanner
+title: 国旗团
 new-page: true
 is-card: true
 tags: party_affairs
@@ -8,16 +8,16 @@ on-arrival: month_actions += 1; reichsbanner_timer += 6; rb_militarization_cost 
 max-visits: 5
 #subtitle: Paramilitary organizing in defense of the republic.
 
-= Reichsbanner
+= 国旗团
 
-The *Reichsbanner Schwarz-Rot-Gold* is a mass organization for the defense of the Republic against the extremists who threaten it. Some would call it a paramilitary, although currently it is hardly any sort of military. It is officially associated with the pro-democratic parties -the SPD, Center, and [+ ddp_name +], but by far the largest component is with the SPD.
+*黑红金国旗团*是一个群众组织,旨在保卫共和国、抵御威胁它的极端分子。有人会称之为准军事组织,尽管目前它几乎算不上什么军队。它正式与各拥护民主的政党 —— 社民党、中央党与 [+ ddp_name +] —— 相关联,但其中规模最大的部分当属社民党。
 
-[? if workers_spd < 46 or workers_spd < workers_nsdap or workers_spd < workers_kpd : The Reichsbanner is having a more difficult time recruiting, as the SPD is no longer the dominant party among the workers. Many of its members have left. ?]
+[? if workers_spd < 46 or workers_spd < workers_nsdap or workers_spd < workers_kpd : 国旗团的招募变得更为困难,因为社民党已不再是工人中的主导政党。许多成员已经离开。 ?]
 
-- @militant: Fund more military-style training and equipment for the Reichsbanner.
-- @militant_2: Use our existing resources to support more training for the Reichsbanner.
-- @same: Keep the Reichsbanner as it is.
-- @cut_rb: Cut funding for the Reichsbanner.
+- @militant: 为国旗团资助更多军事化训练与装备。
+- @militant_2: 用现有资源支持国旗团更多训练。
+- @same: 让国旗团维持现状。
+- @cut_rb: 削减对国旗团的拨款。
 - @women_rb
 - @easy_discard
 - @cancel_advisor_action
@@ -26,45 +26,45 @@ The *Reichsbanner Schwarz-Rot-Gold* is a mass organization for the defense of th
 
 @militant
 choose-if: resources >= rb_militarization_cost
-unavailable-subtitle: Not enough resources ([+ rb_militarization_cost +] needed).
-subtitle: -[+ rb_militarization_cost +] resources
+unavailable-subtitle: 资源不足(需要 [+ rb_militarization_cost +] 点)。
+subtitle: -[+ rb_militarization_cost +] 资源
 on-arrival: resources -= rb_militarization_cost; rb_investment += 1; rb_strength += 100; rb_militancy += 0.05; left_strength += 2; left_dissent -= 2; reformist_dissent += 5; spd_militancy += 0.05; workers_spd += 2*(1-dissent); unemployed_spd += 2*(1-dissent); z_relation -= 5 if historical_mode; coup_progress += 0.5 if historical_mode; coup_progress += 0.5 if rb_force >= 10; coup_progress += 0.5 if rb_force >= 15; coup_progress += 1 if rb_force >= 20; coup_progress += 1 if rb_force >= 25; coup_progress += 1 if rb_force >= 30 
 
-Some in our party decry the increasing militarization of the Reichsbanner. They say it is emulating the right-wing nationalists or the communists, and risks alienating our allies in the centrist parties. On the other hand, more left-leaning radicals are being lured to our organizations, away from the communists.
+党内一些人谴责国旗团日益军事化。他们说这不过是在效仿右翼民族主义者或共产党人,还可能疏远我们在中间派政党中的盟友。另一方面,更多偏左的激进分子正被吸引到我们的组织中来,离开共产党。
 
-[? if historical_mode : The Center Party decries the militarization of the Reichsbanner, and its members are leaving the republican organization. ?]
+[? if historical_mode : 中央党谴责国旗团的军事化,其成员正陆续退出这个共和派组织。 ?]
 
 
 @militant_2
 view-if: funded_reichsbanner >= 1
 on-arrival: rb_militancy += 0.02; funded_reichsbanner -= 1; coup_progress += 0.5 if historical_mode; coup_progress += 0.5 if rb_force >= 10; coup_progress += 0.5 if rb_force >= 15; coup_progress += 1 if rb_force >= 20; coup_progress += 1 if rb_force >= 25; coup_progress += 1 if rb_force >= 30
 
-As we have already funded resources towards the Reichsbanner, we can invest in building up their militancy.
+既然我们已经为国旗团投入了资源,便可以在提升其军事化程度上继续加码。
 
 
 @same
 
-The Reichsbanner is already serving the purpose it needs to serve. There is no reason to change what already works.
+国旗团已在发挥它应有的作用。既然行之有效,就没有理由改变。
 
-- @return: Continue...
+- @return: 继续……
 
 
 @cut_rb
-subtitle: +1 resources
+subtitle: +1 资源
 on-arrival: resources += 1; rb_strength -= 100; rb_militancy -= 0.05; left_strength -= 2; left_dissent -= 2; spd_militancy -= 0.05; workers_kpd += 2; unemployed_kpd += 2
 
-Cutting resources to the Reichsbanner causes a drop in the membership, and leads some would-be members to join the Communists instead.
+削减对国旗团的资源投入会导致成员数量下降,并使一些本可能加入的人转而投向共产党。
 
 
 @women_rb
-title: Allow women to join the Reichsbanner.
-subtitle: -1 resources - This might cause a backlash from existing members.
+title: 允许女性加入国旗团。
+subtitle: -1 资源 —— 这可能引起现有成员的反弹。
 choose-if: resources > 0
 view-if: womens_rights >= 4 and sender_advisor == 1 and iron_front_formed == 1
 on-arrival: resources -= 1; rb_militancy *= 0.85; rb_strength += 400; women_in_rb = 1; rb_militancy += 0.05 if repealed_175; rb_militancy += 0.04 if trans_rights; rb_militancy += 0.02 if reformed_183;
 max-visits: 1
 achievement: women_reichsbanner
 
-The suggestion to allow women into the Reichsbanner is ridiculed by most, except for Toni Sender. But this is an exceptional time, and we need anyone who is willing to join. Thus, we organize specialized units for women, [? if homosexual_rights > 0: and even some covert units for transsexuals and inverts ?].
+允许女性加入国旗团的建议被大多数人嗤笑,只有托尼·森德尔除外。但这是个非常时期,我们需要任何愿意加入的人。于是我们组建了专门的女性队伍, [? if homosexual_rights > 0: 甚至为跨性别者与性倒错者组建了一些秘密队伍 ?].
 
-After allowing women to join, the number of comrades who leave is more than balanced out by the number of radicalized women and others who join. However, many of our departed members were veterans, and many of the new members have no experience with military-style training.
+允许女性加入后,退出的同志人数被激进化后加入的女性及其他新成员远远补上。不过,许多离开的成员是老兵,而许多新成员毫无军事化训练的经验。
