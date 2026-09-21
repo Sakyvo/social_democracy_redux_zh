@@ -26,7 +26,7 @@ on-arrival: advisor_action_timer = 6; resources += dues
 
 @welfare
 title: 支援工人福利会 —— 我们的互助组织。
-subtitle: -1 resources
+subtitle: -1 资源
 choose-if: resources > 0 and advisor_action_timer = 0
 unavailable-subtitle: [? if advisor_action_timer > 0 : 距下次顾问行动还有 [+ advisor_action_timer +] 个月。 ?][? if resources < 0: 资源不足。 ?]
 on-arrival: resources -= 1; workers_aid += 1; unemployed_spd += 5*(1 - dissent); workers_spd += 3*(1-dissent); workers_spd += 2*(1-dissent) if black_thursday_seen; advisor_action_timer = 6;

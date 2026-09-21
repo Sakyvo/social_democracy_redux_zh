@@ -1,5 +1,5 @@
 title: Hitler takes power.
-subtitle: The beginning of the end.
+subtitle: 终结的开端。
 view-if: (chancellor == "Hitler" or president == "Hitler" or chancellor_party == "NSDAP") and presidential_powers != 1 and not hitler_seen and not marx_appointed_hitler
 on-arrival: spd_in_government = 0; hitler_seen = 1; hitler_month = month; hitler_year = year; spd_disarray = 0; spd_toleration = 0
 tags: event
@@ -22,7 +22,7 @@ What are we to do now?
 @fight
 on-arrival: spd_rebel = 1
 
-Do we realize that this means civil war, against the full force of the state?
+我们明白这意味着什么吗?这意味着要对抗国家的全部武力,打一场内战。
 
 - @civil_war: Yes.
 - @give_up_now: We are not ready for war. Instead, we will vote against the nazis in the Reichstag.
@@ -91,7 +91,7 @@ go-to: defend_2_victory_2
 
 Our forces confront the government troops and their reactionary auxiliaries, and somehow, our enemies retreat without a fight! They were overwhelmed by our display of strength, and have chosen to slink away. Chancellor [+ chancellor +] withdraws the dismissal of the Prussian government, at least for now.
 
-The show of force has reinvigorated support for the republic and for the SPD, and has weakened the fascists.
+这次力量展示重新激发了人们对共和国与社民党的支持,也削弱了法西斯分子。
 
 @defend_2_victory_2
 achievement: drei_pfeile

@@ -117,7 +117,7 @@ Capital controls might blunt some of the worst economic components of the capita
 
 @propaganda
 title: Launch a propaganda campaign blaming the capitalists for the crisis.
-subtitle: -1 resources
+subtitle: -1 资源
 choose-if: (radio >= 2 or commercialized_media >= 3) and resources >= 1
 unavailable-subtitle: [? if radio < 2 and commercialized_media < 3 : We have not built up our media enough. ?] [? if resources < 1: We do not have enough resources. ?]
 on-arrival: workers_spd += 7*(1-dissent); new_middle_spd += 6*(1-dissent); unemployed_spd += 6*(1-dissent); pro_republic += 5*(1-dissent); resources -= 1; socialism += 5; capital_propaganda = 1

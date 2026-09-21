@@ -413,7 +413,7 @@ The Communists are demanding the position of Chancellor as a prerequisite to par
 - @chancellorship: The Communists are unworkable. We'll find other allies.
 
 @bribe
-subtitle: -3 resources.
+subtitle: -3 资源.
 on-arrival: resources -= 3; unemployed_kpd += 3; workers_kpd += 3; chancellor = "Breitscheid"; chancellor_party = "SPD"; leverage *= ((rb_strength*rb_militancy)/(rfb_strength*rfb_militancy)); time_to_election = 3
 call: set_next_election_time
 go-to: cabinet_kpd
@@ -505,7 +505,7 @@ Anything that we don't take will go to the KPD.
 @labor_kpd
 title: Labor Ministry
 subtitle: Taking the Labor Ministry is expected of us. [? if historical_mode : Labor will be displeased if we do not. ?]
-unavailable-subtitle: We do not have enough leverage.
+unavailable-subtitle: 我们的筹码不够。
 tags: mins_kpd
 choose-if: leverage >= 5
 view-if: labor_minister_party != "SPD"
@@ -517,7 +517,7 @@ Rudolf Wissell of the SPD has been appointed labor minister.
 @interior_kpd
 title: Interior Ministry
 subtitle: Taking the Interior Ministry is expected of us. The Interior Ministry controls domestic security.
-unavailable-subtitle: We do not have enough leverage.
+unavailable-subtitle: 我们的筹码不够。
 tags: mins_kpd
 choose-if: leverage >= 10
 view-if: interior_minister_party != "SPD"
@@ -529,7 +529,7 @@ Carl Severing of the SPD has been appointed Interior Minister.
 @finance_kpd
 title: Finance Ministry
 subtitle: The Finance Ministry controls the government budget and taxes.
-unavailable-subtitle: We do not have enough leverage.
+unavailable-subtitle: 我们的筹码不够。
 tags: mins_kpd
 choose-if: leverage >= 10 
 view-if: finance_minister_party != "SPD"
@@ -541,7 +541,7 @@ Rudolf Hilferding of the SPD has been appointed Finance Minister.
 @economic_kpd
 title: Economic Ministry
 subtitle: The Economic Ministry controls broader economic policy.
-unavailable-subtitle: We do not have enough leverage.
+unavailable-subtitle: 我们的筹码不够。
 tags: mins_kpd
 choose-if: leverage >= 15
 view-if: economic_minister_party != "SPD"
@@ -553,7 +553,7 @@ Robert Schmidt of the SPD has been appointed Economic Minister.
 @justice_kpd
 title: Justice Ministry
 subtitle: The Justice Ministry controls the courts.
-unavailable-subtitle: We do not have enough leverage.
+unavailable-subtitle: 我们的筹码不够。
 tags: mins_kpd
 choose-if: leverage >= 10 
 view-if: justice_minister_party != "SPD"
@@ -565,7 +565,7 @@ Gustav Radbruch of the SPD has been appointed Justice Minister.
 @foreign_kpd
 title: Foreign Ministry
 subtitle: This is usually the domain of Gustav Stresemann of the DVP.
-unavailable-subtitle: We do not have enough leverage.
+unavailable-subtitle: 我们的筹码不够。
 tags: mins_kpd
 choose-if: leverage >= 10 
 view-if: foreign_minister_party != "SPD"
@@ -578,7 +578,7 @@ Rudolf Breitscheid of the SPD has been appointed Foreign Minister.
 @agriculture_kpd
 title: Agricultural Ministry
 subtitle: This is not our usual domain.
-unavailable-subtitle: We do not have enough leverage.
+unavailable-subtitle: 我们的筹码不够。
 choose-if: leverage >= 5
 view-if: agriculture_minister_party != "SPD"
 on-arrival: leverage -= 5; agriculture_minister_party = "SPD"; agriculture_minister = "Baade"
@@ -590,7 +590,7 @@ Fritz Baade of the SPD has been appointed Agriculture Minister.
 @reichswehr_kpd
 title: Reichswehr Ministry
 subtitle: Leaving this to the Communists could lead to a coup.
-unavailable-subtitle: We do not have enough leverage.
+unavailable-subtitle: 我们的筹码不够。
 tags: mins_kpd
 choose-if: leverage >= 5 
 view-if: reichswehr_minister_party != "SPD"
@@ -678,7 +678,7 @@ We can pick from any number of ministries. Controlling a ministry allows us to d
 @labor
 title: Labor Ministry
 subtitle: Taking the Labor Ministry is expected of us. [? if historical_mode : Labor will be displeased if we do not. ?]
-unavailable-subtitle: We do not have enough leverage.
+unavailable-subtitle: 我们的筹码不够。
 tags: mins_emergency
 choose-if: leverage >= 5
 view-if: labor_minister_party != "SPD"
@@ -690,7 +690,7 @@ Rudolf Wissell of the SPD has been appointed labor minister.
 @interior
 title: Interior Ministry
 subtitle: Taking the Interior Ministry is expected of us. The Interior Ministry controls domestic security.
-unavailable-subtitle: We do not have enough leverage.
+unavailable-subtitle: 我们的筹码不够。
 tags: mins_emergency
 choose-if: leverage >= 5
 view-if: interior_minister_party != "SPD"
@@ -702,7 +702,7 @@ Carl Severing of the SPD has been appointed Interior Minister.
 @finance
 title: Finance Ministry
 subtitle: The Finance Ministry controls the government budget and taxes.
-unavailable-subtitle: We do not have enough leverage.
+unavailable-subtitle: 我们的筹码不够。
 tags: mins_emergency
 choose-if: leverage >= 10 
 view-if: finance_minister_party != "SPD"
@@ -714,7 +714,7 @@ Rudolf Hilferding of the SPD has been appointed Finance Minister.
 @economic
 title: Economic Ministry
 subtitle: The Economic Ministry controls broader economic policy.
-unavailable-subtitle: We do not have enough leverage.
+unavailable-subtitle: 我们的筹码不够。
 tags: mins_emergency
 choose-if: leverage >= 10 
 view-if: economic_minister_party != "SPD"
@@ -726,7 +726,7 @@ Robert Schmidt of the SPD has been appointed Economic Minister.
 @justice
 title: Justice Ministry
 subtitle: The Justice Ministry controls the courts.
-unavailable-subtitle: We do not have enough leverage.
+unavailable-subtitle: 我们的筹码不够。
 tags: mins_emergency
 choose-if: leverage >= 10 
 view-if: justice_minister_party != "SPD"
@@ -738,7 +738,7 @@ Gustav Radbruch of the SPD has been appointed Justice Minister.
 @foreign
 title: Foreign Ministry
 subtitle: This is usually the domain of Gustav Stresemann of the DVP.
-unavailable-subtitle: We do not have enough leverage.
+unavailable-subtitle: 我们的筹码不够。
 tags: mins_emergency
 choose-if: leverage >= 10 
 view-if: foreign_minister_party != "SPD"
@@ -751,7 +751,7 @@ Rudolf Breitscheid of the SPD has been appointed Foreign Minister.
 @agriculture
 title: Agricultural Ministry
 subtitle: This is not our usual domain.
-unavailable-subtitle: We do not have enough leverage.
+unavailable-subtitle: 我们的筹码不够。
 choose-if: leverage >= 10 
 view-if: agriculture_minister_party != "SPD"
 on-arrival: leverage -= 10; agriculture_minister_party = "SPD"; agriculture_minister = "Baade"
@@ -763,7 +763,7 @@ Fritz Baade of the SPD has been appointed Agriculture Minister.
 @reichswehr
 title: Reichswehr Ministry
 subtitle: The Ministry responsible for the armed forces is not typically our domain; General Groener and the bourgeois-conservatives will be displeased.
-unavailable-subtitle: We do not have enough leverage.
+unavailable-subtitle: 我们的筹码不够。
 tags: mins_emergency
 choose-if: leverage >= 15 
 view-if: reichswehr_minister_party != "SPD"

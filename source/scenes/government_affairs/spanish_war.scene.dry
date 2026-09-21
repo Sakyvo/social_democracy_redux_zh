@@ -22,7 +22,7 @@ on-arrival: republic_percent = (republic_strength/(republic_strength+national_st
 - @easy_discard
 
 @increase_aid
-subtitle: -1 budget.
+subtitle: -1 财政预算。
 unavailable-subtitle: -1 财政预算。我们没有这份预算。
 choose-if: budget >= 1
 on-arrival: coalition_dissent += 1; budget -= 1; republic_strength += 0.5; aid_level += 2; total_aid += 2; reichswehr_loyalty -= 0.05; coup_progress += 0.5; west_relation -= 1

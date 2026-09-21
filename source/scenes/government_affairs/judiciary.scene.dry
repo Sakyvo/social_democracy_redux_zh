@@ -21,7 +21,7 @@ tags: govt_affairs
 - @cancel_advisor_action
 
 @reform
-subtitle: -1 budget
+subtitle: -1 财政预算
 unavailable-subtitle: 财政预算不足。
 choose-if: budget >= 1
 on-arrival: judicial_vote = 1

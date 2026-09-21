@@ -74,7 +74,7 @@ go-to: austrian_issue if anschluss_attempt
 
 Our forces confront the fascists, and somehow, the fascists retreat! They were overwhelmed by our display of strength, and have chosen to slink away. The attempted coup is over, at least for now.
 
-The show of force has reinvigorated support for the republic and for the SPD, and has weakened the fascists.
+这次力量展示重新激发了人们对共和国与社民党的支持,也削弱了法西斯分子。
 
 @fight_2_win_2
 on-arrival: coup_progress = 0; pro_republic += 5; workers_nsdap -= 2*(1-dissent); unemployed_nsdap -= 2*(1-dissent); new_middle_nsdap -= 2*(1-dissent); rb_strength *= 0.9; sa_strength *= 0.9; sh_strength *= 0.9
@@ -84,7 +84,7 @@ go-to: austrian_issue if anschluss_attempt
 
 Our forces confront the fascists, and somehow, the fascists retreat! They were overwhelmed by our display of strength, and have chosen to slink away. The attempted coup is over, at least for now.
 
-The show of force has reinvigorated support for the republic and for the SPD, and has weakened the fascists.
+这次力量展示重新激发了人们对共和国与社民党的支持,也削弱了法西斯分子。
 
 @fight_2_pre_civil_war
 on-arrival: nazi_rebel = 1 if spd_in_government = 1; spd_rebel = 1 if spd_in_government = 0

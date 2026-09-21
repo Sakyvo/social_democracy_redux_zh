@@ -8,4 +8,4 @@ call: set_next_election_time
 
 = The [+ ddp_name +] loses confidence
 
-Since the last elections, we have been ruling as a sole SPD government. However, we have been relying on the [+ ddp_name +] for confidence and supply. Today, we have lost that. New elections have been set for [+ next_election_month : month +] [+ next_election_year +].
+Since the last elections, we have been ruling as a sole SPD government. However, we have been relying on the [+ ddp_name +] for confidence and supply. Today, we have lost that. 新的选举已定于 [+ next_election_month : month +] [+ next_election_year +]。

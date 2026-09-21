@@ -608,7 +608,7 @@ We could try to win the support of the communists for the chairmanship. How can 
 - @nvm: Let's try something else.
 
 @bribe_kpd
-subtitle: -1 resources
+subtitle: -1 资源
 choose-if: resources >= 1
 on-arrival: resources -= 1; kpd_endorsement = 1; communist_candidate = 0; spd_candidate += kpd_s
 go-to: competition
@@ -662,7 +662,7 @@ We could try to win the support of the Catholics. How do we convince them?
 - @nvm: Let's try something else.
 
 @bribe_z
-subtitle: -1 resources
+subtitle: -1 资源
 choose-if: resources >= 1
 on-arrival: resources -= 1; spd_candidate += z_s
 go-to: competition

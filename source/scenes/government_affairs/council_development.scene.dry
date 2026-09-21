@@ -17,7 +17,7 @@ tags: govt_affairs
 - @easy_discard
 
 @expand_peasant
-subtitle: -1 budget.
+subtitle: -1 财政预算。
 view-if: rural_prole < 1
 choose-if: land_reform >= 1
 unavailable-subtitle: 我们需要先启动一些土地改革计划。
@@ -27,14 +27,14 @@ on-arrival: rural_spd += 5*(1-dissent); rural_policy += 1; rural_sol += 2; rural
 
 @unemployed
 view-if: lumpenprole = 0
-subtitle: -2 budget.
+subtitle: -2 财政预算.
 on-arrival: budget -= 2; unemployed_spd += 4*(1-dissent) if sapd_consolidated != 1; lumpenprole = 0.1; unemployed_sapd += 4 if sapd_consolidated; unemployed_kpd += 6; unemployed_nsdap -= 4*(1-dissent); kpd_relation += 4; unemployed -= 0.6 if unemployed >= 8; unemployed -= 1 if unemployed >= 10; unemployed -= 0.4 if unemployed >= 12
 
 我们组建了失业者委员会,把选举权扩展到无业工人,在许多情况下还帮他们找到了工作。纳粹的吸引力被削弱,而共产党则迅速通过失业者委员会展开组织,希望扩大自己的优势。
 
 @expand_unemployed
 view-if: lumpenprole != 0 and lumpenprole < 1
-subtitle: -1 budget.
+subtitle: -1 财政预算。
 on-arrival: budget -= 1; unemployed_spd += 2*(1-dissent) if sapd_consolidated != 1; lumpenprole += 0.1; unemployed_sapd += 2 if sapd_consolidated; unemployed_kpd += 3; unemployed_nsdap -= 2*(1-dissent); kpd_relation += 2; unemployed -= 0.3 if unemployed >= 8;
 
 @no_change

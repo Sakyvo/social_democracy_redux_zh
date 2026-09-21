@@ -86,7 +86,7 @@ Capital controls might blunt some of the worst economic components of the capita
 
 @propaganda
 title: Launch a propaganda campaign blaming the capitalists for the crisis.
-subtitle: -1 resources
+subtitle: -1 资源
 choose-if: (radio >= 2 or commercialized_media >= 3) and resources >= 1
 max-visits: 1
 view-if: capital_propaganda != 1
@@ -129,7 +129,7 @@ We have chosen to socialize mass media, one of the many ways through which capit
 - @union_run: The news will be run by existing democratic workers' organizations.
 
 @state_run
-subtitle: -1 budget
+subtitle: -1 财政预算
 on-arrival: state_media = 1; socialism += 5; workers_spd += 4; unemployed_spd += 4; new_middle_spd += 4; old_middle_spd += 4; rural_spd += 3; budget -= 1; inflation += 0.6 if budget < 0; reformist_dissent += 10; pro_republic -= 5; labor_dissent += 5; center_dissent += 10;
 
 We have established a state-run news agency, albeit still in its infancy, to replace private ownership. There is talk of establishing a corresponding ministry to manage this agency, and it is not clear yet if we intend to establish an independent board to run the news agencies or if we intend to maintain them under state control.
@@ -230,7 +230,7 @@ We have established workers' councils in those factories which we occupy, helpin
 title: Reach out to the DVP.
 view-if: reconcile_business >= 3 and dvp_relation < 50
 choose-if: resources >= 1
-subtitle: -1 resource. [? if dvp_relation < 35 : We are unlikely to see much success. ?]
+subtitle: -1 资源. [? if dvp_relation < 35 : We are unlikely to see much success. ?]
 on-arrival: dvp_relation += 5; resources -= 1; socialism -= 2; economic_growth += 0.5 if dvp_relation >= 35; unemployed -= 0.3 if dvp_relation >= 35
 
 We reach out to the DVP, attempting to use them as an intermediary through which to restore the trust and confidence of the business community.

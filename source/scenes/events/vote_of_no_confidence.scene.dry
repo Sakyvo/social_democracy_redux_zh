@@ -47,7 +47,7 @@ Fine. We enacted a massive austerity program to cut welfare, in order to maintai
 choose-if: resources >= 3
 view-if: secularized = 0
 unavailable-subtitle: We do not have enough resources.
-subtitle: -3 resources
+subtitle: -3 资源
 on-arrival: resources -= 3; coalition_dissent -= 1;
 go-to: vonc_formation if (fun_value == 3 and year >= 1935)
 
@@ -99,7 +99,7 @@ The vote succeeds, and our government has resigned. Chancellor Brüning has been
 call: set_next_election_time
 on-arrival: time_to_election = 3
 
-New elections have been set for [+ next_election_month : month +] [+ next_election_year +].
+新的选举已定于 [+ next_election_month : month +] [+ next_election_year +]。
 
 @dnvp_tolerate
 on-arrival: dnvp_toleration = 1
@@ -111,7 +111,7 @@ on-arrival: spd_caretaker = 1
 
 The vote succeeds, and our government has resigned. Chancellor [+ chancellor +] remains as the head of a caretaker government, but no longer has the power to enact new policies.
 
-New elections have been set for [+ next_election_month : month +] [+ next_election_year +].
+新的选举已定于 [+ next_election_month : month +] [+ next_election_year +]。
 
 @let_it_happen25
 view-if: year < 1928

@@ -65,7 +65,7 @@ call: set_next_election_time
 on-arrival: time_to_election = 3; spd_in_government = 0; in_right_coalition = 0; in_grand_coalition = 0; spd_toleration = 0; pro_republic -= 5
 go-to: marx if president == "Marx"
 
-The right-wing coalition has fallen. New elections have been set for [+ next_election_month : month +] [+ next_election_year +].
+The right-wing coalition has fallen. 新的选举已定于 [+ next_election_month : month +] [+ next_election_year +]。
 
 @marx
 on-arrival: workers_nsdap += 5; new_middle_nsdap += 10; old_middle_nsdap += 10; rural_nsdap += 10; unemployed_nsdap += 5; new_middle_dnvp += 5; old_middle_dnvp += 5; rural_dnvp += 5; new_middle_dvp -= 5; new_middle_other -= 5; old_middle_dvp -= 5; old_middle_other -= 5; rural_dvp -= 5; rural_other -= 5

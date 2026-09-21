@@ -82,9 +82,9 @@ Many in our party are calling for us to send military aid to the Republicans. Ho
 - @nonintervention: Sign the French-sponsored non-intervention pact.
 
 @aid
-subtitle: -1 budget
+subtitle: -1 财政预算
 choose-if: budget >= 1
-unavailable-subtitle: -1 budget. We do not have the budget to spare, but we can always come back to this later.
+unavailable-subtitle: -1 财政预算。 We do not have the budget to spare, but we can always come back to this later.
 on-arrival: budget -= 1; reichswehr_loyalty -= 0.05; spain_involved = 1; aid_level = 3; weimar_dissent += 3 if weimar_plan_adopted; coalition_dissent += 1; coalition_dissent += 1 if z_party_leader == "Kaas"; coalition_dissent += 1 if in_grand_coalition; dvp_relation -= 5; z_relation -= 3; coup_progress += 1 if coup_progress >= 5; coup_progress += 1; left_dissent -= 5; west_relation -= 1; west_relation -= 1 if third_period; nationalism -= democratization; democratization += 1; pro_republic += 5; workers_spd += 3*(1-dissent); new_middle_spd += 2*(1-dissent); republic_strength += 1; republic_strength += 1 if not third_period
 
 We go ahead with our plans to send aid to the Spanish Republicans, upsetting our bourgeois coalition partners and France but pleasing the left flank of our party. Let's hope its enough to win their war and stop the further spread of fascism.
@@ -121,7 +121,7 @@ on-arrival: next_election_time = time+3 if next_election_time >= time+3; next_el
 
 We have definitively broken with the [+ chancellor +] government, and have voted against them in a vote of no confidence.
 
-New elections have been set for [+ next_election_month : month +] [+ next_election_year +].
+新的选举已定于 [+ next_election_month : month +] [+ next_election_year +]。
 
 @kpd_menu
 

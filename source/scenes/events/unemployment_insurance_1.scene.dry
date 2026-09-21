@@ -48,7 +48,7 @@ Fine. If the bourgeoisie wish to blow up the government, let them do so. Sociali
 
 Scholz now leads an all-bourgeois cabinet. Using the emergency powers of Article 48, Scholz and President Hindenburg have passed the welfare cuts over the objections of the Reichstag.
 
-[? if year >= 1931 : New elections have been set for [+ next_election_month : month +] [+ next_election_year +]. ?]
+[? if year >= 1931 : 新的选举已定于 [+ next_election_month : month +] [+ next_election_year +]。 ?]
 
 [? if year < 1931 : The DNVP is split, as what remains of its moderate wing refuses to vote against Scholz following Schiele (a high-ranking member of the DNVP) being included in cabinet. ?]
 
@@ -60,7 +60,7 @@ Fine. If the bourgeoisie wish to blow up the government, let them do so. Sociali
 
 [? if chancellor_party = "SPD" : Heinrich Brüning of the Center Party has been appointed Chancellor. ?] Brüning now leads an all-bourgeois cabinet. Using the emergency powers of Article 48, Brüning and President Hindenburg have passed the welfare cuts over the objections of the Reichstag.
 
-[? if year >= 1931 or confrontation_seen : New elections have been set for [+ next_election_month : month +] [+ next_election_year +]. ?]
+[? if year >= 1931 or confrontation_seen : 新的选举已定于 [+ next_election_month : month +] [+ next_election_year +]。 ?]
 
 [? if year < 1931 and not confrontation_seen : The DNVP is split, as what remains of its moderate wing refuses to vote against Brüning following Schiele (a high-ranking member of the DNVP) being included in cabinet. ?]
 

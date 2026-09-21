@@ -221,8 +221,8 @@ if (!Q.neorevisionism) {
         },
         {
             "id": "reformist",
-            "legend": "Reformists",
-            "name": "Reformists",
+            "legend": "改良派",
+            "name": "改良派",
             "seats": Math.round(Q.reformist_c*3.98),
         },
 ];
@@ -248,8 +248,8 @@ else {
         },
         {
             "id": "reformist",
-            "legend": "Reformists",
-            "name": "Reformists",
+            "legend": "改良派",
+            "name": "改良派",
             "seats": Math.round(Q.reformist_c*3.98),
         },
         {

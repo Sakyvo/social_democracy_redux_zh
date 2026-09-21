@@ -25,7 +25,7 @@ There is, essentially, nothing we can do.
 
 @stabilization
 view-if: spd_in_government = 1
-subtitle: -1 budget
+subtitle: -1 财政预算
 choose-if: budget >= 1
 on-arrival: workers_spd += 3*(1-dissent); new_middle_spd += 3*(1-dissent); old_middle_spd += 2*(1-dissent); rural_spd += 2*(1-dissent); unemployed -= 2; inflation += 1 if inflation < 0; budget -= 1; workers_nsdap -= 3; economic_growth += 0.9;
 
@@ -44,4 +44,4 @@ call: set_next_election_time
 
 We are tired of [+ chancellor +]'s policy of austerity. After [+ chancellor +]'s attempt to use emergency powers to pass another welfare cut, we have worked with the other parties to reverse this policy. In response, the Reichstag has been dissolved, and new elections called.
 
-New elections have been set for [+ next_election_month : month +] [+ next_election_year +].
+新的选举已定于 [+ next_election_month : month +] [+ next_election_year +]。

@@ -366,7 +366,7 @@ go-to: coalition_menu if not vonc_formed; coalition_vonc if vonc_formed
 {!<tr><td><div class="box" style='background-color:#954B00'> </div> !} NSDAP: {!</td><td>!} [+ nsdap_r +]% {!</td><td>!} [+ str_change_nsdap +] {!</td></tr>!}
 {!</table>!}
 
-**Potential coalitions:**
+**潜在执政联盟:**
 
 Weimar Coalition (SPD + Z + [+ ddp_name +]): [+ weimar_coalition +]%
 
@@ -380,7 +380,7 @@ Right-wing Coalition (Z + [+ bvp_name +] + DVP + Others + DNVP): [+ right_coalit
 
 [? if anti_democratic_coalition >= 50 : Together, the anti-democratic KPD, DNVP, and NSDAP have a majority in the Reichstag. A stable governing majority will be almost impossible. ?]
 
-There are some potential coalition arrangements.
+存在若干可能的组阁方案。
 
 @coalition_vonc
 
@@ -643,7 +643,7 @@ The reactionary establishment is still very skeptical of the Nazis, so instead, 
 
 Schleicher's government is deeply unpopular among all parties of the Reichstag. Despite his support for a coalition with the NSDAP, the Nazis want power all to themselves, without Schleicher.
 
-New elections have been set for [+ next_election_month : month +] [+ next_election_year +].
+新的选举已定于 [+ next_election_month : month +] [+ next_election_year +]。
 
 @far_right_braun
 on-arrival: coup_progress += 2
@@ -694,7 +694,7 @@ The DVP isn't convinced by our arguments, and wants more than just ideological n
 
 @bribe_dvp
 choose-if: resources >= 1
-subtitle: -1 resource
+subtitle: -1 资源
 on-arrival: resources -= 1; against_enable += dvp_r; dvp_voted = 1
 go-to: enabling_menu
 
@@ -730,7 +730,7 @@ The Center Party isn't so easily convinced by our arguments, and wants more than
 
 @bribe_z
 choose-if: resources >= 1
-subtitle: -1 resource
+subtitle: -1 资源
 on-arrival: resources -= 1; against_enable += z_r; z_voted = 1;
 go-to: enabling_menu
 
@@ -776,7 +776,7 @@ The [+ ddp_name +] isn't so easily convinced by our arguments, and wants more th
 
 @bribe_ddp
 choose-if: resources >= 1
-subtitle: -1 resource
+subtitle: -1 资源
 on-arrival: resources -= 1; against_enable += ddp_r; ddp_voted = 1
 go-to: enabling_menu
 
@@ -1153,7 +1153,7 @@ Despite our appointing of [+ chancellor +] as chancellor, there is no appetite f
 @left_coalition_resources
 title: Use our resources to smooth things over.
 unavailable-subtitle: Required: 3 resources
-subtitle: -3 resources
+subtitle: -3 资源
 choose-if: resources >= 3
 on-arrival: resources -= 3
 go-to: left_coalition_success
@@ -1206,7 +1206,7 @@ With our victory in the civil war, the Communists have found the confidence to d
 @labor_left
 title: Labor Ministry
 subtitle: Taking the Labor Ministry is expected of us. [? if historical_mode : Labor will be displeased if we do not. ?]
-unavailable-subtitle: We do not have enough leverage.
+unavailable-subtitle: 我们的筹码不够。
 tags: mins_left
 choose-if: leverage >= 5
 view-if: labor_minister_party != "SPD"
@@ -1218,7 +1218,7 @@ Rudolf Wissell of the SPD has been appointed labor minister.
 @interior_left
 title: Interior Ministry
 subtitle: Taking the Interior Ministry is expected of us. The Interior Ministry controls domestic security.
-unavailable-subtitle: We do not have enough leverage.
+unavailable-subtitle: 我们的筹码不够。
 tags: mins_left
 choose-if: leverage >= 10
 view-if: interior_minister_party != "SPD"
@@ -1230,7 +1230,7 @@ Carl Severing of the SPD has been appointed Interior Minister.
 @finance_left
 title: Finance Ministry
 subtitle: The Finance Ministry controls the government budget and taxes.
-unavailable-subtitle: We do not have enough leverage.
+unavailable-subtitle: 我们的筹码不够。
 tags: mins_left
 choose-if: leverage >= 10 
 view-if: finance_minister_party != "SPD"
@@ -1242,7 +1242,7 @@ Rudolf Hilferding of the SPD has been appointed Finance Minister.
 @economic_left
 title: Economic Ministry
 subtitle: The Economic Ministry controls broader economic policy.
-unavailable-subtitle: We do not have enough leverage.
+unavailable-subtitle: 我们的筹码不够。
 tags: mins_left
 choose-if: leverage >= 15 
 view-if: economic_minister_party != "SPD"
@@ -1254,7 +1254,7 @@ Robert Schmidt of the SPD has been appointed Economic Minister.
 @justice_left
 title: Justice Ministry
 subtitle: The Justice Ministry controls the courts.
-unavailable-subtitle: We do not have enough leverage.
+unavailable-subtitle: 我们的筹码不够。
 tags: mins_left
 choose-if: leverage >= 10 
 view-if: justice_minister_party != "SPD"
@@ -1266,7 +1266,7 @@ Gustav Radbruch of the SPD has been appointed Justice Minister.
 @foreign_left
 title: Foreign Ministry
 subtitle: This is usually the domain of Gustav Stresemann of the DVP.
-unavailable-subtitle: We do not have enough leverage.
+unavailable-subtitle: 我们的筹码不够。
 tags: mins_left
 choose-if: leverage >= 10 
 view-if: foreign_minister_party != "SPD"
@@ -1279,7 +1279,7 @@ Rudolf Breitscheid of the SPD has been appointed Foreign Minister.
 @agriculture_left
 title: Agricultural Ministry
 subtitle: This is not our usual domain.
-unavailable-subtitle: We do not have enough leverage.
+unavailable-subtitle: 我们的筹码不够。
 choose-if: leverage >= 5 
 view-if: agriculture_minister_party != "SPD"
 on-arrival: leverage -= 5; agriculture_minister_party = "SPD"; agriculture_minister = "Baade"
@@ -1291,7 +1291,7 @@ Fritz Baade of the SPD has been appointed Agriculture Minister.
 @reichswehr_left
 title: Reichswehr Ministry
 subtitle: Leaving this to the Communists could lead to a coup.
-unavailable-subtitle: We do not have enough leverage.
+unavailable-subtitle: 我们的筹码不够。
 tags: mins_left
 choose-if: leverage >= 5 
 view-if: reichswehr_minister_party != "SPD"
@@ -1969,7 +1969,7 @@ Seeing the continuing collapse of order in Germany, and convinced that they woul
 - @seldte_takes_power: What now?
 
 @seldte_takes_power
-subtitle: The beginning of the end.
+subtitle: 终结的开端。
 
 The destruction of German democracy has begun, not at the hands of the Nazis but at the hands of the reactionaries who wish to see a return to the days of the German Empire. If we do not fight back now, then we may never get another chance, and all we as a party have stood for will be gone in an instant.
 
@@ -2012,7 +2012,7 @@ What are we to do now?
 @fight
 on-arrival: spd_rebel = 1
 
-Do we realize that this means civil war, against the full force of the state?
+我们明白这意味着什么吗?这意味着要对抗国家的全部武力,打一场内战。
 
 - @civil_war: Yes.
 - @vote_against: We are not ready for war. Instead, we will vote against the nazis in the Reichstag.
@@ -2079,7 +2079,7 @@ There is no path to a majority government. President Hindenburg is tired of the 
 
 Papen is immediately faced with a vote of no confidence, given his unpopularity. However the SPD votes, he is guaranteed to fall, due to the unanimous hatred against him from all other parties.
 
-New elections have been set for [+ next_election_month : month +] [+ next_election_year +].
+新的选举已定于 [+ next_election_month : month +] [+ next_election_year +]。
 
 @no_majority_bruning_toleration
 on-arrival: no_majority_bruning_elections += 1
@@ -2113,7 +2113,7 @@ How do we convince vehemently anti-socialist parties to allow us to form a major
 
 @use_resources
 title: Use our resources to smooth over the creation of a coalition.
-subtitle: -2 resources
+subtitle: -2 资源
 unavailable-subtitle: Not enough resources (need 2).
 choose-if: resources >= 2
 on-arrival: resources -= 2; spd_in_government = 1; in_grand_coalition = 1; left_dissent += 4;
@@ -2198,7 +2198,7 @@ go-to: papen_second_term if papen_two_term
 
 After the elections, Papen is still deeply unpopular, without any hint of coalition support, and there is a vote of no confidence called against him almost immediately. No matter how we vote, the measure would pass. The Reichstag is dissolved once more.
 
-New elections have been set for [+ next_election_month : month +] [+ next_election_year +]. [? if largest_party == "NSDAP" : With the Nazis, despite becoming the largest party, failing to form a government, their movement loses steam and gives ground to the KPD and DNVP. ?]
+新的选举已定于 [+ next_election_month : month +] [+ next_election_year +]。 [? if largest_party == "NSDAP" : With the Nazis, despite becoming the largest party, failing to form a government, their movement loses steam and gives ground to the KPD and DNVP. ?]
 
 Nazi refusal to support Papen's government has lead to confusion and disappointment amongst its far-right base.
 
@@ -2214,7 +2214,7 @@ There is no path to a majority government. Hindenburg is displeased with Papen, 
 
 Schleicher's government is deeply unpopular among all parties of the Reichstag. Despite his support for a coalition with the NSDAP, the Nazis want power all to themselves, without Schleicher.[? if largest_party == "NSDAP" : However, the Nazis failure again to form a government leads to further loss of momentum. ?]
 
-New elections have been set for [+ next_election_month : month +] [+ next_election_year +].
+新的选举已定于 [+ next_election_month : month +] [+ next_election_year +]。
 
 
 @no_majority_schleicher
@@ -2743,7 +2743,7 @@ view-if: neo_weimar_coalition < 50
 call: set_next_election_time
 on-arrival: time_to_election = 3; strife += 0.5; marx_relation -= 5; pro_republic -= 5; rural_nsdap += 2; old_middle_nsdap += 2; new_middle_nsdap += 2; political_crisis_progress += 1
 
-As the anti-democratic parties hold a majority, there is no path to a majority government. New elections have been set for [+ next_election_month : month +] [+ next_election_year +].
+As the anti-democratic parties hold a majority, there is no path to a majority government. 新的选举已定于 [+ next_election_month : month +] [+ next_election_year +]。
 
 @toleration_bruning
 choose-if: neo_weimar_coalition >= 50
@@ -3018,7 +3018,7 @@ We can pick from any number of ministries. Controlling a ministry allows us to d
 @labor
 title: Labor Ministry
 subtitle: Taking the Labor Ministry is expected of us. [? if historical_mode : Labor will be displeased if we do not. ?]
-unavailable-subtitle: We do not have enough leverage.
+unavailable-subtitle: 我们的筹码不够。
 tags: mins_1928
 choose-if: leverage >= 5
 view-if: labor_minister_party != "SPD"
@@ -3030,7 +3030,7 @@ Rudolf Wissell of the SPD has been appointed labor minister.
 @interior
 title: Interior Ministry
 subtitle: Taking the Interior Ministry is expected of us. The Interior Ministry controls domestic security.
-unavailable-subtitle: We do not have enough leverage.
+unavailable-subtitle: 我们的筹码不够。
 tags: mins_1928
 choose-if: leverage >= 5
 view-if: interior_minister_party != "SPD"
@@ -3042,7 +3042,7 @@ Carl Severing of the SPD has been appointed Interior Minister.
 @finance
 title: Finance Ministry
 subtitle: The Finance Ministry controls the government budget and taxes.
-unavailable-subtitle: We do not have enough leverage.
+unavailable-subtitle: 我们的筹码不够。
 tags: mins_1928
 choose-if: leverage >= 10 
 view-if: finance_minister_party != "SPD"
@@ -3054,7 +3054,7 @@ Rudolf Hilferding of the SPD has been appointed Finance Minister.
 @economic
 title: Economic Ministry
 subtitle: The Economic Ministry controls broader economic policy.
-unavailable-subtitle: We do not have enough leverage.
+unavailable-subtitle: 我们的筹码不够。
 tags: mins_1928
 choose-if: leverage >= 10 
 view-if: economic_minister_party != "SPD"
@@ -3066,7 +3066,7 @@ Robert Schmidt of the SPD has been appointed Economic Minister.
 @justice
 title: Justice Ministry
 subtitle: The Justice Ministry controls the courts.
-unavailable-subtitle: We do not have enough leverage.
+unavailable-subtitle: 我们的筹码不够。
 tags: mins_1928
 choose-if: leverage >= 10 
 view-if: justice_minister_party != "SPD"
@@ -3078,7 +3078,7 @@ Gustav Radbruch of the SPD has been appointed Justice Minister.
 @foreign
 title: Foreign Ministry
 subtitle: This is usually the domain of Gustav Stresemann of the DVP.
-unavailable-subtitle: We do not have enough leverage.
+unavailable-subtitle: 我们的筹码不够。
 tags: mins_1928
 choose-if: leverage >= 10 and year >= 1928
 view-if: foreign_minister_party != "SPD"
@@ -3113,7 +3113,7 @@ In exchange for the Chancellory going to Ernst Scholz, we have been granted the 
 @agriculture
 title: Agricultural Ministry
 subtitle: This is not our usual domain.
-unavailable-subtitle: We do not have enough leverage.
+unavailable-subtitle: 我们的筹码不够。
 choose-if: leverage >= 10 
 view-if: agriculture_minister_party != "SPD"
 on-arrival: leverage -= 10; agriculture_minister_party = "SPD"; agriculture_minister = "Baade"
@@ -3125,7 +3125,7 @@ Fritz Baade of the SPD has been appointed Agriculture Minister.
 @reichswehr
 title: Reichswehr Ministry
 subtitle: The Ministry responsible for the armed forces is not typically our domain; General Groener and the bourgeois-conservatives will be displeased.
-unavailable-subtitle: We do not have enough leverage.
+unavailable-subtitle: 我们的筹码不够。
 tags: mins_1928
 choose-if: leverage >= 15 and year >= 1928
 view-if: reichswehr_minister_party != "SPD"
@@ -3138,7 +3138,7 @@ Julius Leber of the SPD has been appointed Reichswehr Minister.
 title: Postal Affairs Ministry
 view-if: fun_value >= 62 and fun_value < 70 and postal_affairs_minister_party != "SPD"
 subtitle: This is not our typical domain, and it is not recommended we take this ministry unless we're fine with silly jokes.
-unavailable-subtitle: We do not have enough leverage.
+unavailable-subtitle: 我们的筹码不够。
 tags: mins_1928
 choose-if: leverage >= 35 and chancellor == "Wirth"
 on-arrival: leverage -= 35; postal_affairs_minister_party = "SPD"; postal_affairs_minister = "Fillak"

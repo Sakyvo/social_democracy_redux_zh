@@ -47,7 +47,7 @@ Fine. We enacted a massive austerity program to cut welfare, in order to maintai
 @resources
 choose-if: resources >= 3
 unavailable-subtitle: We do not have enough resources.
-subtitle: -3 resources
+subtitle: -3 资源
 on-arrival: resources -= 3; coalition_dissent -= 1;
 
 By transferring resources to our coalition partners, we can reduce their dissent against our policies. This is a crude, but effective solution.
@@ -107,7 +107,7 @@ The vote succeeds, and their government has resigned. Chancellor [+ chancellor +
 call: set_next_election_time
 on-arrival: time_to_election = 3
 
-New elections have been set for [+ next_election_month : month +] [+ next_election_year +].
+新的选举已定于 [+ next_election_month : month +] [+ next_election_year +]。
 
 @dnvp_tolerate
 on-arrival: dnvp_toleration = 1
@@ -120,7 +120,7 @@ on-arrival: time_to_election = 3; chancellor = "Wels"; chancellor_party = "SPD";
 
 Unable to bear the stress of keeping the coalition together, Wirth has announced his intentions to resign as chancellor.
 
-[+ president +] has appointed as replacement Wels, who is immediately faced with a successful motion of no confidence. New elections have been set for [+ next_election_month : month +] [+ next_election_year +].
+[+ president +] has appointed as replacement Wels, who is immediately faced with a successful motion of no confidence. 新的选举已定于 [+ next_election_month : month +] [+ next_election_year +]。
 
 @wirth_resign_hindenburg
 on-arrival: chancellor = "Brüning"; chancellor_party = "Z"

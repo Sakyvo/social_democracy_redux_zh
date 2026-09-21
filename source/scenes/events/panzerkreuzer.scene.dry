@@ -24,7 +24,7 @@ Our grassroots party members are shocked by our intransigence! Many party branch
 
 KPD: Against
 
-[? if sapd_formed : SAPD: Against ?]
+[? if sapd_formed : SAPD: 反对 ?]
 
 SPD: Mixed
 
@@ -42,7 +42,7 @@ DNVP: For
 
 NSDAP: For
 
-With [+ bill_support +]% in favor, the vote succeeds.
+以 [+ bill_support +]% 赞成,议案获得通过。
 
 The campaign against the battlecruiser fails, with only the dissident SPD and KPD members voting against. The ship will be built.
 
@@ -68,7 +68,7 @@ Our coalition partners are shocked by our intransigence! Despite Chancellor Mül
 
 KPD: Against
 
-[? if sapd_formed : SAPD: Against ?]
+[? if sapd_formed : SAPD: 反对 ?]
 
 SPD: Against
 
@@ -95,7 +95,7 @@ Our coalition partners are shocked by our intransigence! Despite Chancellor Mül
 
 KPD: Against
 
-[? if sapd_formed : SAPD: Against ?]
+[? if sapd_formed : SAPD: 反对 ?]
 
 SPD: Against
 
@@ -113,7 +113,7 @@ DNVP: For
 
 NSDAP: For
 
-With [+ bill_support +]% in favor, the vote succeeds.
+以 [+ bill_support +]% 赞成,议案获得通过。
 
 @vote_no_success
 on-arrival: panzerkreuzer_funded = 0; nationalism -= 3*(1-dissent); panzerkreuzer_failed = 1; workers_spd += 5*(1-dissent); coup_progress += 1; bill_support = bourgeois_coalition+far_right_coalition
@@ -122,7 +122,7 @@ Our coalition partners are shocked by our intransigence! Chancellor [+ chancello
 
 KPD: Against
 
-[? if sapd_formed : SAPD: Against ?]
+[? if sapd_formed : SAPD: 反对 ?]
 
 SPD: Against
 
@@ -149,7 +149,7 @@ Our coalition partners are shocked by our intransigence! Chancellor [+ chancello
 
 KPD: Against
 
-[? if sapd_formed : SAPD: Against ?]
+[? if sapd_formed : SAPD: 反对 ?]
 
 SPD: Against
 
@@ -167,7 +167,7 @@ DNVP: For
 
 NSDAP: For
 
-With [+ bill_support +]% in favor, the vote succeeds.
+以 [+ bill_support +]% 赞成,议案获得通过。
 
 @abstain
 on-arrival: bill_support = 100*((bourgeois_coalition+far_right_coalition)/(100-(spd_r*(0.9-dissent)))); dvp_relation -= 5; z_relation -= 3; left_dissent += 5; labor_dissent += 5; panzerkreuzer_funded = 1; kpd_relation -= 3; {!
@@ -178,7 +178,7 @@ Our coalition partners are shocked by our intransigence! Despite our abstention,
 
 KPD: Against
 
-[? if sapd_formed : SAPD: Against ?]
+[? if sapd_formed : SAPD: 反对 ?]
 
 SPD: Abstain
 
@@ -196,4 +196,4 @@ DNVP: For
 
 NSDAP: For
 
-With [+ bill_support +]% in favor, the vote succeeds.
+以 [+ bill_support +]% 赞成,议案获得通过。

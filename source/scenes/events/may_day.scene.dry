@@ -50,7 +50,7 @@ Thankfully, due to our great relations, it isn't hard to bring the KPD around to
 #- @rally_fail: Now the rally...
 
 @resources
-subtitle: -1 resources
+subtitle: -1 资源
 choose-if: resources >= 1
 on-arrival: resources -= 1; spd_dominance = 1 if (((rb_strength*rb_militancy*(1-dissent))*spd_normalized)>=((rfb_strength*rfb_militancy)*kpd_normalized)); kpd_dominance = 1 if (((rb_strength*rb_militancy*(1-dissent))*spd_normalized)<((rfb_strength*rfb_militancy)*kpd_normalized)); fascist_disruption = 1 if ((sa_strength*sa_militancy)+(sh_strength*sh_militancy)) >= 1000
 

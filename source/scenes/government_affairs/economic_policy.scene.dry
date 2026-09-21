@@ -207,8 +207,8 @@ We propose a bill to nationalize key and idle industries.
 
 @moderate_plan
 title: Implement the Reformists' job-creation plan.
-subtitle: -2 budget.
-unavailable-subtitle: -2 budget. [? if budget < 2 : We do not have the necessary budget. ?] [? if unemployed < 8 : Unemployment is low enough that job creation is not necessary. ?]
+subtitle: -2 财政预算.
+unavailable-subtitle: -2 财政预算. [? if budget < 2 : We do not have the necessary budget. ?] [? if unemployed < 8 : Unemployment is low enough that job creation is not necessary. ?]
 view-if: moderate_plan_adopted == 1
 choose-if: budget >= 2 and unemployed >= 8
 on-arrival: reformist_vote = 1; reformist_budget = 2
@@ -232,8 +232,8 @@ achievement: wirtschaftspolitik
 
 @moderate_plan_limited_budget
 title: Partially implement the Reformists' job-creation plan, with a lower cost.
-subtitle: -1 budget.
-unavailable-subtitle: -1 budget. [? if budget < 1 : We do not have the necessary budget. ?] [? if unemployed < 8 : Unemployment is low enough that job creation is not necessary. ?]
+subtitle: -1 财政预算。
+unavailable-subtitle: -1 财政预算。 [? if budget < 1 : We do not have the necessary budget. ?] [? if unemployed < 8 : Unemployment is low enough that job creation is not necessary. ?]
 view-if: moderate_plan_adopted == 1
 choose-if: budget >= 1 and unemployed >= 8
 on-arrival: reformist_vote = 1; reformist_budget = 1
@@ -279,8 +279,8 @@ A simultaneous public works and nationalization program begins, intended to both
 
 @synthesis_only_works
 title: Implement the Centrist public works program without nationalizations.
-subtitle: -1 budget.
-unavailable-subtitle: -1 budget. [? if budget < 1 : We do not have the necessary budget. ?]
+subtitle: -1 财政预算。
+unavailable-subtitle: -1 财政预算。 [? if budget < 1 : We do not have the necessary budget. ?]
 view-if: synthesis_plan_adopted
 choose-if: budget >= 1
 on-arrival: reformist_vote = 1; reformist_budget = 1
@@ -303,7 +303,7 @@ We have begun, using our control over the economy, to implement a comprehensive 
 @works_program
 view-if: year >= 1937 and in_recession
 title: Implement a works program, in view of the recession.
-subtitle: -2 budget.
+subtitle: -2 财政预算.
 choose-if: budget >= 2 or wtb_adopted
 unavailable-subtitle: Not enough budget.
 on-arrival: budget -= 2; unemployed -= 1.5*(recession_severity/10); inflation += 0.4*(recession_severity/10); inflation += 0.3*(recession_severity/10) if inflation < 0; inflation += 0.5*(recession_severity/10) if budget < 0; unemployed -= (inflation/2)*(recession_severity/10) if inflation > 0; economic_growth += 0.7*(recession_severity/10); economic_growth += 0.5*(recession_severity/10) if inflation >= 0 and economic_growth < 0; economic_growth += (inflation/2)*(recession_severity/10) if inflation >= 0 and inflation < 3; coalition_dissent += 1 if budget < 0; coalition_dissent += 1 if in_grand_coalition; capital_strike_progress += 1; capital_strike_progress += 1 if budget < 0; capital_strike_progress -= 1 if economic_health >= old_economic_health; recession_severity -= 1
@@ -313,7 +313,7 @@ We implement a public works program, to alleviate the recession's effects and tr
 @further_plan
 view-if: five_year_plan and capital_flight
 title: Invest further resources into the five-year plan.
-subtitle: -1 budget. [? if budget < 1 : We will enter deficit spending. ?]
+subtitle: -1 财政预算。 [? if budget < 1 : We will enter deficit spending. ?]
 on-arrival: budget -= 1; economic_growth += 0.6; unemployed -= 1.1; inflation += 0.9; inflation += 0.4 if inflation < 3; inflation += 0.4 if budget < 0; invested += 1
 
 We have slated more funds for our economic plan, which will allow it to achieve greater success in its implementation.
@@ -351,7 +351,7 @@ By teaching workers basic agricultural skills, we increase the self-sufficiency 
 @reconcile_town_and_country4
 view-if: reconcile_town_and_country == 4 or reconcile_town_and_country == 5
 title: Begin construction of new proletarian garden cities, as conceived by our urban planners.
-subtitle: -1 budget - We will reconcile town & country!
+subtitle: -1 财政预算 - We will reconcile town & country!
 on-arrival: budget -= 1; inflation -= 0.1; inflation += 0.4 if budget < 0; economic_growth += 1; unemployed -= 1; garden_cities += 1; reconcile_town_and_country += 1; insurgency += 2; rural -= invested; workers += invested
 max-visits: 1
 
@@ -360,7 +360,7 @@ With our urban planners having concentrated their proposals into a cohesive visi
 @reconcile_town_and_country5
 view-if: reconcile_town_and_country == 4 or reconcile_town_and_country == 5
 title: Organize seasonal rotations of rural & urban work between workers' councils and agricultural cooperatives.
-subtitle: -1 budget - We will reconcile town & country!
+subtitle: -1 财政预算 - We will reconcile town & country!
 on-arrival: budget -= 1; inflation += 0.6 if budget < 0; rural_spd += 3*(1-dissent); workers_spd += 3*(1-dissent); economic_growth += 0.2; unemployed -= 0.3; reconcile_town_and_country += 1; inflation -= 1 if inflation > 3
 
 We organize seasonal rotations of urban & rural workers, bringing the two fields closer together and diminishing the stark divide in worldviews between the two. 

@@ -31,7 +31,7 @@ We have formed a United Front, composed of the KPD and SPD's various affiliate o
 @rally_resources
 max-visits: 1
 choose-if: resources >= 1
-subtitle: -1 resource
+subtitle: -1 资源
 on-arrival: uf_strength += 2; workers_spd += 3*(1-dissent); rb_strength += 100*(1-dissent); rfb_strength += 20; unemployed_spd += 2*(1-dissent); unemployed_kpd += 1; new_middle_spd += 1*(1-dissent); workers_nsdap -= 3*(1-dissent); unemployed_nsdap -= 2*(1-dissent); new_middle_nsdap -= 2*(1-dissent);
 go-to: uf_menu
 

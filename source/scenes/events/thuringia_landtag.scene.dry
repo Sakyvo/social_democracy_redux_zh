@@ -279,7 +279,7 @@ go-to: coalition_menu
 {!<tr><td><div class="box" style='background-color:#954B00'> </div> !} NSDAP: {!</td><td>!} [+ nsdap_tl +]% {!</td><td>!} [+ sttl_change_nsdap +] {!</td></tr>!}
 {!</table>!}
 
-**Potential coalitions:**
+**潜在执政联盟:**
 
 Weimar Coalition (SPD + Z + [+ ddp_name +]): [+ t_weimar_coalition +]%
 
@@ -295,7 +295,7 @@ Right-wing Coalition (Z + [+ bvp_name +] + DVP + Others + DNVP): [+ t_right_coal
 
 [? if dr_exists : Thuringia's local DVP and DNVP branches currently run on a joint list, in the past the "Order League" but now the "Unity List", which has the backing of many reactionaries in the state and includes the minor Center Party. ?]
 
-There are some potential coalition arrangements.
+存在若干可能的组阁方案。
 
 @coalition_menu
 

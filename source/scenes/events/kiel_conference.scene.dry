@@ -219,8 +219,8 @@ if (!Q.neorevisionism) {
         },
         {
             "id": "reformist",
-            "legend": "Reformists",
-            "name": "Reformists",
+            "legend": "改良派",
+            "name": "改良派",
             "seats": Math.round(Q.reformist_c*4.15),
         },
 ];
@@ -246,8 +246,8 @@ else {
         },
         {
             "id": "reformist",
-            "legend": "Reformists",
-            "name": "Reformists",
+            "legend": "改良派",
+            "name": "改良派",
             "seats": Math.round(Q.reformist_c*4.15),
         },
         {
@@ -321,7 +321,7 @@ With the major polarizing issue out of the way, the next proposal to be voted on
 - @nah: The resolution is rejected.
 
 @union_support
-subtitle: -1 resource - Labor ([+ labor_c +]%)
+subtitle: -1 资源 - Labor ([+ labor_c +]%)
 choose-if: resources >= 1
 on-arrival: resources -= 1; labor_dissent -= 10; labor_strength += 5; new_middle_spd += 3*(1-dissent)
 go-to: agriculture_program

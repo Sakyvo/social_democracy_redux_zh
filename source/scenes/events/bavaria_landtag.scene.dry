@@ -362,7 +362,7 @@ go-to: coalition_menu
 {!<tr><td><div class="box" style='background-color:#954B00'> </div> !} NSDAP: {!</td><td>!} [+ nsdap_bl +]% {!</td><td>!} [+ stbl_change_nsdap +] {!</td></tr>!}
 {!</table>!}
 
-**Potential coalitions:**
+**潜在执政联盟:**
 
 Weimar Coalition (SPD + Z + [+ ddp_name +]): [+ b_weimar_coalition +]%
 
@@ -376,7 +376,7 @@ Right-wing Coalition (Z + [+ bvp_name +] + DVP + Others + DNVP): [+ b_right_coal
 
 [? if b_anti_democratic_coalition >= 50 : Together, the anti-democratic KPD, DNVP, and NSDAP have a majority in the Reichstag. A stable governing majority will be almost impossible. ?]
 
-There are some potential coalition arrangements.
+存在若干可能的组阁方案。
 
 @coalition_menu
 

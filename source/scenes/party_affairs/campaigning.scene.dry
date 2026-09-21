@@ -21,49 +21,49 @@ tags: party_affairs
 - @easy_discard
 
 @workers
-subtitle: -1 resources
+subtitle: -1 资源
 choose-if: resources >= 1
-unavailable-subtitle: Not enough resources.
+unavailable-subtitle: 资源不足。
 on-arrival: workers_spd += 6*(1-dissent); workers_spd -= 2 if unemployed >= 15; workers_spd -= 2 if unemployed >= 25; workers_spd += 6*(1-dissent) if wtb_adopted = 1; resources -= 1; workers_spd += 3*(1-dissent) if nationalization_progress >= 1;
 
 我们加强了在工人中的宣传。 [? if unemployed >= 15: 高失业率使我们的宣传更加困难。 ?][? if wtb_adopted = 1 : 采纳 WTB 计划为我们提供了一个吸引工人的新号召点。 ?]
 
 @new_middle
-subtitle: -1 resources
+subtitle: -1 资源
 choose-if: resources >= 1
-unavailable-subtitle: Not enough resources.
+unavailable-subtitle: 资源不足。
 on-arrival: new_middle_spd += 6*(1-dissent); new_middle_spd -= 4 if socialism <= 49 and peoples_party == 0; resources -= 1; peoples_party_support += 1 if left_strength < 50; new_middle_spd += 4*(1-dissent) if new_middle_conscious; new_middle_spd -= (3*bourgeois_power*(capital_strike_progress/10)) if not capital_spd; new_middle_spd += capital_spd*bourgeois_power;
 
 我们加强了在新中间阶层中的宣传。 [? if socialism <= 49 and peoples_party == 0: 这一群体中普遍存在的对社会主义的反感,使我们的宣传更加困难。 ?] [? if peoples_party > 0: 作为全民党,我们如今比过去更容易提升在中间阶层中的支持。 ?]
 
 @old_middle
-subtitle: -1 resources
+subtitle: -1 资源
 choose-if: resources >= 1
-unavailable-subtitle: Not enough resources.
+unavailable-subtitle: 资源不足。
 on-arrival: old_middle_spd += 5*(1-dissent); resources -= 1; old_middle_spd -= 3 if nationalism >= 51 and peoples_party == 0; peoples_party_support += 1; old_middle_spd -= (3*bourgeois_power*(capital_strike_progress/10)) if not capital_spd; old_middle_spd += capital_spd*bourgeois_power;
 
 我们加强了在旧中间阶层中的宣传。 [? if nationalism >= 51 and peoples_party == 0: 这一群体中高涨的民族主义情绪,使我们的宣传更加困难。 ?] [? if peoples_party > 0: As a people's party, we have an easier time increasing support among the middle class than before. ?]
 
 @rural
-subtitle: -1 resources
+subtitle: -1 资源
 choose-if: resources >= 1
-unavailable-subtitle: Not enough resources.
+unavailable-subtitle: 资源不足。
 on-arrival: rural_spd += 5*(1-dissent); rural_spd -= 3*(1-dissent) if peoples_party == 0; resources -= 1; peoples_party_support += 1 if left_strength < 50; rural_spd += 3*(1-dissent) if rural_policy >= 2; rural_spd -= (3*bourgeois_power*(capital_strike_progress/10)) if not capital_spd; rural_spd += land_reform*(1-bourgeois_power) if not capital_spd; rural_spd += capital_spd*bourgeois_power;
 
 我们加强了在农民中的宣传。 [? if peoples_party == 0: 我们历来很少在农民中开展宣传,他们也不信任我们。 ?][? if peoples_party > 0: 作为全民党,我们如今比过去更容易提升在农民中的支持。 ?][? if rural_policy >= 2 : 我们的乡村政策使我们更容易在农民中建立支持。 ?]
 
 @unemployed
-subtitle: -1 resources
+subtitle: -1 资源
 choose-if: resources >= 1
-unavailable-subtitle: Not enough resources.
+unavailable-subtitle: 资源不足。
 on-arrival: unemployed_spd += 6*(1-dissent); resources -= 1; unemployed_spd -= 3 if welfare < 0; unemployed_spd += 6*(1-dissent) if wtb_adopted = 1; unemployed_spd += 3*(1-dissent) if welfare >= 2;
 
 我们加强了在失业者中的宣传。 [? if welfare < 0: 福利削减及其造成的贫困使我们的宣传更加困难 —— 因为我们与推行这些削减的政府联系在一起,宣传甚至可能适得其反。 ?][? if wtb_adopted = 1 : 采纳 WTB 计划为我们提供了一个吸引失业者支持的新号召点。 ?]
 
 @catholics
-subtitle: -1 resources
+subtitle: -1 资源
 choose-if: resources >= 1
-unavailable-subtitle: Not enough resources.
+unavailable-subtitle: 资源不足。
 view-if: peoples_party == 1
 on-arrival: catholics_spd += 6*(1-dissent); catholics_spd -= (3*bourgeois_power*(capital_strike_progress/10)); resources -= 1
 

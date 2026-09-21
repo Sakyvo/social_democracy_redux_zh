@@ -25,7 +25,7 @@ Our grassroots party members are highly critical of our decision. Many party bra
 
 KPD: Against
 
-[? if sapd_formed : SAPD: Against ?]
+[? if sapd_formed : SAPD: 反对 ?]
 
 SPD: [? if panzerkreuzer_funded : For ?][? if not panzerkreuzer_funded : Mixed ?]
 
@@ -43,7 +43,7 @@ DNVP: For
 
 NSDAP: For
 
-With [+ bill_support +]% in favor, the vote succeeds.
+以 [+ bill_support +]% 赞成,议案获得通过。
 
 The vote in favor of the battlecruiser easily passes, with opposition only from the KPD. The ship will be built.
 
@@ -64,7 +64,7 @@ The center-right parties are critical of our decision to abstain, and the pressu
 
 KPD: Against
 
-[? if sapd_formed : SAPD: Against ?]
+[? if sapd_formed : SAPD: 反对 ?]
 
 SPD: Abstain
 
@@ -82,7 +82,7 @@ DNVP: For
 
 NSDAP: For
 
-With [+ bill_support +]% in favor, the vote succeeds.
+以 [+ bill_support +]% 赞成,议案获得通过。
 
 @built
 on-arrival: panzerkreuzer_b_funded = 1
@@ -91,7 +91,7 @@ Chancellor [+ chancellor +] brings the matter to a full Reichstag vote, which pa
 
 KPD: Against
 
-[? if sapd_formed : SAPD: Against ?]
+[? if sapd_formed : SAPD: 反对 ?]
 
 SPD: Against
 
@@ -109,7 +109,7 @@ DNVP: For
 
 NSDAP: For
 
-With [+ bill_support +]% in favor, the vote succeeds.
+以 [+ bill_support +]% 赞成,议案获得通过。
 
 @not_built
 on-arrival: panzerkreuzer_b_funded = 0; budget += 1 if panzerkreuzer_funded = 0; coup_progress += 1
@@ -118,7 +118,7 @@ Our vote against the battlecruiser succeeds, with the support of the KPD and ant
 
 KPD: Against
 
-[? if sapd_formed : SAPD: Against ?]
+[? if sapd_formed : SAPD: 反对 ?]
 
 SPD: Against
 

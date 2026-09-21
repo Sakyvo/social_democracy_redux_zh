@@ -277,7 +277,7 @@ go-to: coalition_menu
 {!<tr><td><div class="box" style='background-color:#954B00'> </div> !} NSDAP: {!</td><td>!} [+ nsdap_pl +]% {!</td><td>!} [+ stpl_change_nsdap +] {!</td></tr>!}
 {!</table>!}
 
-**Potential coalitions:**
+**潜在执政联盟:**
 
 Weimar Coalition (SPD + Z + [+ ddp_name +]): [+ p_weimar_coalition +]%
 
@@ -295,7 +295,7 @@ Right-wing Coalition (Z + DVP + Others + DNVP): [+ p_right_coalition +]%
 
 [? if z_prussia : Prussia as a state is currently governed by Minister-President Adam Stegerwald, giving him control over the cabinet, which cannot be revoked unless a majority for an alternative government is found. This grants the bourgeois significant power in the state, including the power to at will exclude us from government and leave us incapable of fighting back unless we and the KPD can both win a majority and agree on a common candidate. ?]
 
-There are some potential coalition arrangements.
+存在若干可能的组阁方案。
 
 @coalition_menu
 

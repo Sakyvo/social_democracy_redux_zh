@@ -104,5 +104,5 @@ We complain to the judiciary that due to the violent interference of the SA the 
 
 @hitler_victorious
 view-if: judicial_reform < 3 and reform_support >= pass_threshold
-subtitle: The beginning of the end.
+subtitle: 终结的开端。
 go-to: hitler_takes_power

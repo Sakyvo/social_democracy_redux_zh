@@ -17,7 +17,7 @@ The far right is mobilizing. Paramilitary forces of the Stahlhelm and SA, organi
 @fight
 on-arrival: spd_rebel = 1
 
-Do we realize that this means civil war, against the full force of the state?
+我们明白这意味着什么吗?这意味着要对抗国家的全部武力,打一场内战。
 
 - @civil_war: Yes.
 - @give_up: We are not ready for war. There is nothing we can do.

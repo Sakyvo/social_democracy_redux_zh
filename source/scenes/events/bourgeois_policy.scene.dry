@@ -246,9 +246,9 @@ The suppression of the strikes dampens the appeal of the bourgeoisie amongst the
 
 @support_strikes
 view-if: not unions_independent and not spd_toleration
-subtitle: -1 resource
+subtitle: -1 资源
 choose-if: resources >= 1
-unavailable-subtitle: -1 resource - We can't afford this.
+unavailable-subtitle: -1 资源 - We can't afford this.
 on-arrival: resources -= 1; workers_spd += 4*(1-dissent); labor_dissent -= 5; labor_strength += 5; unemployed_spd += 4*(1-dissent); workers_z -= 2; 
 
 We provide financial support to the ongoing strikes against the government, intensifying the class conflict that they have initiated and strengthening our relationship with the government.

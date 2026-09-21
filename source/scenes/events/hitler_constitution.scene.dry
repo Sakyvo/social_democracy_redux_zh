@@ -109,6 +109,6 @@ We complain to the judiciary that due to the violent interference of the SA the 
 
 @hitler_victorious
 view-if: judicial_reform < 3 and nazi_reform >= 0.5
-subtitle: The beginning of the end.
+subtitle: 终结的开端。
 on-arrival: presidential_powers = 0
 go-to: hitler_takes_power

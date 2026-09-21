@@ -23,7 +23,7 @@ Of course, it is out of our control. But some in our party nonetheless feel as t
 @support_them
 on-arrival: resources -= 1; sdapo_strength += 1; austria_relation += 1
 choose-if: resources >= 1
-unavailable-subtitle: -1 resource. We cannot afford this.
-subtitle: -1 resource.
+unavailable-subtitle: -1 资源. We cannot afford this.
+subtitle: -1 资源.
 
 We have provided our comrades in Austria with resources, in the hopes that they might use these to defend against the now truly international Nazi threat.

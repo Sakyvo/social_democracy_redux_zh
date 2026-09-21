@@ -60,14 +60,14 @@ The Soviets are asking for economic and developmental assistance. They are still
 
 @soviet_economic_aid_yes_mil
 choose-if: budget >= 1
-subtitle: -1 budget
+subtitle: -1 财政预算
 on-arrival: budget -= 1; soviet_relation += 1; reichswehr_strength += 20; reichswehr_loyalty += 0.05; foreign_goal_completed += 1
 
 The Soviets are pleased that we have sent them aid, and have agreed to help train our military. The Reichswehr appreciates our support.
 
 @soviet_economic_aid_yes
 choose-if: budget >= 1
-subtitle: -1 budget
+subtitle: -1 财政预算
 on-arrival: budget -= 1; soviet_relation += 2; coalition_dissent += 1; foreign_goal_completed += 1
 
 The Soviets are pleased that we have sent them aid, and have not asked for anything specific in exchange. Our coalition partners are less pleased.
@@ -157,7 +157,7 @@ We have withdrawn from the non-intervention pact. Unfortunately, this leads to s
 
 @spanish_aid
 title: Begin sending aid to the Spanish Republicans.
-subtitle: -1 budget. This violates Versailles[? if nonintervention : as well as the non-intervention pact ?].
+subtitle: -1 财政预算。 This violates Versailles[? if nonintervention : as well as the non-intervention pact ?].
 view-if: spanish_civil_war and (not nonintervention or spd_intervention) and not spain_involved
 go-to: spanish_civil_war.aid
 
@@ -193,7 +193,7 @@ We provide verbal backing to Austrian democracy, wage a war of words against Aus
 
 @support_austria_2
 title: Provide material support to Austrian democracy against the Dollfuß dictatorship.
-subtitle: -1 budget
+subtitle: -1 财政预算
 choose-if: budget >= 1
 view-if: austrian_parliament_seen = 1 and austrian_civil_war_seen = 0
 on-arrival: budget -= 1; sdapo_strength += 3; left_dissent -= 6; center_dissent -= 6

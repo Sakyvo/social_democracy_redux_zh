@@ -86,7 +86,7 @@ on-arrival: bourgeois_power -= 0.05; economic_democracy += 1; socialism += 2; ca
 
 @cooperatives_1
 title: 支持工人与消费者合作社。
-subtitle: -1 budget
+subtitle: -1 财政预算
 choose-if: budget >= 1
 max-visits: 3
 on-arrival: cooperative_vote = 1

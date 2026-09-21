@@ -126,7 +126,7 @@ view-if: coalition_dissent < 2 or (coalition_dissent < 3 and (dvp_relation >= 40
 @campaign_big
 view-if: not prince_campaigned
 choose-if: resources >= 2
-subtitle: -2 resources
+subtitle: -2 资源
 on-arrival: resources -= 2; socialism += 3; workers_spd += 2*(1-dissent); rural_spd += 1*(1-dissent); princes_bonus += 5; prince_campaigned = 1
 go-to: menu_for_no_real_reason
 
@@ -135,7 +135,7 @@ We launch a large campaign in support of the referendum, rallying our supporters
 @campaign_small
 view-if: not prince_campaigned
 choose-if: resources >= 1
-subtitle: -1 resource
+subtitle: -1 资源
 on-arrival: resources -= 1; socialism += 1; workers_spd += 1*(1-dissent); princes_bonus += 2; prince_campaigned = 1
 go-to: menu_for_no_real_reason
 

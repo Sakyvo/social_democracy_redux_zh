@@ -48,7 +48,7 @@ Neither side is backing down, and the SDAPÖ have formed an alternative governme
 
 @support_sdapo_party
 title: As a party, the SPD will provide the SDAPÖ with support.
-subtitle: -2 resources
+subtitle: -2 资源
 choose-if: resources >= 2
 on-arrival: resources -= 2; sdapo_strength += 1
 go-to: sdapo_victory if sdapo_strength+nsdapo_force >= 6; long_war_2 if sdapo_strength+nsdapo_force < 6
@@ -112,7 +112,7 @@ Rejecting the capitulation and calling on a general uprising of all German natio
 
 @support_sdapo_party2
 title: As a party, the SPD will provide the SDAPÖ with support.
-subtitle: -2 resources
+subtitle: -2 资源
 choose-if: resources >= 2
 on-arrival: resources -= 2; sdapo_strength += 1
 go-to: sdapo_victory if sdapo_strength >= nsdapo_force and sdapo_strength/nsdapo_force > 1.1; long_war_3 if sdapo_strength/nsdapo_force >= 0.9 and sdapo_strength/nsdapo_force <= 1.1; nsdapo_victory if nsdapo_force >= sdapo_strength and sdapo_strength/nsdapo_force < 0.9

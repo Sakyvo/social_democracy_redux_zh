@@ -20,7 +20,7 @@ As the crisis hitting Germany subsides, the necessity of the Weimar Plan has com
 - @help_joos: Let's help Joos with a minor media campaign.
 
 @help_joos
-subtitle: -1 resource.
+subtitle: -1 资源.
 on-arrival: resources -= 1; joos_strength += (radio+commercialized_media)
 
 We provide Joos's campaign with some financial aid and a minor media campaign. Let's hope this is enough to win him the congress.

@@ -123,7 +123,7 @@ call: set_next_election_time
 
 With the support of the KPD and [+ ddp_name +], we have successfully stopped the negotiations from taking place. This results in the fall of the [+ chancellor +] government.
 
-New elections have been set for [+ next_election_month : month +] [+ next_election_year +].
+新的选举已定于 [+ next_election_month : month +] [+ next_election_year +]。
 
 @end_toleration_fail
 go-to: what_do_they_do

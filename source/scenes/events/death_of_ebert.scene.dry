@@ -19,9 +19,9 @@ Now, new presidential elections have been scheduled. It is expected that a wide 
 - @back_thalmann: Back Ernst Thälmann of the KPD.
 
 @back_gessler
-subtitle: -1 resource - The party's left-wing will likely revolt.
+subtitle: -1 资源 - The party's left-wing will likely revolt.
 choose-if: left_strength+labor_strength < reformist_strength and dvp_relation >= 50 and resources >= 1
-unavailable-subtitle: -1 resource. [? if left_strength+labor_strength < reformist_strength : The party refuses. ?][? if dvp_relation < 50 : The DVP itself is unwilling. ?][? if resources < 1 : The DVP wants us to front the resources for a campaign. ?]
+unavailable-subtitle: -1 资源. [? if left_strength+labor_strength < reformist_strength : The party refuses. ?][? if dvp_relation < 50 : The DVP itself is unwilling. ?][? if resources < 1 : The DVP wants us to front the resources for a campaign. ?]
 on-arrival: gessler_campaign = 1; hergt25_campaign = 1; jarres_campaign = 0; marx_campaign = 0; hellpach_campaign = 0; resources -= 1; left_dissent += 20; workers_spd -= 6; workers_kpd += 6; unemployed_spd -= 6; unemployed_kpd += 6; old_middle_dvp -= 5; rural_dvp -= 5
 
 Somehow, we have managed to engineer a Gessler coalition. The left is understandably outraged, and the communist campaign is bolstered.
@@ -51,7 +51,7 @@ The KPD has entered into the race the little known Ernst Thälmann, while the DN
 - @round1: Let the voting begin...
 
 @attack_thalmann_g
-subtitle: -1 resource - this may have the effect of popularizing Thälmann!
+subtitle: -1 资源 - this may have the effect of popularizing Thälmann!
 on-arrival: resources -= 1; kpd_relation -= 5; workers_kpd += 3; unemployed_kpd += 5; left_dissent -= 5; left_strength -= 5; old_middle_dvp -= 3; old_middle_dnvp += 3; dvp_relation -= 5
 go-to: cg2
 choose-if: resources >= 1
@@ -60,7 +60,7 @@ max-visits: 1
 We attack Thälmann for every fault we can find, and make concessions to our left. In doing so, we bolster Hergt's ammunition that Gessler is but a puppet of Marxists, and popularize the previously unknown figure. Still, the left-wing rebellion seems to be over, reluctantly.
 
 @democracy_rally_g
-subtitle: -1 resource - this may have the effect of legitimizing the DVP's monarchists!
+subtitle: -1 资源 - this may have the effect of legitimizing the DVP's monarchists!
 choose-if: resources >= 1
 on-arrival: resources -= 1; pro_republic += 6; dvp_relation += 2; nationalism -= 3; workers_dnvp -= 2; new_middle_dnvp -= 3; old_middle_dvp -= 3; left_dissent -= 2
 go-to: cg2
@@ -69,7 +69,7 @@ max-visits: 1
 We rally behind Otto Gessler as a defender of democracy and the republic. Hergt counters by, as always, attempting to split the DVP, this time aiming at their monarchist members.
 
 @donate_dvp
-subtitle: -1 resource - this may anger our left-wing further!
+subtitle: -1 资源 - this may anger our left-wing further!
 choose-if: resources >= 1
 on-arrival: resources -= 1; old_middle_dvp += 3; rural_dvp += 3; left_dissent += 2; dvp_relation += 5
 go-to: cg2
@@ -90,7 +90,7 @@ The KPD has entered into the race the little known Ernst Thälmann, while the DV
 - @round1: Let the voting begin...
 
 @large_campaign
-subtitle: -2 resources
+subtitle: -2 资源
 choose-if: resources >= 2
 view-if: braun_percent <= 0.7
 on-arrival: resources -= 2; braun_percent += 0.3;
@@ -100,7 +100,7 @@ max-visits: 1
 We launch a large-scale campaign for Braun to ensure turnout from our party members.
 
 @small_campaign
-subtitle: -1 resource
+subtitle: -1 资源
 on-arrival: resources -= 1; braun_percent += 0.15
 choose-if: resources >= 1
 view-if: braun_percent <= 0.7
@@ -383,7 +383,7 @@ The Center Party is willing to be convinced; how do we convince them?
 - @braun2_menu: Nevermind the Center Party.
 
 @resources_z
-subtitle: -1 resource
+subtitle: -1 资源
 choose-if: resources >= 1
 on-arrival: z_relation += 5; resources -= 1; left_dissent += 2; marx_campaign = 0; z_support_braun = 1; bvp_support_hindenburg = 1
 go-to: braun2_menu
@@ -432,7 +432,7 @@ He has received the backing of the DVP, the DNVP[? if bvp_support_hindenburg :, 
 - @round1: Let the voting begin...
 
 @attack_thalmann_m
-subtitle: -1 resource - this may have the effect of popularizing Thälmann!
+subtitle: -1 资源 - this may have the effect of popularizing Thälmann!
 on-arrival: resources -= 1; kpd_relation -= 5; workers_kpd += 2; unemployed_kpd += 2; left_dissent -= 5; left_strength -= 5; nationalism += 2; pro_republic -= 2
 go-to: marx_campaign
 choose-if: resources >= 1
@@ -441,7 +441,7 @@ max-visits: 1
 We attack Thälmann for every fault we can find, and make concessions to our left wing. In doing so, we may be inadvertantly advertising Thälmann, all the while causing further uncertainty amongst right-wing swing voters. Still, any major risk of the party's left refusing to vote Marx seems gone, for now.
 
 @democracy_rally_m
-subtitle: -1 resource
+subtitle: -1 资源
 choose-if: resources >= 1
 on-arrival: resources -= 1; pro_republic += 6; nationalism -= 3; workers_dnvp -= 2; new_middle_dnvp -= 2; left_dissent -= 2
 go-to: marx_campaign
@@ -450,7 +450,7 @@ max-visits: 1
 We rally behind Wilhelm Marx as a defender of democracy and the republic [? if hindenburg_campaign : against Paul von Hindenburg and the monarchists backing him. ?][? if not hindenburg_campaign : against the right which sought to undermine democracy by asking Paul von Hindenburg to run. ?]
 
 @donate_z
-subtitle: -1 resource - this may anger our left-wing further!
+subtitle: -1 资源 - this may anger our left-wing further!
 choose-if: resources >= 1
 on-arrival: resources -= 1; catholics_z += 2; left_dissent += 2
 go-to: marx_campaign
@@ -465,7 +465,7 @@ We contribute to the campaign by helping the Centrists recover their right flank
 - @round1: Let the voting begin...
 
 @rally_b
-subtitle: -1 resource
+subtitle: -1 资源
 choose-if: resources >= 1
 on-arrival: resources -= 1
 max-visits: 1
@@ -514,7 +514,7 @@ go-to: bc2
 Our speakers have gauged the mood and are speaking to the issues that seem to most affect the workers in this moment.
 
 @campaign_b
-subtitle: -1 resource
+subtitle: -1 资源
 choose-if: resources >= 1
 on-arrival: resources -= 1
 max-visits: 1
@@ -575,7 +575,7 @@ The DVP is under immense internal pressure to withdraw its backing of Gessler, w
 
 @convince_dvp_gessler
 choose-if: resources >= 2
-subtitle: -2 resources
+subtitle: -2 资源
 on-arrival: resources -= 2; dvp_abstain = 1; old_middle_dvp -= 4; new_middle_dvp -= 3; rural_dvp -= 4; dvp_relation -= 10; left_dissent += 10; workers_spd -= 3; unemployed_spd -= 3; left_strength += 5
 
 We try to convince the DVP to stay in the Gessler campaign, causing immense debate within the DVP. Many on the right may vote Hindenburg anyway. In the end, in the name of party unity, it is decided the DVP will abstain in the election.
@@ -584,7 +584,7 @@ We try to convince the DVP to stay in the Gessler campaign, causing immense deba
 
 @convince_dvp_abstain
 choose-if: resources >= 1
-subtitle: -1 resource
+subtitle: -1 资源
 on-arrival: resources -= 1; dvp_support_hindenburg = 1; old_middle_dvp -= 2; new_middle_dvp -= 1; rural_dvp -= 2; dvp_relation -= 5; left_dissent += 5; workers_spd -= 2; unemployed_spd -= 2
 go-to: unfortunate
 

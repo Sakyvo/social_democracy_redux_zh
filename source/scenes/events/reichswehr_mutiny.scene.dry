@@ -23,7 +23,7 @@ We choose to crush the mutiny by force and stand by our coalition partners. The 
 - @the_fight: This is too far. The law can handle this.
 
 @arm_workers
-subtitle: -1 budget.
+subtitle: -1 财政预算。
 on-arrival: budget -= 1; kpd_relation += 5; government_strength += (rfb_strength * 0.1); rfb_militancy += 0.1; government_strength += (rb_strength * 0.05); rb_militancy += 0.05; government_strength += (spd_normalized + kpd_normalized)*unemployed; government_strength += ((spd_normalized + kpd_normalized)*unemployed)/2; z_relation -= 10; judicial_reform -= 1; kpd_influence += 1; interior_police_loyalty -= 0.05; reichswehr_loyalty -= 0.05; capital_strike_progress += 2; socialism += 4
 go-to: the_fight
 

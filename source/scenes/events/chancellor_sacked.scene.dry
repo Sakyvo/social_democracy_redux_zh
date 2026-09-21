@@ -34,6 +34,6 @@ We will tolerate Brüning's government, protecting it from motions of no confide
 on-arrival: time_to_election = 3; spd_in_government = 0; in_grand_coalition = 0; spd_toleration = 0; weimar_dissent += 1 if weimar_plan_adopted
 call: set_next_election_time
 
-New elections have been set for [+ next_election_month : month +] [+ next_election_year +].
+新的选举已定于 [+ next_election_month : month +] [+ next_election_year +]。
 
 # todo: call a general strike with the ADGB not as an insurrection but to intimidate Hindenburg into acquiscing 

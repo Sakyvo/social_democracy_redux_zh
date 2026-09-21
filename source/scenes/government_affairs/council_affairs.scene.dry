@@ -132,14 +132,14 @@ Using the councils as framework, we distribute arms amongst the workers, and beg
 @fund_councils
 view-if: labor_minister_party == "SPD" and finance_minister_party == "SPD"
 choose-if: budget >= 1 and judicial_reform >= 3
-unavailable-subtitle: -1 budget [? if judicial_reform < 3 : - The courts would block this as illegal ?]
+unavailable-subtitle: -1 财政预算 [? if judicial_reform < 3 : - The courts would block this as illegal ?]
 on-arrival: budget -= 1; council_resources += (3+economic_democracy); coalition_dissent += 3; z_relation -= 5; ddp_relation -= 5; dvp_relation -= 5; capital_strike_progress += 3; coup_progress += 1
 
 We divert government funds towards the councils, an act quickly decried by the bourgeois parties as not only wasteful but illegal, corrupt, and politically charged.
 
 @donate_councils
 choose-if: resources >= 2
-subtitle: -2 resources
+subtitle: -2 资源
 on-arrival: resources -= 2; council_resources += 1; council_resources += 1 if workers_aid
 
 We donate resources from the SPD to the councils, helping to expand their capacity through the cooperation and backing of our existing party infrastructure.

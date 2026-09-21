@@ -61,7 +61,7 @@ Kurt Schumacher is an ambitious rising star in the party, and would be all too w
 - @cultural_figure: Support a nonpartisan cultural figure?
 
 @eckener_r1
-subtitle: -1 resource - After nominating him, we still have to convince the other parties to support him.
+subtitle: -1 资源 - After nominating him, we still have to convince the other parties to support him.
 unavailable-subtitle: [? if resources < 1 : -1 resource - Not enough resources. ?]
 choose-if: resources >= 1
 on-arrival: spd_candidate = "Eckener"; is_unity_candidate = 1
@@ -91,7 +91,7 @@ view-if: kpd_candidate = "Thälmann"
 choose-if: kpd_relation >= 50 and reformist_strength < left_strength
 unavailable-subtitle: [? if kpd_relation < 50 : We do not have good enough relations with the Communists, so they are not even willing to accept our support. ?] [? if reformist_strength >= left_strength : The reformist faction is able to dissuade the party from supporting this arrangement. ?]
 
-Supporting Thälmann is rather unpopular in our party, even if the Communists accept our support. Are we sure?
+即便共产党人接受我们的支持,支持台尔曼在我党中也颇不受欢迎。你确定吗?
 
 - @support_thalmann_2: Yes, we will support Thälmann, despite the reformists' pleas against it.
 - @candidate_menu: Who else can we support?
@@ -115,7 +115,7 @@ We have endorsed Willi Münzenberg of the KPD.
 
 
 @braun_r1
-subtitle: -2 resources.
+subtitle: -2 资源.
 unavailable-subtitle: [? if resources < 2 : -2 resources - Not enough resources. ?][? if braun_campaign != 0 or not spd_prussia : Braun no longer wants to run. ?]
 choose-if: braun_campaign = 0 and spd_prussia and resources >= 2
 on-arrival: spd_candidate = "Braun"; resources -= 2; is_unity_candidate = 0
@@ -125,7 +125,7 @@ We have convinced Otto Braun to run for president once more.
 
 
 @schumacher_r1
-subtitle: -2 resources.
+subtitle: -2 资源.
 unavailable-subtitle: [? if resources < 2 : -2 resources - Not enough resources. ?]
 choose-if: resources >= 2
 on-arrival: spd_candidate = "Schumacher"; resources -= 2; is_unity_candidate = 0
@@ -135,7 +135,7 @@ We have nominated Kurt Schumacher to be our presidential candidate.
 
 
 @juchacz_r1
-subtitle: -2 resources.
+subtitle: -2 资源.
 unavailable-subtitle: [? if resources < 2 : -2 resources - Not enough resources. ?]
 view-if: womens_rights >= 6 and family_law >= 2 and womens_work >= 2 and welfare > 0
 choose-if: resources >= 2
@@ -156,7 +156,7 @@ Since the presidency has been made a largely ceremonial figure by our reforms, w
 - @candidate_menu: Actually, we should nominate someone else.
 
 @einstein_r1
-subtitle: -2 resources
+subtitle: -2 资源
 view-if: science >= 2 and kwg_research >= 1 and (major_curriculum = "scientific" or minor_curriculum = "scientific")
 choose-if: resources >= 2
 on-arrival: spd_candidate = "Einstein"; ddp_candidate = "Einstein"; resources -= 2; is_unity_candidate = 0; is_cultural_candidate = 1;
@@ -169,7 +169,7 @@ He did not wish to run for president, disliking the public nature of campaigning
 The [+ ddp_name +] will endorse Einstein's candidacy.
 
 @mann_r1
-subtitle: -2 resources - He might be too far left for the bourgeois parties.
+subtitle: -2 资源 - He might be too far left for the bourgeois parties.
 view-if: kpd_relation >= 50
 choose-if: resources >= 2
 on-arrival: spd_candidate = "Mann"; resources -= 2; is_unity_candidate = 0; is_cultural_candidate = 1;
@@ -181,7 +181,7 @@ Mann is willing to accept the nomination for president.
 
 @ossietzky_r1
 view-if: weltbuhne_dropped = 1
-subtitle: -2 resources - He might be too far left for the bourgeois parties.
+subtitle: -2 资源 - He might be too far left for the bourgeois parties.
 choose-if: resources >= 2
 on-arrival: spd_candidate = "Ossietzky"; resources -= 2; is_unity_candidate = 0; is_cultural_candidate = 1;
 go-to: r1_menu
@@ -279,7 +279,7 @@ The Center are not satisfied with our arguments, but they are open to being conv
 
 @pay_z
 choose-if: resources >= 2
-subtitle: -2 resources
+subtitle: -2 资源
 on-arrival: resources -= 2; z_candidate = spd_candidate; Seldte_bonus += 2.5 if z_relation < 40 and dnvp_candidate = "Seldte"
 go-to: r1_menu if round = 0; r2_campaigning if round > 0
 
@@ -326,7 +326,7 @@ The KPD is supporting their own candidate, [+ kpd_candidate +]. [? if kpd_relati
 @kpd_resources
 view-if: kpd_relation >= 50 and not historical_mode
 choose-if: resources >= 3
-subtitle: -3 resources
+subtitle: -3 资源
 unavailable-subtitle: Not enough resources (need 3).
 on-arrival: resources -= 3; kpd_candidate = spd_candidate; sapd_candidate = spd_candidate;
 go-to: r1_menu if round = 0; r2_campaigning if round > 0
@@ -710,7 +710,7 @@ We have endorsed Otto Gessler, independent formerly of the DDP.
 
 @r2_endorse_eckener
 title: Convince the Weimar Coalition parties to unite behind Hugo Eckener.
-subtitle: -2 resources
+subtitle: -2 资源
 unavailable-subtitle: [? if resources < 2 : -2 resources - Not enough resources. ?]
 choose-if: resources >= 2 and ((z_relation >= 50 and z_leader = "Kaas") or (z_relation >= 30 and z_leader = "Joos")) and ddp_relation >= 40
 view-if: z_candidate = "Adenauer" and ddp_candidate = "Gessler" and spd_candidate != "Eckener"
@@ -773,7 +773,7 @@ We have passed a constitutional amendment preventing the president from having t
 
 @fight
 
-Do we realize that this means civil war, against the full force of the state?
+我们明白这意味着什么吗?这意味着要对抗国家的全部武力,打一场内战。
 
 - @civil_war: Yes.
 - @defeat_democratic: It is not too late to fight constitutionally.
