@@ -1,4 +1,4 @@
-title: Internal Security
+title: 内部安全
 new-page: true
 is-card: true
 tags: govt_affairs
@@ -6,48 +6,48 @@ on-arrival: police_timer += 6; month_actions += 1
 view-if: spd_in_government = 1 and interior_minister_party = "SPD" and police_timer <= 0
 card-image: img/portraits/SeveringCarl.jpg
 
-= Internal Security
+= 内部安全
 
-The Interior Ministry controls internal security throughout the German Republic. While most police work is delegated to the states, the national security agency can perform special investigations.
+内政部掌控着整个德意志共和国的内部安全。虽然大部分警务工作下放给各州,但国家安全机构可以执行特别调查。
 
-As with the state police units and the Reichswehr, the internal police tends to be reactionary, and has serious issues with loyalty to the elected government of the Republic.
+与各州警察部队及国防军一样,内政部警察也倾向反动,在对共和国民选政府的忠诚上存在严重问题。
 
 # todo: expand state police size
 
-- @loyalty: Improve the loyalty of the Interior Ministry forces.
-- @investigate_corruption: Investigate corruption by big businesses.
-- @investigate_far_right: Investigate illegal activity among the far right.
-- @prosecute_far_right: Use our evidence to prosecure far right leaders.
-- @investigate_march: Investigate the March on Berlin.
-- @domestic_enemies: Investigate or ban our domestic enemies.
+- @loyalty: 提升内政部力量的忠诚。
+- @investigate_corruption: 调查大企业的腐败。
+- @investigate_far_right: 调查极右翼的非法活动。
+- @prosecute_far_right: 用我们的证据起诉极右翼领袖。
+- @investigate_march: 调查进军柏林事件。
+- @domestic_enemies: 调查或取缔我们的国内敌人。
 - @deport_hitler
-- @root: Take no action for now.
+- @root: 暂时不采取行动。
 - @easy_discard
 - @cancel_advisor_action
 
 @loyalty
 on-arrival: interior_police_loyalty += 0.1
 
-As with the Prussian state police, there are measures we can take to root out reactionary and anti-democratic sentiment in the police. We can improve training and recruiting procedures, and identify and remove known fascists and the like.
+与普鲁士州警察一样,我们可以采取措施,清除警察中的反动与反民主情绪。我们可以改进训练与招募程序,识别并清除已知的法西斯分子之流。
 
-Current interior police loyalty: [+ interior_police_loyalty : loyalty +]
+当前内政部警察忠诚度: [+ interior_police_loyalty : loyalty +]
 
 
 @investigate_corruption
 choose-if: not capital_spd
-unavailable-subtitle: <span style="color:rgb(170,150,60);font-family:'Times New Roman',serif;font-weight:700;letter-spacing:0.5px;">Nothing to see here.</span>
+unavailable-subtitle: <span style="color:rgb(170,150,60);font-family:'Times New Roman',serif;font-weight:700;letter-spacing:0.5px;">这里没什么好看的。</span>
 go-to: investigate_corruption_success if interior_police_loyalty >= 0.5; investigate_corruption_failure if interior_police_loyalty < 0.5
 
 @investigate_corruption_success
 on-arrival: investigate_corruption += 1; inaccuracy = 0; assessed_bourgeois = bourgeois_power; bourgeois_power -= 0.01; capital_strike_progress -= 1 if capital_strike_progress >= 5 and (left_dissent > (left_strength+kpd_relation)); workers_spd += 5*(1-dissent); inflation -= 0.1 if inflation > 3; inflation -= 0.2 if inflation >= 8
 
-Corruption in big business is rampant, of course. We have uncovered a number of scandals, and publicizing them brings new attention to the work of Interior Minister [+ interior_minister +], building up his popular appeal and that of the SPD.
+大企业中的腐败当然猖獗。我们揭露出若干丑闻,将其公之于众使内政部长 [+ interior_minister +] 的工作获得新的关注,提升了他本人与社民党的声望。
 
-[? if capital_strike_progress >= 4 : We have uncovered plans by the business community to launch a coordinated withdrawal of investments in order to hurt the economy. ?]
+[? if capital_strike_progress >= 4 : 我们发现了工商界策划协同撤资、以打击经济的计划。 ?]
 
 @investigate_corruption_failure
 
-Unfortunately, our investigations have failed to turn up anything. Rumors are that the targets of our investigation were tipped off by infiltrators within the police.
+遗憾的是,我们的调查一无所获。有传闻说,调查对象是被警察内部的渗透者通风报信了。
 
 @investigate_march
 view-if: march_on_berlin_seen >= 1 and not victory_republic and not nazis_implicated
@@ -56,7 +56,7 @@ go-to: investigate_march_success if interior_police_loyalty >= 0.6; investigate_
 @investigate_march_success
 on-arrival: nazis_implicated = 1; coup_progress += 3; sa_banned = 1; sa_strength -= (sa_strength*0.2*interior_police_loyalty); investigate_far_right += 1 if investigate_far_right >= 3
 
-We have found that the Nazis were responsible for the recent March on Berlin, having organized it as a putsch and even made preparations for civil war. This is grounds to ban them, if we get the judiciary on our side. For now, we have cracked down on the SA, but gone no further.
+我们发现,最近的进军柏林事件正是纳粹所为 —— 他们将其组织成一场政变,甚至为内战做了准备。若能让司法界站在我们一边,这便构成取缔他们的理由。目前我们已对冲锋队予以打击,但未再深入。
 
 @investigate_march_failure
 
@@ -65,12 +65,12 @@ Unfortunately, our investigation has failed to turn up anything. Rumors are that
 @prosecute_far_right
 view-if: prosecution_unlocked and not nsdap_banned
 choose-if: investigate_far_right > 4
-unavailable-subtitle: We need to gather more evidence.
+unavailable-subtitle: 我们需要搜集更多证据。
 on-arrival: investigate_far_right -= 1
 go-to: prosecute_far_right_success if judicial_reform >= (prosecutions+2); prosecute_far_right_failure if judicial_reform < (prosecutions+2)
 
 @prosecute_far_right_success
-subtitle: We could especially leverage the evidence of their participation in the March on Berlin.
+subtitle: 我们尤其可以利用他们参与进军柏林的证据。
 on-arrival: nazis_bannable = 1 if nazis_implicated; prosecutions += 1; interior_police_loyalty -= (0.05*(nationalism/100)*bourgeois_power); coup_progress += prosecutions; {! 
 
 Q.workers_nsdap -= 6*(Q.pro_republic/100);
@@ -109,30 +109,30 @@ Q.rural_nsdap += 2*(Q.nationalism/100)*((100-Q.pro_republic)/100)*Q.bourgeois_po
 
 !}
 
-We have successfully pressed charges against several key Nazi leaders using the evidence we have against them, removing them of many expert organizers by tying them up in legal proceedings and disrupting their party apparatus. They cry persecution by the Marxist state, but hopefully the legitimacy of the republic will counter these claims.
+我们利用掌握的证据,成功对数名纳粹核心领袖提起指控 —— 让他们忙于法律诉讼,从而剥夺了许多干练的组织者,打乱了他们的党务机器。他们高呼遭到马克思主义国家的迫害,但愿共和国的正当性能够抵消这些说辞。
 
-[? if nazis_implicated : We have also conclusively charged them with being key organizers of the March on Berlin and proven an intent on their part to illegally overthrow the constitution and establish a dictatorship by force. This paves the way for outlawing their party. ?]
+[? if nazis_implicated : 我们还确凿地指控他们是进军柏林事件的核心组织者,并证明他们意图非法推翻宪法、以武力建立独裁。这为他们被取缔铺平了道路。 ?]
 
-- @suspend_nsdap: Temporarily suspend the NSDAP's rights as a party while we move towards a ban.
-- @dont: There is no need for that right now.
+- @suspend_nsdap: 在走向取缔的同时,暂时中止纳粹党作为政党的权利。
+- @dont: 目前没有必要这样做。
 
 @suspend_nsdap
 view-if: nazis_bannable and not nazis_suspended
 choose-if: president != "Hindenburg" and judicial_reform >= (nsdap_votes/5)
-unavailable-subtitle: [? if president == "Hindenburg" : Hindenburg would never allow this. ?][? if judicial_reform < (nsdap_votes/5) : The courts would never allow this. ?]
+unavailable-subtitle: [? if president == "Hindenburg" : 兴登堡绝不会允许这样做。 ?][? if judicial_reform < (nsdap_votes/5) : 法院绝不会允许这样做。 ?]
 on-arrival: nazis_suspended = 1; workers_nsdap *= 0.5*(1-(sa_force/100)); new_middle_nsdap *= 0.5*(1-(sa_force/100)); old_middle_nsdap *= 0.5*(1-(sa_force/100)); unemployed_nsdap *= 0.5*(1-(sa_force/100)); rural_nsdap *= 0.8*(1-(sa_force/100)); pro_republic -= 5; coup_progress += 5; reichswehr_loyalty -= 0.05; reichswehr_loyalty = 0 if reichswehr_loyalty < 0; coalition_dissent += 1 if kpd_relation > 30 or not rfb_banned; coalition_dissent += 1 if in_grand_coalition and dvp_relation < 50
 
-By suspending the Nazi party's rights for the time being, we are moving towards a full ban in the future pending judicial review while securing the republic immediately. This decision is quite unpopular amongst the right.
+通过暂时中止纳粹党的权利,我们在等待司法审查的同时立即稳住共和国,并为将来的彻底取缔铺路。这一决定在右翼中颇不受欢迎。
 
 @dont
 view-if: nazis_bannable and not nazis_suspended
 
-We will not move towards this just yet.
+我们还不会朝这个方向走。
 
 @prosecute_far_right_failure
 on-arrival: interior_police_loyalty -= (0.08*(nationalism/100)*bourgeois_power); pro_republic -= 2; nationalism += 3; old_middle_nsdap += 3; rural_nsdap += 4; new_middle_nsdap += 3
 
-Unfortunately, despite the mounting evidence against the Nazis, we are unable to sway the still conservative courts against them. The Nazis instead use the trials to broadcast their beliefs, and our failures to defeat them in the courtroom delegitimize the republic.
+遗憾的是,尽管针对纳粹的证据不断累积,我们仍无法说服依旧保守的法院对他们不利。纳粹反而利用庭审来宣扬他们的主张,而我们在法庭上未能击败他们,也损害了共和国的正当性。
 
 @investigate_far_right
 go-to: investigate_far_right_success if interior_police_loyalty >= 0.55; investigate_far_right_failure if interior_police_loyalty < 0.55
@@ -140,12 +140,12 @@ go-to: investigate_far_right_success if interior_police_loyalty >= 0.55; investi
 @investigate_far_right_success
 on-arrival: investigate_far_right += 1; prosecution_unlocked = 1 if investigate_far_right > 3; sa_strength -= 20; workers_nsdap -= 3; new_middle_nsdap -= 3; nazi_urgency += 1 if investigate_far_right == 2; nazi_urgency += 2 if investigate_far_right == 3; workers_nsdap -= 3 if investigate_far_right == 3; new_middle_nsdap -= 3 if investigate_far_right == 3; old_middle_nsdap -= 3 if investigate_far_right == 3; unemployed_spd -= 3 if investigate_far_right == 3; coup_progress -= 1 if coup_progress >= 7; investigate_far_right += 1 if investigate_far_right > 3 and interior_police_loyalty >= 0.6
 
-[? if investigate_far_right == 1 : We have discovered collusion between Hjalmar Schacht, president of the Reichsbank, and the Nazis. This is very useful information. ?]
-[? if investigate_far_right == 2 : We have discovered illegal arms smuggling by the SA, the Nazi paramilitary. ?]
-[? if investigate_far_right == 3 : We have discovered a secret cache of documents from the NSDAP detailing their plan to violently take over the country if they enter into power. This is an anti-constitutional plot, and will be publicized and persecuted. ?]
-[? if investigate_far_right > 3 : Of course the Nazis are doing crimes; everyone knows that. Now, we finally have proof, which we may use to prosecute the party if we so wish, as the case against the Nazis only grows stronger the more evidence we compile. ?]
-[? if coup_progress >= 6: There are reports of an imminent coup by the far-right. We have attempted to disrupt some of these plans, but the threat is still present. ?]
+[? if investigate_far_right == 1 : 我们发现国家银行行长亚尔马·沙赫特与纳粹之间存在勾结。这是非常有用情报。 ?]
+[? if investigate_far_right == 2 : 我们发现纳粹的准军事组织冲锋队在非法走私武器。 ?]
+[? if investigate_far_right == 3 : 我们发现了一批纳粹党的秘密文件,其中详述了他们一旦上台便以暴力夺取全国的方案。这是违宪的阴谋,将被公之于众并受到追究。 ?]
+[? if investigate_far_right > 3 : 纳粹当然在犯法,这谁都知道。如今我们终于有了证据,若愿意便可据此起诉该党 —— 我们搜集的证据越多,针对纳粹的案子就越有力。 ?]
+[? if coup_progress >= 6: 有报告称极右翼即将发动政变。我们已设法破坏其中一些计划,但威胁依然存在。 ?]
 
 @investigate_far_right_failure
 
-Unfortunately, our investigations have failed to turn up anything. Rumors are that the targets of our investigation were tipped off by infiltrators within the police.
+遗憾的是,我们的调查一无所获。有传闻说,调查对象是被警察内部的渗透者通风报信了。

@@ -1,5 +1,5 @@
-title: Investigating Domestic Enemies
-subtitle: [? if nazis_suspended and not nsdap_banned : We can ban the NSDAP. ?]
+title: 调查国内敌人
+subtitle: [? if nazis_suspended and not nsdap_banned : 我们可以取缔纳粹党。 ?]
 on-arrival: month_actions += 1
 view-if: spd_in_government = 1 and interior_minister_party = "SPD"
 #card-image: img/portraits/SeveringCarl.jpg
@@ -8,59 +8,59 @@ view-if: spd_in_government = 1 and interior_minister_party = "SPD"
 
 # this is not a card...
 
-= Investigating Domestic Enemies
+= 调查国内敌人
 
-As we have control over the Interior Ministry, we can direct police and intelligence services to investigate internal enemies. We can proscribe various organizations.
+由于我们掌控着内政部,可以指挥警察与情报机构调查内部敌人。我们可以宣布各类组织为非法。
 
 - @deport_hitler
-- @ban_nsdap: Ban the NSDAP.
-- @ban_sa: Ban the SA.
-- @unban_sa: Unban the SA.
+- @ban_nsdap: 取缔纳粹党。
+- @ban_sa: 取缔冲锋队。
+- @unban_sa: 解除对冲锋队的禁令。
 - @persecute_sa
-- @ban_sh: Ban the Stahlhelm.
-- @unban_sh: Unban the Stahlhelm.
+- @ban_sh: 取缔钢盔团。
+- @unban_sh: 解除对钢盔团的禁令。
 - @persecute_sh
-- @ban_rfb: Ban the Communist RFB.
-- @unban_rfb: Unban the RFB.
+- @ban_rfb: 取缔共产党的 RFB。
+- @unban_rfb: 解除对 RFB 的禁令。
 - @persecute_rfb
-- @investigate_coup: Investigate the rumors of a coup plot.
-- @root: Take no action for now.
+- @investigate_coup: 调查政变阴谋的传闻。
+- @root: 暂时不采取行动。
 
 @ban_nsdap
-subtitle: They attempted to overthrow the republic.
+subtitle: 他们曾试图推翻共和国。
 view-if: nazis_suspended and not nsdap_banned
 choose-if: judicial_reform >= (3+(nsdap_votes/5))
-unavailable-subtitle: The courts are obstructing.
+unavailable-subtitle: 法院在从中作梗。
 on-arrival: nsdap_banned = 1; coup_progress += 5; dvp_relation -= 5; hindenburg_angry += 30; constitutional_reform += 1 if not party_bans; party_bans = 1 if not party_bans
 
-We have banned the NSDAP! This is a great victory for democracy, albeit a controversial measure which has had us labelled as undemocratic by the very same parties which loathe democracy.
+我们取缔了纳粹党!这是民主的一大胜利 —— 尽管这一措施颇具争议,还让我们被那些厌恶民主的政党本身贴上了「不民主」的标签。
 
 @ban_sa
 view-if: nazi_urgency >= 3 and sa_banned == 0
 on-arrival: sa_strength *= 0.85; sa_strength *= 0.7 if interior_police_loyalty >= 0.7; sa_banned = 1; dvp_relation -= 3; prussian_police_loyalty -= 0.05; interior_police_loyalty -= 0.05; sa_militancy -= 0.05; sa_ban_timer = 6; coup_progress += 1; coup_progress += 1 if sh_banned; coup_progress += 1 if coup_progress >= 6;
 
-As it turns out, the Nazi SA has many allies in the police and bureaucracy. Our relationship with the police weakens, and the SA can still organize illegally, right under the police's noses. [? if interior_police_loyalty >= 0.7 : Nevertheless, the SA is substantially weakend by our ban. ?]
+事实证明,纳粹冲锋队在警察与官僚机构中有不少盟友。我们与警察的关系随之受损,而冲锋队仍能在警察眼皮底下非法组织活动。 [? if interior_police_loyalty >= 0.7 : 尽管如此,冲锋队还是因我们的禁令而被大幅削弱。 ?]
 
 @unban_sa
 view-if: sa_banned = 1
 on-arrival: sa_banned = 0; sa_strength += 100; sa_militancy += 0.05
 
-The SA is no longer banned. They immediately go on a recruiting spree.
+冲锋队不再被禁。他们立即掀起了一轮招兵买马的热潮。
 
 @persecute_sa
-title: Further persecute the SA.
+title: 进一步打击冲锋队。
 view-if: sa_banned = 1
 choose-if: judicial_reform >= 3 and interior_police_loyalty >= 0.7
-unavailable-subtitle: [? if judicial_reform < 3 : The judiciary would not allow this. ?] [? if interior_police_loyalty < 0.7 : The police are too disloyal to be trusted with this. ?]
+unavailable-subtitle: [? if judicial_reform < 3 : 司法界不会允许这样做。 ?] [? if interior_police_loyalty < 0.7 : 警察太不忠诚,不堪此任。 ?]
 on-arrival: sa_strength *= 0.7; sa_militancy -= 0.05
 
-We have arrested more of the SA's leaders and confiscated their weapons.
+我们逮捕了更多冲锋队的领袖,并没收了他们的武器。
 
 @ban_sh
 on-arrival: sh_strength *= 0.85; sh_strength *= 0.7 if interior_police_loyalty >= 0.7; sh_banned = 1; dvp_relation -= 5; prussian_police_loyalty -= 0.1; interior_police_loyalty -= 0.05; coalition_dissent += 1 if spd_in_government = 1 and in_grand_coalition = 1 and president = "Hindenburg"; sh_ban_timer = 6; coup_progress += 1; coup_progress += 1 if sa_banned; coup_progress += 1 if coup_progress >= 6;
 view-if: sh_banned == 0
 
-[? if president == "Hindenburg": Banning the Stahlhelm weakens our relationship with President Hindenburg, as well as the political right and the police. ?][? if president != "Hindenburg": Banning the Stahlhelm weakens our relationship with the political right and the police. ?] [? if spd_in_government = 1 and in_grand_coalition = 1 and president = "Hindenburg" : It also weakens our coalition due to the influence of Hindenburg on the right wing of our coalition. ?] In addition, the Stahlhelm still operates out of public sight.
+[? if president == "Hindenburg": 取缔钢盔团会削弱我们与总统兴登堡的关系,也会削弱与政治右翼及警察的关系。 ?][? if president != "Hindenburg": 取缔钢盔团会削弱我们与政治右翼及警察的关系。 ?] [? if spd_in_government = 1 and in_grand_coalition = 1 and president = "Hindenburg" : 由于兴登堡对执政联盟中右翼的影响,这也削弱了我们的执政联盟。 ?] 此外,钢盔团仍在公众视线之外活动。
 
 @unban_sh
 view-if: sh_banned = 1
@@ -69,82 +69,82 @@ on-arrival: sh_banned = 0; sh_strength += 100
 The Stahlhelm is no longer banned.
 
 @persecute_sh
-title: Further persecute the Stahlhelm.
+title: 进一步打击钢盔团。
 view-if: sh_banned = 1
 choose-if: judicial_reform >= 4 and interior_police_loyalty >= 0.7
-unavailable-subtitle: [? if judicial_reform < 4 : The judiciary would not allow this. ?] [? if interior_police_loyalty < 0.7 : The police are too disloyal to be trusted with this. ?]
+unavailable-subtitle: [? if judicial_reform < 4 : 司法界不会允许这样做。 ?] [? if interior_police_loyalty < 0.7 : 警察太不忠诚,不堪此任。 ?]
 on-arrival: sh_strength *= 0.7; sh_militancy -= 0.05; dvp_relation -= 5; prussian_police_loyalty -= 0.1; interior_police_loyalty -= 0.05; coalition_dissent += 1 if spd_in_government = 1 and in_grand_coalition = 1 and president = "Hindenburg";
 
-We have arrested more of the Stahlhelm's leaders and confiscated their weapons.
+我们逮捕了更多钢盔团的领袖,并没收了他们的武器。
 
 
 @ban_rfb
 view-if: communist_coalition < 3 and rfb_banned = 0
 on-arrival: kpd_relation -= 15; rfb_strength -= 50; rfb_banned = 1; communist_coalition -= 1; z_relation += 5; dvp_relation += 5; prussian_police_loyalty += 0.1; interior_police_loyalty += 0.1; kpd_coalition_dissent += 2; coalition_dissent -= 1 if coalition_dissent > 0 and n_rfb_banned = 0; n_rfb_banned += 1
 
-The ban is enthusiastically carried out by the police, perhaps too enthusiastically. The Communists take this as one more reason why the Socialists are traitors to the left. However, the moderate and center-right parties approve, as do the police.
+这项禁令被警察热情地执行,或许过于热情了。共产党把这当作社会主义者是左翼叛徒的又一条理由。不过,温和派与中右政党,以及警察,都表示赞同。
 
 @unban_rfb
 view-if: rfb_banned = 1
 on-arrival: rfb_banned = 0; kpd_relation += 5; rfb_strength += 50; prussian_police_loyalty -= 0.05; interior_police_loyalty -= 0.05
 
-The Communist RFB is no longer banned.
+共产党的 RFB 不再被禁。
 
 @investigate_coup
 on-arrival: sa_legal = 1 if sa_banned == 0; sa_legal = 0 if sa_banned == 1; sh_legal = 1 if sh_banned == 0; sh_legal = 0 if sh_banned == 1
 view-if: coup_progress > 3
-subtitle: We must verify whether or not the rumors are true and if they are take action to defend the republic.
+subtitle: 我们必须核实这些传闻是否属实,若属实便采取行动保卫共和国。
 go-to: investigate_success if interior_police_loyalty >= (0.1 + (coup_progress/10)); investigate_failure if interior_police_loyalty < (0.1 + (coup_progress/10))
 
 @investigate_success
 on-arrival: coup_info += 1
 
-We have found evidence of seditious plots in the military and Harzburg Front, confirming our existing suspicions that such a plot was underway. Now we must decide what to do with this information.
+我们找到了军方与哈茨堡阵线中存在叛乱阴谋的证据,证实了我们此前已有的怀疑:这样一场阴谋确在运作。现在我们须决定如何处置这些情报。
 
-- @act_immediately: We should act on this new information immediately.
-- @wait_info: We need to compile more evidence so that we can truly foil this plot. Let's keep this information for later.
-- @purge: We will use all of our evidence gathered to crush the coup plot!
+- @act_immediately: 我们应当立即依据这一新情报采取行动。
+- @wait_info: 我们需要汇集更多证据,才能真正挫败这场阴谋。先把这些情报留待后用。
+- @purge: 我们将用搜集到的全部证据粉碎这场政变阴谋!
 
 @act_immediately
 view-if: coup_info < 3
 choose-if: judicial_reform >= 2
-unavailable-subtitle: The judiciary is unconvinced and unwilling to allow such action until further information is gathered.
+unavailable-subtitle: 司法界未被说服,在收集到更多情报之前不愿允许此类行动。
 on-arrival: coup_info -= 1; coup_progress -= 1; coup_progress -= 1 if reichswehr_minister_party == "SPD"; workers_nsdap -= 2; new_middle_nsdap -= 4; old_middle_nsdap -= 4; rural_nsdap -= 2; pro_republic += 2; interior_police_loyalty -= 0.05
 
-We arrest those implicated and take further efforts to foil these reactionary schemes, setting back the plot somewhat. Unfortunately, this has the effect of revealing to the coup plotters that we know of their plot, so they manage to cover their tracks somewhat and make further investigation harder.
+我们逮捕了涉案人员,并进一步挫败这些反动图谋,使阴谋受挫。遗憾的是,这也让政变策划者得知我们已掌握他们的阴谋,于是他们得以在一定程度上掩盖行迹,使后续调查更为困难。
 
 @wait_info
 view-if: coup_info < 3
 
-We must play the long game so that we can find not only the participants of this plot but also the leadership and just how far it stretches. We shelve our current info as evidence and work to compile more by investigating associates and acquiantances of the plotters we find.
+我们必须放长线钓大鱼,不仅要找出这场阴谋的参与者,还要找出其领导层以及它延伸到何处。我们把现有情报存为证据,并通过调查我们所发现的策划者的同伙与熟人,努力汇集更多材料。
 
 @purge
 view-if: coup_info >= 3
-subtitle: If the Harzburg Front hasn't been weakened enough, this may spur them into immediate action.
+subtitle: 若哈茨堡阵线尚未被充分削弱,此举或许会促使他们立即行动。
 go-to: purge_success if ((sa_strength*sa_militancy*sa_legal)+(sh_strength*sh_militancy*sh_legal)*(1-interior_police_loyalty)) <= ((prussian_police_loyalty*prussian_police_strength*spd_prussia)+(rb_strength*rb_militancy*(1-dissent))); purge_failure if ((sa_strength*sa_militancy*sa_legal)+(sh_strength*sh_militancy*sh_legal)*(1-interior_police_loyalty)) > ((prussian_police_loyalty*prussian_police_strength*spd_prussia)+(rb_strength*rb_militancy*(1-dissent)))
 
 @purge_success
 on-arrival: coup_progress -= 5 if coup_progress >= 5; coup_progress = 0 if coup_progress < 5; workers_nsdap -= 5; new_middle_nsdap -= 10; old_middle_nsdap -= 10; rural_nsdap -= 2; pro_republic += 5; strife += 1; interior_police_loyalty -= 0.1
 
-Having finally gathered enough evidence to truly paralyze the coup, we publicize our findings and launch sweeping arrests of the plotters involved. Reichswehr officers implicated are quickly discharged and placed under arrest or, for the more problematic ones, reassigned to entirely different posts to prevent them from enacting their plans. With many of their top schemers, plotters and leaders arrested over night, the remaining coup plot crumbles and the Harzburg Front is left grasping at straws as they consider but decide against an immediate uprising, certain that they would lose now with their plan shattered.  
+在终于搜集到足以真正瘫痪这场政变的证据后,我们公布了调查结果,并对涉案策划者展开大规模逮捕。有牵连的国防军军官被迅速革职拘押,至于其中较为棘手者,则被调往完全不同的岗位,以防他们实施计划。随着众多核心密谋者、策划者与领袖在一夜之间被捕,残余的政变阴谋随之瓦解;哈茨堡阵线只能徒劳挣扎,他们考虑过立即起事,却又断定在计划已被粉碎的情况下此刻必败,于是打消了念头。
 
-German democracy is saved, for now.
+德国民主暂时得救了。
 
 @purge_failure
 on-arrival: strife += 2; reichswehr_loyalty += 0.05; workers_nsdap -= 3; new_middle_nsdap -= 6; old_middle_nsdap -= 6; harzburg_purge = 1
 
-Having finally gathered enough evidence to truly paralyze the coup, we publicize our findings and launch sweeping arrests of the plotters involved. Reichswehr officers implicated are quickly discharged and placed under arrest or, for the more problematic ones, reassigned to entirely different posts to prevent them from enacting their plans. With many of their top schemers, plotters and leaders arrested over night, the Harzburg Front is left scattered, but nevertheless, fearing that if they do not act now they would be completely crushed, have launched an uprising in their weakened position. SA forces storm barracks with the Stalhelm, either deposing or convincing the officers and seizing control over those Reichswehr forces. City halls are seized, their republican mayors ousted, while reactionary city governments deploy police forces on the side of the Nazi coup to suppress any potential resistance.
+在终于搜集到足以真正瘫痪这场政变的证据后,我们公布了调查结果,并对涉案策划者展开大规模逮捕。有牵连的国防军军官被迅速革职拘押,至于其中较为棘手者,则被调往完全不同的岗位,以防他们实施计划。随着众多核心密谋者、策划者与领袖在一夜之间被捕,哈茨堡阵线被冲散;然而,他们担心此刻若不动手就会彻底被碾碎,于是在自身已被削弱的情况下发动了起事。冲锋队与钢盔团一同冲击兵营,或罢黜或说服军官,夺取了那些国防军部队的控制权。市政厅被占领,共和派的市长被赶下台,而反动的市政府则把警察力量部署到纳粹政变一方,以镇压任何可能的抵抗。
 
-- @civil_war: It is a civil war, then.
+- @civil_war: 那么,这就是内战了。
 
 @investigate_failure
 on-arrival: coup_progress += 1; interior_police_loyalty -= 0.05; coalition_dissent += 1
 
-Unfortunately, our investigations fail to turn up anything. Rumors are that the coup plotters were tipped off by infiltrators in the police, which, if true, would not only mean that our efforts were wasted but would also likely mean the coup plotters have accelerated their plans. Our coalition partners are annoyed meanwhile, believing our suspicions to be false and criticizing us for our paranoia.
+遗憾的是,我们的调查一无所获。有传闻说,政变策划者是被警察内部的渗透者通风报信了;若属实,这不仅意味着我们的努力白费,还很可能意味着策划者已加速了他们的计划。与此同时,我们的执政盟友颇为恼火,认为我们的怀疑纯属子虚乌有,并批评我们疑神疑鬼。
 
 @persecute_rfb
-title: Further persecute the RFB.
+title: 进一步打击 RFB。
 view-if: rfb_banned = 1
 on-arrival: rfb_strength *= 0.7; rfb_militancy -= 0.05; kpd_relation -= 10; kpd_coalition_dissent += 1; z_relation += 5; dvp_relation += 5; prussian_police_loyalty += 0.1; interior_police_loyalty += 0.1; coalition_dissent -= 1 if coalition_dissent > 0 and n_rfb_persecuted = 0; n_rfb_persecuted += 1
 
-We have arrested more of the RFB's leaders and confiscated their weapons.
+我们逮捕了更多 RFB 的领袖,并没收了他们的武器。
