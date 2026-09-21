@@ -32,9 +32,9 @@ Q.collapse_frequency = Math.max(1, Math.min(10 * (gov_tension * gov_tension * go
 !}
 max-choices: 1
 
-= The Governance of Germany
+= 德国的施政
 
-Under the governance of [+ chancellor +], Germany's administration continues. But it's administration is not a passive one; it is natural that it makes decisions which shape the course of German society.
+在 [+ chancellor +] 的治理下,德国的行政继续运转。但它的施政并非消极被动的;它自然会做出塑造德国社会走向的决定。
 
 - @tax_cuts: Tax cuts
 - @tax_hikes: Tax hikes
@@ -71,7 +71,7 @@ subtitle: The bourgeoisie cut taxes
 frequency: 200
 on-arrival: budget -= 2; workers_z += 2; workers_dvp += 2*(1-(socialism/100)); new_middle_dvp += 5; old_middle_dvp += 3; rural_dvp += 3; old_middle_dnvp += 3 if in_right_coalition; rural_dnvp += 3 if in_right_coalition; rural_dvp += 3 if not in_right_coalition; old_middle_dvp += 3 if not in_right_coalition; upper_tax_rates -= 1; lower_tax_rates -= 1; unemployed -= 1 if unemployed >= 5; capital_strike_progress -= 1 if upper_tax_rates < 0; inflation += 0.4; economic_growth += 0.4; socialism -= 1
 
-The government cuts tax rates, stimulating economic growth. The main beneficiaries are the middle classes and the wealthy, though nobody's going to complain about having more money in their pockets, at least until the consequences of such present themselves.
+政府降低税率,刺激经济增长。主要受益者是中间阶层与富人;不过,至少在后果显现之前,没人会抱怨自己口袋里的钱变多了。
 
 @tax_hikes
 view-if: (budget <= 0 or (budget <= 1 and inflation >= 7)) and inflation >= 4
@@ -79,7 +79,7 @@ subtitle: The bourgeoisie raise taxes
 frequency: 200
 on-arrival: budget += 3; new_middle_dvp -= 2; new_middle_ddp -= 2 if not in_right_coalition; old_middle_dvp -= 2; old_middle_dvp -= 2 if not in_right_coalition; old_middle_dnvp -= 2 if in_right_coalition; workers_dvp -= 3; workers_ddp -= 2 if not in_right_coalition; rural_dvp -= 2; rural_dvp -= 2 if not in_right_coalition; rural_dnvp -= 2 if in_right_coalition; unemployed += 2; lower_tax_rates += 1; upper_tax_rates += 1; capital_strike_progress += 1 if upper_tax_rates > 1; capital_strike_progress += 1 if upper_tax_rates > 2; workers_z -= 5 if lower_tax_rates > 1; inflation -= 1.1; economic_growth -= 0.6;
 
-The government raises tax rates, suppressing inflation at the cost of slackening economic growth and rising unemployment, while fitting out the government's previously tight coffers. 
+政府提高税率,以经济增长放缓、失业上升为代价压制通货膨胀,同时填满了政府此前拮据的国库。
 
 - @break_toleration
 - @tolerate
@@ -90,7 +90,7 @@ view-if: (upper_tax_rates >= 2 or ((upper_tax_rates > 0 and capital_strike_progr
 subtitle: The bourgeoisie make taxation more regressive
 on-arrival: workers_z -= 5; workers_dvp -= 5; workers_dnvp -= 5 if in_right_coalition; workers_dvp -= 5 if not in_right_coalition; bourgeois_power += 0.02; new_middle_dvp += 5*bourgeois_power; old_middle_dvp += 6*bourgeois_power; upper_tax_rates -= 1; lower_tax_rates += 1; workers_dvp -= 5 if lower_tax_rates >= 2; capital_strike_progress -= 1 if upper_tax_rates < 0; socialism += 2
 
-The government's regressive taxation policy benefits the rich while hurting the poor and working-class.
+政府的累退税政策有利于富人,却伤害穷人与工人阶级。
 
 - @break_toleration
 - @tolerate
@@ -101,7 +101,7 @@ view-if: (welfare+2) >= budget
 subtitle: The bourgeoisie cut welfare spending
 on-arrival: budget += 1; workers_dvp -= 3; workers_z -= 3; workers_ddp -= 3 if not in_right_coalition; workers_dnvp -= 3 if in_right_coalition; unemployed_kpd += 5; workers_kpd += 2; workers_kpd += 1 if sapd_consolidated != 1; workers_sapd += 1 if sapd_consolidated == 1; welfare -= 1; pro_republic -= 3; inflation -= 0.3; unemployed += 0.4; economic_growth -= 0.2;
 
-The government has reduced levels of social welfare spending. This means more poverty and suffering for the working class. 
+政府削减了社会福利开支水平。这意味着工人阶级要承受更多贫困与苦难。
 
 - @break_toleration
 - @tolerate
@@ -115,12 +115,12 @@ go-to: pre_depression if unemployed < 15; post_depression if unemployed >= 15
 @pre_depression
 on-arrival: budget -= 1; workers_dvp += 2*bourgeois_power; workers_z += 2*bourgeois_power; workers_ddp += 2*bourgeois_power if not in_right_coalition; workers_dnvp += 2*bourgeois_power if in_right_coalition; unemployed_z += 3*bourgeois_power; welfare += 1; inflation += 0.3; unemployed -= 0.4; economic_growth += 0.2;
 
-The government has increased welfare spending. Our proletarian base is pleased.
+政府增加了福利开支。我们的无产阶级基础感到满意。
 
 @post_depression
 on-arrival: budget -= 1; workers_dvp += bourgeois_power; workers_z += bourgeois_power; workers_ddp += bourgeois_power if not in_right_coalition; workers_dnvp += bourgeois_power if in_right_coalition; unemployed_z += bourgeois_power; inflation += 0.3
 
-Increasing welfare spending is necessary in light of the rise in unemployment, so the government is essentially treading water.
+鉴于失业上升,增加福利开支本是必要的,因此政府本质上只是原地踏步。
 
 @tariff_cuts
 frequency: 100
@@ -128,7 +128,7 @@ view-if: budget > 2 and tariffs > -5 and not in_right_coalition and (rural_spd_n
 on-arrival: tariffs -= 1; budget -= 2; inflation -= 0.5; workers_ddp += 2*bourgeois_power; workers_dvp += 2*bourgeois_power; rural_dvp -= 5; old_middle_dvp -= 3; west_relation += 1; east_relation += 1; eu_progress += 1 if eu_progress > 0; economic_growth += 0.4; socialism -= 2
 subtitle: The bourgeoisie cut tariffs 
 
-The government cuts tariffs, lowering prices for consumers by increasing supply. This benefits industry and the urban poor, but hurts small producers producing goods aimed at the domestic market.
+政府降低关税,通过增加供给压低消费者价格。这有利于工业与城市贫民,却伤害了面向国内市场生产商品的小生产者。
 
 @tariff_hikes
 frequency: 50
@@ -136,9 +136,9 @@ view-if: inflation < 3 and (budget < 2 or in_right_coalition or rural_spd_normal
 on-arrival: gov_tension += 1 if budget >= 2; tariffs += 1; inflation += 1 if inflation > 0; inflation += 0.5 if inflation <= 0; unemployed += 1.5; budget += 2; workers_dvp -= 3; workers_ddp -= 2 if not in_right_coalition; workers_dnvp -= 2 if in_right_coalition; workers_z -= 2; unemployed_z -= 2; rural_dvp += 4*bourgeois_power; old_middle_dvp += 3*bourgeois_power; rural_ddp += 2*bourgeois_power if not in_right_coalition; rural_dnvp += 4*bourgeois_power if in_right_coalition; rural_spd -= 4*bourgeois_power if rural_spd_normalized >= 20; west_relation -= 1; east_relation -= 1; reparations_negotiation -= 2; eu_progress -= 1 if eu_progress > 0; economic_growth -= 0.4; socialism += 2
 subtitle: The bourgeoisie hike tariffs 
 
-The government increases tariff rates, increasing inflation and hurting consumption among the working class. Retaliatory tariffs reduce the competitiveness of German exports, raising unemployment among workers. They also lead to an atmosphere of international suspicion, reducing our ability to negotiate with other countries.
+政府提高关税税率,推高通货膨胀,损害工人阶级的消费。报复性关税削弱德国出口的竞争力,推高工人失业。它们还会造成国际猜忌的气氛,削弱我们与他国谈判的能力。
 
-On the other hand, agricultural producers and some small businesses benefit from higher tariffs, as farmers can now command higher prices for grain, and formerly uncompetitive businesses are now able to function.
+另一方面,农业生产者与部分小企业则从高关税中受益 —— 农民如今能以更高价格出售粮食,原先缺乏竞争力的企业也能继续经营。
 
 - @break_toleration
 - @tolerate
@@ -149,7 +149,7 @@ view-if: not in_right_coalition and (west_relation < 5 or east_relation < 4)
 on-arrival: west_relation += 1; east_relation += 1
 subtitle: The bourgeoisie engage with their international counterparts
 
-The government has entered into negotiations with Germany's neighbors, seeking to improve relations for peace in Europe.
+政府已与德国的邻邦展开谈判,寻求改善关系,以促进欧洲和平。
 
 @diplomacy2
 frequency: 200
@@ -157,7 +157,7 @@ view-if: in_right_coalition
 on-arrival: soviet_relation += 1; reichswehr_militancy += 0.05; gov_tension += 1 if soviet_relation > west_relation
 subtitle: The bourgeoisie engage in dialogue with the Soviets
 
-The government has entered into negotiations with the Soviet Union, seeking to further the goal of rearmament and foster a broader anti-Versailles bloc despite ideological divergences.
+政府已与苏联展开谈判,旨在推进重整军备的目标,并促成更广泛的反凡尔赛阵营 —— 尽管双方存在意识形态分歧。
 
 @eu_talks
 frequency: 200
@@ -166,11 +166,11 @@ on-arrival: eu_progress += 1; west_relation += 1
 go-to: success if west_relation >= 5 and east_relation >= 4 and eu_progress >= 2
 subtitle: The bourgeoisie discuss a combined continental market
 
-The government is pursuing talks to explore the creation of a European Union. 
+政府正推动会谈,探讨建立欧洲联盟。
 
 @success
 
-Surprisingly, the talks are a success! A treaty has been signed to form a European Union with France, Great Britain and many other states of Western and Eastern Europe. The treaty is now to be ratified.
+出人意料,会谈成功了!已签署一项条约,与法国、英国以及东西欧众多其他国家共同组建欧洲联盟。该条约如今有待批准。
 
 - @vote_eu: We support the EU, of course.
 - @oppose_eu: We oppose the EU!
@@ -185,16 +185,16 @@ view-if: not spd_toleration
 on-arrival: eu = 1; bourgeois_power += 0.05; unemployed -= 2 if unemployed >= 10; inflation += 2 if inflation <= -2; inflation -= 1 if inflation >= 4.5; workers_ddp += 5*bourgeois_power; new_middle_ddp += 5*bourgeois_power; old_middle_ddp += 3*bourgeois_power; old_middle_dvp += 3*bourgeois_power; rural_dvp += 4*bourgeois_power; catholics_z += 4*bourgeois_power; pro_republic += 5; nationalism -= 5; budget += 1; economic_growth += 1; economic_growth += 1 if economic_growth < 3
 achievement: eu
 
-The treaty has been ratified, and a major policy proposal of the government completed. A major component of the union is the free movement of people and goods across the countries of Europe, as well as the stabilization of currency exchange rates. This provides new markets for German products and new sources of investment.
+条约已获批准,政府的一项重大政策提案就此完成。这个联盟的一个主要组成部分,是欧洲各国之间人员与货物的自由流动,以及货币汇率的稳定。这为德国产品提供了新市场,也带来了新的投资来源。
 
-Fascist Italy remains a problem, and the Soviet Union also lies outside the system. But for now, there is new hope for peace and prosperity throughout the continent.
+法西斯意大利仍是个问题,苏联也处在这一体系之外。但就目前而言,整个大陆的和平与繁荣有了新的希望。
 
 @oppose_eu
 view-if: spd_toleration and left_strength >= 55
 on-arrival: workers_spd -= 3*bourgeois_power; new_middle_spd -= 5*bourgeois_power; old_middle_spd -= 5*bourgeois_power; rural_spd -= 4*bourgeois_power; eu_progress = 0; west_relation -= 1; east_relation -= 1; z_relation -= 8; ddp_relation -= 10; dvp_relation -= 10; kpd_relation += 7
 go-to: break_toleration
 
-By voting against, we have prevented the European Union from being formed, but opened ourselves up to a choral of slander from the bourgeois parties. The government has resigned.
+通过投反对票,我们阻止了欧洲联盟的成立,却也招来了资产阶级政党异口同声的诋毁。政府随之辞职。
 
 @concordat
 frequency: 100
@@ -203,11 +203,11 @@ on-arrival: reichskonkordat_progress += 2; gov_tension += 1;
 go-to: concordat_signed if reichskonkordat_progress >= 4 and gov_tension < 2
 subtitle: The Center seeks a Concordat
 
-The government is negotiating to sign a Concordat with the Vatican. The liberal and Protestant parties are reluctant to support this, straining the government.
+政府正谈判与梵蒂冈签署一份政教协定。自由派与新教政党不愿支持此举,使政府关系紧张。
 
 @concordat_signed
 
-The government has signed a Concordat with the Vatican! All that remains to see is its ratification.
+政府已与梵蒂冈签署政教协定!余下的就看它能否获得批准。
 
 - @vote_concordat: We support the Reichskonkordat.
 - @oppose_concordat: We oppose the Reichskonkordat.
@@ -222,14 +222,14 @@ view-if: not spd_toleration
 on-arrival: reichskonkordat = 1; catholics_z += 10; catholics_spd -= 5 if catholics_spd_normalized >= 15; gov_tension += 1
 achievement: reichskonkordat
 
-The Concordat between Germany and the Roman Catholic Church has been ratified! This treaty defines a formal relationship between the Church and the German state, guaranteeing freedom of worship for Catholics, and the right of the church to appoint their own clergy. Catholics in Germany are pleased, as are their representatives in the Center Party.
+德国与罗马天主教会之间的政教协定已获批准!这一条约界定了教会与德国国家之间的正式关系,保障天主教徒的信仰自由,以及教会自行任命神职人员的权利。德国的天主教徒感到满意,他们在中央党中的代表亦然。
 
 @oppose_concordat
 view-if: spd_toleration and ((z_relation+reformist_strength) < 100)
 on-arrival: catholics_spd = 0; reichskonkordat_progress -= 1; z_relation -= 20
 go-to: break_toleration
 
-By voting against, we have prevented the Reichskonkordat from being signed, but mobilized Catholics and their representatives against us. The Center Party has resigned from government, collapsing it.
+通过投反对票,我们阻止了国家政教协定的签署,却也使天主教徒及其代表站到了我们的对立面。中央党退出政府,政府随之垮台。
 
 @employers
 frequency: 100
@@ -237,7 +237,7 @@ view-if: bourgeois_power < 0.9 or capital_strike_progress >= 3
 subtitle: The bourgeoisie suppress labor in favor of capital
 on-arrival: gov_tension += 1 if z_party_leader == "Joos"; bourgeois_power += 0.02; workers_z -= 3; workers_ddp -= 3 if not in_right_coalition; workers_dnvp -= 3 if in_right_coalition; workers_dvp -= 3; workers_kpd += 2; workers_kpd += 1 if sapd_consolidated != 1; workers_sapd += 1 if sapd_consolidated == 1; capital_strike_progress -= 1 if capital_strike_progress > 1; capital_strike_progress -= 1 if capital_strike_progress > 8; socialism += 2
 
-The suppression of the strikes dampens the appeal of the bourgeoisie amongst the workers, but strengthens and serves their financial backers well. We will have to agitate against this.
+对罢工的镇压削弱了资产阶级在工人中的号召力,却很好地增强并服务于他们的金主。我们必须针对这一点展开鼓动。
 
 - @break_toleration
 - @tolerate
@@ -251,7 +251,7 @@ choose-if: resources >= 1
 unavailable-subtitle: -1 资源 - We can't afford this.
 on-arrival: resources -= 1; workers_spd += 4*(1-dissent); labor_dissent -= 5; labor_strength += 5; unemployed_spd += 4*(1-dissent); workers_z -= 2; 
 
-We provide financial support to the ongoing strikes against the government, intensifying the class conflict that they have initiated and strengthening our relationship with the government.
+我们为针对政府的持续罢工提供财政支持,加剧了他们所挑起的阶级冲突,并加强了与政府的关系。
 
 @rally_
 view-if: not spd_toleration
@@ -263,7 +263,7 @@ view-if: (((workers_spd_normalized+workers_kpd_normalized+workers_sapd_normalize
 subtitle: The bourgeoisie attempt to foster a class peace
 on-arrival: workers_spd -= workers_spd*(0.1-(0.1*(socialism/100)))*bourgeois_power; workers_ddp += 3*bourgeois_power if not in_right_coalition; workers_dnvp += 3*bourgeois_power if in_right_coalition; workers_z += 2*bourgeois_power; workers_dvp += 2*bourgeois_power; gov_tension += 1 if (bourgeois_power < 1 or capital_strike_progress > 0)
 
-The government has addressed the strikes by attempting to compromise between the classes, moderately estranging their industrialist supporters. However, while the compromises are quite insufficient in addressing the concerns of organized labor, they still represent clear overtures, bolstering their attempts to break the socialist hold on the working class moderately.
+政府通过试图在阶级之间折中来应对罢工,这在一定程度上疏远了他们的工业家支持者。然而,尽管这些折中在回应有组织劳工的关切上远远不够,它们仍代表着明确的示好姿态,在一定程度上增强了他们打破社会主义对工人阶级掌控的企图。
 
 @rearmament
 frequency: 100
@@ -271,7 +271,7 @@ view-if: (in_right_coalition and budget > 1) or (budget > 2 and (reichswehr_stre
 subtitle: The bourgeoisie seek to rearm Germany
 on-arrival: budget -= 1; reichswehr_strength += 10 if reichswehr_strength <= 90; reichswehr_militancy += 1; economic_growth += 0.1; west_relation -= 1; east_relation -= 1; gov_tension += 1 if eu_progress; eu_progress -= 1
 
-The government has commenced a rearmament program, seeking to bolster the strength of the Reichswehr. What will come of this program is unclear, but our neighbors look on wearily.
+政府已启动一项重整军备的计划,试图增强国防军的实力。这项计划将带来什么后果尚不清楚,但我们的邻邦正忧心忡忡地注视着。
 
 - @break_toleration
 - @tolerate
@@ -282,7 +282,7 @@ view-if: (in_right_coalition and judicial_reform > 0) or (judicial_reform > 3)
 on-arrival: gov_tension += 1 if judicial_reform < 3; judicial_reform -= 1; nationalism += 3 if judicial_reform < 2; pro_republic -= 3 if judicial_reform < 3
 subtitle: The bourgeoisie seek to undo our judicial reforms
 
-The government has begun a program of minor judicial reforms which overturn and reverse ours. They claim our attempts sought to politicize the judiciary, and that many of the judges we removed were more experienced than their young and brash republican replacements.
+政府已启动一项小幅司法改革,推翻、逆转了我们的做法。他们声称我们的尝试意在把司法政治化,还说我们清除的许多法官,比他们那些年轻而莽撞的共和派接任者更有经验。
 
 - @break_toleration
 - @tolerate
@@ -293,7 +293,7 @@ frequency: 100
 on-arrival: interior_police_loyalty -= 0.05; interior_police_loyalty -= (nationalism/1000); gov_tension += 1 if interior_police_loyalty < 0.55; gov_tension += 1 if interior_police_loyalty < 0.35
 subtitle: The reactionaries strike at the police force
 
-The government has begun a program of reversive interior reforms, with the DNVP attempting to derepublicanize the police forces and embed in them loyalty to German nationalism, against socialism. We will have to reverse these policies when we take power.
+政府已启动一项逆转性的内政改革,国家人民党试图使警察部队去共和化,并向其中注入对德国民族主义、而非社会主义的忠诚。我们掌权后必须扭转这些政策。
 
 @military_regression
 view-if: (in_right_coalition and reichswehr_loyalty > 0.25) or military_reforms
@@ -301,7 +301,7 @@ frequency: 150
 on-arrival: military_reforms -= 1 if military_reforms; reichswehr_loyalty -= 0.05; coup_progress -= 1; reichswehr_militancy += 0.25 if military_reforms and reichswehr_militancy < 5; sh_militancy -= 0.025
 subtitle: The government undoes our military reforms
 
-The government has begun a program of [? if military_reforms : reinstating removed reactionary officers and ?] removing republican officers, on the basis of experience; claiming that the reactionaries of the old generation are simply better commanders more fitted to lead. 
+政府已启动一项计划:[? if military_reforms : 让被清除的反动军官复职,并 ?]以资历为由清除共和派军官;他们声称旧一代的反动分子不过是更优秀的指挥官,更适合领军。
 
 - @break_toleration
 - @tolerate
@@ -316,7 +316,7 @@ go-to: works_councils_0 if works_councils == 0; works_councils_1 if works_counci
 @works_councils_0
 on-arrival: bourgeois_power += 0.01; socialism -= 1
 
-The works councils have been restored to a vestigial and powerless role, removed from management decisions by the governing coalition.
+工厂委员会被恢复成一种退化而无权的角色,执政联盟将其排除在管理决策之外。
 
 - @break_toleration
 - @tolerate
@@ -324,7 +324,7 @@ The works councils have been restored to a vestigial and powerless role, removed
 @works_councils_1
 on-arrival: bourgeois_power += 0.02; socialism -= 2; economic_growth -= 0.1 if economic_growth >= 3
 
-National and sectorial workers councils have been part of the Weimar Constitution, but they were disempowered in the past, acting as nothing more than advisory bodies. Now, they have been disempowered again.
+全国性与行业性工人委员会本是魏玛宪法的一部分,但过去被剥夺了权力,沦为纯粹的咨询机构。如今,它们再次被剥夺了权力。
 
 - @break_toleration
 - @tolerate
@@ -332,7 +332,7 @@ National and sectorial workers councils have been part of the Weimar Constitutio
 @works_councils_2
 on-arrival: bourgeois_power += 0.03; socialism -= 3; unemployed += 2 if unemployed < 5; workers -= 2; economic_growth -= 0.1 if economic_growth >= 3
 
-Sectorial works councils can no longer negotiate wage and price policies for entire economic sectors, greatly disempowering the workers in favor of capital.
+行业性工厂委员会不再能就整个经济部门的工资与价格政策进行谈判,这极大地削弱了工人、有利了资本。
 
 - @break_toleration
 - @tolerate
@@ -340,7 +340,7 @@ Sectorial works councils can no longer negotiate wage and price policies for ent
 @works_councils_3
 on-arrival: bourgeois_power += 0.05; economic_growth -= 0.3; unemployed += 1; inflation += 0.5 if inflation < 3
 
-The special privileges granted to works councils by the integration of the soviets into them are repealed, returning them to their previous status and ending the pseudo-corporatist economic model in Germany.
+把苏维埃并入工厂委员会所赋予它们的特殊权利被废除,它们回归到先前的地位,德国那种伪统合主义的经济模式也就此终结。
 
 @privatizations
 view-if: nationalization_progress > 0 and ((not (president == "Braun" or president == "Schumacher" or president == "Juchacz" or president == "Thälmann" or president == "Münzenberg")) or (in_bourgeois_coalition or in_right_coalition))
@@ -348,7 +348,7 @@ on-arrival: socialism -= 1; nationalization_progress -= 1; capital_strike_progre
 frequency: 500
 subtitle: The bourgeoisie reassert their economic primacy
 
-The government has enacted a program of privatizations, reversing our own nationalization programs in the name of the free market. 
+政府推行了一项私有化计划,以自由市场之名逆转了我们自己的国有化计划。
 
 - @break_toleration
 - @tolerate
@@ -357,17 +357,17 @@ The government has enacted a program of privatizations, reversing our own nation
 @fight
 view-if: factory_takeovers
 choose-if: (rb_militancy*(left_strength/100)) >= 0.1
-unavailable-subtitle: The Reichsbanner isn't sufficiently militant.
+unavailable-subtitle: 国旗团的军事化程度不够。
 on-arrival: reformist_dissent += 5
 
-Are we sure? This would mean obstruction of justice, at least in the eyes of the bourgeoisie and their courts. Even considering this option infuriates our reformist wing.
+你确定吗?这至少按资产阶级及其法院的看法,意味着妨碍司法。单是考虑这个选项,就已激怒了我们的改良派。
 
 - @fight_2: Yes, fight.
 - @no: [? if fun_value != 42 : No. ?][? if fun_value == 42 : *Peace-lovin' man, I'm a peace-lovin' man and I'll do what I can yes I do, and I've got my eye on the sly little man who is putting the finger on you, and when things ain't right, I don't wanna fight, I'd rather go and sit in the ra-ain, peace-lovin' man I'm a peace-lovin' man and I won't - tell - you - a-gain!* ?]
 
 @no
 
-Okay.
+好吧。
 
 - @break_toleration
 - @tolerate
@@ -381,16 +381,16 @@ go-to: fight_2_win if striker_power >= scab_power; fight_2_loss if striker_power
 on-arrival: socialism += 2; pro_republic -= 5; capital_strike_progress += 5; strife += 2; sa_militancy += 0.05; coup_progress += 3; time_to_election = 2
 call: set_next_election_time
 
-We deploy the armed contingents of the Reichsbanner and other workers' forces to defend the occupied factories by force and prevent the restoration of private control over them. 
+我们部署国旗团及其他工人力量的武装队伍,以武力保卫被占领的工厂,阻止私人重新掌控它们。
 
-In disgrace, [+ chancellor +] has resigned, and [+ president +] has called new elections, set for [+ next_election_month : month +] [+ next_election_year +].
+[+ chancellor +] 蒙羞辞职,[+ president +] 宣布举行新的选举,定于 [+ next_election_month : month +] [+ next_election_year +]。
 
 ## todo: if the government is still non-fascist when this happens this should really make basically anyone appoint hitler or declare martial law or something
 
 @fight_2_loss
 on-arrival: socialism -= 3; rb_militancy -= 0.05; workers_kpd += 5; unemployed_kpd += 5; workers_spd -= 10; unemployed_spd -= 10; rb_did_illegal_stuff = 1
 
-We deploy the armed contingents of the Reichsbanner and other workers' forces to defend the occupied factories from the government, but they are quashed. Our mythopoetic struggle comes to a woeful end.
+我们部署国旗团及其他工人力量的武装队伍,抵御政府保卫被占领的工厂,但他们被镇压了。我们那神话式的斗争以一种悲惨的方式告终。
 
 ## todo: reichsbanner ban lol
 
@@ -400,7 +400,7 @@ frequency: 10000
 on-arrival: price_controls = 0; black_market = 0; capital_strike_progress -= 3; inflation += 3; unemployed -= 1; old_middle_dvp += 4; new_middle_dvp += 3; rural_dvp += 5; workers_dvp += 2; rural_ddp += 2 if not in_right_coalition; rural_dnvp += 4 if in_right_coalition; unemployed_spd += 3; economic_growth += 0.4
 subtitle: The bourgeoisie lift price and wage controls
 
-The government has lifted the price and wage controls that we implemented, leading to a steep rise in inflation as the economy readjusts, although the decision is relatively popular for now, at least divorced from its potential consequences.
+政府取消了我们所实施的物价与工资管制,随着经济重新调整,通货膨胀急剧上升 —— 尽管至少脱离其潜在后果来看,这一决定目前在民众中相对受欢迎。
 
 - @break_toleration
 - @tolerate
@@ -411,7 +411,7 @@ frequency: 1000000
 subtitle: The bourgeoisie restores its control over the narrative
 on-arrival: socialized_media = 0; economic_growth += 3*bourgeois_power; unemployed -= 2*bourgeois_power; inflation -= 1*bourgeois_power; bourgeois_power += 0.1; coup_progress -= 5; socialism -= 5; socialism -= 8 if state_media; workers_spd -= 6 if state_media; unemployed_spd -= 6 if state_media; new_middle_spd -= 6 if state_media; old_middle_spd -= 6 if state_media; rural_spd -= 5 if state_media; state_media = 0
 
-The government has restored private control over the media, championing the freedom of the press as it hands printing presses and newspapers back over to private control.
+政府恢复了私人对媒体的控制,在把印刷厂与报纸交还给私人掌控的同时,高唱新闻自由。
 
 - @break_toleration
 - @tolerate
@@ -422,7 +422,7 @@ frequency: 10000000
 subtitle: The bourgeoisie restores its influence on politics
 on-arrival: financing_banned = 0; economic_growth += 1*bourgeois_power; unemployed += 0.7*bourgeois_power; inflation += 0.5*bourgeois_power; bourgeois_power += 0.05; coup_progress -= 3; socialism -= 5
 
-The government has lifted the ban on private party financing, relegalizing it completely. This is paired with a general campaign by their parties to recoup support, and attack socialism.
+政府取消了对私人政党融资的禁令,将其彻底重新合法化。与此相伴的,是各党为挽回支持、攻击社会主义而开展的全面宣传。
 
 - @break_toleration
 - @tolerate
@@ -433,7 +433,7 @@ frequency: 100
 subtitle: The bourgeoisie suppress the Reichsbanner
 on-arrival: rb_militancy -= 0.05*(1-interior_police_loyalty); rb_militancy -= 0.05*(1-interior_police_loyalty) if in_right_coalition; gov_tension += 1 if not rb_exit; left_strength += 5; neorevisionist_strength -= 5
 
-The government has enacted wide-ranged suppressions of the Reichsbanner, confiscating guns and military equipment. The left proclaims vindication.
+政府对国旗团实施了广泛的镇压,没收枪支与军事装备。左翼宣称自己此前的担忧得到了印证。
 
 - @break_toleration
 - @tolerate
@@ -444,7 +444,7 @@ on-arrival: kpd_relation += 3 if not spd_toleration; workers_kpd -= 4*(1-interio
 frequency: 200
 subtitle: The bourgeoisie suppresses the communists [? if in_right_coalition : and Marxists in a broader sense ?]
 
-The government has enacted wide-ranged suppressions of the communists and their affiliated organizations, with the effects of this suppression bleeding into broader Marxist associations as well.
+政府对共产党人及其附属组织实施了广泛的镇压,其影响也波及更广泛的马克思主义团体。
 
 - @break_toleration
 - @tolerate
@@ -455,7 +455,7 @@ frequency: 1000
 on-arrival: bourgeois_power += 0.05; budget += 2; state_buyer = 0; rural_spd -= 2*dissent; inflation += 0.5 if inflation < 3; rural_nsdap += 3*dissent; rural_dvp -= 3; rural_dnvp -= 6 if in_right_coalition; rural_dvp -= 6 if not in_right_coalition; capital_strike_progress -= 1; economic_growth -= 0.4; socialism += 2; old_middle_dvp += 5*bourgeois_power; new_middle_dvp += 5*bourgeois_power
 subtitle: The bourgeoisie remove the state monopoly on grain purchases
 
-The repeal of the state buyer program restores free market dominance in the distribution of food, increasing prices for consumers and threatening farmers with instability. Despite this, the capitalist presses frame this as a landmark repeal of a horrible policy, and the urban middle classes are motivated into feeling the same.
+国家收购计划的废除恢复了自由市场在粮食分配中的主导地位,推高了消费者价格,也以动荡威胁着农民。尽管如此,资本主义的报界仍把这描绘成对一项可怕政策的里程碑式废除,城市的中间阶层也被鼓动着产生同样的感觉。
 
 - @break_toleration
 - @tolerate
@@ -467,7 +467,7 @@ on-arrival: gov_tension += 1 if not in_right_coalition
 subtitle: Traditionalists pursue a return to "traditional" German values
 max-choices: 1
 
-The government has decided to pursue a return to traditional German values by repealing landmark progressive reforms we have enacted.
+政府决定通过废除我们所推行的标志性进步改革,来复归传统的德国价值观。
 
 - @repeal_175: Reinstate Paragraph 175.
 - @reform_183: Reinstate an unmodified Paragraph 183.
@@ -482,7 +482,7 @@ subtitle: Paid maternal leave policies, equal pay policies, and so on.
 view-if: womens_work
 on-arrival: womens_work -= 1; womens_rights -= 1; new_middle_ddp -= 4 if not in_right_coalition; economic_growth -= 0.1;
 
-The government has repealed the policies which help women in the workplace, under the antiquated idea that women should focus on the family.
+政府废除了有助于职场女性的政策,其依据是一种陈腐的观念:女性应当专注于家庭。
 
 - @break_toleration
 - @tolerate
@@ -492,7 +492,7 @@ subtitle: Change family and inheritance law to treat women more unfairly.
 view-if: family_law
 on-arrival: family_law -= 1; womens_rights -= 1; new_middle_ddp -= 2 if not in_right_coalition; workers_ddp -= 3 if not in_right_coalition; old_middle_dvp += 4; rural_dvp += 4; rural_dnvp += 4 if in_right_coalition; catholics_z += 6
 
-These policies aimed to ensure that women had equal rights within a marriage, including the right to divorce. The more conservative segments of society treat our reforms as deleterious to the social fabric, and, now in government, have undone them.
+这些政策旨在确保女性在婚姻中享有平等权利,包括离婚权。社会中较为保守的群体把我们的改革视为对社会肌体的败坏,如今他们入主政府,便把这些改革推翻了。
 
 - @break_toleration
 - @tolerate
@@ -502,7 +502,7 @@ subtitle: +1 budget
 view-if: womens_welfare
 on-arrival: welfare -= 1; womens_welfare -= 1; workers_dvp -= 3; workers_ddp -= 3 if not in_right_coalition; unemployed_spd += 4*(1-dissent); budget += 1; womens_rights -= 1; unemployed += 0.4; inflation -= 0.2; economic_growth -= 0.3;
 
-The government has cut welfare spending for women. This hurts single families, especially of working women.
+政府削减了对女性的福利开支。这伤害了单亲家庭,尤其是劳动女性的家庭。
 
 - @break_toleration
 - @tolerate
@@ -512,7 +512,7 @@ view-if: abortion_rights
 frequency: 10000
 on-arrival: abortion_rights -= 1; womens_rights -= 1; catholics_z += 10; workers_z += 3; new_middle_z += 3; old_middle_z += 3; old_middle_dnvp += 3; rural_dnvp += 3; workers_nsdap -= 3; new_middle_nsdap -= 3; old_middle_nsdap -= 2; rural_nsdap -= 2; unemployed_nsdap -= 2; unemployed_z += 3
 
-Backed by the conservatives, the government has once again restricted abortion in Germany. This has disheartened our more progressive supporters. With the increasing political discourse around abortion, the religiously-oriented Center Party and DNVP have gained conservative votes at the expense of the NSDAP.
+在保守派的支持下,政府再次限制德国的堕胎。这使我们较为进步的支持者气馁。随着围绕堕胎的政治讨论日益升温,宗教取向的中央党与国家人民党以牺牲纳粹党为代价,赢得了保守派选票。
 
 - @break_toleration
 - @tolerate
@@ -522,7 +522,7 @@ subtitle: Paragraph 175 once criminalized homosexual acts. Though we repealed it
 view-if: repealed_175
 on-arrival: repealed_175 = 0; homosexual_rights -= 1; catholics_z += 4; economic_growth -= 0.1;
 
-Together with the DNVP, the Center Party has passed a law to reinstate Paragraph 175. Persecution of homosexuals for their private acts will continue, despite our best attempts to stop it.
+中央党与国家人民党一道,通过法律恢复了第 175 条。尽管我们尽最大努力加以阻止,对同性恋者私下行为的迫害仍将继续。
 
 - @break_toleration
 - @tolerate
@@ -532,7 +532,7 @@ subtitle: Paragraph 183 once criminalized public homosexual displays and cross-d
 view-if: reformed_183
 on-arrival: reformed_183 = 0; homosexual_rights -= 1; catholics_z += 4; economic_growth -= 0.1;
 
-Voting together with the conservatives in the DVP and DNVP, the Center Party has reformed Paragraph 183 so that it once more criminalizes public homosexuality and cross-dressing.
+中央党与人民党、国家人民党中的保守派共同投票,修订了第 183 条,使其再次将公开的同性恋行为与异装定为犯罪。
 
 - @break_toleration
 - @tolerate
@@ -543,9 +543,9 @@ view-if: trans_rights
 on-arrival: trans_rights = 0; homosexual_rights -= 1; catholics_z += 4; economic_growth -= 0.1;
 frequency: 1000
 
-We had passed a bill to allow legal recognition of transsexual and transvestite individuals as the sex in which they live, and allow them to change their name, dress as they wish without police persecution, and undergo medical treatment.
+我们曾通过一项法案,允许在法律上承认跨性别者与异装者以其实际生活的性别为准,允许他们改名、按自己意愿着装而不受警察迫害,并接受医疗诊治。
 
-Now, the government has repealed this bill, returning transsexual and transvestite individuals to persecution.
+如今,政府废除了这项法案,使跨性别者与异装者重新陷于迫害之中。
 
 - @break_toleration
 - @tolerate
@@ -556,7 +556,7 @@ frequency: 150
 view-if: budget > 2 and (rural_spd_normalized >= (rural_dvp_normalized+rural_other_normalized+rural_z_normalized+rural_ddp_normalized)) or (in_right_coalition and (rural_dnvp_normalized < (rural_spd_normalized+rural_other_normalized+rural_nsdap_normalized)))
 on-arrival: budget -= 1; agricultural_finance += 1; rural_spd -= 5*bourgeois_power; rural_nsdap -= 3*bourgeois_power; rural_dvp += 5*bourgeois_power; rural_dvp += 3*bourgeois_power if not in_right_coalition; rural_dnvp += 6*bourgeois_power if in_right_coalition; rural_sol += 4; economic_growth += 0.2;
 
-The government has increased financial support for small farmers, providing access to credit and insurance, saving them from privation.
+政府增加了对小农的财政支持,为他们提供信贷与保险,使他们免于贫困。
 
 @break_toleration
 title: We will end our toleration agreement.
@@ -565,7 +565,7 @@ on-arrival: spd_toleration = 0; time_to_election = 3; z_relation -= 3; ddp_relat
 call: set_next_election_time
 view-if: spd_toleration
 
-We have broken off our toleration agreement, forcing new elections set for [+ next_election_month : month +] [+ next_election_year +].
+我们中止了容忍协议,迫使新的选举定于 [+ next_election_month : month +] [+ next_election_year +] 举行。
 
 @tolerate
 title: We have no choice but to tolerate these actions.
@@ -573,7 +573,7 @@ subtitle: This will upset our base.
 on-arrival: left_dissent += 10; labor_dissent += 5; workers_spd -= 5; unemployed_spd -= 5; new_middle_spd -= 3; socialism -= 2
 view-if: spd_toleration
 
-Our toleration of the government is unpopular throughot the party, and dampens enthusiasm.
+我们对政府的容忍在党内不受欢迎,也打击了热情。
 
 @collapse
 view-if: gov_tension >= 3
@@ -582,7 +582,7 @@ on-arrival: time_to_election = 4; ddp_relation += 5 if not in_right_coalition; z
 call: set_next_election_time
 subtitle: The government has fallen to its internal disagreements
 
-The fall of the government has led to snap elections, set for [+ next_election_month : month +] [+ next_election_year +].
+政府垮台导致了提前选举,定于 [+ next_election_month : month +] [+ next_election_year +]。
 
 
 
