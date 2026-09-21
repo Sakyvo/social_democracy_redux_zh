@@ -1,4 +1,4 @@
-title: Article 48
+title: 第 48 条
 view-if: chancellor_party == "SPD" and not presidential_powers and article_48_timer <= 8
 new-page: true
 tags: pres_affairs
@@ -6,29 +6,29 @@ is-card: true
 card-image: img/Weimar_Constitution.jpg
 on-departure: article_48_timer += 12
 
-= Article 48
+= 第 48 条
 
-Through the support of the offices of not just the president but also the chancellor, we may sign through wide-ranging decrees to bypass the Reichstag should need be, though the Reichstag still can repeal these decrees by a simple majority.
+凭借总统乃至总理两方职权的支持,必要时我们可以签署涵盖广泛的法令来绕过国会 —— 尽管国会仍能以简单多数废除这些法令。
 
-[? if return_to_normalcy : Given the general feeling that the crisis period has passed, there is opposition to the idea of wielding emergency powers, due to worries that it would set a bad precedent. ?]
+[? if return_to_normalcy : 由于普遍认为危机时期已经过去,动用紧急权力的想法遭到反对,人们担心这会开一个恶劣的先例。 ?]
 
-- @wield_decrees: Yes, let's use the powers of Article 48.
-- @root: No, we have no need for rule by decree.
+- @wield_decrees: 好,我们就动用第 48 条赋予的权力。
+- @root: 不,我们不需要靠法令统治。
 - @easy_discard
 
 @wield_decrees
 choose-if: judicial_reform >= 3 and ((neorevisionist_strength+left_strength+unemployed >= 50) or in_emergency_government)
-unavailable-subtitle: [? if judicial_reform < 3 : The reactionary judiciary would strike them down as unconstitutional. ?][? if neorevisionist_strength+left_strength+unemployed < 50 : The party views these decrees as unecessary. ?]
+unavailable-subtitle: [? if judicial_reform < 3 : 反动的司法界会以违宪为由将其推翻。 ?][? if neorevisionist_strength+left_strength+unemployed < 50 : 党内认为这些法令并无必要。 ?]
 on-arrival: reenable_legislature = 1 if legislature_enabled and (in_emergency_government or spd_caretaker); legislature_enabled = 0 if reenable_legislature; coup_progress += 2; capital_strike_progress += 1; z_relation -= 5; ddp_relation -= 5; dvp_relation -= 5; coup_progress += article_48_timer/2; z_relation -= article_48_timer; ddp_relation -= article_48_timer; dvp_relation -= article_48_timer
 
-Through Article 48, we can modify much more than we might be able to otherwise. [? if not spd_caretaker and not in_emergency_government : However, as long as the Reichstag is in session, it will still be able to obstruct us. Should we dissolve the Reichstag? ?]
+凭借第 48 条,我们能改动的东西远多于按常规所能做的。 [? if not spd_caretaker and not in_emergency_government : 然而,只要国会仍在开会,它仍能阻挠我们。我们是否应当解散国会? ?]
 
-- @dissolve_reichstag: Dissolve the Reichstag for new elections so that we may rule by decree.
+- @dissolve_reichstag: 解散国会、举行新的选举,以便我们靠法令统治。
 - #govt_affairs
 
 @dissolve_reichstag
 view-if: not spd_caretaker and not in_emergency_government
-subtitle: This would provoke quite the response!
+subtitle: 这会激起相当强烈的反应!
 on-arrival: reenable_legislature = 1 if legislature_enabled; legislature_enabled = 0 if legislature_enabled; time_to_election = 3; in_emergency_government = 1; coup_progress += 1; z_relation -= 5 if in_grand_coalition or in_popular_front or in_weimar_coalition; dvp_relation -= 5 if in_grand_coalition; kpd_relation -= 5 if in_left_front or in_popular_front; ddp_relation -= 5 if in_grand_coalition or in_popular_front or in_weimar_coalition; in_weimar_coalition = 0; in_grand_coalition = 0; in_popular_front = 0; in_left_front = 0
 call: set_next_election_time
 

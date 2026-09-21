@@ -1,4 +1,4 @@
-title: Military Relations
+title: 军方关系
 view-if: military_relations_timer <= 0 and not victory_republic
 new-page: true
 tags: pres_affairs
@@ -6,91 +6,91 @@ is-card: true
 card-image: img/schleicher.jpeg
 on-departure: military_relations_timer += 5
 
-= Military Relations
+= 军方关系
 
-The office of presidency is by precedent and nature closely intertwined with the Reichswehr, with the Ebert-Groener pact of 1918 and 1919, whereby the army would support the government of Ebert in return for retaining its status as a state within a state and in return for the suppression of communist movements, setting the tone of military matters since and creating an unfortunate atmosphere of scheming. 
+总统这一职位,依先例与本性都与国防军紧密纠缠在一起,这源于 1918 与 1919 年的艾伯特—格勒纳协定:军队支持艾伯特政府,以换取保留其「国中之国」的地位,并换取对共产主义运动的镇压。它为此后军务定下了基调,也造成了一种不幸的阴谋气氛。
 
-[? if former_president == "Hindenburg" : Hindenburg took this much further, developing a camarilla of military men around him that gradually influenced his decisions more and more as time went by, and irrevocably intertwining presidential and military matters with this precedent. ?][? if former_president == "Marx" : This relationship continued under Marx, who was forced to balance not just his civilian duties as president but military ones as well to prevent a coup and remain on good terms with the army. ?]
+[? if former_president == "Hindenburg" : 兴登堡将这一做法推得更远,在身边培植了一个军人小圈子,随着时间推移,这些人对他的决定影响日深,并把总统事务与军务以这一先例不可逆转地缠结在一起。 ?][? if former_president == "Marx" : 这一关系在马克思任内延续了下来。他不仅被迫履行总统的民事职责,还不得不兼顾军务,以防止政变并维持与军队的良好关系。 ?]
 
-Relations with the Military: [+ army_relation : relationships +]
+与军方的关系: [+ army_relation : relationships +]
 
 #- @camarilla: Interfere in the internal politics of the army.
-- @allow_rearmament: Allow secret reamament.
-- @surrender_reichswehr: Sack Leber from the Reichswehr Ministry.
+- @allow_rearmament: 允许秘密重整军备。
+- @surrender_reichswehr: 将勒贝尔从国防部免职。
 #- @sack_breitscheid: Sack Breitscheid as chancellor.
-- @unban_sh: Unban the Stalhelm.
-- @ban_rfb: Ban the RFB.
-- @reichsexekute_kpd: Reichsexekute left-wing state governments.
-- @root: No, we should not do any of these things.
+- @unban_sh: 解除对钢盔团的禁令。
+- @ban_rfb: 取缔 RFB。
+- @reichsexekute_kpd: 对左翼州政府实施国家执行。
+- @root: 不,我们不应做这些事中的任何一件。
 - @easy_discard
 
 @allow_rearmament
 choose-if: reichswehr_minister_party != "SPD"
-unavailable-subtitle: The rest of the SPD would know, as Leber is Reichswehr Minister.
+unavailable-subtitle: 由于勒贝尔就是国防部长,社民党的其余成员会知晓此事。
 on-arrival: army_relation += 10; reichswehr_loyalty += 0.05 if reichswehr_loyalty < 0.5; west_relation -= 2; east_relation -= 2; reichswehr_militancy += 0.15; sh_militancy += 0.05; pacifism -= 1; nationalism += 3; pro_republic -= 3; left_dissent += 5
 
-We allow the Reichswehr to secretly rearm, increasing its strength, and, seemingly though to a lesser extent, the strength of the Stalhelm. Though it is a secret, the Entente countries nonetheless have their suspicions, as does our party left.
+我们允许国防军秘密重整军备,增强了它的实力,同时也 —— 表面上程度稍轻地 —— 增强了钢盔团的实力。尽管是秘密,协约国仍有疑虑,我党左翼亦然。
 
 @surrender_reichswehr
 view-if: reichswehr_minister_party == "SPD"
 on-arrival: army_relation += 5; workers_spd -= 3; new_middle_spd -= 3; old_middle_spd -= 3; rural_spd -= 3; catholics_spd -= 1; unemployed_spd -= 3; reichswehr_minister_party = "I"; left_dissent += 5; center_dissent += 5; labor_dissent += 5; neorevisionist_dissent += 5; kpd_coalition_dissent += 3 if in_left_front or in_popular_front
 
-We pressure Leber to resign, allowing the Reichswehr to reassert control over its own ministry. This pleases them, but has embarassed and upset the SPD as a whole.
+我们施压让勒贝尔辞职,使国防军得以重新掌控自己的部委。这令他们满意,却让整个社民党颜面受损、深感不满。
 
 @unban_sh
 view-if: ((not presidential_powers) or (interior_minister_party == "SPD")) and sh_banned
 on-arrival: sh_banned = 0; army_relation += 5; sh_militancy += 0.05; sh_strength += 20; coup_progress -= 1; kpd_relation -= 5; kpd_relation -= 5 if spd_in_government; left_dissent += 10 if spd_in_government; center_dissent += 5 if spd_in_government; labor_dissent += 5 if spd_in_government; neorevisionist_dissent += 5 if spd_in_government
 
-We have unbanned the Stalhelm, allowing it to continue its organization and militarization. [? if spd_in_government : This has come under criticism from the rest of the SPD, which is under increasing pressure to withdraw from government. ?]
+我们解除了对钢盔团的禁令,使其得以继续组织与军事化。 [? if spd_in_government : 这招致了社民党其余成员的批评,他们要求退出政府的压力也与日俱增。 ?]
 
 @ban_rfb
 view-if: ((not presidential_powers) or (interior_minister_party == "SPD")) and not rfb_banned
 on-arrival: rfb_banned = 1; army_relation += 5; rfb_militancy -= 0.05; rfb_strength -= 20; coup_progress -= 1; kpd_relation -= 5; kpd_relation -= 5 if spd_in_government; left_dissent += 5 if spd_in_government
 
-We have banned the RFB, satisfying and fulfilling one of the core conditions of the Ebert-Groener Pact.
+我们取缔了 RFB,满足并履行了艾伯特—格勒纳协定的核心条件之一。
 
 @reichsexekute_kpd
 choose-if: not spd_in_government or reformist_strength >= 50
-unavailable-subtitle: The SPD in government refuses to allow this.
+unavailable-subtitle: 执政的社民党拒绝允许这样做。
 on-arrival: kpd_relation -= 10 if spd_in_government; left_dissent += 20 if spd_in_government; rb_strength *= 0.95; left_strength += 10 if not spd_in_government; reformist_dissent += 10 if not spd_in_government; capital_strike_progress -= 2; coup_progress -= 2; rb_militancy -= 0.1; rfb_militancy -= 0.05; workers_spd *= 0.9
 view-if: kpd_prussia or red_thuringia or red_saxony or in_hamburg_left
 
-As part of the Ebert-Groener Pact, we are expected to dismantle communist infiltration thoroughly.
+作为艾伯特—格勒纳协定的一部分,我们理当彻底清除共产党的渗透。
 
 - #reichsexekutions_left
 
 @reichsexekute_hamburg
 view-if: in_hamburg_left
 tags: reichsexekutions_left
-title: Reichsexekute Hamburg.
-subtitle: This will anger the SPD!
+title: 对汉堡实施国家执行。
+subtitle: 这会激怒社民党!
 on-arrival: in_hamburg_left = 0; in_spd_hamburg = 1
 
-We have performed a *Reichsexekution* against the government of Hamburg, removing it of KPD ministers.
+我们对汉堡政府实施了*国家执行*,清除了其中的共产党部长。
 
 @reichsexekute_thuringia
 view-if: red_thuringia
 tags: reichsexekutions_left
-title: Reichsexekute Thuringia.
-subtitle: This will anger the SPD!
+title: 对图林根实施国家执行。
+subtitle: 这会激怒社民党!
 on-arrival: red_thuringia = 0
 
-We have performed a *Reichsexekution* against the government of Thuringia, removing it of KPD ministers.
+我们对图林根政府实施了*国家执行*,清除了其中的共产党部长。
 
 @reichsexekute_saxony
 view-if: red_saxony
 tags: reichsexekutions_left
-title: Reichsexekute Saxony.
-subtitle: This will anger the SPD!
+title: 对萨克森实施国家执行。
+subtitle: 这会激怒社民党!
 on-arrival: red_saxony = 0
 
-We have performed a *Reichsexekution* against the government of Saxony, removing it of KPD ministers.
+我们对萨克森政府实施了*国家执行*,清除了其中的共产党部长。
 
 @reichsexekute_prussia
 view-if: kpd_prussia
 tags: reichsexekutions_left
-title: Reichsexekute Prussia.
-subtitle: This will anger the SPD!
+title: 对普鲁士实施国家执行。
+subtitle: 这会激怒社民党!
 on-arrival: kpd_prussia = 0
 
-We have performed a *Reichsexekution* against the government of Prussia, removing it of KPD ministers.
+我们对普鲁士政府实施了*国家执行*,清除了其中的共产党部长。
