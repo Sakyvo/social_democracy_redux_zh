@@ -1,4 +1,4 @@
-title: Streetfighting
+title: 街头战斗
 new-page: true
 is-card: true
 on-arrival: streetfighting_timer = 6; month_actions += 1; rb_militarization_cost = 2 if rb_militancy > 0.1 else rb_militarization_cost = 1; rb_militarization_cost = 3 if rb_militancy > 0.25; strife += 1; unemployed_kpd -= 3; unemployed_nsdap += 3
@@ -6,18 +6,18 @@ view-if: year >= 1930 and sa_strength >= 150 and streetfighting_timer == 0 and n
 card-image: img/blutmai_2.jpg
 tags: party_affairs; antifascism
 
-= Streetfighting
+= 街头战斗
 
-Battles rage on the streets between the Nazi SA, nationalist Stahlhelm, communist Rotfrontkämpferbund (RFB), and our own Reichsbanner. In some parts of the country, conditions are nearing civil war levels, as dozens of people are killed each month.
+纳粹冲锋队、民族主义的钢盔团、共产党的红色前线战士同盟(RFB),以及我们自己的国旗团,在街头激战不休。在部分地区,局势已接近内战水平,每月都有数十人丧命。
 
-We must do something to protect the workers against these predations.
+我们必须采取行动,保护工人免遭这些劫掠。
 
 # - @battle: Test our defense units in battle against the fascists!
-- @arm_rb: Increase training and armaments for the Reichsbanner.
-- @if_training: Train union members to fight as part of the Iron Front.
-- @prussian_police_training: Use the Prussian police to help train the Reichsbanner.
-- @peace: Try to avoid all militant confrontations, as much as possible.
-- @truce_rfb: Try to make peace with the RFB.
+- @arm_rb: 加强国旗团的训练与装备。
+- @if_training: 训练工会成员,使其作为铁前线的一部分参战。
+- @prussian_police_training: 动用普鲁士警察协助训练国旗团。
+- @peace: 尽可能避免一切武装对抗。
+- @truce_rfb: 设法与 RFB 议和。
 - @easy_discard
 
 @battle
@@ -25,17 +25,17 @@ view-if: rb_militancy > 0.1 and rb_militancy < 0.5
 on-arrival: rb_militancy += 0.1; sa_strength += 40; rb_strength -= 100; 
 max-visits: 1
 
-Many Reichsbanner members are not ready for actual fighting, and thus quit. However, the remainder are toughened as a result. Our confrontations also provide ample recruiting material for the Nazi SA.
+许多国旗团成员尚未做好实战准备,于是选择退出。不过,留下的人因此变得更为坚韧。我们的对抗也为纳粹冲锋队提供了充足的招募素材。
 
 @arm_rb
-subtitle: -[+ rb_militarization_cost +] resource
+subtitle: -[+ rb_militarization_cost +] 资源
 choose-if: resources >= rb_militarization_cost
-unavailable-subtitle: Not enough resources ([+ rb_militarization_cost +] needed).
+unavailable-subtitle: 资源不足(需要 [+ rb_militarization_cost +] 点)。
 on-arrival: resources -= rb_militarization_cost; rb_militancy += 0.06; rb_strength += 50; sa_strength += 50; z_relation -= 5 if historical_mode 
 
-We have increased training and purchased more armaments for the Reichsbanner.
+我们加强了国旗团的训练,并为其购置了更多装备。
 
-[? if historical_mode : The Center Party decries the militarization of the Reichsbanner, and its members are leaving the republican organization. ?]
+[? if historical_mode : 中央党谴责国旗团的军事化,其成员正陆续退出这个共和派组织。 ?]
 
 
 @if_training
@@ -43,23 +43,23 @@ view-if: iron_front_formed == 1
 on-arrival: rb_militancy += 0.03; rb_strength += 200; sa_strength += 50; 
 max-visits: 2
 
-As part of the Iron Front, we are increasing coordination between the Reichsbanner and the unions, and many union members want to become more involved.
+作为铁前线的一部分,我们正加强国旗团与工会之间的协调,许多工会成员也希望更深入地参与其中。
 
 @prussian_police_training
 view-if: spd_prussia == 1 and prussian_police_loyalty > 0.5
 on-arrival: rb_militancy += 0.05; sa_strength += 50; prussian_police_training += 1
 
-The loyal sections of the Prussian police can help train the Reichsbanner.
+普鲁士警察中忠诚的部分可以协助训练国旗团。
 
 @peace
 on-arrival: rb_militancy -= 0.02; rb_strength -= 50; pacifism += 1
 
-By not fighting, the strength of the Reichsbanner atrophies. Pacifists in the party are gaining the upper hand.
+由于不出手,国旗团的实力日渐萎缩。党内的和平主义者正逐渐占据上风。
 
 @truce_rfb
 choose-if: kpd_relation >= 45
 view-if: kpd_truce == 0
-unavailable-subtitle: The KPD is not interested.
+unavailable-subtitle: 共产党对此不感兴趣。
 on-arrival: kpd_truce = 1; kpd_relation += 5; rfb_strength += 50; rb_strength += 50; sa_strength += 50;
 
-We have made at least a temporary truce with the KPD, so that our respective paramilitaries will stop fighting.
+我们至少与共产党达成了暂时的停战,这样双方的准军事组织将停止交战。

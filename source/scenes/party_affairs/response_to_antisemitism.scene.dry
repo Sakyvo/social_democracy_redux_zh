@@ -1,4 +1,4 @@
-title: Confronting Antisemitism
+title: 直面反犹主义
 new-page: true
 is-card: true
 view-if: iron_front_formed == 1 and nazi_urgency >= 3
@@ -7,23 +7,23 @@ card-image: img/iron_front.png
 tags: party_affairs, antifascism
 max-visits: 1
 
-= Confronting Antisemitism
+= 直面反犹主义
 
-Antisemitism has long been a latent feature of German society, but since the beginning of the economic depression, it has grown to a horrifying extent. The Nazis are the worst of it, but all the right-wing parties are deeply antisemitic. Regarding the SPD specifically, our right-wing enemies love to deploy their racist rhetoric against our many Jewish comrades, magnifying criticism of any minor transgression, and they call the entire SPD a Jewish party. We are a favorite target of their invectives.
+反犹主义长期以来是德国社会潜伏的特征,但自经济大萧条开始以来,它已发展到令人惊骇的程度。纳粹最为恶劣,但所有右翼政党都深陷反犹主义。具体到社民党,我们的右翼敌人热衷于用种族主义言辞攻击我们众多的犹太同志,把对任何微小过失的批评无限放大,还把整个社民党称作犹太党。我们是他们谩骂的宠儿。
 
-- @socialism_of_fools: Antisemitism is the "socialism of fools". We will defeat them with real socialism.
-- @if: Antisemitism is a crisis. Direct the full force of the Iron Front against antisemitism.
-- @all: All Germans will suffer from fascism, not just the Jews. We do not need a separate policy for them.
+- @socialism_of_fools: 反犹主义是「愚人的社会主义」。我们要用真正的社会主义击败他们。
+- @if: 反犹主义是一场危机。调集铁前线的全部力量对抗反犹主义。
+- @all: 法西斯主义会让所有德国人受苦,不只是犹太人。我们不需要为他们另立专门政策。
 
 @socialism_of_fools
 
-The best policy to deal with this sort of irrational, senseless hatred is to ignore it. Few are swayed by racist rhetoric; the best way to combat it is to provide economic security so that people do not turn to antisemitism.
+应对这种非理性的、毫无意义的仇恨,最好的政策就是不予理会。很少有人会被种族主义言辞说服;对抗它的最好办法是提供经济保障,使人不必诉诸反犹主义。
 
 @if
 on-arrival: confronting_antisemitism += 2; sa_strength -= 20; democratization += 1; pacifism += 1; nationalism -= 5*(1-dissent); workers_nsdap -= 6*(1-dissent);
 
-We develop an entire campaign against antisemitism under the auspices of the Iron Front. Hopefully our campaign can sway the workers away from Nazism.
+我们在铁前线的主持下开展了一场全面的反反犹主义运动。但愿这场运动能让工人远离纳粹主义。
 
 @all
 
-We do not need any special treatment for minorities.
+我们不需要为少数群体提供任何特殊待遇。

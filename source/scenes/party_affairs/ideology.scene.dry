@@ -1,4 +1,4 @@
-title: Questions of Ideology
+title: 意识形态问题
 new-page: true
 is-card: true
 tags: party_affairs
@@ -8,16 +8,16 @@ card-image: img/arbeiterbew.jpg
 max-visits: 3
 #subtitle: Setting the party's ideological direction.
 
-= Questions of Ideology
+= 意识形态问题
 
-The SPD is torn between many different ideological currents. What should be our primary ideological guidance for now?
+社民党被众多不同的意识形态潮流撕扯着。眼下我们应以哪一种作为主要的意识形态指引?
 
-[? if ideology != 0 : We have previously chosen a [+ ideology +] ideology. Changing it will likely have drawbacks. ?]
+[? if ideology != 0 : 我们此前选择了一种 [+ ideology +] 的意识形态。改变它很可能会带来弊端。 ?]
 
-- @class_struggle: Class struggle and preparing the proletariat for the revolution are our primary goals.
-- @centrist: The Center Marxism of Karl Kautsky remains the best way to resolve our internal contradictions.
-- @labor: We should work with the trade unions to improve the lives of workers.
-- @reform: Following Eduard Bernstein, we should work for ethical socialism, strengthen democracy, and expand the party's electorate.
+- @class_struggle: 阶级斗争,以及让无产阶级为革命做好准备,是我们的首要目标。
+- @centrist: 卡尔·考茨基的中间派马克思主义,仍是解决我们内部矛盾的最佳途径。
+- @labor: 我们应当与工会合作,改善工人的生活。
+- @reform: 追随爱德华·伯恩施坦,我们应当为伦理社会主义而努力,强化民主,并扩大党的选民基础。
 - @easy_discard
 
 @class_struggle
@@ -29,7 +29,7 @@ if (Q.ideology && Q.ideology != "left") {
 go-to: changed if changed = 1
 on-departure: ideology = "left"; left_strength += 10; communist_coalition += 1; left_dissent -= 5; z_relation -= 3; dvp_relation -= 5; nationalization_support += 1; kpd_relation += 3; reformist_dissent += 5
 
-The radical left of the party supports a course of class struggle, and potentially a reconcilliation with the Communists.
+党的激进左翼支持走阶级斗争路线,并可能与共产党和解。
 
 @centrist
 on-arrival: {!
@@ -40,7 +40,7 @@ if (Q.ideology && Q.ideology != "centrist") {
 go-to: changed if changed = 1
 on-departure: ideology = "centrist"; center_strength += 10; center_dissent -= 10; left_dissent -= 5; reformist_dissent -= 5;
 
-The Center Marxists, represented by Kautsky and Hilferding, support a middle course of preparing for revolution while building up the consciousness of the working class.
+以考茨基与希法亭为代表的中间派马克思主义者,支持一条中道:一面为革命做准备,一面培育工人阶级的意识。
 
 @labor
 on-arrival: {!
@@ -51,7 +51,7 @@ if (Q.ideology && Q.ideology != "labor") {
 go-to: changed if changed = 1
 on-departure: ideology = "labor"; labor_strength += 10; wtb_support += 1; labor_dissent -= 5; kpd_relation -= 3
 
-The labor wing of the party supports continued particpation in government in order to provide benefits to the workers, and the creation of public works programs for employment.
+党的工会翼支持继续参政,以便为工人争取利益,并创设公共工程计划以增加就业。
 
 @reform
 on-arrival: {!
@@ -62,9 +62,9 @@ if (Q.ideology && Q.ideology != "reformist") {
 go-to: changed if changed = 1
 on-departure: ideology = "reformist"; reformist_strength += 10; democratization += 1; reformist_dissent -= 5; z_relation += 5; dvp_relation += 5; kpd_relation -= 8; moderate_plan_support += 1
 
-The reformist wing of the party seeks to preserve the Republic and the democratic system of government, and is most supportive of coalitions with the other pro-democracy parties.
+党的改良派力图维护共和国与民主政体,最支持与其他拥护民主的政党联合执政。
 
 @changed
 on-arrival: left_dissent += 5; center_dissent += 5; labor_dissent += 5; reformist_dissent += 5
 
-We have changed ideologies. Many in the party feel unmoored.
+我们改变了意识形态。党内许多人有种失去依靠的感觉。

@@ -1,4 +1,4 @@
-title: Class Consciousness of the New Middle Class
+title: 新中间阶层的阶级意识
 new-page: true
 is-card: true
 tags: party_affairs
@@ -7,13 +7,13 @@ on-arrival: month_actions += 1
 card-image: img/new-middle-conscious.jpg
 max-visits: 1
 
-= Class Consciousness of the New Middle Class
+= 新中间阶层的阶级意识
 
-As socialism grows increasingly popular around the country, it has begun to take hold of the new middle class as well, with them becoming more and more open to socialist ideas and increasingly considering themselves part of the proletariat. Though still by far more moderate than the industrial workers, there is real potential to be exploited here in order to expand the SPD's base without diluting its class character.
+随着社会主义在全国日益流行,它也开始在新中间阶层中扎根 —— 他们越来越接受社会主义理念,也越来越多地把自己视为无产阶级的一部分。尽管他们仍远比产业工人温和,但这里有实实在在的潜力可挖:既扩大社民党的基础,又不稀释其阶级本色。
 
-- @awaken: Awaken their class consciousness!
-- @refute: No, we will not do this.
-- @easy_discard_1: Return card to hand.
+- @awaken: 唤醒他们的阶级意识!
+- @refute: 不,我们不会这样做。
+- @easy_discard_1: 将卡牌收回手牌。
 - @cancel_advisor_action
 
 @easy_discard_1
@@ -22,12 +22,12 @@ go-to: easy_discard
 
 @awaken
 choose-if: resources >= 1 or aufhauser_advisor or radio >= 2
-subtitle: [? if radio < 2 and not aufhauser_advisor : -1 resource. ?][? if aufhauser_advisor : Aufhäuser can use the AfA-bund to do this. ?][? if radio >= 2 : We can use our existing radio program for this. ?]
-unavailable-subtitle: [? if radio < 2 and not aufhauser_advisor : -1 resource. ?] Consider hiring Aufhäuser, or expanding radio programs.
+subtitle: [? if radio < 2 and not aufhauser_advisor : -1 资源。 ?][? if aufhauser_advisor : 奥夫霍伊泽可以利用自由职员总联合会来做这件事。 ?][? if radio >= 2 : 我们可以利用现有的广播节目来做这件事。 ?]
+unavailable-subtitle: [? if radio < 2 and not aufhauser_advisor : -1 资源。 ?] 考虑聘请奥夫霍伊泽,或者扩充广播节目。
 on-arrival: new_middle_spd += 10*(1-dissent); reformist_dissent += 2; labor_dissent += 3; left_strength += 5; socialism += 4*(1-dissent); new_middle_conscious = 1
 
-We have taken advantage of the situation, and awoken the class character of the white collar workers. Increasingly, they flock to our party.
+我们利用了当前的形势,唤醒了白领工人的阶级本色。他们越来越多地涌向我党。
 
 @refute
 
-We will not do this.
+我们不会这样做。
