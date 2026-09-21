@@ -1,4 +1,4 @@
-title: Ubik
+title: 乌比克
 new-page: true 
 is-card: true
 view-if: time_travelled_to_be_here
@@ -6,20 +6,16 @@ card_image: img/Ubik4.jpg
 tags: party_affairs
 on-arrival: month_actions += 1
 
-= Ubik
+= 乌比克
 
- Wild new Ubik salad dressing, not Italian, not French, but an entirely
- new and different taste treat that’s waking up the world. Wake up to
- Ubik and be wild! Safe when taken as directed
+ 狂野新款乌比克沙拉酱 —— 不是意式,不是法式,而是一种唤醒整个世界的全新奇味。醒来吧,拥抱乌比克,尽情狂野!按说明使用则安全无虞。
 
-- @purchase: Buy Ubik.
-- @root: Do nothing.
+- @purchase: 购买乌比克。
+- @root: 什么都不做。
 
 @purchase
 choose-if: resources >= 2
-subtitle: -2 resource
+subtitle: -2 资源
 on-arrival: resources -= 2; decay -= 1
 
- Pop tasty Ubik into your toaster, made only from fresh fruit and
- healthful all-vegetable shortening. Ubik makes breakfast a feast,
- puts zing into your thing! Safe when handled as directed
+ 把美味的乌比克放进烤面包机吧 —— 它只由新鲜水果与有益健康的全植物起酥油制成。乌比克让早餐成为盛宴,为你的生活注入活力!按说明操作则安全无虞。

@@ -1,4 +1,4 @@
-title: Ubik
+title: 乌比克
 new-page: true 
 is-card: true
 view-if: time_travelled_to_be_here
@@ -6,21 +6,16 @@ card_image: img/Ubik3.jpg
 tags: party_affairs
 on-arrival: month_actions += 1
 
-= Ubik
+= 乌比克
 
- Instant Ubik has all the fresh flavor of just-brewed drip coffee. Your
- husband will say, Christ, Sally, I used to think your coffee was only
- so-so, But now, wow! Safe when taken as directed
+ 速溶乌比克拥有现煮滴滤咖啡一般的鲜香风味。你丈夫会说:「老天,Sally,我以前还觉得你煮的咖啡也就那样,可现在,哇!」按说明使用则安全无虞。
 
-- @purchase: Buy Ubik.
-- @root: Do nothing.
+- @purchase: 购买乌比克。
+- @root: 什么都不做。
 
 @purchase
 choose-if: resources >= 2
-subtitle: -2 resource
+subtitle: -2 资源
 on-arrival: resources -= 2; decay -= 1
 
- My hair is so dry, so unmanageable. What’s a girl to do? Simply rub
- in creamy Ubik hair conditioner. In just five days you’ll discover new
- body in your hair, new glossiness. And Ubik hairspray, used as
- directed, is absolutely safe
+ 我的头发又干又难打理,一个姑娘该怎么办?只需抹上丝滑的乌比克护发素。短短五天,你就会发现头发焕然新生、重现光泽。而乌比克发胶,按说明使用则绝对安全。

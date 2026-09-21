@@ -1,20 +1,20 @@
-title: Return of the Scythian
+title: 斯基泰人的归来
 view-if: year <= 1760 and letter_received
 is-card: true
 card-image: img/Scythian.png
 new-page: true
 tags: party_affairs
 
-= Return of the Scythian
+= 斯基泰人的归来
 
-The Scythian has returned, carrying with her the burdensome book of sinister sworcery known as the Megatome and an unshakeable certainty that the haunted darkness of the Mingi Taw has followed her.
+斯基泰人回来了。她随身带着那本名为「巨典」的、沉重而邪恶的剑巫术之书,还带着一种不可动摇的确信:明吉陶那闹鬼的黑暗已尾随她而来。
 
-- @acquire_megatome: Take the Megatome.
+- @acquire_megatome: 取走巨典。
 
 @acquire_megatome
-subtitle: The burdensome book of sinister sworcery
+subtitle: 那本沉重而邪恶的剑巫术之书
 achievement: megatome
 
-We take the Megatome. The world is quiet here. We spot an antlered skull floating in the distance atop a cloud of darkness. The Scythian tells us gravely that this timeline is done for, and to carry forth our struggle in a new timeline. Our woeful errands are far from over, but we may still be cosmic friends forever.
+我们取走了巨典。此处的世界一片寂静。我们瞥见远处一朵黑暗之云上浮着一具长角的头骨。斯基泰人郑重地告诉我们,这条时间线已经完蛋了,要我们在新的时间线里继续斗争。我们那悲惨的使命远未结束,但我们或许仍能永远做宇宙间的朋友。
 
-- @game_over: The Gogolithic Mass consumes the world. 
+- @game_over: 戈戈利巨石群吞噬了世界。

@@ -1,4 +1,4 @@
-title: Ubik
+title: 乌比克
 new-page: true 
 is-card: true
 view-if: time_travelled_to_be_here
@@ -6,20 +6,16 @@ card_image: img/Ubik2.jpg
 tags: party_affairs
 on-arrival: month_actions += 1
 
-= Ubik
+= 乌比克
 
- The best way to ask for beer is to sing out Ubik. Made from select
- hops, choice water, slow-aged for perfect flavor, Ubik is the nation’s
- number-one choice in beer. Made only in Cleveland
+ 要点啤酒,最好的办法就是高声唱出「乌比克」。精选酒花、上等水源,慢慢陈酿以成就完美风味 —— 乌比克是全美啤酒第一选择。仅在克利夫兰酿造。
 
-- @purchase: Buy Ubik.
-- @root: Do nothing.
+- @purchase: 购买乌比克。
+- @root: 什么都不做。
 
 @purchase
 choose-if: resources >= 2
-subtitle: -2 resource
+subtitle: -2 资源
 on-arrival: resources -= 2; decay -= 1
 
- If money worries have you in the cellar, go visit the lady at Ubik
- Savings & Loan. She’ll take the frets out of your debts. Suppose, for
- example, you borrow fifty-nine poscreds on an interest-only loan
+ 若债务让你愁眉不展、郁郁寡欢,去找乌比克储蓄贷款社的那位女士吧。她会帮你把债务里的愁绪一并拿走。举个例子,假设你借了五十九个正信用点,只还利息。

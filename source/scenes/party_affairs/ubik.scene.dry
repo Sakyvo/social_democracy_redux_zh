@@ -1,4 +1,4 @@
-title: Ubik
+title: 乌比克
 new-page: true 
 is-card: true
 view-if: time_travelled_to_be_here
@@ -6,22 +6,16 @@ card_image: img/Ubik.jpg
 tags: party_affairs
 on-arrival: month_actions += 1
 
-= Ubik
+= 乌比克
 
- Friends, this is clean-up time and we’re discounting all our silent,
- electric Ubiks by this much money. Yes, we’re throwing away the
- blue-book. And remember: every Ubik on our lot has been used only
- as directed
+ 朋友们,现在是大清仓时间,所有静音电动乌比克一律大幅降价。是的,我们连「蓝皮书」都不要了。还请记住:我们场上每一台乌比克,都严格按说明使用过。
 
-- @purchase: Buy Ubik.
-- @root: Do nothing.
+- @purchase: 购买乌比克。
+- @root: 什么都不做。
 
 @purchase
 choose-if: resources >= 2
-subtitle: -2 resource
+subtitle: -2 资源
 on-arrival: resources -= 2; decay -= 1
 
- Perk up pouting household surfaces with new miracle Ubik, the
- easy-to-apply, extra-shiny, non-stick plastic coating.
- Entirely harmless if used as directed. Saves endless scrubbing,
- glides you right out of the kitchen
+ 用神奇的乌比克让家里那些闷闷不乐的表面重新焕发光彩吧 —— 这种新型塑料涂层易于涂抹、格外光亮、绝不粘附。按说明使用则完全无害。它免去无尽的擦洗,让你轻盈地滑出厨房。

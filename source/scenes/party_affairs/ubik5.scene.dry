@@ -1,4 +1,4 @@
-title: Ubik
+title: 乌比克
 new-page: true 
 is-card: true
 view-if: time_travelled_to_be_here
@@ -6,22 +6,16 @@ card_image: img/Ubik5.jpg
 tags: party_affairs
 on-arrival: month_actions += 1
 
-= Ubik
+= 乌比克
 
- Can’t make the frug contest, Helen; stomach’s upset. I’ll fix you Ubik!
- Ubik drops you back in the thick of things fast. Taken as directed,
- Ubik speeds relief to head and stomach. Remember: Ubik is only
- seconds away. Avoid prolonged use
+ 「去不了弗鲁格舞比赛了,Helen,我胃不舒服。」「我给你来点乌比克!」乌比克让你迅速重返热闹中心。按说明服用,乌比克能迅速缓解头部与胃部不适。请记住:乌比克就在几秒之外。避免长期使用。
 
-- @purchase: Buy Ubik.
-- @root: Do nothing.
+- @purchase: 购买乌比克。
+- @root: 什么都不做。
 
 @purchase
 choose-if: resources >= 2
-subtitle: -2 resource
+subtitle: -2 资源
 on-arrival: resources -= 2; decay -= 1
 
- Has perspiration odor taken you out of the swim? Ten-day Ubik
- deodorant spray or Ubik roll-on ends worry of offending, brings you
- back where the happening is. Safe when used as directed in a
- conscientious program of body hygiene
+ 汗味让你被排斥在社交圈之外了吗?十日长效乌比克除臭喷雾或乌比克走珠露,终结你的失礼之忧,带你重返热闹现场。在认真执行个人卫生方案的前提下按说明使用,则安全无虞。

@@ -1,4 +1,4 @@
-title: Ubik
+title: 乌比克
 new-page: true 
 is-card: true
 view-if: time_travelled_to_be_here
@@ -6,23 +6,16 @@ card_image: img/Ubik6.jpg
 tags: party_affairs
 on-arrival: month_actions += 1
 
-= Ubik
+= 乌比克
 
- We wanted to give you a shave like no other you ever had. We said,
- It’s about time a man’s face got a little loving. We said, With Ubik’s
- -winding Swiss chromium never-ending blade, the days of
- scrape-scrape are over. So try Ubik. And be loved. Warning: use
- only as directed. And with caution
+ 我们想给你一次前所未有的剃须体验。我们说:该让男人的脸也受点怜爱了。我们说:有了乌比克那自卷式瑞士铬制无尽刀片,刮来刮去的日子就此结束。所以试试乌比克吧,并享受被爱。警告:务必按说明使用,并小心谨慎。
 
-- @purchase: Buy Ubik.
-- @root: Do nothing.
+- @purchase: 购买乌比克。
+- @root: 什么都不做。
 
 @purchase
 choose-if: resources >= 2
-subtitle: -2 resource
+subtitle: -2 资源
 on-arrival: resources -= 2; decay -= 1
 
- Taken as directed, Ubik provides uninterrupted sleep without
- morning-after grogginess. You awaken fresh, ready to tackle all
- those little annoying problems facing you. Do not exceed
- recommended dosage
+ 按说明服用,乌比克能带来不被打断的睡眠,且隔日清晨不会昏沉。你会神清气爽地醒来,准备好应对眼前那些小小的烦人问题。请勿超过建议剂量。
