@@ -24,6 +24,7 @@ function walk(d, o = []) {
 const hits = [];
 for (const f of walk(path.join(root, base))) {
   if (!f.endsWith('.dry')) continue;
+  if (/credits\.scene\.dry$/.test(f)) continue; // 档案出处不译
   const rel = path.relative(root, f).replace(/\\/g, '/');
   const lines = fs.readFileSync(f, 'utf8').split('\n');
   let inCode = false;

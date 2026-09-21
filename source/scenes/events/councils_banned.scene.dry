@@ -1,32 +1,32 @@
-title: Dual Power
-subtitle: The Reichstag convenes to debate the workers' councils
+title: 双重政权
+subtitle: 国会召开会议,就工人委员会展开辩论
 view-if: soviets_exist and not supreme_soviet and reichstag_enemy
 tags: event
 max-visits: 1
 new-page: true
 
-= Dual Power
+= 双重政权
 
-Seeing the formation of nationwide workers' councils which have now fallen under the control of revolutionary forces seeking the overthrow of the Reichstag, the Reichstag has reacted to try and preserve its power by convening to discuss a resolution condemning the councils and affirm the supremacy of the Reichstag over them and the complete absence of any administrative authority on their part, while reactionaries have filed suits with the judiciary seeking to have the councils banned as illegal parallel structures.
+眼看全国性的工人委员会已然形成,且如今已落入企图推翻国会的革命力量之手,国会作出反应,力图保住自己的权力:它召开会议,讨论一项谴责这些委员会的决议,申明国会凌驾于其上的至高地位,并宣布这些委员会完全没有任何行政权力。与此同时,反动分子已向司法界提起诉讼,要求以非法平行机构为由取缔这些委员会。
 
-- @vote_for: The SPD votes for the resolution to condemn the councils.
-- @vote_against: The SPD votes against the resolution to condemn the councils.
+- @vote_for: 社民党投票赞成谴责委员会的决议。
+- @vote_against: 社民党投票反对谴责委员会的决议。
 
 @vote_for
 view-if: (not spd_soviets or reformist_soviets or neorevisionist_soviets) and left_strength < reformist_strength
 on-arrival: left_dissent += 20; kpd_relation -= 30; z_relation += 10; ddp_relation += 10; dvp_relation += 5; workers_spd -= (socialism/10)
 
-The resolution is passed, compelling the councils to disband, a compulsion which is backed up shortly thereafter by the courts, who conclude them to be illegal.
+决议获得通过,强制各委员会解散;这一强制很快又得到法院的支持,法院裁定它们非法。
 
-- @councils_dissolve: The councils comply.
-- @councils_defy: The councils defy the order!
+- @councils_dissolve: 各委员会遵令解散。
+- @councils_defy: 各委员会拒不服从!
 
 @vote_against
 view-if: reformist_strength < 50
 on-arrival: z_relation -= 5; ddp_relation -= 7; dvp_relation -= 7; workers_spd -= ((pro_republic/30)*bourgeois_power); new_middle_spd -= ((pro_republic/(15+(new_middle_conscious*5)))*bourgeois_power); old_middle_spd -= (pro_republic/15)*bourgeois_power; rural_spd -= ((pro_republic/(15+(land_reform*2)))*bourgeois_power); unemployed_spd -= (pro_republic/50)*bourgeois_power; catholics_spd -= (pro_republic/30)*bourgeois_power
 go-to: resolution_beaten if left_coalition+sapd_r >= 50; resolution_passed if left_coalition+sapd_r < 50
 
-We vote against the resolution, aggravating the bourgeois parties who view the councils as an existential threat.
+我们投票反对该决议,这激怒了把委员会视为存亡威胁的资产阶级政党。
 
 @resolution_beaten
 on-arrival: socialism += 3; pro_republic -= 5; capital_strike_progress += 2; coup_progress += 2; {! 
@@ -84,56 +84,56 @@ if (Q.judicial_reform >= 9) {
 
 !}
 
-The resolution is successfully voted down by the socialist majority in the Reichstag, allowing the councils to continue operating freely. However, not to be deterred, the bourgeois parties turn to the other arms of the state to back them up, their lawsuits to the courts.
+决议被国会中的社会主义多数成功否决,各委员会得以继续自由运作。 然而,资产阶级政党并未就此罢休,转而求助于国家机器的其他分支 —— 他们向法院提起的诉讼。
 
-- @councils_illegal: The courts find the councils illegal.
-- @councils_legal: The courts find the councils legal.
+- @councils_illegal: 法院裁定委员会非法。
+- @councils_legal: 法院裁定委员会合法。
 
 @councils_legal
 view-if: council_legality >= council_illegality
 on-arrival: capital_strike_progress += 3; coup_progress += 3; socialism += judicial_reform; sh_militancy += (0.1*(1-reichswehr_loyalty)) if reichswehr_militancy >= (0.1*(1-reichswehr_loyalty)); reichswehr_militancy -= (0.1*(1-reichswehr_loyalty)) if reichswehr_militancy >= (0.1*(1-reichswehr_loyalty)); true_legitimacy = 1
 
-The certification of the councils as legal by both the courts and the Reichstag certifies them as irredeemably legitimate, and perhaps even paves the way for their institutionalization without need for revolutionary means. The bourgeoisie, however, begin to consider counterrevolutionary means...
+法院与国会双双认定各委员会合法,使它们的正当性变得无可置疑,甚至或许为它们无需革命手段便可制度化铺平了道路。然而,资产阶级开始考虑反革命的手段……
 
 @councils_illegal
 view-if: council_legality < council_illegality
 on-arrival: socialism -= ((pro_republic)/20)*bourgeois_power; capital_strike_progress -= 1
 go-to: spd_removal_govt if not presidential_powers and (president != "Schumacher" and president != "Braun" and president != "Juchacz" and president != "Thälmann" and president != "Münzenberg") and spd_in_government; dilemma if spd_in_government and (presidential_powers or (president == "Schumacher" or president == "Braun" or president == "Juchacz" or president == "Thälmann" or president == "Münzenberg")); enforced if not spd_in_government
 
-Despite the majority in the Reichstag, the courts rule the councils as illegal parallel institutions nonetheless. 
+尽管在国会占有多数,法院仍然裁定各委员会为非法的平行机构。 
 
 @enforced
 
-The government has immediately mustered federal forces to dissolve the councils in pursuance of the court order.
+政府立即调集联邦力量,依照法院命令解散各委员会。
 
-- @fight: Mobilize the Reichsbanner and call a general strike to defend the councils!
-- @surrender: We have lost.
+- @fight: 动员国旗团并发动总罢工,保卫各委员会!
+- @surrender: 我们输了。
 
 @spd_removal_govt
 on-arrival: spd_in_government = 0; chancellor = "Brüning"; chancellor_party = "Z"; spd_toleration = 0; time_to_election = 3
 call: set_next_election_time
 
-Not trusting us to enforce the court order to dissolve the councils, President [+ president +] dismisses our government unilaterally and appoints a caretaker one, which has immediately mustered federal forces for an intervention to dissolve the councils.
+总统 [+ president +] 不信任我们能执行解散委员会的法院命令,单方面罢免了我们的政府,任命了一个看守政府;后者立即调集联邦力量,准备干预并解散各委员会。
 
-- @fight: Mobilize the Reichsbanner and call a general strike to defend the councils!
-- @surrender: We have lost.
+- @fight: 动员国旗团并发动总罢工,保卫各委员会!
+- @surrender: 我们输了。
 
 @dilemma
 
-As we are in government, it is ultimately up to us to enforce the court order. We could ignore it if we wishes, though doing so would surely provoke a constitutional, and perhaps even extraconstitutional, crisis.
+既然我们身在政府之中,执行法院命令最终就是我们的事。若愿意,我们也可以无视它,但那样势必引发一场宪法危机,甚至可能是超宪法的危机。
 
-- @enforce_order: We have no choice but to enforce the court order.
-- @nah: Nah.
+- @enforce_order: 我们别无选择,只能执行法院命令。
+- @nah: 才不。
 
 @enforce_order
 choose-if: left_strength < 50
-unavailable-subtitle: We're in too deep to back out now, bucko.
+unavailable-subtitle: 我们陷得太深,现在退不出来了,老兄。
 on-arrival: left_dissent += 50; kpd_relation -= 30; rb_strength *= (1-(left_strength/100)); rb_militancy *= (1-(left_strength/50))
 
-We have chosen, to the ire of our left and the KPD, to enforce the court order calling for the dissolution of the councils.
+我们选择执行要求解散委员会的法院命令,这惹怒了党内左翼与共产党。
 
-- @resistance: The Communists resist the dissolution!
-- @success: The councils are successfully broken up.
+- @resistance: 共产党人抵抗解散!
+- @success: 各委员会被成功驱散。
 
 @resistance
 view-if: (rfb_force+(socialism/10)) >= 10 or ((rfb_force+(socialism/10)) >= 5 and not spd_in_government)
@@ -158,32 +158,32 @@ if (Q.bourgeois_power < 1) {
 !}
 go-to: resistance_2_win if council_power > reichstag_power; resistance_2_loss if council_power <= (reichstag_power*0.8); communist_revolution.kpd_survival if council_power <= reichstag_power and council_power > (reichstag_power*0.8)
 
-Unwilling to stand by and see the councils broken up by state forces, the Communists have boldly chosen to resist. RFB forces occupy the congress of councils, blocking the entry of state forces. [? if bourgeois_power < 1 : The Harzburg Front chooses to help in breaking the resistance. ?]
+共产党人不愿袖手旁观、看着各委员会被国家力量驱散,于是大胆选择了抵抗。RFB 的力量占据了委员会代表大会,阻止国家力量进入。 [? if bourgeois_power < 1 : 哈茨堡阵线选择协助击破这场抵抗。 ?]
 
 @resistance_2_win
 on-arrival: workers_spd -= 10; workers_kpd += 10; workers_kpd += workers_nsdap; workers_nsdap = 0; unemployed_spd -= 10; unemployed_nsdap -= 10; unemployed_kpd += 20; socialism += 5; pro_republic -= 4; nationalism -= 4; rfb_strength += (rb_strength*(left_strength/100)); rb_strength *= (1-(left_strength/100)); bourgeois_power -= 0.03; sa_strength *= bourgeois_power; sh_strength *= bourgeois_power; time_to_election = 3; councils_initiative = 1
 call: set_next_election_time
 
-Shockingly, the defense of the councils was enough to intimidate the forces of the state into backing off. The councils persist, and the communists proclaim victory. The government's legitimacy is shattered, and [+ chancellor +] resigns to new elections.
+令人震惊的是,对委员会的保护竟足以吓得国家力量退却。各委员会得以存续,共产党人宣告胜利。 政府的正当性荡然无存,总理 [+ chancellor +] 辞职,以迎接新的选举。
 
 @resistance_2_loss
 on-arrival: rfb_banned = 1; soviets_exist = 0; rfb_strength *= 0.1; rfb_militancy *= 0.4; workers_kpd *= 0.4; unemployed_kpd *= 0.6; workers_spd *= 0.9; workers_nsdap += 10; unemployed_nsdap += 10; workers_dnvp += 10
 
-The RFB's defense of the councils is shattered, alongside the councils themselves. A wave of persecution is launched against communist leaders and the party as a whole, crippling the socialist movement and creating an opportune moment for reaction to rebound.
+RFB 对委员会的保护连同各委员会本身一同被击碎。一场针对共产党领袖及整个政党的迫害浪潮随之掀起,重创了社会主义运动,也为反动势力反扑创造了时机。
 
 @nah
 view-if: left_strength > reformist_strength
 on-arrival: reformist_dissent += 80; reichswehr_loyalty -= 0.1; reichswehr_loyalty = 0 if reichswehr_loyalty < 0; workers_spd -= ((pro_republic/10)*bourgeois_power); new_middle_spd -= ((pro_republic/(5+(new_middle_conscious*5)))*bourgeois_power); old_middle_spd -= (pro_republic/5)*bourgeois_power; rural_spd -= ((pro_republic/(5+(land_reform*2)))*bourgeois_power); unemployed_spd -= (pro_republic/15)*bourgeois_power; catholics_spd -= (pro_republic/10)*bourgeois_power; center_dissent += 5; labor_dissent += 5; neorevisionist_dissent += 30; sh_militancy += (0.25*(1-reichswehr_loyalty)) if reichswehr_militancy >= (0.25*(1-reichswehr_loyalty)); reichswehr_militancy -= (0.25*(1-reichswehr_loyalty)) if reichswehr_militancy >= (0.25*(1-reichswehr_loyalty)); coup_progress += 7; capital_strike_progress += 5; z_relation -= 30; ddp_relation -= 30; dvp_relation -= 100; pro_republic -= 8
 
-Our refusal to enforce the court order puts us in open defiance of the constitutional order. The bourgeois parties rally against us, attacking us as anti-democracy, while considering methods, legal and extralegal, to break this stalemate.
+我们拒绝执行法院命令,使我们公然对抗宪法秩序。资产阶级政党联合起来反对我们,抨击我们反民主,同时盘算着用合法与超法的手段来打破这一僵局。
 
 @fight
-subtitle: Labor will call a general strike. The Reichsbanner will resist the dissolution.
+subtitle: 工会将发动总罢工。国旗团将抵抗解散。
 
-The Reichswehr and Stahlhelm are already surrounding the congress, and the SA is supporting them. This could be civil war. We do realize that, correct? 
+国防军与钢盔团已包围了代表大会,冲锋队则在支援他们。这可能演变成内战。我们明白这一点,对吧? 
 
-- @fight_2: We will fight, even if it leads to a civil war.
-- @surrender: We should back down.
+- @fight_2: 我们会战斗,即便这会导致内战。
+- @surrender: 我们应当退让。
 
 @fight_2
 on-arrival: defense_strength = rb_strength*rb_militancy*(1-dissent/2); defense_strength += prussian_police_strength*prussian_police_militancy*prussian_police_loyalty*(socialism/250) if spd_prussia; enemy_strength = sa_strength*sa_militancy + sh_strength*sh_militancy; enemy_strength += reichswehr_strength*reichswehr_militancy/2; defense_strength += (workers_spd_normalized+workers_kpd_normalized+workers_sapd_normalized)*(2 - dissent)*(2 - unemployed/100);
@@ -192,21 +192,21 @@ go-to: fight_2_civil_war if defense_strength < enemy_strength and (enemy_strengt
 @fight_2_victory
 on-arrival: sa_strength *= 0.8; sh_strength *= 0.8; pro_republic -= 3; socialism += 5; workers_spd += 6; unemployed_spd += 6; workers_nsdap -= 6; unemployed_nsdap -= 6; workers_kpd += 4; unemployed_kpd += 4; councils_initiative = 1
 
-Our forces confront the government troops and their reactionary auxiliaries, and somehow, our enemies retreat without a fight! They were overwhelmed by our display of strength, and have chosen to slink away. The councils persist, albeit unlawfully.
+我们的力量与政府军及其反动辅助部队正面对峙,而不知怎的,敌人竟不战而退!他们被我们的力量展示所震慑,选择了悄悄溜走。各委员会得以存续 —— 尽管已属非法。
 
-The show of force has reinvigorated support for socialism and for the SPD, and has weakened the fascists, albeit undermined the republic as well.
+这场力量展示重新激发了人们对社会主义与社民党的支持,也削弱了法西斯分子 —— 尽管同时也削弱了共和国。
 
 @fight_2_defeat
 on-arrival: rfb_banned = 1; soviets_exist = 0; rfb_strength *= 0.1; rfb_militancy *= 0.4; workers_kpd *= 0.4; unemployed_kpd *= 0.6; workers_spd *= 0.9; workers_spd *= 0.7; workers_nsdap += 10; unemployed_nsdap += 10; workers_dnvp += 10; rb_militancy *= 0.75; rb_strength *= (0.9*(1-dissent)); pro_republic += 3; socialism -= 6; workers_spd -= 5; unemployed_spd -= 5; workers_nsdap += 5; unemployed_nsdap += 5
 
-Our forces confront the government troops and their reactionary auxiliaries, but it was not enough. The overwhelming force of the state was enough to dissolve the councils, and our involvement in illegally defending them earns many of our top organizers sentences in prison as a generalized crackdown on the socialist movement proceeds.
+我们的力量与政府军及其反动辅助部队正面对峙,但实力不济。国家压倒性的武力足以解散各委员会;随着针对社会主义运动的全面镇压展开,我们参与非法保卫委员会的行为,使我们许多最优秀的组织者被判入狱。
 
 @fight_2_civil_war
 on-arrival: spd_rebel = 1; spd_rebel_like_right_now = 1
 
-Our forces confront the government troops and their supporters on the streets of Berlin, and armed fighting erupts. The reactionaries do not budge from their positions. We are caught at a disadvantage.
+我们的力量与政府军及其支持者在柏林街头对峙,武装冲突爆发。反动派寸步不让。我们陷入不利境地。
 
-- @civil_war: It is a civil war.
+- @civil_war: 这就是内战。
 #- @surrender: Hold on. Call it off. We don't want a civil war. 
 
 @surrender
@@ -225,22 +225,22 @@ if (Q.spd_rebel_like_right_now) {
 
 !}
 
-Our inaction offends those on our left, leaving the bourgeoisie free to break up the councils.
+我们的不作为冒犯了左翼,也让资产阶级得以放手驱散各委员会。
 
-- @resistance: The Communists take up arms themselves!
-- @success: The councils are successfully broken up.
+- @resistance: 共产党人自己拿起了武器!
+- @success: 各委员会被成功驱散。
 
 @success
 view-if: not ((rfb_force+(socialism/10)) >= 10 or ((rfb_force+(socialism/10)) >= 5 and not spd_in_government))
 on-arrival: soviets_exist = 0; bourgeois_power += 0.02 if bourgeois_power <= 0.98; socialism -= 3; pro_republic += 3
 
-The dissolution of the councils proceeds without incident. The legitimacy of the constitution is restored with the end of dual power.
+解散各委员会的过程平安无事。随着双重政权的终结,宪法的正当性得以恢复。
 
 @resolution_passed
 on-arrival: socialism -= 5; pro_republic += 3; vonc_too = 1 if spd_in_government
 go-to: call_elections if vonc_too; dilemma_2 if not vonc_too
 
-The resolution is passed, compelling the councils to disband, a compulsion which is backed up shortly thereafter by the courts, who conclude them to be illegal. [? if vonc_too : The resolution is backed by a motion of no confidence against all SPD ministers, on the basis that they cannot be trusted to enforce the resolution. ?]
+决议获得通过,强制各委员会解散;这一强制很快又得到法院的支持,法院裁定它们非法。 [? if vonc_too : 该决议得到一项针对所有社民党部长的不信任案支持,理由是他们不值得信任来执行该决议。 ?]
 
 @call_elections
 on-arrival: time_to_election = 3
@@ -251,22 +251,22 @@ go-to: dilemma_2
 
 @dilemma_2
 
-The congress of councils convenes again to discuss these new developments, and the following conclusion is reached.
+委员会代表大会再次召开,讨论这些新的事态发展,并得出以下结论。
 
-- @councils_dissolve: To comply with the government directives.
-- @councils_defy: To resist the government directives!
+- @councils_dissolve: 遵从政府指令。
+- @councils_defy: 抵抗政府指令!
 
 @councils_dissolve
 view-if: (bourgeois_s+unaffiliate_s+nsdap_s+spd_reformist_s+spd_neorevisionist_s+spd_center_s+spd_labor_s >= 50) and not (kpd_soviets or kpd_included or sapd_soviets or sapd_included)
 on-arrival: socialism -= 5; soviets_exist = 0; kpd_relation -= 5; left_dissent += 5; pro_republic += 2
 
-The congress has voted to comply and self-dissolve the councils. The communists walk out, calling the congress a political suicide club. The bourgeois parties breathe a sigh of relief at the end of dual power.
+代表大会表决遵从,自行解散各委员会。共产党人退场抗议,称这次代表大会是个政治自杀俱乐部。资产阶级政党为双重政权的终结松了一口气。
 
 @councils_defy
 view-if: (spd_left_s+unaffiliate_s+kpd_s+faud_s+kapd_s+sapd_s+spd_center_s+spd_labor_s >= 50) and not (bourgeois_soviets or bourgeois_included)
 on-arrival: pro_republic -= 3; sa_militancy += (bourgeois_power/20); sh_militancy += (bourgeois_power/20)
 
-The councils vote to defy the government directives and persist. The bourgeoisie, unwilling to accept this, immediately muster federal forces to dissolve the councils by force in pursuance of the resolution and court order.
+各委员会表决拒绝政府指令,坚持存续。资产阶级不愿接受这一点,立即调集联邦力量,依照该决议与法院命令以武力解散各委员会。
 
-- @fight: Mobilize the Reichsbanner and call a general strike to defend the councils!
-- @surrender: We have lost.
+- @fight: 动员国旗团并发动总罢工,保卫各委员会!
+- @surrender: 我们输了。

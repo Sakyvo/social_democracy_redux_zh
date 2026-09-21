@@ -1,52 +1,52 @@
-title: May Day
+title: 五一节
 new-page: true
-subtitle: A joint demonstration?
+subtitle: 联合示威?
 tags: event
 view-if: month = 5 and communist_coalition >= 3 and kpd_relation >= 60 and nationalization_adopted == 1
 on-arrival: month_actions += 1; spd_dominance = 0; kpd_dominance = 0; fascist_disruption = 0
 
-= May Day
+= 五一节
 
-It is May Day of [+ year +] and as we prepare the possibility is discussed of a rally together with the KPD for the abolition of the capitalist economy and a swift transition towards socialism to end the suffering of the workers from the economic crisis. From what we know the KPD seems amenable to the idea, though it would terrify the bourgeoisie, voters and parties alike. [? if volksmai = 1 : This idea is given legitimacy by the success of our rally with the KPD in 1929. ?] 
+正值 [+ year +] 年的五一节,在我们筹备之际,有人提出与共产党联合举行集会的可能,以呼吁废除资本主义经济、迅速向社会主义过渡,从而终结工人因经济危机而受的苦难。 据我们所知,共产党人似乎对这一想法颇为接受,尽管它会让资产阶级 —— 无论选民还是政党 —— 惊恐不已。 [? if volksmai = 1 : 1929 年我们与共产党联合举办的集会大获成功,为这一想法提供了正当性。 ?] 
 
-Should we pursue this idea?
+我们是否应当推进这一设想?
 
-- @invite_kpd_1: Let us invite the KPD to a rally of the working class united against capitalism and its crisis!
-- @invite_kpd_2: Let us invite the KPD to a rally of the working class united against capitalism and its crisis!
-- @dismiss: We have a lot in common with the KPD, but it is best to maintain our party's independence. 
+- @invite_kpd_1: 让我们邀请共产党参加一场工人阶级团结一致、对抗资本主义及其危机的集会!
+- @invite_kpd_2: 让我们邀请共产党参加一场工人阶级团结一致、对抗资本主义及其危机的集会!
+- @dismiss: 我们与共产党有很多共同之处,但最好还是保持我党的独立。 
 
 @dismiss
 on-arrival: left_dissent += 5; center_dissent -= 10; reformist_dissent -= 10; labor_dissent -= 5; neorevisionist_dissent -= 10; left_strength -= 5
 
-We will not participate in such an event with the KPD.
+我们不会与共产党共同参与这样的活动。
 
 @invite_kpd_1
 view-if: kpd_normalized <= spd_normalized
 
-We have decided to go ahead with our plan and reach out to the KPD. They are open to the idea, but some of their more hardline members require further convincing.
+我们决定推进计划,主动联络共产党。他们对此持开放态度,但他们中一些较为强硬的成员还需要进一步说服。
 
-- @relations: Use our relations.
-- @resources: Use our resources.
-- @appeal_1929: Remind them of our success in 1929.
+- @relations: 动用我们的关系。
+- @resources: 动用我们的资源。
+- @appeal_1929: 提醒他们我们 1929 年的成功。
 #- @let_kpd: Let the KPD organize and manage the rally.
 
 @invite_kpd_2
 view-if: kpd_normalized > spd_normalized
 
-We have decided to go ahead with our plan and reach out to the KPD. They are, to our surprise, more than happy to go ahead with the plan. Preparations are made, with the cost even being fronted by the KPD, and soon everything is ready.
+我们决定推进计划,主动联络共产党。令我们意外的是,他们非常乐意推进这一计划。筹备工作随之展开,连费用都由共产党先行垫付,很快一切就绪。
 
-- @rally_kpd_2: Now the rally...
-- @rally_disruption: Now the rally...
+- @rally_kpd_2: 现在,集会……
+- @rally_disruption: 现在,集会……
 
 @relations
 view-if: kpd_relation >= 75
 on-arrival: spd_dominance = 1 if (((rb_strength*rb_militancy*(1-dissent))*spd_normalized)>=((rfb_strength*rfb_militancy)*kpd_normalized)); kpd_dominance = 1 if (((rb_strength*rb_militancy*(1-dissent))*spd_normalized)<((rfb_strength*rfb_militancy)*kpd_normalized)); fascist_disruption = 1 if ((sa_strength*sa_militancy)+(sh_strength*sh_militancy)) >= 1000
 
-Thankfully, due to our great relations, it isn't hard to bring the KPD around to the idea. Preparations are made and it isn't long before everything is ready for the rally.
+所幸,由于我们关系融洽,说服共产党接受这一想法并不困难。筹备工作随即展开,没过多久,集会的一切就绪。
 
-- @rally_spd_1: Now the rally...
-- @rally_disruption: Now the rally...
-- @rally_kpd_1: Now the rally...
+- @rally_spd_1: 现在,集会……
+- @rally_disruption: 现在,集会……
+- @rally_kpd_1: 现在,集会……
 #- @rally_fail: Now the rally...
 
 @resources
@@ -54,22 +54,22 @@ subtitle: -1 资源
 choose-if: resources >= 1
 on-arrival: resources -= 1; spd_dominance = 1 if (((rb_strength*rb_militancy*(1-dissent))*spd_normalized)>=((rfb_strength*rfb_militancy)*kpd_normalized)); kpd_dominance = 1 if (((rb_strength*rb_militancy*(1-dissent))*spd_normalized)<((rfb_strength*rfb_militancy)*kpd_normalized)); fascist_disruption = 1 if ((sa_strength*sa_militancy)+(sh_strength*sh_militancy)) >= 1000
 
-We promise to front the resources needed for organizing the rally, and the KPD accepts this. Preparations are made and it isn't long before everything is ready for the rally.
+我们承诺先行垫付组织集会所需的资源,共产党接受了。筹备工作随即展开,没过多久,集会的一切就绪。
 
-- @rally_spd_1: Now the rally...
-- @rally_disruption: Now the rally...
-- @rally_kpd_1: Now the rally...
+- @rally_spd_1: 现在,集会……
+- @rally_disruption: 现在,集会……
+- @rally_kpd_1: 现在,集会……
 #- @rally_fail: Now the rally...
 
 @appeal_1929
 view-if: volksmai == 1
 on-arrival: spd_dominance = 1 if (((rb_strength*rb_militancy*(1-dissent))*spd_normalized)>=((rfb_strength*rfb_militancy)*kpd_normalized)); kpd_dominance = 1 if (((rb_strength*rb_militancy*(1-dissent))*spd_normalized)<((rfb_strength*rfb_militancy)*kpd_normalized)); fascist_disruption = 1 if ((sa_strength*sa_militancy)+(sh_strength*sh_militancy)) >= 1000
 
-We remind them of the successes of our rally in 1929, and they are willing to take that as evidence for the utility of another such rally. Preparations are made and it isn't long before everything is ready for the rally.
+我们提醒他们 1929 年集会的成功,他们也愿意把这当作再次举办此类集会确有价值的证据。筹备工作随即展开,没过多久,集会的一切就绪。
 
-- @rally_spd_1: Now the rally...
-- @rally_disruption: Now the rally...
-- @rally_kpd_1: Now the rally...
+- @rally_spd_1: 现在,集会……
+- @rally_disruption: 现在,集会……
+- @rally_kpd_1: 现在,集会……
 #- @rally_fail: Now the rally...
 
 @rally_kpd_2
@@ -106,8 +106,8 @@ on-arrival: rfb_strength += 75; rb_militancy += 0.03; pacifism -= 1; kpd_relatio
 
 We have won! Our forces combined with the RFB's have managed to protect our rally. The fight was bloody but we have persevered and now we can go ahead with the rally.
 
-- @rally_spd_1: Now the rally...
-- @rally_kpd_1: Now the rally...
+- @rally_spd_1: 现在,集会……
+- @rally_kpd_1: 现在,集会……
 
 @defeat
 on-arrival: rfb_strength -= 25; rb_strength -= 75; rb_militancy += 0.02; pacifism -= 1; workers_nsdap += 4; sa_strength += 50; sh_strength += 50; unemployed_nsdap += 3; workers_spd -= 6; workers_kpd -= 4; unemployed_kpd -= 5; unemployed_spd -= 5; old_middle_nsdap += 2; new_middle_nsdap += 2; rural_nsdap += 2; new_middle_spd -= 3; new_middle_spd += 1 if new_middle_conscious; old_middle_spd -= 3; rural_spd -= 3; old_middle_dvp -= 1; rural_dvp -= 1; pro_republic -= 10; socialism -= 1

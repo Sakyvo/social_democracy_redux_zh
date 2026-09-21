@@ -1,169 +1,169 @@
-title: A New Government Forms
-subtitle: [+ president +] is to appoint a new government
+title: 新政府成立
+subtitle: [+ president +] 将任命一个新政府
 view-if: year == 1926 and locarno_seen
 new-page: true
 max-visits: 1
 tags: event
 go-to: marx_chancellor if president == "Marx"; hindenburg_chancellor if president == "Hindenburg"; braun_chancellor if president == "Braun"
 
-= A New Government Forms
+= 新政府成立
 
 @hindenburg_chancellor
 
-Since the fall of the Luther cabinet, there has been much speculation on what government may take its place. One idea has gained surprising momentum, however.
+自路德内阁倒台以来,人们纷纷猜测将由什么样的政府取而代之。然而,有一个想法获得了出人意料的势头。
 
-- @grand_coalition_real: A "Grand Coalition"?
+- @grand_coalition_real: 一个「大联合政府」?
 
 @grand_coalition_real
-subtitle: SPD + Z + BVP + DDP + DVP (61%)
+subtitle: SPD + Z + BVP + DDP + DVP(61%)
 
-The bourgeois parties have reached out to us to form a grand coalition - even Hindenburg has expressed willingness to the idea should a clear working basis be established. To this end, the Democrat Koch-Weser has been entrusted with cabinet negotiation, and attempts to gain our support.
+资产阶级政党主动接触我们,希望组建大联合政府 —— 甚至连兴登堡也表示,若能确立一个清晰的工作基础,他愿意接受这一设想。为此,民主党人科赫-韦泽受命主持内阁谈判,并试图争取我们的支持。
 
-However, entering such a government in a time of increasing economic uncertainty may end the trend of our increasing voteshare, and bolster the communists as an alternative rather than us. Furthermore, the bourgeois parties are unwilling to meet our demand for new elections.
+然而,在经济不确定性日益加深之际加入这样一个政府,可能会终结我们得票率上升的势头,并把共产党扶植成替代我们的选择。此外,资产阶级政党不愿满足我们举行新选举的要求。
 
-- @accept_groko: Form the Grand Coalition!
-- @refuse_groko: Refuse the offer.
+- @accept_groko: 组建大联合政府!
+- @refuse_groko: 拒绝这一提议。
 
 @accept_groko
 choose-if: reformist_strength > left_strength+labor_strength and not princes_initiated
-unavailable-subtitle: The party is opposed.
+unavailable-subtitle: 党内表示反对。
 on-arrival: left_dissent += 5; labor_dissent += 5; workers_spd -= 3; unemployed_spd -= 5; workers_kpd += 2; unemployed_kpd += 2; old_middle_dvp -= 2; chancellor = "Koch-Weser"; chancellor_party = "DDP"; in_grand_coalition = 1; spd_in_government = 1; leverage = spd_r; leverage -= 5; princes_time = time+3 if not princes_initiated
 go-to: election_1928.ministries
 
-We have decided to enter government as per the seemingly sincere wishes of the bourgeois. Now we must decide which ministries to take.
+我们决定依循资产阶级看似真诚的意愿加入政府。现在我们必须决定要哪些部委。
 
-[? if not princes_initiated : Meanwhile, the communists, seeing that we will seemingly not be joining their referendum, have gone ahead with collecting signatures. ?]
+[? if not princes_initiated : 与此同时,共产党人眼看我们似乎不会加入他们的公投,便自行推进签名征集工作。 ?]
 
 @refuse_groko
 on-arrival: dvp_relation -= 3; z_relation -= 2; ddp_relation -= 2
 
-With a Grand Coalition out of the picture, a short negotiation period between the bourgeois parties follows. President Hindenburg then announces the formation of a new government.
+大联合政府既已无望,资产阶级政党之间随即展开一段短暂的谈判。随后,兴登堡总统宣布组成一个新政府。
 
-- @luther_second: A second Luther cabinet.
+- @luther_second: 第二届路德内阁。
 
 @luther_second
-subtitle: Z + BVP + DDP + DVP (35%)
+subtitle: Z + BVP + DDP + DVP(35%)
 on-arrival: budget -= 2; upper_tax_rates -= 1; lower_tax_rates -= 1; unemployed -= 1 if unemployed >= 5; inflation += 0.4; economic_growth += 0.4; socialism -= 1
 
-Luther is reappointed as chancellor, this time in a minority government of the Center, Democratic, People's and Bavarian People's parties. As a minority government, it is unlikely to last long, and de-facto relies on us as we could bring it down at any moment. Doing so without a justification, however, could hurt our own support and drive the bourgeois back into the hands of the DNVP.
+路德再度被任命为总理,这次领导的是一个由中央党、民主党、人民党与巴伐利亚人民党组成的少数派政府。作为少数派政府,它不太可能长久,实际上还要依靠我们 —— 因为我们随时可以让它垮台。但若无正当理由就这样做,可能损害我们自己的支持度,并把资产阶级推回国家人民党的怀抱。
 
-Meanwhile, one of the first things the government does is try to cut taxes in order to stimulate the economy. Only time will tell if this will be effective.
+与此同时,政府做的头几件事之一就是试图减税以刺激经济。这将是否有效,只有时间能给出答案。
 
-- @tolerate_luther: Let Luther govern, for now.
+- @tolerate_luther: 暂时让路德执政。
 #- @vonc_luther: Call a motion of no confidence with the KPD.
 
 @tolerate_luther
 on-arrival: spd_toleration = 1; dvp_relation += 3; z_relation += 4; ddp_relation += 4; marx_relation += 3;
 
-We will see how things play out. For now, the SPD will not move against the government. [? if not princes_initiated: However, the continued position of the SPD outside of government, and the disappearance of a Grand Coalition as a real possibility for the time being opens up once more the possibility of collaborating with the Communists in their initiative for the expropriation of the princes. ?]
+我们且看事态如何发展。目前,社民党不会对政府采取行动。[? if not princes_initiated: 不过,社民党继续身处政府之外,加上大联合政府暂时不再是现实可能,这使得我们与共产党人合作推动没收诸侯财产倡议的可能性再次出现。 ?]
 
-- @back_referendum: Back the communist initiative for a referendum.
-- @refuse_referendum: We can still resolve this issue within the Reichstag.
+- @back_referendum: 支持共产党人的公投倡议。
+- @refuse_referendum: 我们仍可在国会内部解决这个问题。
 
 @back_referendum
 view-if: not princes_initiated
 on-arrival: princes_initiated = 1; princes_time = time+2; kpd_relation += 5; dvp_relation -= 3; old_middle_spd -= 2; new_middle_spd -= 2; marx_relation -= 5; 
 
-As we will be in opposition for the foreseeable future, there is no real reason to let the communists be the only party to benefit from the support for expropriation. Though there is no way we could directly back the communist suggestion, the ADGB has mediated a bill that both parties are able to agree on, and preparations for referendum are underway.
+既然在可预见的将来我们都将处于在野地位,就没有真正的理由让共产党成为唯一从没收财产支持中获益的政党。尽管我们无法直接支持共产党的提案,但德国工会总联合会已居间促成了一项双方都能接受的议案,公投的筹备工作正在进行。
 
 @refuse_referendum
 view-if: not princes_initiated
 on-arrival: princes_time = time+3; left_dissent += 5; workers_spd -= 4; workers_kpd += 4; unemployed_spd -= 5; unemployed_kpd += 5; rural_kpd += 1; dvp_relation += 5; z_relation += 5; ddp_relation += 5; marx_relation += 5
 
-We continue to refuse to back the communist initiative for a referendum. Though this leaves the KPD in a strong position to gain, it leaves open the possibility of resolving the issue with a compromise in the Reichstag.
+我们继续拒绝支持共产党人的公投倡议。尽管这让共产党处于有利的获益位置,但也保留了在国会内部以妥协方式解决该问题的可能。
 
 @vonc_luther
 choose-if: left_strength > center_strength+reformist_strength
-unavailable-subtitle: The party is opposed.
+unavailable-subtitle: 党内表示反对。
 on-arrival: marx_relation -= 10; workers_spd -= 2; new_middle_spd -= 4; old_middle_spd -= 3; z_relation -= 5; ddp_relation -= 5; dvp_relation -= 5; kpd_relation += 5; reformist_dissent += 10; left_strength += 10
 
-# todo: DNVP back in gov?
+# TODO: 国家人民党重新入阁?
 
 
 @marx_chancellor
 
-Since the fall of the Luther cabinet, there has been much speculation on what government may take its place. One idea has gained surprising momentum, however.
+自路德内阁倒台以来,人们纷纷猜测将由什么样的政府取而代之。然而,有一个想法获得了出人意料的势头。
 
-- @grand_coalition_real2: A "Grand Coalition"?
+- @grand_coalition_real2: 一个「大联合政府」?
 
 @grand_coalition_real2
-subtitle: SPD + Z + BVP + DDP + DVP (61%)
+subtitle: SPD + Z + BVP + DDP + DVP(61%)
 
-The bourgeois parties have reached out to us to form a grand coalition under the encouragement of Wilhelm Marx, who has floated the democrat Koch-Weser for the role. He has now turned to us for support in this cabinet.
+在威廉·马克思的鼓励下,资产阶级政党主动接触我们,希望组建大联合政府;马克思提名民主党人科赫-韦泽担任该职。他如今转向我们,寻求对这一内阁的支持。
 
-However, entering such a government in a time of increasing economic uncertainty may end the trend of our increasing voteshare, and bolster the communists as an alternative rather than us. Furthermore, the DVP seems reluctant to meet our demand for new elections.
+然而,在经济不确定性日益加深之际加入这样一个政府,可能会终结我们得票率上升的势头,并把共产党扶植成替代我们的选择。此外,人民党似乎不愿满足我们举行新选举的要求。
 
-- @accept_groko2: Form the Grand Coalition!
-- @refuse_groko2: Refuse the offer.
+- @accept_groko2: 组建大联合政府!
+- @refuse_groko2: 拒绝这一提议。
 
 @accept_groko2
 choose-if: reformist_strength+(marx_relation/2) > left_strength+labor_strength and not princes_initiated
-unavailable-subtitle: The party is opposed.
+unavailable-subtitle: 党内表示反对。
 on-arrival: left_dissent += 5; labor_dissent += 5; workers_spd -= 3; unemployed_spd -= 5; workers_kpd += 2; unemployed_kpd += 2; old_middle_dvp -= 3; old_middle_dnvp += 1; marx_relation += 5; chancellor = "Koch-Weser"; chancellor_party = "DDP"; in_grand_coalition = 1; spd_in_government = 1; leverage = spd_r; leverage -= 5; princes_time = time+3 if not princes_initiated
 go-to: election_1928.ministries
 
-We have decided to enter government as per the seemingly sincere wishes of the bourgeois. Now we must decide which ministries to take.
+我们决定依循资产阶级看似真诚的意愿加入政府。现在我们必须决定要哪些部委。
 
-[? if not princes_initiated : Meanwhile, the communists, seeing that we will seemingly not be joining their referendum, have gone ahead with collecting signatures. ?]
+[? if not princes_initiated : 与此同时,共产党人眼看我们似乎不会加入他们的公投,便自行推进签名征集工作。 ?]
 
 @refuse_groko2
 on-arrival: dvp_relation -= 3; z_relation -= 2; ddp_relation -= 2; marx_relation -= 5
 
-With a Grand Coalition out of the picture, a short negotiation period between the bourgeois parties follows.
+大联合政府既已无望,资产阶级政党之间随即展开一段短暂的谈判。
 
-- @luther_second2: A second Luther cabinet.
+- @luther_second2: 第二届路德内阁。
 
 @luther_second2
-subtitle: Z + BVP + DDP + DVP (35%)
+subtitle: Z + BVP + DDP + DVP(35%)
 on-arrival: budget -= 2; upper_tax_rates -= 1; lower_tax_rates -= 1; unemployed -= 1 if unemployed >= 5; inflation += 0.4; economic_growth += 0.4; socialism -= 1
 
-Luther is reappointed as chancellor, this time in a minority government of the Center, Democratic, People's and Bavarian People's parties. As a minority government, it is unlikely to last long, and de-facto relies on us as we could bring it down at any moment. Doing so without a justification, however, could hurt our own support and drive the bourgeois back into the hands of the DNVP.
+路德再度被任命为总理,这次领导的是一个由中央党、民主党、人民党与巴伐利亚人民党组成的少数派政府。作为少数派政府,它不太可能长久,实际上还要依靠我们 —— 因为我们随时可以让它垮台。但若无正当理由就这样做,可能损害我们自己的支持度,并把资产阶级推回国家人民党的怀抱。
 
-Meanwhile, one of the first things the government does is try to cut taxes in order to stimulate the economy. Only time will tell if this will be effective.
+与此同时,政府做的头几件事之一就是试图减税以刺激经济。这将是否有效,只有时间能给出答案。
 
-- @tolerate_luther: Let Luther govern, for now.
+- @tolerate_luther: 暂时让路德执政。
 #- @vonc_luther: Call a motion of no confidence with the KPD.
 
 @braun_chancellor
 
-Since the fall of the Luther cabinet, there has been much speculation on what government may take its place. One idea has gained surprising momentum, however.
+自路德内阁倒台以来,人们纷纷猜测将由什么样的政府取而代之。然而,有一个想法获得了出人意料的势头。
 
-- @grand_coalition_real3: A "Grand Coalition"?
+- @grand_coalition_real3: 一个「大联合政府」?
 
 @grand_coalition_real3
-subtitle: SPD + Z + BVP + DDP + DVP (61%)
+subtitle: SPD + Z + BVP + DDP + DVP(61%)
 
-The bourgeois parties have reached out to us to form a grand coalition, backed in doing so by Braun, who has floated the democrat Koch-Weser for the role following the DVP's rejection of a social democrat for the role. He has now reached out to us and the DVP for support in this cabinet.
+资产阶级政党主动接触我们,希望组建大联合政府,并得到布劳恩的支持;在人民党拒绝让一名社会民主党人担任该职后,布劳恩提名民主党人科赫-韦泽。他如今向我们和人民党寻求对这一内阁的支持。
 
-However, entering such a government in a time of increasing economic uncertainty may end the trend of our increasing voteshare, and bolster the communists as an alternative rather than us. Furthermore, the DVP seems reluctant to meet our demand for new elections, or even join the government at all.
+然而,在经济不确定性日益加深之际加入这样一个政府,可能会终结我们得票率上升的势头,并把共产党扶植成替代我们的选择。此外,人民党似乎不愿满足我们举行新选举的要求,甚至根本不愿加入政府。
 
-- @accept_groko3: Form the Grand Coalition!
-- @refuse_groko3: Refuse the offer.
+- @accept_groko3: 组建大联合政府!
+- @refuse_groko3: 拒绝这一提议。
 
 @accept_groko3
 choose-if: dvp_relation >= 50 and not princes_initiated
-unavailable-subtitle: The DVP is opposed.
+unavailable-subtitle: 人民党表示反对。
 on-arrival: left_dissent += 5; workers_spd -= 2; unemployed_spd -= 2; workers_kpd += 1; unemployed_kpd += 1; old_middle_dvp -= 4; old_middle_dnvp += 2; chancellor = "Koch-Weser"; chancellor_party = "DDP"; in_grand_coalition = 1; spd_in_government = 1; leverage = spd_r; leverage -= 5; princes_time = time+3 if not princes_initiated
 go-to: election_1928.ministries
 
-We have decided to enter government as per the seemingly sincere wishes of the bourgeois. Now we must decide which ministries to take.
+我们决定依循资产阶级看似真诚的意愿加入政府。现在我们必须决定要哪些部委。
 
-[? if not princes_initiated : Meanwhile, the communists, seeing that we will seemingly not be joining their referendum, have gone ahead with collecting signatures. ?]
+[? if not princes_initiated : 与此同时,共产党人眼看我们似乎不会加入他们的公投,便自行推进签名征集工作。 ?]
 
 @refuse_groko3
 on-arrival: dvp_relation -= 1; z_relation -= 1; ddp_relation -= 1
 
-With a Grand Coalition out of the picture, a short negotiation period between the bourgeois parties follows.
+大联合政府既已无望,资产阶级政党之间随即展开一段短暂的谈判。
 
-- @luther_second3: A second Luther cabinet.
+- @luther_second3: 第二届路德内阁。
 
 @luther_second3
-subtitle: Z + BVP + DDP + DVP (35%)
+subtitle: Z + BVP + DDP + DVP(35%)
 on-arrival: budget -= 2; upper_tax_rates -= 1; lower_tax_rates -= 1; unemployed -= 1 if unemployed >= 5; inflation += 0.4; economic_growth += 0.4; socialism -= 1
 
-Luther is reappointed as chancellor, this time in a minority government of the Center, Democratic, People's and Bavarian People's parties. As a minority government, it is unlikely to last long, and de-facto relies on us as we could bring it down at any moment. Doing so without a justification, however, could hurt our own support and drive the bourgeois back into the hands of the DNVP.
+路德再度被任命为总理,这次领导的是一个由中央党、民主党、人民党与巴伐利亚人民党组成的少数派政府。作为少数派政府,它不太可能长久,实际上还要依靠我们 —— 因为我们随时可以让它垮台。但若无正当理由就这样做,可能损害我们自己的支持度,并把资产阶级推回国家人民党的怀抱。
 
-Meanwhile, one of the first things the government does is try to cut taxes in order to stimulate the economy. Only time will tell if this will be effective.
+与此同时,政府做的头几件事之一就是试图减税以刺激经济。这将是否有效,只有时间能给出答案。
 
-- @tolerate_luther: Let Luther govern, for now.
+- @tolerate_luther: 暂时让路德执政。
 #- @vonc_luther: Call a motion of no confidence with the KPD.
