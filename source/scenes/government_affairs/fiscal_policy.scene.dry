@@ -1,4 +1,4 @@
-title: Fiscal Policy
+title: 财政政策
 new-page: true
 is-card: true
 tags: govt_affairs
@@ -8,157 +8,157 @@ card-image: img/portraits/HilferdingRudolf.jpg
 go-to: fiscal_menu
 #subtitle: Issues of taxation, budget, and tariffs.
 
-= Fiscal Policy
+= 财政政策
 
-Fiscal policy involves issues of taxation and budget.
+财政政策涉及税收与预算问题。
 
 # TODO: tax update :sob:
 
 @fiscal_menu
 
-Upper-income tax rates: [+ upper_tax_rates : taxation +]
+高收入税率: [+ upper_tax_rates : taxation +]
 
-Lower-income tax rates: [+ lower_tax_rates : taxation +]
+低收入税率: [+ lower_tax_rates : taxation +]
 
-- @raise_progressive: Make the tax system more progressive by raising taxes on the rich and cutting them for the poor.
-- @raise_rich: Increase taxes on the rich.
-- @raise_overall: Increase overall taxes.
-- @cut_overall: Cut overall taxes.
-- @cut_overall_wtb: Cut overall taxes.
+- @raise_progressive: 通过对富人加税、对穷人减税,使税制更具累进性。
+- @raise_rich: 对富人加税。
+- @raise_overall: 全面提高税收。
+- @cut_overall: 全面减税。
+- @cut_overall_wtb: 全面减税。
 - @regressive
 - @tariffs
-- @root: Do not change the tax system.
+- @root: 不改变税制。
 - @easy_discard
 - @cancel_advisor_action
 
 @raise_progressive
-subtitle: This does not change overall revenue. [? if lower_tax_rates < -5 : Lower-class tax rates are too low to cut anymore. ?] [? if upper_tax_rates > 5 : Upper-class tax rates are too high to increase. ?][? if status_quo : We have agreed to leave the budget untouched. ?]
-unavailable-subtitle: This does not change overall revenue. [? if lower_tax_rates < -5 : Lower-class tax rates are too low to cut anymore. ?] [? if upper_tax_rates > 5 : Upper-class tax rates are too high to increase. ?][? if status_quo : We have agreed to leave the budget untouched. ?][? if capital_spd : <span style="color:rgb(170,150,60);font-family:'Times New Roman',serif;font-weight:700;letter-spacing:0.5px;">Think of the economy! You're better than this.</span> ?]
+subtitle: 这不改变总体财政收入。[? if lower_tax_rates < -5 : 下层税率已太低,无法再降。 ?] [? if upper_tax_rates > 5 : 上层税率已太高,无法再升。 ?][? if status_quo : 我们已同意不动这份预算。 ?]
+unavailable-subtitle: 这不改变总体财政收入。[? if lower_tax_rates < -5 : 下层税率已太低,无法再降。 ?] [? if upper_tax_rates > 5 : 上层税率已太高,无法再升。 ?][? if status_quo : 我们已同意不动这份预算。 ?][? if capital_spd : <span style="color:rgb(170,150,60);font-family:'Times New Roman',serif;font-weight:700;letter-spacing:0.5px;">Think of the economy! You're better than this.</span> ?]
 choose-if: lower_tax_rates >= -5 and upper_tax_rates <= 5 and not status_quo and not capital_spd
 on-arrival: progressive_tax_vote = 1
 go-to: progressive_tax_done if not legislature_enabled; legislative_menu if legislature_enabled
 
-We propose a bill to make taxation more progressive.
+我们提出一项议案,使税制更具累进性。
 
 @progressive_tax_done
 on-arrival: bourgeois_power -= 0.01; workers_spd += 6*(1-dissent); old_middle_spd -= 3; new_middle_spd -= 3; new_middle_spd += 1 if new_middle_conscious; coalition_dissent += 1 if in_grand_coalition; dvp_relation -= 4; finance_goal_completed += 1; upper_tax_rates += 1; lower_tax_rates -= 1; capital_strike_progress += 1; capital_strike_progress += 1 if upper_tax_rates > 1; capital_strike_progress += 1 if upper_tax_rates > 3; socialism += 2
 
-Making the tax system more progressive is popular among our base, but it upsets our bourgeois coalition partners, as well as our minimal number of bourgeois voters.
+使税制更具累进性在我们的基本盘中颇受欢迎,却惹恼了资产阶级执政盟友,也惹恼了我们为数不多的资产阶级选民。
 
 @raise_rich
-subtitle: +2 budget
-unavailable-subtitle: [? if not status_quo : Tax rates are already too high. ?][? if status_quo : We have agreed to leave the budget untouched. ?][? if capital_spd : <span style="color:rgb(170,150,60);font-family:'Times New Roman',serif;font-weight:700;letter-spacing:0.5px;">Think of the economy! You're better than this.</span> ?]
+subtitle: +2 财政预算
+unavailable-subtitle: [? if not status_quo : 税率已经太高了。 ?][? if status_quo : 我们已同意不动这份预算。 ?][? if capital_spd : <span style="color:rgb(170,150,60);font-family:'Times New Roman',serif;font-weight:700;letter-spacing:0.5px;">想想经济吧!你本可以做得更好。</span> ?]
 choose-if: upper_tax_rates <= 5 and not status_quo and not capital_spd
 on-arrival: raise_rich_vote = 1
 go-to: raise_rich_done if not legislature_enabled; legislative_menu if legislature_enabled
 
-We propose a bill to raise taxes on higher income earners.
+我们提出一项议案,对高收入者加税。
 
 @raise_rich_done
 on-arrival: bourgeois_power -= 0.01; upper_tax_rates += 1; capital_strike_progress += 1; capital_strike_progress += 1 if upper_tax_rates > 1; capital_strike_progress += 1 if upper_tax_rates > 3; workers_spd += 4*(1-dissent); old_middle_spd -= 4; new_middle_spd -= 4; new_middle_spd += 1 if new_middle_conscious; coalition_dissent += 1 if in_grand_coalition; coalition_dissent += 1 if capital_strike_progress >= 5; budget += 2; dvp_relation -= 4; unemployed += 1; finance_goal_completed += 1; inflation -= 0.6; economic_growth -= 0.4; socialism += 1
 
-Raising taxes on the rich is popular among our base, but it alienates the bourgeoisie. Increasing taxes also decreases economic demand, which may lead to more unemployment.
+对富人加税在我们的基本盘中颇受欢迎,却会疏远资产阶级。加税还会压低经济需求,可能导致失业增加。
 
 @cut_overall
 view-if: wtb_adopted == 0 or budget >= 2
-subtitle: -2 budget
-unavailable-subtitle: -2 budget - [? if upper_tax_rates < -5 or lower_tax_rates < -5 : Tax rates are already too low. ?][? if status_quo : We have agreed to leave the budget untouched. ?]
+subtitle: -2 财政预算
+unavailable-subtitle: -2 财政预算 —— [? if upper_tax_rates < -5 or lower_tax_rates < -5 : 税率已经太低了。 ?][? if status_quo : 我们已同意不动这份预算。 ?]
 choose-if: budget >= 2 and upper_tax_rates >= -5 and lower_tax_rates >= -5 and not status_quo
 on-arrival: cut_vote = 1
 go-to: cut_done if not legislature_enabled; legislative_menu if legislature_enabled
 
-We propose a bill to lower taxes across the board.
+我们提出一项议案,全面减税。
 
 @cut_done
 on-arrival: budget -= 2; upper_tax_rates -= 1; lower_tax_rates -= 1; new_middle_spd += 5*(1-dissent); old_middle_spd += 4*(1-dissent); workers_spd += 3*(1-dissent); coalition_dissent += 1 if budget <= 2; dvp_relation += 5*(1-dissent) if budget > 2; z_relation += 5*(1-dissent) if budget > 2; unemployed -= 1 if unemployed >= 5; capital_strike_progress -= 1 if upper_tax_rates < 0; inflation += 0.4; economic_growth += 0.4; socialism -= 1
 
-Cutting taxes benefits most the rich and middle-class, who pay more taxes than the working class. Our coalition partners are happy at our orthodox economic course.
+减税最有利于富人与中间阶层,因为他们缴纳的税比工人阶级多。我们的执政盟友对这套正统经济路线感到满意。
 
 @cut_overall_wtb
 view-if: wtb_adopted == 1 and budget < 2
 choose-if: upper_tax_rates >= -5 and lower_tax_rates >= -5 and not status_quo
-subtitle: -2 budget. We will enter deficit spending. [? if upper_tax_rates < -5 or lower_tax_rates < -5 : Tax rates are already too low. ?][? if status_quo : We have agreed to leave the budget untouched. ?]
+subtitle: -2 财政预算。我们将进入赤字开支。[? if upper_tax_rates < -5 or lower_tax_rates < -5 : 税率已经太低了。 ?][? if status_quo : 我们已同意不动这份预算。 ?]
 on-arrival: cut_vote = 1
 go-to: cut_done_wtb if not legislature_enabled; legislative_menu if legislature_enabled
 
-We propose a bill to lower taxes across the board.
+我们提出一项议案,全面减税。
 
 @cut_done_wtb
 on-arrival: budget -= 2; upper_tax_rates -= 1; lower_tax_rates -= 1; new_middle_spd += 5*(1-dissent); old_middle_spd += 4*(1-dissent); workers_spd += 3*(1-dissent); dvp_relation -= 3; z_relation -= 2; unemployed -= 1 if unemployed >= 5; unemployed -= 1 if works_program > 1; capital_strike_progress -= 1 if upper_tax_rates < 0; inflation += 0.7; hyperinflation += 0.1; coalition_dissent += 1 if in_grand_coalition; center_dissent += 5; economic_growth += 0.6; socialism -= 2
 
-Cutting taxes benefits most the rich and middle-class, who pay more taxes than the working class. Our coalition partners are upset at our deficit spending, warning that it will lead to a repeat of the hyperinflation in the early history of our republic. The Center Marxists join in these warnings.
+减税最有利于富人与中间阶层,因为他们缴纳的税比工人阶级多。我们的执政盟友对赤字开支颇为不满,警告说这会导致共和国早期恶性通货膨胀的重演。中间派马克思主义者亦加入这些警告。
 
 @raise_overall
-subtitle: +3 budget
-unavailable-subtitle: [? if not status_quo or welfare < 1 : Tax rates are already too high. ?][? if status_quo or welfare >= 1 : We have agreed to leave the budget untouched. ?]
+subtitle: +3 财政预算
+unavailable-subtitle: [? if not status_quo or welfare < 1 : 税率已经太高了。 ?][? if status_quo or welfare >= 1 : 我们已同意不动这份预算。 ?]
 choose-if: upper_tax_rates <= 5 and lower_tax_rates <= 5 and (not status_quo or welfare < 1)
 on-arrival: raise_vote = 1
 go-to: raise_done if not legislature_enabled; legislative_menu if legislature_enabled
 
-We propose a bill to lower taxes across the board.
+我们提出一项议案,全面减税。
 
 @raise_done
 on-arrival: budget += 3; new_middle_spd -= 4; old_middle_spd -= 4; workers_spd -= 3; rural_spd -= 3; unemployed += 2; kpd_coalition_dissent += 1; coalition_dissent += 1 if welfare > 1; coalition_dissent += 1 if budget >= 6; lower_tax_rates += 1; upper_tax_rates += 1; capital_strike_progress += 1 if upper_tax_rates > 1; capital_strike_progress += 1 if upper_tax_rates > 2; workers_spd -= 5 if lower_tax_rates > 1; inflation -= 1.1; economic_growth -= 0.6;
 
-Raising taxes hurts our support among all those who pay taxes. [? if in_grand_coalition or in_weimar_coalition : However, our coalition partners are more supportive of the idea of "shared sacrifice" than simply taxing the rich. ?] Increasing taxes also decreases economic demand, which may lead to more unemployment.
+加税会损害我们在所有纳税人中的支持。 [? if in_grand_coalition or in_weimar_coalition : 不过,比起单纯向富人征税,我们的执政盟友更支持「共同牺牲」的想法。 ?] 加税还会压低经济需求,可能导致失业增加。
 
 @regressive
-title: Lower taxes on the rich, while increasing consumption taxes (which affect the working class more).
-subtitle: This does not change overall revenue. [? if upper_tax_rates < -5 : Rich tax rates are too low to cut anymore. ?] [? if lower_tax_rates > 5 : Lower-class tax rates are too high to increase. ?]
+title: 降低富人税,同时提高消费税(这对工人阶级影响更大)。
+subtitle: 这不改变总体财政收入。[? if upper_tax_rates < -5 : 富人税率已太低,无法再降。 ?] [? if lower_tax_rates > 5 : 下层税率已太高,无法再升。 ?]
 choose-if: lower_tax_rates <= 5 and upper_tax_rates >= -5
 on-arrival: regressive_vote = 1
 go-to: regressive_done if not legislature_enabled; legislative_menu if legislature_enabled
 
-We propose a bill to make the tax system more regressive.
+我们提出一项议案,使税制更具累退性。
 
 @regressive_done
 on-arrival: workers_spd -= 6; bourgeois_power += 0.02; new_middle_spd += 5*(1-dissent); old_middle_spd += 4*(1-dissent); dvp_relation += 5; z_relation += 4; coalition_dissent -= 1 if in_grand_coalition and coalition_dissent > 0; kpd_coalition_dissent += 1; upper_tax_rates -= 1; lower_tax_rates += 1; workers_spd -= 5 if lower_tax_rates >= 2; capital_strike_progress -= 1 if upper_tax_rates < 0; socialism -= 3
 
-Our regressive taxation policy benefits the rich while hurting the poor and working-class. Our bourgeois coalition partners approve of this orthodox economic course.
+我们累退的税收政策有利于富人,却伤害穷人与工人阶级。我们的资产阶级执政盟友赞同这套正统经济路线。
 
 @tariffs
-title: Change tariffs instead.
+title: 改为调整关税。
 
-Tariffs, or taxes on international imports, are another way to finance our government.
+关税,即对国际进口商品征收的税,是政府筹资的另一条途径。
 
-Historically, socialists have been in favor of free trade and a low-tariff regime. Workers in export-oriented industries benefit from free trade, and they also benefit from lower prices for imported necessities. Do the present economic circumstances change these calculations?
+历史上,社会主义者一向支持自由贸易与低关税体制。出口导向型产业的工人受益于自由贸易,也从进口必需品价格的下降中受益。当前的经济形势会改变这些考量吗?
 
-Current tariff level: [+ tariffs : taxation +]
+当前关税水平: [+ tariffs : taxation +]
 
 - @raise_tariffs
 - @lower_tariffs
-- @fiscal_menu: Change domestic taxes instead of tariffs.
-- @root: Do not change tariffs or taxes.
+- @fiscal_menu: 改为调整国内税收而非关税。
+- @root: 不改变关税或税收。
 - @easy_discard
 
 @raise_tariffs
-title: Raise tariffs on imports.
-subtitle: +2 budget. Other countries will retaliate by increasing tariffs of their own. [? if tariffs > 5 : Further increases in tariffs will not raise revenue, as we have already nearly reached econonmic autarky. ?]
+title: 提高进口关税。
+subtitle: +2 财政预算. Other countries will retaliate by increasing tariffs of their own. [? if tariffs > 5 : Further increases in tariffs will not raise revenue, as we have already nearly reached econonmic autarky. ?]
 choose-if: tariffs <= 5
 on-arrival: tariff_hike_vote = 1
 go-to: tariff_hike_done if not legislature_enabled; legislative_menu if legislature_enabled
 
-We propose a bill to increase tariff rates.
+我们提出一项议案,提高关税税率。
 
 @tariff_hike_done
 on-arrival: tariffs += 1; inflation += 1 if inflation > 0; inflation += 0.5 if inflation <= 0; unemployed += 1.5; budget += 2; workers_spd -= 5; unemployed_spd -= 5; rural_spd += 4*(1-dissent); old_middle_spd += 3*(1-dissent); ddp_relation -= 5; dvp_relation -= 2; west_relation -= 1; east_relation -= 1; reparations_negotiation -= 2; eu_progress -= 1 if eu_progress > 0; peoples_party_support += 1; economic_growth -= 0.4; capital_strike_progress += 1 if tariffs >= 3; socialism -= 2
 
-Increasing tariffs leads to higher prices for basic goods, increasing inflation and hurting consumption among the working class. Retaliatory tariffs reduce the competitiveness of German exports, raising unemployment among workers. They also lead to an atmosphere of international suspicion, reducing our ability to negotiate with other countries.
+提高关税会推高基本商品的价格,加剧通货膨胀,损害工人阶级的消费。报复性关税削弱德国出口的竞争力,推高工人失业。它们还会造成国际猜忌的气氛,削弱我们与他国谈判的能力。
 
-On the other hand, agricultural producers and some small businesses benefit from higher tariffs, as farmers can now command higher prices for grain, and formerly uncompetitive businesses are now able to function.
+另一方面,农业生产者与部分小企业则从高关税中受益 —— 农民如今能以更高价格出售粮食,原先缺乏竞争力的企业也能继续经营。
 
 @lower_tariffs
-title: Lower tariffs on imports.
+title: 降低进口关税。
 choose-if: budget >= 2 and tariffs > -5
-subtitle: -2 budget. [? if tariffs <= -5 : There are no tariffs left to cut. ?]
+subtitle: -2 财政预算。[? if tariffs <= -5 : 已无可削减的关税。 ?]
 on-arrival: tariff_cut_vote = 1
 go-to: tariff_cut_done if not legislature_enabled; legislative_menu if legislature_enabled
 
-We propose a bill to decrease tariff rates.
+我们提出一项议案,降低关税税率。
 
 @tariff_cut_done
 on-arrival: tariffs -= 1; budget -= 2; inflation -= 0.5; workers_spd += 4*(1-dissent); unemployed_spd += 4*(1-dissent); rural_spd -= 5; old_middle_spd -= 3; west_relation += 1; east_relation += 1; eu_progress += 1 if eu_progress > 0; economic_growth += 0.4; socialism += 2
 
-Lowering tariffs helps workers and the urban poor by reducing prices for basic necessities. In addition, other countries are pleased by lower tariffs, and are more willing to negotiate on many issues.
+降低关税通过压低基本必需品的价格,帮助了工人与城市贫民。此外,其他国家也对低关税感到满意,更愿意在许多问题上进行谈判。
 
-Farmers are hurt by this policy, as cheap imported grain leads to ruin for some small producers. In general, cheap imports are detrimental for small-scale industries aimed at the domestic market.
+农民则因这项政策受损 —— 廉价的进口粮食使一些小生产者破产。总的来说,廉价进口对面向国内市场的小型产业不利。

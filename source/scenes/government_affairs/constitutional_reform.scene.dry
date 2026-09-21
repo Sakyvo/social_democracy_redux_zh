@@ -1,4 +1,4 @@
-title: Constitutional Reform
+title: 宪法改革
 new-page: true
 is-card: true
 view-if: spd_in_government = 1 and justice_minister_party = "SPD" and constitutional_reform_timer = 0 and judicial_reform >= 4 and neorevisionism and ((in_weimar_coalition) or (in_spd_majority) or (in_left_front) or (in_popular_front)) and constitutional_reform < 3
@@ -13,28 +13,28 @@ tags: govt_affairs
 
 # alternatively, a constitutional referendum can be initiated, that requires a simple majority of voters to pass (as I understand article 76). This should depend on support for the republic and for democracy, and the relationships with the other parties (more similar to the presidential election).
 
-= Constitutional Reform
+= 宪法改革
 
 # the ideas for constitutional reform here are based on the bundesrepublik basic law... I'm not sure if it's totally realistic to what someone like Mierendorff would've wanted.
 
-Many neorevisionists consider the Weimar Constitution to be inadequate. They believe that the clauses of the constitution are in part responsible for the instability of the country, and must change in order to build a more stable democratic republic. Ideas from both socialists and liberals
+许多新修正主义者认为魏玛宪法并不完善。他们相信,宪法条文在一定程度上要为国家的动荡负责,必须加以修改,以建立一个更稳定的民主共和国。社会主义者与自由主义者都提出了各种设想。
 
-A constitutional reform requires either a two-thirds supermajority in the Reichstag, or a constitutional referendum with support from a majority of the electorate. If we do not have a supermajority in the Reichstag, we must be assured of strong support from the other parties for the constitutional referendum.
+宪法改革要么需要国会三分之二的绝对多数,要么需要一场获得多数选民支持的宪法公投。若我们在国会没有绝对多数,就必须确保其他政党对宪法公投给予有力支持。
 
 @reforms_menu
 
-- @vote_threshold: Change the vote threshold.
-- @constructive_vonc: Ban non-constructive votes of no confidence.
-- @presidential_powers: Reduce presidential powers.
-- @supreme_soviet: Empower work councils to make them the new basis of governance.
-- @as_is: Do not pursue constitutional reform.
+- @vote_threshold: 修改选举门槛。
+- @constructive_vonc: 禁止非建设性不信任案。
+- @presidential_powers: 削减总统权力。
+- @supreme_soviet: 扩大工厂委员会的权力,使其成为治理的新基础。
+- @as_is: 不推动宪法改革。
 - @easy_discard
 - @cancel_advisor_action
 #- @constitutional_bans: Allow the banning of anti-constitutional parties.
 #- @constitutional_convention: Hold a constitutional convention to draft a wholly new constitution for the country.
 
 @vote_threshold
-subtitle: Change the vote threshold to 5% for parties to be represented in the Reichstag.
+subtitle: 将政党进入国会的选举门槛改为 5%。
 on-arrival: {!
 Q.reform_support = Q.spd_normalized;
 if (Q.z_relation > 30) {
@@ -51,30 +51,30 @@ view-if: electoral_threshold = 0
 
 # The left is opposed to this.
 
-Some political thinkers believe that the proliferation of minor parties is responsible for the instability of the republic. They believe that a higher electoral threshold will reduce the influence of small radical parties. Parties that win a plurality in a constituency will maintain their representation, a gift to regional parties such as the BVP. 
+一些政治思想家认为,小党林立是共和国动荡的原因。他们相信,更高的选举门槛会削弱小型激进政党的影响。在选区中赢得相对多数的政党将保留其代表权 —— 这是送给巴伐利亚人民党这类地区性政党的礼物。
 
-The smaller parties will obviously oppose this reform. [? if z_relation > 30 : The Center Party supports this reform, while their BVP partners oppose it. ?] [? if kpd_relation > 50 and kpd_normalized >= 0.1 : Perhaps surprisingly, the KPD supports this reform. ?] [? if nsdap_normalized >= 0.2 : The NSDAP supports this reform, as they believe they have something to gain. ?]
+小党显然会反对这项改革。 [? if z_relation > 30 : 中央党支持这项改革,而他们的伙伴巴伐利亚人民党则反对。 ?] [? if kpd_relation > 50 and kpd_normalized >= 0.1 : 或许出人意料,共产党支持这项改革。 ?] [? if nsdap_normalized >= 0.2 : 纳粹党支持这项改革,因为他们相信自己能从中获益。 ?]
 
-The SPD Left opposes this change, as they believe it to be anti-democratic.
+社民党左翼反对这一改动,认为它反民主。
 
-- @vote_threshold_2: Call a constitutional referendum to pass the reform!
-- @reforms_menu: See other reform options.
+- @vote_threshold_2: 发起宪法公投以通过这项改革!
+- @reforms_menu: 查看其他改革选项。
 
 
 @vote_threshold_2
 choose-if: reform_support >= pass_threshold
-unavailable-subtitle: We do not have enough support for this policy. [? if pro_republic < 65 : We should have an additional margin for the referendum since we need a majority of voters, and many voters who do not support the republic will not participate. ?] [? if z_relation <= 30 : The Center Party does not trust us enough to support this policy. ?]
+unavailable-subtitle: 我们在这一政策上没有得到足够的支持。[? if pro_republic < 65 : 公投需要额外的余量,因为我们需要多数选民支持,而许多不支持共和国的选民不会参与投票。 ?] [? if z_relation <= 30 : 中央党对我们的信任不足以支持这一政策。 ?]
 on-arrival: constitutional_reform += 1; electoral_threshold = 5; ddp_relation -= 25; dvp_relation -= 25; left_dissent += 20; workers_dnvp += workers_other*0.4; workers_nsdap += workers_other*0.4; workers_other *= 0.1; new_middle_dvp += new_middle_other*0.3; new_middle_nsdap += new_middle_other*0.3; new_middle_other *= 0.1; old_middle_dvp += 0.3*old_middle_other; old_middle_nsdap += 0.3*old_middle_other; old_middle_dnvp += 0.3*old_middle_other; old_middle_other *= 0.1; rural_dnvp += 0.5*rural_other; rural_nsdap += 0.4*rural_other; rural_other *= 0.1; unemployed_nsdap += 0.3*unemployed_other; unemployed_kpd += 0.4*unemployed_other; unemployed_other *= 0.2; catholics_z += 0.6*catholics_other; catholics_other *= 0.1;
 achievement: verfassungsreform
 
 # this should result in a redistribution of votes - other parties should not get so many votes anymore. maybe ddp and dvp get a recovery of middle-class votes? or maybe they flow to the others.
 
-We have passed a constitutional amendment to increase the electoral threshold to 5%. This is likely to benefit the larger parties and harm the smaller ones.
+我们通过了一项宪法修正案,将选举门槛提高到 5%。这很可能会让大党受益,让小党受损。
 
 
 
 @constructive_vonc
-subtitle: Votes of no confidence can only be called if an alternative plan for government formation can be passed, greatly reducing their incidence.
+subtitle: 只有在能同时通过一个替代组阁方案时,才可提出不信任案,从而大幅减少其发生。
 on-arrival: {!
 Q.reform_support = Q.spd_normalized + Q.ddp_normalized;
 if (Q.z_relation >= 30) {
@@ -86,21 +86,21 @@ if (!Q.stresemann_dead) {
 !}
 view-if: constructive_vonc = 0
 
-[? if z_relation >= 30 : The Weimar Coalition parties, the [+ ddp_name +] and Center Party, support this reform, which will greatly improve the stability of the government. ?] [? if z_relation < 30 : The [+ ddp_name +] supports this reform, but the Center Party does not trust us enough to support the constitutional referendum. ?] The more conservative and radical right-wing parties and the KPD are in opposition, as they seem to relish in the republican system's instability.
+[? if z_relation >= 30 : 魏玛联盟各党 —— [+ ddp_name +] 与中央党 —— 支持这项改革,它将大大提升政府的稳定性。 ?] [? if z_relation < 30 : [+ ddp_name +] 支持这项改革,但中央党对我们的信任不足以支持这场宪法公投。 ?] 较为保守与激进的右翼政党以及共产党则表示反对,他们似乎对共和体制的动荡乐在其中。
 
-- @constructive_vonc_2: Call a constitutional referendum to pass the reform!
-- @reforms_menu: See other reform options.
+- @constructive_vonc_2: 发起宪法公投以通过这项改革!
+- @reforms_menu: 查看其他改革选项。
 
 @constructive_vonc_2
 choose-if: reform_support >= pass_threshold
-unavailable-subtitle: We do not have enough support for this policy. [? if pro_republic < 65 : We should have an additional margin for the referendum since we need a majority of voters, and many voters who do not support the republic will not participate. ?] [? if z_relation <= 30 : The Center Party does not trust us enough to support this policy. ?]
+unavailable-subtitle: 我们在这一政策上没有得到足够的支持。[? if pro_republic < 65 : 公投需要额外的余量,因为我们需要多数选民支持,而许多不支持共和国的选民不会参与投票。 ?] [? if z_relation <= 30 : 中央党对我们的信任不足以支持这一政策。 ?]
 on-arrival: constitutional_reform += 1; constructive_vonc = 1
 achievement: verfassungsreform
 
-We have successfully passed a constitutional amendment to ban votes of no confidence when a new government cannot be formed. Hopefully this increases the stability of our governments.
+我们成功通过了一项宪法修正案,禁止在无法组建新政府时提出不信任案。但愿这能提升我们政府的稳定性。
 
 @presidential_powers
-subtitle: The president can no longer dissolve the Reichstag at will, or call a *Reichsexekution* on state governments.
+subtitle: 总统不能再随意解散国会,也不能对州政府发动*国家执行*。
 on-arrival: {!
 Q.reform_support = Q.spd_normalized + Q.ddp_normalized + Q.kpd_normalized;
 if (Q.z_relation > 49 && (Q.president == "Hindenburg" || Q.president == "Eckener")) {
@@ -111,38 +111,38 @@ if (Q.z_relation > 49 && (Q.president == "Hindenburg" || Q.president == "Eckener
 !}
 view-if: presidential_powers = 0
 
-The wide-ranging presidential powers promised by the constitution are a potential gateway to authoritarianism. Thus, we can support reforms that limit the powers of the president, ending his power to unilaterally terminate an elected government and to remove state governments.
+宪法所许诺的广泛总统权力,是通往威权主义的潜在门户。因此,我们可以支持限制总统权力的改革,终结他单方面终止民选政府、以及撤换州政府的权力。
 
-The KPD is in favor of this reform, having been victims of the *Reichsexekution* in the past (when KPD-supported state governments in Thuringia and Saxony were removed). The democrats of the [+ ddp_name +] also support this. [? if president == "Hindenburg": However, the opposition from conservatives is vehement, as they see a reduction in presidential powers as disrespectful to Hindenburg. ?] [? if z_relation <= 49 and president == "Hindenburg" : Thus, the Center Party has been influenced to oppose these reforms. ?] [? if z_relation > 49 and president == "Hindenburg" : Despite this, the Center Party supports the proposed reform. ?] [? if president == "Braun" : The Center Party supports this reform. ?]
+共产党支持这项改革 —— 他们过去曾是*国家执行*的受害者(当时由图林根与萨克森共产党支持的州政府被撤换)。[+ ddp_name +] 的民主派也支持此举。 [? if president == "Hindenburg": 然而,保守派的反对极其激烈,他们认为削减总统权力是对兴登堡的不敬。 ?] [? if z_relation <= 49 and president == "Hindenburg" : 因此,中央党受到这种影响,转而反对这些改革。 ?] [? if z_relation > 49 and president == "Hindenburg" : 尽管如此,中央党仍支持拟议的改革。 ?] [? if president == "Braun" : 中央党支持这项改革。 ?]
 
-- @presidential_powers_2: Call a constitutional referendum to pass the reform!
-- @reforms_menu: See other reform options.
+- @presidential_powers_2: 发起宪法公投以通过这项改革!
+- @reforms_menu: 查看其他改革选项。
 
 @presidential_powers_2
 choose-if: reform_support >= pass_threshold
-unavailable-subtitle: We do not have enough support for this policy. [? if pro_republic < 65 : We should have an additional margin for the referendum since we need a majority of voters, and many voters who do not support the republic will not participate. ?] [? if z_relation <= 49 and president != "Braun" : The Center Party does not trust us enough to support this policy. ?]
+unavailable-subtitle: 我们在这一政策上没有得到足够的支持。[? if pro_republic < 65 : 公投需要额外的余量,因为我们需要多数选民支持,而许多不支持共和国的选民不会参与投票。 ?] [? if z_relation <= 49 and president != "Braun" : 中央党对我们的信任不足以支持这一政策。 ?]
 on-arrival: constitutional_reform += 1; presidential_powers = 1
 achievement: verfassungsreform
 
-We have successfully passed a constitutional amendment to limit presidential powers! Hopefully this results in a less authoritarian Germany.
+我们成功通过了一项宪法修正案,限制总统权力!但愿这能带来一个不那么威权的德国。
 
 @supreme_soviet
 view-if: (nationalization_progress + socializations >= 3 and works_councils >= 3 and (president != "Hindenburg" or presidential_powers == 1)) and supreme_soviet != 1
-subtitle: Establish a new "Supreme Soviet" elected by the works councils to replace the Reichstag.
+subtitle: 设立一个由工厂委员会选举产生的「最高苏维埃」,以取代国会。
 on-arrival: reform_support = spd_normalized + kpd_normalized + sapd_normalized
 
-Our large-scale socializations of the economy and empowerment of works councils has laid the groundwork for a transition into a full dictatorship of the proletariat, effectively turning the Reichstag into a rump parliament with little genuine power. All to the left of and including most of the SPD will vote for, but we will face immense opposition from everyone else.
+我们对经济的大规模社会化与对工厂委员会的赋权,已为向完全的无产阶级专政过渡奠定了基础,实际上把国会变成了一个几乎毫无实权的残存议会。社民党多数及其左侧的一切力量都会投赞成票,但我们也将面临来自其他所有人的巨大反对。
 
-- @supreme_soviet_2: Call a constitutional referendum to pass the reform!
-- @reforms_menu: See other reform options.
+- @supreme_soviet_2: 发起宪法公投以通过这项改革!
+- @reforms_menu: 查看其他改革选项。
 
 @supreme_soviet_2
 choose-if: reform_support >= pass_threshold
-unavailable-subtitle: We do not have enough support for this policy. [? if pro_republic < 65 : We should have an additional margin for the referendum since we need a majority of voters, and many voters who do not support the republic will not participate. ?] [? if z_relation <= 49 and president != "Braun" : The Center Party does not trust us enough to support this policy. ?]
+unavailable-subtitle: 我们在这一政策上没有得到足够的支持。[? if pro_republic < 65 : 公投需要额外的余量,因为我们需要多数选民支持,而许多不支持共和国的选民不会参与投票。 ?] [? if z_relation <= 49 and president != "Braun" : 中央党对我们的信任不足以支持这一政策。 ?]
 on-arrival: constitutional_reform += 1; supreme_soviet = 1; coup_progress = 10; capital_strike_progress = 10; z_relation -= 15; ddp_relation -= 25; dvp_relation -= 50; coalition_dissent += 3
 achievement: raterrepublik
 
-We have successfully passed a constitutional amendment to effectively make works councils the dominant body of governance in the country. 
+我们成功通过了一项宪法修正案,实际上使工厂委员会成为全国治理的主导机构。
 
 @constitutional_bans
 

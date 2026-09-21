@@ -1,4 +1,4 @@
-title: Enacting the Weimar Plan
+title: 执行魏玛计划
 new-page: true
 is-card: true
 view-if: weimar_plan_adopted == 1 and spd_in_government == 1 and economic_minister_party != "SPD" and finance_minister_party != "SPD" and weimar_enacting_timer = 0
@@ -8,91 +8,91 @@ card-image: img/muller_cabinet.jpg
 go-to: plan_menu
 on-departure: weimar_dissent += 1 if unemployed < 16
 
-= Enacting the Plan
+= 执行计划
 
-Now that we are in government, it is time for us to enact our economic plan alongside our partners. As we lack the finance and economic ministries, the task of pursuing the plan has fallen to [+ finance_minister +] of [+ finance_minister_party +] and [+ economic_minister +] of [+ economic_minister_party +]. They are ready to proceed but have approached us to decide how we should go about funding the plan.
+既然我们已经执政,是时候与我们的盟友一道推行经济计划了。由于我们并未掌握财政部与经济部,推行计划的任务落到了 [+ finance_minister_party +] 的 [+ finance_minister +] 与 [+ economic_minister_party +] 的 [+ economic_minister +] 身上。他们已准备推进,但前来询问我们该如何为计划筹资。
 
 @plan_menu
   
-- @taxes_1: We should fund our plan by raising taxes.
-- @taxes_2: We should fund our plan by raising taxes.
-- @welfare: We have no choice but to cut welfare and social spending to fund our plan.
-- @military: Cuts to military spending will give us the funds we need.
-- @just_enact_1: We will not find ways to raise funds for now and simply begin with the funds that we have.
-- @just_enact_2: We will not find ways to raise funds for now and simply begin with the funds that we have.
-- @delay: We do not have the funds we need. We will have to delay pursuing of our plan.
+- @taxes_1: 我们应当通过加税为计划筹资。
+- @taxes_2: 我们应当通过加税为计划筹资。
+- @welfare: 我们别无选择,只能削减福利与社会开支来为计划筹资。
+- @military: 削减军费将为我们提供所需的资金。
+- @just_enact_1: 我们暂且不设法筹资,直接以手头的资金开始。
+- @just_enact_2: 我们暂且不设法筹资,直接以手头的资金开始。
+- @delay: 我们没有所需的资金。只能推迟推行我们的计划。
 
 @taxes_1
 view-if: z_party_leader == "Kaas"
   
-Funding the plan by increasing taxes is certainly one option, though one that [+ finance_minister +] is reluctant to pursue. His preferred course is to fund the plan via cuts to social spending.
+通过加税为计划筹资当然是一个选项,但 [+ finance_minister +] 不愿采取。他倾向的路线是通过削减社会开支来为计划筹资。
 
-- @convince: We will use our ties with [+ finance_minister_party +] to sway [+ finance_minister +]. 
-- @compromise: Perhaps we can fund the plan through a combination of tax hikes and social spending cuts as a compromise.
-- @plan_menu: What are the other options?
+- @convince: 我们将利用与 [+ finance_minister_party +] 的关系来影响 [+ finance_minister +]。
+- @compromise: 或许我们可以折中,以加税与削减社会开支的双管齐下来为计划筹资。
+- @plan_menu: 还有其他什么选项?
 
 @convince
 choose-if: z_relation >= 70
-unavailable-subtitle: The Center Party is unwilling to be convinced.
+unavailable-subtitle: 中央党不愿被说服。
 on-arrival: z_relation -= 5
 
-We have managed to convince [+ finance_minister +] to fund the plan with an increase in taxes. Now we must decide how to go about the tax hikes.
+我们成功说服 [+ finance_minister +] 以加税为计划筹资。现在我们必须决定如何加税。
 
-- @tax_rich: Our tax hikes will be aimed specifically at the rich.
-- @general_tax: We will raise taxes across the board.
+- @tax_rich: 我们的加税将专门针对富人。
+- @general_tax: 我们将全面加税。
 
 @compromise
 on-arrival: upper_tax_rates += 1; unemployed += 1.4; inflation += 0.7; new_middle_spd -= 2; old_middle_spd -= 2; workers_spd -= 6; unemployed_spd -= 6; workers_kpd += 3; welfare -= 1; reformist_dissent += 10; left_dissent += 10; labor_dissent += 10; center_dissent += 5; neorevisionist_dissent += 5; dvp_relation += 5; z_relation += 3; pro_republic -= 3; coalition_dissent -= 1 if in_grand_coalition; kpd_coalition_dissent += 2; kpd_relation -= 8; works_program += 1; unemployed -= 3 if unemployed >= 8; workers_spd += 6*(1-dissent); unemployed_spd += 4*(1-dissent); new_middle_spd += 3*(1-dissent); old_middle_spd += 2*(1-dissent); rural_spd += 2*(1-dissent); moderate_plan_progress += 1; inflation += 1 if unemployed < 10; kpd_relation -= 5 if in_popular_front or in_left_front; economic_growth += 1.2
 
-Our suggestion to synthesize both methods of raising funds for the plan is agreeable to [+ finance_minister +] and we do so. This is viewed with suspicion from many of our supporters, and the results are yet unclear, though the economy does seem to be improving.
+我们提出把两种筹资方式结合起来,这一建议得到 [+ finance_minister +] 的认可,我们便照此办理。许多支持者对此持怀疑态度,结果也尚不明朗 —— 尽管经济似乎确实在好转。
   
 @taxes_2
 view-if: z_party_leader == "Joos"
 
-Funding the plan by increasing taxes is certainly one option, and one that, under influence from Joos, [+ finance_minister +] is willing to accept. There still the matter, however, of how to go about increasing taxes.
+通过加税为计划筹资当然是一个选项;在约斯的影响下,[+ finance_minister +] 也愿意接受。不过,如何加税仍是个问题。
 
-- @tax_rich: Our tax hikes will be aimed specifically at the rich.
-- @general_tax: We will raise taxes across the board.
+- @tax_rich: 我们的加税将专门针对富人。
+- @general_tax: 我们将全面加税。
 
 @tax_rich
 choose-if: z_relation >= 70 or z_party_leader == "Joos"
-unavailable-subtitle: This is unacceptable to our partners.
+unavailable-subtitle: 我们的盟友无法接受这一点。
 on-arrival: coalition_dissent += 1 if z_party_leader == "Kaas"; z_relation -= 5 if z_party_leader == "Kaas"; upper_tax_rates += 1; capital_strike_progress += 1; capital_strike_progress += 1 if upper_tax_rates > 1; capital_strike_progress += 1 if upper_tax_rates > 3; workers_spd += 3*(1-dissent); workers_ddp += 1; old_middle_spd -= 3; old_middle_ddp -= 1; new_middle_spd -= 3; new_middle_ddp -= 1; coalition_dissent += 1 if in_grand_coalition; coalition_dissent += 1 if capital_strike_progress >= 5; dvp_relation -= 4; unemployed += 1; finance_goal_completed += 1; inflation += 0.9; works_program += 1; unemployed -= 3 if unemployed >= 8; workers_spd += 5*(1-dissent); workers_ddp += 1; unemployed_spd += 3*(1-dissent); unemployed_ddp += 1; new_middle_spd += 2*(1-dissent); new_middle_ddp += 1; old_middle_spd += 1*(1-dissent); old_middle_ddp += 1; rural_spd += 2*(1-dissent); moderate_plan_progress += 1; kpd_coalition_dissent += 1; inflation += 1 if unemployed < 10; kpd_relation -= 5 if in_popular_front or in_left_front; weimar_dissent += 2; economic_growth += 1.2
 
-We have decided to fund our economic plan through increased taxes on the rich. [? if z_party_leader == "Kaas" : This decision strains the integrity of our collaboration, but has been begrudgingly accepted. ?] [? if z_party_leader == "Joos" : This is broadly acceptable to the parties involved, though a confrontation with the capitalists is not impossible should we continue down this course. ?]
+我们决定通过对富人加税来为经济计划筹资。 [? if z_party_leader == "Kaas" : 这一决定损害了我们合作的诚意,但对方已勉强接受。 ?] [? if z_party_leader == "Joos" : 相关各方大体上可以接受,不过若我们继续沿这条路走下去,与资本家发生正面冲突也并非不可能。 ?]
 
 @general_tax
 on-arrival: works_program += 1; unemployed -= 3 if unemployed >= 8; inflation += 1.5; workers_spd += 5*(1-dissent); workers_ddp += 1; unemployed_spd += 3*(1-dissent); unemployed_ddp += 1; new_middle_spd += 2*(1-dissent); new_middle_ddp += 1; old_middle_spd += 1*(1-dissent); old_middle_ddp += 1; rural_spd += 2*(1-dissent); moderate_plan_progress += 1; kpd_coalition_dissent += 1; inflation += 1 if unemployed < 10; kpd_relation -= 5 if in_popular_front or in_left_front; upper_tax_rates += 1; lower_tax_rates += 1; unemployed += 1.5; capital_strike_progress -= 1; inflation -= 1; new_middle_spd -= 2; new_middle_ddp -= 1; old_middle_spd -= 2; old_middle_ddp -= 1; workers_spd -= 2; workers_ddp -= 1; rural_spd -= 2; rural_z -= 1; kpd_coalition_dissent += 1; kpd_relation -= 5; left_dissent += 5; weimar_dissent += 1; economic_growth += 1.2
 
-We have decided to fund our economic plan through increased taxes on the rich and implementation has begun. Many in our party say that we should have insisted on tax increases exclusively on the rich, but what is done is done and we can only hope that the plan can successfully fix the economy.
+我们决定通过对富人加税来为经济计划筹资,并已开始实施。党内许多人说,我们本应坚持只对富人加税,但木已成舟,我们只能指望这项计划能成功修复经济。
 
 @welfare
 on-arrival: workers_spd -= 12; unemployed_spd -= 12; workers_kpd += 4; workers_kpd += 2 if sapd_consolidated == 0; workers_sapd += 2 if sapd_consolidated == 1; welfare -= 2; reformist_dissent += 20; left_dissent += 20; labor_dissent += 20; center_dissent += 10; neorevisionist_dissent += 10; dvp_relation += 10; z_relation += 6 if z_party_leader == "Kaas"; z_relation -= 2 if z_party_leader == "Joos"; pro_republic -= 6; coalition_dissent -= 2 if in_grand_coalition; kpd_coalition_dissent += 2; kpd_relation -= 16; inflation -= 0.6; unemployed += 0.8; works_program += 1; unemployed -= 3 if unemployed >= 8; inflation += 1.5; workers_spd += 6*(1-dissent); unemployed_spd += 4*(1-dissent); new_middle_spd += 3*(1-dissent); old_middle_spd += 2*(1-dissent); rural_spd += 2*(1-dissent); moderate_plan_progress += 1; kpd_coalition_dissent += 1; inflation += 1 if unemployed < 10; kpd_relation -= 5 if in_popular_front or in_left_front; economic_growth += 1.2
 
-We have decided to fund our economic plan through cuts to welfare and social spending across the board. This angers the workers, who begin to view the Weimar Plan as nothing more than disguised austerity, but it has allowed us to implement the plan. [? if z_party_leader == "Joos" : Joos is puzzled by our course but we reason that welfare cuts in this situation are simply necessary. He folds and agrees with the right-wing of his party satisfied by the measures. ?] [? if z_party_leader == "Kaas" : Our decision is approved of by [+ finance_minister +] and Kaas, bolstering ties, though it has left many in the Catholic trade unions who had been seeking to align with the SPD feeling confused. ?]
+我们决定通过全面削减福利与社会开支来为经济计划筹资。这激怒了工人,他们开始把魏玛计划视为不过是变相的紧缩;但这让我们得以推行该计划。 [? if z_party_leader == "Joos" : 约斯对我们的路线感到困惑,但我们辩称此情此景下削减福利实属必要。他让步了,而他党内因其右翼对这些措施感到满意而表示同意。 ?] [? if z_party_leader == "Kaas" : 我们的决定得到 [+ finance_minister +] 与卡斯的赞许,巩固了彼此关系;但这让许多一直试图与社民党结盟的天主教工会人士感到困惑。 ?]
 
 @military
 choose-if: reichswehr_strength >= 40 and (((z_relation >= 75 and z_party_leader == "Kaas") or (z_relation >= 50 and z_party_leader == "Joos")) or reichswehr_minister_party == "SPD")
-unavailable-subtitle: [? if reichswehr_strength < 40 : There is not enough left to cut. ?] [? if not ((z_relation >= 75 and z_party_leader == "Kaas") or (z_relation >= 50 and z_party_leader == "Joos")) : Our partners are too committed to the military and not willing to engage in large scale cuts. ?]
+unavailable-subtitle: [? if reichswehr_strength < 40 : 已没有多少可削的了。 ?] [? if not ((z_relation >= 75 and z_party_leader == "Kaas") or (z_relation >= 50 and z_party_leader == "Joos")) : 我们的盟友太忠于军方,不愿进行大规模削减。 ?]
 on-arrival: coalition_dissent += 2 if in_grand_coalition == 1; coalition_dissent += 1 if z_party_leader == "Kaas"; reichswehr_militancy -= 2; reichswehr_strength -= 40; dvp_relation -= 10; z_relation -= 5 if z_party_leader == "Kaas"; reichswehr_loyalty -= 0.10; coup_progress += 2; reichswehr_goal_completed = 1; works_program += 1; unemployed -= 3 if unemployed >= 8; inflation += 1.5; workers_spd += 5*(1-dissent); workers_ddp += 1; unemployed_spd += 3*(1-dissent); unemployed_ddp += 1; new_middle_spd += 2*(1-dissent); new_middle_ddp += 1; old_middle_spd += 1*(1-dissent); old_middle_ddp += 1; rural_spd += 2*(1-dissent); moderate_plan_progress += 1; kpd_coalition_dissent += 1; inflation += 1 if unemployed < 10; kpd_relation -= 5 if in_popular_front or in_left_front; weimar_dissent += 1
 
-We have decided to fund our economic plan through cuts to military spending. [? if z_party_leader == "Kaas" and reichswehr_minister_party != "SPD" : This was only very reluctantly agreed upon by our partners, who expect us to pay them back in future with concessions in some form. The military is equally upset and rumors of a coup begin to spread around, though likely sensationalist. ?] [? if z_party_leader == "Joos" and reichswehr_minister_party != "SPD" : This has been accepted thanks to the friendly influence of Joos, though it has still caused noticeable tension in government. The military too is upset, and rumors of a coup are spread around, though likely sensationalist. ?] [? if reichswehr_minister_party == "SPD" : As we control the Reichswehr Ministry, we do not even need to convince our partners to take this course and quickly provide the funds needed for the plan by taking from the army. Despite this, though, many are displeased with this and the army is no exception with sensationalist rumors of a coup being passed around. ?]
+我们决定通过削减军费来为经济计划筹资。 [? if z_party_leader == "Kaas" and reichswehr_minister_party != "SPD" : 我们的盟友只是非常勉强地同意了这一点,他们指望我们日后以某种形式的让步作为回报。军方同样不满,政变的传闻开始四处流传 —— 尽管多半耸人听闻。 ?] [? if z_party_leader == "Joos" and reichswehr_minister_party != "SPD" : 多亏约斯的友好影响,这一方案得以通过,但仍给政府内部造成了明显的紧张。军方同样不满,政变传闻四处流传,尽管多半耸人听闻。 ?] [? if reichswehr_minister_party == "SPD" : 由于我们掌握国防部,甚至无需说服盟友接受这一路线,很快便从军队那里取得计划所需的资金。尽管如此,许多人对这种做法仍感不满,军队也不例外 —— 四处流传着耸人听闻的政变传闻。 ?]
 
 @just_enact_1
 view-if: budget >= 2
-subtitle: -2 budget.
+subtitle: -2 财政预算。
 on-arrival: budget -= 2; works_program += 1; unemployed -= 3 if unemployed >= 8; inflation += 1.5; workers_spd += 5*(1-dissent); workers_ddp += 1; unemployed_spd += 3*(1-dissent); unemployed_ddp += 1; new_middle_spd += 2*(1-dissent); new_middle_ddp += 1; old_middle_spd += 1*(1-dissent); old_middle_ddp += 1; rural_spd += 2*(1-dissent); moderate_plan_progress += 1; kpd_coalition_dissent += 1; inflation += 1 if unemployed < 10; kpd_relation -= 5 if in_popular_front or in_left_front; weimar_dissent += 1 if z_party_leader != "Joos"; economic_growth += 1.2;
 
-We decide to delay a decision on how to raise additional funds as it is not yet necessary thanks to our current surplus that allows us to immediately implement the plan. This is fine by our coalition partners and implementation begins swiftly.
+我们决定暂缓决定如何筹措额外资金,因为目前的盈余使我们能够立即实施计划,暂时无需另筹款项。我们的执政盟友对此表示接受,实施随即迅速展开。
 
 @just_enact_2
 view-if: budget = 1
-subtitle: -1 budget.
+subtitle: -1 财政预算。
 on-arrival: budget -= 1; works_program += 1; unemployed -= 2 if unemployed >= 8; inflation += 1; workers_spd += 3*(1-dissent); workers_ddp += 1; unemployed_spd += 2*(1-dissent); new_middle_spd += 1*(1-dissent); new_middle_ddp += 1; old_middle_ddp += 1; rural_spd += 1*(1-dissent); moderate_plan_progress += 1; kpd_coalition_dissent += 1; inflation += 1 if unemployed < 10; kpd_relation -= 5 if in_popular_front or in_left_front; economic_growth += 0.7
 
-We decide to delay a decision on how to raise additional funds as it is not yet necessary thanks to our current small surplus that allows us to implement the plan, though only partially. This is fine by our coalition partners and partial implementation begins as we deliberate on a more longterm solution to our funding issues.
+我们决定暂缓决定如何筹措额外资金,因为目前的小幅盈余使我们能够实施计划 —— 尽管只是部分实施。我们的执政盟友对此表示接受,部分实施随即展开,而我们则继续审议更长期的筹资方案。
 
 @delay
 on-arrival: z_relation -= 5 if z_party_leader == "Joos"; ddp_relation -= 5; weimar_dissent += 1 if z_party_leader == "Joos"
 
-This takes our coalition partners by surprise, but they are fine with waiting. [? if z_party_leader == "Joos" : Joos is puzzled by the delay, but he accepts our argument that if we rush implementation the economy will only worsen. ?]
+这让我们的执政盟友感到意外,但他们并不介意等待。 [? if z_party_leader == "Joos" : 约斯对这一拖延感到困惑,但他接受了我们的论点:若仓促实施,经济只会更糟。 ?]
