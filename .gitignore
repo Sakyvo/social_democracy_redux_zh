@@ -1,3 +1,8 @@
 node_modules/
 out/game.json
 out/html/game.json
+out/html/core.js
+out/html/jquery-1.11.1.min.js
+out/html/index.html
+out/html/game.js
+out/html/game.css
