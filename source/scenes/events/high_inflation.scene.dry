@@ -16,17 +16,17 @@ The people and the press are clamoring for action to reduce inflation.
 - @price_controls: Impose price and wage controls.
 - @tighten_controls: Tighten price and wage controls.
 - @bank: Surely the Reichsbank has a plan this time?
-- @nothing: Realistically, there is nothing we can do.
+- @nothing: 现实地说,我们无能为力。
 
 @taxes
 on-arrival: upper_tax_rates += 1; lower_tax_rates += 1; budget += 2; unemployed += 1.5; capital_strike_progress -= 1; inflation -= 1; hyperinflation -= 0.2; new_middle_spd -= 3; old_middle_spd -= 3; workers_spd -= 3; rural_spd -= 3; kpd_coalition_dissent += 1; kpd_relation -= 5; left_dissent += 5; economic_growth -= 0.4
 
-Raising taxes is unpopular among everyone, but it might be what it takes to keep inflation under control.
+加税在所有人中都不受欢迎,但这或许正是控制通货膨胀所必需的。
 
 @welfare
 on-arrival: welfare -= 1; budget += 1; capital_strike_progress -= 2; unemployed += 1.5; new_middle_spd += 4*(1-dissent); old_middle_spd += 4*(1-dissent); workers_spd -= 5; unemployed_spd -= 5; inflation -= 1; hyperinflation -= 0.2; left_dissent += 5; labor_dissent += 5; center_dissent += 5; kpd_coalition_dissent += 1; economic_growth -= 0.4
 
-Reducing the amount of government spending should reduce the inflation rate, according to classical economics. But it imposes pain upon the people who are suffering the most.
+依古典经济学,削减政府开支应当能降低通货膨胀率。但这会把痛苦加诸最受苦的人身上。
 
 @price_controls
 view-if: not price_controls
@@ -48,5 +48,5 @@ Unfortunately, but perhaps expectedly, the Reichsbank is refusing to help the go
 @nothing
 on-arrival: capital_strike_progress += 1
 
-Realistically, there is nothing we can do to stem the tide of inflation.
+现实地说,我们无法遏止通货膨胀的浪潮。
 

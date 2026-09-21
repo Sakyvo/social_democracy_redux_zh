@@ -47,4 +47,4 @@ view-if: year = 1931 and month = 1
 priority: 2
 max-visits: 1
 
-A new year begins. [? if works_program = 0 : 失业率继续螺旋上升。纳粹党的力量持续增长。 ?][? if works_program > 0 : 一项旨在降低失业的公共工程计划已经推行。 ?] [? if works_program > 0 and unemployment > 15 : 然而,失业率仍然高得令人不安。 ?]
+新的一年开始了。 [? if works_program = 0 : 失业率继续螺旋上升。纳粹党的力量持续增长。 ?][? if works_program > 0 : 一项旨在降低失业的公共工程计划已经推行。 ?] [? if works_program > 0 and unemployment > 15 : 然而,失业率仍然高得令人不安。 ?]

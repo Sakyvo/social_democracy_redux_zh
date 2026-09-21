@@ -10,4 +10,4 @@ on-arrival: in_right_coalition = 0; nsdap_toleration = 0; sa_militancy += 0.05; 
 
 Disputes over the management of the economic crisis as well as the NSDAP's judgement that participation in his government is no longer of benefit to them has lead to the collapse of Brüning's government, followed and accompanied by a campaign of street violence against us and the KPD by the SA.
 
-New elections have been called for [+ next_election_month : month +] [+ next_election_year +].
+新的选举已定于 [+ next_election_month : month +] [+ next_election_year +]。

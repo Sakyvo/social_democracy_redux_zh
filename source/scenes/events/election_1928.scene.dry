@@ -2002,7 +2002,7 @@ Despite the weakened powers of the presidency, appointing a chancellor has remai
 
 He has promised a campaign of revenge against the socialists, and the Nazis have already spilled blood. In his published manifesto, he promises a campaign of unspeakable horror against Jews, and endless wars of violent expansion that will ruin all of Europe.
 
-What are we to do now?
+我们现在该怎么办?
 
 - @fight: We will fight on the streets to prevent Hitler from taking power.
 - @vote_against: We will vote against the nazis in the Reichstag.
@@ -2995,7 +2995,7 @@ on-arrival: chancellor = "Brüning"; new_middle_spd -= 3; old_middle_spd -= 2; w
 
 There are enough votes to form a right-wing coalition of the Z, DVP, DNVP, and various minor parties, essentially replicating the previous Marx government. However, the DNVP is very reluctant to join the government[? if year <= 1928 : , as it had just exited from a coalition with the Center. ?][? if year > 1928 : , as its leader, Alfred Hugenberg, is against the very existence of parliamentary democracy, and is unwilling to join such a coalition anymore. ?]
 
-Chancellor Heinrich Brüning of the Center Party currently rules on an emergency basis, as part of a "presidential government". New elections have been called for [+ next_election_month : month +] [+ next_election_year +]
+Chancellor Heinrich Brüning of the Center Party currently rules on an emergency basis, as part of a "presidential government". 新的选举已定于 [+ next_election_month : month +] [+ next_election_year +]
 
 
 @new_elections_spd

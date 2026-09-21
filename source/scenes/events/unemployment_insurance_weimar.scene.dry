@@ -21,7 +21,7 @@ subtitle: +1 budget. The workers will regard this as a betrayal.
 on-arrival: cut_benefits_vote = 1
 go-to: cut_benefits_done if not legislature_enabled; legislative_menu if legislature_enabled
 
-We propose a bill to cut benefits.
+我们提出一项削减待遇的议案。
 
 @cut_benefits_done
 on-arrival: workers_spd -= 0.12*workers_spd; unemployed_spd -= 0.2*unemployed_spd; workers_kpd += 6; workers_nsdap += 6; unemployed_kpd += 5; unemployed_nsdap += 5; left_dissent += 15; center_dissent += 10; labor_dissent += 15; reformist_dissent += 5; welfare -= 2; budget += 1; unemployed += 3; pro_republic -= 4; kpd_relation -= 8; inflation -= 2; unemployment_insurance_threshold = unemployed; unemployment_insurance_timer = 10; economic_growth -= 0.4; socialism -= 1
@@ -34,7 +34,7 @@ subtitle: Employers are strongly against this. [? if in_grand_coalition: The DVP
 on-arrival: increase_employers_vote = 1
 go-to: increase_employers_done if not legislature_enabled; legislative_menu if legislature_enabled
 
-We propose a bill to increase the contributions of employers.
+我们提出一项提高雇主缴费的议案。
 
 @increase_employers_done
 on-arrival: capital_strike_progress += 2; coalition_dissent = 2 if in_grand_coalition; coalition_dissent += 1; welfare += 1; workers_spd += 6*(1-dissent); unemployed_spd += 6*(1-dissent); old_middle_spd -= 6*(1-dissent); new_middle_spd -= 2*(1-dissent); unemployment_insurance_threshold = unemployed; unemployment_insurance_timer = 10; weimar_dissent += 1 if weimar_plan_adopted == 1; economic_growth -= 0.4; socialism -= 2
@@ -47,7 +47,7 @@ subtitle: Neither workers nor employers will be entirely satisfied or dissatisfi
 on-arrival: balance_vote = 1
 go-to: balance_done if not legislature_enabled; legislative_menu if legislature_enabled
 
-We propose a bill to increase the contributions of both employers and workers.
+我们提出一项同时提高雇主与工人缴费的议案。
 
 @balance_done
 on-arrival: workers_spd -= 4; unemployed_spd -= 5; workers_kpd += 4; unemployed_kpd += 3; unemployed_nsdap += 3; left_dissent += 10; labor_dissent += 8; center_dissent += 5; welfare -= 1; budget += 1; month += 1; kpd_relation -= 4; inflation -= 1; unemployment_insurance_threshold = unemployed; unemployment_insurance_timer = 10; coalition_dissent = 2 if in_grand_coalition and dvp_relation < 30; coalition_dissent += 1 if in_grand_coalition; economic_growth -= 0.2; socialism -= 1

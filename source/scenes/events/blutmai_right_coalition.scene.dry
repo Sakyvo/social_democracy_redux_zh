@@ -40,7 +40,7 @@ What is our party's position?
 
 @dont
 
-It is not our place to campaign on a tragedy that did not involve us.
+那不是我们该拿一场与我们无关的悲剧来做宣传的场合。
 
 @pacifism
 on-arrival: workers_spd += 1*(1-dissent); new_middle_spd += 3*(1-dissent); old_middle_spd += 2*(1-dissent); pacifism += 1; dvp_relation -= 5; kpd_relation -= 5; left_dissent += 5; rb_militancy -= 0.05; sh_militancy -= 0.02; rfb_militancy -= 0.02

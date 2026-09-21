@@ -16,17 +16,17 @@ We must take some action.
 - @welfare: We must reduce welfare and social spending.
 - @price_controls: Impose strict price and wage controls.
 - @volksmark: We must adopt a wholly new currency!
-- @nothing: Realistically, there is nothing we can do.
+- @nothing: 现实地说,我们无能为力。
 
 @taxes
 on-arrival: upper_tax_rates += 2; lower_tax_rates += 2; budget += 4; unemployed += 3; inflation -= 2; hyperinflation -= 0.4; new_middle_spd -= 7; old_middle_spd -= 8; workers_spd -= 5; rural_spd -= 5; kpd_coalition_dissent += 1; kpd_relation -= 10; left_dissent += 10; center_dissent -= 5
 
-Raising taxes is unpopular among everyone, but it might be what it takes to keep inflation under control.
+加税在所有人中都不受欢迎,但这或许正是控制通货膨胀所必需的。
 
 @welfare
 on-arrival: welfare -= 2; budget += 2; capital_strike_progress -= 3; unemployed += 3; new_middle_spd += 6*(1-dissent); old_middle_spd += 6*(1-dissent); workers_spd -= 10; unemployed_spd -= 10; inflation -= 2; hyperinflation -= 0.4; left_dissent += 10; labor_dissent += 10; center_dissent += 5; kpd_coalition_dissent += 1;
 
-Reducing the amount of government spending should reduce the inflation rate, according to classical economics. But it imposes pain upon the people who are suffering the most.
+依古典经济学,削减政府开支应当能降低通货膨胀率。但这会把痛苦加诸最受苦的人身上。
 
 @price_controls
 on-arrival: capital_strike_progress += 6; inflation *= 0.75; hyperinflation = 0; coalition_dissent += 2; unemployed += 2; old_middle_spd -= 8; new_middle_spd -= 6; rural_spd -= 12; workers_spd -= 4; unemployed_spd += 5; labor_dissent += 12; dvp_relation -= 15; z_relation -= 8; ddp_relation -= 6
@@ -42,5 +42,5 @@ Placeholder
 @nothing
 on-arrival: capital_strike_progress += 2; coalition_dissent += 1; hyperinflation += 0.1
 
-Realistically, there is nothing we can do to stem the tide of inflation.
+现实地说,我们无法遏止通货膨胀的浪潮。
 

@@ -29,7 +29,7 @@ go-to: address
 
 The revolutionaries of the party put forward their proposed approach to the crisis. They say that this is a success of our strategies, so long as we take it to the next level and wage the class war from below, just as the businesses now do so from above by seeking to bleed the economy dry.
 
-[? if class_war < 5 : The approach has not yet been adopted. It will take more convincing. ?]
+[? if class_war < 5 : 这一主张尚未被采纳。还需要更多说服工作。 ?]
 
 [? if class_war >= 5 : The approach has been adopted! We can now work on waging the class struggle. ?]
 
@@ -41,7 +41,7 @@ go-to: address
 
 The rightists of the party put forward their proposed approach to the crisis. They say that this is a failure of our strategies, a result of us failing to account for the business community's opinions in our haste to deliver for the workers, and that the transition to socialism must be a gradual process which at all steps benefits the worker, without economic crises.
 
-[? if reconcile_business < 5 : The approach has not yet been adopted. It will take more convincing. ?]
+[? if reconcile_business < 5 : 这一主张尚未被采纳。还需要更多说服工作。 ?]
 
 [? if reconcile_business >= 5 : The approach has been adopted! We can now work on winning back business. ?]
 

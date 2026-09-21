@@ -15,7 +15,7 @@ With Hitler's appointment as chancellor he has wasted no time in attempting to c
 
 @mobilize_1
 subtitle: This risks escalation.
-unavailable-subtitle: We do not have the forces to resist.
+unavailable-subtitle: 我们没有抵抗的力量。
 view-if: spd_prussia != 1
 choose-if: rb_strength*rb_militancy >= 200
 on-arrival: defense_strength = rb_strength*rb_militancy*(1-dissent/2); enemy_strength = sa_strength*sa_militancy

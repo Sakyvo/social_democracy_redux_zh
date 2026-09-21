@@ -14,7 +14,7 @@ He has promised a campaign of revenge against the socialists, and the Nazis have
 
 [? if spd_prussia or z_prussia : As his first move towards consolidating total power, Hitler has ordered the dismissal of the Prussian state government in a procedyre known as the *Reichsexekution*. Many of our members are ready to resist, as caving would surely mean the end. ?]
 
-What are we to do now?
+我们现在该怎么办?
 
 @choose
 
@@ -56,7 +56,7 @@ Q.unemployed_kpd -= 8;
 Q.unemployed_spd -= 4;
 !}
 
-Speeches are made. Votes are held. Bullets fly in the streets. Some socialists are killed or jailed. Others flee the country. What can votes even do at this juncture?
+演说在发表。表决在进行。子弹在街头飞舞。一些社会主义者被杀或入狱。另一些人逃亡国外。在这样一个关口,选票还能有什么用呢?
 
 Snap elections are called, for [+ next_election_month : month +] [+ next_election_year +]. The SA and Stalhelm begin a campaign of violent intimidation in the streets, determined to win the next elections by whatever means it takes. 
 
@@ -69,10 +69,10 @@ Snap elections are called, for [+ next_election_month : month +] [+ next_electio
 @defend
 title: Fight against the overthrow attempt!
 subtitle: Labor will call a general strike. The Reichsbanner and the loyal elements of the Prussian police will resist the coup.
-unavailable-subtitle: We do not have the forces to resist.
+unavailable-subtitle: 我们没有抵抗的力量。
 choose-if: rb_strength*rb_militancy >= 200
 
-The Reichswehr and Stahlhelm are already surrounding Berlin, and the SA is supporting them. This could be civil war. We do realize that, correct? 
+国防军与钢盔团已包围柏林,冲锋队则在支援他们。这可能演变成内战。我们明白这一点,对吧? 
 
 - @defend_2: We will fight, even if it leads to a civil war.
 - @surrender
@@ -109,4 +109,4 @@ title: Give up on the Prussian government.
 on-arrival: spd_prussia = 0; workers_spd -= 5; left_dissent += 10; labor_dissent += 10; rb_militancy = rb_militancy/1.25; rb_strength -= 200;
 go-to: give_up_now
 
-A pall of hopelessness and despair descends over social democracy. We have failed. Many in the Reichsbanner simply quit, demoralized by their leaders' lack of a call to action.
+一片绝望的阴云笼罩着社会民主。我们失败了。国旗团中许多人干脆退出,被领袖们不肯发出行动号召的态度打击得心灰意冷。

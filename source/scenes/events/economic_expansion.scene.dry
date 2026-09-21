@@ -30,7 +30,7 @@ subtitle: Miracles! Miracles! Miracles!
 achievement: capital_sylvan
 max-visits: 1
 
-We have released a Sylvan sprite. 
+我们释放了一只林妖。 
 
 @ew
 view-if: capital_strike_progress < 0 and expansion_seen >= 2 and not in_grand_coalition and peoples_party and not capital_flight

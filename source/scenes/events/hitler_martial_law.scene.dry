@@ -7,7 +7,7 @@ on-arrival: reichswehr_loyalty -= 0.05 if reichswehr_loyalty >= 0.05; reichswehr
 
 = Martial Law!
 
-Following his failure to consolidate power by taking over Prussia, Hitler has, in a state of panic, resorted to calling an illegal state of martial law over Germany.
+在接管普鲁士以巩固权力的图谋失败后, Hitler has, in a state of panic, resorted to calling an illegal state of martial law over Germany.
 
 - @nah: Yeah as if.
 

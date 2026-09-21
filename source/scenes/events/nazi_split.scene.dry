@@ -44,4 +44,4 @@ view-if: labor_dissent >= 60 and not unions_independent
 subtitle: The ADGB reconsiders its allegiances
 on-arrival: unions_independent = 1; workers_spd -= 20; unemployed_spd -= 10; workers_dne += 10; unemployed_dne += 5
 
-The ADGB has announced its separation from the SPD. It has gone to join Schleicher in his fledgling dictatorship. 
+德国工会总联合会宣布与社民党分离,转而投靠施莱谢尔那新生的独裁政权。 

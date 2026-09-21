@@ -19,10 +19,10 @@ The legality of the action is questionable. Many of our members are ready to res
 @defend
 title: Fight against the overthrow attempt!
 subtitle: Labor will call a general strike. The Reichsbanner and the loyal elements of the Prussian police will resist the coup.
-unavailable-subtitle: We do not have the forces to resist.
+unavailable-subtitle: 我们没有抵抗的力量。
 choose-if: rb_strength*rb_militancy >= 200
 
-The Reichswehr and Stahlhelm are already surrounding Berlin, and the SA is supporting them. This could be civil war. We do realize that, correct? 
+国防军与钢盔团已包围柏林,冲锋队则在支援他们。这可能演变成内战。我们明白这一点,对吧? 
 
 - @defend_2: We will fight, even if it leads to a civil war.
 - @surrender
@@ -65,4 +65,4 @@ Our forces confront the government troops and their supporters on the streets of
 title: Give up on the Prussian government.
 on-arrival: spd_disarray = 1; disarray_timer = 6; spd_prussia = 0; workers_spd -= 5; left_dissent += 10; labor_dissent += 10; rb_militancy = rb_militancy/1.25; rb_strength -= 200; bourgeois_power += 0.05 if bourgeois_power < 1
 
-A pall of hopelessness and despair descends over social democracy. We have failed. Many in the Reichsbanner simply quit, demoralized by their leaders' lack of a call to action.
+一片绝望的阴云笼罩着社会民主。我们失败了。国旗团中许多人干脆退出,被领袖们不肯发出行动号召的态度打击得心灰意冷。
