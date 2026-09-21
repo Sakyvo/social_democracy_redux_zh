@@ -208,9 +208,9 @@ for (var c of Q.classes) {
 on-departure: month_actions += 1; in_election = 0; soviet_election_time = time+24
 set-jump: post_election_1928
 
-= Elections, [+ month : month +] [+ year +]
+= 选举,[+ month : month +] [+ year +]
 
-Across Germany, workers' councils exist, operating as "soviets" and electing deputies to new bodies of national-level coordination between them. 
+德国各地都出现了工人委员会,它们以「苏维埃」的形式运作,并选举代表进入新的、由各委员会在国家级协调的机构。
 
 - @election_algorithm: May we do our best...
 
@@ -434,7 +434,7 @@ if (window && d3) {
 !}
 #go-to: coalition_menu
 
-**Election results:**
+**选举结果:**
 
 {!<svg id="reichstag" style="width: 500px; height: 250px;"> </svg>!}
 
@@ -470,14 +470,14 @@ if (window && d3) {
 {!<tr><td><div class="box" style='background-color:#954B00'> </div> !} NSDAP: {!</td><td>!} [+ nsdap_s +]% {!</td><td>!} [+ str_change_nsdap +] {!</td></tr>!}
 {!</table>!}
 
-The council elections have been held, and deputies elected from all Germany's industries to determine the future course of the working clas and the pursuit of political power by this class. The first matter is the election of an executive.
+委员会选举已经举行,德国各行业的代表经选举产生,以决定工人阶级未来的道路,以及这一阶级对政治权力的追求。首要事项是选举产生一个执行机构。
 
 - @coalition_menu: Convene the Social Democratic delegation.
 
 @coalition_menu
 subtitle: SPD - [+ spd_s +]%
 
-Through the convocation of the SPD delegation, we have attempted to unify our factions ahead of the council discussions. In the end, our delegation numbers about [+ effective_spd_s +]% of the congress.
+通过召集社民党代表团,我们试图在委员会讨论之前统一党内各派系。最终,我们的代表团约占代表大会的 [+ effective_spd_s +]%。
 
 - @spd_majority: We will elect a Social-Democratic chairman, then.
 - @minority: No majority.
@@ -491,7 +491,7 @@ Q.candidates = ['communist', 'unaffiliated', 'bourgeois', 'nsdap', 'spd', 'sapd'
 
 !}
 
-With no majority for the SPD delegation, the election of a Social Democratic chairman becomes more complicated, requiring cooperation with other forces, other forces that also vie to take the councils for themselves.
+由于社民党代表团不占多数,选出一位社会民主党主席变得更为复杂,需要与其他力量合作 —— 而那些力量也同样觊觎着这些委员会。
 
 @competition
 on-arrival: soviet_election_rounds += 1; {! 
@@ -511,29 +511,29 @@ for (var c of Q.candidates) {
 
 !}
 
-[? if communist_candidate : Support for a Communist: [+ communist_candidate +] ?]
+[? if communist_candidate : 支持共产党人: [+ communist_candidate +] ?]
 
-[? if sapd_candidate : Support for a Socialist Workers': [+ sapd_candidate +] ?]
+[? if sapd_candidate : 支持社会主义工人党: [+ sapd_candidate +] ?]
 
-[? if spd_candidate : Support for a Social Democrat: [+ spd_candidate +] ?]
+[? if spd_candidate : 支持社会民主党人: [+ spd_candidate +] ?]
 
-[? if unaffiliate_candidate : Support for an Independent: [+ unaffiliate_candidate +] ?]
+[? if unaffiliate_candidate : 支持独立人士: [+ unaffiliate_candidate +] ?]
 
-[? if bourgeois_candidate : Support for a Bourgeois: [+ bourgeois_candidate +] ?]
+[? if bourgeois_candidate : 支持资产阶级代表: [+ bourgeois_candidate +] ?]
 
-[? if nsdap_candidate : Support for a Nazi: [+ nsdap_candidate +] ?]
+[? if nsdap_candidate : 支持纳粹: [+ nsdap_candidate +] ?]
 
-[? if communist_plurality_soviets : Currently, the communists are in the lead. ?]
+[? if communist_plurality_soviets : 目前共产党人领先。 ?]
 
-[? if sapd_plurality_soviets : Currently, the SAPD is in the lead. ?]
+[? if sapd_plurality_soviets : 目前社会主义工人党领先。 ?]
 
-[? if spd_plurality_soviets : Currently, we are in the lead. ?]
+[? if spd_plurality_soviets : 目前我们领先。 ?]
 
-[? if unaffiliate_plurality_soviets : Currently, the independents are in the lead. ?]
+[? if unaffiliate_plurality_soviets : 目前独立人士领先。 ?]
 
-[? if bourgeois_plurality_soviets : Currently, the bourgeois are in the lead. ?]
+[? if bourgeois_plurality_soviets : 目前资产阶级代表领先。 ?]
 
-[? if nsdap_plurality_soviets : Currently, the Nazis are in the lead. ?]
+[? if nsdap_plurality_soviets : 目前纳粹领先。 ?]
 
 - @kpd_wins: The communists have been elected.
 - @sapd_wins: The SAPD has been elected.
@@ -549,44 +549,44 @@ for (var c of Q.candidates) {
 view-if: communist_candidate >= 50
 on-arrival: reichstag_enemy = 1; spd_included = 1 if spd_backs_kpd == 2; kpd_soviets = 1; communist_influence += 3 if communist_influence; rfb_militancy += (socialism/250); rb_strength -= left_strength; rfb_strength += left_strength; workers_kpd += (socialism/10); executive_formed = 1
 
-The Communists have been elected to chair the councils. They do communist stuff, like having the government do stuff. Unfortunately, the government is the councils, and the real government, the Reichstag, doesn't like it when other governments do stuff, because that's communism, and they're doing a whole lotta stuff now.
+共产党人当选为委员会主席。他们干共产党那一套,比如让政府做事。不幸的是,这里的政府就是这些委员会,而真正的政府 —— 国会 —— 不喜欢别的政府做事,因为那叫共产主义,而他们现在做的事可多得很。
 
 @sapd_wins
 view-if: sapd_candidate >= 50
 on-arrival: reichstag_enemy = 1; spd_included = 1 if spd_backs_sapd == 2; executive_formed = 1; sapd_soviets = 1; workers_sapd += (socialism/25)
 
-The Socialist Workers' Party has elected their candidate to chair the councils. This increases popular support for the SAPD, though causes the bourgeoisie to view the councils as even more of a direct threat.
+社会主义工人党选出了自己的候选人担任委员会主席。这提升了社会主义工人党的民众支持,却让资产阶级更把这些委员会视为直接的威胁。
 
 @spd_wins
 view-if: spd_candidate >= 50
 on-arrival: spd_soviets = 1; executive_formed = 1; kpd_included = 1 if kpd_endorsement; sapd_included = 1 if sapd_endorsement; unaffiliate_included = 1 if unaffiliate_endorsement; bourgeois_included = 1 if bourgeois_endorsement
 go-to: faction_choices
 
-We have managed to win the chairmanship, after all! This is good. We like this. This is a good thing. However, which faction precisely should our candidate be from?
+我们终究还是赢得了主席之位!这很好。我们喜欢这样。这是件好事。不过,我们的候选人究竟应当出自哪个派系?
 
 @independent_wins
 view-if: unaffiliate_candidate >= 50
 on-arrival: independent_soviets = 1; executive_formed = 1; spd_included = 1 if spd_backs_unaffiliate
 
-The independent candidate has won, representing sectorial and economic interests of workers rather than a political agenda. 
+独立候选人获胜,他所代表的是工人的行业与经济利益,而非某种政治议程。
 
 @bourgeois_wins
 view-if: bourgeois_candidate >= 50
 on-arrival: bourgeois_soviets = 1; executive_formed = 1; spd_included = 1 if spd_backs_bourgeois == 2; socialism -= 3; pro_republic += 5
 
-The representative of the bourgeois interests amongst the workers has won, and now chairs the councils.
+工人阶级中代表资产阶级利益的那位当选,如今主持着这些委员会。
 
 @nsdap_wins
 view-if: nsdap_candidate >= 50
 on-arrival: workers_spd -= 10*bourgeois_power*(sa_force/50); workers_kpd -= 10*bourgeois_power*(sa_force/50); workers_nsdap += 10*bourgeois_power*(sa_force/50); socialism *= 0.75; soviets_exist = 0
 
-The Nazis have, somehow, won control over the councils. This is obviously very bad, and causes the councils to essentially dissolve as every non-Nazi force immediately boycotts them and they transform the rump remainder into a party organ to broadcast their beliefs amongst workers.
+纳粹竟不知怎的夺取了这些委员会的控制权。这显然极坏:所有非纳粹的力量立即加以抵制,委员会实质上随之解体,纳粹把残余的少数变成党的机构,用来在工人中传播他们的主张。
 
 @spd_campaign_hq
 view-if: spd_turn and spd_candidate and soviet_election_rounds < 10 and communist_candidate < 50 and spd_candidate < 50 and sapd_candidate < 50 and bourgeois_candidate < 50 and unaffiliate_candidate < 50 and nsdap_candidate < 50
 on-departure: spd_turn = 0
 
-[? if spd_turn : We are attempting to be elected to the office of chairmanship. To this end, we will have to forge alliances with other factions vying for the same. ?]
+[? if spd_turn : 我们正力图让自己的候选人当选主席。为此,我们必须与同样觊觎此位的其他派系结成同盟。 ?]
 
 - @court_kpd: Court the KPD.
 - @court_sapd: Court the SAPD.
@@ -599,9 +599,9 @@ on-departure: spd_turn = 0
 @court_kpd
 view-if: communist_candidate and (kpd_relation >= 40 or kpd_party_leader == "Conciliators")
 choose-if: not communist_plurality_soviets
-unavailable-subtitle: They think we should be endorsing them.
+unavailable-subtitle: 他们认为我们应当支持他们。
 
-We could try to win the support of the communists for the chairmanship. How can we convince them?
+我们可以设法为竞选主席争取共产党人的支持。我们该如何说服他们?
 
 - @bribe_kpd: Use our resources.
 - @beg_kpd: Use our good relations.
@@ -613,49 +613,49 @@ choose-if: resources >= 1
 on-arrival: resources -= 1; kpd_endorsement = 1; communist_candidate = 0; spd_candidate += kpd_s
 go-to: competition
 
-We have won the support of the KPD!
+我们赢得了共产党的支持!
 
 @beg_kpd
 choose-if: kpd_relation >= 60
-unavailable-subtitle: The KPD doesn't like us enough.
+unavailable-subtitle: 共产党对我们的好感还不够。
 on-arrival: kpd_endorsement = 1; communist_candidate = 0; spd_candidate += kpd_s
 go-to: competition
 
-We have won the support of the KPD!
+我们赢得了共产党的支持!
 
 @court_sapd
 view-if: sapd_candidate and kpd_relation > 0
 choose-if: not sapd_plurality_soviets
-unavailable-subtitle: They think we should be endorsing them.
+unavailable-subtitle: 他们认为我们应当支持他们。
 on-arrival: sapd_endorsement = 1; sapd_candidate = 0; spd_candidate += sapd_s
 go-to: competition
 
-We have won the support of the SAPD!
+我们赢得了社会主义工人党的支持!
 
 @court_unaffiliated
 view-if: unaffiliate_candidate
 choose-if: spd_plurality_soviets
-unavailable-subtitle: They don't support losers.
+unavailable-subtitle: 他们不会支持必败之人。
 on-arrival: unaffiliate_endorsement = 1; unaffiliate_candidate = 0; spd_candidate += unaffiliate_s
 go-to: competition
 
-We have won the support of the unaffiliated!
+我们赢得了独立人士的支持!
 
 @court_bourgeois
 view-if: bourgeois_candidate and dvp_relation > 40
 choose-if: spd_candidate > bourgeois_candidate
-unavailable-subtitle: They think we should be endorsing them.
+unavailable-subtitle: 他们认为我们应当支持他们。
 on-arrival: left_dissent += 10; kpd_relation -= 5; bourgeois_candidate = 0; bourgeois_endorsement = 1; spd_candidate += bourgeois_s
 go-to: competition
 
-We have won the support of the bourgeois!
+我们赢得了资产阶级代表的支持!
 
 @court_catholics
 view-if: (z_party_leader == "Joos" and unaffiliate_endorsement) or (z_party_leader != "Joos" and bourgeois_endorsement) and z_s
 choose-if: z_relation >= 40
-unavailable-subtitle: They don't trust us.
+unavailable-subtitle: 他们不信任我们。
 
-We could try to win the support of the Catholics. How do we convince them?
+我们可以设法为竞选主席争取天主教徒的支持。我们该如何说服他们?
 
 - @bribe_z: Use our resources.
 - @beg_z: Use our relations.
@@ -667,20 +667,20 @@ choose-if: resources >= 1
 on-arrival: resources -= 1; spd_candidate += z_s
 go-to: competition
 
-We have won the support of the Catholics!
+我们赢得了天主教徒的支持!
 
 @beg_z
 choose-if: z_relation >= 60
-unavailable-subtitle: The Center Party doesn't like us enough.
+unavailable-subtitle: 中央党对我们的好感还不够。
 on-arrival: spd_candidate += z_s
 go-to: competition
 
-We have won the support of the Catholics!
+我们赢得了天主教徒的支持!
 
 @nvm
 go-to: spd_campaign_hq
 
-We will try something else.
+我们换个办法试试。
 
 @unify_spd
 on-arrival: {! 
@@ -692,12 +692,12 @@ Q.spd_candidate += (diff/2)
 !}
 go-to: competition
 
-We attempt to further unify the SPD delegation in favor of our candidate.
+我们试图进一步统一社民党代表团,以支持我们的候选人。
 
 @drop_out
 subtitle: Tune in, turn on...
 
-If we can't win, there's no point splitting the vote further. But who should we back instead?
+若我们赢不了,继续分散选票也毫无意义。但我们应当转而支持谁?
 
 - @back_kpd: Back the KPD.
 - @back_sapd: Back the SAPD.
@@ -720,21 +720,21 @@ if (Q.kpd_relation >= 35) {
 !}
 go-to: competition
 
-We have endorsed the communist candidate.
+我们表态支持共产党候选人。
 
 @back_sapd
 view-if: sapd_candidate
 on-arrival: spd_candidate = 0; spd_backs_sapd = 2; sapd_candidate += effective_spd_s
 go-to: competition
 
-We have endorsed the SAPD candidate.
+我们表态支持社会主义工人党候选人。
 
 @back_independent
 view-if: unaffiliate_candidate
 on-arrival: spd_candidate = 0; spd_backs_unaffiliate = 2; unaffiliate_candidate += effective_spd_s
 go-to: competition
 
-We have endorsed the independent candidate.
+我们表态支持独立候选人。
 
 @back_bourgeois
 view-if: bourgeois_candidate and reformist_strength >= left_strength
@@ -751,14 +751,14 @@ if (Q.dvp_relation >= 35) {
 !}
 go-to: competition
 
-We have endorsed the bourgeois candidate.
+我们表态支持资产阶级候选人。
 
 @other_forces
 view-if: (not spd_turn or not spd_candidate) and soviet_election_rounds < 10 and communist_candidate < 50 and spd_candidate < 50 and sapd_candidate < 50 and bourgeois_candidate < 50 and unaffiliate_candidate < 50 and nsdap_candidate < 50
 max-choices: 1
 on-departure: spd_turn = 1 if spd_candidate
 
-We are not alone in this race. Each other contender acts in its own right.
+这场竞争中并非只有我们。其他每位角逐者都各行其是。
 
 - @communist_consolidation: The Communists consolidate the far-left.
 - @kpd_backs_sapd: The KPD backs the SAPD candidate.
@@ -774,67 +774,67 @@ view-if: not comcon_seen and communist_candidate
 on-arrival: comcon_seen = 1; communist_candidate += kapd_s; communist_candidate += faud_s
 go-to: competition
 
-The communists have consolidated the far-left behind themselves.
+共产党人已把极左翼整合到自己身后。
 
 @kpd_backs_sapd
 view-if: sapd_candidate and communist_candidate and not kpd_backs_sapd and sapd_candidate >= communist_candidate
 on-arrival: kpd_backs_sapd = 1; communist_candidate = 0; sapd_candidate += kpd_s
 go-to: competition
 
-The communists have chosen to back the SAPD candidate.
+共产党人选择支持社会主义工人党候选人。
 
 @sapd_backs_kpd
 view-if: sapd_candidate and communist_candidate and not sapd_backs_kpd and communist_candidate >= sapd_candidate
 on-arrival: sapd_backs_kpd = 1; sapd_candidate = 0; communist_candidate += sapd_s
 go-to: competition
 
-The SAPD has chosen to back the communist candidate.
+社会主义工人党选择支持共产党候选人。
 
 @nsdap_backs_bourgeois
 view-if: nsdap_candidate and bourgeois_candidate and not nsdap_backs_bourgeois and bourgeois_candidate > nsdap_candidate and communist_plurality_soviets
 on-arrival: nsdap_backs_bourgeois = 1; nsdap_candidate = 0; bourgeois_candidate += nsdap_s
 go-to: competition
 
-To prevent the victory of a communist, the Nazis have rallied with the other bourgeois forces in the council.
+为阻止共产党人获胜,纳粹在委员会中与其他资产阶级力量联合起来。
 
 @unaffiliate_backs_kpd
 view-if: not unaffiliate_backs_kpd and unaffiliate_candidate and (communist_plurality_soviets or ((communist_candidate+unaffiliate_s) >= 50))
 on-arrival: unaffiliate_backs_kpd = 1; unaffiliate_candidate = 0; communist_candidate += unaffiliate_s
 go-to: competition
 
-The unaffiliated have backed the communists.
+独立人士转而支持共产党人。
 
 @unaffiliate_backs_sapd
 view-if: not unaffiliate_backs_sapd and unaffiliate_candidate and (sapd_plurality_soviets or ((sapd_candidate+unaffiliate_s) >= 50))
 on-arrival: unaffiliate_backs_sapd = 1; unaffiliate_candidate = 0; sapd_candidate += unaffiliate_s
 go-to: competition
 
-The unaffiliated have backed the SAPD.
+独立人士转而支持社会主义工人党。
 
 @unaffiliate_backs_bourgeois
 view-if: not unaffiliate_backs_bourgeois and unaffiliate_candidate and (bourgeois_plurality_soviets or ((bourgeois_candidate+unaffiliate_s) >= 50))
 on-arrival: unaffiliate_backs_bourgeois = 1; unaffiliate_candidate = 0; bourgeois_candidate += unaffiliate_s
 go-to: competition
 
-The unaffiliated have backed the bourgeois.
+独立人士转而支持资产阶级代表。
 
 @nothing
 go-to: competition
 
-It seems there will be no further developments of this kind.
+看来不会再有此类的新进展了。
 
 @round_ten
 view-if: soviet_election_rounds >= 10
 on-arrival: socialism -= 3; pro_republic += 3
 
-The conference ends inconclusively, and the resultant chairman is a no-namer independent with little support. The Reichstag's legitimacy is bolstered by the poor legitimacy of the soviets.
+大会无果而终,最终产生的是一位无名无姓、支持寥寥的独立人士主席。苏维埃正当性的贫弱,反倒衬托出国会的正当性。
 
 @spd_majority
 view-if: effective_spd_s >= 50
 on-arrival: spd_soviets = 1; executive_formed = 1
 go-to: faction_choices
 
-With a majority of the delegates, we have the capacity to elect a Social Democratic chairman. There still remains the matter of which faction the chairman should come from, however.
+凭借代表中的多数,我们本有能力选出一位社会民主党主席。不过,主席究竟应出自哪个派系,仍是个问题。
 
 @faction_choices
 
@@ -851,7 +851,7 @@ view-if: (((left_strength+center_strength >= reformist_strength+neorevisionist_s
 on-arrival: left_soviets = 1; left_strength += 5; pro_republic -= 2; socialism += 2; z_relation -= 3; dvp_relation -= 5; ddp_relation -= 5; kpd_relation += 3
 go-to: optional_coalitions if effective_spd_s >= 50
 
-Toni Sender is elected to chair the councils, representing a firm though not too firm leftist line in the leadership of the new institution. 
+托尼·森德尔当选为委员会主席,在这一新机构的领导层中代表着一条坚定但不算过于强硬的左翼路线。
 
 @center
 title: The Center
@@ -860,7 +860,7 @@ view-if: (not (((((reformist_strength+neorevisionist_strength+center_strength >=
 on-arrival: center_soviets = 1; center_strength += 5
 go-to: optional_coalitions if effective_spd_s >= 50
 
-Rudolf Breitscheid is elected to chair the councils, representing a middle road between the revolutionaries and the reformists.
+鲁道夫·布赖特沙伊德当选为委员会主席,代表着革命派与改良派之间的一条中道。
 
 @reformist
 title: The Reformists
@@ -869,7 +869,7 @@ view-if: ((((reformist_strength+neorevisionist_strength+center_strength >= left_
 on-arrival: reformist_soviets = 1; reformist_strength += 5; socialism -= 2; pro_republic += 2; z_relation += 2; ddp_relation += 2; kpd_relation -= 4; left_dissent += 3
 go-to: optional_coalitions if effective_spd_s >= 50
 
-Marie Juchacz is elected to chair the councils, representing a strong reformist tendency that remains within the workers, and a seeming unreadiness by them to assume state power.
+玛丽·尤哈茨当选为委员会主席,代表着工人中一股强劲的改良主义倾向,也代表着他们似乎尚未准备好接管国家权力。
 
 @labor
 title: The Trade Unions
@@ -878,7 +878,7 @@ view-if: (not (((((reformist_strength+neorevisionist_strength+center_strength >=
 on-arrival: labor_soviets = 1; labor_strength += 5
 go-to: optional_coalitions if effective_spd_s >= 50
 
-Rudolf Wissell is elected to chair the councils, representing the interests of the trade unions and organized labor in this emerging form of labor organization.
+鲁道夫·维塞尔当选为委员会主席,在这一新兴的劳工组织形式中代表着工会与有组织劳工的利益。
 
 @neorevisionist
 title: The Neorevisionists
@@ -887,12 +887,12 @@ view-if: spd_neorevisionist_s >= 50 and not kpd_included
 on-arrival: neorevisionist_soviets = 1
 go-to: optional_coalitions if effective_spd_s >= 50
 
-Surprisingly, the Neorevisionists have taken a lead, electing Carlo Mierendorff to chair the councils. 
+出人意料的是,新修正主义派占据了领先地位,把卡洛·米伦多夫选为委员会主席。
 
 @optional_coalitions
 go-to: oc_menu
 
-With an SPD chair elected, however, remains the issue of the wider council executive. With us possessing a majority, we could choose to distribute positions simply within the SPD; but this would risk giving the councils the appearance of a mere party organ and undermining their budding legitimacy, especially when they currently possess no inherent power beyond that granted by the voluntary participation of workers within them.
+然而,选出社民党出身的主席之后,更广泛的委员会执行机构的问题依然存在。既然我们占有多数,便可以选择只在社民党内部分配职位;但这有可能使这些委员会显得不过是党的一个机关,损害其初生的正当性 —— 尤其是它们目前除了工人在其中自愿参与所赋予的权力之外,并不拥有任何固有权力。
 
 @oc_menu
 
@@ -909,27 +909,27 @@ on-arrival: socialism -= (10-(spd_s/10)); left_dissent -= 5; center_dissent -= 5
 subtitle: This may at least reduce dissent within the party.
 go-to: done
 
-The legitimacy and capacity of the councils is hurt by our unwillingness to distribute positions amongst other forces within the councils. In the end, the executive is made into an effective party organ, and those forces opposed to our party simply urge their councils to noncooperation with this executive.
+我们不愿把职位分配给委员会内的其他力量,损害了这些委员会的正当性与能力。最终,执行机构被变成了一个实际上属于党的机关,而反对我党的那些力量则干脆鼓动各自所属的委员会不与这一执行机构合作。
 
 @invite_sapd
 view-if: not sapd_included and sapd_formed and sapd_s
 subtitle: Former Social Democrats, they are willing.
 choose-if: not bourgeois_included
-unavailable-subtitle: With the bourgeois? Yeah, right.
+unavailable-subtitle: 和资产阶级一起?想得美。
 on-arrival: buttons_mashed += 1; sapd_included = 1; socialism += 1; left_strength += 3; left_dissent -= 6; kpd_relation += 2; z_relation -= 2; ddp_relation -= 4; dvp_relation -= 5
 go-to: oc_menu
 
-We have invited the SAPD to our executive, and they have agreed. This has given the council a more left-wing orientation, as the SAPD stands firmly opposed to the disempowerment of the councils.
+我们邀请社会主义工人党加入执行机构,他们同意了。这使委员会带上更强的左翼色彩 —— 因为社会主义工人党坚决反对剥夺委员会的权力。
 
 @invite_kpd
 view-if: not kpd_included and not reformist_soviets and not neorevisionist_soviets
 subtitle: The Communists are willing.
 choose-if: (left_soviets or kpd_relation >= 50) and not bourgeois_included
-unavailable-subtitle: The Communists are unwilling to enter the executive as it stands, opposing our chairmanship wholly.
+unavailable-subtitle: 共产党不愿按现状进入执行机构,他们完全反对由我们担任主席。
 on-arrival: buttons_mashed += 1; kpd_included = 1; reichstag_enemy = 1; socialism += 2; kpd_relation += 5; left_strength += 5; left_dissent -= 5; z_relation -= 5; ddp_relation -= 6; dvp_relation -= 8
 go-to: oc_menu
 
-We have invited the KPD to our executive, and they have agreed to join. This has given the council a vastly more left-wing orientation, opening itself up to a chorral of criticism from the bourgeois parties who have begun to view the councils with concern as parallel power structures genuinely invested in the overthrow of the existing ones.
+我们邀请共产党加入我们的执行机构,他们同意参加。这使委员会带上远为浓厚的左翼色彩,也招来了资产阶级政党异口同声的批评 —— 他们开始忧心地把这些委员会视为真正意在推翻现有权力结构的平行权力机构。
 
 @invite_unaffiliate
 view-if: not unaffiliate_included and unaffiliate_s
@@ -937,20 +937,20 @@ subtitle: Independent workers' representatives with largely economic and sectori
 on-arrival: buttons_mashed += 1; unaffiliate_included = 1; workers_spd += 3*(1-dissent); workers_other -= 3*(1-dissent)
 go-to: oc_menu
 
-By including the unaffiliated representatives in the executive, we are politicizing them positively. 
+把独立代表纳入执行机构,我们是在积极地使他们政治化。
 
 @invite_bourgeois
 view-if: not bourgeois_included and not left_soviets
 subtitle: The bourgeois-aligned representatives who demand the dissolution of the councils.
 choose-if: (reformist_soviets or neorevisionist_soviets or (reformist_strength > left_strength and dvp_relation >= 40)) and not kpd_included and not sapd_included
-unavailable-subtitle: The bourgeois representatives squarely refuse.
+unavailable-subtitle: 资产阶级代表断然拒绝。
 on-arrival: buttons_mashed += 1; bourgeois_included = 1; socialism -= 3; left_dissent += 10; left_strength -= 5; socialism -= 4; pro_republic += 4; kpd_relation -= 7; capital_strike_progress -= 1 if capital_strike_progress >= 6
 go-to: oc_menu
 
-The bourgeois representatives are invited to the executive and promptly join. The KPD assaults and derides us as betraying the revolutionary opportunity once more, while the bourgeoisie take relief in the fact that the councils are being tamed.
+资产阶级代表受邀加入执行机构,随即参加。共产党抨击并讥讽我们又一次背叛了革命良机,而资产阶级则因这些委员会正被驯服而松了一口气。
 
 @done
 view-if: buttons_mashed
 
-With the executive assembled, the congress of councils is dismissed for the time being, to begin its affairs accordingly.
+执行机构组建完毕,委员会代表大会暂时休会,以相应开始其事务。
 
