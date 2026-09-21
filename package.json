@@ -1,22 +1,24 @@
 {
-  "name": " social_democracy_alternate_history",
-  "version": "0.11.1",
-  "description": "Building the game:",
+  "name": "social_democracy_redux_zh",
+  "version": "0.11.1-zh.1",
+  "description": "社会民主:另一段历史 — 中文汉化版",
   "main": "out/html/index.html",
   "scripts": {
-    "dendrynexus": "dendrynexus"
+    "dendrynexus": "dendrynexus",
+    "build": "node scripts/build.js",
+    "patch": "node scripts/patch-engine.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://aucchen@github.com/aucchen/social_democracy_alternate_history.git"
+    "url": "git+https://github.com/Sakyvo/social_democracy_redux_zh.git"
   },
   "keywords": [],
-  "author": "Autumn Chen",
+  "author": "Autumn Chen;CuttleCraft (redux);Sakyvo (汉化)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/aucchen/social_democracy_alternate_history/issues"
+    "url": "https://github.com/Sakyvo/social_democracy_redux_zh/issues"
   },
-  "homepage": "https://github.com/aucchen/social_democracy_alternate_history",
+  "homepage": "https://github.com/Sakyvo/social_democracy_redux_zh",
   "dependencies": {
     "dendrynexus": "github:aucchen/dendrynexus",
     "parliament-svg": "^3.0.0"

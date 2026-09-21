@@ -1,0 +1,42 @@
+name: 自动构建中文站
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'source/**'
+      - 'template-zh/**'
+      - 'scripts/**'
+  workflow_dispatch:
+
+# 允许把重新构建的 out/html 提交回仓库
+permissions:
+  contents: write
+
+concurrency:
+  group: build-zh
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: 安装依赖
+        run: npm install
+      - name: 构建
+        run: node scripts/build.js
+      - name: 提交构建产物
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add -A out/html
+          if git diff --cached --quiet; then
+            echo "无变化"
+          else
+            git commit -m "chore: 自动重建中文站 [skip ci]"
+            git push
+          fi
