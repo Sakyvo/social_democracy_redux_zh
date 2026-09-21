@@ -1,4 +1,4 @@
-title: Status
+title: 概况
 new-page: true
 is-special: true
 on-arrival: {!
@@ -14,34 +14,34 @@ if (Q.economic_growth) {
 }
 !}
 
-= Status
+= 概况
 
 [+ month : month +] [+ year +]
 
-Resources available: [+ resources +]
+可用资源: [+ resources +]
 
-SPD position: [? if spd_toleration : toleration ?][? if spd_in_government : in government - ?][? if spd_toleration == 0 and spd_in_government == 0 and spd_caretaker == 0 : opposition ?][? if spd_caretaker : caretaker government ?]
-[? if in_weimar_coalition and spd_in_government: Weimar Coalition ?][? if in_grand_coalition and spd_in_government: Grand Coalition ?][? if in_popular_front and spd_in_government: Popular Front ?][? if in_left_front and spd_in_government: Left Front ?][? if in_spd_majority and spd_in_government: SPD majority ?][? if in_minority_government and spd_in_government: minority government ?][? if in_emergency_government and spd_in_government: emergency government ?]
+社民党地位: [? if spd_toleration : 容忍 ?][? if spd_in_government : 执政 — ?][? if spd_toleration == 0 and spd_in_government == 0 and spd_caretaker == 0 : 在野 ?][? if spd_caretaker : 看守政府 ?]
+[? if in_weimar_coalition and spd_in_government: 魏玛联盟 ?][? if in_grand_coalition and spd_in_government: 大联合政府 ?][? if in_popular_front and spd_in_government: 人民阵线 ?][? if in_left_front and spd_in_government: 左翼阵线 ?][? if in_spd_majority and spd_in_government: 社民党多数政府 ?][? if in_minority_government and spd_in_government: 少数派政府 ?][? if in_emergency_government and spd_in_government: 紧急政府 ?]
 
-[? if spd_in_government and not in_spd_majority and not in_left_front : Coalition dissent: [+ coalition_dissent : coalition_dissent +] ?]
+[? if spd_in_government and not in_spd_majority and not in_left_front : 执政联盟内异议: [+ coalition_dissent : coalition_dissent +] ?]
 
-[? if spd_in_government and (in_left_front or in_popular_front): KPD coalition dissent: [+ kpd_coalition_dissent : coalition_dissent +] ?]
+[? if spd_in_government and (in_left_front or in_popular_front): 共产党内部异议: [+ kpd_coalition_dissent : coalition_dissent +] ?]
 
-Internal dissent: [+ dissent_percent : dissent +]
+党内异议: [+ dissent_percent : dissent +]
 
-[? if communist_influence_seen : KPD influence: [+ kpd_influence : kpd_influence +] ?]
+[? if communist_influence_seen : 共产党的影响力: [+ kpd_influence : kpd_influence +] ?]
 
-= Government
+= 政府
 
-President: [+ president +]
+总统: [+ president +]
 
-[? if president == "Marx" : Presidential Relations: [+ marx_relation : relationships +] ?]
+[? if president == "Marx" : 与总统的关系: [+ marx_relation : relationships +] ?]
 
-Chancellor: [+ chancellor +] ([+ chancellor_party +])
+总理: [+ chancellor +] ([+ chancellor_party +])
 
-[? if policy_seen and gov_tension : Government tension: [+ gov_tension : coalition_dissent +] ?]
+[? if policy_seen and gov_tension : 政府内部紧张: [+ gov_tension : coalition_dissent +] ?]
 
-Reichstag composition:
+国会席位:
 
 # 1928: 30, 1930: 25, 1932: 22
 SPD: [+ spd_r +]%
@@ -59,27 +59,27 @@ DNVP: [+ dnvp_r +]%
 # 1928: 3, 1930: 18
 NSDAP: [+ nsdap_r +]%
 # 1928: 9, 1930: 10
-Others: [+ other_r +]%
+其他: [+ other_r +]%
 
-[? if spd_in_government = 1 : Budget: [+ budget +] ?]
+[? if spd_in_government = 1 : 财政预算: [+ budget +] ?]
 
-Next election: [+ next_election_month : month +] [+ next_election_year +]
+下次选举: [+ next_election_month : month +] [+ next_election_year +]
 
-= Economics
+= 经济
 
-Inflation: [+ inflation_2 +]%
+通货膨胀: [+ inflation_2 +]%
 
-[? if black_thursday_seen = 1 : Unemployment: [+ unemployed_2 +]% ?]
+[? if black_thursday_seen = 1 : 失业率: [+ unemployed_2 +]% ?]
 
-Economic growth: [+ economic_growth_2 +]%
+经济增长: [+ economic_growth_2 +]%
 
-[? if investigate_corruption : Influence of capital: [+ assessed_bourgeois : bourgeois_power +] [? if inaccuracy : - inaccurate ?] ?]
+[? if investigate_corruption : 资本的影响力: [+ assessed_bourgeois : bourgeois_power +] [? if inaccuracy : — 数据不准确 ?] ?]
 
-# = Public Opinion
+# = 民意
 
 @politics
 
-= Inter-party Relations
+= 党际关系
 
 
 Z: [+ z_relation : relationships +]
@@ -94,17 +94,17 @@ DNVP: [+ dnvp_relation : relationships +]
 
 NSDAP: [+ nsdap_relation : relationships +]
 
-= Internal Factions of the SPD
+= 社民党内部派系
 
-Left strength: [+ left_strength : strength +], dissent: [+ left_dissent : dissent +]
+左翼力量: [+ left_strength : strength +],异议: [+ left_dissent : dissent +]
 
-Center strength: [+ center_strength : strength +], dissent: [+ center_dissent : dissent +]
+中间派力量: [+ center_strength : strength +],异议: [+ center_dissent : dissent +]
 
-Labor strength: [+ labor_strength : strength +], dissent: [+ labor_dissent : dissent +]
+工会力量: [+ labor_strength : strength +],异议: [+ labor_dissent : dissent +]
 
-Reformist strength: [+ reformist_strength : strength +], dissent: [+ reformist_dissent : dissent +]
+改良派力量: [+ reformist_strength : strength +],异议: [+ reformist_dissent : dissent +]
 
-[? if neorevisionism > 0 : Neorevisionist strength: [+ neorevisionist_strength : strength +], dissent: [+ neorevisionist_dissent : dissent +] ?]
+[? if neorevisionism > 0 : 新修正主义派力量: [+ neorevisionist_strength : strength +],异议: [+ neorevisionist_dissent : dissent +] ?]
 
 
 @paramilitaries
@@ -123,49 +123,49 @@ if (Q.sa_strength) {
 }
 !}
 
-= Distribution of Power
+= 力量分布
 
 SA: [+ sa_force +]%
 
-Stalhelm: [+ sh_force +]%
+钢盔团: [+ sh_force +]%
 
-Reichsbanner: [+ rb_force +]%
+国旗团: [+ rb_force +]%
 
 RFB: [+ rfb_force +]%
 
-Prussia: [+ prussia_force +]%
+普鲁士: [+ prussia_force +]%
 
-Reichswehr: [+ army_force +]%
+国防军: [+ army_force +]%
 
-= Paramilitaries
+= 准军事组织
 
-Reichsbanner Strength: [+ rb_strength_2 +] thousand
+国旗团兵力: [+ rb_strength_2 +] 千人
 
-Reichsbanner Militarization: [+ rb_militancy : militancy +]
+国旗团军事化程度: [+ rb_militancy : militancy +]
 
-RFB Strength: [+ rfb_strength_2 +] thousand
+RFB 兵力: [+ rfb_strength_2 +] 千人
 
-RFB Militarization: [+ rfb_militancy : militancy +]
+RFB 军事化程度: [+ rfb_militancy : militancy +]
 
-Stahlhelm Strength: [+ sh_strength_2 +] thousand
+钢盔团兵力: [+ sh_strength_2 +] 千人
 
-Stahlhelm Militarization: [+ sh_militancy : militancy +]
+钢盔团军事化程度: [+ sh_militancy : militancy +]
 
-SA Strength: [+ sa_strength_2 +] thousand
+冲锋队兵力: [+ sa_strength_2 +] 千人
 
-SA Militarization: [+ sa_militancy : militancy +]
+冲锋队军事化程度: [+ sa_militancy : militancy +]
 
-= Official military/paramilitaries
+= 官方军事 / 准军事力量
 
-Reichswehr: [+ reichswehr_strength +] thousand troops.
+国防军: [+ reichswehr_strength +] 千人。
 
-Reichswehr Loyalty: [+ reichswehr_loyalty : loyalty +]
+国防军忠诚度: [+ reichswehr_loyalty : loyalty +]
 
-Prussian police: [+ prussian_police_strength +] thousand members.
+普鲁士警察: [+ prussian_police_strength +] 千人。
 
-Prussian police loyalty: [+ prussian_police_loyalty : loyalty +]
+普鲁士警察忠诚度: [+ prussian_police_loyalty : loyalty +]
 
-[? if spd_in_government : Interior police loyalty: [+ interior_police_loyalty : loyalty +] ?]
+[? if spd_in_government : 内政部警察忠诚度: [+ interior_police_loyalty : loyalty +] ?]
 
 @polls
 on-arrival: {!
@@ -174,9 +174,9 @@ Q.nationalism_disp = Math.round(Q.nationalism);
 Q.socialism_disp = Math.round(Q.socialism);
 !}
 
-= Projected election results
+= 预测选举结果
 
-(if the election were to be held now):
+(若此刻举行选举):
 
 SPD: [+ spd_votes +]%
 
@@ -198,24 +198,24 @@ DNVP: [+ dnvp_votes +]%
 
 NSDAP: [+ nsdap_votes +]%
 
-Others: [+ other_votes +]%
+其他: [+ other_votes +]%
 
-**Detailed results for each demographic**
+**各阶层详细结果**
 
-Support for the Republic: [+ pro_republic_disp +]%
+对共和国的支持: [+ pro_republic_disp +]%
 
-Support for Socialism: [+ socialism_disp +]%
+对社会主义的支持: [+ socialism_disp +]%
 
-Support for Nationalism: [+ nationalism_disp +]%
+对民族主义的支持: [+ nationalism_disp +]%
 
-Workers: SPD: [+ workers_spd_display +]%, [? if sapd_formed == 1 : SAPD: [+ workers_sapd_display +]%, ?] Z: [+ workers_z_display +]%, KPD: [+ workers_kpd_display +]%, DDP: [+ workers_ddp_display +]%, DVP: [+ workers_dvp_display +]%; DNVP: [+ workers_dnvp_display +]%, [? if dne_formed : DNE: [+ workers_dne_display +]%, ?] NSDAP: [+ workers_nsdap_display +]%, Others: [+ workers_other_display +]%
+工人: SPD: [+ workers_spd_display +]%,[? if sapd_formed == 1 : SAPD: [+ workers_sapd_display +]%, ?] Z: [+ workers_z_display +]%,KPD: [+ workers_kpd_display +]%,DDP: [+ workers_ddp_display +]%,DVP: [+ workers_dvp_display +]%; DNVP: [+ workers_dnvp_display +]%,[? if dne_formed : DNE: [+ workers_dne_display +]%, ?] NSDAP: [+ workers_nsdap_display +]%,其他: [+ workers_other_display +]%
 
-New Middle Class: SPD: [+ new_middle_spd_display +]%, [? if sapd_formed == 1 : SAPD: [+ new_middle_sapd_display +]%, ?] Z: [+ new_middle_z_display +]%, KPD: [+ new_middle_kpd_display +]%, DDP: [+ new_middle_ddp_display +]%, DVP: [+ new_middle_dvp_display +]%; DNVP: [+ new_middle_dnvp_display +]%, [? if dne_formed : DNE: [+ new_middle_dne_display +]%, ?] NSDAP: [+ new_middle_nsdap_display +]%, Others: [+ new_middle_other_display +]%
+新中间阶层: SPD: [+ new_middle_spd_display +]%,[? if sapd_formed == 1 : SAPD: [+ new_middle_sapd_display +]%, ?] Z: [+ new_middle_z_display +]%,KPD: [+ new_middle_kpd_display +]%,DDP: [+ new_middle_ddp_display +]%,DVP: [+ new_middle_dvp_display +]%; DNVP: [+ new_middle_dnvp_display +]%,[? if dne_formed : DNE: [+ new_middle_dne_display +]%, ?] NSDAP: [+ new_middle_nsdap_display +]%,其他: [+ new_middle_other_display +]%
 
-Old Middle Class: SPD: [+ old_middle_spd_display +]%, [? if sapd_formed == 1 : SAPD: [+ old_middle_sapd_display +]%, ?] Z: [+ old_middle_z_display +]%, KPD: [+ old_middle_kpd_display +]%, DDP: [+ old_middle_ddp_display +]%, DVP: [+ old_middle_dvp_display +]%; DNVP: [+ old_middle_dnvp_display +]%, [? if dne_formed : DNE: [+ old_middle_dne_display +]%, ?] NSDAP: [+ old_middle_nsdap_display +]%, Others: [+ old_middle_other_display +]%
+旧中间阶层: SPD: [+ old_middle_spd_display +]%,[? if sapd_formed == 1 : SAPD: [+ old_middle_sapd_display +]%, ?] Z: [+ old_middle_z_display +]%,KPD: [+ old_middle_kpd_display +]%,DDP: [+ old_middle_ddp_display +]%,DVP: [+ old_middle_dvp_display +]%; DNVP: [+ old_middle_dnvp_display +]%,[? if dne_formed : DNE: [+ old_middle_dne_display +]%, ?] NSDAP: [+ old_middle_nsdap_display +]%,其他: [+ old_middle_other_display +]%
 
-Rural: SPD: [+ rural_spd_display +]%, [? if sapd_formed == 1 : SAPD: [+ rural_sapd_display +]%, ?] Z: [+ rural_z_display +]%, KPD: [+ rural_kpd_display +]%, DDP: [+ rural_ddp_display +]%, DVP: [+ rural_dvp_display +]%; DNVP: [+ rural_dnvp_display +]%, [? if dne_formed : DNE: [+ rural_dne_display +]%, ?] NSDAP: [+ rural_nsdap_display +]%, Others: [+ rural_other_display +]%
+乡村: SPD: [+ rural_spd_display +]%,[? if sapd_formed == 1 : SAPD: [+ rural_sapd_display +]%, ?] Z: [+ rural_z_display +]%,KPD: [+ rural_kpd_display +]%,DDP: [+ rural_ddp_display +]%,DVP: [+ rural_dvp_display +]%; DNVP: [+ rural_dnvp_display +]%,[? if dne_formed : DNE: [+ rural_dne_display +]%, ?] NSDAP: [+ rural_nsdap_display +]%,其他: [+ rural_other_display +]%
 
-Unemployed: SPD: [+ unemployed_spd_display +]%, [? if sapd_formed == 1 : SAPD: [+ unemployed_sapd_display +]%, ?] Z: [+ unemployed_z_display +]%, KPD: [+ unemployed_kpd_display +]%, DDP: [+ unemployed_ddp_display +]%, DVP: [+ unemployed_dvp_display +]%; DNVP: [+ unemployed_dnvp_display +]%, [? if dne_formed : DNE: [+ unemployed_dne_display +]%, ?] NSDAP: [+ unemployed_nsdap_display +]%, Others: [+ unemployed_other_display +]%
+失业者: SPD: [+ unemployed_spd_display +]%,[? if sapd_formed == 1 : SAPD: [+ unemployed_sapd_display +]%, ?] Z: [+ unemployed_z_display +]%,KPD: [+ unemployed_kpd_display +]%,DDP: [+ unemployed_ddp_display +]%,DVP: [+ unemployed_dvp_display +]%; DNVP: [+ unemployed_dnvp_display +]%,[? if dne_formed : DNE: [+ unemployed_dne_display +]%, ?] NSDAP: [+ unemployed_nsdap_display +]%,其他: [+ unemployed_other_display +]%
 
-Catholics: SPD: [+ catholics_spd_display +]%, [? if sapd_formed == 1 : SAPD: [+ catholics_sapd_display +]%, ?] Z: [+ catholics_z_display +]%, KPD: [+ catholics_kpd_display +]%, DDP: [+ catholics_ddp_display +]%, DVP: [+ catholics_dvp_display +]%; DNVP: [+ catholics_dnvp_display +]%, [? if dne_formed : DNE: [+ catholics_dne_display +]%, ?] NSDAP: [+ catholics_nsdap_display +]%, Others: [+ catholics_other_display +]%
+天主教徒: SPD: [+ catholics_spd_display +]%,[? if sapd_formed == 1 : SAPD: [+ catholics_sapd_display +]%, ?] Z: [+ catholics_z_display +]%,KPD: [+ catholics_kpd_display +]%,DDP: [+ catholics_ddp_display +]%,DVP: [+ catholics_dvp_display +]%; DNVP: [+ catholics_dnvp_display +]%,[? if dne_formed : DNE: [+ catholics_dne_display +]%, ?] NSDAP: [+ catholics_nsdap_display +]%,其他: [+ catholics_other_display +]%

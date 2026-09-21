@@ -1,4 +1,4 @@
-title: Game Over.
+title: 游戏结束。
 new-page: true
 go-to: eg_menu
 on-arrival: {!
@@ -120,558 +120,558 @@ if ((Q.welfare > 0 && Q.judicial_reform >= 2 && Q.womens_work >= 1 && Q.family_l
 @eg_menu
 
 - #endings
-- @end_game: End game.
+- @end_game: 结束游戏。
 
 @right_thing
 view-if: capital_spd
-title: <span style="color:rgb(170,150,60);font-family:'Times New Roman',serif;font-weight:700;letter-spacing:0.5px;">You did the right thing.</span>
+title: <span style="color:rgb(170,150,60);font-family:'Times New Roman',serif;font-weight:700;letter-spacing:0.5px;">你做了正确的事。</span>
 tags: endings
 go-to: eg_menu
 
-<span style="color:rgb(170,150,60);font-family:'Times New Roman',serif;font-weight:700;letter-spacing:0.5px;">Thanks to you, profits are booming. This has been a real boon to the economy, so I just want to emphasize, that you did the right thing.</span>
+<span style="color:rgb(170,150,60);font-family:'Times New Roman',serif;font-weight:700;letter-spacing:0.5px;">多亏了你,利润正在飙升。这对经济的确大有裨益,所以我要再强调一遍:你做了正确的事。</span>
 
 @sapd_victory
 view-if: secret_ending
-title: The SAPD is in undisputed control over Germany.
+title: 社会主义工人党已无可争议地掌控了德国。
 tags: endings
 go-to: eg_menu
 
-Crazy stuff. 
+真是疯了。
 
 @schleicher_victory
 view-if: schleicher_victory
-title: Kurt von Schleicher is in undisputed control over Germany.
+title: 库尔特·冯·施莱谢尔已无可争议地掌控了德国。
 tags: endings
 go-to: eg_menu
 
-Kurt von Schleicher has won control over Germany, with our support. Whether this arrangement will last remains to be seen.
+在我们的支持下,库尔特·冯·施莱谢尔取得了对德国的控制权。这一格局能否长久,尚待分晓。
 
 @hitler_wins
 view-if: (chancellor == "Hitler" or president == "Hitler") and (total_defeat==1 or civil_war_seen == 0)
-title: Adolf Hitler is in undisputed control over Germany.
+title: 阿道夫·希特勒已无可争议地掌控了德国。
 tags: endings
 go-to: eg_menu
 
-Adolf Hitler is in undisputed control over Germany. The SPD, along with all of the democratic forces, have failed.
+阿道夫·希特勒已无可争议地掌控了德国。社民党连同一切民主力量,都已失败。
 
-[? if civil_war_seen == 1 : At the very least, we fought back. Perhaps our resistance will be celebrated in an impossible-to-forsee future. ?]
+[? if civil_war_seen == 1 : 至少,我们反抗过。或许在某个难以预见的未来,我们的抵抗会被后人传颂。 ?]
 
 @war_against_hitler
 view-if: (chancellor == "Hitler" or president == "Hitler") and (long_war == 1)
-title: Adolf Hitler is in power, but we are fighting to stop him.
+title: 阿道夫·希特勒已掌权,但我们仍在战斗,力图阻止他。
 tags: endings
 go-to: eg_menu
 
-Adolf Hitler has taken power in Germany. However, we have rallied the democratic forces of the country against him, and are fighting back. The outcome of this war is uncertain.
+阿道夫·希特勒已在德国夺取政权。但我们已团结全国的民主力量与之对抗,正在奋力反击。这场战争的结局尚不明朗。
 
 
 @no_hitler
 view-if: chancellor != "Hitler" and president != "Hitler" and president != "Göring" and chancellor_party != "NSDAP"
-title: Hitler does not yet control Germany...
+title: 希特勒尚未掌控德国……
 tags: endings
 go-to: eg_menu
 
-Hitler does not [? if not hitler_dead : yet ?] control Germany. [? if chancellor == "Papen" : However, Chancellor Papen's authoritarianism and far-right politics are paving the way for[? if not hitler_dead : Hitler, or ?]someone like him, to take power. ?] [? if chancellor == "Schleicher" : However, Chancellor Schleicher's authoritarianism and scheming is paving the way for[? if not hitler_dead : Hitler, or ?]someone like him, to take power. ?][? if resist_coup == 1 and republic_victory == 0 and long_war == 0 and coup_victory == 0 : Given our defeat in the Prussian coup, the far-right appears to be ascendant. ?][? if chancellor == "Brüning" : However, Chancellor Brüning's austerity policies and the continuation of the depression are paving the way for[? if not hitler_dead : Hitler, or ?]someone like him, to take power. ?]
+希特勒[? if not hitler_dead : 尚 ?]未掌控德国。 [? if chancellor == "Papen" : 然而,帕彭总理的威权作风与极右政治,正在为[? if not hitler_dead : 希特勒,或 ?]类似他的人掌权铺路。 ?] [? if chancellor == "Schleicher" : 然而,施莱谢尔总理的威权作风与权谋算计,正在为[? if not hitler_dead : 希特勒,或 ?]类似他的人掌权铺路。 ?][? if resist_coup == 1 and republic_victory == 0 and long_war == 0 and coup_victory == 0 : 鉴于我们在普鲁士政变中落败,极右势力似乎正节节上升。 ?][? if chancellor == "Brüning" : 然而,布吕宁总理的紧缩政策与大萧条的延续,正在为[? if not hitler_dead : 希特勒,或 ?]类似他的人掌权铺路。 ?]
 
-[? if hitler_deported == 1 : We have deported Hitler back to Austria[? if hitler_dead : where he has perished. ?]. [? if not hitler_dead : Hopefully he will never return. ?] ?]
+[? if hitler_deported == 1 : 我们已将希特勒驱逐回奥地利[? if hitler_dead : ,他已在那里殒命。 ?]。[? if not hitler_dead : 但愿他永远不再回来。 ?] ?]
 
 @nsdap_win
 view-if: chancellor == "Goebbels" or president == "Göring"
-title: Despite the deportation of Hitler, the Nazis have still taken power...
+title: 尽管希特勒已被驱逐,纳粹仍然夺取了政权……
 tags: endings
 go-to: eg_menu
 
-Despite the deportation of Hitler, the NSDAP has somehow still wormed its way into power. [? if long_war == 1 : We are fighting them for control of Germany. ?]
+尽管希特勒已被驱逐,纳粹党竟还是钻营着爬上了权力的顶峰。[? if long_war == 1 : 我们正与他们争夺德国的控制权。 ?]
 
 
 @civil_war_won
-title: We have won the civil war.
+title: 我们赢得了内战。
 view-if: republic_victory == 1
 tags: endings
 go-to: eg_menu
 
-We have won the civil war against the reactionary forces. Germany will be changed forever, but it is too early to know how.
+我们赢得了对抗反动势力的内战。德国将永远改变,但究竟会变成什么样,现在还为时过早。
 
 @civil_war_lost
-title: We lost the civil war.
+title: 我们输掉了内战。
 view-if: total_defeat == 1
 tags: endings
 go-to: eg_menu
 
-We have lost the civil war. At least it was a quick coup, and ended before Germany could be plunged into total war.
+我们输掉了内战。所幸这只是一场速决的政变,在德国被拖入全面战争之前便已结束。
 
 @long_war
-title: Germany is gripped by civil war.
+title: 德国陷入内战。
 view-if: long_war == 1
 tags: endings
 go-to: eg_menu
 
-Germany is currently in the grip of a civil war, a brutal affair that has no obvious end. Thousands of lives have already been extinguished, and it is likely that the war will not stop until Germany's cities are reduced to ruins. 
+德国正深陷内战,一场看不到尽头的残酷厮杀。成千上万的生命已经陨灭,这场战争恐怕要等到德国的城市化为废墟才会停歇。
 
-[? if is_favorable == 0 : The current conditions are not favorable for us. ?][? if west_relation >= 2: Our cause is popular in the West, but their sclerotic governments are reluctant to send us aid. ?][? if soviet_aid >= 1 : The Soviet Union has aided the Communists, but not the socialists and democrats, in an attempt to shape Germany's future government. ?][? if east_aid >= 1 : Poland and Czechoslovakia have sent some assistance against the fascists. ?]
+[? if is_favorable == 0 : 当前的形势对我们不利。 ?][? if west_relation >= 2: 我们的事业在西方颇得人心,但他们僵化的政府却不愿向我们提供援助。 ?][? if soviet_aid >= 1 : 苏联援助了共产党人,却没有援助社会主义者与民主派,意在塑造德国未来的政府。 ?][? if east_aid >= 1 : 波兰与捷克斯洛伐克提供了一些援助,以对抗法西斯分子。 ?]
 
 
 @braun_victorious
-title: Otto Braun victorious
+title: 奥托·布劳恩胜利
 view-if: president == "Braun"
 tags: endings
 go-to: eg_menu
 
-Otto Braun has been elected as President of Germany. He had never desired to be the most powerful man in Germany, but now he is. 
+奥托·布劳恩当选为德国总统。他从未渴求成为德国最有权势的人,但如今他已是了。
 
 @president_schumacher
-title: Kurt Schumacher victorious
+title: 库尔特·舒马赫胜利
 view-if: president == "Schumacher"
 tags: endings
 go-to: eg_menu
 
-Kurt Schumacher has been elected as President of Germany. As a young and ambitious SPD member, he will be shaping Germany for years to come.
+库尔特·舒马赫当选为德国总统。作为一位年轻而雄心勃勃的社民党人,他将在未来多年里塑造德国。
 
 @president_juchacz
-title: Marie Juchacz is President
+title: 玛丽·尤哈茨当选总统
 view-if: president == "Juchacz"
 tags: endings
 go-to: eg_menu
 
-Marie Juchacz has been elected as President of Germany. She is the first woman to be elected as the head of state of any republic, and will contribute to shaping Germany for years to come.
+玛丽·尤哈茨当选为德国总统。她是有史以来第一位当选共和国国家元首的女性,将在未来多年里为塑造德国作出贡献。
 
 @president_einstein
-title: Albert Einstein is President
+title: 阿尔伯特·爱因斯坦当选总统
 view-if: president == "Einstein"
 tags: endings
 go-to: eg_menu
 
-Albert Einstein, possibly the most famous scientist in the world, has been elected as President of Germany. As a German Jew and a pacifist, he is the repudiation of everything the Nazis stood for, and a symbol of a new German Republic that has moved beyond its checkered past.
+阿尔伯特·爱因斯坦,或许是世界上最负盛名的科学家,当选为德国总统。身为一名德国犹太人和和平主义者,他否定了纳粹所标榜的一切,也成为一个走出斑驳过往的新德意志共和国的象征。
 
 @spd_victorious
-title: SPD still in government
+title: 社民党仍在执政
 view-if: spd_in_government == 1 and chancellor_party == "SPD" and total_defeat == 0 and long_war == 0
 tags: endings
 go-to: eg_menu
 
-The SPD is still in government, under Chancellor [+ chancellor +]. Given the circumstances, this is a substantial accomplishment.
+在 [+ chancellor +] 总理的领导下,社民党仍在执政。考虑到所处的情势,这已是相当了不起的成就。
 
 @communist_victory
-title: Communist victory
+title: 共产党胜利
 view-if: chancellor_party == "KPD" or president == "Thälmann" or socialist_unity and total_defeat == 0 and long_war == 0
 tags: endings
 go-to: eg_menu
 
-The KPD has won power in Germany, with our assistance. They will try to remake Germany in the Soviet image. How much they succeed is yet to be determined.
+在我们的协助下,德国共产党在德国赢得了政权。他们将试图按苏联的模样重塑德国。成效几何,尚未可知。
 
 @reactionary_victory
-title: Reactionary victory
+title: 反动派胜利
 view-if: chancellor == "Seldte"
 tags: endings
 go-to: eg_menu
 
-The reactionaries have won power in Germany and declared martial law. They will attempt to pull Germany back into the past and undo our hard-fought victories.
+反动派在德国夺得政权,并宣布了戒严。他们将试图把德国拖回过去,抹去我们浴血奋战换来的胜利。
 
 @works_program
-title: Works program enacted!
+title: 公共工程计划已推行!
 view-if: works_program > 0
 tags: endings
 go-to: eg_menu
 
-Our government has enacted a public works program!
+我们的政府推行了一项公共工程计划!
 
 @unemployment_reduced
-title: Unemployment has been reduced from its peak.
+title: 失业率已从峰值回落。
 view-if: unemployed <= 20 and unemployed >= 10 and year >= 1930
 tags: endings
 go-to: eg_menu
 
-While still uncomfortably high, unemployment levels are nowhere near their peak. This is a success of our economic policy.
+失业率虽仍高得令人不安,却已远低于峰值。这是我们经济政策的一项成功。
 
 @unemployment_reduced_2
-title: Unemployment has been successfully reduced!
+title: 失业率已成功降低!
 view-if: unemployed < 10 and year >= 1930
 tags: endings
 go-to: eg_menu
 
-Unemployment levels have fallen substantially! This is a success of our economic policy.
+失业率已大幅下降!这是我们经济政策的一项成功。
 
 
 
 @unemployment_high
-title: Unemployment is still too high.
+title: 失业率仍然过高。
 view-if: unemployed >= 20 and (chancellor != "Hitler" and president != "Hitler") and (total_defeat == 0) and long_war == 0
 tags: endings
 go-to: eg_menu
 
-Unemployment is still at dangerously high levels. Even though Hitler is not in power, the situation is ripe for instability and extremism.
+失业率仍处于危险的高位。即便希特勒未能掌权,这样的局势也极易滋生动荡与极端主义。
 
 
 @emergency_government
-title: SPD ruling in an emergency government.
+title: 社民党以紧急政府的形式执政。
 view-if: in_emergency_government == 1
 tags: endings
 go-to: eg_menu
 
-The SPD is ruling as part of an emergency minority government, led by President [+ president +] and Chancellor [+ chancellor +]. This is a temporary and unstable arrangement, leaving the door open to further authoritarianism.
+社民党作为紧急少数派政府的一员执政,由总统 [+ president +] 与总理 [+ chancellor +] 领导。这是一种临时而不稳定的安排,为进一步的威权化留了口子。
 
 @peoples_party_achieved
-title: The SPD is a "People's Party".
+title: 社民党成了「全民党」。
 view-if: peoples_party == 1
 tags: endings
 go-to: eg_menu
 
-The SPD has been declared a "People's Party", representing all of the people, not just the working class. This policy has many supporters and detractors, and what will become of the party is still unclear.
+社民党已被宣布为「全民党」,代表全体人民,而不只是工人阶级。这项政策毁誉参半,党将走向何方仍未可知。
 
 @weimar_plan_achieved
-title: The republican parties banded around the "Weimar Plan".
+title: 各共和派政党围绕「魏玛计划」团结起来。
 view-if: weimar_plan_adopted == 1
 tags: endings
 go-to: eg_menu
 
-The SPD has convinced the Weimar parties to adopt the moderate economic plan, now dubbed the Weimar Plan. This shared programme is opposed by both the left-wing of the SPD and the right-wing of Zentrum, and is not expected to last long should the immediate threats to democracy be defeated.
+社民党已说服各魏玛政党采纳这项温和经济计划,如今它被称为「魏玛计划」。这份共同的纲领同时遭到社民党左翼与中央党右翼的反对;一旦针对民主的紧迫威胁被消除,它恐怕维持不了多久。
 
 @nationalization_achieved
-title: Socialization of the economy has commenced.
+title: 经济社会化已经开始。
 view-if: nationalization_progress >= 2
 tags: endings
 go-to: eg_menu
 
-As part of our socialist economic plan, we have nationalized a substantial portion of the economy, beginning the transition to actual socialism.
+作为社会主义经济计划的一部分,我们已将相当一部分经济国有化,开启了向真正的社会主义的过渡。
 
 @works_councils
-title: Works councils have more power.
+title: 工厂委员会获得了更大权力。
 view-if: works_councils >= 3
 tags: endings
 go-to: eg_menu
 
-Works councils now have substantially greater influence, giving workers democratic control over their economic lives.
+工厂委员会如今拥有大得多的影响力,让工人得以民主地掌控自己的经济生活。
 
 @european_union
-title: There is now a European Union!
+title: 欧洲联盟已然成立!
 view-if: eu = 1
 tags: endings
 go-to: eg_menu
 
-We have helped to form a European Union to bring peace and prosperity to the continent. Time will tell how effective it will be.
+我们参与促成了欧洲联盟的建立,以为这片大陆带来和平与繁荣。它究竟成效如何,只有时间能给出答案。
 
 @achievements
-title: Achievements
+title: 成就
 view-if: achievement_game_completed == 1
 tags: endings
 go-to: eg_menu if started == 1; root.start_menu_2 if started == 0
 
-= Completed Achievements in this Playthrough
+= 本周目已达成成就
 
-[? if game_achievement_korporatismus : **Korporatismus** - establish a corporatist economy. ?]
+[? if game_achievement_korporatismus : **统合主义** — 建立统合主义经济。 ?]
 
-[? if game_achievement_eiserne_front : **Eiserne Front** - form the Iron Front. ?]
+[? if game_achievement_eiserne_front : **铁前线** — 组建铁前线。 ?]
 
-[? if game_achievement_civil_war : **Bürgerkrieg** - enter a long civil war. ?]
+[? if game_achievement_civil_war : **内战** — 卷入一场长期内战。 ?]
 
-[? if game_achievement_einigkeit : **Einigkeit** - reach the end of the game without a civil war on easy. ?]
+[? if game_achievement_einigkeit : **团结** — 在简单难度下不打内战,直至游戏结束。 ?]
 
-[? if game_achievement_einigkeit_und_recht : **Einigkeit und Recht** - reach the end of the game without a civil war on normal. ?]
+[? if game_achievement_einigkeit_und_recht : **团结与法权** — 在普通难度下不打内战,直至游戏结束。 ?]
 
-[? if game_achievement_einigkeit_und_recht_und_freiheit : **Einigkeit und Recht und Freiheit** - reach the end of the game without a civil war on hard. ?]
+[? if game_achievement_einigkeit_und_recht_und_freiheit : **团结、法权与自由** — 在困难难度下不打内战,直至游戏结束。 ?]
 
-[? if game_achievement_schwarz_rot_gold : **Schwarz-Rot-Gold** - reach the end of the game without a civil war on historical mode. ?]
+[? if game_achievement_schwarz_rot_gold : **黑红金** — 在历史模式下不打内战,直至游戏结束。 ?]
 
-[? if game_achievement_victory_for_the_republic: **Sieg für die Republik** - win the civil war. ?]
+[? if game_achievement_victory_for_the_republic: **共和国的胜利** — 赢得内战。 ?]
 
-[? if game_achievement_bollwerk_der_demokratie: **Bollwerk der Demokratie** - Resist the Prussian Coup and win. ?]
+[? if game_achievement_bollwerk_der_demokratie: **民主堡垒** — 抵抗普鲁士政变并获胜。 ?]
 
-[? if game_achievement_red_tzar_of_prussia : **Roter Zar von Preußen** - Otto Braun is President, Chancellor, and Minister-President. ?]
+[? if game_achievement_red_tzar_of_prussia : **普鲁士的红色沙皇** — 奥托·布劳恩同时担任总统、总理与普鲁士州总理。 ?]
 
-[? if game_achievement_einheitsfront: **Einheitsfront** - Form a government consisting of the SPD and KPD. ?]
+[? if game_achievement_einheitsfront: **统一战线** — 组建由社民党与共产党组成的政府。 ?]
 
-[? if game_achievement_einheitsfront_2: **Sieg für die Einheitsfront** - Form a Left Front that survives the KPD demands. ?]
+[? if game_achievement_einheitsfront_2: **统一战线的胜利** — 组建一个能顶住共产党要求的左翼阵线。 ?]
 
-[? if game_achievement_volksfront: **Volksfront** - Form a government consisting of the SPD, KPD, Z, and DDP. ?]
+[? if game_achievement_volksfront: **人民阵线** — 组建由社民党、共产党、中央党与民主党组成的政府。 ?]
 
-[? if game_achievement_grosse_volksfront: **Große Volksfront** - With Joos leading the Center Party and the Conciliators leading the KPD, form a government consisting of the SPD, KPD, Z, and DDP. ?]
+[? if game_achievement_grosse_volksfront: **大人民阵线** — 在约斯领导中央党、调和派领导共产党的局面下,组建由社民党、共产党、中央党与民主党组成的政府。 ?]
 
-[? if game_achievement_volksfront_2: **Sieg für die Volksfront** - Form a Popular Front that survives the KPD demands. ?]
+[? if game_achievement_volksfront_2: **人民阵线的胜利** — 组建一个能顶住共产党要求的人民阵线。 ?]
 
-[? if game_achievement_constitutional_coalition: **Verfassungskoalition** - form a "constitutional coalition". ?]
+[? if game_achievement_constitutional_coalition: **宪法联盟** — 组建一个「宪法联盟」。 ?]
 
-[? if game_achievement_weimar_coalition: **Weimarer Koalition** - form a Weimar coalition. ?]
+[? if game_achievement_weimar_coalition: **魏玛联盟** — 组建魏玛联盟。 ?]
 
-[? if game_achievement_majority_party: **Mehrheitspartei** - form an SPD-only majority government. ?]
+[? if game_achievement_majority_party: **多数党** — 组建社民党单独多数政府。 ?]
 
-[? if game_achievement_minderheitsregierung: **Minderheitsregierung** - form an SPD minority government. ?]
+[? if game_achievement_minderheitsregierung: **少数派政府** — 组建社民党少数派政府。 ?]
 
-[? if game_achievement_volkspartei: **Volkspartei** - the SPD is a People's Party. ?]
+[? if game_achievement_volkspartei: **全民党** — 让社民党成为全民党。 ?]
 
-[? if game_achievement_sohn_seiner_klasse: **Sohn seiner Klasse** - Ernst Thälmann is either president or chancellor. ?]
+[? if game_achievement_sohn_seiner_klasse: **阶级之子** — 恩斯特·台尔曼当选总统或总理。 ?]
 
-[? if game_achievement_rote_millionar: **Der rote Millionär** - Willi Münzenberg is president. ?]
+[? if game_achievement_rote_millionar: **红色百万富翁** — 维利·明岑贝格当选总统。 ?]
 
-[? if game_achievement_versohnler: **Versöhnler** - the Conciliators lead the KPD. ?]
+[? if game_achievement_versohnler: **调和派** — 让调和派领导共产党。 ?]
 
-[? if game_achievement_deport_hitler : **Der österreichische Gefreiter** - deported Hitler ?]
+[? if game_achievement_deport_hitler : **奥地利下士** — 将希特勒驱逐出境 ?]
 
-[? if game_achievement_wirtschaftspolitik: **Wirtschaftspolitik** - enact an economic plan. ?]
+[? if game_achievement_wirtschaftspolitik: **经济政策** — 推行一项经济计划。 ?]
 
-[? if game_achievement_wirtschaftswunder: **Wirtschaftswunder** - After 1932, have unemployment less than in 1928, inflation below 5%, and a budget surplus. ?]
+[? if game_achievement_wirtschaftswunder: **经济奇迹** — 1932 年之后,使失业率低于 1928 年水平、通胀低于 5%,并保持财政盈余。 ?]
 
-[? if game_achievement_wirtschaftsexperiment: **Wirtschaftsexperiment** - enact two different economic plans. ?]
+[? if game_achievement_wirtschaftsexperiment: **经济实验** — 推行两项不同的经济计划。 ?]
 
-[? if game_achievement_freie_marktwirtschaft: **Freie Marktwirtschaft** - survive to 1932 without adopting an economic plan. ?]
+[? if game_achievement_freie_marktwirtschaft: **自由市场经济** — 在不推行任何经济计划的情况下坚持到 1932 年。 ?]
 
-[? if game_achievement_equality: **Gleichheit** - pass reforms for women's rights. ?]
+[? if game_achievement_equality: **平等** — 通过妇女权利改革。 ?]
 
-[? if game_achievement_hirschfeld: **Hirschfeld** - pass reforms for homosexual rights. ?]
+[? if game_achievement_hirschfeld: **希尔施费尔德** — 通过同性恋权利改革。 ?]
 
-[? if game_achievement_women_reichsbanner: **Mädchen in Uniform** - a woman's place is in the Reichsbanner. ?]
+[? if game_achievement_women_reichsbanner: **穿制服的少女** — 妇女的归宿在国旗团。 ?]
 
-[? if game_achievement_bruder_zur_sonne: **Brüder, zur Sonne, zur Freiheit** - reduce unemployment, pause reparations, increase women's rights, elect Otto Braun president, and deport Hitler in one playthrough on at least normal difficulty. ?]
+[? if game_achievement_bruder_zur_sonne: **兄弟们,向着太阳,向着自由** — 在至少普通难度下,于同一周目内降低失业率、暂停赔款、推进妇女权利、让奥托·布劳恩当选总统并驱逐希特勒。 ?]
 
-[? if game_achievement_die_rote_fahne: **Die Rote Fahne** - join the KPD in their May Day march. ?]
+[? if game_achievement_die_rote_fahne: **红旗** — 与共产党一同参加五一游行。 ?]
 
-[? if game_achievement_panik_im_mittelstand: **Panik im Mittelstand** - SPD new middle class support is at least 50%. ?]
+[? if game_achievement_panik_im_mittelstand: **中间阶层的恐慌** — 社民党在新中间阶层中的支持率至少达到 50%。 ?]
 
-[? if game_achievement_bauernrevolution: **Bauernrevolution** - SPD rural support is at least 50%. ?]
+[? if game_achievement_bauernrevolution: **农民革命** — 社民党在乡村的支持率至少达到 50%。 ?]
 
-[? if game_achievement_katholischer_sozialismus: **Katholischer Sozialismus** - SPD Catholic support is at least 50%. ?]
+[? if game_achievement_katholischer_sozialismus: **天主教社会主义** — 社民党在天主教徒中的支持率至少达到 50%。 ?]
 
-[? if game_achievement_grosse_volkspartei: **Große Volkspartei** - All classes have at least 40% SPD support. ?]
+[? if game_achievement_grosse_volkspartei: **大全民党** — 所有阶层的社民党支持率至少达到 40%。 ?]
 
-[? if game_achievement_klassenkampf: **Klassenkampf** - SPD worker support is at least 80%, while middle-class and rural supports are less than 20%. ?]
+[? if game_achievement_klassenkampf: **阶级斗争** — 社民党在工人中的支持率至少达到 80%,而中间阶层与乡村的支持率均低于 20%。 ?]
 
-[? if game_achievement_raterepublik: **Räterepublik** - begin the transformation to a socialist economy. ?]
+[? if game_achievement_raterepublik: **苏维埃共和国** — 开启向社会主义经济的转变。 ?]
 
-[? if game_achievement_polykrise: **Polykrise** - survive a capital strike and a fascist coup. ?]
+[? if game_achievement_polykrise: **多重危机** — 挺过一场资本罢市与一场法西斯政变。 ?]
 
-[? if game_achievement_syndikalismus: **Syndikalismus** - support factory takeovers by the workers. ?]
+[? if game_achievement_syndikalismus: **工团主义** — 支持工人接管工厂。 ?]
 
-[? if game_achievement_drei_pfeile: **Drei Pfeile** - defeat a coup without a civil war. ?]
+[? if game_achievement_drei_pfeile: **三箭头** — 不打内战便挫败一场政变。 ?]
 
-[? if game_achievement_ausnahmezustand: **Ausnahmezustand** - use emergency powers to cancel elections. ?]
+[? if game_achievement_ausnahmezustand: **紧急状态** — 动用紧急权力取消选举。 ?]
 
-[? if game_achievement_eu: **Vereinigte Staaten von Europa** - form a "European Union". ?]
+[? if game_achievement_eu: **欧洲合众国** — 组建「欧洲联盟」。 ?]
 
-[? if game_achievement_heidelberger_programm: **Heidelberger Programm** - achieve the goals of the SPD's Heidelberg Program: social welfare, judicial reform, women's rights in the workplace and family, progressive taxation, works councils, and the formation of a European Union. ?]
+[? if game_achievement_heidelberger_programm: **海德堡纲领** — 实现社民党海德堡纲领的目标:社会福利、司法改革、妇女在职场与家庭中的权利、累进税制、工厂委员会,以及建立欧洲联盟。 ?]
 
-[? if game_achievement_verfassungsreform: **Verfassungsreform** - pass a constitutional amendment. ?]
+[? if game_achievement_verfassungsreform: **宪法改革** — 通过一项宪法修正案。 ?]
 
-[? if game_achievement_zeppelin_kapitan : **Zeppelinkapitän** - Hugo Eckener has been elected president. ?]
+[? if game_achievement_zeppelin_kapitan : **齐柏林船长** — 胡戈·埃克纳当选总统。 ?]
 
-[? if game_achievement_wahlrechts : **Wahlrechts für Frauen** - Marie Juchacz has been elected president. ?]
+[? if game_achievement_wahlrechts : **妇女选举权** — 玛丽·尤哈茨当选总统。 ?]
 
-[? if game_achievement_bundesrepublik : **Bundesrepublik** - Konrad Adenauer or Kurt Schumacher has been elected president, and constitutional reforms have reduced presidential power. ?]
+[? if game_achievement_bundesrepublik : **联邦共和国** — 康拉德·阿登纳或库尔特·舒马赫当选总统,且宪法改革削减了总统权力。 ?]
 
-[? if game_achievement_republik_der_wissenschaft : **Republik der Wissenschaft** - Albert Einstein has been elected president. ?]
+[? if game_achievement_republik_der_wissenschaft : **科学的共和国** — 阿尔伯特·爱因斯坦当选总统。 ?]
 
-[? if game_achievement_arbeiter_von_wien : **Arbeiter von Wien** - SDAPÖ victory in Austria. ?]
+[? if game_achievement_arbeiter_von_wien : **维也纳的工人** — 奥地利社会民主党在奥地利获胜。 ?]
 
-[? if game_achievement_stolperstein: **Stolperstein** - we lost, but history might memorialize us... ?]
+[? if game_achievement_stolperstein: **绊脚石** — 我们输了,但历史或许会铭记我们…… ?]
 
 
 
-= Completed Achievements Overall
+= 已达成成就(总览)
 
-[? if achievement_korporatismus : **Korporatismus** - establish a corporatist economy. ?]
+[? if achievement_korporatismus : **统合主义** — 建立统合主义经济。 ?]
 
-[? if achievement_eiserne_front : **Eiserne Front** - form the Iron Front. ?]
+[? if achievement_eiserne_front : **铁前线** — 组建铁前线。 ?]
 
-[? if achievement_civil_war : **Bürgerkrieg** - enter a long civil war. ?]
+[? if achievement_civil_war : **内战** — 卷入一场长期内战。 ?]
 
-[? if achievement_einigkeit : **Einigkeit** - reach the end of the game without a civil war on easy. ?]
+[? if achievement_einigkeit : **团结** — 在简单难度下不打内战,直至游戏结束。 ?]
 
-[? if achievement_einigkeit_und_recht : **Einigkeit und Recht** - reach the end of the game without a civil war on normal. ?]
+[? if achievement_einigkeit_und_recht : **团结与法权** — 在普通难度下不打内战,直至游戏结束。 ?]
 
-[? if achievement_einigkeit_und_recht_und_freiheit : **Einigkeit und Recht und Freiheit** - reach the end of the game without a civil war on hard. ?]
+[? if achievement_einigkeit_und_recht_und_freiheit : **团结、法权与自由** — 在困难难度下不打内战,直至游戏结束。 ?]
 
-[? if achievement_schwarz_rot_gold : **Schwarz-Rot-Gold** - reach the end of the game without a civil war on historical mode. ?]
+[? if achievement_schwarz_rot_gold : **黑红金** — 在历史模式下不打内战,直至游戏结束。 ?]
 
-[? if achievement_victory_for_the_republic: **Sieg für die Republik** - win the civil war. ?]
+[? if achievement_victory_for_the_republic: **共和国的胜利** — 赢得内战。 ?]
 
-[? if achievement_bollwerk_der_demokratie: **Bollwerk der Demokratie** - Resist the Prussian Coup and win. ?]
+[? if achievement_bollwerk_der_demokratie: **民主堡垒** — 抵抗普鲁士政变并获胜。 ?]
 
-[? if achievement_red_tzar_of_prussia : **Roter Zar von Preußen** - Otto Braun is President, Chancellor, and Minister-President. ?]
+[? if achievement_red_tzar_of_prussia : **普鲁士的红色沙皇** — 奥托·布劳恩同时担任总统、总理与普鲁士州总理。 ?]
 
-[? if achievement_einheitsfront: **Einheitsfront** - Form a government consisting of the SPD and KPD. ?]
+[? if achievement_einheitsfront: **统一战线** — 组建由社民党与共产党组成的政府。 ?]
 
-[? if achievement_einheitsfront_2: **Sieg für die Einheitsfront** - Form a Left Front that survives the KPD demands. ?]
+[? if achievement_einheitsfront_2: **统一战线的胜利** — 组建一个能顶住共产党要求的左翼阵线。 ?]
 
-[? if achievement_volksfront: **Volksfront** - Form a government consisting of the SPD, KPD, Z, and DDP. ?]
+[? if achievement_volksfront: **人民阵线** — 组建由社民党、共产党、中央党与民主党组成的政府。 ?]
 
-[? if achievement_grosse_volksfront: **Große Volksfront** - With Joos leading the Center Party and the Conciliators leading the KPD, form a government consisting of the SPD, KPD, Z, and DDP. ?]
+[? if achievement_grosse_volksfront: **大人民阵线** — 在约斯领导中央党、调和派领导共产党的局面下,组建由社民党、共产党、中央党与民主党组成的政府。 ?]
 
-[? if achievement_volksfront_2: **Sieg für die Volksfront** - Form a Popular Front that survives the KPD demands. ?]
+[? if achievement_volksfront_2: **人民阵线的胜利** — 组建一个能顶住共产党要求的人民阵线。 ?]
 
-[? if achievement_constitutional_coalition: **Verfassungskoalition** - form a "constitutional coalition". ?]
+[? if achievement_constitutional_coalition: **宪法联盟** — 组建一个「宪法联盟」。 ?]
 
-[? if achievement_weimar_coalition: **Weimarer Koalition** - form a Weimar coalition. ?]
+[? if achievement_weimar_coalition: **魏玛联盟** — 组建魏玛联盟。 ?]
 
-[? if achievement_majority_party: **Mehrheitspartei** - form an SPD-only majority government. ?]
+[? if achievement_majority_party: **多数党** — 组建社民党单独多数政府。 ?]
 
-[? if achievement_minderheitsregierung: **Minderheitsregierung** - form an SPD minority government. ?]
+[? if achievement_minderheitsregierung: **少数派政府** — 组建社民党少数派政府。 ?]
 
-[? if achievement_volkspartei: **Volkspartei** - the SPD is a People's Party. ?]
+[? if achievement_volkspartei: **全民党** — 让社民党成为全民党。 ?]
 
-[? if achievement_sohn_seiner_klasse: **Sohn seiner Klasse** - Ernst Thälmann is either president or chancellor. ?]
+[? if achievement_sohn_seiner_klasse: **阶级之子** — 恩斯特·台尔曼当选总统或总理。 ?]
 
-[? if achievement_rote_millionar: **Der rote Millionär** - Willi Münzenberg is president. ?]
+[? if achievement_rote_millionar: **红色百万富翁** — 维利·明岑贝格当选总统。 ?]
 
-[? if achievement_versohnler: **Versöhnler** - the Conciliators lead the KPD. ?]
+[? if achievement_versohnler: **调和派** — 让调和派领导共产党。 ?]
 
-[? if achievement_deport_hitler : **Der österreichische Gefreiter** - deported Hitler ?]
+[? if achievement_deport_hitler : **奥地利下士** — 将希特勒驱逐出境 ?]
 
-[? if achievement_wirtschaftspolitik: **Wirtschaftspolitik** - enact an economic plan. ?]
+[? if achievement_wirtschaftspolitik: **经济政策** — 推行一项经济计划。 ?]
 
-[? if achievement_wirtschaftswunder: **Wirtschaftswunder** - After 1932, have unemployment less than in 1928, inflation below 5%, and a budget surplus. ?]
+[? if achievement_wirtschaftswunder: **经济奇迹** — 1932 年之后,使失业率低于 1928 年水平、通胀低于 5%,并保持财政盈余。 ?]
 
-[? if achievement_wirtschaftsexperiment: **Wirtschaftsexperiment** - enact two different economic plans. ?]
+[? if achievement_wirtschaftsexperiment: **经济实验** — 推行两项不同的经济计划。 ?]
 
-[? if achievement_freie_marktwirtschaft: **Freie Marktwirtschaft** - survive to the end of the game without adopting an economic plan. ?]
+[? if achievement_freie_marktwirtschaft: **自由市场经济** — 在不推行任何经济计划的情况下坚持到游戏结束。 ?]
 
-[? if achievement_equality: **Gleichheit** - pass reforms for women's rights. ?]
+[? if achievement_equality: **平等** — 通过妇女权利改革。 ?]
 
-[? if achievement_hirschfeld: **Hirschfeld** - pass reforms for homosexual rights. ?]
+[? if achievement_hirschfeld: **希尔施费尔德** — 通过同性恋权利改革。 ?]
 
-[? if achievement_women_reichsbanner: **Mädchen in Uniform** - a woman's place is in the Reichsbanner. ?]
+[? if achievement_women_reichsbanner: **穿制服的少女** — 妇女的归宿在国旗团。 ?]
 
-[? if achievement_bruder_zur_sonne: **Brüder, zur Sonne, zur Freiheit** - reduce unemployment, pause reparations, increase women's rights, elect Otto Braun president, and deport Hitler in one playthrough on at least normal difficulty. ?]
+[? if achievement_bruder_zur_sonne: **兄弟们,向着太阳,向着自由** — 在至少普通难度下,于同一周目内降低失业率、暂停赔款、推进妇女权利、让奥托·布劳恩当选总统并驱逐希特勒。 ?]
 
-[? if achievement_die_rote_fahne: **Die Rote Fahne** - join the KPD in their May Day march. ?]
+[? if achievement_die_rote_fahne: **红旗** — 与共产党一同参加五一游行。 ?]
 
-[? if achievement_panik_im_mittelstand: **Panik im Mittelstand** - SPD new middle class support is at least 50%. ?]
+[? if achievement_panik_im_mittelstand: **中间阶层的恐慌** — 社民党在新中间阶层中的支持率至少达到 50%。 ?]
 
-[? if achievement_bauernrevolution: **Bauernrevolution** - SPD rural support is at least 50%. ?]
+[? if achievement_bauernrevolution: **农民革命** — 社民党在乡村的支持率至少达到 50%。 ?]
 
-[? if achievement_katholischer_sozialismus: **Katholischer Sozialismus** - SPD Catholic support is at least 50%. ?]
+[? if achievement_katholischer_sozialismus: **天主教社会主义** — 社民党在天主教徒中的支持率至少达到 50%。 ?]
 
-[? if achievement_grosse_volkspartei: **Große Volkspartei** - All classes have at least 40% SPD support. ?]
+[? if achievement_grosse_volkspartei: **大全民党** — 所有阶层的社民党支持率至少达到 40%。 ?]
 
-[? if achievement_klassenkampf: **Klassenkampf** - SPD worker support is at least 80%, while middle-class and rural supports are less than 20%. ?]
+[? if achievement_klassenkampf: **阶级斗争** — 社民党在工人中的支持率至少达到 80%,而中间阶层与乡村的支持率均低于 20%。 ?]
 
-[? if achievement_raterepublik: **Räterepublik** - begin the transformation to a socialist economy. ?]
+[? if achievement_raterepublik: **苏维埃共和国** — 开启向社会主义经济的转变。 ?]
 
-[? if achievement_polykrise: **Polykrise** - survive a capital strike and a fascist coup. ?]
+[? if achievement_polykrise: **多重危机** — 挺过一场资本罢市与一场法西斯政变。 ?]
 
-[? if achievement_syndikalismus: **Syndikalismus** - support factory takeovers by the workers. ?]
+[? if achievement_syndikalismus: **工团主义** — 支持工人接管工厂。 ?]
 
-[? if achievement_drei_pfeile: **Drei Pfeile** - defeat a coup without a civil war. ?]
+[? if achievement_drei_pfeile: **三箭头** — 不打内战便挫败一场政变。 ?]
 
-[? if achievement_ausnahmezustand: **Ausnahmezustand** - use emergency powers to cancel elections. ?]
+[? if achievement_ausnahmezustand: **紧急状态** — 动用紧急权力取消选举。 ?]
 
-[? if achievement_eu: **Vereinigte Staaten von Europa** - form a "European Union". ?]
+[? if achievement_eu: **欧洲合众国** — 组建「欧洲联盟」。 ?]
 
-[? if achievement_heidelberger_programm: **Heidelberger Programm** - achieve the goals of the SPD's Heidelberg Program: social welfare, judicial reform, women's rights in the workplace and family, progressive taxation, works councils, and the formation of a European Union. ?]
+[? if achievement_heidelberger_programm: **海德堡纲领** — 实现社民党海德堡纲领的目标:社会福利、司法改革、妇女在职场与家庭中的权利、累进税制、工厂委员会,以及建立欧洲联盟。 ?]
 
-[? if achievement_verfassungsreform: **Verfassungsreform** - pass a constitutional amendment. ?]
+[? if achievement_verfassungsreform: **宪法改革** — 通过一项宪法修正案。 ?]
 
-[? if achievement_bundesrepublik : **Bundesrepublik** - Konrad Adenauer or Kurt Schumacher has been elected president, and constitutional reforms have reduced presidential power. ?]
+[? if achievement_bundesrepublik : **联邦共和国** — 康拉德·阿登纳或库尔特·舒马赫当选总统,且宪法改革削减了总统权力。 ?]
 
-[? if achievement_republik_der_wissenschaft : **Republik der Wissenschaft** - Albert Einstein has been elected president. ?]
+[? if achievement_republik_der_wissenschaft : **科学的共和国** — 阿尔伯特·爱因斯坦当选总统。 ?]
 
-[? if achievement_arbeiter_von_wien : **Arbeiter von Wien** - SDAPÖ victory in Austria. ?]
+[? if achievement_arbeiter_von_wien : **维也纳的工人** — 奥地利社会民主党在奥地利获胜。 ?]
 
-[? if achievement_stolperstein: **Stolperstein** - we lost, but history might memorialize us... ?]
+[? if achievement_stolperstein: **绊脚石** — 我们输了,但历史或许会铭记我们…… ?]
 
 
-= Incomplete Achievements
+= 未达成成就
 
-[? if not achievement_korporatismus : **Korporatismus** - establish a corporatist economy. ?]
+[? if not achievement_korporatismus : **统合主义** — 建立统合主义经济。 ?]
 
-[? if not achievement_eiserne_front : **Eiserne Front** - form the Iron Front. ?]
+[? if not achievement_eiserne_front : **铁前线** — 组建铁前线。 ?]
 
-[? if not achievement_civil_war : **Bürgerkrieg** - enter a long civil war. ?]
+[? if not achievement_civil_war : **内战** — 卷入一场长期内战。 ?]
 
-[? if not achievement_einigkeit : **Einigkeit** - reach the end of the game without a civil war on easy. ?]
+[? if not achievement_einigkeit : **团结** — 在简单难度下不打内战,直至游戏结束。 ?]
 
-[? if not achievement_einigkeit_und_recht : **Einigkeit und Recht** - reach the end of the game without a civil war on normal. ?]
+[? if not achievement_einigkeit_und_recht : **团结与法权** — 在普通难度下不打内战,直至游戏结束。 ?]
 
-[? if not achievement_einigkeit_und_recht_und_freiheit : **Einigkeit und Recht und Freiheit** - reach the end of the game without a civil war on hard. ?]
+[? if not achievement_einigkeit_und_recht_und_freiheit : **团结、法权与自由** — 在困难难度下不打内战,直至游戏结束。 ?]
 
-[? if not achievement_schwarz_rot_gold : **Schwarz-Rot-Gold** - reach the end of the game without a civil war on historical mode. ?]
+[? if not achievement_schwarz_rot_gold : **黑红金** — 在历史模式下不打内战,直至游戏结束。 ?]
 
-[? if not achievement_victory_for_the_republic: **Sieg für die Republik** - win the civil war. ?]
+[? if not achievement_victory_for_the_republic: **共和国的胜利** — 赢得内战。 ?]
 
-[? if not achievement_bollwerk_der_demokratie: **Bollwerk der Demokratie** - Resist the Prussian Coup and win. ?]
+[? if not achievement_bollwerk_der_demokratie: **民主堡垒** — 抵抗普鲁士政变并获胜。 ?]
 
-[? if not achievement_red_tzar_of_prussia : **Roter Zar von Preußen** - Otto Braun is President, Chancellor, and Minister-President. ?]
+[? if not achievement_red_tzar_of_prussia : **普鲁士的红色沙皇** — 奥托·布劳恩同时担任总统、总理与普鲁士州总理。 ?]
 
-[? if not achievement_einheitsfront: **Einheitsfront** - Form a government consisting of the SPD and KPD. ?]
+[? if not achievement_einheitsfront: **统一战线** — 组建由社民党与共产党组成的政府。 ?]
 
-[? if not achievement_einheitsfront_2: **Sieg für die Einheitsfront** - Form a Left Front that survives the KPD demands. ?]
+[? if not achievement_einheitsfront_2: **统一战线的胜利** — 组建一个能顶住共产党要求的左翼阵线。 ?]
 
-[? if not achievement_volksfront: **Volksfront** - Form a government consisting of the SPD, KPD, Z, and DDP. ?]
+[? if not achievement_volksfront: **人民阵线** — 组建由社民党、共产党、中央党与民主党组成的政府。 ?]
 
-[? if not achievement_grosse_volksfront: **Große Volksfront** - With Joos leading the Center Party and the Conciliators leading the KPD, form a government consisting of the SPD, KPD, Z, and DDP. ?]
+[? if not achievement_grosse_volksfront: **大人民阵线** — 在约斯领导中央党、调和派领导共产党的局面下,组建由社民党、共产党、中央党与民主党组成的政府。 ?]
 
-[? if not achievement_volksfront_2: **Sieg für die Volksfront** - Form a Popular Front that survives the KPD demands. ?]
+[? if not achievement_volksfront_2: **人民阵线的胜利** — 组建一个能顶住共产党要求的人民阵线。 ?]
 
-[? if not achievement_constitutional_coalition: **Verfassungskoalition** - form a "constitutional coalition". ?]
+[? if not achievement_constitutional_coalition: **宪法联盟** — 组建一个「宪法联盟」。 ?]
 
-[? if not achievement_weimar_coalition: **Weimarer Koalition** - form a Weimar coalition. ?]
+[? if not achievement_weimar_coalition: **魏玛联盟** — 组建魏玛联盟。 ?]
 
-[? if not achievement_majority_party: **Mehrheitspartei** - form an SPD-only majority government. ?]
+[? if not achievement_majority_party: **多数党** — 组建社民党单独多数政府。 ?]
 
-[? if not achievement_minderheitsregierung: **Minderheitsregierung** - form an SPD minority government. ?]
+[? if not achievement_minderheitsregierung: **少数派政府** — 组建社民党少数派政府。 ?]
 
-[? if not achievement_volkspartei: **Volkspartei** - the SPD is a People's Party. ?]
+[? if not achievement_volkspartei: **全民党** — 让社民党成为全民党。 ?]
 
-[? if not achievement_sohn_seiner_klasse: **Sohn seiner Klasse** - Ernst Thälmann is either president or chancellor. ?]
+[? if not achievement_sohn_seiner_klasse: **阶级之子** — 恩斯特·台尔曼当选总统或总理。 ?]
 
-[? if not achievement_rote_millionar: **Der rote Millionär** - Willi Münzenberg is president. ?]
+[? if not achievement_rote_millionar: **红色百万富翁** — 维利·明岑贝格当选总统。 ?]
 
-[? if not achievement_grosse_volksfront: **Große Volksfront** - With Joos leading the Center Party and the Conciliators leading the KPD, form a government consisting of the SPD, KPD, Z, and DDP. ?]
+[? if not achievement_grosse_volksfront: **大人民阵线** — 在约斯领导中央党、调和派领导共产党的局面下,组建由社民党、共产党、中央党与民主党组成的政府。 ?]
 
-[? if not achievement_deport_hitler : **Der österreichische Gefreiter** - deported Hitler ?]
+[? if not achievement_deport_hitler : **奥地利下士** — 将希特勒驱逐出境 ?]
 
-[? if not achievement_wirtschaftspolitik: **Wirtschaftspolitik** - enact an economic plan. ?]
+[? if not achievement_wirtschaftspolitik: **经济政策** — 推行一项经济计划。 ?]
 
-[? if not achievement_wirtschaftswunder: **Wirtschaftswunder** - After 1932, have unemployment less than in 1928, inflation below 5%, and a budget surplus. ?]
+[? if not achievement_wirtschaftswunder: **经济奇迹** — 1932 年之后,使失业率低于 1928 年水平、通胀低于 5%,并保持财政盈余。 ?]
 
-[? if not achievement_wirtschaftsexperiment: **Wirtschaftsexperiment** - enact two different economic plans. ?]
+[? if not achievement_wirtschaftsexperiment: **经济实验** — 推行两项不同的经济计划。 ?]
 
-[? if not achievement_freie_marktwirtschaft: **Freie Marktwirtschaft** - survive to the end of the game without adopting an economic plan. ?]
+[? if not achievement_freie_marktwirtschaft: **自由市场经济** — 在不推行任何经济计划的情况下坚持到游戏结束。 ?]
 
-[? if not achievement_equality: **Gleichheit** - pass reforms for women's rights. ?]
+[? if not achievement_equality: **平等** — 通过妇女权利改革。 ?]
 
-[? if not achievement_hirschfeld: **Hirschfeld** - pass reforms for homosexual rights. ?]
+[? if not achievement_hirschfeld: **希尔施费尔德** — 通过同性恋权利改革。 ?]
 
-[? if not achievement_women_reichsbanner: **Mädchen in Uniform** - a woman's place is in the Reichsbanner. ?]
+[? if not achievement_women_reichsbanner: **穿制服的少女** — 妇女的归宿在国旗团。 ?]
 
-[? if not achievement_bruder_zur_sonne: **Brüder, zur Sonne, zur Freiheit** - reduce unemployment, pause reparations, increase women's rights, elect Otto Braun president, and deport Hitler in one playthrough on at least normal difficulty. ?]
+[? if not achievement_bruder_zur_sonne: **兄弟们,向着太阳,向着自由** — 在至少普通难度下,于同一周目内降低失业率、暂停赔款、推进妇女权利、让奥托·布劳恩当选总统并驱逐希特勒。 ?]
 
-[? if not achievement_die_rote_fahne: **Die Rote Fahne** - join the KPD in their May Day march. ?]
+[? if not achievement_die_rote_fahne: **红旗** — 与共产党一同参加五一游行。 ?]
 
-[? if not achievement_panik_im_mittelstand: **Panik im Mittelstand** - SPD new middle class support is at least 50%. ?]
+[? if not achievement_panik_im_mittelstand: **中间阶层的恐慌** — 社民党在新中间阶层中的支持率至少达到 50%。 ?]
 
-[? if not achievement_bauernrevolution: **Bauernrevolution** - SPD rural support is at least 50%. ?]
+[? if not achievement_bauernrevolution: **农民革命** — 社民党在乡村的支持率至少达到 50%。 ?]
 
-[? if not achievement_katholischer_sozialismus: **Katholischer Sozialismus** - SPD Catholic support is at least 50%. ?]
+[? if not achievement_katholischer_sozialismus: **天主教社会主义** — 社民党在天主教徒中的支持率至少达到 50%。 ?]
 
-[? if not achievement_grosse_volkspartei: **Große Volkspartei** - All classes have at least 40% SPD support. ?]
+[? if not achievement_grosse_volkspartei: **大全民党** — 所有阶层的社民党支持率至少达到 40%。 ?]
 
-[? if not achievement_klassenkampf: **Klassenkampf** - SPD worker support is at least 80%, while middle-class and rural supports are less than 20%. ?]
+[? if not achievement_klassenkampf: **阶级斗争** — 社民党在工人中的支持率至少达到 80%,而中间阶层与乡村的支持率均低于 20%。 ?]
 
-[? if not achievement_raterepublik: **Räterepublik** - begin the transformation to a socialist economy. ?]
+[? if not achievement_raterepublik: **苏维埃共和国** — 开启向社会主义经济的转变。 ?]
 
-[? if not achievement_polykrise: **Polykrise** - survive a capital strike and a fascist coup. ?]
+[? if not achievement_polykrise: **多重危机** — 挺过一场资本罢市与一场法西斯政变。 ?]
 
-[? if not achievement_syndikalismus: **Syndikalismus** - support factory takeovers by the workers. ?]
+[? if not achievement_syndikalismus: **工团主义** — 支持工人接管工厂。 ?]
 
-[? if not achievement_drei_pfeile: **Drei Pfeile** - defeat a coup without a civil war. ?]
+[? if not achievement_drei_pfeile: **三箭头** — 不打内战便挫败一场政变。 ?]
 
-[? if not achievement_ausnahmezustand: **Ausnahmezustand** - use emergency powers to cancel elections. ?]
+[? if not achievement_ausnahmezustand: **紧急状态** — 动用紧急权力取消选举。 ?]
 
-[? if not achievement_eu: **Vereinigte Staaten von Europa** - form a "European Union". ?]
+[? if not achievement_eu: **欧洲合众国** — 组建「欧洲联盟」。 ?]
 
-[? if not achievement_heidelberger_programm: **Heidelberger Programm** - achieve the goals of the SPD's Heidelberg Program: social welfare, judicial reform, women's rights in the workplace and family, progressive taxation, works councils, and the formation of a European Union. ?]
+[? if not achievement_heidelberger_programm: **海德堡纲领** — 实现社民党海德堡纲领的目标:社会福利、司法改革、妇女在职场与家庭中的权利、累进税制、工厂委员会,以及建立欧洲联盟。 ?]
 
-[? if not achievement_verfassungsreform: **Verfassungsreform** - pass a constitutional amendment. ?]
+[? if not achievement_verfassungsreform: **宪法改革** — 通过一项宪法修正案。 ?]
 
-[? if not achievement_zeppelin_kapitan : **Zeppelinkapitän** - Hugo Eckener has been elected president. ?]
+[? if not achievement_zeppelin_kapitan : **齐柏林船长** — 胡戈·埃克纳当选总统。 ?]
 
-[? if not achievement_wahlrechts : **Wahlrechts für Frauen** - Marie Juchacz has been elected president. ?]
+[? if not achievement_wahlrechts : **妇女选举权** — 玛丽·尤哈茨当选总统。 ?]
 
-[? if not achievement_bundesrepublik : **Bundesrepublik** - Konrad Adenauer or Kurt Schumacher has been elected president, and constitutional reforms have reduced presidential power. ?]
+[? if not achievement_bundesrepublik : **联邦共和国** — 康拉德·阿登纳或库尔特·舒马赫当选总统,且宪法改革削减了总统权力。 ?]
 
-[? if not achievement_republik_der_wissenschaft : **Republik der Wissenschaft** - Albert Einstein has been elected president. ?]
+[? if not achievement_republik_der_wissenschaft : **科学的共和国** — 阿尔伯特·爱因斯坦当选总统。 ?]
 
-[? if not achievement_arbeiter_von_wien : **Arbeiter von Wien** - SDAPÖ victory in Austria. ?]
+[? if not achievement_arbeiter_von_wien : **维也纳的工人** — 奥地利社会民主党在奥地利获胜。 ?]
 
-[? if not achievement_stolperstein: **Stolperstein** - we lost, but history might memorialize us... ?]
+[? if not achievement_stolperstein: **绊脚石** — 我们输了,但历史或许会铭记我们…… ?]
 
 
 @end_game

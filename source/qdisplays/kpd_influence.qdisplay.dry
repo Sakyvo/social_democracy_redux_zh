@@ -1,9 +1,9 @@
 
-# kpd influence
+# 共产党的影响力
 
-(..1) marginal
-(1..2) budding
-(2..4) noticeable
-(4..6) considerable
-(6..8) worrying
-(8..) dangerous
+(..1) 微不足道
+(1..2) 初现端倪
+(2..4) 显著
+(4..6) 相当可观
+(6..8) 令人不安
+(8..) 危险

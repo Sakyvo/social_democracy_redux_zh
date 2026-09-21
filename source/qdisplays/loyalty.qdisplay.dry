@@ -1,10 +1,10 @@
 
-# loyalty for police + reichswehr
-(..0.06) completely disloyal
-(0.06..0.19) very disloyal
-(0.19..0.31) generally disloyal
-(0.31..0.41) mostly disloyal
-(0.41..0.54) divided
-(0.54..0.71) mostly loyal
-(0.71..0.95) generally loyal
-(0.95..) completely loyal
+# 警察与国防军的忠诚度
+(..0.06) 完全不忠
+(0.06..0.19) 极不忠诚
+(0.19..0.31) 普遍不忠
+(0.31..0.41) 多数不忠
+(0.41..0.54) 人心分裂
+(0.54..0.71) 多数忠诚
+(0.71..0.95) 普遍忠诚
+(0.95..) 完全忠诚

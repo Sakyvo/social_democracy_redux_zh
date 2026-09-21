@@ -1,10 +1,10 @@
 
-(..-6) extremely low
-(-5..-4) very low
-(-3..-2) low
-(-1..-1) below baseline
-(0..0) moderate
-(1..1) above baseline
-(2..3) high
-(4..5) very high
-(6..) extremely high
+(..-6) 极低
+(-5..-4) 很低
+(-3..-2) 低
+(-1..-1) 略低于基准
+(0..0) 适中
+(1..1) 略高于基准
+(2..3) 高
+(4..5) 很高
+(6..) 极高

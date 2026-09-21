@@ -1,8 +1,7 @@
 
-# faction strength
-
-(0..10) weak
-(10..25) moderate
-(25..40) strong
-(40..60) very strong
-(60..) dominant
+# 派系力量
+(0..10) 弱小
+(10..25) 中等
+(25..40) 强大
+(40..60) 很强
+(60..) 压倒性

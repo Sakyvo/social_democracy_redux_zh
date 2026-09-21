@@ -1,4 +1,4 @@
-title: Cancel action.
+title: 取消行动。
 view-if: last_advisor_action = 1
 go-to: root
 on-arrival: {!

@@ -1,4 +1,4 @@
-title: Root Scene
+title: 根场景
 new-page: true
 go-to: post_event if started = 1; start_menu if started = 0
 
@@ -8,14 +8,14 @@ go-to: post_event if started = 1; start_menu if started = 0
 new-page: true
 go-to: start_menu_2
 
-= Social Democracy: An Alternate History
+= 社会民主:另一段历史
 
 @start_menu_2
 
-- @start: Start game
-- @election_simulation: Election simulation
-- @credits: Credits
-- @mod_info: Mod info
+- @start: 开始游戏
+- @election_simulation: 选举模拟
+- @credits: 制作名单
+- @mod_info: Mod 说明
 - @game_over.achievements
 
 
@@ -835,23 +835,23 @@ Q.other_wl = 24;
 set-bg: img/map_2.jpg
 new-page: true
 
-> *"Such a general development cannot be attributed to the false tactics of any single party or to the mistakes of individual leaders. On the contrary, the conduct of individual leaders is determined largely by the sentiments of the people as a whole. It would be erroneous, however, to regard the sentiments of the moment as reflecting the natural make-up and character of the people. They are merely the consequence of the special circumstances which have brought about this profound degradation of the entire nation."*
+> *「如此普遍的演变,不能归咎于哪一个党派的错误策略,也不能归咎于个别领袖的失误。恰恰相反,个别领袖的作为,在很大程度上是由全体民众的情绪所决定的。然而,若把一时的情绪视为民众固有的天性与品格,那便是大错特错。那不过是导致整个民族陷入如此深重沉沦的特殊环境的产物罢了。」*
 
- - Karl Kautsky, *Hitlerism and Social Democracy*, 1934
+ —— 卡尔·考茨基,《希特勒主义与社会民主》,1934 年
 
-This is a game of alternate history. While historical accuracy is a major concern, keep in mind that this is a *game*, and that any divergence from actual events will necessarily have to involve some element of make-believe. Nevertheless, please let the author know if there are any glaring mistakes.
+这是一部架空历史游戏。尽管本作十分看重历史准确性,但请记住:它终究是*游戏*,任何与史实的偏离都必然带有虚构的成分。不过,若你发现明显的错误,还望告知作者。
 
-For more information on the politics and government of the German Republic, see the "Library" page on the top left. If this is your first time playing the game, it is strongly recommended that you read at least some of this information.
+想了解德意志共和国的政治与政府运作,请查阅左上角的「资料库」页面。若你是初次游玩,强烈建议至少读一读其中的部分内容。
 
-- @1928_easy: Begin (easy difficulty)
-- @1928_main: Begin (normal difficulty)
-- @1928_hard: Begin (hard difficulty)
-- @1928_historical: Begin (historical mode)
-- @1930_easy: Begin (easy difficulty)
-- @1930_main: Begin (normal difficulty)
-- @1930_hard: Begin (hard difficulty)
-- @1930_historical: Begin (historical mode)
-- @settings: Settings.
+- @1928_easy: 开始(简单难度)
+- @1928_main: 开始(普通难度)
+- @1928_hard: 开始(困难难度)
+- @1928_historical: 开始(历史模式)
+- @1930_easy: 开始(简单难度)
+- @1930_main: 开始(普通难度)
+- @1930_hard: 开始(困难难度)
+- @1930_historical: 开始(历史模式)
+- @settings: 设置。
 
 @1928_easy
 view-if: year == 1928
@@ -865,7 +865,7 @@ go-to: 1928_main
 
 @1928_historical
 view-if: year == 1928
-subtitle: Saving, loading, and polls will be disabled. [? if not achievement_game_completed: Not recommended for a first playthrough. ?]
+subtitle: 存档、读档与民调将被禁用。 [? if not achievement_game_completed: 不推荐初次游玩时选择。 ?]
 on-arrival: {!
 Q.difficulty = 2;
 Q.historical_mode = 1;
@@ -896,7 +896,7 @@ go-to: 1930_main
 
 @1930_historical
 view-if: year == 1930
-subtitle: Saving, loading, and polls will be disabled. [? if not achievement_game_completed: Not recommended for a first playthrough. ?]
+subtitle: 存档、读档与民调将被禁用。 [? if not achievement_game_completed: 不推荐初次游玩时选择。 ?]
 on-arrival: {!
 Q.difficulty = 2;
 Q.historical_mode = 1;
@@ -929,7 +929,7 @@ go-to: 1925_main
 
 @1925_historical
 view-if: year == 1925
-subtitle: Saving, loading, and polls will be disabled. [? if not achievement_game_completed: Not recommended for a first playthrough. ?]
+subtitle: 存档、读档与民调将被禁用。 [? if not achievement_game_completed: 不推荐初次游玩时选择。 ?]
 on-arrival: {!
 Q.difficulty = 2;
 Q.historical_mode = 1;
@@ -949,108 +949,108 @@ this.state.disableSaves = true;
 go-to: 1925_main
 
 @settings
-subtitle: Enable or disable various features.
+subtitle: 开启或关闭各种功能。
 
-For other, non-difficulty related tweaks.
+用于调整与难度无关的其他选项。
 
-- @disable_end: Disable end in 1934.
-- @enable_end: Enable end in 1934.
-- @enable_normalize: Enable experimental support changes (Not Recommended)
-- @disable_normalize: Disable experimental support changes.
-- @enable_hyperinflation: Enable hyperinflation (janky)
-- @disable_hyperinflation: Disable hyperinflation
-- @enable_landtags: Enable WIP landtags (WIP).
-- @disable_landtags: Disable WIP landtags (WIP).
-- @enable_legislature: Enable legislative rework
-- @disable_legislature: Disable legislative rework
-- @1930: Begin the game in 1930.
-- @1928: Begin the game in 1928.
-- @1925: Begin the game in 1925 (fairly WIP)
-- @menu: Back.
+- @disable_end: 关闭 1934 年的结局。
+- @enable_end: 开启 1934 年的结局。
+- @enable_normalize: 开启实验性支持度变化(不推荐)
+- @disable_normalize: 关闭实验性支持度变化。
+- @enable_hyperinflation: 开启恶性通货膨胀(简陋)
+- @disable_hyperinflation: 关闭恶性通货膨胀
+- @enable_landtags: 开启州议会(开发中)。
+- @disable_landtags: 关闭州议会(开发中)。
+- @enable_legislature: 开启立法系统重制
+- @disable_legislature: 关闭立法系统重制
+- @1930: 从 1930 年开始游戏。
+- @1928: 从 1928 年开始游戏。
+- @1925: 从 1925 年开始游戏(相当不完善)
+- @menu: 返回。
 
 @disable_end
 view-if: end_disabled != 1
 on-arrival: end_disabled = 1
 go-to: menu
 
-The end date has been disabled.
+结束日期已关闭。
 
 @enable_end
 view-if: end_disabled = 1
 on-arrival: end_disabled = 0
 go-to: menu
 
-The end date has been enabled.
+结束日期已开启。
 
 @enable_normalize
 view-if: normalize_support != 1
 on-arrival: normalize_support = 1
 go-to: menu
 
-Experimental support changes enabled. These will likely lead to more uniform changes in support, rather than support becoming more static in the lategame. However, the game isn't currently adjusted for this, so it may also lead to unexpected margins.
+实验性支持度变化已开启。这通常会让支持度的变动更为均一,而不至于在游戏后期趋于僵化。但游戏目前并未针对此进行调整,因此也可能导致意料之外的差距。
 
-Note: After some playtests, they seem to inexplicably just lead to the Nazis never growing. Not recommended.
+注:经若干次试玩,它似乎会莫名其妙地导致纳粹永远无法壮人。不推荐使用。
 
 @disable_normalize
 view-if: normalize_support = 1
 on-arrival: normalize_support = 0
 go-to: menu
 
-Experimental support changes disabled.
+实验性支持度变化已关闭。
 
 @enable_hyperinflation
 view-if: hyperinflation_enabled != 1
 on-arrival: hyperinflation_enabled = 1
 go-to: menu
 
-Hyperinflation enabled.
+恶性通货膨胀已开启。
 
 @disable_hyperinflation
 view-if: hyperinflation_enabled
 on-arrival: hyperinflation_enabled = 0
 go-to: menu
 
-Hyperinflation disabled.
+恶性通货膨胀已关闭。
 
 @enable_landtags
 view-if: landtags_enabled != 1
 on-arrival: landtags_enabled = 1
 go-to: menu
 
-Landtags have been enabled.
+州议会已开启。
 
 @disable_landtags
 view-if: landtags_enabled
 on-arrival: landtags_enabled = 0
 go-to: menu
 
-Landtags have been disabled.
+州议会已关闭。
 
 @enable_legislature
 view-if: legislature_enabled != 1
 on-arrival: legislature_enabled = 1
 go-to: menu
 
-The legislative rework have been enabled.
+立法系统重制已开启。
 
 @disable_legislature
 view-if: legislature_enabled
 on-arrival: legislature_enabled = 0
 go-to: menu
 
-The legislative rework has been disabled.
+立法系统重制已关闭。
 
 @1925
 view-if: year != 1925
 go-to: 1925_root
 
-The starting date has been changed to 1925. This is so WIP you wouldn't believe it. Literally unplayable. Don't blame me when it's exactly as I warned.
+起始日期已改为 1925 年。它有多不完善,你简直无法想象。根本没法玩。我事先警告过了,到时候可别怪我。
 
 @1930
 view-if: year != 1930
 go-to: 1930_root
 
-The starting date has been changed to 1930.
+起始日期已改为 1930 年。
 
 @1928
 view-if: year != 1928
@@ -1062,15 +1062,15 @@ go-to: start_menu_2
 - @1925_main: Begin (normal difficulty)
 - @1925_hard: Begin (hard difficulty)
 - @1925_historical: Begin (historical mode)
-- @1928_easy: Begin (easy difficulty)
-- @1928_main: Begin (normal difficulty)
-- @1928_hard: Begin (hard difficulty)
-- @1928_historical: Begin (historical mode)
-- @1930_easy: Begin (easy difficulty)
-- @1930_main: Begin (normal difficulty)
-- @1930_hard: Begin (hard difficulty)
-- @1930_historical: Begin (historical mode)
-- @settings: Modify game.
+- @1928_easy: 开始(简单难度)
+- @1928_main: 开始(普通难度)
+- @1928_hard: 开始(困难难度)
+- @1928_historical: 开始(历史模式)
+- @1930_easy: 开始(简单难度)
+- @1930_main: 开始(普通难度)
+- @1930_hard: 开始(困难难度)
+- @1930_historical: 开始(历史模式)
+- @settings: 修改游戏。
 
 @1928_main
 view-if: year == 1928
@@ -1080,9 +1080,9 @@ go-to: main if difficulty >= 0; main.main_easy if difficulty < 0
 
 = 1928
 
-It is a bright time for German democracy. After a period of struggle, inflation is finally under control, and the economy is expanding steadily. In foreign policy, we have reached agreements with the Western powers and the Soviet Union that might make genuine peace a reality. 
+这是德国民主的一段光明岁月。经过一番挣扎,通货膨胀终于得到控制,经济也在稳步复苏。在外交上,我们已与西方列强及苏联达成若干协议,或许能让真正的和平成为现实。 
 
-Now, the task of Social Democracy is to prepare for the next election. The bourgeois-right government of Wilhelm Marx is unpopular, and we stand to gain. Perhaps the next government will have a socialist majority.
+如今,社会民主党的任务是为下一次选举做准备。威廉·马克思的资产阶级右翼政府不得人心,而我们必将从中获益。或许下一届政府就会拥有社会主义多数。
 
 @1930_main
 view-if: year == 1930
@@ -1092,9 +1092,9 @@ go-to: main if difficulty >= 0; main.main_easy if difficulty < 0
 
 = 1930
 
-It is a grim time for German democracy. Following the largest crash in the stock market the world has seen, a worldwide depression has started, hitting Germany especially hard. The Nazis are ascendant and our support is dwindling as our coalition nears collapse. 
+这是德国民主的一段黯淡岁月。继世界史上最惨烈的股市崩盘之后,一场全球性大萧条已然开始,德国受害尤深。纳粹势力节节上升,而随着我们的联盟濒临崩溃,支持度也在不断流失。 
 
-It will be our responsibility to ensure that this crisis of capitalism will not end so badly for the working class.
+确保这场资本主义危机不至于给工人阶级带来如此糟糕的结局,将是我们不可推卸的责任。
 
 @1925_main
 view-if: year == 1925
@@ -1104,6 +1104,6 @@ go-to: main if difficulty >= 0; main.main_easy if difficulty < 0
 
 = 1925
 
-It is an uncertain time for German democracy. Though the crises of 1923 have subsided and given way to a stabilization and normalization, the bourgeois parties continue to shift to the right to exclude us from government, even including the anticonstitutional DNVP in the form of the Luther cabinet which has just assumed power. 
+这是德国民主的一段前途未卜的时期。1923 年的危机虽已平息,让位于稳定与常态,但资产阶级各党仍在不断右转,将我们排斥于政府之外 —— 他们甚至把反宪法的国家人民党也拉进了刚刚上台的路德内阁。 
 
-The task of Social Democracy is to prepare itself so that when the government inevitably falls due to disagreements between the left and right of the bourgeois parties, we will be seen by the workers of Germany a viable alternative.
+社会民主党的任务,是做好准备:当政府因资产阶级左翼与右翼之间的分歧而不可避免地垮台时,德国的工人将把我们视为一支可行的替代力量。

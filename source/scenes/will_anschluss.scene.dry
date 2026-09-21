@@ -1,4 +1,4 @@
-title: will anschluss?
+title: 是否德奥合并?
 on-arrival: {!
 if (Q.seldte_march) {
     if ((Q.vienna_influence >= (Q.coup_progress*0.5)) && (((Q.austria_strength*(Q.austria_militancy))*(Q.italo_ethiopian_war+1)) >= (Q.reichswehr_strength*Q.reichswehr_militancy*Q.reichswehr_loyalty)) && Q.nazi_austria && !Q.hitler_dead) {

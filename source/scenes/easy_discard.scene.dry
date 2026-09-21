@@ -1,4 +1,4 @@
-title: Return card to hand.
+title: 将卡牌收回手牌。
 view-if: difficulty <= 0  and last_advisor_action = 0
 go-to: root
 on-arrival: {!
