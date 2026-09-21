@@ -1,4 +1,4 @@
-title: War Guilt Inquiry
+title: 战争责任调查
 new-page: true
 is-card: true
 tags: govt_affairs
@@ -6,33 +6,33 @@ on-arrival: war_guilt_timer = 6; month_actions += 1
 view-if: spd_in_government = 1 and war_guilt_timer = 0 and not war_guilt
 card-image: img/reichstag_1.jpg
 
-= Reichstag War Guilt Inquiry
+= 国会战争责任调查
 
-The War Guilt Inquiry has been an intermittent Reichstag committee for investigating the causes of the Great War and the German defeat. So far, it has faced massive resistance from the military establishment up to President Hindenburg.
+战争责任调查委员会是国会一个时断时续的委员会,负责调查大战的起因与德国的战败。迄今为止,它一直遭到军方建制派乃至总统兴登堡的巨大阻力。
 
-- @restart: Restart the inquiry.
-- @root: Do nothing.
+- @restart: 重启调查。
+- @root: 什么都不做。
 - @easy_discard
 
 @restart
 on-arrival: war_guilt_vote = 1
 go-to: war_guilt_done if not legislature_enabled; legislative_menu if legislature_enabled
 
-We propose the restoration of the War Guilt Inquiry.
+我们提议恢复战争责任调查委员会。
 
 @war_guilt_done
 on-arrival: war_guilt += 1
 
-What is the goal of this tribunal?
+这次调查的目标是什么?
 
-- @pure_history: To provide a historical record of the events of the war.
-- @rewrite: To revise the popular German histories and finally put to rest the "stabbed in the back" myth.
+- @pure_history: 为战争期间的事件提供一份历史记录。
+- @rewrite: 修订德国流行的历史叙述,彻底终结「背后捅刀」的传说。
 
 @pure_history
 
-The history is being compiled, as it always has been.
+历史正在被编纂,一如既往。
 
 @rewrite
 on-arrival: pacifism += 1; nationalism -= 5*(1-dissent); pro_republic += 5*(1-dissent); coup_progress += 1
 
-Destroying the "stabbed in the back" myth, in addition to finally correcting the historical record, would do a great deal to improve our party's reputation. This is why it would be resisted by the military establishment every step of the way.
+摧毁「背后捅刀」的传说,除了能最终纠正历史记录之外,还会大大改善我党的声誉。正因如此,军方建制派会在每一步上都加以阻挠。

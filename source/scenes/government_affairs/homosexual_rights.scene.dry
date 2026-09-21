@@ -1,4 +1,4 @@
-title: Homosexual Rights
+title: 同性恋权利
 new-page: true
 is-card: true
 card-image: img/hirschfeld.jpg
@@ -8,46 +8,46 @@ view-if: spd_in_government == 1 and (progressive_coalition >= 50) and chancellor
 on-arrival: homosexual_rights_timer += 11; month_actions += 1
 tags: govt_affairs
 
-= Homosexual Rights
+= 同性恋权利
 
-There is a constellation of different groups that have grown up around divergences in gender and sexuality, including homosexuals, lesbians, transsexuals, transvestites, inverts, etc. Our party's policy is to support their right to live freely and free from persecution; Magnus Hirschfeld, the founder of the Institut für Sexualwissenschaft, is a member of our party and a major advocate for homosexual rights. 
+围绕着性别与性取向上的差异,涌现出了一系列不同的群体,包括男同性恋者、女同性恋者、跨性别者、异装者、性倒错者等等。我党的政策是支持他们自由、不受迫害地生活的权利;性学研究所的创始人马格努斯·希尔施费尔德是我党党员,也是同性恋权利的重要倡导者。
 
-- @repeal_175: Repeal Paragraph 175.
-- @reform_183: Reform Paragraph 183.
-- @change_sex: Create a legal process for changing sex.
-- @return: Do not enact any changes for now.
+- @repeal_175: 废除第 175 条。
+- @reform_183: 修订第 183 条。
+- @change_sex: 设立变更性别的法律程序。
+- @return: 暂时不推行任何改动。
 - @easy_discard
 - @cancel_advisor_action
 
 @repeal_175
-subtitle: Paragraph 175 currently criminalizes homosexual acts. We can pass a law to change that.
-unavailable-subtitle: We do not have majority support for this policy.
+subtitle: 第 175 条目前将同性性行为定为犯罪。我们可以通过法律来改变这一点。
+unavailable-subtitle: 这项政策没有获得多数支持。
 view-if: repealed_175 == 0
 choose-if: progressive_coalition >= 50 
 on-arrival: repealed_175 = 1; homosexual_rights += 1; z_relation -= 5; kpd_relation += 4*(1-dissent); ddp_relation += 4*(1-dissent); coalition_dissent += 1 if (in_grand_coalition or in_weimar_coalition); catholics_spd -= 4; weimar_dissent += 1 if weimar_plan_adopted; weimar_dissent += 1 if z_party_leader == "Kaas" and weimar_plan_adopted; economic_growth += 0.1;
 
-Together with the progressives in the KPD and [+ ddp_name +], we have effectively decriminalized homosexual sex in Germany. Persecution of homosexuals for their private acts will stop, as long as the police are loyal to the republic.
+我们与共产党及 [+ ddp_name +] 中的进步派一道,实际上已将德国的同性性行为非罪化。只要警察忠于共和国,对同性恋者私下行为的迫害就将停止。
 
-Of course, conservatives and the far right accuse us of "degeneracy".
+当然,保守派与极右翼指责我们「堕落」。
 
 
 @reform_183
-subtitle: Paragraph 183 criminalizes public homosexual displays and cross-dressing. We can change that.
-unavailable-subtitle: We do not have majority support for this policy.
+subtitle: 第 183 条将公开的同性展示与异装定为犯罪。我们可以改变这一点。
+unavailable-subtitle: 这项政策没有获得多数支持。
 view-if: reformed_183 == 0
 choose-if: progressive_coalition >= 50 
 on-arrival: reformed_183 = 1; homosexual_rights += 1; z_relation -= 5; kpd_relation += 4*(1-dissent); ddp_relation += 4*(1-dissent); coalition_dissent += 1 if (in_grand_coalition or in_weimar_coalition); catholics_spd -= 4; weimar_dissent += 1 if weimar_plan_adopted; weimar_dissent += 1 if z_party_leader == "Kaas" and weimar_plan_adopted; economic_growth += 0.1;
 
-Voting together with the progressives in the KPD and [+ ddp_name +], we have reformed Paragraph 183 so that it no longer criminalizes public homosexuality and cross-dressing.
+我们与共产党及 [+ ddp_name +] 中的进步派共同投票,修订了第 183 条,使其不再将公开的同性恋行为与异装定为犯罪。
 
 
 @change_sex
-subtitle: We can create a legal process for individuals to change their sex, making their lives easier.
-unavailable-subtitle: We do not have majority support for this policy.
+subtitle: 我们可以设立个人变更性别的法律程序,让他们的生活更好过一些。
+unavailable-subtitle: 这项政策没有获得多数支持。
 view-if: trans_rights == 0
 choose-if: progressive_coalition >= 50
 on-arrival: trans_rights = 1; homosexual_rights += 1; z_relation -= 5; kpd_relation += 4*(1-dissent); ddp_relation += 4*(1-dissent); coalition_dissent += 1 if (in_grand_coalition or in_weimar_coalition); catholics_spd -= 4; weimar_dissent += 1 if weimar_plan_adopted; weimar_dissent += 1 if z_party_leader == "Kaas" and weimar_plan_adopted; economic_growth += 0.1;
 
-We have passed a bill to allow legal recognition of transsexual and transvestite individuals as the sex in which they live, and allow them to change their name, dress as they wish without police persecution, and undergo medical treatment.
+我们通过了一项法案,允许在法律上承认跨性别者与异装者以其实际生活的性别为准,允许他们改名、按自己意愿着装而不受警察迫害,并接受医疗诊治。
 
-Of course, conservatives and the far right accuse us of "degeneracy".
+当然,保守派与极右翼指责我们「堕落」。

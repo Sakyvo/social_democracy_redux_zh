@@ -1,4 +1,4 @@
-title: Postal Affairs
+title: 邮政事务
 new-page: true
 is-card: true
 view-if: spd_in_government = 1 and postal_affairs_minister_party = "SPD" and postal_affairs_timer = 0
@@ -8,64 +8,64 @@ card-image: img/postmen.jpg
 set-bg: img/with_the_beatles.jpg
 tags: govt_affairs
 
-= Postal Affairs
+= 邮政事务
 
-The postal services may not seem to be at first glance a very important ministry but possess surprising potential for clandestine operations.
+邮政部门乍看之下或许并非多么重要的部委,却拥有出人意料的秘密行动潜力。
 
-Current loyalty: [+ postal_loyalty : loyalty +]
+当前忠诚度: [+ postal_loyalty : loyalty +]
 
-- @postal_loyalty: Increase the loyalty of the postal services.
-- @expand_postal: Expand the postal services.
+- @postal_loyalty: 提升邮政部门的忠诚度。
+- @expand_postal: 扩充邮政部门。
 #- @nuclear_research: Direct the postal services to nuclear research.
-- @distribute_vorwarts: Distribute Vörwarts through the postal services.
-- @infiltrate_far_right: Infiltrate and hijack far-right mail.
-- @infiltrate_bourgeois: Infiltrate and hijack bourgeois mail.
-- @leak_blackmail: Release the blackmail we have compiled on the bourgeois parties.
-- @militarize: Militarize the postmen.
+- @distribute_vorwarts: 通过邮政部门投递《前进报》。
+- @infiltrate_far_right: 渗透并截取极右翼的邮件。
+- @infiltrate_bourgeois: 渗透并截取资产阶级的邮件。
+- @leak_blackmail: 公布我们搜集的关于资产阶级政党的把柄。
+- @militarize: 让邮差军事化。
 - @sylvan_sprite
 
 @postal_loyalty
 on-arrival: postal_loyalty += 0.05
 set-bg: img/map_2.jpg
 
-Through slow and careful reform of the postal ranks, more and more postmen are of republican and socialist character, rather than reactionary. 
+通过对邮政队伍缓慢而审慎的改革,越来越多的邮差具有共和主义与社会主义的品格,而非反动立场。
 
 @expand_postal
-subtitle: -1 budget
+subtitle: -1 财政预算
 choose-if: budget >= 1
 on-arrival: postal_loyalty += 0.02; postmen += 10; budget -= 1; new_middle_spd += 3*(1-dissent); old_middle_spd += 3*(1-dissent); democratization += 1
 set-bg: img/map_2.jpg
 
-We expand the postal services, recruiting more people as postmen. The postal services are grateful for the support.
+我们扩充了邮政部门,招募更多的人担任邮差。邮政部门对此支持心存感激。
 
 @distribute_vorwarts
 view-if: postal_loyalty >= 0.6
-subtitle: -1 resource
+subtitle: -1 资源
 choose-if: resources >= 1
 on-arrival: postal_loyalty -= 0.03; resources -= 1; workers_spd += 4*(1-dissent); new_middle_spd += 2*(1-dissent); old_middle_spd += 2*(1-dissent); coalition_dissent += 1 if not blackmail
 set-bg: img/map_2.jpg
 
-We distribute Vörwarts articles in the mail secretly, increasing our reach and support. [? if not blackmail : Our bourgeois allies have taken a notice and promptly protest. ?]
+我们在邮件中秘密投递《前进报》的文章,扩大了我们的影响与支持。 [? if not blackmail : 我们的资产阶级盟友注意到了此事,随即提出抗议。 ?]
 
 @infiltrate_far_right
 view-if: postal_loyalty >= 0.6
 on-arrival: postal_loyalty -= 0.02; coalition_dissent += 1 if not blackmail; investigate_far_right += 1; sa_strength -= 20; workers_nsdap -= 3; new_middle_nsdap -= 3; nazi_urgency += 1 if investigate_far_right == 2; nazi_urgency += 2 if investigate_far_right == 3; workers_nsdap -= 3 if investigate_far_right == 3; new_middle_nsdap -= 3 if investigate_far_right == 3; old_middle_nsdap -= 3 if investigate_far_right == 3; unemployed_spd -= 3 if investigate_far_right == 3; coup_progress -= 1 if coup_progress >= 7
 set-bg: img/map_2.jpg
 
-[? if investigate_far_right == 1 : We have discovered collusion between Hjalmar Schacht, president of the Reichsbank, and the Nazis. This is very useful information. ?]
-[? if investigate_far_right == 2 : We have discovered illegal arms smuggling by the SA, the Nazi paramilitary. ?]
-[? if investigate_far_right == 3 : We have discovered a secret cache of documents from the NSDAP detailing their plan to violently take over the country if they enter into power. This is an anti-constitutional plot, and will be publicized and persecuted. ?]
-[? if investigate_far_right > 3 : Of course the Nazis are doing crimes; everyone knows that. Now, we finally have proof. ?]
-[? if coup_progress >= 6: There are reports of an imminent coup by the far-right. We have attempted to disrupt some of these plans, but the threat is still present. ?]
+[? if investigate_far_right == 1 : 我们发现国家银行行长亚尔马·沙赫特与纳粹之间存在勾结。这是非常有用情报。 ?]
+[? if investigate_far_right == 2 : 我们发现纳粹的准军事组织冲锋队在非法走私武器。 ?]
+[? if investigate_far_right == 3 : 我们发现了一批纳粹党的秘密文件,其中详述了他们一旦上台便以暴力夺取全国的方案。这是违宪的阴谋,将被公之于众并受到追究。 ?]
+[? if investigate_far_right > 3 : 纳粹当然在犯法,这谁都知道。如今,我们终于有了证据。 ?]
+[? if coup_progress >= 6: 有报告称极右翼即将发动政变。我们已设法破坏其中一些计划,但威胁依然存在。 ?]
 
-[? if not blackmail : The bourgeois parties are noticing irregularities, and protest. ?]
+[? if not blackmail : 资产阶级政党察觉到了异常,提出抗议。 ?]
 
 @infiltrate_bourgeois
 view-if: postal_loyalty >= 0.7
 on-arrival: postal_loyalty -= 0.05; blackmail += 1; coalition_dissent += 2; coalition_dissent += 1 if in_grand_coalition; coalition_dissent -= 1 if coalition_dissent+blackmail >= 3; coalition_dissent -= (blackmail-1) if blackmail >= 2
 set-bg: img/map_2.jpg
 
-The bourgeois parties are incensed at our unconstitutional acts. [? if blackmail >= 2 : Luckily, however, their outrage is offset by the immense supply of blackmail we have against them. ?]
+资产阶级政党对我们这些违宪之举勃然大怒。 [? if blackmail >= 2 : 不过所幸,他们那股怒火被我们手里掌握的巨量把柄压了下去。 ?]
 
 @leak_blackmail
 view-if: blackmail >= 1
@@ -83,25 +83,25 @@ Q.capital_strike_progress += 100;
 !}
 set-bg: img/map_2.jpg
 
-We have leaked our entire arsenal of blackmail against the bourgeois parties, greatly damaging their support. The response on their part is near immediate, as our relations are destroyed overnight.
+我们把针对资产阶级政党的全部把柄库抖落了出来,严重损害了他们的支持度。他们的反应几乎随即而至 —— 我们的关系一夜之间彻底破裂。
 
 @militarize
 view-if: postal_loyalty >= 0.7
 choose-if: resources >= 2 and postal_loyalty >= 0.8
-subtitle: -2 resources
-unavailable-subtitle: -2 resources - the postmen must be committed and hardened social democrats.
+subtitle: -2 资源
+unavailable-subtitle: -2 资源 - the postmen must be committed and hardened social democrats.
 on-arrival: resources -= 2; rb_strength += postmen; rb_militancy += 0.15; coup_progress += 5; coalition_dissent += (5-blackmail)
 max-visits: 1
 set-bg: img/map_2.jpg
 
-The postal services are enrolled into the Reichsbanner as auxiliary forces. The bourgeois parties are understandably outraged.
+邮政部门被编入国旗团作为辅助部队。资产阶级政党的暴怒可想而知。
 
 @sylvan_sprite
-title: <span style="color:rgb(131, 210, 255);font-family:Palatino,'Palatino Linotype',serif;font-weight:700;letter-spacing:0.5px;">Release a Sylvan sprite!</span>
+title: <span style="color:rgb(131, 210, 255);font-family:Palatino,'Palatino Linotype',serif;font-weight:700;letter-spacing:0.5px;">释放一只林妖!</span>
 view-if: achievement_megatome and sworcery and not achievement_postal_sylvan
-subtitle: Miracles! Miracles! Miracles!
+subtitle: 奇迹!奇迹!奇迹!
 achievement: postal_sylvan
 set-bg: img/map_2.jpg
 max-visits: 1
 
-We have released a Sylvan sprite.
+我们释放了一只林妖。

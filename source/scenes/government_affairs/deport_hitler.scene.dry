@@ -1,23 +1,23 @@
-title: We can deport Hitler.
-subtitle: He is a foreign citizen and a criminal, after all.
-unavailable-subtitle: [? if judicial_reform < 2 : Unfortunately, the reactionary judiciary will not cooperate. ?] [? if presidential_election_seen == 1 : Hitler has already been made a citizen of Germany, in the run-up to the presidential election. ?] [? if not spd_prussia : We cannot do this without the cooperation of the Prussian police, who are not currently in our control. ?]
+title: 我们可以把希特勒驱逐出境。
+subtitle: 毕竟,他是个外国公民,也是个罪犯。
+unavailable-subtitle: [? if judicial_reform < 2 : 遗憾的是,反动的司法界不会配合。 ?] [? if presidential_election_seen == 1 : 在总统选举的筹备过程中,希特勒已被授予德国国籍。 ?] [? if not spd_prussia : 没有普鲁士警察的配合,我们做不到此事 —— 而他们目前不在我们的掌控之下。 ?]
 view-if: nazi_urgency >= 3 and hitler_deported = 0 and chancellor != "Papen" and chancellor != "Schleicher" and investigate_far_right >= 2
 choose-if: judicial_reform >= 2 and presidential_election_seen == 0 and spd_prussia == 1
 
-Is it really that simple? Won't his supporters react violently to this suggestion? And even if the deportation does succeed, won't he just re-enter the country, or perhaps organize from Austria? And, some people consider this to be an anti-democratic abuse of power, using the law in order to target a political opponent.
+真有这么简单吗?他的支持者难道不会对这一提议作出暴力反应?即便驱逐成功,他难道不会再潜入国境,或者在奥地利继续组织活动?再者,有些人认为这是反民主的滥用权力,是用法律来打击政治对手。
 
-- @deport: Deport him!
-- @no_deport: No, we must not.
+- @deport: 把他驱逐出境!
+- @no_deport: 不,我们不能这么做。
 
 @deport
 go-to: deport_violence if sa_strength >= 200; deport_success if sa_strength < 200
 
 @deport_violence
 
-When the police approach, he is surrounded by his SA guards, preventing him from being extricated! We can attempt to force a confrontation, but that may have negative consequences. The Reichsbanner may also attempt to draw off the SA.
+当警察逼近时,他被自己的冲锋队卫队团团围住,使我们无法将他带走!我们可以尝试强行对抗,但这可能带来负面后果。国旗团或许也能设法引开冲锋队。
 
-- @force_approach: Force the approach!
-- @no_deport: Cancel the deportation.
+- @force_approach: 强行突进!
+- @no_deport: 取消驱逐。
 
 @force_approach
 on-arrival: {!
@@ -37,25 +37,25 @@ go-to: force_fail if deportation_success == 0; force_success if deportation_succ
 @force_fail
 on-arrival: sa_strength += 50; workers_nsdap += 5; unemployed_nsdap += 5; new_middle_nsdap += 5; old_middle_nsdap += 5; rural_nsdap += 5; coup_progress += 3
 
-Unfortunately, our forces fail to disloge the SA from their positions surrounding Hitler. He is seen as both a strong and powerful leader and a victim, further reinforcing his image. The Nazis are left stronger than ever.
+遗憾的是,我们的力量未能把冲锋队从围绕希特勒的阵地上驱离。他既被视为一位强大有力的领袖,又被视为受害者,其形象进一步强化。纳粹反而比以往任何时候都更强了。
 
 @force_success
 on-arrival: hitler_deported = 1; hitler_austria = 1; sa_strength = sa_strength/2; workers_nsdap -= 10; new_middle_nsdap -= 10; old_middle_nsdap -= 10; rural_nsdap -= 10; unemployed_nsdap -= 10; sa_banned = 1; coup_progress -= 2; nsdap_leader = "Goebbels"
 achievement: deport_hitler
 
-The confrontation ends with the police and Reichsbanner prevailing, capturing Hitler so he can be deported! This is a sign of weakness, and his physical distance makes organizing difficult, impeding the Nazi effort to win more votes.
+这场对抗以警察与国旗团取胜告终,希特勒被擒,得以驱逐出境!这是他软弱的表现,而地理上的距离又使他难以组织活动,妨碍了纳粹争取更多选票的努力。
 
-In Hitler's absence, Joseph Goebbels has become the temporary leader of the Nazi party, with substantial influence from Hermann Göring.
+在希特勒缺席期间,约瑟夫·戈培尔成为纳粹党的临时领袖,赫尔曼·戈林则拥有相当大的影响力。
 
 @deport_success
 on-arrival: hitler_deported = 1; hitler_austria = 1; sa_strength = sa_strength/2; workers_nsdap -= 10; new_middle_nsdap -= 10; old_middle_nsdap -= 10; rural_nsdap -= 10; unemployed_nsdap -= 10; coup_progress -= 2; nsdap_leader = "Goebbels"
 achievement: deport_hitler
 
-Somehow, the plan worked! There was minimal resistance to Hitler's deportation. This is a sign of weakness, and his physical distance makes organizing difficult, impeding the Nazi effort to win more votes.
+不知怎的,这计划竟奏效了!对驱逐希特勒的抵抗微乎其微。这是他软弱的表现,而地理上的距离又使他难以组织活动,妨碍了纳粹争取更多选票的努力。
 
-In Hitler's absence, Joseph Goebbels has become the temporary leader of the Nazi party, with substantial influence from Hermann Göring.
+在希特勒缺席期间,约瑟夫·戈培尔成为纳粹党的临时领袖,赫尔曼·戈林则拥有相当大的影响力。
 
 @no_deport
 go-to: root
 
-We will not be deporting Hitler.
+我们不会驱逐希特勒。

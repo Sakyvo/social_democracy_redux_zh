@@ -1,4 +1,4 @@
-title: Economic Democracy
+title: 经济民主
 is-card: true
 new-page: true
 on-arrival: economic_democracy_timer += 10; month_actions += 1
@@ -8,11 +8,11 @@ max-visits: 8
 tags: govt_affairs
 #subtitle: How can we give workers more control over the means of production?
 
-= Economic Democracy
+= 经济民主
 
-A key part of the social democratic platform is that workers should have more control over the economy. This can be done either directly at the enterprise level, by giving works councils greater influence over management, or indirectly via the democratic government, by acquiring key industries from the capitalist class and placing them under democratic control.
+社会民主党纲领的一个关键内容是:工人应当对经济拥有更大的控制权。这既可以在企业层面直接实现 —— 赋予工厂委员会对管理层更大的影响力,也可以通过民主政府间接实现 —— 从资产阶级手中取得关键产业,置于民主控制之下。
 
-As we control the Labor [? if economic_minister_party == "SPD" : and Economic ?][? if finance_minister_party == "SPD" : and Finance ?] ministries, we can finally begin to implement our long-standing goals. [? if in_grand_coalition: Our bourgeois coalition partners might not agree, however. ?]
+由于我们掌握着劳工部[? if economic_minister_party == "SPD" : 与经济部 ?][? if finance_minister_party == "SPD" : 与财政部 ?],我们终于可以开始实现我们长久以来的目标。[? if in_grand_coalition: 不过,我们的资产阶级执政盟友未必同意。 ?]
 
 - @expand_councils
 - @expand_councils_2
@@ -24,77 +24,77 @@ As we control the Labor [? if economic_minister_party == "SPD" : and Economic ?]
 - @cancel_advisor_action
 
 @expand_councils
-title: Support works councils.
-subtitle: Give works councils a greater influence in managing enterprises.
+title: 支持工厂委员会。
+subtitle: 赋予工厂委员会在企业经营中更大的影响力。
 view-if: works_councils == 0
 on-arrival: council_vote_1 = 1
 go-to: council_expanded_1 if not legislature_enabled; legislative_menu if legislature_enabled
 
-We propose a bill to empower works councils.
+我们提出一项议案,扩大工厂委员会的权力。
 
 @council_expanded_1
 on-arrival: bourgeois_power -= 0.01; economic_democracy += 1; socialism += 1; workers_spd += 7*(1-dissent); capital_strike_progress += 1; works_councils += 1; labor_dissent -= 6; labor_strength += 8; dvp_relation -= 5; coalition_dissent +=1 if in_grand_coalition
 
-The works councils, elected by workers at each major business, have been in place since the German Revolution of 1918, but they have been largely powerless in the face of capital. Now, we will have worker representation on the boards of companies, giving them more influence in management decisions.
+工厂委员会由各大企业的工人选举产生,自 1918 年德国革命以来便已存在,但在资本面前大体上无甚权力。如今,工人将在公司董事会中拥有代表,从而在管理决策中获得更大影响力。
 
 
 @expand_councils_2
-title: Support national and sectorial works councils.
-subtitle: This is a step towards workers' control over the entire economy.
+title: 支持全国性与行业性工厂委员会。
+subtitle: 这是迈向工人掌控整个经济的一步。
 view-if: works_councils == 1
 on-arrival: council_vote_2 = 1
 go-to: council_expanded_2 if not legislature_enabled; legislative_menu if legislature_enabled
 
-We propose a bill to empower works councils.
+我们提出一项议案,扩大工厂委员会的权力。
 
 @council_expanded_2
 on-arrival: bourgeois_power -= 0.02; economic_democracy += 1; socialism += 2; workers_spd += 7*(1-dissent); capital_strike_progress += 1; works_councils += 1; labor_dissent -= 6; labor_strength += 8; dvp_relation -= 5; coalition_dissent +=1 if in_grand_coalition; economic_growth += 0.1 if economic_growth < 3
 
-National and sectorial workers councils have been part of the Weimar Constitution, but they were disempowered in the past, acting as nothing more than advisory bodies. We can change that.
+全国性与行业性工人委员会本是魏玛宪法的一部分,但过去被剥夺了权力,沦为纯粹的咨询机构。我们可以改变这一点。
 
 
 @expand_councils_3
-title: Empower sectorial works councils.
-subtitle: Give works councils a role in setting wage and price policy for entire industrial sectors.
+title: 扩大行业性工厂委员会的权力。
+subtitle: 让工厂委员会参与制定整个工业部门的工资与价格政策。
 view-if: works_councils == 2
 on-arrival: council_vote_3 = 1
 go-to: council_expanded_3 if not legislature_enabled; legislative_menu if legislature_enabled
 
-We propose a bill to empower works councils.
+我们提出一项议案,扩大工厂委员会的权力。
 
 @council_expanded_3
 on-arrival: bourgeois_power -= 0.03; economic_democracy += 1; socialism += 3; workers_spd += 7*(1-dissent); capital_strike_progress += 1; works_councils += 1; labor_dissent -= 6; labor_strength += 8; dvp_relation -= 5; coalition_dissent +=1 if in_grand_coalition; unemployed -= 2 if unemployed > 5; workers += 2; economic_growth += 0.1 if economic_growth < 3
 
-Sectorial works councils can now negotiate wage and price policies for entire economic sectors, helping to both give workers more of a voice, and to rationalize the economy, smoothing over the anarchy of the market.
+行业性工厂委员会如今可以就整个经济部门的工资与价格政策进行谈判,既能给工人更多发言权,也有助于使经济更为理性化,抚平市场的无政府状态。
 
 
 @nationalize_1
-title: Begin to socialize key industries.
-subtitle: -1 budget - we should buy out industries and govern them together with workers and consumers.
-unavailable-subtitle: -1 budget - we should buy out industries and govern them together with workers and consumers. [? if capital_spd : <span style="color:rgb(170,150,60);font-family:'Times New Roman',serif;font-weight:700;letter-spacing:0.5px;">But that would infringe upon the right to private property!</span> ?]
+title: 开始对关键产业进行社会化。
+subtitle: -1 财政预算 —— 我们应当收购产业,并与工人和消费者共同管理它们。
+unavailable-subtitle: -1 财政预算 —— 我们应当收购产业,并与工人和消费者共同管理它们。 [? if capital_spd : <span style="color:rgb(170,150,60);font-family:'Times New Roman',serif;font-weight:700;letter-spacing:0.5px;">But that would infringe upon the right to private property!</span> ?]
 choose-if: budget >= 1 and not capital_spd
 max-visits: 3
 on-arrival: socialization_vote = 1
 go-to: socialization_done if not legislature_enabled; legislative_menu if legislature_enabled
 
-We propose a bill to begin socialization of key industries.
+我们提出一项议案,开始对关键产业进行社会化。
 
 @socialization_done
 on-arrival: bourgeois_power -= 0.05; economic_democracy += 1; socialism += 2; capital_strike_progress += 1; budget -= 1; socializations += 1; workers_spd += 6*(1-dissent); unemployed_spd += 3*(1-dissent); coalition_dissent += 1 if in_grand_coalition; capital_strike_progress += 1 if black_thursday_seen; unemployed -= 1 if unemployed > 9; economic_growth += 0.2 if economic_growth < 5
 
-We have begun to socialize key industries by buying out the capitalist owners, and creating coordinated governing boards consisting of worker, consumer, and state representatives. The capitalists are not pleased at our intrusion into the economy.
+我们已开始对关键产业进行社会化,收购资本家的所有权,并组建由工人、消费者与国家代表构成的协调管理委员会。资本家对我们的干涉颇为不满。
 
 @cooperatives_1
-title: Support worker and consumer cooperatives.
+title: 支持工人与消费者合作社。
 subtitle: -1 budget
 choose-if: budget >= 1
 max-visits: 3
 on-arrival: cooperative_vote = 1
 go-to: cooperative_done if not legislature_enabled; legislative_menu if legislature_enabled
 
-We propose a bill to support cooperatives.
+我们提出一项议案,支持合作社。
 
 @cooperative_done
 on-arrival: economic_democracy += 1; socialism -= 1; cooperatives += 1; workers_spd += 4*(1-dissent); unemployed_spd += 4*(1-dissent); budget -= 1; unemployed -= 1 if unemployed > 9; economic_growth += 0.2
 
-We have enacted legislation that makes it easier to create cooperative enterprises of all sorts, and provide financial support to struggling cooperatives.
+我们通过了立法,使创建各类合作社企业更加容易,并为陷入困境的合作社提供财政支持。

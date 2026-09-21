@@ -1,4 +1,4 @@
-title: Agricultural Policy
+title: 农业政策
 new-page: true
 is-card: true
 on-arrival: agricultural_policy_timer += 6; month_actions += 1
@@ -7,63 +7,63 @@ card-image: img/portraits/BaadeFritz.jpg
 tags: govt_affairs
 #subtitle: Issues of farmer financing, grain purchasing, and land reform.
 
-= Agricultural Policy
+= 农业政策
 
-While agricultural policy has historically not been the domain of the SPD, there is much need for policy in this area. Our urban constituencies hope for cheaper and more stable food supplies, while small farmers need economic relief. There is also the movement for land reform, to break up the large aristocratic estates and redistribute land to peasants.
+尽管农业政策历来不是社民党的领域,但这一领域亟需政策。我们的城市选民希望食物供应更便宜、更稳定,而小农则需要经济上的纾困。此外还有土地改革运动,主张拆散贵族的大庄园,把土地重新分配给农民。
 
 - @land_reform
 - @agricultural_finance
 - @pro_consumer
 - @state_buyer
-- @root: Do not enact any policies for now.
+- @root: 暂时不推行任何政策。
 - @easy_discard
 - @cancel_advisor_action
 
 @land_reform
-title: Land Reform
-subtitle: -1 budget - Break up the large aristocratic estates and give land to landless workers.
-unavailable-subtitle: [? if budget <= 0 : Requires 1 budget. ?] [? if judicial_reform < 2 : The judiciary would never allow this. ?]
+title: 土地改革
+subtitle: -1 财政预算 —— 拆散贵族的大庄园,把土地分给无地劳动者。
+unavailable-subtitle: [? if budget <= 0 : 需要 1 点财政预算。 ?] [? if judicial_reform < 2 : 司法界绝不会允许这样做。 ?]
 choose-if: judicial_reform >= 2 and budget > 0
 max-visits: 4
 on-arrival: land_reform_vote = 1
 go-to: land_reform_done if not legislature_enabled; legislative_menu if legislature_enabled
 
-We propose a bill to begin a land reform program.
+我们提出一项议案,启动土地改革计划。
 
 @land_reform_done
 on-arrival: budget -= 1; land_reform += 1; bourgeois_power -= 0.01; coalition_dissent += 1; rural_spd += 5*(1-dissent); rural_nsdap -= 4*(1-dissent); unemployed -= 1 if unemployed >= 5; dvp_relation -= 5; z_relation -= 4; left_strength += 8 if left_dissent < 30; left_dissent -= 5; rural_sol += 3; rural_policy += 1; coup_progress += 1; agriculture_goal_completed += 1; socialism += 1
 
-With our policy of land reform, we are acquiring farmland from large estates, and giving the land to farmworkers' associations and small peasants. In essence, this brings class struggle to the countryside, breaking the semi-feudal property relations present in East Prussia and other areas with large estates. The bourgeois parties and large farmers despise our intrusion into the sacredness of private property, while leftists are cautiously optimistic.
+通过土地改革政策,我们从大庄园手中取得农田,把土地分给农业工人协会与小农。这本质上把阶级斗争带到了乡村,打破了东普鲁士及其他大庄园地区存在的半封建财产关系。资产阶级政党与大地主痛恨我们侵犯私有财产的神圣性,而左翼则谨慎地表示乐观。
 
 
 @agricultural_finance
-title: Agricultural Financing
-subtitle: -1 budget - Increase financing for agricultural credit and insurance.
+title: 农业融资
+subtitle: -1 财政预算 —— 增加对农业信贷与保险的融资。
 choose-if: budget >= 1
 on-arrival: budget -= 1; agricultural_finance += 1; rural_spd += 5*(1-dissent); rural_nsdap -= 3*(1-dissent); peoples_party_support += 1; center_dissent += 5; left_dissent += 4; rural_sol += 4; rural_policy += 1; economic_growth += 0.2;
 
-We have increased financial support for small farmers, providing access to credit and insurance, saving them from privation. The left and center of our party are opposed to our rural policy, seeing these policies as giveaways to petit-bourgeois farmers.
+我们增加了对小农的财政支持,为他们提供信贷与保险,使他们免于贫困。我党左翼与中间派反对我们的乡村政策,认为这些政策是在向小资产阶级农民白白送钱。
 
 
 @pro_consumer
-title: Food Procurement
-subtitle: -1 budget - Provide inexpensive food for workers.
+title: 粮食采购
+subtitle: -1 财政预算 —— 为工人提供廉价食物。
 choose-if: budget >= 1
 on-arrival: budget -= 1; pro_consumer += 1; inflation -= 0.2 if inflation >= 3; workers_spd += 4*(1-dissent); unemployed_spd += 4*(1-dissent); workers_sol += 4; coalition_dissent += 1 if black_thursday_seen; economic_growth += 0.2
 
-We have increased state purchasing of food staples to provide to urban workers and the poor. This benefits workers more than it benefits farmers, as we are negotiating for lower purchase prices. [? if black_thursday_seen and (in_weimar_coalition or in_grand_coalition) : Our coalition partners consider this policy to be a wasteful handout. ?]
+我们增加了国家对主食的采购,以供应城市工人与贫民。由于我们在谈判中压低收购价,这使工人受益多于农民。 [? if black_thursday_seen and (in_weimar_coalition or in_grand_coalition) : 我们的执政盟友认为这项政策是浪费性的施舍。 ?]
 
 @state_buyer
-title: State Buyer
+title: 国家收购
 view-if: not state_buyer
-subtitle: -2 budget - Create a state monopoly for grain purchases, guaranteeing prices for farmers and stable prices for consumers. [? if judicial_reform < 2 : The judiciary would never allow this. ?]
+subtitle: -2 财政预算 —— 建立国家对粮食收购的垄断,保障农民的价格与消费者的稳定价格。[? if judicial_reform < 2 : 司法界绝不会允许这样做。 ?]
 choose-if: budget >= 2 and judicial_reform >= 2
 on-arrival: state_buyer_vote = 1
 go-to: state_buyer_done if not legislature_enabled; legislative_menu if legislature_enabled
 
-We propose a bill to create a state monopoly for grain purchases.
+我们提出一项议案,建立国家对粮食收购的垄断。
 
 @state_buyer_done
 on-arrival: bourgeois_power -= 0.05; budget -= 2; state_buyer = 1; rural_spd += 5*(1-dissent); inflation -= 0.5 if inflation >= 3; rural_nsdap -= 3*(1-dissent); workers_spd += 4*(1-dissent); unemployed_spd += 5*(1-dissent); coalition_dissent += 1 if (in_grand_coalition or in_weimar_coalition); dvp_relation -= 5; z_relation -= 3; peoples_party_support += 1; rural_policy += 2; capital_strike_progress += 1; economic_growth += 0.4; socialism += 2
 
-Our new purchasing agency guarantees fair prices for farmers, while also providing lower food prices for workers and the urban poor. This policy necessitates heavy spending and an unprecedented level of state intervention in the economy, raising the ire of conservative economists.
+我们新设的收购机构为农民保障公平价格,同时为工人与城市贫民提供更低的食品价格。这项政策需要巨额开支,以及国家对经济前所未有的干预,激起了保守派经济学家的愤怒。

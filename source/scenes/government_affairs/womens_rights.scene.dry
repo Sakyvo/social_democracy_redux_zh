@@ -1,4 +1,4 @@
-title: Women's Rights
+title: 妇女权利
 new-page: true
 is-card: true
 tags: govt_affairs
@@ -8,72 +8,72 @@ card-image: img/portraits/PfülfAntonie.jpg
 frequency: 50
 max-visits: 6
 
-= Women's Rights
+= 妇女权利
 
-According to the Constitution, women are equal to men, but this is not followed in practice. Women in the workforce are not paid equally for the same work, in addition to often being pushed out of employment after marriage. Men are still favored in marriage and family policy, and there are restrictions on women's rights in many other domains. And that is not to mention the overwhelming patriarchal culture present in Germany.
+依照宪法,女性与男性是平等的,但在实践中并非如此。职场女性未能同工同酬,而且往往在婚后被挤出就业岗位。在婚姻与家庭政策中,男性仍受偏袒,女性权利在许多其他领域也受到限制。更不用说德国弥漫的那种铺天盖地的父权文化。
 
-For better or for worse, the Socialists stand virtually alone in supporting increased rights for women, and even within the party, the leadership does not consider it a priority. [? if spd_r < 50 : Unfortunately, women still disproportionately support the bourgeois parties. ?]
+无论好坏,社会主义者几乎是唯一支持扩大女性权利的群体,而即便在党内,领导层也不将此视为优先事项。 [? if spd_r < 50 : 遗憾的是,女性仍然过多地支持资产阶级政党。 ?]
 
-- @labor: Institute policies that help women in the workforce.
-- @family: Reform marriage, divorce, and property law.
-- @welfare: Improve welfare for single mothers and children.
-- @liberalize: Attempt to liberalize abortion laws.
-- @return: Do not enact any policies for now.
+- @labor: 制定有助于职场女性的政策。
+- @family: 改革婚姻、离婚与财产法。
+- @welfare: 改善单亲母亲与儿童的福利。
+- @liberalize: 尝试放宽堕胎法律。
+- @return: 暂时不推行任何政策。
 - @easy_discard
 - @cancel_advisor_action
 
 @labor
-subtitle: Paid maternal leave policies, equal pay policies, and so on.
+subtitle: 带薪产假政策、同工同酬政策等等。
 view-if: womens_work < 3
 on-arrival: women_labor_vote = 1
 go-to: women_labor if not legislature_enabled; legislative_menu if legislature_enabled
 
-We propose a bill to implement policies that help women in the workplace.
+我们提出一项议案,推行有助于职场女性的政策。
 
 @women_labor
 on-arrival: womens_work += 1; womens_rights += 1; workers_spd -= 4 if unemployed > 15; new_middle_spd += 4*(1-dissent); workers_spd += 4*(1 - dissent); economic_growth += 0.1;
 
-These policies mean that our party is increasing in popularity among the "new women" who work outside the home. [? if unemployed > 15 : However, many male workers develop a backlash towards women in the workplace, especially given the rising unemployment. ?]
+这些政策意味着我党在走出家门工作的「新女性」中越来越受欢迎。 [? if unemployed > 15 : 然而,许多男性工人对职场女性产生了反弹情绪,尤其是在失业上升的情况下。 ?]
 
 @family
-subtitle: Change family and inheritance law to treat women more equally.
+subtitle: 修改家庭与继承法,更平等地对待女性。
 view-if: family_law < 2
 on-arrival: women_family_vote = 1
 go-to: women_family if not legislature_enabled; legislative_menu if legislature_enabled
 
-We propose a bill to change family and inheritance laws to benefit women more.
+我们提出一项议案,修改家庭与继承法,使女性更多地受益。
 
 @women_family
 on-arrival: family_law += 1; womens_rights += 1; new_middle_spd += 2*(1-dissent); workers_spd += 3*(1-dissent); old_middle_spd -= 2; rural_spd -= 2; catholics_spd -= 4; coalition_dissent += 1; z_relation -= 4
 
-These policies aim to ensure that women have equal rights within a marriage, including the right to divorce. The more conservative segments of society treat our reforms as deleterious to the social fabric.
+这些政策旨在确保女性在婚姻中享有平等权利,包括离婚权。社会中较为保守的群体把我们的改革视为对社会肌体的败坏。
 
 
 @welfare
-subtitle: -1 budget
+subtitle: -1 财政预算
 choose-if: budget > 0
 on-arrival: women_vote = 1
 go-to: women_funded if not legislature_enabled; legislative_menu if legislature_enabled
 
-We propose a bill to increase welfare spending on women and children.
+我们提出一项议案,增加对妇女与儿童的福利开支。
 
 @women_funded
 on-arrival: welfare += 1; womens_welfare += 1; workers_spd += 5*(1-dissent); unemployed_spd += 5*(1-dissent); budget -= 1; womens_rights += 1; coalition_dissent += 1 if welfare >= 1 and unemployed >= 15; unemployed -= 0.4; inflation += 0.2; economic_growth += 0.3;
 
-We have increased welfare spending on women and children. [? if welfare >= 1 and unemployed >= 15 : Some of our coalition partners consider increased welfare spending profligate at this time. ?]
+我们增加了对妇女与儿童的福利开支。 [? if welfare >= 1 and unemployed >= 15 : 我们的一些执政盟友认为,此时增加福利开支是挥霍无度。 ?]
 
 
 @liberalize
 max-visits: 1
-subtitle: [? if progressive_coalition < 50 : This is unlikely to succeed; we do not have majority support. ?]
+subtitle: [? if progressive_coalition < 50 : 这不太可能成功;我们没有多数支持。 ?]
 go-to: liberalize_fail if progressive_coalition < 50; liberalize_success if progressive_coalition >= 50
 
 @liberalize_fail
 on-arrival: z_relation -= 5; coalition_dissent += 1; workers_spd += 3*(1-dissent); catholics_spd -= 5; weimar_dissent += 1 if z_party_leader == "Kaas" and weimar_plan_adopted
 
-Unfortunately, our proposal is voted down in the Reichstag, with the Catholic Center party (our long-time partners) speaking in particularly vehement opposition, and some of our own members breaking party discipline. The activists, feeling demoralized from this attempt, have decided to bide their time.
+遗憾的是,我们的提案在国会遭到否决。天主教中央党(我们的长期伙伴)表示了尤为激烈的反对,而我们自己的一些议员也违反了党的纪律。活动人士因这次尝试而感到气馁,决定暂且按兵不动。
 
 @liberalize_success
 on-arrival: abortion_rights += 1; womens_rights += 1; coalition_dissent += 1; z_relation -= 8; catholics_spd -= 10; dvp_relation -= 5; workers_spd += 3*(1-dissent); new_middle_spd += 3*(1-dissent); workers_z += 3; new_middle_z += 3; old_middle_z += 3; old_middle_dnvp += 3; rural_dnvp += 3; workers_nsdap -= 3; new_middle_nsdap -= 3; old_middle_nsdap -= 2; rural_nsdap -= 2; unemployed_nsdap -= 2; unemployed_z += 3; unemployed_spd += 3*(1-dissent); weimar_dissent += 1 if weimar_plan_adopted; weimar_dissent += 1 if z_party_leader == "Kaas" and weimar_plan_adopted
 
-With the support of a "progressive coalition" including the KPD and [+ ddp_name +], we have successfully passed a bill to legalize abortion in Germany! This has heartened our more progressive supporters, while hurting our relations with the Center Party. With the increasing political discourse around abortion, the religiously-oriented Center Party and DNVP have gained conservative votes at the expense of the NSDAP.
+在包括共产党与 [+ ddp_name +] 的「进步联盟」支持下,我们成功通过了一项使堕胎在德国合法化的法案!这鼓舞了我们较为进步的支持者,却损害了我们与中央党的关系。随着围绕堕胎的政治讨论日益升温,宗教取向的中央党与国家人民党以牺牲纳粹党为代价,赢得了保守派选票。

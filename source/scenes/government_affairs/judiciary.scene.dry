@@ -1,4 +1,4 @@
-title: Judiciary Reform
+title: 司法改革
 new-page: true
 is-card: true
 view-if: spd_in_government = 1 and justice_minister_party = "SPD" and judiciary_timer = 0
@@ -6,38 +6,38 @@ on-arrival: month_actions += 1; judiciary_timer += 6
 card-image: img/portraits/RadbruchGustav.jpg
 tags: govt_affairs
 
-= Judiciary Reform
+= 司法改革
 
-The Judiciary is one of the most reactionary components of the government, along with the military. Many jurists have held office since the days of the Emperor. They give violent fascists like Adolf Hitler laughably light sentences, while ruthlessly persecuting leftists and pacifists for lesser crimes.
+司法界与军方一样,是政府中最反动的组成部分之一。许多法官自皇帝时代起就一直任职。他们对阿道夫·希特勒这类暴力的法西斯分子给出可笑至极的轻判,却为较轻的罪名残酷迫害左翼与和平主义者。
 
-[? if judicial_reform <= 0 : There is great demand in our membership for reforming the judiciary, although this may bring us into a collision course with our coalition allies. ?]
-[? if judicial_reform == 1 : We have started on the path to judicial reform. While some of the most antideluvian and biased justices have been replaced, many still remain. More should be done. ?]
-[? if judicial_reform >= 2 : We have successfully reformed the judiciary, to some extent. At the very least, the courts will not actively obstruct our attempts to prosecute crimes committed by the far-right. ?]
+[? if judicial_reform <= 0 : 我们的党员对司法改革的呼声很高,尽管这可能让我们与执政盟友迎头相撞。 ?]
+[? if judicial_reform == 1 : 我们已踏上司法改革之路。虽说一些最为老朽、最有偏见的法官已被替换,但仍有不少留任。还需做更多努力。 ?]
+[? if judicial_reform >= 2 : 我们在一定程度上成功改革了司法界。至少,法院不会再主动阻挠我们起诉极右翼所犯的罪行。 ?]
 
-- @reform: Carry out substantial judicial reforms,
-- @minor_reforms: Carry out minor judicial reforms.
-- @as_is: Leave the judiciary as it is.
+- @reform: 推行实质性的司法改革,
+- @minor_reforms: 推行小幅的司法改革。
+- @as_is: 让司法界维持原状。
 - @easy_discard
 - @cancel_advisor_action
 
 @reform
 subtitle: -1 budget
-unavailable-subtitle: Not enough budget.
+unavailable-subtitle: 财政预算不足。
 choose-if: budget >= 1
 on-arrival: judicial_vote = 1
 go-to: judiciary_done if not legislature_enabled; legislative_menu if legislature_enabled
 
-We propose a bill to perform substantial reforms in the judiciary.
+我们提出一项议案,对司法界进行实质性改革。
 
 @judiciary_done
 on-arrival: budget -= 1; democratization += 2; coalition_dissent += 1 if in_grand_coalition == 1; workers_spd += 5*(1-dissent) if democratization >= 3; judicial_reform += 2; pro_republic += 5*(1-dissent); coup_progress += 1; coalition_dissent += 1 if historical_mode
 
-We investigate jurists who have shown themselves to have biased or corrupt behavior, and try to remove them, replacing them with more democratically-oriented jurists. This obviously raises quite a great deal of ire in conservative circles, including within our coalition. 
+我们调查那些表现出偏见或腐败行为的法官,设法将他们免职,换上更倾向民主的法官。这显然在保守派圈子 —— 包括我们的执政盟友 —— 中激起了极大的愤怒。
 
 @minor_reforms
 on-arrival: democratization += 1; workers_spd += 3*(1-dissent) if democratization >= 3; judicial_reform += 1; pro_republic += 3*(1-dissent); judiciary_timer += 6
 
-We try to remove the most obviously biased and corrupt jurists, while leaving most of the system intact. It is slow work reforming the judiciary.
+我们设法免去那些最明显带有偏见与腐败的法官,同时保留大部分体系不动。改革司法界是件缓慢的工作。
 
 @as_is
 go-to: root

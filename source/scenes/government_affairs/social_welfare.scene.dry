@@ -1,4 +1,4 @@
-title: Social welfare policy
+title: 社会福利政策
 new-page: true
 is-card: true
 tags: govt_affairs
@@ -6,72 +6,72 @@ on-arrival: social_welfare_timer = 10; month_actions += 1
 view-if: spd_in_government = 1 and social_welfare_timer = 0
 card-image: img/portraits/JuchaczMarie.jpg
 
-= Social Welfare Policy
+= 社会福利政策
 
-The social welfare program, including unemployment insurance, healthcare, and old-age care, is the proudest achievement of the SPD in our time in government. There is continuous pressure to dismantle the welfare system[? if black_thursday_seen = 1 :, especially given the economic crisis ?].
+社会福利制度 —— 包括失业保险、医疗与养老 —— 是社民党执政时期最引以为傲的成就。要求拆解福利体系的压力从未间断[? if black_thursday_seen = 1 :,尤其是在经济危机之下 ?].
 
-- @reduce_spending: Reduce spending on welfare.
-- @increase_spending_pre_depression: Increase spending on welfare.
-- @increase_spending_post_depression: Increase spending (welfare levels will remain about the same).
-- @spending_same_pre_depression: Keep spending the same.
-- @spending_same_post_depression: Keep spending the same (effectively a service cut).
+- @reduce_spending: 削减福利开支。
+- @increase_spending_pre_depression: 增加福利开支。
+- @increase_spending_post_depression: 增加开支(福利水平将大致保持不变)。
+- @spending_same_pre_depression: 维持开支不变。
+- @spending_same_post_depression: 维持开支不变(实际上等于削减服务)。
 - @easy_discard
 
 @reduce_spending
-subtitle: This will hurt our proletarian base. +1 Budget
-unavailable-subtitle: There is nothing left to cut.
+subtitle: 这会伤害我们的无产阶级基础。+1 财政预算
+unavailable-subtitle: 已经没有什么可削的了。
 choose-if: welfare >= -5
 on-arrival: welfare_cut_vote = 1
 go-to: welfare_cut if not legislature_enabled; legislative_menu if legislature_enabled
 
-We propose a bill to cut welfare.
+我们提出一项削减福利的议案。
 
 @welfare_cut
 on-arrival: budget += 1; workers_spd -= 6; unemployed_spd -= 6; workers_kpd += 2; workers_kpd += 1 if sapd_consolidated != 1; workers_sapd += 1 if sapd_consolidated == 1; welfare -= 1; reformist_dissent += 10; left_dissent += 10; labor_dissent += 10; center_dissent += 5; neorevisionist_dissent += 5; dvp_relation += 5; z_relation += 3; pro_republic -= 3; coalition_dissent -= 1 if in_grand_coalition and coalition_dissent > 0; kpd_coalition_dissent += 1; kpd_relation -= 8; inflation -= 0.3; unemployed += 0.4; economic_growth -= 0.2;
 
-We have reduced levels of social welfare spending. This means more poverty and suffering for the working class. Our detractors claim that we are sacrificing proletarian livelihoods for the sake of class peace with the bourgeoisie. Are they wrong? Are the workers wrong to turn to the Communists, in light of our choices?
+我们降低了社会福利开支水平。这意味着工人阶级要承受更多贫困与苦难。诋毁我们的人声称,我们为了与资产阶级达成阶级和平而牺牲了无产阶级的生计。他们错了吗?面对我们的抉择,工人转而投向共产党,又错了吗?
 
 
 @increase_spending_pre_depression
 view-if: unemployed <= 15
 choose-if: budget > 0 and not status_quo and (not capital_spd or capital_spd < (15-(welfare*2)))
-unavailable-subtitle: -1 Budget [? if status_quo : - We have agreed to leave the budget untouched. ?][? if capital_spd : <span style="color:rgb(170,150,60);font-family:'Times New Roman',serif;font-weight:700;letter-spacing:0.5px;">Welfare is too high if anything. Wasteful spending, I'm sure you agree.</span> ?]
-subtitle: -1 Budget [? if status_quo : - We have agreed to leave the budget untouched. ?]
+unavailable-subtitle: -1 财政预算 [? if status_quo : — 我们已同意不动这份预算。 ?][? if capital_spd : <span style="color:rgb(170,150,60);font-family:'Times New Roman',serif;font-weight:700;letter-spacing:0.5px;">要说起来,福利反而太高了。浪费性开支,想必你也同意。</span> ?]
+subtitle: -1 财政预算 [? if status_quo : — 我们已同意不动这份预算。 ?]
 on-arrival: welfare_fund_pre_depression_vote = 1
 go-to: welfare_funded_pre_depression if not legislature_enabled; legislative_menu if legislature_enabled
 
-We propose a bill to fund welfare.
+我们提出一项为福利拨款的议案。
 
 @welfare_funded_pre_depression
 on-arrival: budget -= 1; workers_spd += 6*(1-dissent); unemployed_spd += 6*(1-dissent); welfare += 1; reformist_dissent -= 5; labor_dissent -= 5; center_dissent -= 5; left_dissent -= 5; neorevisionist_dissent -= 5; coalition_dissent += 1 if budget <= 1; coalition_dissent += 1 if welfare > 1; welfare_goal_completed += 1; inflation += 0.3; unemployed -= 0.4; economic_growth += 0.2;
 
-We have increased welfare spending. Our proletarian base is pleased.
+我们增加了福利开支。我们的无产阶级基础对此感到满意。
 
 @increase_spending_post_depression
 view-if: unemployed > 15
 choose-if: budget > 0 and not status_quo
-subtitle: The increased levels of unemployment necessitate more spending on aid to maintain the same benefits. -1 Budget [? if status_quo : - We have agreed to leave the budget untouched. ?]
+subtitle: 失业水平上升,为了维持同样的待遇,就必须增加救助开支。-1 财政预算 [? if status_quo : — 我们已同意不动这份预算。 ?]
 on-arrival: welfare_fund_post_depression_vote = 1
 go-to: welfare_funded_post_depression if not legislature_enabled; legislative_menu if legislature_enabled
 
-We propose a bill to fund welfare.
+我们提出一项为福利拨款的议案。
 
 @welfare_funded_post_depression
 on-arrival: budget -= 1; workers_spd += 3*(1-dissent); unemployed_spd += 3*(1-dissent); coalition_dissent += 1 if welfare > 0; welfare_goal_completed += 1; inflation += 0.3
 
-Increasing welfare spending is necessary in light of the rise in unemployment, so we are essentially treading water.
+鉴于失业上升,增加福利开支是必要的,因此我们本质上只是原地踏步。
 
 @spending_same_pre_depression
 view-if: unemployed <= 15
 
-We have kept welfare spending the same.
+我们维持了福利开支不变。
 
 
 @spending_same_post_depression
 view-if: unemployed > 15
 on-arrival: workers_spd -= 3; unemployed_spd -= 4; welfare -= 1; reformist_dissent += 5; left_dissent += 5; labor_dissent += 5; center_dissent += 5; neorevisionist_dissent += 5; kpd_coalition_dissent += 1; kpd_relation -= 8 if in_popular_front or in_left_front
-subtitle: The increased levels of unemployment necessitate more spending on aid.
+subtitle: 失业水平上升,使得救助开支必须增加。
 
-Increasing welfare spending is necessary in light of the rise in unemployment, so we have essentially cut welfare. The workers are justifiably displeased - we are sacrificing their livelihoods to appease bourgeois demands for austerity.
+鉴于失业上升,增加福利开支本是必要的,因此我们实际上削减了福利。工人们的不满理所当然 —— 我们正在牺牲他们的生计,以平息资产阶级要求紧缩的呼声。
 
-[? if in_popular_front or in_left_front: The KPD is turning against us for our welfare policy. ?]
+[? if in_popular_front or in_left_front: 共产党正因为我们的福利政策而转向反对我们。 ?]

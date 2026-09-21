@@ -1,4 +1,4 @@
-title: Coalition Affairs
+title: 联盟事务
 new-page: true
 is-card: true
 tags: govt_affairs
@@ -7,40 +7,40 @@ view-if: spd_in_government = 1 and coalition_dissent >= 1 and coalition_affairs_
 card-image: img/muller_cabinet.jpg
 #subtitle: There is dissent within our coalition.
 
-= Coalition Affairs
+= 联盟事务
 
-Our coalition is in trouble. The right-leaning members of the Center [? if in_grand_coalition: and DVP ?] are constantly criticizing us for our policies, and are threatening to call a vote of no confidence to collapse this government[? if spd_prussia :, or to do the same for our government in the state of Prussia ?].
+我们的执政联盟陷入了困境。中央党[? if in_grand_coalition: 与人民党 ?]中偏右的成员不断批评我们的政策,并威胁要提出不信任案来搞垮这个政府[? if spd_prussia :,或者对我们在普鲁士州的政府如法炮制 ?]。
 
-How do we reduce tensions with the coalition?
+我们该如何缓和与执政联盟的紧张关系?
 
-- @promise_cuts: Agree to the bourgeois plans to cut welfare.
-- @resources: Use our party resources to support our allies.
-- @weimar_convince: Can we convince our partners to adopt our economic plan?
-- @weimar_enact: Can we enact the Weimar Plan?
-- @bring_down: Instead, we will bring down the government with a no-confidence vote, and call for new elections.
-- @no_change: Take none of these actions.
+- @promise_cuts: 同意资产阶级削减福利的方案。
+- @resources: 用我党的资源支持盟友。
+- @weimar_convince: 我们能否说服盟友采纳我们的经济计划?
+- @weimar_enact: 我们能否执行魏玛计划?
+- @bring_down: 不如由我们提出不信任案搞垮政府,并呼吁举行新的选举。
+- @no_change: 以上行动一概不做。
 - @easy_discard
 
 
 @promise_cuts
 on-arrival: workers_spd -= 5; unemployed_spd -= 6; workers_kpd += 3; workers_sapd += 2 if sapd_consolidated == 1; unemployed_kpd += 2; unemployed_sapd += 1 if sapd_consolidated == 1; workers_kpd += 2 if sapd_consolidated != 1; unemployed_kpd += 1 if sapd_consolidated != 1; unemployed_nsdap += 3; left_dissent += 10; labor_dissent += 5; welfare -= 1; budget += 1; coalition_dissent = 0
 
-Fine. By cutting welfare, we have reduced dissent within the coalition.
+好。通过削减福利,我们减少了执政联盟内部的异议。
 
 @resources
 subtitle: -2 resources
 view-if: historical_mode = 0
-unavailable-subtitle: Not enough resources (need 2).
+unavailable-subtitle: 资源不足(需要 2 点)。
 choose-if: resources >= 2
 on-arrival: resources -= 2; coalition_dissent -= 1
 
-By transferring campaign funds to our coalition partners, we can make our policies more acceptable to them. Some would call this corruption, but perhaps it is necessary to save democracy.
+通过把竞选经费转给执政盟友,我们可以让我们的政策更易被他们接受。有人会把这称作腐败,但或许这是拯救民主所必需的。
 
 @weimar_convince
-subtitle: A shared programme could help combat extremism, but may be hard to accomplish...
+subtitle: 一份共同的纲领有助于对抗极端主义,但恐怕难以达成……
 view-if: moderate_plan_adopted == 1 and weimar_plan_adopted != 1 and weimar_rejected != 1
 choose-if: weimar_willingness == 1
-unavailable-subtitle: Our Weimar partners are not willing to be convinced of the plan's merits.
+unavailable-subtitle: 我们的魏玛盟友不愿被说服相信这项计划的优点。
 on-arrival: z_relation -= 2
 go-to: weimar_plan
 
@@ -50,14 +50,14 @@ go-to: weimar_enacting
 
 @no_change
 
-No. We will not do this.
+不。我们不会这样做。
 
 @bring_down
 view-if: year >= 1928
-subtitle: Bring down this government before our opponents do.
+subtitle: 在我们的对手动手之前,先搞垮这个政府。
 on-arrival: spd_in_government = 0; in_grand_coalition = 0; in_weimar_coalition = 0; chancellor = "Brüning"; chancellor_party = "Z"; next_election_time = time + 3 if next_election_time > time+3; next_election_month = month + 3 if next_election_time >= time+3; next_election_year = year if next_election_time >= time+3; next_election_year += 1 if next_election_month > 12; next_election_month -= 12 if next_election_month > 12; spd_toleration = 0; left_strength += 8; pro_republic -= 5; new_middle_spd -= 3; rural_spd -= 3; old_middle_spd -= 3; catholics_spd -= 3; reformist_dissent += 5
 
-We have called for a vote of no confidence in ourselves, and have brought down this government. Chancellor [+ chancellor +] currently rules as acting chancellor.
+我们对自己提出了不信任案,搞垮了这个政府。总理 [+ chancellor +] 目前以代理总理的身份执政。
 
-New elections have been set for [+ next_election_month : month +] [+ next_election_year +].
+新的选举已定于 [+ next_election_month : month +] [+ next_election_year +]。
 
