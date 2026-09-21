@@ -1,11 +1,11 @@
-title: The Death of Max Seydewitz
+title: 马克斯·塞德维茨之死
 view-if: decay >= 3
 frequency: 1000
 max-visits: 1
 on-arrival: seydewitz_dead = 1; n_advisors -= 1 if seydewitz_advisor == 1; seydewitz_advisor = 0;
 tags: event
 
-JUMP IN THE URINAL
-AND STAND ON YOUR HEAD.
-I’M THE ONE THAT’S ALIVE.
-YOU’RE ALL DEAD.
+跳进小便池,
+倒立其上。
+活着的是我。
+你们全都死了。

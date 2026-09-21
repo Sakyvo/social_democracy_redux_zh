@@ -1,12 +1,12 @@
 title: 1923
-subtitle: An old year 
+subtitle: 旧岁 
 tags: event
 view-if: year = 1923 and month <= 11
 priority: 2
 max-visits: 1
 
-The world seems completely broken. Nothing makes sense anymore. Is the world going mad, or have we?
+世界似乎彻底崩坏了。一切都不再有意义。是世界疯了,还是我们疯了?
 
 ...
 
-I'm scared.
+我很害怕。

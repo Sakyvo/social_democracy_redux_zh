@@ -1,8 +1,8 @@
 title: 1913
-subtitle: An old year 
+subtitle: 旧岁 
 tags: event
 view-if: year <= 1913 and month <= 11
 priority: 2
 max-visits: 1
 
-<span style="color:rgb(155,130,160);font-family:Garamond,'Times New Roman',serif;font-weight:700;letter-spacing:0.5px;">I shall always be.</span>
+<span style="color:rgb(155,130,160);font-family:Garamond,'Times New Roman',serif;font-weight:700;letter-spacing:0.5px;">我将永远存在。</span>

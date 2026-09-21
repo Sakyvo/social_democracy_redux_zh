@@ -1,11 +1,11 @@
-title: The Death of Otto Braun
+title: 奥托·布劳恩之死
 view-if: decay >= 4
 frequency: 1000
 max-visits: 1
 on-arrival: braun_dead = 1; n_advisors -= 1 if braun_advisor == 1; braun_advisor = 0; 
 tags: event
 
-JUMP IN THE URINAL
-AND STAND ON YOUR HEAD.
-I’M THE ONE THAT’S ALIVE.
-YOU’RE ALL DEAD.
+跳进小便池,
+倒立其上。
+活着的是我。
+你们全都死了。

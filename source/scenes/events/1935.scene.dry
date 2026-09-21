@@ -51,6 +51,6 @@ if (Q.pro_republic > 75 && Q.pro_republic > Q.older_republic) {
 }
 !}
 
-A new year begins. Worldwide, the Great Depression is coming to an end, and the effects are being felt here in Germany. [? if economic_growth > 3 : The German economy is growing at an impressive pace, considering the worldwide recession. ?][? if unemployed < 15 : The unemployment rate has fallen substantially, as people across the country return to work. ?][? if inflation > 1 and inflation < 4 : Inflation is healthy, helping fuel the economy and bring down unemployment further. ?]
+新的一年开始了。放眼全球,大萧条正在结束,德国也感受到了它的影响。[? if economic_growth > 3 : 考虑到全球性的衰退,德国经济的增长速度令人印象深刻。 ?][? if unemployed < 15 : 随着全国各地的人们重返工作岗位,失业率已大幅下降。 ?][? if inflation > 1 and inflation < 4 : 通货膨胀处于健康水平,有助于为经济提供动力,并进一步降低失业。 ?]
 
-[? if return_to_normalcy : The Nazis have seemingly missed their window for subverting parliamentary politics and enter a period of internal reorganization. [? if sa_force + sh_force >= 50 : The threat remains, however, that they may attempt to seize power by force as a desperate last attempt at taking power. We must be vigilant. ?] ?]
+[? if return_to_normalcy : 纳粹似乎已经错过了颠覆议会政治的窗口期,进入了内部重整的阶段。[? if sa_force + sh_force >= 50 : 然而,他们仍有可能孤注一掷,试图以武力夺权。我们必须保持警惕。 ?] ?]

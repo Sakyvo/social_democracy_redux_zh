@@ -54,6 +54,6 @@ if (Q.pro_republic > 75 && Q.pro_republic > Q.older_republic) {
 }
 !}
 
-The German economy continues its steady recovery. [? if nazi_reform : The Nazis continue their reformation, attempting to seize relevance once more, but all in all, it seems that the crisis has subsided. ?][? if not third_period : Around the world, left-leaning Popular Fronts see great success, winning elections left and right. This is a good sign for our foreign policy. ?][? if budget > 0 and works_program and economic_growth >= 3 : We are running a surplus once again. It seems our works program is truly paying off. ?]
+德国经济继续稳步复苏。 [? if nazi_reform : 纳粹继续他们的自我改造,试图重新攫取存在感;但总的来说,危机似乎已经消退。 ?][? if not third_period : 世界各地,偏左的人民阵线大获成功,在选举中连连告捷。这对我们的外交政策是个好兆头。 ?][? if budget > 0 and works_program and economic_growth >= 3 : 我们再次实现了盈余。看来我们的公共工程计划确实见了成效。 ?]
 
-[? if italo_ethiopian_war : The Italo-Ethiopian War rages on in Abysinnia. ?]
+[? if italo_ethiopian_war : 意埃战争仍在阿比西尼亚激烈进行。 ?]

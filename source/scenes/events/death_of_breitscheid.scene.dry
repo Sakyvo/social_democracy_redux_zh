@@ -1,11 +1,11 @@
-title: The Death of Rudolf Breitscheid
+title: 鲁道夫·布赖特沙伊德之死
 view-if: decay >= 10
 frequency: 1000
 max-visits: 1
 on-arrival: breitscheid_dead = 1; n_advisors -= 1 if breitscheid_advisor == 1; breitscheid_advisor = 0;
 tags: event
 
-JUMP IN THE URINAL
-AND STAND ON YOUR HEAD.
-I’M THE ONE THAT’S ALIVE.
-YOU’RE ALL DEAD.
+跳进小便池,
+倒立其上。
+活着的是我。
+你们全都死了。

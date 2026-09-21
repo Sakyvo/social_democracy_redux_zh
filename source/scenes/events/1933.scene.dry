@@ -13,6 +13,6 @@ priority: 2
 max-visits: 1
 view-if: year = 1933 and month = 1
 
-A new year begins. [? if president == "Braun" : With Hindenburg out of office and an SPD candidate at the helm, perhaps in this year Germany will overcome its crisis. It will be our job to ensure this. ?] [? if president == "Hindenburg" : President Hindenburg's presidency continues, though for how long remains uncertain as his health deteriorates. We can only hope that should he die we may take his place and not the Nazis. ?][? if president == "Eckener" : Though Hindenburg is out of office, Hugo Eckener is by no means a social democrat. Still, matters will be easier with a staunch anti-Nazi at the helm. ?][? if president == "Gessler" : With Hindenburg out of office and Gessler at the helm, we can hope for a more liberal Germany than before. At the same time, the Bürgerblock's commitment to Brüning's economic policies pave the way for the continuation of the crisis and for someone like Hitler to take power. ?]
+A new year begins. [? if president == "Braun" : 兴登堡已然离任,一位社民党人执掌大位,或许德国会在这一年克服危机。确保这一点,将是我们的职责。 ?] [? if president == "Hindenburg" : 兴登堡的总统任期仍在延续,但随着他健康状况的恶化,还能持续多久已不确定。我们只能希望,一旦他去世,接替其位的会是我们,而不是纳粹。 ?][? if president == "Eckener" : 尽管兴登堡已然离任,胡戈·埃克纳绝不是社会民主党人。不过,由一位坚定的反纳粹者执掌大位,事情总会好办些。 ?][? if president == "Gessler" : 兴登堡已然离任,格斯勒执掌大位,我们可以期待一个比过去更自由的德国。但与此同时,市民联盟对布吕宁经济政策的坚持,正为危机的延续、以及让希特勒之类的人掌权铺路。 ?]
 
-[? if nazi_decline = 1 : The Nazis have begun to expend their limited financial resources, and their momentum has slowed. Perhaps the far-right's moment has passed. ?]
+[? if nazi_decline = 1 : 纳粹已开始耗尽他们有限的财力,势头也慢了下来。或许极右翼的时机已经过去。 ?]

@@ -1,4 +1,4 @@
-title: The Death of Paul Levi
+title: 保罗·列维之死
 view-if: (year == 1930 and month >= 2) or (decay >= 3)
 frequency: 1000
 max-visits: 1

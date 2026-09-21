@@ -33,6 +33,6 @@ view-if: year = 1932 and month = 1
 priority: 2
 max-visits: 1
 
-A new year begins. [? if works_program = 0 : There is little to no good news in Germany. The economic depression has still not bottomed out. ?][? if works_program >= 1 and unemployment >= 20 : We have begun to launch a public works program, but unemployment is still stubbornly high. The people are beginning to finally have optimism, however. ?][? if works_program >= 1 and unemployment < 20 : We have begun to launch a public works program, and unemployment is finally starting to fall. The people are beginning to finally have optimism. ?]
+A new year begins. [? if works_program = 0 : 德国几乎没有什么好消息。经济萧条仍未触底。 ?][? if works_program >= 1 and unemployment >= 20 : 我们已开始推行一项公共工程计划,但失业率仍顽固地高企。不过,民众终于开始有了乐观情绪。 ?][? if works_program >= 1 and unemployment < 20 : 我们已开始推行一项公共工程计划,失业率终于开始下降。民众终于开始有了乐观情绪。 ?]
 
-The presidential election is in April of this year.
+今年的总统选举在四月举行。

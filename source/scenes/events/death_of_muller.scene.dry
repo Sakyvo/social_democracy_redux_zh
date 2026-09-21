@@ -1,4 +1,4 @@
-title: The Death of Hermann Müller
+title: 赫尔曼·米勒之死
 view-if: (year = 1931 and month >= 3) or (decay >= 2)
 frequency: 1000
 max-visits: 1

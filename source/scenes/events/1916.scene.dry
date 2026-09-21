@@ -1,8 +1,8 @@
 title: 1916
-subtitle: An old year 
+subtitle: 旧岁 
 tags: event
 view-if: year <= 1920 and month <= 11
 priority: 2
 max-visits: 1
 
-<span style="color:rgb(155,130,160);font-family:Garamond,'Times New Roman',serif;font-weight:700;letter-spacing:0.5px;">I am the word and my name is never spoken, the name which no one knows.</span>
+<span style="color:rgb(155,130,160);font-family:Garamond,'Times New Roman',serif;font-weight:700;letter-spacing:0.5px;">我是那言语,我的名字从无人道出,那是无人知晓的名字。</span>
