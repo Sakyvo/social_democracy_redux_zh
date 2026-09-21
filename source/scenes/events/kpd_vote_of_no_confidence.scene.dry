@@ -1,71 +1,71 @@
-title: The KPD calls a vote of no confidence against the current government!
-subtitle: We have angered the KPD too much...
+title: 共产党对现任政府提出不信任案!
+subtitle: 我们把共产党惹得太狠了……
 new-page: true
 view-if: spd_in_government = 1 and ((in_popular_front = 1 and kpd_coalition_dissent >= 3) or (in_left_front = 1 and kpd_coalition_dissent >= 4)) and spd_r < 50 and not constructive_vonc
 tags: event
 go-to: menu
 
-= Vote of No Confidence
+= 不信任案
 
-The KPD has called a vote of no confidence against us, due to our various policies and disagreements. If this succeeds, there will be an election in a few months.
+由于我们各项政策与分歧,共产党对我们提出了不信任案。若此案通过,几个月后就将举行选举。
 
 @menu
 
-- @try_assuage: Try to assuage them somehow.
-- @support_center: Could we form a new government based on the Center Party and [+ ddp_name +] (and possibly DVP)?
-- @let_it_happen: Let the vote happen.
+- @try_assuage: 设法安抚他们。
+- @support_center: 我们能否以中央党与 [+ ddp_name +](或许还有人民党)为基础组建新政府?
+- @let_it_happen: 让表决照常进行。
 
 @try_assuage
 
-How do we assuage the KPD?
+我们该如何安抚共产党?
 
-- @resources: Use our resources to reduce dissent within the coalition.
-- @thalmann: Appoint Thälmann as chancellor instead of [+ chancellor +].
-- @support_center: Could we form a new government based on the Center Party and [+ ddp_name +] (and possibly DVP)?
-- @let_it_happen: Never mind. Let the vote happen.
+- @resources: 用我们的资源降低执政联盟内部的异议。
+- @thalmann: 任命台尔曼取代 [+ chancellor +] 出任总理。
+- @support_center: 我们能否以中央党与 [+ ddp_name +](或许还有人民党)为基础组建新政府?
+- @let_it_happen: 算了。让表决照常进行。
 
 @thalmann
 view-if: chancellor_party != "KPD"
 choose-if: (president == "Braun" or president == "Schumacher" or president == "Juchacz" or president == "Thälmann" or president == "Münzenberg")
-subtitle: This would be pretext for a right-wing coup.
-unavailable-subtitle: [? if president == "Hindenburg" : President Hindenburg would never allow this. ?]
+subtitle: 这将成为右翼发动政变的借口。
+unavailable-subtitle: [? if president == "Hindenburg" : 兴登堡总统绝不会允许这样做。 ?]
 on-arrival: chancellor = "Thälmann"; chancellor_party = "KPD"; rfb_strength += 100; rfb_militancy += 0.02; workers_kpd += 5; unemployed_kpd += 10; reichswehr_loyalty -= 0.05
 go-to: thalmann_war if not victory_republic; thalmann_no_war if victory_republic
 
-With great reluctance, President [+ president +] appoints [+ chancellor +] as chancellor.
+总统 [+ president +] 极不情愿地任命 [+ chancellor +] 为总理。
 
-Immediately, [+ chancellor +] goes to work building a "Soviet Germany": consolidating as much power as possible in the KPD, purging state institutions of anti-communists, and sending street fighters against the "enemies of the people".
+[+ chancellor +] 随即着手打造一个「苏维埃德国」:把尽可能多的权力集中于共产党,从国家机构中清除反共分子,并派街头斗士对付「人民的敌人」。
 
 @thalmann_war
 on-arrival: nazi_rebel = 1; foreign_minister_party = "SPD"; interior_minister_party = "SPD"; justice_minister_party = "SPD"; labor_minister_party = "SPD"; reichswehr_minister_party = "SPD"; economic_minister_party = "SPD"; finance_minister_party = "SPD"; agriculture_minister_party = "SPD"; kpd_relation = 80
 
-In response to [+ chancellor +] being appointed Chancellor, the right-wing forces launches almost immediately launch an attempted coup. Troops of the Stahlhelm and Nazi SA enter Berlin and immediately begin clashing with our supporters! Reactionary officers within the Reichswehr have taken their troops out of the barracks and joined them with the Stahlhelm to stop the KPD from taking power. We are forced to be on the same side as the KPD, whether we want to or not.
+[+ chancellor +] 被任命为总理后,右翼势力几乎立即发动了一场政变企图。钢盔团与纳粹冲锋队的队伍开进柏林,随即与我们的支持者爆发冲突!国防军中的反动军官把部队带出营房,与钢盔团合流,以阻止共产党掌权。无论我们愿不愿意,都被迫与共产党站在同一阵线。
 
 - @civil_war
 
 @thalmann_no_war
 on-arrival: coup_progress += 5; kpd_coalition_dissent = 0; reformist_dissent += 5; neorevisionist_dissent += 5; z_relation -= 10; rfb_strength += 100; rb_strength -= 50; kpd_relation -= 10; kpd_influence += 3
 
-Despite our appointing of [+ chancellor +] as chancellor, there is no appetite for a civil war so soon after the last. [+ chancellor +] is unopposed as he attempts to consolidate power.
+尽管我们任命了 [+ chancellor +] 为总理,但在上一场内战刚结束不久之际,人们并无打内战的意愿。[+ chancellor +] 试图集权时未遇抵抗。
 
 @resources
 choose-if: resources >= 3 and kpd_ultimatum_seen = 0
-unavailable-subtitle: -3 资源 - [? if resources < 3 : We do not have enough resources. ?][? if kpd_ultimatum_seen : This is beyond the point when resources could fix. ?]
+unavailable-subtitle: -3 资源 —— [? if resources < 3 : 我们的资源不足。 ?][? if kpd_ultimatum_seen : 事已至此,靠资源已无法解决。 ?]
 subtitle: -3 资源
 on-arrival: resources -= 3; kpd_coalition_dissent -= 1; kpd_influence += 1; rfb_strength += 25
 
-By transferring resources to our coalition partners, we can reduce their dissent against our policies. This is a crude, but effective solution.
+通过把资源转移给执政盟友,我们可以降低他们对我国政策的异议。这是个粗糙但有效的办法。
 
 
 @support_center
 choose-if: (weimar_coalition >= 50 and z_relation >= 40) or (grand_coalition >= 50 and z_relation >= 45 and dvp_relation >= 30)
-unavailable-subtitle: [? if grand_coalition < 50 : This would not give us a majority. ?] [? if z_relation < 45 : After working with the Communists, the Center Party does not wish to form a coalition with us. ?] [? if dvp_relation < 30 : The DVP would rather see the government fall than rescue us from the Communists. ?]
+unavailable-subtitle: [? if grand_coalition < 50 : 这不会让我们获得多数。 ?] [? if z_relation < 45 : 在与共产党共事之后,中央党不愿再与我们组建联盟。 ?] [? if dvp_relation < 30 : 人民党宁可看着政府垮台,也不愿把我们从共产党手里救出来。 ?]
 
-We could try to boot the KPD from our governing coalition, and form a new government with the bourgeois parties.
+我们可以试着把共产党踢出执政联盟,转而与资产阶级政党组建新政府。
 
-- @election_1928.weimar_coalition: Form a Weimar Coalition?
-- @election_1928.grand_coalition: Form a Grand Coalition?
-- @let_it_happen: There is nothing we can do.
+- @election_1928.weimar_coalition: 组建魏玛联盟?
+- @election_1928.grand_coalition: 组建大联合政府?
+- @let_it_happen: 我们无能为力。
 
 
 @let_it_happen
@@ -73,32 +73,32 @@ view-if: not constructive_vonc
 on-arrival: kpd_relation -= 8; workers_kpd -= 5; workers_spd -= 8; unemployed_spd -= 6; socialism -= 4
 go-to: let_it_happen_braun if president = "Braun"; let_it_happen_hindenburg if president = "Hindenburg"; let_it_happen_thalmann if president = "Thälmann"; let_it_happen_generic if president != "Braun" and president != "Hindenburg" and president != "Thälmann"
 
-# if Braun is president, we are now a caretaker government. If Hindenburg is president, Brüning is a caretaker government
+# 若总统是布劳恩,我们如今便是看守政府。若总统是兴登堡,则由布吕宁组成看守政府
 
 @let_it_happen_braun
 on-arrival: next_election_time = time + 3 if next_election_time >= time + 3; next_election_month = month + 3 if next_election_time >= time + 3; next_election_year = year if next_election_time >= time+3; next_election_year += 1 if next_election_month > 12; next_election_month -= 12 if next_election_month > 12; spd_in_government = 0; in_popular_front = 0; in_left_front = 0; foreign_minister_party = "I"; interior_minister_party = "I"; justice_minister_party = "I"; labor_minister_party = "I"; reichswehr_minister_party = "I"; economic_minister_party = "I"; finance_minister_party = "I"; agriculture_minister_party = "I";
 
-The vote succeeds, and our coalition has collapsed. Chancellor [+ chancellor +] will lead a caretaker government until the next election.
+表决通过,我们的执政联盟已然崩溃。总理 [+ chancellor +] 将领导看守政府,直至下一次选举。
 
 新的选举已定于 [+ next_election_month : month +] [+ next_election_year +]。
 
 @let_it_happen_hindenburg
 on-arrival: next_election_time = time + 3 if next_election_time >= time + 3; next_election_month = month + 3 if next_election_time >= time + 3; next_election_year = year if next_election_time >= time+3; next_election_year += 1 if next_election_month > 12; next_election_month -= 12 if next_election_month > 12; spd_in_government = 0; in_popular_front = 0; in_left_front = 0; chancellor = "Brüning"; chancellor_party = "Z "; foreign_minister_party = "DVP"; interior_minister_party = "Z"; justice_minister_party = "I"; labor_minister_party = "Z"; reichswehr_minister_party = "I"; economic_minister_party = ddp_name; finance_minister_party = "DVP"; agriculture_minister_party = "Z"; coalition_dissent = 0; kpd_coalitipn_dissent = 0; pro_republic -= 5; old_middle_spd -= 3; new_middle_spd -= 2; workers_spd -= 3 if pro_republic < 50; workers_spd -= 4 if pro_republic < 40; old_middle_nsdap += 4 if pro_republic < 50; new_middle_nsdap += 3 if pro_republic < 50
 
-The vote succeeds, and our government has resigned. Chancellor Brüning has been appointed as the head of an acting government, consisting solely of the bourgeois parties.
+表决通过,我们的政府随之辞职。布吕宁总理被任命为一个仅由资产阶级政党组成的过渡政府的首脑。
 
 新的选举已定于 [+ next_election_month : month +] [+ next_election_year +]。
 
 @let_it_happen_thalmann
 on-arrival: next_election_time = time + 3 if next_election_time >= time + 3; next_election_month = month + 3 if next_election_time >= time + 3; next_election_year = year if next_election_time >= time+3; next_election_year += 1 if next_election_month > 12; next_election_month -= 12 if next_election_month > 12; spd_in_government = 0; in_popular_front = 0; in_left_front = 0; kpd_chancellor = "Pieck" if kpd_party_leader != "Conciliators"; kpd_chancellor = "Eberlein" if kpd_party_leader == "Conciliators"; chancellor = kpd_chancellor; chancellor_party = "KPD"; foreign_minister_party = "I"; interior_minister_party = "I"; justice_minister_party = "I"; labor_minister_party = "I"; reichswehr_minister_party = "I"; economic_minister_party = "I"; finance_minister_party = "I"; agriculture_minister_party = "I";
 
-The vote succeeds, and our coalition has collapsed. Chancellor [+ kpd_chancellor +] has been appointed as the head of an acting government, consisting solely of the Communists.
+表决通过,我们的执政联盟已然崩溃。总理 [+ kpd_chancellor +] 被任命为一个仅由共产党组成的过渡政府的首脑。
 
 新的选举已定于 [+ next_election_month : month +] [+ next_election_year +]。
 
 @let_it_happen_generic
 on-arrival: next_election_time = time + 3 if next_election_time >= time + 3; next_election_month = month + 3 if next_election_time >= time + 3; next_election_year = year if next_election_time >= time+3; next_election_year += 1 if next_election_month > 12; next_election_month -= 12 if next_election_month > 12; spd_in_government = 0; in_popular_front = 0; in_left_front = 0;
 
-The vote succeeds, and our coalition has collapsed. [+ chancellor +] remains head of an acting government.
+表决通过,我们的执政联盟已然崩溃。[+ chancellor +] 继续担任过渡政府的首脑。
 
 新的选举已定于 [+ next_election_month : month +] [+ next_election_year +]。

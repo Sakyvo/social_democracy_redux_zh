@@ -1,85 +1,85 @@
-title: The Right calls a vote of no confidence against the current government!
-subtitle: We have angered our coalition partners too much...
+title: 右翼对现任政府提出不信任案!
+subtitle: 我们把执政盟友惹得太狠了……
 new-page: true
 on-arrival: tried_supporting_kpd = 0; weimar_dissent += 1 if weimar_plan_adopted; marx_relation -= 5
 view-if: chancellor_party == "SPD" and spd_in_government = 1 and ((in_grand_coalition = 1 or in_popular_front = 1 or (in_minority_government = 1 and not z_no_confidence)) and coalition_dissent >= 3) or (in_weimar_coalition = 1 and coalition_dissent >= 4) and spd_r < 50 and not constructive_vonc
 tags: event
 go-to: vonc_menu
 
-# Options: spend relations to reduce coalition_dissent, ask for kpd to abstain
-# (lmao KPD toleration arc...)
+# 选项:耗费关系值以降低 coalition_dissent;游说共产党弃权
+#(笑,共产党容忍线……)
 
-= Vote of No Confidence
+= 不信任案
 
-[? if in_grand_coalition : The DVP ?][? if in_weimar_coalition or in_popular_front or in_minority_government: The Center Party ?] has called for a vote of no confidence against us, due to our various policies and disagreements. If this succeeds, there will be an election in a few months.
+[? if in_grand_coalition : 人民党 ?][? if in_weimar_coalition or in_popular_front or in_minority_government: 中央党 ?]因我们的各项政策与分歧,对我们提出了不信任案。若此案通过,几个月后就将举行选举。
 
 @vonc_menu
 
-- @try_assuage: Try to assuage our partners.
-- @support_kpd: Could we get the KPD to abstain?
-- @let_it_happen: Let the vote happen.
-- @let_it_happen25: Let the vote happen.
+- @try_assuage: 设法安抚我们的盟友。
+- @support_kpd: 我们能否让共产党弃权?
+- @let_it_happen: 让表决照常进行。
+- @let_it_happen25: 让表决照常进行。
 
 @try_assuage
 
-How do we assuage our partners?
+我们该如何安抚盟友?
 
-- @give_up_prussia: Give up on leadership of Prussia.
-- @austerity: Enact a massive austerity plan.
-- @resources: Use our resources to reduce dissent within the coalition.
-- @support_kpd: Could we get the KPD to abstain?
-- @let_it_happen: Never mind. Let the vote happen.
-- @let_it_happen25: Never mind. Let the vote happen.
+- @give_up_prussia: 放弃对普鲁士的领导权。
+- @austerity: 推行一项大规模的紧缩计划。
+- @resources: 用我们的资源降低执政联盟内部的异议。
+- @support_kpd: 我们能否让共产党弃权?
+- @let_it_happen: 算了。让表决照常进行。
+- @let_it_happen25: 算了。让表决照常进行。
 
 @give_up_prussia
 view-if: spd_prussia == 1
 on-arrival: coalition_dissent = 0; spd_prussia = 0; z_prussia = 1; prussian_government = "I"; reformist_dissent += 10; centrist_dissent += 10; labor_dissent += 10; left_dissent += 5; workers_spd -= 5; rural_spd -= 5; 
 
-Fine. We no longer control the government of Prussia. The vote has been called off.
+好。我们不再掌控普鲁士政府。表决已取消。
 
 @austerity
 view-if: welfare >= 0 and not secularized
 on-arrival: coalition_dissent = 0; workers_spd -= 10; unemployed_spd -= 10; workers_kpd += 7; workers_nsdap += 3; unemployed_kpd += 5; unemployed_nsdap += 5; left_dissent += 15; center_dissent += 10; labor_dissent += 15; reformist_dissent += 5; welfare -= 2; budget += 1; unemployed += 3; kpd_coalition_dissent += 1; kpd_relation -= 10 if in_popular_front
 
-Fine. We enacted a massive austerity program to cut welfare, in order to maintain the stability of our coalition. The vote has been called off.
+好。为维持执政联盟的稳定,我们推行了一项削减福利的大规模紧缩计划。表决已取消。
 
 @resources
 choose-if: resources >= 3
 view-if: secularized = 0
-unavailable-subtitle: We do not have enough resources.
+unavailable-subtitle: 我们的资源不足。
 subtitle: -3 资源
 on-arrival: resources -= 3; coalition_dissent -= 1;
 go-to: vonc_formation if (fun_value == 3 and year >= 1935)
 
-By transferring resources to our coalition partners, we can reduce their dissent against our policies. This is a crude, but effective solution.
+通过把资源转移给执政盟友,我们可以降低他们对我国政策的异议。这是个粗糙但有效的办法。
 
 @support_kpd
 view-if: tried_supporting_kpd = 0
 on-arrival: tried_supporting_kpd = 1
 choose-if: (in_grand_coalition and communist_coalition >= 3 and kpd_relation >= 50 and kpd_r >= dvp_r) or (in_weimar_coalition and kpd_relation >= 50 and kpd_r >= z_r and communist_coalition >= 3)
-unavailable-subtitle: [? if communist_coalition < 3 : The KPD won't take part in parliamentary government. ?] [? if kpd_relation < 50 : The KPD is not friendly enough with us. ?] [? if (in_grand_coalition and kpd_r < dvp_r) or (in_weimar_coalition and kpd_r < z_r): The KPD does not have enough votes. ?] [? if in_popular_front : We are already in a Popular Front with the KPD. ?]
+unavailable-subtitle: [? if communist_coalition < 3 : 共产党不会参与议会政府。 ?] [? if kpd_relation < 50 : 共产党与我们还不够友好。 ?] [? if (in_grand_coalition and kpd_r < dvp_r) or (in_weimar_coalition and kpd_r < z_r): 共产党的票数不够。 ?] [? if in_popular_front : 我们已与共产党组成人民阵线。 ?]
 
-If the Communists abstain, then we essentially can maintain a minority government[? if president=="Hindenburg":, although it would be very difficult to make policy without the support of President Hindenburg, which we do not have ?]. If this happens, then we will own a massive debt to the KPD. This could lead to broader cooperation in the future, for better or for worse.
+若共产党人弃权,我们实质上就能维持一个少数派政府[? if president=="Hindenburg":,尽管在没有兴登堡总统支持的情况下——而这份支持我们并没有——推行政策会异常艰难 ?]。若真如此,我们将欠下共产党一笔巨债。这可能导致今后更广泛的合作 —— 无论好坏。
 
-- @support_kpd_2: Persuade the KPD to "tolerate" us?
-- @let_it_happen: Never mind. Let the vote happen.
+- @support_kpd_2: 说服共产党「容忍」我们?
+- @let_it_happen: 算了。让表决照常进行。
 
 @support_kpd_2
 on-arrival: communist_coalition += 1; workers_kpd += 3; kpd_relation += 5
 go-to: support_kpd_weimar if in_weimar_coalition; support_kpd_grand if in_grand_coalition
 
-The KPD is not interested in a "toleration" arrangement; they will only support us if they can participate in the government as part of a coalition. And, if this toleration agreement happens, the right-wing parties will not be inclined to support us. 
+共产党对「容忍」安排毫无兴趣;只有当它能作为联盟一员参与政府时,才会支持我们。而且,若真达成这种容忍协议,右翼政党也不会愿意支持我们。
 
 @support_kpd_grand
 
-- @election_1928.popular_front_coalition: Form a "Popular Front" coalition?
+- @election_1928.popular_front_coalition: 组建「人民阵线」联盟?
 - @election_1928.left_coalition
-- @try_assuage: Never mind. We must deal with this some other way.
+- @try_assuage: 算了。我们必须另想办法处理。
 
 @support_kpd_weimar
 
 - @election_1928.left_coalition
-- @try_assuage: Never mind. We must deal with this some other way.
+- @try_assuage: 算了。我们必须另想办法处理。
 
 
 @let_it_happen
@@ -87,13 +87,13 @@ view-if: year >= 1928
 on-arrival: weimar_dissent += 1 if weimar_plan_adopted; spd_in_government = 0; in_grand_coalition = 0; in_weimar_coalition = 0; in_popular_front = 0; spd_toleration = 0; foreign_minister_party = "DVP"; interior_minister_party = "Z"; justice_minister_party = "I"; labor_minister_party = "Z"; reichswehr_minister_party = "I"; economic_minister_party = ddp_name; finance_minister_party = "DVP"; agriculture_minister_party = "Z"; labor_minister = "Stegerwald"; interior_minister = "Wirth"; finance_minister = "Moldenhauer"; economic_minister = "Curtius"; justice_minister = "Koch-Weser"; foreign_minister = "Stresemann"; agriculture_minister = "Dietrich"; reichswehr_minister = "Groener";  coalition_dissent = 0; pro_republic -= 5; old_middle_spd -= 3; new_middle_spd -= 2; workers_spd -= 3 if pro_republic < 50; workers_spd -= 4 if pro_republic < 40; old_middle_nsdap += 4 if pro_republic < 50; new_middle_nsdap += 3 if pro_republic < 50
 go-to: let_it_happen_hindenburg if president != "Braun"; let_it_happen_braun if president == "Braun"
 
-# todo: rework to not be auto-election, for now just have different modes for whether it's main game or 1925 mode
+# TODO: 重做以避免自动触发选举;目前只针对主游戏与 1925 模式设置不同分支
 
 @let_it_happen_hindenburg
 on-arrival: chancellor = "Brüning"; chancellor_party = "Z"; welfare -= 2;
 go-to: reichstag_dissolved if year >= 1931 or confrontation_seen or president != "Hindenburg"; dnvp_tolerate if year < 1931 and not confrontation_seen and president == "Hindenburg"
 
-The vote succeeds, and our government has resigned. Chancellor Brüning has been appointed as the head of an acting government, consisting solely of the bourgeois parties. He immediately proceeds to cut welfare spending substantially.
+表决通过,我们的政府随之辞职。布吕宁总理被任命为一个仅由资产阶级政党组成的过渡政府的首脑。他随即着手大幅削减福利开支。
 
 @reichstag_dissolved
 call: set_next_election_time
@@ -104,12 +104,12 @@ on-arrival: time_to_election = 3
 @dnvp_tolerate
 on-arrival: dnvp_toleration = 1
 
-The DNVP is split, as what remains of its moderate wing refuses to vote against [+ chancellor +] following Schiele (a high-ranking member of the DNVP) being included in cabinet.
+国家人民党发生分裂 —— 在其高层成员席勒被纳入内阁之后,该党残余的温和派拒绝投票反对 [+ chancellor +]。
 
 @let_it_happen_braun
 on-arrival: spd_caretaker = 1
 
-The vote succeeds, and our government has resigned. Chancellor [+ chancellor +] remains as the head of a caretaker government, but no longer has the power to enact new policies.
+表决通过,我们的政府随之辞职。总理 [+ chancellor +] 继续作为看守政府的首脑,但已无权推行新政策。
 
 新的选举已定于 [+ next_election_month : month +] [+ next_election_year +]。
 
@@ -117,4 +117,4 @@ The vote succeeds, and our government has resigned. Chancellor [+ chancellor +] 
 view-if: year < 1928
 on-arrival: spd_in_government = 0; chancellor_party = "Z"; chancellor = "Marx"; foreign_minister_party = "DVP"; interior_minister_party = "Z"; justice_minister_party = "I"; labor_minister_party = "Z"; reichswehr_minister_party = "I"; economic_minister_party = ddp_name; finance_minister_party = "DVP"; agriculture_minister_party = "Z"; labor_minister = "Stegerwald"; interior_minister = "Wirth"; finance_minister = "Moldenhauer"; economic_minister = "Curtius"; justice_minister = "Koch-Weser"; foreign_minister = "Stresemann"; agriculture_minister = "Dietrich"; reichswehr_minister = "Groener";  coalition_dissent = 0;
 
-The vote succeeds, and Wilhelm Marx is appointed as chancellor of a new minority government. (WIP)
+表决通过,威廉·马克思被任命为新一届少数派政府的总理。(开发中)
