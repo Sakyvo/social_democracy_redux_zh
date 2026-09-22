@@ -13,10 +13,10 @@ Wilhelm Marx, former Center Party chancellor and presidential candidate, has cho
 
 The consensus candidate on the right is Ludwig Kaas, a Catholic priest who represents the party's traditionalists. On the other hand, there is Joseph Joos, a leader of the Catholic trade unions, who has been more supportive of cooperation with the SPD than most of the Center Party.
 
-- @kaas: The Center Party elects Ludwig Kaas as the party chair.
-- @stegerwald: The Center Party elects Adam Stegerwald as the party chair.
-- @joos: Influence the Center Party to select Joseph Joos as the party chair.
-- @joos_campaign: We must hold a campaign in support of Joseph Joos as party chair.
+- @kaas: 中央党选举路德维希·卡斯为党主席。
+- @stegerwald: 中央党选举亚当·施特格瓦尔德为党主席。
+- @joos: 影响中央党,使其选举约瑟夫·约斯为党主席。
+- @joos_campaign: 我们必须开展一场宣传,支持约瑟夫·约斯出任党主席。
 
 @kaas
 on-arrival: z_party_leader = "Kaas"; z_relation -= 5

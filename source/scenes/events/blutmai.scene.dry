@@ -26,7 +26,7 @@ This may end any attempt at reconciliation with the KPD, but the Center and Peop
 
 - @corrupt_police: It is the fault of corrupt and reactionary elements within the police. Purge those responsible.
 - @communist_fault: It is the fault of the Communists for refusing to follow the rule of law.
-- @no_fault: It is an unfortunate incident that should not have happened, but is no one's fault at all.
+- @no_fault: 这是本不该发生的不幸事件,但根本谁也不该怪。
 
 @corrupt_police
 on-arrival: kpd_relation += 10; z_relation -= 2; dvp_relation -= 2; prussian_police_loyalty += 0.05

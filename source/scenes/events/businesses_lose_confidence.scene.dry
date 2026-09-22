@@ -11,11 +11,11 @@ Because of our government's policies, which are perceived as anti-business, the 
 
 The business community has a variety of suggestions as to how we might improve the business environment.
 
-- @taxes: Cut taxes for the upper brackets.
+- @taxes: 降低高收入档的税收。
 - @welfare: Reduce welfare and social spending.
 - @nothing: We will not take any action for now.
-- @watch: Just watch us. The economy *will* improve.
-- @to_hell: To hell with the business community. They are the enemy.
+- @watch: 等着瞧吧。经济*会*好转的。
+- @to_hell: 让工商界见鬼去吧。他们是敌人。
 
 @taxes
 on-arrival: upper_tax_rates -= 1; budget -= 1; capital_strike_progress -= 1; unemployed -= 1; new_middle_spd += 5*(1-dissent); old_middle_spd += 4*(1-dissent); kpd_coalition_dissent += 1; kpd_relation -= 5; left_dissent += 5

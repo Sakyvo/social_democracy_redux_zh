@@ -15,7 +15,7 @@ This is a bourgeois dispute, but the costs will be borne by the proletariat. The
 - @nothing_to_do: There is nothing we can do.
 - @stabilization: Take action to stabilize the economy!
 - @austerity: Chancellor [+ chancellor +]'s response is, as always, more austerity.
-- @end_toleration: We are tired of austerity. End the toleration arrangement!
+- @end_toleration: 我们受够了紧缩。终结容忍安排!
 
 @nothing_to_do
 view-if: spd_in_government = 1

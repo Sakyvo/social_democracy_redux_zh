@@ -115,7 +115,7 @@ max-choices: 1
 - @sapd_new_middle: The Socialists campaign amongst the new middle class.
 - @sapd_rural: The Socialists campaign amongst the farmers. 
 - @sapd_united_frontism: The Socialists work towards a united front.
-- @sapd_centrists: The Socialists attempt to appeal to Centrists.
+- @sapd_centrists: 社会主义者试图吸引中间派。
 - @sapd_labor: The Socialists attempt to win over the trade unions.
 
 @sapd_workers
@@ -266,7 +266,7 @@ view-if: not dnvp_banned
 - @dnvp_workers: The DNVP campaigns amongst workers.
 - @dnvp_middle: The DNVP campaigns amongst the middle class.
 - @dnvp_rural: The DNVP campaigns in the countryside.
-- @dnvp_nationalism: The DNVP rallies support for nationalism.
+- @dnvp_nationalism: 国家人民党为民族主义拉拢支持。
 - @dnvp_antirepublic: The DNVP rallies against the republic.
 - @hugenberg: Hugenberg commits the DNVP to *Katastrophenpolitik*.
 - @moderation: The DNVP tries to break from its reputation as an unworkable party.

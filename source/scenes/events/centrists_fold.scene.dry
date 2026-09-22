@@ -10,9 +10,9 @@ on-arrival: crisis_program_timer = 0; crisis_urgency += 1
 
 Seeing the worsening economic situation in Germany, the rising threat of the Nazis, the declining influence of Social Democracy, and the increasing dissent within the party, Rudolf Hilferding has folded and agreed that, while the Great Depression is an inevitable and periodic crisis of capitalism, this does not preclude measures to ease the burden of it upon the working class or begin a move towards socialism.
 
-- @reformist_plan: The Center backs the Reformist plan.
-- @left_plan: The Center backs the Left plan.
-- @synthesis_plan: The Center backs a synthesis of the Left and Reformist plans.
+- @reformist_plan: 中央党支持改良派计划。
+- @left_plan: 中央党支持左翼计划。
+- @synthesis_plan: 中央党支持左翼与改良派计划的综合方案。
 
 @reformist_plan
 view-if: reformist_strength >= left_strength and reformist_strength >= center_strength

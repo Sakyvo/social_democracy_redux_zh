@@ -22,7 +22,7 @@ on-arrival: spd_in_government = 0; spd_toleration = 1; chancellor = "Brüning"; 
 
 Replacing us is Brüning of the Center Party, who has reorganized his cabinet to encompass the bourgeois parties. Although they lack a majority in the Reichstag, we could tolerate their government at the next session to prevent new elections, effectively acquiscing to Hindenburg's wishes.
 
-- @tolerate: We will enter a toleration agreement.
+- @tolerate: 我们将达成容忍协议。
 - @dont_tolerate: No majority, no government. Elections it is!
 
 @tolerate

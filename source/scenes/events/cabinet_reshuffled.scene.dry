@@ -12,14 +12,14 @@ go-to: menu if chancellor != "Wirth"; wirth_resign_hindenburg if chancellor == "
 
 [+ chancellor +] has announced his intentions to [+ president +] to reshuffle the cabinet, sacking and replacing all current SPD ministers and replacing them with bourgeois ones. [? if bourgeois_coalition < 50 and right_coalition < 50 : Luckily, they lack a majority without us, so we can bring them down with a simple motion of no confidence. ?]
 
-- @try_assuage: Try to assuage our partners.
-- @right_coalition: The DNVP replaces us in government.
-- @minority_bruning: Brüning's cabinet survives as a minority government.
-- @breitscheid_vonc: Call a constructive motion of no confidence with the KPD!
-- @sack_bruning: [+ president +] will call snap elections.
-- @bourgeois_coalition: The bourgeois have a lone majority.
-- @tolerate: Let the reshuffle happen, and tolerate the new minority government.
-- @no_tolerate: Bring down this new backstabbing government!
+- @try_assuage: 设法安抚我们的盟友。
+- @right_coalition: 国家人民党取代我们进入政府。
+- @minority_bruning: 布吕宁的内阁作为少数派政府得以存续。
+- @breitscheid_vonc: 与共产党一道提出建设性不信任案!
+- @sack_bruning: [+ president +] 将宣布提前选举。
+- @bourgeois_coalition: 资产阶级拥有单独多数。
+- @tolerate: 让改组发生,并容忍新的少数派政府。
+- @no_tolerate: 搞垮这个背后捅刀的新政府!
 
 @try_assuage
 choose-if: chancellor != "Scholz" or dvp_relation >= 55
@@ -27,10 +27,10 @@ unavailable-subtitle: Chancellor Scholz sees no room for compromise.
 
 How do we assuage our partners?
 
-- @give_up_prussia: Give up on leadership of Prussia.
-- @austerity: Enact a massive austerity plan.
-- @resources: Use our resources to reduce dissent within the coalition.
-- @menu: Never mind. What are our options?
+- @give_up_prussia: 放弃对普鲁士的领导权。
+- @austerity: 推行一项大规模的紧缩计划。
+- @resources: 用我们的资源降低执政联盟内部的异议。
+- @menu: 算了。我们有哪些选项?
 
 @give_up_prussia
 view-if: spd_prussia == 1
@@ -129,4 +129,4 @@ Unable to bear the stress of keeping the coalition together, Wirth has announced
 
 [+ president +] appoints Brüning from the Center Party as replacement, who immediately reforms the government.
 
-- @menu: Brüning sacks our ministers.
+- @menu: 布吕宁罢免了我们的部长。

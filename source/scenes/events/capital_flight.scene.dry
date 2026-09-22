@@ -26,15 +26,15 @@ Q.old_economy = Q.economic_health;
 
 After months of aggressive attempts by the bourgeoisie to reclaim state power and put an end to the revolution, most seem to have now recognized the futility of their efforts, and our victory. What is left of private industry is abandoned en masse, as industrialists pack their bags and set out for better horizons, lobbying governments wherever they go against our project, telling tales of horrifying Bolshevik barbarism, of looting and pillaging. What is left of the abandoned industries, we have no issues in taking over the operation of. 
 
-- @victory: We have won.
+- @victory: 我们赢了。
 
 @victory
 subtitle: Now we must prove it before Germany and the world.
 
 With the working class in control of the state and now economy, we have won. Our decisive confrontation with the bourgeoisie has yielded as victory a nation in the hands of the proletariat. Now, however, remains a task before us. We must prove our victory.
 
-- @five_year_plan: We will begin the implementation of a comprehensive economic plan, using our control over the economy to do so.
-- @nothing: We can do that laaaateeerrrrr.
+- @five_year_plan: 我们将着手实施一项全面的经济计划,利用我们对经济的掌控来推进。
+- @nothing: 这个我们以后再说吧。
 
 @five_year_plan
 choose-if: budget > 0
@@ -46,7 +46,7 @@ We have begun, using our control over the economy, to implement a comprehensive 
 @nothing
 on-arrival: unemployed_spd += 10*(1-dissent); bourgeoisie_spd += 10*(1-dissent); center_dissent -= 5; reformist_dissent -= 5; labor_dissent -= 5; neorevisionist_dissent -= 5
 
-There is no need to hurry. We have won. We can prove this victory later; for now, let us rest. Many of society's lazier individuals echo this sentiment, while the relaxed tone eases tensions in our party.
+There is no need to hurry. 我们赢了。 We can prove this victory later; for now, let us rest. Many of society's lazier individuals echo this sentiment, while the relaxed tone eases tensions in our party.
 
 ## todo: economic policy card now holds planning related decisions
 ## cybersyn if sufficient Investment

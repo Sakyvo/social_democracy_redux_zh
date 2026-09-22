@@ -13,8 +13,8 @@ Now, a year later, Germans across the nation look back and ponder how their live
 
 ## todo: split by class depending on how you treated them? petty bourgeoisie will look back with a different perspective than a factory worker
 
-- @victory_indeed: The bourgeoisie will not be missed.
-- @burgerstalgia: Have things really improved?
+- @victory_indeed: 不会有人怀念资产阶级。
+- @burgerstalgia: 情况真的好转了吗?
 
 @victory_indeed
 view-if: economic_health > old_economy

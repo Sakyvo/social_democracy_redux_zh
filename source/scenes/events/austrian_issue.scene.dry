@@ -97,7 +97,7 @@ max-visits: 1
 在与我们现已平定的进军柏林行动相配合之下,奥地利军队曾越过边境进入巴伐利亚发动战争。尽管其国内盟友不再向我们举兵,奥地利问题却始终悬而未决。在希特勒号召以一场伟大的民族革命统一德意志民族的鼓动下,这些军队试图在纳粹民兵的协助下向慕尼黑汇合。
 
 - @war: So it is war.
-- @paramilitaries: Nothing more than paramilitaries.
+- @paramilitaries: 不过是些准军事组织。
 
 @war
 view-if: hitler_recognized

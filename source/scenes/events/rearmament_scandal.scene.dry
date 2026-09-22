@@ -1,4 +1,4 @@
-title: Secret Rearmament Exposed!
+title: Secret 重整军备 Exposed!
 subtitle: We have found evidence of illegal rearmament by the Reichswehr
 view-if: (year == 1926 and month >= 12) or year == 1927
 new-page: true
@@ -7,7 +7,7 @@ max-visits: 1
 tags: event
 go-to: bribe if dvp_relation >= 35 and z_relation >= 40 and ddp_relation >= 50 and not spd_in_government; no_bribe if dvp_relation < 35 or z_relation < 40 or ddp_relation < 50 and not spd_in_government; gov_menu if spd_in_government
 
-= Secret Rearmament Exposed
+= Secret 重整军备 Exposed
 
 We have found evidence of secret rearmament by the Reichswehr, and presented it to Reichswehrminister Gessler of the DDP to demand he take immediate action. 
 

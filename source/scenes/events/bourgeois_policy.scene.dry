@@ -49,20 +49,20 @@ max-choices: 1
 - @concordat: 国家政教协定的谈判
 - @employers: 在劳资纠纷中支持雇主
 - @compromise: 在劳资纠纷中达成妥协
-- @rearmament: Rearmament
+- @rearmament: 重整军备
 - @judicial_regression: 撤销司法改革
 - @interior_regression: 撤销警察改革
 - @military_regression: 撤销军事改革
-- @disempower_councils: Disempowering works councils
-- @privatizations: Privatizations
-- @lifting_price_controls: Lifting price controls
-- @privatizing_media: Returning media to private ownership
-- @unbanning_financing: Unbanning private party financing
-- @suppressing_reichsbanner: Suppressing the Reichsbanner
-- @suppressing_communists: Suppressing communists
-- @anti_state_buyer: Removing the state monopoly on grain
-- @chud_agenda: Rolling back womens & homosexual rights
-- @agricultural_subsidies: Agricultural subsidies
+- @disempower_councils: 剥夺工厂委员会的权力
+- @privatizations: 私有化
+- @lifting_price_controls: 取消物价管制
+- @privatizing_media: 把媒体归还私人所有
+- @unbanning_financing: 解除对私人政党融资的禁令
+- @suppressing_reichsbanner: 镇压国旗团
+- @suppressing_communists: 镇压共产党人
+- @anti_state_buyer: 取消国家对粮食的垄断
+- @chud_agenda: 回撤妇女与同性恋权利
+- @agricultural_subsidies: 农业补贴
 - @collapse: The government collapses!
 
 @tax_cuts
@@ -173,7 +173,7 @@ subtitle: The bourgeoisie discuss a combined continental market
 出人意料,会谈成功了!已签署一项条约,与法国、英国以及东西欧众多其他国家共同组建欧洲联盟。该条约如今有待批准。
 
 - @vote_eu: We support the EU, of course.
-- @oppose_eu: We oppose the EU!
+- @oppose_eu: 我们反对欧盟!
 - @ratified: The treaty is ratified.
 
 @vote_eu
@@ -210,7 +210,7 @@ subtitle: The Center seeks a Concordat
 政府已与梵蒂冈签署政教协定!余下的就看它能否获得批准。
 
 - @vote_concordat: We support the Reichskonkordat.
-- @oppose_concordat: We oppose the Reichskonkordat.
+- @oppose_concordat: 我们反对国家政教协定。
 - @ratified_concordat: The treaty is ratified.
 
 @vote_concordat
@@ -469,13 +469,13 @@ max-choices: 1
 
 政府决定通过废除我们所推行的标志性进步改革,来复归传统的德国价值观。
 
-- @repeal_175: Reinstate Paragraph 175.
-- @reform_183: Reinstate an unmodified Paragraph 183.
-- @change_sex: Remove legal processes for changing sex.
-- @labor: Repeal policies that help women in the workforce.
-- @family: Restore old marriage, divorce, and property laws.
-- @welfare: Cut welfare for single mothers and children.
-- @liberalize: Tighten abortion laws.
+- @repeal_175: 恢复第 175 条。
+- @reform_183: 原样恢复第 183 条。
+- @change_sex: 取消变更性别的法律程序。
+- @labor: 废除有助于职场女性的政策。
+- @family: 恢复旧的婚姻、离婚与财产法。
+- @welfare: 削减对单亲母亲与儿童的福利。
+- @liberalize: 收紧堕胎法律。
 
 @labor
 subtitle: Paid maternal leave policies, equal pay policies, and so on.
@@ -597,14 +597,14 @@ subtitle: The government has fallen to its internal disagreements
 ## Concordat (requires no DNVP in government?)
 ## Supporting employers in labor disputes (requires no Joos Z?)
 ## Compromise in labor disputes (requires Joos Z?)
-## Rearmament (requires DNVP in government and budget)
+## 重整军备 (requires DNVP in government and budget)
 ## Anti - judicial reform (requires high judicial reform and DNVP in government)
 ## Anti - interior reform (requires high police loyalty and DNVP in government)
-## Disempowering works councils (requires empowered works councils and less powerful bourgeoisie)
-## Privatizations (requires nationalizations, wont remove the dedicated event tho this will just be another way for the same effect to fire)
-## Lifting price controls (requires price controls)
+## 剥夺工厂委员会的权力 (requires empowered works councils and less powerful bourgeoisie)
+## 私有化 (requires nationalizations, wont remove the dedicated event tho this will just be another way for the same effect to fire)
+## 取消物价管制 (requires price controls)
 ## Privatizing media (requires socialized media)
-## Unbanning private party financing (requires private party financing)
-## Suppressing the Reichsbanner (should probably also make this a dedicated event like privatizations, requires militant reichsbanner with centrists & liberals left)
-## Suppressing communists (would also effect a leftist SPD, and SAPD, if DNVP is in government)
+## 解除对私人政党融资的禁令 (requires private party financing)
+## 镇压国旗团 (should probably also make this a dedicated event like privatizations, requires militant reichsbanner with centrists & liberals left)
+## 镇压共产党人 (would also effect a leftist SPD, and SAPD, if DNVP is in government)
 ## Maybe also one for the government collapsing of its own accord

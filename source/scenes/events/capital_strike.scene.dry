@@ -61,9 +61,9 @@ tags: event
 
 Our policies have greatly angered the capitalists. Investment has fallen, and factories are idling, preventing the workers from fulfilling their jobs. Meanwhile, the bourgeois press is a constant chorus of venomous invective directed at us and our economic policies.
 
-- @revolutionary_approach: The class war intensifies.
-- @right_approach: Clearly, a failure in our governance.
-- @address: What can we do?
+- @revolutionary_approach: 阶级斗争升级。
+- @right_approach: 这显然是我们治理的失败。
+- @address: 我们能做什么?
 
 @revolutionary_approach
 choose-if: left_strength+(center_strength*(socialism/100)) >= 50
