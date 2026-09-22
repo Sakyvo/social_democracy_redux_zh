@@ -20,11 +20,11 @@ tags: govt_affairs
 
 # science increases economic growth...
 
-= Education and Science
+= 教育与科学
 
-Education in Germany is an area of mixed responsibility between the state governments and the central government. The Weimar Constitution claims that schools are the domain of the central government, but in practice much of it is left to the states, as the Reichstag has historically been unable to pass an education law. Currently, with our control of Prussia and the Chancellorship, we can try to set policy for a large part of the country.
+教育在德国是各州政府与中央政府之间责任交叠的领域。魏玛宪法声称学校属中央政府管辖,但实际上大部分交由各州,因为国会历来无法通过一部教育法。目前,凭借我们对普鲁士与总理之位的掌控,我们可以尝试为这个国家的很大一部分制定政策。
 
-[? if major_curriculum: Current educational curriculum - [+ major_curriculum +], [+ minor_curriculum +] ?]
+[? if major_curriculum: 当前教育课程 —— [+ major_curriculum +],[+ minor_curriculum +] ?]
 
 @ed_menu
 view-if: not last_advisor_action
@@ -39,9 +39,9 @@ view-if: not last_advisor_action
 @increase_science
 title: Increase funding for scientific research.
 choose-if: economic_minister_party = "SPD"
-unavailable-subtitle: This requires the Economic Ministry.
+unavailable-subtitle: 这需要掌握经济部。
 
-Socialism has always stood for science and rationality. Despite the setbacks of the Great War, hyperinflation, and the politicized and reactionary attitudes of many academics, science in the German Republic is still the envy of the world. With a great expansion of funding, we hope to keep it that way, and expand on our achievements. 
+社会主义历来主张科学与理性。尽管历经大战的挫折、恶性通货膨胀,以及许多学者政治化、反动化的态度,德意志共和国的科学仍为世界所艳羡。通过大幅扩大投入,我们希望保持这一地位,并扩大我们的成就。
 
 - @kwg
 - @applied
@@ -57,12 +57,12 @@ choose-if: budget >= 1
 on-arrival: kwg_vote = 1
 go-to: kwg_done if not legislature_enabled; legislative_menu if legislature_enabled
 
-We propose the expansion of funding for the Kaiser Wilhelm Society.
+我们提出议案,扩大对威廉皇帝学会的拨款。
 
 @kwg_done
 on-arrival: budget -= 1; science += 1; kwg_research += 1; economic_growth += 0.3 if economic_growth <= 8; new_middle_spd += 5*(1-dissent); ddp_relation += 5*(1-dissent); unemployed -= 0.2 if unemployed >= 4; west_relation += 1; science_funding += 1
 
-The Kaiser Wilhelm Society is one of the most respected scientific research institutions in the world, with physicist Albert Einstein as its most famous employee. Our research program is to provide the Society with additional resources to hire and train scientists and conduct fundamental research, based on the scientists' own interests.
+威廉皇帝学会是世界上最受尊崇的科研机构之一,物理学家阿尔伯特·爱因斯坦是其最著名的成员。我们的研究计划是向该学会提供额外资源,用于聘用与培养科学家、并依据科学家自身的兴趣开展基础研究。
 
 @applied
 title: Fund applied research in economically useful technologies.
@@ -71,12 +71,12 @@ choose-if: budget >= 1
 on-arrival: applied_vote = 1
 go-to: applied_done if not legislature_enabled; legislative_menu if legislature_enabled
 
-We propose the expansion of funding for applied research.
+我们提出议案,扩大对应用研究的拨款。
 
 @applied_done
 on-arrival: budget -= 1; science += 1; applied_research += 1; economic_growth += 0.5 if economic_growth <= 8 and applied_research <= 1; economic_growth += 3 if applied_research > 1; new_middle_spd += 5*(1-dissent); workers_spd += 3*(1-dissent); ddp_relation += 5*(1-dissent); unemployed -= 0.5 if unemployed >= 4; capital_strike_progress -= 1 if capital_strike_progress > 0; science_funding += 1
 
-Our research program focuses on collaborating with industry to develop useful technologies, creating new research institutions for applied science. This collaboration is focused on economic growth and development.
+我们的研究计划侧重于与工业界合作开发实用技术,并设立新的应用科学研究机构。这种合作聚焦于经济增长与发展。
 
 @medical
 title: Fund biomedical research at the hospitals and medical schools.
@@ -85,33 +85,33 @@ choose-if: budget >= 1
 on-arrival: medical_vote = 1
 go-to: medical_done if not legislature_enabled; legislative_menu if legislature_enabled
 
-We propose the expansion of funding for medical research.
+我们提出议案,扩大对医学研究的拨款。
 
 @medical_done
 on-arrival: budget -= 1; science += 1; medical_research += 1; economic_growth += 0.4 if economic_growth <= 8; new_middle_spd += 5*(1-dissent); workers_spd += 3*(1-dissent); ddp_relation += 5*(1-dissent); unemployed -= 0.2 if unemployed >= 4; science_funding += 1
 
-Our research program focuses on medical research to improve the treatment of diseases and public health. [? if change_sex: Some of our medical advancements include new methods for sex change surgery and hormone therapy for transsexual individuals. ?]
+我们的研究计划侧重于医学研究,以改善疾病治疗与公共卫生。 [? if change_sex: 我们的部分医学进展包括变性手术的新方法,以及针对跨性别者的激素疗法。 ?]
 
 @cut_funding
 title: Cut science funding.
 subtitle: +1 budget
 choose-if: science_funding >= 1
-unavailable-subtitle: We have not funded science.
+unavailable-subtitle: 我们尚未资助科学。
 on-arrival: cut_science_vote = 1
 go-to: cut_science_done if not legislature_enabled; legislative_menu if legislature_enabled
 
-We propose the cutting of science funding.
+我们提出议案,削减科学拨款。
 
 @cut_science_done
 on-arrival: budget += 1; science -= 1; science_funding -= 1; applied_research -= 0.33; kwg_research -= 0.33; medical_research -= 0.33; economic_growth -= 0.5; new_middle_spd -= 5; workers_spd -= 2; ddp_relation -= 5; unemployed += 0.3
 
-We have cut funding for science. This has a negative effect on our economic growth, and unemployed scientists are less likely to support the SPD.
+我们削减了科学拨款。这对我们的经济增长产生负面影响,而失业的科学家也更不可能支持社民党。
 
 
 @structure
 title: Change the structure and funding of education.
 
-Education in Germany has traditionally been organized on religious and class lines. Schools are often either Protestant or Catholic (or rarely Jewish), and religious classes are required in most mixed-denomination schools. In addition, the working class has at most eight years of public education in primary and middle schools, while the middle and upper classes have access to private schools and Gymnasiums that prepare students for universities. Thus, the universities tend to be dominated by conservatives and reactionaries, which has negative consequences for bureaucratic recruitment.
+德国的教育历来按宗教与阶级划分。学校往往要么是新教的、要么是天主教的(偶尔是犹太教的),而且在大多数混合教派的学校里,宗教课是必修的。此外,工人阶级最多只能接受八年小学与中学的公共教育,而中上层阶级则能进入私立学校与文理中学 —— 它们为学生升入大学做准备。因此,大学往往为保守派与反动派所主导,这给官僚招募带来负面后果。
 
 - @secularize
 - @public_hs
@@ -126,7 +126,7 @@ unavailable-subtitle: -1 财政预算 - requres a majority of parties to support
 choose-if: budget >= 1 and (progressive_coalition + dvp_r >= 50)
 view-if: secularized = 0
 
-Are you sure about this? The Weimar Coalition had an agreement to not touch religious schools; the Catholic Center Party will revolt.
+你确定吗?魏玛联盟曾有不动宗教学校的约定;天主教中央党必将造反。
 
 - @secularize_2: Yes, do it.
 - @ed_menu: No, do not touch religious education.
@@ -138,9 +138,9 @@ go-to: vote_of_no_confidence.vonc_menu if in_weimar_coalition or in_grand_coalit
 
 # instant VONC from zentrum
 
-The SPD, DDP, DVP, and KPD vote in favor of secular education, overcoming the opposition of the religiously-oriented Center Party and DNVP. We have funded secular community schools to replace some previous denominational schools.
+社民党、民主党、人民党与共产党投票赞成世俗教育,压倒了宗教取向的中央党与国家人民党的反对。我们出资兴办世俗的社区学校,取代了先前的部分教派学校。
 
-[? if in_weimar_coalition or in_grand_coalition or in_popular_front or in_emergency_government: Of course, the Center Party is in revolt at this proposal, and have called for a vote of no confidence in our government. ?]
+[? if in_weimar_coalition or in_grand_coalition or in_popular_front or in_emergency_government: 当然,中央党对这一提案大为恼怒,并对我们的政府提出了不信任案。 ?]
 
 
 
@@ -152,13 +152,13 @@ on-arrival: public_hs_vote = 1
 max-visits: 3
 go-to: public_hs_done if not legislature_enabled; legislative_menu if legislature_enabled
 
-We propose the expansion of public high school funding.
+我们提出议案,扩大对公立高中的拨款。
 
 @public_hs_done
 on-arrival: budget -= 1; public_hs += 1; workers_spd += 6*(1-dissent); unemployed_spd += 3*(1-dissent); prussian_police_loyalty += 0.04; education_science += 0.5; unemployed -= 0.2; economic_growth += 0.2; pro_republic += 4*(1-dissent);
 
 # this makes the bureaucracy more proletarian
-We have funded more public secondary schools so that proletarian children may receive the same education as middle and upper-class children, and can be prepared for universities.
+我们出资兴办了更多公立中学,使无产阶级子弟也能接受与中上层阶级子弟相同的教育,并为升入大学做好准备。
 
 @school_boards
 title: Create elected school boards to give local areas more control over education.
@@ -166,22 +166,22 @@ view-if: school_boards = 0
 on-arrival: school_board_vote = 1
 go-to: school_board_done if not legislature_enabled; legislative_menu if legislature_enabled
 
-We propose the creation of school boards in the Reichstag.
+我们提出议案,在国会中设立学校董事会。
 
 @school_board_done
 on-arrival: school_boards += 1; workers_spd += 3*(1-dissent); new_middle_spd += 3*(1-dissent); old_middle_spd += 2*(1-dissent); education_science += 0.2;
 
-We have created local elected school boards, and delegated some of the decision-making for local schools to them.
+我们设立了地方性的民选学校董事会,并把地方学校的一部分决策权下放给它们。
 
 
 @curriculum
 title: Change the educational curriculum.
 choose-if: curriculum_timer = 0
-unavailable-subtitle: [? if curriculum_timer > 0 : It is too early to change the curriculum again. ?][? if not spd_prussia: We are not in control of the Prussian state government. ?]
+unavailable-subtitle: [? if curriculum_timer > 0 : 现在就再次修改课程还为时过早。 ?][? if not spd_prussia: 我们并未掌控普鲁士州政府。 ?]
 
-Many socialists believe that education in Germany is not fit for the modern era. Much of the educational system still follows imperial-era traditions of militaristic discipline, and far-right professors and students rule the universities. Nevertheless, there have been strides in bringing working-class children into the schools.
+许多社会主义者认为,德国的教育并不适合现代。教育体系的许多部分仍沿袭帝国时代军国主义纪律的传统,极右的教授与学生统治着大学。尽管如此,在让工人阶级子弟进入学校方面还是取得了长足进展。
 
-What should be the major focus of our new curriculum?
+我们新课程的主要重点应当是什么?
 
 - @dem_major
 - @science_major
@@ -199,7 +199,7 @@ subtitle: Critical thinking, democratic citizenship, and collaboration
 on-arrival: curriculum_timer = 50; major_curriculum = "democratic"; pro_republic += 5*(1-dissent); workers_spd += 3*(1-dissent); democratization += 1; z_relation -= 3; dvp_relation -= 5; coalition_dissent += 1 if in_grand_coalition; pacifism += 1; education_science += 0.3
 go-to: curriculum_minor
 
-We should teach students how to be citizens of a democratic republic, by teaching them to critically evaluate politics and current events, to exercise their rights and to respect the rights of other citizens. Traditionalists of all stripes are critical of this curriculum.
+我们应当教学生如何成为民主共和国的公民 —— 教他们批判性地评判政治与当下时事,行使自己的权利,并尊重其他公民的权利。形形色色的传统主义者都批评这一课程。
 
 @science_major
 title: Scientific curriculum
@@ -207,7 +207,7 @@ subtitle: Modern science, mathematics, and technical skills
 on-arrival: curriculum_timer = 50; major_curriculum = "scientific"; education_science += 1; coalition_dissent += 1 if in_weimar_coalition; z_relation -= 5; ddp_relation += 4*(1-dissent); kpd_relation += 3*(1-dissent); new_middle_spd += 3*(1-dissent); workers_spd += 2*(1-dissent)
 go-to: curriculum_minor
 
-Our educational system should reflect the modern age, and we should teach science and rational thinking. Religious conservatives tend to react negatively against this. 
+我们的教育体系应当反映现代,我们应当教授科学与理性思维。宗教保守派往往对此反应负面。
 
 @human_major
 title: Humanist curriculum
@@ -215,7 +215,7 @@ subtitle: Arts, literature, history, and philosophy
 on-arrival: curriculum_timer = 50; major_curriculum = "humanist"; ddp_relation += 3*(1-dissent); new_middle_spd += 4*(1-dissent); education_science += 0.2
 go-to: curriculum_minor
 
-Our educational curriculum should be focused on the humanities, including arts, literature, history, and philosophy. Some criticize this curriculum as focusing too much on "useless" subjects, while others worry that the arts establishment is too closely tied to romantic nationalism.
+我们的教育课程应当侧重于人文学科,包括艺术、文学、历史与哲学。有人批评这一课程过于关注「无用」的科目,也有人担心艺术界建制与浪漫民族主义绑得太紧。
 
 
 @vocational_major
@@ -224,7 +224,7 @@ subtitle: Useful technical skills for future careers
 on-arrival: curriculum_timer = 50; major_curriculum = "vocational"; dvp_relation += 3*(1-dissent); ddp_relation += 3*(1-dissent); workers_spd += 4*(1-dissent); rural_spd += 2*(1-dissent); unemployed_spd += 3*(1-dissent); new_middle_spd -= 1; unemployed -= 0.1; education_science += 0.5
 go-to: curriculum_minor
 
-Education should be focused on providing a useful hands-on education, and teach the skills that will be most useful for students' future lives.
+教育应当侧重于提供有用的实践性教学,教授对学生未来生活最实用的技能。
 
 
 @trad_major
@@ -233,12 +233,12 @@ subtitle: Classics, discipline, and nationalism
 on-arrival: curriculum_timer = 50; major_curriculum = "traditional"; dvp_relation += 5*(1-dissent); z_relation += 4*(1-dissent); old_middle_spd += 3*(1-dissent); rural_spd += 3*(1-dissent); pacifism -= 1 if pacifism > 0; pro_republic -= 5; education_science += 0.2
 go-to: curriculum_minor
 
-The traditional curriculum had a focus on ancient history and language (particularly Latin and Greek), as well as rigid discipline and some level of militarism.
+传统课程侧重于古代历史与语言(尤其是拉丁语与希腊语),以及严苛的纪律与某种程度的军国主义。
 
 
 @curriculum_minor
 
-And what should be a secondary focus of the curriculum?
+课程的第二重点应当是什么?
 
 - @dem_minor
 - @science_minor
@@ -252,7 +252,7 @@ subtitle: Critical thinking, democratic citizenship, and collaboration
 view-if: major_curriculum != "democratic"
 on-arrival: minor_curriculum = "democratic"; pro_republic += 3*(1-dissent); workers_spd += 2*(1-dissent); democratization += 1; z_relation -= 2; dvp_relation -= 3;
 
-We should teach students how to be citizens of a democratic republic, by teaching them to critically evaluate politics and current events, to exercise their rights and to respect the rights of other citizens. Traditionalists of all stripes are critical of this curriculum.
+我们应当教学生如何成为民主共和国的公民 —— 教他们批判性地评判政治与当下时事,行使自己的权利,并尊重其他公民的权利。形形色色的传统主义者都批评这一课程。
 
 @science_minor
 title: Scientific curriculum
@@ -260,7 +260,7 @@ subtitle: Modern science, mathematics, and technical skills
 view-if: major_curriculum != "scientific"
 on-arrival: minor_curriculum = "scientific"; education_science += 0.5; z_relation -= 3; ddp_relation += 3*(1-dissent); kpd_relation += 2*(1-dissent); new_middle_spd += 2*(1-dissent); workers_spd += 2*(1-dissent)
 
-Our educational system should reflect the modern age, and we should teach science and rational thinking. Religious conservatives tend to react negatively against this. 
+我们的教育体系应当反映现代,我们应当教授科学与理性思维。宗教保守派往往对此反应负面。
 
 @human_minor
 title: Humanist curriculum
@@ -268,7 +268,7 @@ subtitle: Arts, literature, history, and philosophy
 view-if: major_curriculum != "humanist"
 on-arrival: minor_curriculum = "humanist"; new_middle_spd += 3*(1-dissent); ddp_relation += 3*(1-dissent);
 
-Our educational curriculum should be focused on the humanities, including arts, literature, history, and philosophy. Some criticize this curriculum as focusing too much on "useless" subjects, while others worry that the arts establishment is too closely tied to romantic nationalism.
+我们的教育课程应当侧重于人文学科,包括艺术、文学、历史与哲学。有人批评这一课程过于关注「无用」的科目,也有人担心艺术界建制与浪漫民族主义绑得太紧。
 
 @vocational_minor
 title: Vocational curriculum
@@ -276,7 +276,7 @@ subtitle: Useful technical skills for future careers
 view-if: major_curriculum != "vocational"
 on-arrival: minor_curriculum = "vocational"; education_science += 0.3; workers_spd += 3*(1-dissent); unemployed_spd += 2*(1-dissent);
 
-Education should be focused on providing a useful hands-on education, and teach the skills that will be most useful for students' future lives.
+教育应当侧重于提供有用的实践性教学,教授对学生未来生活最实用的技能。
 
 
 @trad_minor
@@ -285,4 +285,4 @@ subtitle: Classics, discipline, and nationalism
 view-if: major_curriculum != "traditional"
 on-arrival: minor_curriculum = "traditional"; dvp_relation += 2*(1-dissent); z_relation += 2*(1-dissent); old_middle_spd += 2*(1-dissent); rural_spd += 2*(1-dissent); pro_republic -= 3
 
-The traditional curriculum had a focus on ancient history and language (particularly Latin and Greek), as well as rigid discipline.
+传统课程侧重于古代历史与语言(尤其是拉丁语与希腊语),以及严苛的纪律。

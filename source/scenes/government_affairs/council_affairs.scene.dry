@@ -8,9 +8,9 @@ tags: govt_affairs
 #subtitle: The administration of Germany's workers' councils.
 #go-to: 
 
-= Council Policy
+= 委员会政策
 
-In Germany there exist parallel state institutions in the form of the workers' councils, or soviets, which currently exist across Germany.
+德国存在着以工人委员会(即苏维埃)形式出现的平行国家机构,它们目前遍布全德。
 
 - @kpd_administration: The KPD administration makes its moves.
 - @bourgeois_administration: The bourgeois administration makes its moves.
@@ -22,7 +22,7 @@ In Germany there exist parallel state institutions in the form of the workers' c
 view-if: kpd_soviets
 max-choices: 1
 
-With the Communists in control of the councils, they are bound to make use of this.
+既然共产党掌控着这些委员会,他们必然会加以利用。
 
 - @support_kpd_electoral: The councils support the KPD's campaigning efforts.
 - @distribute_mutual_aid: The councils distribute mutual aid.
@@ -32,17 +32,17 @@ With the Communists in control of the councils, they are bound to make use of th
 @support_kpd_electoral
 on-arrival: workers_kpd += 6; workers_spd -= 3 if not spd_included; unemployed_kpd += 3; socialism += 1; rfb_militancy -= 0.01
 
-The KPD has used their position heading the councils to support their own campaigning efforts, championing themselves as the defenders of the workers.
+共产党利用自己领导委员会的地位来支持自家的宣传工作,把自己标榜为工人的捍卫者。
 
 @distribute_mutual_aid
 on-arrival: unemployed_kpd += unemployed/2; workers_kpd += unemployed/5; workers_kpd -= welfare; unemployed_kpd -= welfare; rfb_militancy -= 0.03
 
-The KPD has devoted their funds to the councils as a means of distributing mutual aid, acting as parallel welfare programs, which increase their support.
+共产党把资金投入委员会,借此分发互助物资,充当平行的福利计划,从而提升了自己的支持。
 
 @kpd_militia
 on-arrival: rfb_strength += kpd_s; rfb_militancy += 0.01; rfb_militancy += socialism/1000; strife += 1; coup_progress += 2; sa_militancy += 0.05*bourgeois_power; sh_militancy += 0.025*bourgeois_power;
 
-The KPD has used their position in the council to funnel funds and resources towards their militia in the RFB, expanding it as the effective paramilitary wing of the council movement in Germany. The far-right sees this, and begins arming itself, preparing for a confrontation.
+共产党利用自己在委员会中的地位,把资金与资源输送给 RFB 中的民兵,将其扩充为德国委员会运动事实上的准军事翼。极右翼看到这一点,也开始武装自己,准备迎接对抗。
 
 @pre_communist_revolution
 view-if: councils_initiative
@@ -53,7 +53,7 @@ frequency: 25
 view-if: bourgeois_soviets
 max-choices: 1
 
-With the Bourgeois in control of the councils, they are bound to make use of this.
+既然资产阶级掌控着这些委员会,他们必然会加以利用。
 
 - @do_nothing: The councils make a point of doing nothing.
 - @self_dissolve: The councils self-dissolve.
@@ -61,25 +61,25 @@ With the Bourgeois in control of the councils, they are bound to make use of thi
 @do_nothing
 on-arrival: socialism -= 1; nothings += 1
 
-The councils do nothing, seeking to leave as much responsibility as possible to the Reichstag. The bourgeoisie hope to render the councils an obsolete and useless force.
+这些委员会什么都不做,力求把尽可能多的责任留给国会。资产阶级希望使这些委员会沦为过时无用的力量。
 
 @self_dissolve
 view-if: nothings >= 3 and not spd_included
 on-arrival: councils_exist = 0; socialism -= 4; pro_republic += 2
 
-The councils officially dissolve, under the rule of the bourgeoisie.
+在资产阶级的统治下,这些委员会正式解散。
 
 @independent_administration
 view-if: independent_soviets
 
-You can't fault them, I guess.
+我想,这也不能怪他们。
 
 @spd_administration
 view-if: spd_soviets
 
-With us in control of the councils, we have a variety of options.
+既然我们掌控着这些委员会,我们便有多种选择。
 
-Council capacity: [+ council_resources +]
+委员会能力: [+ council_resources +]
 
 - @expand_reichstag: Expand cooperation with the Reichstag and avoid conflict.
 - @integrate_works_councils: Integrate the councils into the existing works councils as purely economic entities.
@@ -92,42 +92,42 @@ Council capacity: [+ council_resources +]
 
 @expand_reichstag
 choose-if: (not left_soviets and not kpd_included) or (spd_r+sapd_r+kpd_r >= 50)
-unavailable-subtitle: The current executive of the councils is unwilling to work with a bourgeois Reichstag.
+unavailable-subtitle: 委员会现任执行机构不愿与一个资产阶级国会合作。
 on-arrival: socialism -= 1 if kpd_r+spd_r+sapd_r < 50; reichstag_cooperation += 1; pro_republic += 2; kpd_relation -= 3 if kpd_r+spd_r+sapd_r < 50; left_dissent += 3 if kpd_r+spd_r+sapd_r < 50; bourgeois_power += 0.01 if bourgeois_power < 0.9 and kpd_r+spd_r+sapd_r < 50; capital_strike_progress -= 1 if capital_strike_progress >= 5 and kpd_r+spd_r+sapd_r < 50; ddp_relation += 3 if kpd_r+spd_r+sapd_r < 50; z_relation += 2 if kpd_r+spd_r+sapd_r < 50; dvp_relation += 2 if kpd_r+spd_r+sapd_r < 50
 
-We have expanded the cooperation of the councils with the Reichstag, reducing conflict over political authority, while also sidelining the councils somewhat in the process.
+我们扩大了委员会与国会的合作,减少了对政治权威的争夺,同时也在这一过程中使委员会有所边缘化。
 
 @self_dissolve_spd
 view-if: not left_soviets and not kpd_included and reichstag_cooperation >= 3
 choose-if: dissolutionist_s >= left_coalition_s
-unavailable-subtitle: There is not majority support on the councils.
+unavailable-subtitle: 委员会中没有多数支持。
 on-arrival: soviets_exist = 0; socialism -= 3; pro_republic += 3; kpd_relation -= 15; left_dissent += 15; capital_strike_progress -= 1; capital_strike_progress -= 1 if capital_strike_progress >= 5; bourgeois_power += 0.02; ddp_relation += 5; dvp_relation += 5; z_relation += 5
 
-We have dissolved the councils, putting an end to the state of dual power between them and Reichstag, and causing much upheaval and complaint from our leftward flanks, especially from the KPD. Our actions have, however, put the bourgeoisie at ease.
+我们解散了各委员会,终结了它们与国会之间的双重政权状态,这在我们的左翼阵线 —— 尤其是共产党 —— 中引起剧烈动荡与抱怨。不过,我们的行动让资产阶级松了口气。
 
 @factory_takeovers
 choose-if: not reformist_soviets and not neorevisionist_soviets and not bourgeois_included
-unavailable-subtitle: The current executive of the councils is unwilling to engage in such revolutionary activity.
+unavailable-subtitle: 委员会现任执行机构不愿从事这样的革命活动。
 on-arrival: nationalization_progress += 1; bourgeois_power -= 0.1; capital_strike_progress += 6; coup_progress += 5; unemployed -= 3 if unemployed >= 6; unemployed -= 1.5 if works_councils >= 3 and unemployed > 4; works_program += 1; workers_spd += 10*(1-dissent); unemployed_spd += 10*(1-dissent); coalition_dissent += 2; coalition_dissent += 1 if in_grand_coalition; coalition_dissent += 1 if capital_strike_progress >= 10; coalition_dissent += 1 if coup_progress >= 8; dvp_relation -= 12; z_relation -= 8; ddp_relation -= 8; workers_nsdap -= 5*(1-dissent); unemployed_nsdap -= 5*(1-dissent); left_strength += 15; reformist_dissent += 10; left_dissent -= 10; new_middle_spd -= 5; new_middle_spd += 2 if new_middle_conscious; old_middle_spd -= 10; factory_takeovers += 1; economy_goal_completed += 1; kpd_relation += 5*(1-dissent); inflation += 3; economic_growth += 1 if economic_growth < 3; socialism += 1
 achievement: wirtschaftspolitik
 
-The capitalists are, predictably, up in arms about our policy of  factory occupations. They call it illegal expropriation, and it is. Nevertheless, it is clear that they have failed, and we must take radical action.
+不出所料,资本家对我们将工厂占领合法化的政策群情激愤。他们称之为非法征用 —— 确实如此。然而,他们的失败显而易见,我们必须采取激进行动。
 
-Fascists have been taking increasingly violent actions around the occupied factories, calling us thieves and looters. However, the some of the working-class supporters of the fascists have been peeled off, or at least the ones with a sense of class solidarity.
+法西斯分子在占领的工厂周围采取越来越暴力的行动,把我们称作盗贼与掠夺者。不过,法西斯分子中的一些工人阶级支持者已被拉走 —— 至少那些尚有阶级团结意识的人如此。
 
 @mutual_aid
 subtitle: -1 council resource
 choose-if: council_resources >= 1
 on-arrival: unemployed_spd += 8*(1-dissent); unemployed_kpd += 3*(1-dissent) if kpd_included; unemployed_sapd += 3*(1-dissent) if sapd_included; unemployed_nsdap -= (socialism/10); workers += council_resources/10; unemployed -= council_resources/10; council_resources -= 1
 
-Using the councils as framework, we distribute mutual aid. This helps alleviate the pains that many unemployed people are finding, and even helps them to find work, greatly bolstering the reputation of socialism amongst these people as an actually practical politick even when detached from traditionally reformist avenues.
+以这些委员会为框架,我们分发互助物资。这有助于缓解许多失业者所经受的痛苦,甚至帮他们找到工作,从而在这些人心目中极大地提升社会主义的声誉 —— 即便脱离传统的改良渠道,它也是一种真正切实的政治。
 
 @militia
 subtitle: -1 council resource
 choose-if: council_resources >= 1
 on-arrival: rb_militancy += (council_resources/50)*(left_strength/100); rfb_militancy += (council_resources/100); rfb_militancy += (council_resources/100) if kpd_included; reformist_dissent += 5; z_relation -= 5; ddp_relation -= 5; dvp_relation -= 5; coup_progress += 2; council_resources -= 1; sa_militancy += 0.05*bourgeois_power; sh_militancy += 0.025*bourgeois_power;
 
-Using the councils as framework, we distribute arms amongst the workers, and begin to train them into closer-knit workers' militias.
+以这些委员会为框架,我们在工人中分发武器,并着手把他们训练成更紧密团结的工人民兵。
 
 @fund_councils
 view-if: labor_minister_party == "SPD" and finance_minister_party == "SPD"
@@ -135,33 +135,33 @@ choose-if: budget >= 1 and judicial_reform >= 3
 unavailable-subtitle: -1 财政预算 [? if judicial_reform < 3 : - The courts would block this as illegal ?]
 on-arrival: budget -= 1; council_resources += (3+economic_democracy); coalition_dissent += 3; z_relation -= 5; ddp_relation -= 5; dvp_relation -= 5; capital_strike_progress += 3; coup_progress += 1
 
-We divert government funds towards the councils, an act quickly decried by the bourgeois parties as not only wasteful but illegal, corrupt, and politically charged.
+我们把政府资金挪向这些委员会,此举迅即被资产阶级政党斥为不但浪费,而且违法、腐败、充满政治动机。
 
 @donate_councils
 choose-if: resources >= 2
 subtitle: -2 资源
 on-arrival: resources -= 2; council_resources += 1; council_resources += 1 if workers_aid
 
-We donate resources from the SPD to the councils, helping to expand their capacity through the cooperation and backing of our existing party infrastructure.
+我们把社民党的资源捐给这些委员会,借助我们现有党务架构的合作与支持,帮助扩大它们的能力。
 
 @integrate_works_councils
 view-if: not corporatism and not left_soviets and not kpd_included and reichstag_cooperation >= 2 and works_councils == 3
 choose-if: left_coalition_s < 50
-unavailable-subtitle: There is a majority blocking this in the councils.
+unavailable-subtitle: 委员会中有多数在阻止此事。
 on-arrival: corporatism_vote = 1
 go-to: corporatism_done if not legislature_enabled; legislative_menu if legislature_enabled
 
-We propose a law to integrate the councils into the existing works councils.
+我们提出一项法律,把各委员会并入现有的工厂委员会。
 
 @corporatism_done
 on-arrival: bourgeois_power -= 0.05; kpd_relation -= 5; left_dissent += 5; labor_strength += 10; nsdap_relation += 1; capital_strike_progress += 3; economic_democracy += 1; works_councils += 1; soviets_exist = 0; unemployed -= 1; inflation -= 0.5 if inflation > 3; economic_growth += 0.3
 achievement: korporatismus
 
-We have passed a bill to turn the workers' councils into purely economic bodies, institutionalizing them on one hand to end the state of dual power while also cementing never before seen control over the economy into the hands of the workers. Marxists decry this as corporatism, while capital decries it for infringing upon the free market. While there are resemblances between this economic model and that of corporatism, corporatism fundamentally includes a disciplining of labor to end revolutionary transformation and preserve capital, something which our law acts; yet, for lacking this, we are sure to continue seeing fierce opposition from the bourgeoisie.
+我们通过了一项法案,把工人委员会转变为纯粹的经济机构 —— 它一方面被制度化,以终结双重政权状态,另一方面也把前所未有的经济控制权牢固地交到工人手中。马克思主义者斥之为统合主义,资本则指责它侵犯了自由市场。尽管这一经济模式与统合主义有相似之处,但统合主义在根本上包含对劳工的规训,以终止革命性改造、保全资本 —— 而我们的法律正是反其道而行;正因缺少这一点,资产阶级必定会继续对我们予以激烈反对。
 
 ## the nsdap relation is just a shitpost
 
 @nothing
 view-if: spd_soviets
 
-See you later, punk.
+回头见,小子。
