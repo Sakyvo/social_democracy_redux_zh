@@ -1068,7 +1068,7 @@ unavailable-subtitle: [? if left_strength >= 50 : 国防军不允许这样做。
 subtitle: We will deny the remaining reactionaries a party.
 on-arrival: dnvp_banned = 1; dvp_relation -= 5; z_relation -= 4 if z_party_leader != "Joos"; pro_republic -= 4; old_middle_dnvp *= 0.9; rural_dnvp *= 0.95; new_middle_dnvp *= 0.8; sh_strength *= 0.9; sh_militancy -= 0.05
 
-Recognizing the DNVP's own participation in the far-right struggle against the Republic, 我们同样取缔了该党,以防其在胡根贝格缺席、无人领导的情况下可能出现的温和转向。
+我们认定国家人民党本身也参与了极右翼反共和国的斗争,因此同样取缔了该党,以防其在胡根贝格缺席、无人领导的情况下可能出现的温和转向。
 
 - @decrees_2: Excellent.
 
