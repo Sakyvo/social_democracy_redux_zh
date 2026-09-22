@@ -12,14 +12,14 @@ set-jump: pres_election
 @pres_election
 on-arrival: reactionary_consolidate = 0; reactionary_consolidate = 1 if nsdap_votes < dnvp_votes + other_votes + dvp_votes
 
-The presidential election is coming up soon. [? if spd_in_government = 0 : While the position of Chancellor is typically more important, recent governments have depended on the president's emergency decree powers, making the office vital. ?] [? if hitler_deported==0 : The Nazis will run Hitler, while the KPD will run Thälmann. A victory for Hitler would mean the end of parliamentary democracy, and the beginning of an era of unspeakable horrors. ?][? if hitler_deported==1 : Since Hitler has been deported, the Nazis will run Hermann Göring in his stead. He is widely seen as a proxy for Hitler, who, despite his legal persecution, retains a popular base who wishes to see him returned to Germany. Meanwhile, the KPD will run Ernst Thälmann. ?] The DNVP too has entered the race, running the intensely antisemitic Theodor Duesterburg, co-leader of Der Stalhelm.
+总统选举即将来临。 [? if spd_in_government = 0 : 虽说总理之位通常更为重要,但近几届政府都仰赖总统的紧急法令权力,使这一职位变得至关重要。 ?] [? if hitler_deported==0 : 纳粹将推出希特勒,共产党则推出台尔曼。希特勒当选,将意味着议会民主的终结,以及一个难以言说之恐怖时代的开端。 ?][? if hitler_deported==1 : 既然希特勒已被驱逐,纳粹将推出赫尔曼·戈林替代他。戈林被普遍视为希特勒的代理人 —— 后者虽受法律追究,却仍拥有一批希望看到他重返德国的民众基础。与此同时,共产党将推出恩斯特·台尔曼。 ?] 国家人民党也加入了角逐,推出极端反犹的钢盔团共同领袖特奥多尔·迪斯特贝格。
 
-Then, of course, there is the incumbent President Marx. So long as we continue to support him, he is almost certain to stay in the race to prevent the rise of an extremist president from either the left or the right.
+当然,还有现任总统马克思。只要我们继续支持他,他几乎必定会留在这场角逐中,以阻止极左或极右的极端派人物当选总统。
 
 # if hitler is deported, who would nsdap run? Duesterberg? or Goering?
 # Goering runs, essentially as a proxy for Hitler, who is now stateless.
 
-[? if kpd_relation >= 50 : Another strange possibilty is an united front with the Communists, either to support Thälmann or our own candidate. ?]
+[? if kpd_relation >= 50 : 另一个奇怪的可能是与共产党结成统一战线 —— 或者支持台尔曼,或者支持我们自己的候选人。 ?]
 
 - @support_marx: Support Marx.
 - @support_braun: Run Otto Braun of the SPD.
@@ -29,7 +29,7 @@ Then, of course, there is the incumbent President Marx. So long as we continue t
 subtitle: This is the default option.
 on-arrival: spd_support_marx = 1
 
-Wilhelm Marx was elected in 1925 as the candidate of the republican parties, and he will be elected again filling the same role.
+威廉·马克思于 1925 年作为各共和派政党的候选人当选,他这次将再次以同样的身份当选。
 
 - @dvp_marx: Can we convince the DVP to back Marx?
 - @final_election: The final vote...
@@ -37,10 +37,10 @@ Wilhelm Marx was elected in 1925 as the candidate of the republican parties, and
 @dvp_marx
 view-if: not zca_formed
 choose-if: dvp_relation >= 50
-unavailable-subtitle: No.
+unavailable-subtitle: 不。
 on-arrival: dvp_support_marx = 1
 
-The DVP has agreed to support Wilhelm Marx.
+人民党已同意支持威廉·马克思。
 
 - @final_election: The final vote...
 
@@ -51,14 +51,14 @@ unavailable-subtitle: 资源不足。
 on-arrival: resources -= 2; braun_campaign = 1; marx_campaign = 0; adenauer_campaign = 1
 go-to: braun_campaign
 
-It takes effort to run a somewhat unexpected campaign. First, Braun has to be convinced to run. He himself had supported backing Marx, and it takes a good deal of prodding to convince him of his destiny.
+发起一场多少出人意料的竞选是要费一番功夫的。首先,必须说服布劳恩参选。他本人此前支持的是为马克思背书,要费不少口舌才能让他相信自己的使命。
 
-Without our support, Wilhelm Marx has dropped out. The miniscule remnants of the Democratic Party (now called the German State Party) will likely support us. Who else will? [? if not zca_formed : Can we convince the Center to support Braun? ?] What about the Communists?
+没有我们的支持,威廉·马克思已退出竞选。民主党(现名德国国家党)的微小残余势力很可能支持我们。还会有谁? [? if not zca_formed : 我们能否说服中央党支持布劳恩? ?] 共产党方面呢?
 
 
 @support_thalmann
 choose-if: kpd_relation >= 50 and reformist_strength < left_strength
-unavailable-subtitle: [? if kpd_relation < 50 : We do not have good enough relations with the Communists, so they are not even willing to accept our support. ?] [? if reformist_strength >= left_strength : The reformist faction is able to dissuade the party from supporting this arrangement. ?]
+unavailable-subtitle: [? if kpd_relation < 50 : 我们与共产党的关系还不够好,他们甚至不愿接受我们的支持。 ?] [? if reformist_strength >= left_strength : 改良派能够劝住全党,不支持这一安排。 ?]
 
 即便共产党人接受我们的支持,支持台尔曼在我党中也颇不受欢迎。你确定吗?
 
@@ -69,7 +69,7 @@ unavailable-subtitle: [? if kpd_relation < 50 : We do not have good enough relat
 @support_thalmann_2
 on-arrival: spd_support_thalmann = 1; reformist_dissent += 15; center_dissent += 10; labor_dissent += 5; neorevisionist_dissent += 10; catholics_spd -= 5; workers_spd -= 3; kpd_relation += 10; communist_coalition += 2; z_relation -= 15; dvp_relation -= 15; ddp_relation -= 10
 
-Fine. We have thrown our support to Chairman Thälmann of the KPD. 
+好。我们把支持投给了共产党的主席台尔曼。
 
 - @final_election: The final vote...
 
@@ -83,7 +83,7 @@ Fine. We have thrown our support to Chairman Thälmann of the KPD.
 @convince_z
 view-if: not zca_formed
 choose-if: spd_votes >= z_votes
-unavailable-subtitle: The Center knows that they are more popular than us; they do not see a reason to support our candidate.
+unavailable-subtitle: 中央党知道自己比我们更受欢迎;他们看不出有任何理由支持我们的候选人。
 on-arrival: {!
 Q.z_support_braun = 0;
 if (Q.z_relation >= 55 || (Q.z_relation > 35 && Q.z_party_leader == "Joos")) {
@@ -97,17 +97,17 @@ if (Q.z_relation >= 55 || (Q.z_relation > 35 && Q.z_party_leader == "Joos")) {
 go-to: z_failed if z_support_braun = 0 or (z_support_braun == 2 and historical_mode); z_success if z_support_braun = 1; z_partial if z_support_braun = 2 and not historical_mode
 max-visits: 1
 
-We remind the Center leaders of the successes they've had as part of the Weimar coalition in Prussia with Otto Braun, and our support for the Center candidate Wilhelm Marx in the 1925 presidential election.
+我们提醒中央党领袖们注意:他们曾与奥托·布劳恩在普鲁士作为魏玛联盟的一员取得过成功,而我们也曾支持中央党候选人威廉·马克思参加 1925 年的总统选举。
 
 @z_success
 go-to: braun_campaign
 on-arrival: adenauer_campaign = 0
 
-The Center are convinced! They will be part of the Braun coalition.
+中央党被说服了!他们将成为布劳恩阵营的一员。
 
 @z_partial
 
-The Center are not satisfied with our arguments, but they are open to being convinced. They are willing to run a joint campaign if we front the resources.
+中央党对我们的理由并不满意,但愿意被说服。如果我们先垫付资源,他们愿意与我们联合竞选。
 
 - @pay_z: Give them the resources they need.
 - @z_failed: Forget about the Center.
@@ -115,24 +115,24 @@ The Center are not satisfied with our arguments, but they are open to being conv
 @pay_z
 choose-if: resources >= 3
 subtitle: -3 资源
-unavailable-subtitle: Not enough resources (need 3)
+unavailable-subtitle: 资源不足(需要 3 点)
 on-arrival: resources -= 3; z_support_braun = 1; adenauer_campaign = 0
 go-to: braun_campaign
 
-With our resources, the Center are convinced to support Braun.
+凭借我们的资源,中央党被说服支持布劳恩。
 
 @z_failed
 on-arrival: adenauer_campaign = 1
 go-to: braun_campaign
 
-Unfortunately, we fail to win their support, so they enter Konrad Adenauer as ther candidate.
+遗憾的是,我们未能赢得他们的支持,于是他们推出康拉德·阿登纳为候选人。
 
 @convince_kpd
 choose-if: spd_votes >= kpd_votes
-unavailable-subtitle: The KPD knows that they are more popular than us; they do not see a reason to support our candidate.
+unavailable-subtitle: 共产党知道自己比我们更受欢迎;他们看不出有任何理由支持我们的候选人。
 max-visits: 1
 
-The KPD is supporting their own candidate, Ernst Thälmann. [? if kpd_relation >= 50 and kpd_party_leader != "Conciliators" : However, they are willing to be convinced to drop their campaign and support Braun; how do we convince them? ?][? if kpd_relation < 50 or kpd_party_leader != "Conciliators" : They do not seem willing to be convinced. ?]
+共产党支持他们自己的候选人恩斯特·台尔曼。 [? if kpd_relation >= 50 and kpd_party_leader != "Conciliators" : 不过,他们愿意被说服放弃竞选、转支持布劳恩;我们该如何说服他们? ?][? if kpd_relation < 50 or kpd_party_leader != "Conciliators" : 他们似乎不愿被说服。 ?]
 
 - @kpd_resources: Use our resources.
 - @kpd_relations: Use our good relations.
@@ -142,19 +142,19 @@ The KPD is supporting their own candidate, Ernst Thälmann. [? if kpd_relation >
 view-if: kpd_relation >= 50 and not historical_mode
 choose-if: resources >= 3
 subtitle: -3 资源
-unavailable-subtitle: Not enough resources (need 3).
+unavailable-subtitle: 资源不足(需要 3 点).
 on-arrival: resources -= 3; kpd_support_braun = 1; thalmann_campaign = 0
 go-to: braun_campaign
 
-The KPD now endorses Braun in the presidential election! We ask them to keep their support low-key, so as to not alienate the bourgeois voters.
+共产党现在在总统选举中表态支持布劳恩!我们请他们低调行事,以免疏远资产阶级选民。
 
 @kpd_relations
 view-if: kpd_relation >= 60 or (kpd_party_leader == "Conciliators" and kpd_relation >= 45)
-unavailable-subtitle: Our relations are not good enough.
+unavailable-subtitle: 我们的关系还不够好。
 on-arrival: kpd_support_braun = 1; thalmann_campaign = 0
 go-to: braun_campaign
 
-The KPD now endorses Braun in the presidential election! We ask them to keep their support low-key, so as to not alienate the bourgeois voters.
+共产党现在在总统选举中表态支持布劳恩!我们请他们低调行事,以免疏远资产阶级选民。
 
 
 
@@ -163,19 +163,19 @@ view-if: not zca_formed
 max-visits: 1
 go-to: convince_liberals_success if dvp_relation >= 60; convince_liberals_fail if dvp_relation < 60
 
-The liberal vote ([+ ddp_name +] and DVP) has been falling over time, so they will probably be of minimal help to us. For what it's worth, the [+ ddp_name +] is already willing to support Braun.
+自由派的选票([+ ddp_name +] 与人民党)一直呈下降趋势,所以他们对我们的帮助大概微乎其微。无论如何,[+ ddp_name +] 已经愿意支持布劳恩。
 
 @convince_liberals_success
 on-arrival: dvp_support_braun = 1
 go-to: braun_campaign
 
-Thanks to our good relations, the DVP has promised to support Braun in the election.
+得益于我们良好的关系,人民党已承诺在选举中支持布劳恩。
 
 @convince_liberals_fail
 on-arrival: dvp_support_braun = 0
 go-to: braun_campaign
 
-We failed to convince the DVP to support Braun.
+我们未能说服人民党支持布劳恩。
 
 @final_election
 on-arrival: election_round = 0
@@ -328,7 +328,7 @@ for (var k of Q.presidents_32) {
 !}
 go-to: thalmann_wins if thalmann_majority == 1; hitler_wins if hitler_majority == 1; marx_wins if marx_majority == 1; braun_wins if braun_majority == 1; seeckt_wins if seeckt_majority == 1; no_majority_round1 if majority_32 == 0 and election_round == 1; round2_results if election_round >= 2
 
-Results:
+结果:
 
 [? if thalmann_campaign : Thälmann - [+ thalmann_votes_disp +]% ?]
 
@@ -346,7 +346,7 @@ Results:
 on-arrival: president = "Seeckt"; chancellor = "Papen"; chancellor_party = "I"; time_to_election = 3
 call: set_next_election_time
 
-Hans von Seeckt has won the Presidency as the reactionary and anti-republican candidate. His first act is to replace the chancellor with Franz von Papen, an independent formerly of the Center Party, and dissolve the Reichstag for new elections in the hopes that a reactionary coalition may have a majority.
+汉斯·冯·泽克特作为反动、反共和的候选人赢得了总统之位。他的第一个动作就是以弗朗茨·冯·帕彭 —— 一位曾是中央党人的独立人士 —— 取代总理,并解散国会,以举行新的选举,指望一个反动联盟能取得多数。
 
 @marx_wins
 on-arrival: president = "Marx"; marx_relation += 5; reformist_strength += 5; coup_progress += 2; {!
@@ -363,7 +363,7 @@ if (Q.reactionary_consolidate && Q.hitler_votes_disp >= Q.nsdap_votes) {
 }
 !}
 
-Wilhelm Marx has won re-election as president, despite the attempts by the reactionaries to depose him. The republic endures, for now.
+威廉·马克思成功连任总统 —— 尽管反动派一再试图把他赶下台。共和国暂时延续了下去。
 
 - @far_right_coup: The Harzburg Front immediately initiates a coup...
 
@@ -382,7 +382,7 @@ if (Q.reactionary_consolidate && Q.hitler_votes_disp >= Q.nsdap_votes) {
 }
 !}
 
-Otto Braun of the SPD has won the presidency! This is a moment of celebration for our party, and his victory is able to bolster our support.
+社民党的奥托·布劳恩赢得了总统之位!这是我党值得庆祝的时刻,他的胜利也提振了我们的支持度。
 
 - @far_right_coup: The Harzburg Front immediately initiates a coup...
 
@@ -390,22 +390,22 @@ Otto Braun of the SPD has won the presidency! This is a moment of celebration fo
 view-if: coup_progress >= 10
 on-arrival: nazi_rebel = 1; reichswehr_loyalty -= 0.1 if reichswehr_loyalty <= 0.05; reichswehr_loyalty += 0.1; reichswehr_loyalty += 0.15 if z_support_braun or president == "Marx"; reichswehr_loyalty -= 0.05 if kpd_support_braun; rb_strength += 100
 
-Immediately following the election, forces of the Stalhelm and SA organized across the country under the Harzburg Front storm government offices, communications, railway, and other important infrastructure, as reactionary officers begin taking their forces out of barracks and joining in the coup.
+选举刚一结束,在全国各地由哈茨堡阵线组织起来的钢盔团与冲锋队力量便冲击政府机关、通讯、铁路及其他重要基础设施;反动军官也开始把部队带出营房,加入这场政变。
 
 - @civil_war: This is civil war.
 
 @thalmann_wins
 on-arrival: president = "Thälmann"; kpd_relation = 80;
 
-Ernst Thälmann of the KPD has won the presidency. Immediately, the far-right launches a coup attempt against the government. We have no choice but to unite with the KPD against the fascists...
+共产党的恩斯特·台尔曼赢得了总统之位。极右翼立即对政府发动了一场政变企图。我们别无选择,只能与共产党联合对抗法西斯分子……
 
 - @civil_war: This is civil war.
 
 @hitler_wins
 on-arrival: president = nsdap_candidate; chancellor = "Hitler" if presidential_powers != 1; chancellor_party = "NSDAP" if presidential_powers != 1
 
-[? if nsdap_candidate == "Hitler" : Adolf Hitler of the NSDAP has won the presidency. He wastes no time in consolidating power. ?]
-[? if nsdap_candidate != "Hitler" : The NSDAP candidate [+ president +] has won. The first action President [+ president +] takes is inviting Hitler back into Germany, and appointing him chancellor. The Nazis waste no time in consolidating power. ?]
+[? if nsdap_candidate == "Hitler" : 纳粹党的阿道夫·希特勒赢得了总统之位。他毫不浪费时间地开始集权。 ?]
+[? if nsdap_candidate != "Hitler" : 纳粹党候选人 [+ president +] 获胜。总统 [+ president +] 采取的第一个行动,就是邀请希特勒重返德国,并任命他为总理。纳粹毫不浪费时间地开始集权。 ?]
 
 - @hitler_victory: What do we do now?
 - @hitler_referendum: What do we do now?
@@ -424,32 +424,32 @@ go-to: hitler_constitution
 view-if: presidential_powers == 1 and sa_banned == 1
 on-arrival: judicial_reform -= 1 if judicial_reform >= 1; interior_police_loyalty -= 0.05; pro_republic -= 10; workers_nsdap += 5; unemployed_nsdap += 5; new_middle_nsdap += 5; old_middle_nsdap += 5; rural_nsdap += 5
 
-Thanks to our reforms weakening the presidency's powers and the banning of the SA, Hitler is unable to immediately consolidate power as he would like to. He has however taken full advantage of his new position for campaigning, attempting to spread the Nazi message to all German citizens in preparation for the next election.
+多亏我们削弱总统权力的改革以及对冲锋队的取缔,希特勒无法如愿立即集权。然而,他充分利用自己的新职位来竞选,试图把纳粹的主张传播给全体德国公民,为下一次选举做准备。
 
 @no_majority_round1
 on-arrival: duesterberg_campaign = 0
 go-to: seeckt_entrance if reactionary_consolidate; hitler_op if not reactionary_consolidate
 
-As expected, there is no majority in the first round of voting.
+不出所料,第一轮投票无人获得多数。
 
-Duesterburg has dropped out of the race after realizing he was Jewish, a fact that completely destroyed his campaign.
+迪斯特贝格在意识到自己是犹太人后退出竞选 —— 这一事实彻底摧毁了他的竞选。
 
 @seeckt_entrance
 on-arrival: hitler_campaign = 0; seeckt_campaign = 1
 go-to: r2_menu
 
-The reactionary vote has consolidated around Reichswehr officer Hans von Seeckt of the DVP, who has been endorsed by the Harzburg Front. Were he to win, there is a strong case to be made that he would set about dismantling German democracy.
+反动的选票已围绕人民党的国防军军官汉斯·冯·泽克特整合起来,他也得到了哈茨堡阵线的支持。若他当选,有充分理由认为他会着手拆解德国民主。
 
 @hitler_op
 on-arrival: new_middle_nsdap += 5; old_middle_nsdap += 5; rural_nsdap += 5
 go-to: r2_menu
 
-Following Duesterberg's withdrawal, the reactionary vote has effectively been monopolized by [+ nsdap_candidate +]. No other candidate is entered, as the NSDAP categorically refuses to back any other candidates, and the reactionaries, in fear of splitting their own vote, reluctantly consolidate behind the man.
+在迪斯特贝格退出后,反动的选票实际上已被 [+ nsdap_candidate +] 垄断。其他候选人无从入场 —— 纳粹党断然拒绝支持任何其他候选人,而反动派因害怕分散自家选票,只得勉强团结在此人身后。
 
 @r2_menu
 go-to: z_support_braun_auto if (((hitler_plurality or (duesterberg_votes+hitler_votes >= braun_votes and braun_votes > adenauer_votes)) and braun_campaign and not z_support_braun) and not zca_formed)
 
-In the second round, any candidate who wins a plurality will win overall. What should we do?
+在第二轮中,任何获得相对多数的候选人即可总体获胜。我们该怎么办?
 
 - @r2_z_braun: Convince the Center Party to back Otto Braun.
 - @r2_dvp_braun: Convince the DVP to back Otto Braun.
@@ -466,7 +466,7 @@ choose-if: braun_votes >= adenauer_votes and z_relation >= 50
 on-arrival: adenauer_campaign = 0; z_support_braun = 1
 go-to: r2_menu
 
-We have convinced the Centrists to back Otto Braun.
+我们已说服中央党支持奥托·布劳恩。
 
 @r2_dvp_braun
 view-if: not dvp_support_braun and braun_campaign and not zca_formed
@@ -474,7 +474,7 @@ choose-if: dvp_relation >= 70 or (dvp_relation >= 55 and not reactionary_consoli
 on-arrival: dvp_support_braun = 1
 go-to: r2_menu
 
-We have convinced the DVP to back Otto Braun.
+我们已说服人民党支持奥托·布劳恩。
 
 @r2_dvp_marx
 view-if: not dvp_support_marx and marx_campaign and not zca_formed
@@ -482,7 +482,7 @@ choose-if: dvp_relation >= 60 or (dvp_relation >= 45 and not reactionary_consoli
 on-arrival: dvp_support_marx = 1
 go-to: r2_menu
 
-We have convinced the DVP to back Wilhelm Marx.
+我们已说服人民党支持威廉·马克思。
 
 @r2_kpd_braun
 view-if: not kpd_support_braun and braun_campaign
@@ -490,13 +490,13 @@ choose-if: kpd_relation >= 60 or ((kpd_relation >= 50 and (kpd_party_leader == "
 on-arrival: kpd_support_braun = 1; thalmann_campaign = 0
 go-to: r2_menu
 
-We have convinced the KPD to back Otto Braun.
+我们已说服共产党支持奥托·布劳恩。
 
 @z_support_braun_auto
 on-arrival: adenauer_campaign = 0; z_support_braun = 1
 go-to: r2_menu
 
-The Center Party has withdrawn from the race and endorsed Braun.
+中央党已退出竞选,并表态支持布劳恩。
 
 @round2_results
 go-to: seeckt_wins if seeckt_plurality == 1; thalmann_wins if thalmann_plurality == 1; braun_wins if braun_plurality == 1; hitler_wins if hitler_plurality == 1; marx_wins if marx_plurality == 1
