@@ -92,9 +92,9 @@ Q.other_bl -= Q.bb_bl;
 view-if: anschluss_attempt
 max-visits: 1
 
-= The Austrian Issue
+= 奥地利问题
 
-In coordination with the March on Berlin, which we have now resolved, Austrian forces had crossed the border into Bavaria to wage war. While their domestic allies no longer raise up arms against us, the Austrian issue remains ever prevalent. Under Hitler's call for a grand national revolution to unify the German people, the forces attempt to converge on Munich, assisted by domestic Nazi militias.
+在与我们现已平定的进军柏林行动相配合之下,奥地利军队曾越过边境进入巴伐利亚发动战争。尽管其国内盟友不再向我们举兵,奥地利问题却始终悬而未决。在希特勒号召以一场伟大的民族革命统一德意志民族的鼓动下,这些军队试图在纳粹民兵的协助下向慕尼黑汇合。
 
 - @war: So it is war.
 - @paramilitaries: Nothing more than paramilitaries.
@@ -103,18 +103,18 @@ In coordination with the March on Berlin, which we have now resolved, Austrian f
 view-if: hitler_recognized
 go-to: warmenu
 
-Due the fact we have recognized Hitler's government as legitimate, there really is no two ways around this; this is war, between Germany and Austria. 
+鉴于我们已承认希特勒政府为合法政权,此事再无回旋余地;这就是德国与奥地利之间的战争。
 
 @paramilitaries
 view-if: not hitler_recognized
 go-to: warmenu
 
-Even as but paramilitaries, this still could spell civil war. Certainly, the fact they are launching their attacks from Austrian territory does give things an international implication, even if we do not recognize Hitler's government.
+即便只是准军事组织,这也可能意味着一场内战。当然,他们从奥地利领土发动攻击这一事实,赋予了整件事国际影响 —— 即便我们不承认希特勒的政府。
 
 @warmenu
 on-arrival: resources_spent = 0
 
-Time Remaining: [+ time_left +]
+剩余时间: [+ time_left +]
 
 - @strike: Are the unions ready to organize a general strike?
 - @reichsbanner: Is the Reichsbanner prepared to take a stand?
@@ -128,7 +128,7 @@ Time Remaining: [+ time_left +]
 @strike
 max-visits: 1
 choose-if: time_left >= 1
-unavailable-subtitle: It takes time to live, but no time to die.
+unavailable-subtitle: 活着需要时间,死去却不需要时间。
 on-arrival: {! 
 
 // general strike strength
@@ -160,12 +160,12 @@ if (Q.resources >= 1) {
 !}
 go-to: warmenu
 
-The trade unions, while historically less powerful in Bavaria than elsewhere in the Reich, still possess the power to make all urban industry slow to a halt and mobilize a defense within the city of Munich against the Nazi tide. We have activated our union contacts, organizing as fast as we can a strike. [? if resources_spent : We have used our resources to help with the strike. ?][? if not resources_spent : Without resources to help the strike with, we expended more time than we'd have liked on the strike preparations. ?]
+工会尽管在巴伐利亚历来不如在德国其他地方强大,却仍有能力让所有城市工业逐渐停摆,并在慕尼黑城内动员起抵御纳粹浪潮的防线。我们已启用工会方面的联络人,尽可能快地组织一场罢工。 [? if resources_spent : 我们动用资源协助了这场罢工。 ?][? if not resources_spent : 没有资源协助罢工,我们在罢工筹备上花掉的时间比预想的多。 ?]
 
 @reichsbanner
 max-visits: 1
 choose-if: time_left >= 1
-unavailable-subtitle: It takes time to live, but no time to die.
+unavailable-subtitle: 活着需要时间,死去却不需要时间。
 on-arrival: {!
 
 Q.bavaria_rb = Q.rb_strength*((Q.spd_bl*0.115)/Q.spd_votes);
@@ -187,30 +187,30 @@ if (Q.resources >= 1) {
 !}
 go-to: warmenu
 
-While only a minority of our voterbase is in Bavaria, we still have a portion of our Reichsbanner forces in the state, numbering [+ bavaria_rb_disp +] thousand. These men are quickly mobilized in the city of Munich, taking up defensive positions. [? if resources_spent : We have used our resources to help in the mobilization. ?][? if not resources_spent : Without resources to help the mobilization with, we expended more time than we'd have liked on the strike preparations. ?]
+尽管我们在巴伐利亚的选民基础只占少数,但我们在这个州仍有一部分国旗团力量,人数达 [+ bavaria_rb_disp +] 千人。这些人迅速在慕尼黑市动员起来,占据防御阵地。 [? if resources_spent : 我们动用资源协助了动员。 ?][? if not resources_spent : 没有资源协助动员,我们在罢工筹备上花掉的时间比预想的多。 ?]
 
 @kpd
 max-visits: 1
 choose-if: time_left >= 1
-unavailable-subtitle: It takes time to live, but no time to die.
+unavailable-subtitle: 活着需要时间,死去却不需要时间。
 on-arrival: time_left -= 1; kpd_relation += 2; left_dissent -= 5
 go-to: warmenu
 
-The KPD has, since the days of the disastrous Bavarian Soviet, always been a small party in the region. [? if kpd_relation >= 60 : Nevertheless, with what little forces they have, they are willing to help. ?][? if kpd_relation < 60 and kpd_relation >= 40 : Some of them are choosing to help in the fight, though many still spite us. ?][? if kpd_relation < 40 : By and large, the communists do not make much of an effort to defend against the assault. Some, using revolutionary-defeatist rhetoric, even consider a defeat desirable. ?]
+自灾难性的巴伐利亚苏维埃时期以来,共产党在该地区始终是个小党。 [? if kpd_relation >= 60 : 尽管如此,他们愿以手头微薄的力量相助。 ?][? if kpd_relation < 60 and kpd_relation >= 40 : 他们中一些人选择出手相助,不过许多人仍对我们心怀怨恨。 ?][? if kpd_relation < 40 : 总的来说,共产党人并未为抵御进攻付出多少努力。有些人甚至用革命失败主义的言辞,认为失败反而是好事。 ?]
 
 @soviets
 max-visits: 1
 choose-if: time_left >= 1 and (foreign_minister_party == "SPD" or comintern_seen)
-unavailable-subtitle: [? if time_left < 1 : It takes time to live, but no time to die. ?][? if time_left >= 1 : We have no way of contacting the Soviets. ?]
+unavailable-subtitle: [? if time_left < 1 : 活着需要时间,死去却不需要时间。 ?][? if time_left >= 1 : 我们无法联络苏联人。 ?]
 on-arrival: time_left -= 1; soviet_relation += 1; communist_coalition += 1 if soviet_relation >= 1; kpd_relation += 5 if soviet_relation >= 1; west_relation -= 1 if west_relation < 2
 go-to: warmenu
 
-We reach out to the Soviets, asking them for help. [? if soviet_relation < 1 : Stalin, frankly, does not care, rendering the whole thing a waste of time. We have, at least, mildly improven our relations. ?][? if soviet_relation >= 1 : While they are completely incapable of providing immediate help, Stalin is happy to be thought of, and assures us he will tell the KPD to assist in defending against the reactionary and fascist menace, while simultaneously issuing a condemnation of Hitler's actions and calling for the restoration of regular Austrian government. ?] [? if west_relation < 2 : The Entente powers are a bit annoyed by our validation of the USSR. ?]
+我们联络苏联人,请求他们相助。 [? if soviet_relation < 1 : 说得直白些,斯大林并不在意,整件事因此白费功夫。不过我们至少略微改善了两国关系。 ?][? if soviet_relation >= 1 : 尽管他们完全无力提供即时援助,斯大林仍乐于被人想到;他向我们保证会吩咐共产党协助抵御反动与法西斯的威胁,同时发表声明谴责希特勒的所作所为,并呼吁恢复奥地利的合法政府。 ?] [? if west_relation < 2 : 我们对苏联的倚重让协约国有些恼火。 ?]
 
 @reichswehr
 max-visits: 1
 choose-if: time_left >= 1 and spd_in_government
-unavailable-subtitle: [? if time_left < 1 : It takes time to live, but no time to die. ?][? if time_left >= 1 : We have no control over the Reichswehr. ?]
+unavailable-subtitle: [? if time_left < 1 : 活着需要时间,死去却不需要时间。 ?][? if time_left >= 1 : 我们无法左右国防军。 ?]
 on-arrival: {!
 
 Q.bavaria_reichswehr += Q.reichswehr_loyalty*Q.reichswehr_strength*0.15*0.75;
@@ -227,28 +227,28 @@ Q.bavaria_reichswehr_disp = Q.bavaria_reichswehr.toFixed(1);
 !}
 go-to: warmenu
 
-The Reichswehr, for all its faults, is by and large Germany's strongest armed force. To have them in Munich fighting Hitler's forces would be a boon to the democratic cause. [? if reichswehr_loyalty < 0.5 : Unfortunately, the Reichswehr has not proven a very loyal force. We can only hope it will fight. ?][? if reichswehr_loyalty >= 0.5 : Luckily, the Reichswehr seems more loyal than not. It seems likely that it will fight. ?]
+国防军尽管毛病不少,大体上仍是德国最强大的武装力量。让他们在慕尼黑与希特勒的军队作战,将对民主事业大有助益。 [? if reichswehr_loyalty < 0.5 : 遗憾的是,国防军并未表现出很高的忠诚。我们只能指望它会出战。 ?][? if reichswehr_loyalty >= 0.5 : 所幸,国防军似乎大体上是忠诚的。它很可能会出战。 ?]
 
-[? if resources_spent : We are able to save a bit of time in mobilization by spending some of the government's budget. ?][? if not resources_spent : Without any allocated budget to speed the mobilization up, the Reichswehr is slower to mobilize. ?]
+[? if resources_spent : 我们动用了一部分政府预算,得以在动员中省下一点时间。 ?][? if not resources_spent : 没有拨出预算来加快动员,国防军的集结更为缓慢。 ?]
 
 @entente
 max-visits: 1
 choose-if: time_left >= 1 and (foreign_minister_party == "SPD" or west_seen)
-unavailable-subtitle: [? if time_left < 1 : It takes time to live, but no time to die. ?][? if time_left >= 1 : We have no way of contacting their governments. ?]
+unavailable-subtitle: [? if time_left < 1 : 活着需要时间,死去却不需要时间。 ?][? if time_left >= 1 : 我们无法联络他们的政府。 ?]
 on-arrival: time_left -= 1; west_relation += 1; ddp_relation += 3 if west_relation >= 1; z_relation += 3 if west_relation >= 1
 go-to: warmenu
 
-We reach out to the Entente Powers, asking them for help. [? if west_relation < 1 : For whatever reason, they are unwilling to help us, viewing us as not much better than the Austrians and far more concerned with their internal affairs, rendering the whole idea a waste of time. ?][? if west_relation >= 1 : While they are completely incapable of providing immediate help, the Entente Powers nevertheless bring the matter to the League of Nations, granting us international legitimacy, and domestic legitimacy from those who care about international legitimacy. ?]
+我们联络协约国列强,请求他们相助。 [? if west_relation < 1 : 不知何故,他们不愿帮助我们,认为我们并不比奥地利人好多少,而且远更关心自家内部事务,整个打算因此白费功夫。 ?][? if west_relation >= 1 : 尽管他们完全无力提供即时援助,协约国列强还是把此事提交国际联盟,为我们带来国际正当性,以及来自那些看重国际正当性之人的国内正当性。 ?]
 
 @mussolini
 max-visits: 1
 view-if: foreign_minister_party == "SPD"
 choose-if: time_left >= 1 and not italo_ethiopian_war
-unavailable-subtitle: [? if time_left < 1 : It takes time to live, but no time to die. ?][? if italo_ethiopian_war : Mussolini is too busy being a horrible person to help fight horrible people. ?]
+unavailable-subtitle: [? if time_left < 1 : 活着需要时间,死去却不需要时间。 ?][? if italo_ethiopian_war : 墨索里尼忙于做个可怕的人,无暇帮忙对抗可怕的人。 ?]
 on-arrival: rome_berlin = 1; reichswehr_loyalty += 0.1
 go-to: warmenu
 
-We reach out to Mussolini in secret. He agrees strongly that Hitler is a maniac who has to be stopped, still upset over Dollfuß's deposal. As Breitscheid returns home, news breaks out of Italy proclaiming "Pax Romana" and staunch opposition to Austrian actions. Their confidence helps inspire some in the Reichswehr.
+我们秘密联络墨索里尼。他强烈认同希特勒是个必须加以制止的疯子 —— 他对陶尔斐斯被罢黜一事仍耿耿于怀。当布赖特沙伊德返回国内时,意大利传出消息,宣称「罗马和平」,并对奥地利的行动表示坚决反对。他们的底气鼓舞了国防军中的一些人。
 
 @the_battle
 new-page: true
@@ -320,11 +320,11 @@ Q.rb_roll = Q.rb_luck + Q.rb_bonus;
 !}
 go-to: battlemenu1
 
-= The Battle of Munich
+= 慕尼黑之战
 
-We have run out of time; the Nazis are converging on Munich. We can only hope to win now. On our side we have the Reichsbanner, with [+ bavaria_rb_disp +] thousand in Munich. [? if strike_power : We have also organized a general strike in the city. ?] In the Reichswehr, meanwhile, [+ bavaria_reichswehr_disp +] thousand stand ready to engage Hitler's armies.
+时间已经耗尽,纳粹正在向慕尼黑汇合。如今我们只能指望获胜。我们这边有国旗团,在慕尼黑的兵力为 [+ bavaria_rb_disp +] 千人。 [? if strike_power : 我们还在城中组织了一场总罢工。 ?] 与此同时,国防军中有 [+ bavaria_reichswehr_disp +] 千人枕戈待旦,准备迎击希特勒的军队。
 
-Hitler, meanwhile, has [+ bavaria_sa_disp +] thousand insurgents in the Bavarian countryside ready to descend upon Munich, while the armies he commands in Austria number [+ austria_strength_disp +] thousand.
+与此同时,希特勒在巴伐利亚乡间有 [+ bavaria_sa_disp +] 千名叛军,准备扑向慕尼黑;而他在奥地利统率的军队数量为 [+ austria_strength_disp +] 千人。
 
 @battlemenu1
 
@@ -335,7 +335,7 @@ Hitler, meanwhile, has [+ bavaria_sa_disp +] thousand insurgents in the Bavarian
 on-arrival: battles_seen += 1
 max-visits: 1
 
-SA forces from all around the Bavarian countryside have taken up arms and descended upon Munich to assist Hitler in his assault. We will have to hope the local Reichsbanner forces are strong enough to repel them.
+来自巴伐利亚乡间各处的冲锋队武装已拿起武器、扑向慕尼黑,协助希特勒发动进攻。我们只能寄望当地的国旗团力量足以击退他们。
 
 - @decisive_sa_victory: The battle is fought...
 - @indecisive: The battle is fought...
@@ -351,11 +351,11 @@ Q.bavaria_sa_disp = Q.bavaria_sa.toFixed(1);
 !}
 go-to: battlemenu1 if battles_seen < 2; battlemenu2 if battles_seen >= 2
 
-The Reichsbanner is resoundly defeated and forced to retreat and disengage. The SA is given a free hand to advance into the city and assault the strikers and defenses we have erected, which they will surely do. It is bleak.
+国旗团被彻底击败,被迫撤退脱离接触。冲锋队得以放手进城,攻击罢工者与我们构筑的防线 —— 他们必定会这么做。形势一片黯淡。
 
-Reichsbanner: [+ bavaria_rb_disp +] thousand
+国旗团: [+ bavaria_rb_disp +] 千人
 
-SA: [+ bavaria_sa_disp +] thousand
+冲锋队: [+ bavaria_sa_disp +] 千人
 
 @indecisive
 view-if: rb_roll < (sa_roll+3) and sa_roll < (rb_roll+3)
@@ -367,11 +367,11 @@ Q.bavaria_sa_disp = Q.bavaria_sa.toFixed(1);
 !}
 go-to: battlemenu1 if battles_seen < 2; battlemenu2 if battles_seen >= 2
 
-There is no clear conclusion to the initial streetfights. Both sides are damaged to varying degrees, and the SA pushes forward into Munich, intent on attacking the defenses there. The Reichsbanner continues to fight.
+最初的街头巷战没有明确结果。双方都不同程度地受损,冲锋队继续向慕尼黑推进,意在攻击那里的防御工事。国旗团仍在战斗。
 
-Reichsbanner: [+ bavaria_rb_disp +] thousand
+国旗团: [+ bavaria_rb_disp +] 千人
 
-SA: [+ bavaria_sa_disp +] thousand
+冲锋队: [+ bavaria_sa_disp +] 千人
 
 @decisive_rb_victory
 view-if: rb_roll >= (sa_roll+3)
@@ -383,13 +383,13 @@ Q.bavaria_sa_disp = Q.bavaria_sa.toFixed(1);
 !}
 go-to: battlemenu1 if battles_seen < 2; battlemenu2 if battles_seen >= 2
 
-Luckily, we are victorious. The SA assaulters are repelled and forced back into the countryside, freeing up the Reichsbanner forces to focus on the defense from Austria. 
+所幸,我们获胜了。冲锋队的进攻者被击退,被迫退回乡间,使国旗团得以腾出手来专注于抵御来自奥地利的进攻。
 
 @border_clashes
 on-arrival: battles_seen += 1
 max-visits: 1
 
-Austrian forces under the command of Hitler have poured across the border in their thousands towards Munich in a grand assault on German democracy. The Reichswehr, while often not very committed to German democracy, will nonetheless be our first line of defense. 
+希特勒指挥下的奥地利军队成千上万地越过边境,向慕尼黑发起一场对德国民主的盛大进攻。国防军尽管往往并不十分效忠德国民主,却仍将是我们的第一道防线。
 
 - @decisive_au_victory: The battle is fought...
 - @indecisive2: The battle is fought...
@@ -405,11 +405,11 @@ Q.austria_strength_disp = Q.austria_strength.toFixed(1);
 !}
 go-to: battlemenu1 if battles_seen < 2; battlemenu2 if battles_seen >= 2
 
-The Reichswehr is resoundly beaten by the Austrian forces, allowing them to rapidly advance towards Munich. They will surely be here in no time at all; we can only hope the city's defenses are strong enough.
+国防军被奥地利军队彻底击败,使他们得以迅速向慕尼黑推进。他们肯定转眼就会兵临城下;我们只能寄望这座城市的防御足够坚固。
 
-Reichswehr: [+ bavaria_reichswehr_disp +] thousand
+国防军: [+ bavaria_reichswehr_disp +] 千人
 
-Austria: [+ austria_strength_disp +] thousand
+奥地利: [+ austria_strength_disp +] 千人
 
 @indecisive2
 view-if: austria_roll < (reichswehr_roll+3) and reichswehr_roll < (austria_roll+3)
@@ -421,11 +421,11 @@ Q.austria_strength_disp = Q.austria_strength.toFixed(1);
 !}
 go-to: battlemenu1 if battles_seen < 2; battlemenu2 if battles_seen >= 2
 
-The clashes are inconclusive, the Reichswehr forces present making a fighting retreat to Munich to match the Austrian advance. It is regretful to not have repelled them, but at the very least, the Reichswehr forces will participate in the defense of the city.
+双方交火未分胜负;在场的国防军部队且战且退,撤回慕尼黑,以顺应奥军的推进。未能击退他们固然令人遗憾,但至少国防军部队将参与城市的防御。
 
-Reichswehr: [+ bavaria_reichswehr_disp +] thousand
+国防军: [+ bavaria_reichswehr_disp +] 千人
 
-Austria: [+ austria_strength_disp +] thousand
+奥地利: [+ austria_strength_disp +] 千人
 
 @decisive_rw_victory
 view-if: reichswehr_roll >= (austria_roll+3)
@@ -437,11 +437,11 @@ Q.austria_strength_disp = Q.austria_strength.toFixed(1);
 !}
 go-to: battlemenu1 if battles_seen < 2; battlemenu2 if battles_seen >= 2
 
-The Austrian invaders are decisively repelled by the present Reichswehr forces, forced to pull back to Austria as Hitler's grip on the country is rendered ever further precarious. [? if scabbing : There are still the SA insurgents, however. ?]
+奥地利入侵者被在场的国防军部队果断击退,被迫撤回奥地利;希特勒对该国的掌控也因此越发岌岌可危。 [? if scabbing : 不过,冲锋队叛军仍在。 ?]
 
-Reichswehr: [+ bavaria_reichswehr_disp +] thousand
+国防军: [+ bavaria_reichswehr_disp +] 千人
 
-Austria: [+ austria_strength_disp +] thousand
+奥地利: [+ austria_strength_disp +] 千人
 
 @battlemenu2
 
@@ -490,7 +490,7 @@ Q.strike_roll = Q.strike_luck + Q.strike_bonus;
 
 !}
 
-Following their advance from the outskirts of the city, the SA has entered Munich, attempting to assault and wreak havoc upon the city's defenses so as to clear the way for Hitler's forces.
+自城市外围推进之后,冲锋队已进入慕尼黑,试图冲击并破坏城中的防御工事,为希特勒的军队开路。
 
 - @decisive_strike_victory: The battle is fought...
 - @indecisive3: The battle is fought...
@@ -505,9 +505,9 @@ Q.bavaria_sa_disp = Q.bavaria_sa.toFixed(1);
 !}
 go-to: battlemenu2 if munich_advance; victory_against_hitler if not munich_advance
 
-The SA is repelled from its attempts to break the strike, allowing the workers to resume their brave defense of the city undeterred. [? if munich_advance : The SA continues to linger on the outskirts of the city, intending on helping Hitler assault it. ?][? if not munich_advance : Given the failure of Austrian forces to make it past the Reichswehr, the SA has retreated back into the countryside. It appears we are victorious. ?]
+冲锋队试图击破罢工的图谋被挫败,工人们得以不受干扰地继续英勇保卫这座城市。 [? if munich_advance : 冲锋队仍徘徊在城市外围,打算协助希特勒进攻该城。 ?][? if not munich_advance : 由于奥地利军队未能突破国防军,冲锋队已退回乡间。看来我们获胜了。 ?]
 
-SA: [+ bavaria_sa_disp +] thousand
+冲锋队: [+ bavaria_sa_disp +] 千人
 
 @indecisive3
 view-if: sa_roll < (strike_roll+3) and strike_roll < (sa_roll+3)
@@ -518,9 +518,9 @@ Q.bavaria_sa_disp = Q.bavaria_sa.toFixed(1);
 !}
 go-to: battlemenu2 if munich_advance; victory_against_hitler if not munich_advance
 
-The scabbing attempts are inconclusive, with the strike resuming albeit hurt and damaged. Barricades torn down have to be re-erected, and picket lines rebuilt. [? if munich_advance : The SA pulls back, awaiting the arrival of Hitler's men. ?][? if not munich_advance : Given the failure of Austrian forces to make it past the Reichswehr, the SA has retreated back into the countryside. It appears we are victorious. ?]
+破坏罢工的图谋未能得逞,罢工虽受损却得以继续。被拆毁的街垒须重新筑起,纠察线须重新建立。 [? if munich_advance : 冲锋队撤退了,等待希特勒的人马到来。 ?][? if not munich_advance : 由于奥地利军队未能突破国防军,冲锋队已退回乡间。看来我们获胜了。 ?]
 
-SA: [+ bavaria_sa_disp +] thousand
+冲锋队: [+ bavaria_sa_disp +] 千人
 
 @decisive_scab_victory
 view-if: sa_roll >= (strike_roll+3)
@@ -531,9 +531,9 @@ Q.bavaria_sa_disp = Q.bavaria_sa.toFixed(1);
 !}
 go-to: battlemenu2 if munich_advance; victory_against_hitler if not munich_advance
 
-Faced with the whole might of the SA, the strike is unable to defend itself. Pickets are torn and disassembled while barricades are crushed, union organizers beaten in the streets. By the time the SA has pulled back from the city, its defenses are shattered. [? if munich_advance : They will soon return to help the Austrians in their final seizure. ?][? if not munich_advance : Despite the success of the SA, given the failure of the Austrian armies to break through, they have retreated, leaving Munich in ruins. It appears we are victorious. ?]
+面对冲锋队的全部武力,罢工无力自保。纠察线被撕碎、拆散,街垒被碾平,工会组织者在街头遭到殴打。等到冲锋队撤离该城时,它的防御已然粉碎。 [? if munich_advance : 他们很快就会回来,协助奥地利人完成最后的一击。 ?][? if not munich_advance : 尽管冲锋队得手,但鉴于奥地利军队未能突破,他们还是撤退了,留下满目疮痍的慕尼黑。看来我们获胜了。 ?]
 
-SA: [+ bavaria_sa_disp +] thousand
+冲锋队: [+ bavaria_sa_disp +] 千人
 
 @battle_in_munich
 view-if: munich_advance and (scabbing != 1 or scabbing_seen)
@@ -585,7 +585,7 @@ Q.assault_roll = Q.assault_luck + Q.assault_bonus;
 
 !}
 
-It has happened; Hitler's Austrian armies have reached Munich. If we lose this battle, they will capture the city, and potentially more to come. [? if not strike_broken : Luckily, the strike in the city will help to defend it. ?][? if strike_broken : Unfortunately, the SA have managed to break our strike; we will be vulnerable. ?][? if scabbing : The SA are joining this battle, coming down onto Munich once more to help the Nazis take it. ?][? if rw_munich : Luckily, the Reichswehr is prepared to defend the city. ?]
+事情还是发生了:希特勒的奥地利军队已抵达慕尼黑。若我们输掉这一战,他们将占领这座城市,乃至更多。 [? if not strike_broken : 所幸,城中的罢工会助力防御。 ?][? if strike_broken : 遗憾的是,冲锋队已设法击破我们的罢工;我们将十分脆弱。 ?][? if scabbing : 冲锋队正加入这场战斗,再次扑向慕尼黑,协助纳粹夺取该城。 ?][? if rw_munich : 所幸,国防军已准备好保卫这座城市。 ?]
 
 - @defense_victory: The battle is fought...
 - @assault_victory: The battle is fought...
@@ -594,13 +594,13 @@ It has happened; Hitler's Austrian armies have reached Munich. If we lose this b
 view-if: defense_roll >= assault_roll
 go-to: victory_against_hitler
 
-Successfully, we have managed to defend Munich from those forces attacking it. In disarray, the Austrian armies collapse, and the invasion is ended.
+我们成功保卫了慕尼黑,抵御了来犯之敌。奥地利军队溃不成军,入侵就此结束。
 
 @assault_victory
 view-if: assault_roll > defense_roll
 on-arrival: rb_strength -= bavaria_rb
 
-The worst has come to pass. Our forces are beaten, and Munich falls under Nazi control. It seems that this will be... a **Long War.**
+最坏的情况已经发生。我们的力量被击败,慕尼黑落入纳粹掌控。看来这将成为……一场**长期战争**。
 
 - @civil_war.long_war: Roll credits.
 
@@ -608,7 +608,7 @@ The worst has come to pass. Our forces are beaten, and Munich falls under Nazi c
 view-if: not scabbing and not munich_advance
 on-arrival: pro_republic += 5; nationalism -= 5; hitler_dead = 1; anschluss_attempt = 0; nazi_austria = 0; vienna_influence = 0
 
-Faced with an inability to use Austria as a launching ground from which to seize all of Germany, and the collapse of his armies, we have essentially won. This victory is cemented quickly, as, in the following days, news comes from Vienna of [? if sdapo_strength >= 4 : a SDAPÖ uprising ?][? if sdapo_strength < 4 : an Austrofascist uprising ?] against Hitler, who has reportedly been shot dead.
+面对无法以奥地利为跳板夺取整个德国的困境,加上其军队的崩溃,我们实际上已经获胜。这一胜利很快便得到巩固 —— 随后几天,维也纳传来消息: [? if sdapo_strength >= 4 : 一场奥地利社会民主党发动的起义 ?][? if sdapo_strength < 4 : 一场奥地利法西斯分子的起义 ?] 推翻了希特勒 —— 据报他已被枪杀。
 
 
 ## todo: austria vs reichswehr initial clashes, sa vs reichsbanner initial clashes, if sa not resoundly beaten then scabs vs strikers clashes, remaining strike health after scabbers will be added to city defense with reichsbanner from sa & austria if reichswehr not resoundly victorious, then conclusion
