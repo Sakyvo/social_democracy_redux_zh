@@ -6,19 +6,19 @@ view-if: capital_strike_seen and class_war_timer < 1 and not capital_flight and 
 card-image: img/class_war.jpg
 tags: govt_affairs
 
-= Class War
+= 阶级斗争
 
-Due to our policies, an economic crisis has triggered. Some in our party consider this a result of our policies, others blame the bourgeoisie. Regardless, something has to be done.
+由于我们的政策,一场经济危机被触发了。党内一些人认为这是我们政策的结果,另一些人则归咎于资产阶级。无论如何,必须采取行动。
 
-[? if not approach_adopted : We are yet to adopt an approach. Until we do, we are limited in the scope of our response. ?]
+[? if not approach_adopted : 我们尚未采纳某种路线。在此之前,我们的应对范围是有限的。 ?]
 
-[? if class_war >= 5 : We have adopted the revolutionary approach, certifying the crisis as a manufacturing of the bourgeoisie against us, which we must combat by completing the revolution. ?]
+[? if class_war >= 5 : 我们已采纳革命路线,认定这场危机是资产阶级针对我们炮制的,必须以完成革命来对抗它。 ?]
 
-[? if reconcile_business >= 5 : We have adopted the rightist approach, certifying the crisis as a result of our policies, which failed to account for the fact that worker well-being depends upon healthy investment in the economy. ?]
+[? if reconcile_business >= 5 : 我们已采纳右翼路线,认定这场危机是我们政策的结果 —— 我们的政策未能顾及一个事实:工人的福祉有赖于对经济的健康投资。 ?]
 
-- @revolutionary_approach: The class war intensifies.
-- @right_approach: Clearly, a failure in our governance.
-- @address: What can we do?
+- @revolutionary_approach: 阶级斗争升级。
+- @right_approach: 这显然是我们治理的失败。
+- @address: 我们能做什么?
 - @easy_discard
 
 @revolutionary_approach
@@ -27,11 +27,11 @@ subtitle: The Marxist strategy of the SPD has always been to provoke a confronta
 on-arrival: peoples_party_support -= class_war+1; reformist_dissent += 10; left_strength += 10; left_dissent -= 10; class_war += 1; class_war += 1 if left_plan_adopted; coup_progress += 1 if spd_in_government
 go-to: address
 
-The revolutionaries of the party put forward their proposed approach to the crisis. They say that this is a success of our strategies, so long as we take it to the next level and wage the class war from below, just as the businesses now do so from above by seeking to bleed the economy dry.
+党内的革命派提出了他们应对危机的路线。他们说,只要我们把它推进到更高层次、自下而上地发动阶级斗争,这就是我们策略的成功 —— 正如企业如今自上而下地试图把经济榨干一样。
 
 [? if class_war < 5 : 这一主张尚未被采纳。还需要更多说服工作。 ?]
 
-[? if class_war >= 5 : The approach has been adopted! We can now work on waging the class struggle. ?]
+[? if class_war >= 5 : 这一路线已被采纳!我们现在可以着手发动阶级斗争了。 ?]
 
 @right_approach
 view-if: reconcile_business < 5 and class_war < 5
@@ -39,16 +39,16 @@ subtitle: Our goal is, ultimately, to improve the living conditions of the worke
 on-arrival: left_dissent += 10; reformist_strength += 10; reformist_dissent -= 10; reconcile_business += 1; reconcile_business += 1 if wtb_adopted or weimar_plan_adopted
 go-to: address
 
-The rightists of the party put forward their proposed approach to the crisis. They say that this is a failure of our strategies, a result of us failing to account for the business community's opinions in our haste to deliver for the workers, and that the transition to socialism must be a gradual process which at all steps benefits the worker, without economic crises.
+党内的右翼提出了他们应对危机的路线。他们说,这是我们策略的失败 —— 是我们急于为工人兑现承诺、未能顾及工商界意见的结果;向社会主义的过渡必须是渐进的过程,每一步都要让工人受益,且不能引发经济危机。
 
 [? if reconcile_business < 5 : 这一主张尚未被采纳。还需要更多说服工作。 ?]
 
-[? if reconcile_business >= 5 : The approach has been adopted! We can now work on winning back business. ?]
+[? if reconcile_business >= 5 : 这一路线已被采纳!我们现在可以着手赢回工商界的信任了。 ?]
 
 @address
 subtitle: We must address the crisis as it stands.
 
-We must focus on the immediate crisis. 
+我们必须聚焦于眼前的危机。
 
 - @seize
 - @capital_controls
@@ -65,11 +65,11 @@ We must focus on the immediate crisis.
 title: Empower workers to seize the factories!
 view-if: capital_occupations != 1
 max-visits: 1
-unavailable-subtitle: [? if left_strength <= reformist_strength + neorevisionist_strength : The bulk of the party does not support this radical action. ?] [? if judicial_reform < 3 : The judiciary would oppose this action. ?] [? if rb_militancy < 0.25 : If we increased the strength of our paramilitary forces, perhaps we could do this. ?] [? if works_councils < 1 : We need the support of the works councils first. ?][? if left_coalition+sapd_r < 50 : The Reichstag is opposed. ?][? if class_war < 1 : This is contrary to our strategy with regards to the crisis. ?]
+unavailable-subtitle: [? if left_strength <= reformist_strength + neorevisionist_strength : 党内多数并不支持这一激进举措。 ?] [? if judicial_reform < 3 : 司法界会反对这一举措。 ?] [? if rb_militancy < 0.25 : 若能增强我们准军事组织的力量,或许可以这么做。 ?] [? if works_councils < 1 : 我们需要先获得工厂委员会的支持。 ?][? if left_coalition+sapd_r < 50 : 国会表示反对。 ?][? if class_war < 1 : 这与我们应对危机的策略相悖。 ?]
 choose-if: class_war >= 1 and left_strength > reformist_strength + neorevisionist_strength and (judicial_reform >= 3 or rb_militancy >= 0.25) and works_councils >= 1 and ((left_coalition+sapd_r >= 50) or (rb_force+rfb_force >= 50))
 on-arrival: capital_strike_timer += 3; class_war += 1; bourgeois_power -= 0.07; nationalization_progress += 1; coup_progress += 6; unemployed -= 2; unemployed -= 1 if works_councils >= 3; works_program += 1; workers_spd += 10*(1-dissent); unemployed_spd += 10*(1-dissent); coalition_dissent += 2; dvp_relation -= 4; workers_nsdap -= 8*(1-dissent); unemployed_nsdap -= 8*(1-dissent); left_strength += 15; reformist_dissent += 10; left_dissent -= 10; factory_takeovers += 1; economic_growth += 2; socialism += 3; capital_occupations = 1
 
-If the capitalists are going to attack us, then we must hit them back. We have empowered the workers to seize and take full control of the factories that the capitalists have idled. The fascists, of course, call us thieves and looters.
+如果资本家要来攻击我们,那我们就必须予以回击。我们已授权工人夺取并完全掌控资本家闲置的工厂。法西斯分子当然把我们称作盗贼与掠夺者。
 
 
 @capital_controls
@@ -77,10 +77,10 @@ title: Enact capital controls to lessen the impact.
 view-if: capital_controls != 1
 max-visits: 1
 choose-if: judicial_reform >= 2 and (left_coalition+sapd_r >= 50) or (popular_front+sapd_r >= 50 and z_relation >= 60 or (z_party_leader == "Joos" and z_relation >= 40))
-unavailable-subtitle: [? if judicial_reform < 2 : The judiciary would never allow this. ?][? if judicial_reform >= 2 : The Reichstag is opposed. ?]
+unavailable-subtitle: [? if judicial_reform < 2 : 司法界绝不会允许这样做。 ?][? if judicial_reform >= 2 : 国会表示反对。 ?]
 on-arrival: capital_strike_timer += 3; unemployed -= 1.5; bourgeois_power -= 0.03; workers_spd += 6*(1-dissent); unemployed_spd += 6*(1-dissent); economic_growth += 2; capital_controls = 1
 
-Capital controls might blunt some of the worst economic components of the capital strike.
+资本管制或许能钝化资本罢市中一些最恶劣的经济成分。
 
 
 
@@ -90,40 +90,40 @@ subtitle: -1 资源
 choose-if: (radio >= 2 or commercialized_media >= 3) and resources >= 1
 max-visits: 1
 view-if: capital_propaganda != 1
-unavailable-subtitle: [? if radio < 2 and commercialized_media < 3 : We have not built up our media enough. ?] [? if resources < 1: We do not have enough resources. ?]
+unavailable-subtitle: [? if radio < 2 and commercialized_media < 3 : 我们的媒体建设还不够。 ?] [? if resources < 1: 我们的资源不足。 ?]
 on-arrival: capital_strike_timer += 2; workers_spd += 7*(1-dissent); new_middle_spd += 6*(1-dissent); unemployed_spd += 6*(1-dissent); pro_republic += 5*(1-dissent); resources -= 1; socialism += 5; capital_propaganda = 1
 
-We launch a counter-propaganda campaign to blame the economic crisis on the capitalists, using all of our media channels to do so. Because of our existing media framework, this is moderately successful in directing popular criticisms towards the capitalists and away from us.
+我们发起一场反宣传运动,把我们所有的媒体渠道都用上,把经济危机归咎于资本家。由于我们已有的媒体框架,这在把民众的批评引向资本家、远离我们这方面取得了中等程度的成功。
 
 @business
 title: Meet with business leaders to try and win them back over.
 view-if: not capital_reconcile
 max-visits: 1
 choose-if: reformist_strength > left_strength+center_strength and dvp_relation >= 30 and reconcile_business >= 1
-unavailable-subtitle: [? if reformist_strength < left_strength+center_strength : The bulk of the party does not support this moderate action. ?][? if dvp_relation < 35 : We have no contacts with the business company. ?][? if reconcile_business < 1 : This is contrary to our strategy with regards to the crisis. ?]
+unavailable-subtitle: [? if reformist_strength < left_strength+center_strength : 党内多数并不支持这一温和举措。 ?][? if dvp_relation < 35 : 我们与工商界没有联系。 ?][? if reconcile_business < 1 : 这与我们应对危机的策略相悖。 ?]
 on-arrival: reconcile_business += 1; economic_growth += 0.3; unemployed -= 0.2; inflation -= 0.2; bourgeois_power += 0.02; socialism -= (5*bourgeois_power); coup_progress -= 1; coalition_dissent -= 1; dvp_relation += 3; reformist_strength += 15; left_dissent += 10; reformist_dissent -= 10; bourgeoisie_dnvp *= 0.9; bourgeoisie_nsdap *= 0.9; bourgeoisie_dvp += 5
 
-We meet with several leaders from the business community to try and assuage their concerns. Though little progress is made, we think we have at least established contacts through which we might continue in the future.
+我们会见了工商界的几位领袖,试图安抚他们的担忧。尽管进展甚微,我们认为至少建立了今后可以继续利用的联系渠道。
 
 @party_financing
 title: Ban private financing of political parties.
 view-if: class_war >= 4
 max-visits: 1
 choose-if: ((left_coalition+sapd_r >= 50) or (popular_front+sapd_r >= 50 and z_relation >= 80 or (z_party_leader == "Joos" and z_relation >= 60))) and (judicial_reform >= 4)
-unavailable-subtitle: [? if left_coalition+sapd_r < 50 : The Reichstag opposes this. ?][? if judicial_reform < 4 : The judiciary would not allow this. ?]
+unavailable-subtitle: [? if left_coalition+sapd_r < 50 : 国会反对此举。 ?][? if judicial_reform < 4 : 司法界不会允许这样。 ?]
 on-arrival: capital_strike_timer += 4; financing_banned = 1; class_war += 1; economic_growth -= 1*bourgeois_power; unemployed += 0.7*bourgeois_power; inflation += 0.5*bourgeois_power; bourgeois_power -= 0.05; coup_progress += 3; socialism += 3; coalition_dissent += 5; dvp_relation -= 20; z_relation -= 10; ddp_relation -= 10
 
-We ban private financing of political parties, the backbone of all the bourgeois parties which rely on industrialist support to fund their reactionary activities. Understandably, they now hate us.
+我们取缔了私人对政党的融资 —— 这是所有依赖工业家资助其反动活动的资产阶级政党的支柱。他们如今憎恨我们,这可以理解。
 
 @socialize_media
 title: Socialize mass media, wrestling it from private ownership.
 view-if: class_war >= 5
 max-visits: 1
 choose-if: ((left_coalition+sapd_r >= 50) or (popular_front+sapd_r >= 50 and z_relation >= 100 or (z_party_leader == "Joos" and z_relation >= 80))) and (judicial_reform >= 5)
-unavailable-subtitle: [? if left_coalition+sapd_r < 50 : The Reichstag opposes this. ?][? if judicial_reform < 4 : The judiciary would not allow this. ?]
+unavailable-subtitle: [? if left_coalition+sapd_r < 50 : 国会反对此举。 ?][? if judicial_reform < 4 : 司法界不会允许这样。 ?]
 on-arrival: capital_strike_timer += 3; socialized_media = 1; class_war += 1; economic_growth -= 3*bourgeois_power; unemployed += 2*bourgeois_power; inflation += 1*bourgeois_power; bourgeois_power -= 0.1; coup_progress += 5; socialism += 5; coalition_dissent += 5; dvp_relation -= 20; z_relation -= 15; ddp_relation -= 15; reformist_dissent += 5
 
-We have chosen to socialize mass media, one of the many ways through which capitalism controls mass information and maintains popular support. By dismantling the bourgeoisie's control over the narrative, we attack one of the pillars of their power. How should we go about this socialization?
+我们选择把大众媒体社会化 —— 这是资本主义控制大众信息、维持民众支持的众多途径之一。通过拆解资产阶级对叙事的控制,我们攻击了他们权力的支柱之一。这场社会化应当如何进行?
 
 - @state_run: The news will be state-run, at least for now.
 - @union_run: The news will be run by existing democratic workers' organizations.
@@ -132,17 +132,17 @@ We have chosen to socialize mass media, one of the many ways through which capit
 subtitle: -1 财政预算
 on-arrival: state_media = 1; socialism += 5; workers_spd += 4; unemployed_spd += 4; new_middle_spd += 4; old_middle_spd += 4; rural_spd += 3; budget -= 1; inflation += 0.6 if budget < 0; reformist_dissent += 10; pro_republic -= 5; labor_dissent += 5; center_dissent += 10;
 
-We have established a state-run news agency, albeit still in its infancy, to replace private ownership. There is talk of establishing a corresponding ministry to manage this agency, and it is not clear yet if we intend to establish an independent board to run the news agencies or if we intend to maintain them under state control.
+我们建立了一家国营通讯社来取代私人所有权,尽管它还处于初创阶段。有人提出设立相应的部委来管理这家机构;我们究竟打算设立一个独立委员会来运营这些新闻机构,还是打算让它们维持在国家控制之下,目前尚不明确。
 
 ## todo: unlock whole-new ministry for press!
 
 @union_run
 subtitle: [? if not radio : -1 resource ?]
 choose-if: resources >= 1 or radio
-unavailable-subtitle: We cannot afford to take over the presses. 
+unavailable-subtitle: 我们负担不起接管这些印刷厂。
 on-arrival: resources -= 1 if not radio; labor_strength += 10; labor_dissent -= 10; workers_spd += (labor_strength/10)
 
-We have handed the presses over to existing democratic workers' organizations, most namely trade unions. We will consider a more permanent solution at another time.
+我们已把印刷厂移交给现有的民主工人组织,其中最主要的是工会。我们将在另一个时候考虑更持久的方案。
 
 @idling
 title: Nationalize the idling factories.
@@ -150,23 +150,23 @@ max-visits: 1
 view-if: class_war >= 3
 subtitle: -[+ nationalize_budget +] budget. [? if works_councils >= 3 : Our works councils have reduced the budget necessary for this program. ?] [? if socializations >= 2: Our existing socialization policies have reduced the budget necessary for this program. ?]
 choose-if: economic_minister_party != "DVP" and left_coalition+sapd_r >= 50
-unavailable-subtitle: [? if economic_minister_party == "DVP" : The DVP-controlled Economic Ministry could never allow such an action. ?][? if left_coalition+sapd_r < 50 : The Reichstag is opposed. ?]
+unavailable-subtitle: [? if economic_minister_party == "DVP" : 由人民党掌控的经济部绝不可能允许这样的行动。 ?][? if left_coalition+sapd_r < 50 : 国会表示反对。 ?]
 go-to: nationalize_no_deficit if budget >= nationalize_budget; nationalize_deficit if budget < nationalize_budget
 
 @nationalize_no_deficit
 on-arrival: nationalization_progress += 1; class_war += 1; capital_strike_progress += 2; bourgeois_power -= 0.05; unemployed -= 3.5 if unemployed >= 6; unemployed -= 1.2 if works_councils >= 3; workers += 2 if nationalization_progress < 2; budget -= nationalize_budget; works_program += 1; workers_spd += 8*(1-dissent); unemployed_spd += 5*(1-dissent); coalition_dissent += 1; coalition_dissent += 1 if in_grand_coalition; dvp_relation -= 4; left_dissent -= 5; new_middle_spd -= 2; new_middle_spd += 1 if new_middle_conscious; old_middle_spd -= 3; economy_goal_completed += 1; inflation += 2; economic_growth += 1.7 if economic_growth < 5
 achievement: wirtschaftspolitik
 
-[? if nationalization_progress == 1 : We have begun purchasing idling enterprises from the capitalists[? if works_councils >= 1: , and running them in coordination with empowered works councils ?]. By keeping production going, we can stave off the rising unemployment. ?]
+[? if nationalization_progress == 1 : 我们已开始从资本家手中收购闲置的企业[? if works_councils >= 1: ,并与获得赋权的工厂委员会协同经营 ?]。通过维持生产,我们可以挡住不断上升的失业。 ?]
 
-[? if nationalization_progress == 1 : The Left argues that this should only be a first step in the socialist transformation of the economy. Eventually, much of the economy must be brought under popular control. ?]
+[? if nationalization_progress == 1 : 左翼主张,这应当只是经济社会主义改造的第一步。最终,经济的大部分必须置于民众的控制之下。 ?]
 
-[? if nationalization_progress > 1 : We purchase additional underutilized enterprises and run them in a coordinated socialist fashion with the works councils, hiring formerly laid off workers. A significant portion of the economy is now under public control. ?]
+[? if nationalization_progress > 1 : 我们又收购了更多未被充分利用的企业,与工厂委员会以协调的社会主义方式经营,并重新雇用先前被裁的工人。如今,经济的相当一部分已处于公共控制之下。 ?]
 
 @nationalize_deficit
 on-arrival: socialism -= 2; class_war += 1
 
-Unfortunately, we do not have the budget to begin buying out industrial facilities. Some are urging for deficit spending in order to purchase factories, while others are encouraging (currently illegal) factory takeovers by workers, or nationalization without compensation. Taking any of these actions would require a vast departure from our previous party stances.
+遗憾的是,我们没有开始收购工业设施的财政预算。有人主张以赤字开支来购买工厂,也有人鼓励工人(目前尚属非法的)接管工厂,或无偿国有化。采取其中任何一项行动,都将要求我们与党先前的立场大幅背离。
 
 - @nationalize_deficit_1
 - @nationalize_without_compensation
@@ -178,43 +178,43 @@ Unfortunately, we do not have the budget to begin buying out industrial faciliti
 title: Take a budget deficit to fund the nationalization program.
 choose-if: (left_strength > reformist_strength + center_strength or woytinsky_advisor == 1) and (finance_minister_party == "SPD" or finance_minister_party == "KPD")
 subtitle: [? if woytinsky_advisor: Woytinsky can bring us around to supporting a budget deficit. ?]
-unavailable-subtitle: [? if left_strength <= reformist_strength + center_strength: The party does not yet support budget deficits for this purpose. ?] [? if not woytinsky_advisor : Perhaps bringing on an advisor might help make this action palatable? ?][? if finance_minister_party != "SPD" and finance_minister_party != "KPD" : Without control over finances, we cannot undertake such deficit spending. ?]
+unavailable-subtitle: [? if left_strength <= reformist_strength + center_strength: 党内尚不支持为此目的而搞预算赤字。 ?] [? if not woytinsky_advisor : 或许引入一位顾问有助于让这一行动变得可以接受? ?][? if finance_minister_party != "SPD" and finance_minister_party != "KPD" : 不掌握财政,我们就无法进行这样的赤字开支。 ?]
 on-arrival: nationalization_progress += 1; bourgeois_power -= 0.05; capital_strike_progress += 3; unemployed -= 3 if unemployed >= 6; unemployed -= 1.2 if works_councils >= 3; budget -= nationalize_budget; works_program += 1; workers_spd += 8*(1-dissent); unemployed_spd += 5*(1-dissent); coalition_dissent += 2; coalition_dissent += 1 if in_grand_coalition; dvp_relation -= 7; z_relation -= 4; new_middle_spd -= 3; new_middle_spd += 1 if new_middle_conscious; old_middle_spd -= 3; economy_goal_completed += 1; inflation += 3; economic_growth += 2 if economic_growth < 5;
 achievement: wirtschaftspolitik
 
-[? if woytinsky_advisor: Most of the party, even on the left, are opposed to budget deficits for any purpose, with the exception of Wladimir Woytinsky. While he did not originally support the left's "transformational" plan, he has come around, and has persuaded the party and the Finance Ministry to support budget deficits in limited cases, for the purpose of exiting from the depression. ?]
+[? if woytinsky_advisor: 党内多数人 —— 即便是左翼 —— 都反对出于任何目的的预算赤字,唯独弗拉基米尔·沃伊京斯基例外。他原本并不支持左翼那套「转型」计划,但后来态度转变,并说服了全党与财政部:在有限情况下,为摆脱大萧条,可以支持预算赤字。 ?]
 
-[? if nationalization_progress == 1 : We have begun purchasing idling enterprises from the capitalists[? if works_councils >= 1: , and running them in coordination with empowered works councils ?]. By keeping production going, we can stave off the rising unemployment. ?]
+[? if nationalization_progress == 1 : 我们已开始从资本家手中收购闲置的企业[? if works_councils >= 1: ,并与获得赋权的工厂委员会协同经营 ?]。通过维持生产,我们可以挡住不断上升的失业。 ?]
 
-[? if nationalization_progress == 1 : The Left argues that this should only be a first step in the socialist transformation of the economy. Eventually, much of the economy must be brought under popular control. ?]
+[? if nationalization_progress == 1 : 左翼主张,这应当只是经济社会主义改造的第一步。最终,经济的大部分必须置于民众的控制之下。 ?]
 
-[? if nationalization_progress > 1 : We purchase additional underutilized enterprises and run them in a coordinated socialist fashion with the works councils, hiring formerly laid off workers. A significant portion of the economy is now under public control. ?]
+[? if nationalization_progress > 1 : 我们又收购了更多未被充分利用的企业,与工厂委员会以协调的社会主义方式经营,并重新雇用先前被裁的工人。如今,经济的相当一部分已处于公共控制之下。 ?]
 
 @nationalize_without_compensation
 title: Nationalize without compensation.
 subtitle: There is no reason why we should not simply take over idle factories. This is likely to provoke a confrontation with the capitalists.
-unavailable-subtitle: [? if left_strength <= reformist_strength + center_strength: The bulk of the party does not support this quasi-legal action. ?] [? if judicial_reform < 3 : The judiciary would oppose this action. ?] [? if left_coalition < 50 : We lack a majority in the Reichstag. ?]
+unavailable-subtitle: [? if left_strength <= reformist_strength + center_strength: 党内多数并不支持这一半合法的举措。 ?] [? if judicial_reform < 3 : 司法界会反对这一举措。 ?] [? if left_coalition < 50 : 我们在国会中没有多数。 ?]
 choose-if: left_strength > reformist_strength + center_strength and judicial_reform >= 3 and left_coalition >= 50
 on-arrival: nationalization_progress += 1; bourgeois_power -= 0.1; capital_strike_progress += 7; coup_progress += 3; unemployed -= 2.5 if unemployed >= 6; unemployed -= 1.2 if works_councils >= 3 and unemployed >= 3; works_program += 1; workers_spd += 8*(1-dissent); unemployed_spd += 6*(1-dissent); coalition_dissent += 2; coalition_dissent += 1 if in_grand_coalition; coalition_dissent += 1 if capital_strike_progress >= 10; dvp_relation -= 12; z_relation -= 8; ddp_relation -= 8; left_strength += 15; reformist_dissent += 10; left_dissent -= 10; new_middle_spd -= 5; new_middle_spd += 3 if new_middle_conscious; old_middle_spd -= 8; economy_goal_completed += 1; kpd_relation += 5*(1-dissent); inflation += 4; economic_growth += 1 if economic_growth < 4; socialism -= 1
 achievement: wirtschaftspolitik
 
-The capitalists are, predictably, up in arms about our policy of nationalization without compensation. They call it illegal expropriation, and it is. Nevertheless, it is clear that they have failed by keeping their factories idle, and we must take radical action.
+不出所料,资本家对我们无偿国有化的政策群情激愤。他们称之为非法征用 —— 确实如此。然而,他们让工厂闲置,失败显而易见,我们必须采取激进的行動。
 
-[? if nationalization_progress == 1 : We have begun acquiring idling enterprises from the capitalists[? if works_councils >= 1: , and running them in coordination with empowered works councils ?]. By keeping production going, we can stave off the rising unemployment. ?]
+[? if nationalization_progress == 1 : 我们已开始从资本家手中取得闲置的企业[? if works_councils >= 1: ,并与获得赋权的工厂委员会协同经营 ?]。通过维持生产,我们可以挡住不断上升的失业。 ?]
 
-[? if nationalization_progress > 1 : We acquired additional underutilized enterprises and run them in a coordinated socialist fashion with the works councils, hiring formerly laid off workers. A significant portion of the economy is now under public control. ?]
+[? if nationalization_progress > 1 : 我们又取得了更多未被充分利用的企业,与工厂委员会以协调的社会主义方式经营,并重新雇用先前被裁的工人。如今,经济的相当一部分已处于公共控制之下。 ?]
 
 @empower_workers
 title: Empower workers to take over factories.
 subtitle: We can promise to legalize factory occupations, giving the factories over to worker unions. This is highly confrontational, and would likely provoke a reaction from right-wing militants as well as capitalists.
-unavailable-subtitle: [? if left_strength <= reformist_strength + neorevisionist_strength : The bulk of the party does not support this radical action. ?] [? if judicial_reform < 3 : The judiciary would oppose this action. ?] [? if rb_militancy < 0.25 : If we increased the strength of our paramilitary forces, perhaps we could do this. ?] [? if works_councils < 1 : We need the support of the works councils first. ?][? if left_coalition < 50 : We lack a majority in the Reichstag. ?]
+unavailable-subtitle: [? if left_strength <= reformist_strength + neorevisionist_strength : 党内多数并不支持这一激进举措。 ?] [? if judicial_reform < 3 : 司法界会反对这一举措。 ?] [? if rb_militancy < 0.25 : 若能增强我们准军事组织的力量,或许可以这么做。 ?] [? if works_councils < 1 : 我们需要先获得工厂委员会的支持。 ?][? if left_coalition < 50 : 我们在国会中没有多数。 ?]
 choose-if: left_strength > reformist_strength + neorevisionist_strength and (judicial_reform >= 3 or rb_militancy >= 0.25) and works_councils >= 1 and ((left_coalition+sapd_r >= 50) or (popular_front+sapd_r >= 50 and z_relation >= 100 or (z_party_leader == "Joos" and z_relation >= 80)))
 on-arrival: nationalization_progress += 1; bourgeois_power -= 0.1; capital_strike_progress += 6; coup_progress += 5; unemployed -= 3 if unemployed >= 6; unemployed -= 1.5 if works_councils >= 3 and unemployed > 4; works_program += 1; workers_spd += 10*(1-dissent); unemployed_spd += 10*(1-dissent); coalition_dissent += 2; coalition_dissent += 1 if in_grand_coalition; coalition_dissent += 1 if capital_strike_progress >= 10; coalition_dissent += 1 if coup_progress >= 8; dvp_relation -= 12; z_relation -= 8; ddp_relation -= 8; workers_nsdap -= 5*(1-dissent); unemployed_nsdap -= 5*(1-dissent); left_strength += 15; reformist_dissent += 10; left_dissent -= 10; new_middle_spd -= 5; new_middle_spd += 2 if new_middle_conscious; old_middle_spd -= 10; factory_takeovers += 1; economy_goal_completed += 1; kpd_relation += 5*(1-dissent); inflation += 3; economic_growth += 1 if economic_growth < 3; socialism += 1
 achievement: wirtschaftspolitik
 
-The capitalists are, predictably, up in arms about our policy of legalizing factory occupations. They call it illegal expropriation, and it is. Nevertheless, it is clear that they have failed, and we must take radical action.
+不出所料,资本家对我们将工厂占领合法化的政策群情激愤。他们称之为非法征用 —— 确实如此。然而,他们的失败显而易见,我们必须采取激进行動。
 
-Fascists have been taking increasingly violent actions around the occupied factories, calling us thieves and looters. However, the some of the working-class supporters of the fascists have been peeled off, or at least the ones with a sense of class solidarity.
+法西斯分子在占领的工厂周围采取越来越暴力的行动,把我们称作盗贼与掠夺者。不过,法西斯分子中的一些工人阶级支持者已被拉走 —— 至少那些尚有阶级团结意识的人如此。
 
 @establish_councils
 title: Establish workers' councils in occupied factories, to coordinate industrial action.
@@ -224,7 +224,7 @@ choose-if: resources >= 2 or (resources >= 1 and works_councils >= 3)
 subtitle: [? if works_councils < 3 : -2 resources ?][? if works_councils >= 3 : -1 resource ?]
 on-arrival: capital_strike_timer += 3; soviet_election_time = time+6; soviets_exist = 1; resources -= 1; resources -= 1 if works_councils < 3; bourgeois_power -= (0.02*factory_takeovers); rb_militancy += (0.01*factory_takeovers); workers_spd += (factory_takeovers*2); unemployed_spd += factory_takeovers; socialism += factory_takeovers
 
-We have established workers' councils in those factories which we occupy, helping to organize the occupied factories with each other and through existing works councils. These soviets also lay the groundwork for a parallel state apparatus.
+我们在所占的工厂中建立了工人委员会,帮助这些被占领的工厂彼此组织起来,并通过现有的工厂委员会相互联系。这些苏维埃也为一个平行的国家机器奠定了基础。
 
 @dvp_reach
 title: Reach out to the DVP.
@@ -233,12 +233,12 @@ choose-if: resources >= 1
 subtitle: -1 资源. [? if dvp_relation < 35 : We are unlikely to see much success. ?]
 on-arrival: dvp_relation += 5; resources -= 1; socialism -= 2; economic_growth += 0.5 if dvp_relation >= 35; unemployed -= 0.3 if dvp_relation >= 35
 
-We reach out to the DVP, attempting to use them as an intermediary through which to restore the trust and confidence of the business community.
+我们主动联络人民党,试图把他们当作一个中介,借此恢复工商界的信任与信心。
 
 @nothing
 title: There is nothing we can do.
 
-There is nothing we can do that is within constitutional and legal bounds.
+在宪法与法律的界限之内,我们无能为力。
 
 ## todo: "socialism IS barbarism" event; bourgeois pamphlet that hits socialist support hard if you're doing class war route, using bourgeois power to do So
 ## todo: if factory_takeovers > 1, event for stalhelm being hired to retake factories, forcing you to defend them (factory takeovers -= 1 if you fail)

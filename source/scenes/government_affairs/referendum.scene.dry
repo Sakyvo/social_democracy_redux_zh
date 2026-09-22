@@ -6,11 +6,11 @@ view-if: referendum_timer = 0 and (spd_in_government == 0 or spd_toleration == 1
 on-arrival: referendum_timer += 6; month_actions += 1;
 tags: govt_affairs
 
-= Direct Democracy
+= 直接民主
 
-As part of the Weimar constitution, petitions, if they gain enough signatures, may be put to nationwide referendums for the people to directly vote on laws. We may not be in government, but we can try to bypass this and campaign ourselves for certain laws or actions, which, even if fail, may invigorate our supporters or provide publicity.
+作为魏玛宪法的一部分,请愿若征集到足够的签名,便可提交全国公投,由人民直接就法律投票。我们也许不在政府之中,但可以尝试绕过它,亲自为某些法律或行动开展宣传 —— 即便失败,这也能激励我们的支持者,或带来曝光度。
 
-Should we initiate any petitions?
+我们是否应当发起任何请愿?
 
 - @petitions: Let's initiate a petition.
 - @no_petition: No, we won't initiate any petitions.
@@ -20,9 +20,9 @@ Should we initiate any petitions?
 subtitle: [? if radio < 2 : -2 resources ?][? if radio >= 2 : -1 resource. Our investment into radio stations has made it easier to initiate petitions. ?]
 on-arrival: resources -= 2 if radio < 2; resources -= 1 if radio >= 2; petition_initiated = 1;
 choose-if: (resources >= 2 and radio < 2) or (resources >= 1 and radio >= 2)
-unavailable-subtitle: [? if radio < 2 : -2 resources. ?][? if radio >= 2 : -1 resource. ?] We don't have the resources to initiate a petition.
+unavailable-subtitle: [? if radio < 2 : -2 资源。 ?][? if radio >= 2 : -1 资源。 ?] 我们没有发起请愿所需的资源。
 
-We have a variety of options for laws to push for via petition. What should we petition for?
+我们可以通过请愿推动多种法律。我们应当为什么请愿?
 
 - @land_reform_vote: Land reform.
 - @nationalization_vote: A nationalization program.
@@ -37,12 +37,12 @@ We have a variety of options for laws to push for via petition. What should we p
 subtitle: Call for breaking up the large aristocratic estates and giving land to landless workers.
 view-if: land_referendum_timer = 0
 choose-if: budget >= 1
-unavailable-subtitle: The government doesn't have the budget to pursue this.
+unavailable-subtitle: 政府没有推行此事的财政预算。
 on-arrival: land_referendum_timer += 12; kpd_relation += 5; rural_spd += 6*(1-dissent); rural_spd += 3*(1-dissent) if peoples_party; rural_kpd += 1; rural_dnvp -= 8*(1-dissent); rural_nsdap -= 3*(1-dissent); dvp_relation -= 8; z_relation -= 6; left_strength += 10 if left_dissent < 40; left_dissent -= 5; ddp_support = 1 if ddp_relation >= 65; referendum_support = (spd_votes + kpd_votes + sapd_votes); referendum_support += ddp_votes if ddp_support == 1; other_factor = ((100*(rural/(workers+unemployed+new_middle+old_middle+rural+catholics)))*((1-dissent)/2)); referendum_support += other_factor; referendum_succeed = 1 if referendum_support >= 50; referendum_succeed = 0 if referendum_support < 50; {! 
 Q.referendum_support.toFixed(1);
 !}
 
-We initiate a petition for the implementation of a land reform program and launch a campaign through the countryside to get it the signatures it needs. Many of our grassroots members in their campaigning for the petition campaign alongside the Communists, who quickly involve themselves in the referendum [? if kpd_relation < 25 : despite their hostility toward Social Democracy?]. Soon it gains enough signatures to be put to a referendum, which the DNVP aggressively campaigns against, leading to a decrease in their rural support as previously reactionary farmers turn against the party.
+我们发起一份要求推行土地改革计划的请愿,并在乡间开展宣传以征集所需签名。我们的许多基层党员在为请愿造势时与共产党人并肩而行,后者很快也投身到这场公投之中 [? if kpd_relation < 25 : ,尽管他们对社会民主抱有敌意?]。它很快征集到足够的签名,得以提交公投;国家人民党大力反对,这导致他们在乡村的支持下降 —— 原先反动的农民转而反对该党。
 
 - @land_reform_success: The referendum succeeds.
 - @land_reform_fail: The referendum fails.
@@ -51,23 +51,23 @@ We initiate a petition for the implementation of a land reform program and launc
 view-if: referendum_succeed
 on-arrival: budget -= 1; land_reform += 1; coalition_dissent += 1; rural_spd += 3*(1-dissent); rural_nsdap -= 3*(1-dissent); unemployed -= 1 if unemployed >= 5; left_strength += 2; left_dissent -= 1; rural_sol += 3; rural_policy += 1; coup_progress += 1
 
-The referendum has succeeded with [+ referendum_support +]% of the vote! The influence of reactionaries in the German countryside has diminished as the estates of junkers are dismantled and redistributed, though quite reluctantly and shoddily by [+ agriculture_minister +], the agricultural minister.
+公投以 [+ referendum_support +]% 的得票获得成功!随着容克庄园被拆散、重新分配,反动派在德国乡村的影响力有所削弱 —— 尽管农业部长 [+ agriculture_minister +] 执行得相当勉强而粗糙。
 
 @land_reform_fail
 view-if: not referendum_succeed
 
-Unfortunately, the referendum has failed with only [+ referendum_support +]% of the vote. Nevertheless, our advocacy of land reform through the referendum has improved our ties with the KPD and our standing amongst rural regions.
+遗憾的是,公投仅以 [+ referendum_support +]% 的得票失败。尽管如此,我们通过公投为土地改革造势,改善了我们与共产党的关系,也提升了我们在乡村地区的地位。
 
 @nationalization_vote
 view-if: (nationalization_adopted or socializations >= 2) and unemployed >= 20 and nationalization_referendum_timer = 0
 subtitle: Call for mass nationalizations and the transformation of the economy.
 choose-if: budget >= (nationalize_budget/2)
-unavailable-subtitle: The government doesn't have the budget to pursue this.
+unavailable-subtitle: 政府没有推行此事的财政预算。
 on-arrival: nationalization_referendum_timer += 12; kpd_relation += 10; nationalization_support += 2 if nationalization_adopted == 0; workers_spd += 6*(1-dissent); new_middle_spd -= 2 if not new_middle_conscious; old_middle_spd -= 3; workers_spd += (works_councils*(1-dissent)) if works_councils >= 2; workers_kpd += 2; workers_kpd += 1 if sapd_consolidated == 0; workers_sapd += 1 if sapd_consolidated == 1; unemployed_spd += 3*(1-dissent); unemployed_kpd += 1; dvp_relation -= 12; z_relation -= 8; ddp_relation -= 4; reformist_dissent += 2; left_dissent -= 8; left_strength += 5; left_strength += 5 if left_split == 0; referendum_support = (spd_votes + kpd_votes + sapd_votes); referendum_support -= (spd_votes*dissent); left_factor = ((75*(workers/(workers+unemployed+new_middle+old_middle+rural+catholics)))*(left_strength/(left_strength+center_strength+reformist_strength+neorevisionist_strength+labor_strength))); referendum_support += left_factor; referendum_succeed = 1 if referendum_support >= 50; referendum_succeed = 0 if referendum_support < 50; {! 
 Q.referendum_support.toFixed(1);
 !}
 
-We initiate a petition for the nationalization of large idle industry by the government and its bringing under the control of [? if works_councils >= 2 : national planning boards made up of works council and state representatives ?][? if works_councils < 2 : the government ?] in order to fix the economy. We launch a campaign for this petition through the industrial regions of Germany, from workplace to workplace [? if works_councils >= 2 : and works council to works council ?] as soon the KPD joins in our campaign. The petition quickly gains the required signatures and is put to a nationwide referendum.
+我们发起请愿,要求由政府将大型闲置产业国有化,并将其置于 [? if works_councils >= 2 : 由工厂委员会与国家代表组成的国家计划委员会 ?][? if works_councils < 2 : 政府 ?] 的控制之下,以修复经济。 我们在德国的工业地区为这份请愿展开宣传,从一个工作场所到另一个工作场所[? if works_councils >= 2 : ,从一个工厂委员会到另一个工厂委员会 ?];共产党随即加入了我们的宣传。请愿很快征集到所需签名,被提交全国公投。
 
 - @nationalization_success: The referendum succeeds.
 - @nationalization_fail: The referendum fails.
@@ -76,12 +76,12 @@ We initiate a petition for the nationalization of large idle industry by the gov
 view-if: referendum_succeed
 on-arrival: nationalization_progress += 1; capital_strike_progress += 1; unemployed -= 1 if unemployed >= 6; old_middle_spd -= 1; unemployed -= 0.5 if works_councils >= 3; workers += 1; budget -= 2; works_program += 1; workers_spd += 3*(1-dissent); unemployed_spd += 2*(1-dissent); inflation += 0.8; economic_growth += 0.6 if economic_growth < 5;
 
-The referendum has succeeded with [+ referendum_support +]% of the vote! The nationalization program is implemented, though very reluctantly and shoddily by the Economic Minister, [+ economic_minister +], leaving the economy not nearly as repaired as it could otherwise have been. Though, as we are not in government, this still amounts to a victory for Social Democracy, which has managed to increase its publicity amongst the working class.
+公投以 [+ referendum_support +]% 的得票获得成功!国有化计划得以实施,尽管经济部长 [+ economic_minister +] 执行得极为勉强而粗糙,使经济的修复远不及本可达到的程度。不过,既然我们并不在政府之中,这仍可算作社会民主的一场胜利 —— 它设法提升了自身在工人阶级中的声望。
 
 @nationalization_fail
 view-if: not referendum_succeed
 
-Unfortunately, the referendum has failed with only [+ referendum_support +]% of the vote. Nevertheless, our advocacy of nationalization through the referendum has improved our standing amongst the workers.
+遗憾的是,公投仅以 [+ referendum_support +]% 的得票失败。尽管如此,我们通过公投为国有化造势,提升了我们在工人中的地位。
 
 @work_council_vote
 view-if: works_councils < 3 and council_referendum_timer = 0
@@ -90,7 +90,7 @@ on-arrival: council_referendum_timer += 12; workers_spd += 8*(1-dissent); worker
 Q.referendum_support.toFixed(1);
 !}
 
-We initiate a petition for the expansion of works councils in line with our previous policies of economic democracy. We rally the workers in favor [? if z_party_leader == "Joos" and z_relation >= 60 : with the help of Joseph Joos in the Center Party ?], and quickly the petition gains enough signatures to be put to a referendum.
+我们发起一份要求扩大工厂委员会的请愿,与我们此前经济民主的政策相一致。我们动员工人支持 [? if z_party_leader == "Joos" and z_relation >= 60 : ,并得到中央党约瑟夫·约斯的协助 ?];请愿很快征集到足够的签名,得以提交公投。
 
 - @work_council_success: The referendum succeeds.
 - @work_council_fail: The referendum fails.
@@ -99,23 +99,23 @@ We initiate a petition for the expansion of works councils in line with our prev
 view-if: referendum_succeed
 on-arrival: economic_democracy += 1; workers_spd += 2*(1-dissent); capital_strike_progress += 1; works_councils += 1; labor_dissent -= 2; labor_strength += 2
 
-The referendum has succeeded with [+ referendum_support +]% of the vote! [? if works_councils == 1 : Now, Germany will have worker representation on the boards of companies, giving them more influence in management decisions. ?][? if works_councils == 2 : National and sectorial workers councils have been part of the Weimar Constitution, but they were disempowered in the past, acting as nothing more than advisory bodies. With the success of this referendum, we can change that. ?][? if works_councils == 3 : Sectorial works councils can now negotiate wage and price policies for entire economic sectors, helping to both give workers more of a voice, and to rationalize the economy, smoothing over the anarchy of the market.?]
+公投以 [+ referendum_support +]% 的得票获得成功! [? if works_councils == 1 : 如今,工人将在公司董事会中拥有代表,从而在管理决策中获得更大影响力。 ?][? if works_councils == 2 : 全国性与行业性工人委员会本是魏玛宪法的一部分,但过去被剥夺了权力,沦为纯粹的咨询机构。随着这场公投的成功,我们可以改变这一点。 ?][? if works_councils == 3 : 行业性工厂委员会如今可以就整个经济部门的工资与价格政策进行谈判,既能给工人更多发言权,也有助于使经济更为理性化,抚平市场的无政府状态。 ?]
 
 @work_council_fail
 view-if: not referendum_succeed
 
-Unfortunately, the referendum has failed with only [+ referendum_support +]% of the vote. Nevertheless, our ties with labor have strengthened, as has our position amongst the workers, thanks to our attempts to empower them.
+遗憾的是,公投仅以 [+ referendum_support +]% 的得票失败。尽管如此,由于我们试图为工人赋权,我们与工会的联系加强了,在工人中的处境也有所改善。
 
 @state_buyer_vote
 view-if: state_buyer_passed != 1 and buyer_referendum_timer = 0
 subtitle: Call for the creation of a state monopoly for grain purchases, guaranteeing prices for farmers and stable prices for consumers.
 choose-if: budget >= 2
-unavailable-subtitle: The government doesn't have the budget to pursue this.
+unavailable-subtitle: 政府没有推行此事的财政预算。
 on-arrival: buyer_referendum_timer += 12; rural_spd += 2*(1-dissent); rural_nsdap -= 1*(1-dissent); workers_spd += 4*(1-dissent); unemployed_spd += 5*(1-dissent); unemployed_kpd += 2; dvp_relation -= 6; z_relation -= 4; peoples_party_support += 1; referendum_support = (spd_votes + sapd_votes + (0.8*kpd_votes)); referendum_support += ddp_votes if ddp_relation >= 75; referendum_succeed = 1 if referendum_support >= 50; referendum_succeed = 0 if referendum_support < 50; {! 
 Q.referendum_support.toFixed(1);
 !}
 
-We initiate a petition for the implementation of a state buyer program, campaigning for it in both the countryside for farmers and amongst the workers. The KPD joins in campaigning for the petition, though not significantly, and it soon gains the signatures it needs for a referendum.
+我们发起一份要求推行国家收购计划的请愿,既在乡间为农民宣传,也在工人中宣传。共产党加入了为请愿造势的行列,尽管力度不大;它很快征集到了公投所需的签名。
 
 - @state_buyer_success: The referendum succeeds.
 - @state_buyer_fail: The referendum fails.
@@ -126,12 +126,12 @@ on-arrival: state_buyer_passed = 1; budget -= 2; state_buyer = 1; rural_spd += 3
 Q.referendum_support.toFixed(1);
 !}
 
-The referendum has succeeded with [+ referendum_support +]% of the vote! A state buyer program is initialized, though with reluctance from the Economic Minister, [+ economic_minister +]. Let us hope that the farmers and workers remember that it is us who campaigned for this stabilization of prices and the market.
+公投以 [+ referendum_support +]% 的得票获得成功! A state buyer program is initialized, though with reluctance from the Economic Minister, [+ economic_minister +]. Let us hope that the farmers and workers remember that it is us who campaigned for this stabilization of prices and the market.
 
 @state_buyer_fail
 view-if: not referendum_succeed
 
-Unfortunately, the referendum has failed with [+ referendum_support +]% of the vote. Nevertheless, our standing amongst workers and farmers alike has improved somewhat.
+遗憾的是,公投以 [+ referendum_support +]% 的得票失败。尽管如此,我们在工人与农民中的处境都有所改善。
 
 @wtb_vote
 view-if: wtb_adopted == 1 and wtb_referendum_timer = 0
@@ -141,7 +141,7 @@ Q.referendum_support.toFixed(1);
 !}
 max-visits: 1
 
-We initiate a petition for the implementation of Phase 1 of the WTB plan, rallying behind it. The ADGB spearheads our efforts [? if works_council >= 1 : and helps us organize in support of the petition through the works councils?], and the petition quickly gains the necessary signatures. Many of the NSDAP's working class supporters also support the petition, helping split some support off of the party.
+我们发起一份要求推行 WTB 计划第一阶段的请愿,并团结起来支持它。德国工会总联合会为我们的努力打头阵 [? if works_council >= 1 : ,并协助我们通过工厂委员会组织民众支持这份请愿?];请愿很快征集到了必要的签名。纳粹党的许多工人阶级支持者也支持这份请愿,这从该党分走了一部分支持。
 
 - @wtb_vote_success_surplus: The referendum succeeds.
 - @wtb_vote_success_deficit: The referendum succeeds.
@@ -151,15 +151,15 @@ We initiate a petition for the implementation of Phase 1 of the WTB plan, rallyi
 view-if: referendum_succeed and budget >= wtb_budget
 on-arrival: budget -= wtb_budget; works_program += 1; unemployed -= 3; workers_spd += 4*(1-dissent); unemployed_spd += 4*(1-dissent); wtb_implemented += 1; inflation += 3; economic_growth += 1.4; economic_growth -= 0.7 if economic_growth > 5
 
-The referendum has succeeded with [+ referendum_support +]% of the vote! Money is beginning to flow through the economy via investments in large-scale public works, though the reluctant Economic Minister, [+ economic_minister +], is executing the plan less efficiently than we would be able to. Nevertheless, the economy seems to improve, and we claim credit.
+公投以 [+ referendum_support +]% 的得票获得成功! Money is beginning to flow through the economy via investments in large-scale public works, though the reluctant Economic Minister, [+ economic_minister +], is executing the plan less efficiently than we would be able to. Nevertheless, the economy seems to improve, and we claim credit.
 
 @wtb_vote_success_deficit
 view-if: referendum_succeed and budget < wtb_budget
 on-arrival: works_program += 1; budget -= wtb_budget; unemployed -= 3; workers += 2; workers_spd += 3*(1-dissent); unemployed_spd += 3*(1-dissent); capital_strike_progress += 1; wtb_implemented += 1; inflation += 4; welfare -= 2 if not spd_toleration; inflation -= 3 if not spd_toleration; unemployed += 2 if not spd_toleration; budget += 2 if not spd_toleration; economic_growth += 1.4; economic_growth -= 0.7 if economic_growth > 5; economic_growth -= 0.4; 
 
-The referendum has succeeded with [+ referendum_support +]% of the vote! Money is beginning to flow through the economy via investments in large-scale public works, though a deficit manifests. The government plans to handle this deficit by, as always, cutting welfare, and they blame us for creating the necessity to do so. Of course, this argument is ridiculous, but it does dampen our celebrations. 
+公投以 [+ referendum_support +]% 的得票获得成功! Money is beginning to flow through the economy via investments in large-scale public works, though a deficit manifests. The government plans to handle this deficit by, as always, cutting welfare, and they blame us for creating the necessity to do so. Of course, this argument is ridiculous, but it does dampen our celebrations. 
 
-[? if spd_toleration : We can vote against the planned austerity measures and effectively bring down the government, though this will mean snap elections. ?][? if not spd_toleration : Unfortunately, there is nothing we can do to stop these austerity measures from being implemented. ?]
+[? if spd_toleration : 我们可以投票反对拟议中的紧缩措施,实际上搞垮政府 —— 尽管这意味着提前选举。 ?][? if not spd_toleration : 遗憾的是,我们无法阻止这些紧缩措施的实施。 ?]
 
 - @break_toleration: We will bring the government down.
 - @maintain_toleration: We cannot afford to give the far-right a chance to gain power.
@@ -170,19 +170,19 @@ subtitle: New elections will be held.
 on-arrival: time_to_election = 3; spd_in_government = 0; in_grand_coalition = 0; spd_toleration = 0; pro_republic -= 5
 call: set_next_election_time
 
-We will not tolerate austerity done to spite us and the WTB plan's victory in the referendum. We have brought down the [+ chancellor +] government, and called for new elections, set for [+ next_election_month : month +] [+ next_election_year +]. 
+我们不会容忍为泄愤于我们、以及报复 WTB 计划在公投中的胜利而实行的紧缩。我们搞垮了 [+ chancellor +] 政府,并呼吁举行新的选举,定于 [+ next_election_month : month +] [+ next_election_year +]。
 
 @maintain_toleration
 view-if: spd_toleration
 subtitle: This may reflect badly.
 on-arrival: welfare -= 2; inflation -= 3; unemployed += 2; budget += 2; workers_spd -= 5; unemployed_spd -= 5; workers_kpd += 1 if sapd_consolidated == 0; workers_sapd += 1 if sapd_consolidated == 1; left_dissent += 10; labor_dissent += 10; kpd_relation -= 5
 
-We do not take a stand against the government's new austerity measures, significantly reducing the effects of our victory in the WTB referendum. We argue that this is necessary to maintain a functional democratic government that can fix the economy, but it falls on many deaf ears.
+我们未对政府的新紧缩措施采取反对立场,这大大削弱了我们 WTB 公投胜利的效果。我们辩称,这是维持一个能修复经济的、运转正常的民主政府所必需的,但这话很多都白说了。
 
 @wtb_vote_failure
 view-if: not referendum_succeed
 
-Unfortunately, the referendum has failed to pass with only [+ referendum_support +]% of the vote. Nevertheless, our ties with the ADGB have been strengthened, as well as our standing amongst the working and even employing classes, while many former Nazi supporters have been introduced to Social Democracy through our advocacy of the WTB plan.
+遗憾的是,公投仅以 [+ referendum_support +]% 的得票未获通过。尽管如此,我们与德国工会总联合会的关系加强了,我们在工人阶级乃至雇主阶层中的处境也改善了;而且,许多昔日的纳粹支持者因我们为 WTB 计划造势而接触到了社会民主。
 
 @abortion_vote
 view-if: abortion_rights = 0 and abortion_referendum_timer = 0
@@ -191,7 +191,7 @@ on-arrival: abortion_referendum_timer += 12; weimar_dissent += 1 if weimar_plan_
 Q.referendum_support.toFixed(1);
 !}
 
-We initiate a petition for the legalization of abortion, which quickly whips up a storm. Of course, the progressive parties all throw their support behind the petition, but the Center Party and the DNVP both staunchly oppose it. Whether the controversy helps the SPD or not is uncertain, but it certainly helps the more minor progressive parties, who use it as an opportunity to gain publicity, one such example being the DDP which has grown its reputation amongst the middle class significantly.
+我们发起一份使堕胎合法化的请愿,随即掀起轩然大波。当然,各进步政党都支持这份请愿,但中央党与国家人民党都坚决反对。这场争议是否有利于社民党尚不确定,但它确实有利于那些较小的进步政党 —— 它们借此机会博取曝光度。其中一例便是民主党,它在中间阶层中的声誉显著提升。
 
 - @abortion_success: The referendum succeeds.
 - @abortion_fail: The referendum fails.
@@ -200,21 +200,21 @@ We initiate a petition for the legalization of abortion, which quickly whips up 
 view-if: referendum_succeed
 on-arrival: abortion_rights += 1; womens_rights += 1; z_relation -= 5; catholics_spd -= 5; dvp_relation -= 5; new_middle_spd += 2*(1-dissent); new_middle_ddp += 1; workers_z += 3; new_middle_z += 3; old_middle_z += 3; old_middle_dnvp += 2; rural_dnvp += 2; workers_nsdap -= 3; new_middle_nsdap -= 3; old_middle_nsdap -= 1; rural_nsdap -= 1; unemployed_nsdap -= 2; unemployed_z += 3; unemployed_spd += 3*(1-dissent)
 
-The referendum succeeds with [+ referendum_support +]% of the vote! This has heartened our more progressive supporters, while hurting our relations with the Center Party. With the increasing political discourse around abortion, the religiously-oriented Center Party and DNVP have gained conservative votes at the expense of the NSDAP.
+公投以 [+ referendum_support +]% 的得票获得成功!这鼓舞了我们较为进步的支持者,却损害了我们与中央党的关系。随着围绕堕胎的政治讨论日益升温,宗教取向的中央党与国家人民党以牺牲纳粹党为代价,赢得了保守派选票。
 
 @abortion_fail
 view-if: not referendum_succeed
 
-Unfortunately, the referendum has failed with only [+ referendum_support +]% of the vote. This has disheartened the progressives who spearheaded the petition, who have decided to bide their time.
+遗憾的是,公投仅以 [+ referendum_support +]% 的得票失败。这使带头推动请愿的进步人士气馁,他们决定暂且按兵不动。
 
 @constitutional_reform_vote
 view-if: constitutional_reform_timer = 0 and neorevisionism and constitutional_reform < 3
 choose-if: judicial_reform >= 4
 on-arrival: pass_threshold = 0.51; pass_threshold = 0.6 if pro_republic < 65
-unavailable-subtitle: Pushing through constitutional reforms is unfeasable so long as the judiciary remains reactionary.
+unavailable-subtitle: 只要司法界仍然反动,推行宪法改革就不可行。
 go-to: constitutional_reform.reforms_menu
 
 @no_petition
 on-arrival: resources += 1 if radio >= 2 and petition_initiated; resources += 2 if radio < 2 and petition_initiated; petition_initiated = 0
 
-We will not attempt any referendums right now.
+我们眼下不会尝试任何公投。
