@@ -36,23 +36,23 @@ max-choices: 1
 
 在 [+ chancellor +] 的治理下,德国的行政继续运转。但它的施政并非消极被动的;它自然会做出塑造德国社会走向的决定。
 
-- @tax_cuts: Tax cuts
-- @tax_hikes: Tax hikes
-- @regressive_tax: Regressive taxation
-- @welfare_cuts: Welfare cuts
-- @welfare_hikes: Welfare hikes
-- @tariff_cuts: Tariff cuts
-- @tariff_hikes: Tariff hikes
-- @diplomacy: Diplomacy
-- @diplomacy2: Diplomacy with the Soviet Union
-- @eu_talks: Negotiations for a European Union
-- @concordat: Negotiations for a Reichskonkordat
-- @employers: Supporting employers in labor disputes
-- @compromise: Striking compromises in labor disputes
+- @tax_cuts: 减税
+- @tax_hikes: 加税
+- @regressive_tax: 累退税收
+- @welfare_cuts: 削减福利
+- @welfare_hikes: 增加福利
+- @tariff_cuts: 降低关税
+- @tariff_hikes: 提高关税
+- @diplomacy: 外交
+- @diplomacy2: 与苏联的外交
+- @eu_talks: 欧洲联盟的谈判
+- @concordat: 国家政教协定的谈判
+- @employers: 在劳资纠纷中支持雇主
+- @compromise: 在劳资纠纷中达成妥协
 - @rearmament: Rearmament
-- @judicial_regression: Undoing judicial reforms
-- @interior_regression: Undoing police reform
-- @military_regression: Undoing military reform
+- @judicial_regression: 撤销司法改革
+- @interior_regression: 撤销警察改革
+- @military_regression: 撤销军事改革
 - @disempower_councils: Disempowering works councils
 - @privatizations: Privatizations
 - @lifting_price_controls: Lifting price controls

@@ -173,7 +173,7 @@ go-to: defeat if total_defeat = 1; long_war if long_war = 1; republic_victory if
 
 我们的抵抗将被载入史册;将来,我们的名字将受人敬仰。但眼下,一切已成泡影。
 
-- @game_over: Game over.
+- @game_over: 游戏结束。
 
 @long_war
 go-to: long_war_intervention if resist_coup == 0; game_over_menu if resist_coup == 1
@@ -198,7 +198,7 @@ go-to: long_war_intervention if resist_coup == 0; game_over_menu if resist_coup 
 - @soviet_aid: Perhaps we can receive aid from the Soviet Union.
 - @east_aid: Perhaps our eastern neighbors, Poland and Czechoslovakia, can help us. If they know anything, they do not want fascists coming to power in Germany.
 - @austria_aid: Perhaps the SDAPÖ can help us in our fight?
-- @game_over: Game over.
+- @game_over: 游戏结束。
 
 @west_aid
 choose-if: west_relation >= 2
@@ -305,7 +305,7 @@ on-arrival: government_decided = 1
 
 反动势力虽已被击败,却远未被彻底清除。有人呼吁通过一部「授权法案」把治理权暂时移交给内阁,以便政府迅速行动。
 
-- @enabling: We have no choice but to pass an Enabling Act with a six-month duration.
+- @enabling: 我们别无选择,只能通过一部为期六个月的授权法案。
 - @enable_hindenburg: We have no choice but to pass an Enabling Act with a six-month duration.
 - @agenda_gov: We will operate entirely by the book in denazification of Germany.
 
@@ -331,7 +331,7 @@ on-arrival: judicial_reform += 4; soviets_exist = 1; soviet_election_time = time
 
 反动派的失败给了我们一个独特的机会。我们有多项议题需要处理。 Meanwhile, workers' councils which formed during the general strike have begun to form into workers' councils.
 
-- @presidency: The presidency.
+- @presidency: 总统职位。
 - @chancellorship: The cabinet.
 - @constitutional: The constitution.
 - @decrees: The country.
@@ -1164,7 +1164,7 @@ DEBUG: [+ negotiating_power +]
 
 - @chancellorship_kpd: The cabinet.
 - @party_legality: The parties.
-- @constitution: The constitution.
+- @constitution: 宪法。
 - @decrees_kpd: The country.
 - @noske: It is clear negotiation won't work. We must crush the KPD.
 

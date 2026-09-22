@@ -12,7 +12,7 @@ What was at first a Strasserist split from the NSDAP to support Kurt von Schleic
 
 It is clear that Schleicher is attempting to use the DNE as the basis of a personalist party with which to secure his government's fate come the next elections. As emergency decrees slowly strip more and more press freedoms, the DNE has an increasingly large advantage. 
 
-- @and: And...
+- @and: 然后……
 
 @and
 view-if: labor_dissent >= 60 and not unions_independent

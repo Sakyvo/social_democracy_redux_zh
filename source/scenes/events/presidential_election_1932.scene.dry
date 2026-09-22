@@ -30,7 +30,7 @@ go-to: hindenburg_runs if hindenburg_running or zca_formed; hindenburg_reluctant
 
 - @support_hindenburg: Support Hindenburg.
 - @support_braun: Run Otto Braun of the SPD.
-- @support_thalmann: Support Ernst Thälmann of the KPD.
+- @support_thalmann: 支持共产党的恩斯特·台尔曼。
 
 @support_hindenburg
 subtitle: This is the default option.
@@ -59,7 +59,7 @@ unavailable-subtitle: [? if kpd_relation < 50 : 我们与共产党的关系还�
 
 即便共产党人接受我们的支持,支持台尔曼在我党中也颇不受欢迎。你确定吗?
 
-- @support_thalmann_2: Yes, we will support Thälmann, despite the reformists' pleas against it.
+- @support_thalmann_2: 是的,尽管改良派恳求不要这样做,我们仍将支持台尔曼。
 - @support_braun: Support Braun instead.
 - @support_hindenburg: Support Hindenburg instead.
 
@@ -84,7 +84,7 @@ on-arrival: spd_support_thalmann = 1; reformist_dissent += 15; center_dissent +=
 - @support_eckener: Support Hugo Eckener as a joint Weimar Coalition candidate.
 - @support_gessler: Support the presumptive Bürgerblock candidate, Otto Gessler.
 - @support_braun: Run Otto Braun of the SPD.
-- @support_thalmann: Support Ernst Thälmann of the KPD.
+- @support_thalmann: 支持共产党的恩斯特·台尔曼。
 
 @support_eckener
 subtitle: -1 资源

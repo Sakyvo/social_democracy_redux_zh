@@ -212,7 +212,7 @@ set-jump: post_election_1928
 
 德国各地都出现了工人委员会,它们以「苏维埃」的形式运作,并选举代表进入新的、由各委员会在国家级协调的机构。
 
-- @election_algorithm: May we do our best...
+- @election_algorithm: 愿我们尽力而为……
 
 @post_election_1928
 on-arrival: {!
@@ -472,15 +472,15 @@ if (window && d3) {
 
 委员会选举已经举行,德国各行业的代表经选举产生,以决定工人阶级未来的道路,以及这一阶级对政治权力的追求。首要事项是选举产生一个执行机构。
 
-- @coalition_menu: Convene the Social Democratic delegation.
+- @coalition_menu: 召集社会民主党代表团。
 
 @coalition_menu
 subtitle: SPD - [+ spd_s +]%
 
 通过召集社民党代表团,我们试图在委员会讨论之前统一党内各派系。最终,我们的代表团约占代表大会的 [+ effective_spd_s +]%。
 
-- @spd_majority: We will elect a Social-Democratic chairman, then.
-- @minority: No majority.
+- @spd_majority: 那么,我们将选出一位社会民主党主席。
+- @minority: 没有多数。
 
 @minority
 view-if: effective_spd_s < 50
@@ -535,15 +535,15 @@ for (var c of Q.candidates) {
 
 [? if nsdap_plurality_soviets : 目前纳粹领先。 ?]
 
-- @kpd_wins: The communists have been elected.
-- @sapd_wins: The SAPD has been elected.
-- @spd_wins: We have won!
-- @independent_wins: The independents have been elected.
-- @bourgeois_wins: The bourgeois have been elected.
-- @nsdap_wins: The Nazis have been elected.
-- @spd_campaign_hq: What can we do?
-- @other_forces: The other forces make their moves...
-- @round_ten: The congress deadlocks and elects a compromise candidate.
+- @kpd_wins: 共产党人当选了。
+- @sapd_wins: 社会主义工人党当选了。
+- @spd_wins: 我们赢了!
+- @independent_wins: 独立人士当选了。
+- @bourgeois_wins: 资产阶级代表当选了。
+- @nsdap_wins: 纳粹当选了。
+- @spd_campaign_hq: 我们能做什么?
+- @other_forces: 其他力量开始行动……
+- @round_ten: 大会陷入僵局,选出一位妥协人选。
 
 @kpd_wins
 view-if: communist_candidate >= 50
@@ -588,7 +588,7 @@ on-departure: spd_turn = 0
 
 [? if spd_turn : 我们正力图让自己的候选人当选主席。为此,我们必须与同样觊觎此位的其他派系结成同盟。 ?]
 
-- @court_kpd: Court the KPD.
+- @court_kpd: 争取共产党。
 - @court_sapd: Court the SAPD.
 - @court_unaffiliated: Court the unaffiliated.
 - @court_bourgeois: Court the bourgeois.

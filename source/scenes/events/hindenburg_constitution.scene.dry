@@ -61,7 +61,7 @@ on-arrival: spd_rebel = 1
 
 Clashes in the streets between the SA and the Reichsbanner escalate as the Stalhelm enters against our forces under the direction of the Harzburg Front. Communist fighters, emboldened by the chaos, enter the fray as well, and soon any semblance of law and order has collapsed as real control devolves to the clashing paramilitaries. In an attempt to salvage control of the situation Hitler attempts to deploy the Reichswehr and quell the fighting but this has only escalated things further as the ADGB prepares to call a general strike. Whether we want one or not, we have been forced into fighting a civil war.
 
-- @civil_war: It is a civil war.
+- @civil_war: 这就是内战。
 
 @results_unimpeded
 

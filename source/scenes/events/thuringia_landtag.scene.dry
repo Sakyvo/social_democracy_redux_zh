@@ -14,7 +14,7 @@ set-jump: thuringia_election_1928
 
 The Thuringian elections are to be held now.
 
-- @election_algorithm: May we do our best...
+- @election_algorithm: 愿我们尽力而为……
 
 @thuringia_election_1928
 on-arrival: {!

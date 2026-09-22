@@ -16,7 +16,7 @@ Finally, the internal contradictions of the NSDAP have caught up to it. With the
 
 [? if weimar_dissent >= 3 and weimar_plan_adopted == 1 : As the crisis diminishes, questions about the necessity of the Weimar Plan are beginning to spread amongst the Center Party. [? if z_party_leader == "Joos" : Joseph Joos is resisting these pushes, but his grip on the party may not be so strong. ?] ?]
 
-- @celebrate: This is an occasion to celebrate.
+- @celebrate: 这是个值得庆祝的时刻。
 - @complacency: The Nazis are still a threat. We must not be too complacent.
 
 @celebrate

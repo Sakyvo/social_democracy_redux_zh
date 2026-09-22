@@ -93,7 +93,7 @@ unavailable-subtitle: [? if kpd_relation < 50 : 我们与共产党的关系还�
 
 即便共产党人接受我们的支持,支持台尔曼在我党中也颇不受欢迎。你确定吗?
 
-- @support_thalmann_2: Yes, we will support Thälmann, despite the reformists' pleas against it.
+- @support_thalmann_2: 是的,尽管改良派恳求不要这样做,我们仍将支持台尔曼。
 - @candidate_menu: Who else can we support?
 
 @support_thalmann_2

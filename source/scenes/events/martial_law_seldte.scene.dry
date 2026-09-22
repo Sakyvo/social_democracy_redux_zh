@@ -23,7 +23,7 @@ The destruction of German democracy has begun, not at the hands of the Nazis but
 
 Party offices are raided by army and police forces. Our leaders are rounded up and arrested. Any and all of our reforms are undone, and a police state under the army's control is cemented. The Nazis have failed to take power, but we cannot take much comfort in the fact when a dictatorial fascist government rules all the same. Perhaps in the far future, we may have our moment in the sun once more. We will have a duty to do better then than we have now.
 
-- @game_over: Game over.
+- @game_over: 游戏结束。
 
 @fight_harzburg
 on-arrival: spd_rebel = 1

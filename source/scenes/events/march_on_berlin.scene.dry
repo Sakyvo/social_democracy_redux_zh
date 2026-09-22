@@ -91,7 +91,7 @@ on-arrival: nazi_rebel = 1 if spd_in_government = 1; spd_rebel = 1 if spd_in_gov
 
 Our forces confront the fascists on the streets of Berlin, and armed fighting erupts. Neither side is dislodged from their positions.
 
-- @civil_war: It is a civil war.
+- @civil_war: 这就是内战。
 
 
 @fight_constitution

@@ -20,7 +20,7 @@ on-arrival: spd_rebel = 1
 
 We mobilize our forces for an uprising against Seldte, and they are quickly met with units of the Harzburg Front and government.
 
-- @civil_war: It is a civil war.
+- @civil_war: 这就是内战。
 
 @submit
 on-arrival: rb_strength *= 0.9; kpd_relation -= 15; left_dissent += 10; neorevisionist_dissent += 10; rb_militancy *= 0.95; rfb_strength *= 0.8; workers_spd -= 3; workers_kpd -= 5; unemployed_nsdap += 5; sh_strength += 20; sa_strength += 40; new_middle_nsdap -= 5; old_middle_nsdap -= 5; nazi_peak_timer = 2; nazi_peak_timer += (nsdap_votes/5); sh_strength += 100; sa_strength -= 50; sh_militancy += 0.02; z_relation -= 5; dvp_relation -= 5; dvp_relation -= 5 if pro_republic < 45; workers_dnvp += 5; new_middle_dnvp += 10; old_middle_dnvp += 10; rural_dnvp += 10; unemployed_dnvp += 5; catholics_dnvp += 5; catholics_spd -= 5; socialism -= 6

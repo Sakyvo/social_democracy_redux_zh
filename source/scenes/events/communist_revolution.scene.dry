@@ -92,7 +92,7 @@ The initial phase of the action ends, and somehow, both sides remain standing.
 
 This will not be a quick coup, but a long civil war. The nation will destroy itself before it can be rebuilt again.
 
-- @game_over: Game over.
+- @game_over: 游戏结束。
 
 @true_kpd_victory
 view-if: not spd_revolution and (communist_strength*0.6) >= harzburg_strength
@@ -122,7 +122,7 @@ The initial phase of the action ends, and somehow, both sides remain standing.
 
 This will not be a quick coup, but a long civil war. The nation will destroy itself before it can be rebuilt again.
 
-- @game_over: Game over.
+- @game_over: 游戏结束。
 
 @kpd_crushed
 view-if: not spd_revolution and (harzburg_strength*0.6) >= communist_strength

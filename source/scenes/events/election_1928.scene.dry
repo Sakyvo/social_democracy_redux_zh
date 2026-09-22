@@ -14,7 +14,7 @@ set-jump: post_election_1928
 
 The Reichstag elections are to be held now.
 
-- @election_algorithm: May we do our best...
+- @election_algorithm: 愿我们尽力而为……
 - @cancel_elections
 #- @martial_law
 
@@ -435,7 +435,7 @@ on-arrival: secret_ending = 1
 
 The SAPD has won a majority. Wow. There envelops the SPD a sweeping sense of shame - what could we have possibly done to create such a powerful socialist movement, only to forsake it so greatly? This ending is quite the peculiar one, and necessarily implicates us in quite the great anti-worker travesties, yet simultaneously implicates us too in creating the conditions for such a sweeping socialist transformation. Was it worth it? Where did we go wrong, where did we go right?
 
-- @game_over: Game over.
+- @game_over: 游戏结束。
 
 @counterrevolution
 title: The counterrevolutionaries have won a majority.
@@ -473,7 +473,7 @@ on-arrival: reichswehr_militancy += 1 if reichswehr_militancy < 4; kpd_relation 
 
 We have launched an uprising with the KPD, to defend socialism. 
 
-- @civil_war: It is a civil war.
+- @civil_war: 这就是内战。
 
 @ggsbro
 
@@ -502,7 +502,7 @@ You're right. They just passed some progressive laws and did some privatizations
 
 You should've seen the look on your face, though.
 
-- @game_over: Game over.
+- @game_over: 游戏结束。
 
 @national_front_coalition
 title: A "National Front" coalition
@@ -653,7 +653,7 @@ President Braun faces a dilemma. Is it "democratic" to let democracy be destroye
 Alternatively, Braun could use the emergency powers of the presidency. Article 48 has been used by Hindenburg to promulgate anti-democratic and anti-worker policies; can Article 48 be used for good as well as evil?
 
 - @emergency_braun: We will form an emergency government with [+ president +]'s support.
-- @new_elections: We will have new elections.
+- @new_elections: 我们将举行新的选举。
 - @new_elections_2: We will have new elections.
 - @far_right_win: Let the Nazis form their government.
 
@@ -904,7 +904,7 @@ view-if: not achievement_postal_sylvan or not achievement_antifa_sylvan or not a
 
 The timeline ends itself out of second-hand embarassment, sparing us from certain death and destruction.
 
-- @game_over: Game over.
+- @game_over: 游戏结束。
 
 @gold_trigon
 view-if: achievement_antifa_sylvan and achievement_capital_sylvan and achievement_postal_sylvan
@@ -986,7 +986,7 @@ We proudly and defiantly tell Doraemon that we are NOT budging. We will HOLD THE
 
 So I guess we're waiting for the Nazis to show up now.
 
-- @wait: Wait.
+- @wait: 等等。
 - @leave2: Okaylet'sjustgo
 
 @wait
@@ -1037,7 +1037,7 @@ subtitle: [? if times_waited >= 6 : What's taking them so long? ?]
 [? if times_waited == 1000 : Psyche! ?]
 [? if times_waited >= 1001 : Not really. ?]
 
-- @wait: Wait.
+- @wait: 等等。
 - @leave2: Okaylet'sjustgo
 
 @leave2
@@ -1060,7 +1060,7 @@ We step out the time machine, noticing... huh. Something seems a little off. Dif
 
 On your way back you're apprehended by SA and killed. 
 
-- @game_over: Game over.
+- @game_over: 游戏结束。
 
 @okay_now_what
 subtitle: Is Hitler dead?
@@ -1069,7 +1069,7 @@ As the gunfight subsides and our deputies cautiously peek their heads back out, 
 
 Germany is lost, after all. And so is the world, as Hitler goes on to triumph over the Allied powers and extend his dictatorship over all of Earth.
 
-- @game_over: Game over.
+- @game_over: 游戏结束。
 
 @enabling_act_passed2
 
@@ -1077,7 +1077,7 @@ Despite our best efforts...the Enabling Act has passed with [+ enabling_r +]% of
 
 Germany is lost.
 
-- @game_over: Game over.
+- @game_over: 游戏结束。
 - @fight_enabling: We can still stop Hitler! Mobilize the Reichsbanner.
 
 @fight_enabling
@@ -1390,7 +1390,7 @@ on-arrival: chancellor_party = "KPD"; chancellor = "Thälmann"
 
 The Communists quickly rebuild Germany in the Soviet image, bringing it into their sphere and rooting out reactionaries and liberals alike. The fascists have been successfully kept away from power, but are the communists really so much better? This is a question that has been debated within our party for a while, and only the next few years can tell.
 
-- @game_over: Game over.
+- @game_over: 游戏结束。
 
 # todo: playable thalmann chancellorship
 
@@ -1442,7 +1442,7 @@ on-arrival: chancellor = "Luther"; chancellor_party = "I"
 There is no path to an obviously workable majority. President [+ president +] has given Hans Luther, Reichsbank director formerly of the DVP, the task of forming a government, tired of Brüning's repeated failures to govern and hoping that Hans Luther would be able to gain broad Reichstag support.
 
 - @toleration_luther: We will tolerate Luther.
-- @new_elections: We will have new elections.
+- @new_elections: 我们将举行新的选举。
 - @new_elections_2: We will have new elections.
 
 @toleration_luther
@@ -1458,7 +1458,7 @@ on-arrival: chancellor = "Külz"; chancellor_party = ddp_name
 There is no path to an obviously workable majority. President Gessler has given Wilhelm Külz, member of the [+ ddp_name +], the task of forming a government, tired of Brüning's repeated failures to govern and hoping to gain our backing.
 
 - @toleration_kulz: We will tolerate Külz.
-- @new_elections: We will have new elections.
+- @new_elections: 我们将举行新的选举。
 - @new_elections_2: We will have new elections.
 
 @toleration_kulz
@@ -1514,7 +1514,7 @@ on-arrival: chancellor = "Stegerwald"; chancellor_party = "Z"
 There is no path to an obviously workable majority. President Adenauer has given Adam Stegerwald of the Center Party's right-wing the task of forming a government, tired of Brüning's repeated failures to govern and hoping that Stegerwald would be able to win over support from the far-right. For better or worse, it seems that this has failed, with the far-right unwilling or unable to back Stegerwald. Now the task falls on us to decide the fate of Stegerwald's government.
 
 - @toleration_stegerwald: We will tolerate Stegerwald.
-- @new_elections: We will have new elections.
+- @new_elections: 我们将举行新的选举。
 - @new_elections_2: We will have new elections.
 
 @toleration_stegerwald
@@ -1530,7 +1530,7 @@ on-arrival: chancellor = "Brüning"; chancellor_party = "Z"
 There is no path to an obviously workable majority. President [+ president +] has given Heinrich Brüning of the Center Party the task of forming a government. As the bourgeois parties lack a majority on their own, the task falls on us to decide the fate of Brüning's government.
 
 - @toleration_bruning: We will tolerate Brüning.
-- @new_elections: We will have new elections.
+- @new_elections: 我们将举行新的选举。
 - @new_elections_2: We will have new elections.
 
 @wirth_lead
@@ -1541,7 +1541,7 @@ on-arrival: chancellor = "Wirth"; chancellor_party = "Z"; wirth_lead = 1
 There is no path to an obviously workable majority. President Adenauer has given Joseph Wirth of the Center Party the task of forming a government, tired of Brüning's repeated failures to govern and hoping that Wirth would be able to win over our support. Now the question remains, can he?
 
 - @toleration_wirth: We will tolerate Wirth.
-- @new_elections: We will have new elections.
+- @new_elections: 我们将举行新的选举。
 - @new_elections_2: We will have new elections.
 
 @black_brown
@@ -1687,7 +1687,7 @@ on-arrival: schleicher_victory = 1
 
 Having successfully cobbled together an odd mismatch across the political spectrum, Schleicher has won the vote of no confidence against him pushed by the energetic KPD. With the political machine of the DNE behind him, Hindenburg's trust, and the tenuous support of the Reichswehr, Schleicher's future is secure. Hitler has lost, but at what cost?
 
-- @game_over: Game over.
+- @game_over: 游戏结束。
 
 @no_majority_marx
 title: There is no clear governing majority.
@@ -1864,7 +1864,7 @@ unavailable-subtitle: Wilhelm Marx is not willing to appoint Wirth.
 Wilhelm Marx has appointed Joseph Wirth as head of a minority government.
 
 - @toleration_wirth: We will tolerate Wirth.
-- @new_elections: We will have new elections.
+- @new_elections: 我们将举行新的选举。
 - @new_elections_2: We will have new elections.
 
 
@@ -1876,7 +1876,7 @@ There is no path to an obviously workable majority. Since President Marx does no
 
 - @toleration_bruning: We will tolerate Brüning.
 - @new_grand_coalition: We will try to form a new grand coalition.
-- @new_elections: We will have new elections.
+- @new_elections: 我们将举行新的选举。
 - @new_elections_2: We will have new elections.
 
 @no_majority
@@ -1896,7 +1896,7 @@ With health issues plaguing Ernst Scholz and his seeming inability to command a 
 
 - @toleration_bruning: We will tolerate Brüning.
 - @new_grand_coalition: We will try to form a new grand coalition.
-- @new_elections: We will have new elections.
+- @new_elections: 我们将举行新的选举。
 - @new_elections_2: We will have new elections.
 
 @no_majority_bruning_back
@@ -1906,7 +1906,7 @@ With the Reichstag still lacking a majority for Papen, and the failure of Hitler
 
 - @toleration_bruning: We will tolerate Brüning.
 - @new_grand_coalition: We will try to form a new grand coalition.
-- @new_elections: We will have new elections.
+- @new_elections: 我们将举行新的选举。
 - @new_elections_2: We will have new elections.
 
 @no_majority_nsdap
@@ -1980,7 +1980,7 @@ The destruction of German democracy has begun, not at the hands of the Nazis but
 
 Party offices are raided by army and police forces. Our leaders are rounded up and arrested. Any and all of our reforms are undone, and a police state under the army's control is cemented. The Nazis have failed to take power, but we cannot take much comfort in the fact when a dictatorial fascist government rules all the same. Perhaps in the far future, we may have our moment in the sun once more. We will have a duty to do better then than we have now.
 
-- @game_over: Game over.
+- @game_over: 游戏结束。
 
 
 @no_majority_spd
@@ -1990,7 +1990,7 @@ There is no path to an obviously workable majority. Since President Hindenburg i
 
 - @toleration_bruning: We will tolerate Brüning.
 - @new_grand_coalition: We will try to form a new grand coalition.
-- @new_elections: We will have new elections.
+- @new_elections: 我们将举行新的选举。
 - @new_elections_2: We will have new elections.
 
 @no_majority_hitler
@@ -2092,7 +2092,7 @@ The third option is to have new elections.
 
 - @toleration_bruning: We will tolerate Brüning.
 - @new_grand_coalition: We will try to form a new grand coalition.
-- @new_elections: We will have new elections.
+- @new_elections: 我们将举行新的选举。
 - @new_elections_2: We will have new elections.
 - @unity_government
 
@@ -2364,7 +2364,7 @@ view-if: president == "Braun" or president == "Schumacher" or president == "Juch
 President [+ president +] faces a dilemma. [? if president == "Braun" or president == "Schumacher" : He ?][? if president == "Juchacz" : She ?] desperately desires a socialist or at least democratic government, but the electoral results are not there for such. Article 48 has been used by Hindenburg to promulgate anti-democratic and anti-worker policies; can Article 48 be used for good as well as evil?
 
 - @emergency_braun: We will form an emergency government with [+ president +]'s support.
-- @new_elections: We will have new elections.
+- @new_elections: 我们将举行新的选举。
 - @new_elections_2: We will have new elections.
 - @new_grand_coalition
 - @left_coalition
@@ -2620,7 +2620,7 @@ The Center chancellor is likely to be Heinrich Brüning of the Center Party [? i
 
 Brüning is not opposed to a coalition with us. Alternatively, we could enter a "toleration" agreement.
 
-- @join_bruning: Join the Brüning coalition.
+- @join_bruning: 加入布吕宁的联盟。
 - @bruning_oppo: Join the opposition.
 - @toleration_bruning: We will "tolerate" a minority Brüning government.
 - @unity_government
@@ -2639,7 +2639,7 @@ By refusing to join the grand coalition or tolerating it, we essentially throw t
 
 If we do not at least "tolerate" the government, there will be new elections in a few months. In the meantime, the President and Chancellor may use the emergency powers granted by Article 48 of the constitution to essentially govern by decree. And it is not at all clear that we will do any better in the next election.
 
-- @join_bruning: Join the Brüning coalition.
+- @join_bruning: 加入布吕宁的联盟。
 - @toleration_bruning: We will tolerate Brüning after all.
 - @brauns_dilemma
 - @new_elections: New elections, it is!

@@ -17,14 +17,14 @@ set-jump: pres_election
 
 @pres_election
 
-- @support_braun: Run Otto Braun.
-- @support_braun2: Run Otto Braun.
-- @support_schumacher: Run Kurt Schumacher.
-- @support_wirth: Support Joseph Wirth.
+- @support_braun: 推举奥托·布劳恩。
+- @support_braun2: 推举奥托·布劳恩。
+- @support_schumacher: 推举库尔特·舒马赫。
+- @support_wirth: 支持约瑟夫·维尔特。
 - @support_thalmann: Support Ernst Thälmann.
-- @support_munzenberg: Support Willi Münzenberg.
-- @support_gessler: Support Otto Gessler.
-- @support_adenauer: Support Konrad Adenauer.
+- @support_munzenberg: 支持维利·明岑贝格。
+- @support_gessler: 支持奥托·格斯勒。
+- @support_adenauer: 支持康拉德·阿登纳。
 
 @support_braun2
 view-if: (old_braun or not spd_prussia) and achievement_megatome
@@ -32,9 +32,9 @@ subtitle: He's sleepy, but we can use the Megatome to enter his dreams.
 
 我们渐渐睡去……
 
-- @dream: We have a nice dream.
-- @prospit: ...and wake up on Prospit.
-- @derse: ...and wake up on Derse.
+- @dream: 我们做了一个好梦。
+- @prospit: ……在普罗斯皮特醒来。
+- @derse: ……在德尔斯醒来。
 
 @dream
 view-if: not bright_moon and not dark_moon
@@ -58,7 +58,7 @@ elements.forEach(el => {
 
 我们在一个金光闪烁的星球上醒来,它环绕着一个看起来像天空的巨大物体运行,我们凭直觉知道它叫斯凯亚。从当地人 —— 一种奇特的、棋子形状、社会以棋类为基础的物种 —— 那里我们得知,这里是普罗斯皮特,即光之王国。它与黑暗王国,也就是德尔斯,已经交战了很久很久很久。那个巨大的蓝色之物,我们从他们那里得知 —— 尽管凭直觉的力量我们早已知道 —— 就是斯凯亚。
 
-- @miracles: We are here to awaken a time of miracles.
+- @miracles: 我们来到这里,是为了唤醒一个奇迹的时代。
 
 @miracles
 
@@ -104,7 +104,7 @@ on-arrival: z_relation += 5
 
 约瑟夫·维尔特经过一番考虑,同意作为魏玛派候选人竞选连任,并得到我们、[+ ddp_name +],当然还有中央党的支持。
 
-- @final_election: The final results...
+- @final_election: 最终结果……
 
 @support_thalmann
 subtitle: Thälmann is very unpopular among the reformists.
@@ -114,15 +114,15 @@ unavailable-subtitle: [? if kpd_relation < 50 : 我们与共产党的关系还�
 
 即便共产党人接受我们的支持,支持台尔曼在我党中也颇不受欢迎。你确定吗?
 
-- @support_thalmann_2: Yes, we will support Thälmann, despite the reformists' pleas against it.
-- @pres_election: Support someone else.
+- @support_thalmann_2: 是的,尽管改良派恳求不要这样做,我们仍将支持台尔曼。
+- @pres_election: 支持其他人选。
 
 @support_thalmann_2
 on-arrival: spd_support_thalmann = 1; reformist_dissent += 15; center_dissent += 10; labor_dissent += 5; neorevisionist_dissent += 10; catholics_spd -= 5; workers_spd -= 3; kpd_relation += 10; communist_coalition += 2; z_relation -= 15; dvp_relation -= 15; ddp_relation -= 10; weimar_dissent += 3; wirth_campaign = 0; motivate_adenauer = 1 if z_relation < 50 and president == "Wirth"; adenauer_campaign = 1 if z_relation < 50
 
 好。我们把支持投给了共产党的主席台尔曼。
 
-- @final_election: The final results...
+- @final_election: 最终结果……
 
 @support_munzenberg
 subtitle: Supporting Münzenberg is unpopular among the reformists, but less so than Thälmann would've been.
@@ -133,7 +133,7 @@ on-arrival: spd_support_munzenberg = 1; kpd_relation += 5; reformist_dissent += 
 
 我们表态支持共产党的维利·明岑贝格。
 
-- @final_election: The final results...
+- @final_election: 最终结果……
 
 @support_gessler
 subtitle: Otto Gessler is running as the DVP's candidate.
@@ -142,7 +142,7 @@ on-arrival: left_dissent += 5; spd_support_gessler = 1; z_support_gessler = 1 if
 
 We have endorsed Otto Gessler of the Bürgerblock. [? if z_relation >= 45 : 中央党随即跟进。 ?]
 
-- @final_election: The final results...
+- @final_election: 最终结果……
 
 @support_adenauer
 subtitle: Konrad Adenauer may run as the Center Party's candidate.
@@ -151,7 +151,7 @@ on-arrival: spd_support_adenauer = 1; adenauer_campaign = 1
 
 我们表态支持中央党的康拉德·阿登纳。
 
-- @final_election: The final results...
+- @final_election: 最终结果……
 
 ## todo: center support should be based on risks, so Z backs gessler alongside SPD if KPD strong, runs with SPD if DNVP/DVP strong, otherwise runs alone even if good relations
 
@@ -159,7 +159,7 @@ on-arrival: spd_support_adenauer = 1; adenauer_campaign = 1
 
 - @convince_z: Can we sway the Center Party?
 - @convince_kpd: Can we convince the KPD?
-- @final_election: The final results...
+- @final_election: 最终结果……
 
 @convince_z
 view-if: ((not z_support_braun and braun_campaign) or (not z_support_schumacher and schumacher_campaign)) and not zca_formed
@@ -196,7 +196,7 @@ unavailable-subtitle: 共产党不愿被说服。
 
 共产党目前并不支持我们的候选人,但愿意被说服。
 
-- @use_relations: Use our relations.
+- @use_relations: 动用我们的关系。
 - @pay_kpd: Promise to front the resources needed for a joint campaign.
 - @appeal_hergt_2: Appeal to the threat of Oskar Hegt's election.
 - @spd_presidential: Find another party to support us.

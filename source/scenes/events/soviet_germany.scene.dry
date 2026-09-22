@@ -191,7 +191,7 @@ A party congress is called, uniquely with the purpose of adopting a new party pr
 
 In the following days, the process of reunification is completed, this time under the banner of the "Socialist Unity Party". Revisionist influences are expelled, and opposition parties suppressed. The fate of Germany is sealed under the direction of the SED. Let us hope it is a good one.
 
-- @game_over: Game over.
+- @game_over: 游戏结束。
 
 @kpd
 view-if: not socialist_unity
@@ -200,4 +200,4 @@ Eventually, our luck runs out. The Communists ban all opposition parties, includ
 
 The KPD has won the privilege of writing Germany's future. All we can do now is hope that the future they write will be a good one.
 
-- @game_over: Game over.
+- @game_over: 游戏结束。

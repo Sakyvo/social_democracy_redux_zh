@@ -35,8 +35,8 @@ The Communist foreign ministry condemns Italian aggression and colonialism, thou
 
 With our control of the Foreign Ministry, it is up to us to control Germany's position through the Abysinnia Crisis. [? if west_relation >= 2 : Luckily, France does not see us as much of a threat, so they are likely to focus more on Italy. ?]
 
-- @hardline: Demand an end to Italy's military buildup and side with Ethiopia.
-- @mediate: Agree with the consensus and absolve both sides of responsibility.
+- @hardline: 要求意大利停止军事集结,并站在埃塞俄比亚一边。
+- @mediate: 同意共识,免除双方的责任。
 
 @hardline
 subtitle: [? if eu : We can use the European Union to pressure Italy into backing down. ?][? if not eu : We can work with France and Britain to sanction Italy should they refuse. ?]

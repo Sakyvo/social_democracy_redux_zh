@@ -17,4 +17,4 @@ subtitle: It's time for a civil war showdown.
 
 We mobilize the Reichsbanner to meet the SA in the streets as the Reichswehr is called out of its barracks to fight us. [? if judicial_reform >= 2 : The courts strike down the martial law, handing us legitimacy. ?][? if judicial_reform < 2 : The courts certify the martial law, but we know they're illegitimate. ?]
 
-- @civil_war: It is a civil war.
+- @civil_war: 这就是内战。

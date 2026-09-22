@@ -9,7 +9,7 @@ max-visits: 1
 
 The Nazi SA is planning a march through Altona, a working-class neighborhood of Hamburg known for its high working-class population. Altona is a Communist stronghold, and the planned march will almost certainly lead to violent conflict.
 
-- @ban_march: Ban the march before it starts.
+- @ban_march: 在游行开始前予以禁止。
 - @allow_police: Allow the march, with a heavy police presence.
 - @allow_no_police: Allow the march without a police presence.
 

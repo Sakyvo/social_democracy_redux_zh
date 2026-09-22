@@ -23,7 +23,7 @@ Is there anything we could do?
 - @eu_sanctions: Call upon the European Union to sanction Austria, unless the National Council is restored.
 - @diplomatic_pressure: Apply diplomatic pressure to Austria to restore the National Council.
 - @fund_schutzbund: Support the SDAPÖ's underground organizing.
-- @nothing: Nothing can be done.
+- @nothing: 无能为力。
 
 @eu_sanctions
 view-if: eu = 1

@@ -12,7 +12,7 @@ Changing the leadership of the party is painful, but perhaps it is necessary to 
 Removing advisors will increase dissent from their faction of the party, while selecting advisors will increase a faction's strength and reduce their dissent.
 
 - @rm_main: Remove advisors
-- @add_advisors: Add advisors
+- @add_advisors: 添加顾问
 - @remove_none: Don't change advisors.
 - @easy_discard
 
@@ -25,7 +25,7 @@ tags: center_advisor, left_advisor, reformist_advisor, labor_advisor, neorev_adv
 frequency: 1
 
 - #remove_advisor
-- @add_advisors: Add advisors
+- @add_advisors: 添加顾问
 
 @remove_none
 title: Stop changing advisors.
