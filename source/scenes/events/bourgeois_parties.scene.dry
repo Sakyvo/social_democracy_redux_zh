@@ -10,9 +10,9 @@ Q.next_party_time = (Q.time + (Math.floor(Math.random() * 6) + 1) + (Math.floor(
 !}
 max-choices: 1
 
-= The Weimar Party System
+= 魏玛政党体系
 
-Germany has many political parties, and each is an active player in the political arena, dedicated to furthering the interests of its primary backers and ideological proponents. To this end, they continue to make active decisions.
+德国有许多政党,每一个都是政治舞台上的活跃参与者,致力于推进其主要支持者与意识形态倡导者的利益。为此,它们继续主动作出决策。
 
 - @kpd: The Communist Party of Germany.
 - @sapd: The Socialist Workers' Party of Germany.
@@ -27,13 +27,13 @@ Germany has many political parties, and each is an active player in the politica
 subtitle: Revolutionary Marxist-Leninists dedicated to the overthrow of capitalism through force of arms.
 max-choices: 1
 
-[? if kpd_r >= 20 : The KPD is a dominant party in German politics, shaping decisions with significant weight, especially when compared to its historical fortunes as a party on the fringe facing constant persecution. ?]
+[? if kpd_r >= 20 : 共产党是德国政治中的主导政党,其决策影响举足轻重 —— 尤其是与它历史上作为边缘政党、屡遭迫害的处境相比。 ?]
 
-[? if kpd_r >= 10 and kpd_r < 20 : The KPD is a major player in German politics. It is not a leading party by any measure, but it has its influence and exerts it well. ?]
+[? if kpd_r >= 10 and kpd_r < 20 : 共产党是德国政治中的一支重要力量。无论从哪方面说它都算不上主导政党,但它有自己的影响力,并且运用得宜。 ?]
 
-[? if kpd_r >= 5 and kpd_r < 10 : The KPD is in a sorry state, but by no means moribund. It retains a base and an apparatus with which it intends and hopes to ultimately rebound and overcome all obstacles laid out by reaction. ?]
+[? if kpd_r >= 5 and kpd_r < 10 : 共产党的处境不佳,但绝非奄奄一息。它仍保有基础与组织机器,打算并希望最终东山再起,克服反动派设下的一切障碍。 ?]
 
-[? if kpd_r < 5 : The KPD has fallen into moribundance, faced with the possibility of irrelevance and destitution. It will do its best to resist this fate. ?]
+[? if kpd_r < 5 : 共产党已陷入衰败,面临无足轻重、一贫如洗的可能。它会竭力抗拒这一命运。 ?]
 
 - @kpd_workers: The Communists campaign amongst the workers.
 - @kpd_unemployed: The Communists campaign amongst the unemployed.
@@ -50,65 +50,65 @@ frequency: 200
 view-if: not kpd_banned
 on-arrival: workers_kpd += 3*(socialism/100); workers_spd -= 3*(left_dissent/100); workers_kpd += 2*(left_dissent/100) if not sapd_consolidated
 
-The Communists launch a campaign amongst the workers, aiming to increase their support amongst a key demographic to them.
+共产党人在工人中展开宣传,力求在他们眼中至关重要的人群中提升支持。
 
 @kpd_unemployed
 frequency: 200
 view-if: not kpd_banned
 on-arrival: unemployed_kpd += 9*(socialism/100); unemployed_nsdap -= 5*(1-bourgeois_power); unemployed_nsdap -= 3*(socialism/100);
 
-The Communists campaign amongst the unemployed, more susceptible to radicalization given their intense precarity and disempowerment by capitalism.
+共产党人在失业者中开展宣传 —— 由于处境极度不稳、被资本主义剥夺了权力,这些人更容易走向激进化。
 
 @kpd_third_period
 frequency: 100
 view-if: (third_period or year <= 1935) and kpd_relation < 50 and not kpd_banned
 on-arrival:  workers_spd -= 4*(left_dissent/100); workers_kpd += 3*(left_dissent/100); unemployed_spd -= 6*(left_dissent/100); unemployed_kpd += 6*(left_dissent/100); workers_kpd -= 3*(left_strength/100); unemployed_kpd -= 6*(left_strength/100); kpd_relation -= 5; socialism -= 1
 
-The Communists campaign on their third period slogan, assaulting Social Democracy as the left-wing of fascism and calling for the workers to reject us.
+共产党人打着他们「第三时期」的口号开展宣传,抨击社会民主是法西斯的左翼,并号召工人拒绝我们。
 
 @kpd_united_left
 frequency: 100
 view-if: kpd_relation >= 65 and left_strength > reformist_strength and not third_period and not kpd_banned
 on-arrival: socialism += (kpd_relation/100); workers_kpd += 5*(socialism/100); workers_spd -= 2*(left_dissent/100); unemployed_kpd += 5*(socialism/100); unemployed_spd -= 3*(left_dissent/100)
 
-The Communists rally for the united front, organizing alongside our organizations to fight in the daily struggles of the workers.
+共产党人为统一战线而集会,与我们的组织并肩协作,投身工人日常的斗争。
 
 @kpd_relations
 frequency: 50
 view-if: ((kpd_party_leader == "Conciliators" or kpd_relation >= (100-nsdap_votes-left_strength)) and left_strength > left_dissent) and kpd_relation < socialism
 on-arrival: kpd_relation += 3; left_strength += 6
 
-The Communists have reached out to us, seeking to build a broader socialist front and collaborate, reconciling our divides.
+共产党人主动接触我们,寻求建立更广泛的社会主义阵线、展开协作,弥合彼此的分歧。
 
 @rfb
 frequency: 50
 view-if: not rfb_banned or communist_coalition < 3
 on-arrival: rfb_strength += kpd_votes; rfb_militancy += ((kpd_votes/1000)+0.02)
 
-The Communists funnel funding to the RFB, helping it arm and gear up for the eventual revolutionary confrontation.
+共产党人向 RFB 输送资金,帮它武装、装备起来,以备最终的革命对决。
 
 @sabotage
 frequency: 25
 view-if: kpd_banned or (kpd_votes >= kpd_relation+socialism and kpd_votes < (economic_growth*2))
 on-arrival: workers_kpd -= economic_growth if economic_growth > 0; economic_growth -= (workers_kpd_normalized/100)
 
-The Communists dedicate themselves to a campaign of sabotage, seeking to slow down the economy through illegal strikes and other more direct forms of sabotage. This isolates them from the broader masses of the workers.
+共产党人投身破坏活动,试图通过非法罢工及其他更直接的破坏手段拖慢经济。这使他们与更广大的工人群众隔绝开来。
 
 @insurrection
 frequency: 150
 view-if: (chancellor_party == "NSDAP" or chancellor_party == "DNVP" or (third_period and kpd_relation < 0 and in_emergency_government) or kpd_banned) and rfb_force >= 1
 on-arrival: strife += 1; rfb_militancy += 0.05; rfb_strength -= (sa_strength/100)*(sa_militancy); sa_strength -= (rfb_strength/100)*(rfb_militancy); reichswehr_militancy -= (rfb_militancy*rfb_militancy); workers_kpd -= 6*(pro_republic/100)
 
-The Communists engage in insurrectionary activity, compelling the RFB to intensified streetfighting and insurgency-level activities. 
+共产党人从事暴动活动,迫使 RFB 加剧街头战斗与暴动级别的行动。
 
 @sapd
 subtitle: Centrist Marxists dedicated to the building of a united proletarian front to lead the rupture with capital.
 view-if: sapd_formed
 max-choices: 1
 
-[? if not sapd_consolidated : The SAPD remains more of a pressure group than a true party of its own, though this could change through consolidation if we are not careful. ?]
+[? if not sapd_consolidated : 社会主义工人党与其说是一个独立的真正政党,不如说仍是个压力团体 —— 不过若我们不慎,它可能通过整合而改变这一点。 ?]
 
-[? if sapd_consolidated : The SAPD has grown into a large party of its own, threatening constantly to tear supporters from our left flank should we fail in delivering to the workers. ?]
+[? if sapd_consolidated : 社会主义工人党已成长为一个自己的大党;若我们不能为工人兑现承诺,它就会不断威胁着要从我们的左翼拉走支持者。 ?]
 
 - @sapd_workers: The Socialists campaign amongst the workers.
 - @sapd_unemployed: The Socialists campaign amongst the unemployed.
@@ -122,60 +122,60 @@ max-choices: 1
 frequency: 200
 on-arrival: workers_sapd += 3*(socialism/100); workers_sapd += 3*(socialism/100) if sapd_consolidated; workers_kpd -= 3*(pro_republic/100) if third_period and kpd_relation < left_strength and sapd_consolidated; workers_spd -= 3*(unemployed/100) if (spd_in_government or spd_toleration) and sapd_consolidated
 
-The SAPD campaigns amongst the workers, seeking to assert itself as the right socialist party for the task of building socialism in Germany, as opposed to us timid Social Democrats and intransingient Communists.
+社会主义工人党在工人中开展宣传,力图把自己确立为在德国建设社会主义的「正确」社会主义政党 —— 以区别于我们这些怯懦的社会民主党人与固执的共产党人。
 
 @sapd_unemployed
 frequency: 100
 on-arrival: unemployed_sapd += 1*(socialism/50); unemployed_sapd += 3*(socialism/100) if sapd_consolidated; unemployed_sapd += 3*(1-(unemployed_sapd_normalized/100)) if sapd_consolidated; unemployed_kpd -= 2*(pro_republic/100) if third_period and kpd_relation < left_strength and sapd_consolidated; unemployed_spd -= 3*(unemployed/100) if (spd_in_government or spd_toleration) and sapd_consolidated
 view-if: unemployed >= 10
 
-The SAPD campaigns amongst the unemployed, attempting to break the traditional dominance of the communists amongst the demographic in favor of its vision of socialism.
+社会主义工人党在失业者中开展宣传,试图打破共产党人在这一人群中传统的支配地位,转而支持它对社会主义的构想。
 
 @sapd_new_middle
 frequency: 50
 view-if: new_middle_conscious or socialism >= 55 or peoples_party
 on-arrival: new_middle_sapd += 2*(socialism/100)*(1-bourgeois_power); new_middle_spd += 4*(socialism/100)*(1-bourgeois_power) if sapd_consolidated
 
-The SAPD campaigns amongst the new middle class, attempting to influence the white collar workers towards its vision for socialism with limited success.
+社会主义工人党在新中间阶层中开展宣传,试图把白领工人引向它对社会主义的构想,但成效有限。
 
 @sapd_rural
 frequency: 25
 view-if: land_reform >= 3 
 on-arrival: rural_sapd += land_reform*(socialism/200)*(1-bourgeois_power); rural_sapd += land_reform*(socialism/100)*(1-bourgeois_power) if sapd_consolidated
 
-The SAPD campaigns in the German countryside, attempting to unite the rural workers with their urban counterparts to limited success. 
+社会主义工人党在德国乡间开展宣传,试图让乡村劳动者与城市同伴联合起来,但成效有限。
 
 @sapd_united_frontism
 frequency: 100
 view-if: kpd_relation < socialism
 on-arrival: kpd_relation += (socialism/100); left_strength += (socialism/100)
 
-The SAPD campaigns for a united front, seeking to bolster the wings in favor of such in both our party as well as the Communist one.
+社会主义工人党为统一战线展开宣传,力图在我党与共产党内部都壮大支持这一主张的力量。
 
 @sapd_centrists
 frequency: 150
 view-if: not centrists_resigned
 on-arrival: center_dissent += (1+sapd_votes)
 
-The SAPD attempts to convince Centrist organizers in the SPD to defect, and bring their skills with them to help turn the party into a greater and grander force.
+社会主义工人党试图说服社民党中的中间派组织者倒戈,带着他们的本领过来,帮助该党成为一支更强大、更宏大的力量。
 
 @sapd_labor
 frequency: 150
 view-if: not unions_independent
 on-arrival: labor_dissent += (1+sapd_votes)
 
-The SAPD attempts to convince the trade unions in the SPD to defect, and bring their organized workers with them to help turn the party into a greater and grander force.
+社会主义工人党试图说服社民党中的工会倒戈,带着他们组织起来的工人过来,帮助该党成为一支更强大、更宏大的力量。
 
 @ddp
 subtitle: Liberals of a more republican and left-wing orientation.
 max-choices: 1
 view-if: not ddp_banned
 
-[? if ddp_r >= 10 : The [+ ddp_name +] has seen surprising success, blooming into a capable mass party of its own right. ?]
+[? if ddp_r >= 10 : [+ ddp_name +] 取得了出人意料的成功,绽放为一个有能力的大众政党。 ?]
 
-[? if ddp_r >= 5 and ddp_r < 10 : The [+ ddp_name +] has become a minor but relevant party, able to swing key votes and mobilize support for or against crucial policies from time to time. Still, its relevance has fallen, and it has to fight hard to avoid moribundance. ?]
+[? if ddp_r >= 5 and ddp_r < 10 : [+ ddp_name +] 已成一个虽小却仍有分量的政党,时而能在关键表决中左右票数、为重大政策争取或动员支持。不过,它的重要性已经下降,必须奋力挣扎才能避免衰亡。 ?]
 
-[? if ddp_r < 5 : The [+ ddp_name +] has fared poorly in recent times, faced with increasing polarization and radicalization. Perhaps one day, it will claw its way back from being moribund. ?]
+[? if ddp_r < 5 : [+ ddp_name +] 近来表现不佳,面对着日益加剧的两极分化与激进化。或许有一天,它能从濒死状态中挣扎着爬回来。 ?]
 
 - @ddp_workers: The Democrats campaign amongst the workers.
 - @ddp_new_middle: The Democrats campaign amongst the new middle class.
@@ -189,79 +189,79 @@ frequency: 50
 view-if: ((socialism/100) < bourgeois_power) or ddp_socialist
 on-arrival: workers_ddp += 3*bourgeois_power*(1-(socialism/100)); workers_ddp += 3*bourgeois_power*(ddp_relation/100); workers_spd -= 3*(left_strength/100)*(1-(socialism/100))*bourgeois_power; workers_ddp += 1 if ddp_name == "RDP"
 
-The Democrats increase their campaigning amongst the workers, attempting to break socialist domination in the working class.
+民主党人加强在工人中的宣传,试图打破社会主义在工人阶级中的支配地位。
 
 @ddp_new_middle
 frequency: 200
 on-arrival: new_middle_ddp += 6*(pro_republic/100)*bourgeois_power; new_middle_spd -= 3*(1-(socialism/100)) if not new_middle_conscious; new_middle_nsdap -= 3*(pro_republic/100)*(1-(nationalism/100)); new_middle_ddp += 1 if ddp_name == "DDP"
 
-The Democrats campaign amongst the new middle class, shoring up their support amongst white collar professionals as defenders of liberalism. 
+民主党人在新中间阶层中开展宣传,作为自由主义的捍卫者,巩固他们在白领专业人士中的支持。
 
 @ddp_old_middle
 frequency: 100
 view-if: nationalism < pro_republic
 on-arrival: old_middle_ddp += 3*(pro_republic/100)*(1-(nationalism/100)); old_middle_ddp += 1 if ddp_name == "DStP"
 
-The Democrats campaign amongst the old middle class, intent on turning even the frequently reactionary shopkeeping class towards left liberalism in this time of republican stabilization.
+民主党人在旧中间阶层中开展宣传,意图在这个共和国走向稳定的时期,连那些往往反动的店主阶层也引向左翼自由主义。
 
 @ddp_rural
 view-if: land_reform 
 frequency: 50
 on-arrival: rural_ddp += land_reform*bourgeois_power; rural_nsdap -= land_reform*(pro_republic/100); rural_dnvp -= land_reform*(pro_republic/100)*(1-(nationalism/100))
 
-The Democrats campaign amongst the countryside, attempting to build an agrarian wing given the gradually more progressive inclination of farmers thanks to land reform programs.
+民主党人在乡间开展宣传,鉴于土地改革计划使农民渐渐倾向进步,试图建立一支农业翼。
 
 @ddp_democracy
 view-if: pro_republic < nationalism
 frequency: 100
 on-arrival: nationalism -= ddp_votes*(1-(pro_republic/100)); pro_republic += ddp_votes*(1-(unemployed/100))
 
-The Democrats rally for the republic and against the right-wing's reactionary nationalism, limited in the extent to which it can do so by its size and the broader popularity of the republic.
+民主党人为共和国而集会,反对右翼反动的民族主义;但受自身规模与共和国整体声望所限,他们的作为有其限度。
 
 @z
 subtitle: Catholics.
 max-choices: 1
 view-if: not z_banned and not zca_formed
 
-The Catholic Center Party fights for the Church, and the rights of all Catholics in Germany.
+天主教中央党为教会、也为德国全体天主教徒的权利而斗争。
 
 - @catholics: The Center Party consolidates Catholics.
 
 @catholics
 on-arrival: catholics_z += 5; catholics_other -= 5
 
-The Center Party represents Germany's Catholics, and consolidates its base amongst them.
+中央党代表德国的天主教徒,并在他们之中巩固自己的基础。
 
 @zca
 subtitle: The mass party of the whole bourgeoisie united against an ascendant socialism.
 max-choices: 1
 view-if: zca_formed
 
-The ZCA has, since its emergence, posed a major and competent threat to socialist administration, fighting tooth and nail for the restoration of a liberal democracy, something that we once fought tooth and nail to defend from those seeking the restoration of reactionary autocracy yet which has now become something to be disgarded in favor of history's continued progression. 
+中央基督教联盟自成立以来,便对社会主义施政构成重大而称职的威胁,为恢复自由民主而不遗余力地斗争 —— 这种自由民主,曾是我们不遗余力地加以捍卫、以免落入妄图复辟反动专制者之手的东西,而如今却成了为历史继续前进而被弃置的东西。
 
 @dvp
 subtitle: Liberals of a more nationalistic and right-wing orientation, chained to industrialist interests.
 max-choices: 1
 view-if: not dvp_banned and not zca_formed
 
-[? if dvp_r >= 10 : The DVP has seen surprising success, blooming into a capable mass party of its own right. ?]
+[? if dvp_r >= 10 : 人民党取得了出人意料的成功,绽放为一个有能力的大众政党。 ?]
 
-[? if dvp_r < 10 and dvp_r >= 5 : The DVP has become a minor but relevant party, able to swing key votes and mobilize support for or against crucial policies from time to time. Still, its relevance has fallen, and it has to fight hard to avoid moribundance. ?]
+[? if dvp_r < 10 and dvp_r >= 5 : 人民党已成一个虽小却仍有分量的政党,时而能在关键表决中左右票数、为重大政策争取或动员支持。不过,它的重要性已经下降,必须奋力挣扎才能避免衰亡。 ?]
 
-[? if dvp_r < 5 : The DVP has fared poorly in recent times, faced with increasing polarization and radicalization. Perhaps one day, it will claw its way back from being moribund. ?]
+[? if dvp_r < 5 : 人民党近来表现不佳,面对着日益加剧的两极分化与激进化。或许有一天,它能从濒死状态中挣扎着爬回来。 ?]
 
 @dnvp
 subtitle: Virulent reactionaries and antisemites dedicated to the restoration of Imperial Germany.
 max-choices: 1
 view-if: not dnvp_banned
 
-[? if dnvp_r >= 20 : The DNVP is a key player in German politics, shaping decisions with significant weight on behalf of the aristocratic and bourgeois interests it represents. We will have to do our best to combat this influence, or else see Germany returned to imperial rule. ?]
+[? if dnvp_r >= 20 : 国家人民党是德国政治中的关键角色,代表其所代表的贵族与资产阶级利益,以举足轻重之势影响决策。我们必须尽全力对抗这种影响,否则就会看到德国重归帝制统治。 ?]
 
-[? if dnvp_r >= 10 and dnvp_r < 20 : The DNVP is a major player in German politics. It is not a leading party currently, but possesses outsized influence given the interests it represents, something we will do our best to combat. ?]
+[? if dnvp_r >= 10 and dnvp_r < 20 : 国家人民党是德国政治中的一支重要力量。它目前并非主导政党,却因其代表的利益而拥有超乎比例的影响力 —— 我们将尽全力加以对抗。 ?]
 
-[? if dnvp_r >= 5 and dnvp_r < 10 : The DNVP is in a sorry state, but by no means moribund. It retains a following and backing with which it hopes to rebound and reassert imperial authority with one day. ?]
+[? if dnvp_r >= 5 and dnvp_r < 10 : 国家人民党的处境不佳,但绝非奄奄一息。它仍保有追随者与支持,希望有朝一日借此东山再起、重申帝国的权威。 ?]
 
-[? if dnvp_r < 5 : The DNVP has fallen into obscurity, the fact of its narrow interest group backing finally catching up to it as nostalgia for the old times withers away under prosperity with the new. ?]
+[? if dnvp_r < 5 : 国家人民党已归于默默无闻;随着对旧时代的怀恋在新的繁荣之下萎谢,它那狭窄利益集团支持的本质终于让它自食其果。 ?]
 
 - @dnvp_workers: The DNVP campaigns amongst workers.
 - @dnvp_middle: The DNVP campaigns amongst the middle class.
@@ -276,31 +276,31 @@ view-if: dnvp_reform or ((workers_spd_normalized+workers_kpd_normalized+workers_
 frequency: 50
 on-arrival: workers_dnvp += 4*bourgeois_power*(nationalism/100)*(1-(pro_republic/100))*(1-(socialism/100))
 
-The DNVP attempts to break the hold of organized labor over the working class, and drive our base towards their nationalist ideologies. Luckily, they are unlikely to see much success.
+国家人民党试图打破有组织劳工对工人阶级的掌控,把我们的基础驱向他们的民族主义意识形态。所幸,他们不太可能取得多少成功。
 
 @dnvp_middle
 frequency: 200
 on-arrival: new_middle_dnvp += 6*bourgeois_power*(nationalism/100)*(1-(pro_republic/100)); old_middle_dnvp += 6*bourgeois_power*(nationalism/50)*(1-(pro_republic/100))
 
-The DNVP campaigns amongst the middle classes, primarily the old middle class but also the most reactionary echelons of the new middle class. 
+国家人民党在中间阶层中开展宣传,主要是旧中间阶层,也包括新中间阶层中最反动的那一层。
 
 @dnvp_rural
 frequency: 250
 on-arrival: rural_dnvp += 6*bourgeois_power*(nationalism/(50+(land_reform*20)))*(1-(pro_republic/100))
 
-The DNVP campaigns in the countryside, its traditional bastion. 
+国家人民党在其传统的堡垒 —— 乡间开展宣传。
 
 @dnvp_nationalism
 frequency: 100
 on-arrival: nationalism += 15*dnvp_normalized*(1-(nationalism/100))
 
-The DNVP campaigns for German nationalism and exceptionalism, attempting to reinvigorate support in its militaristic project.
+国家人民党为德国民族主义与例外论展开宣传,试图为其军国主义事业重新注入支持。
 
 @dnvp_antirepublic
 frequency: 100
 on-arrival: pro_republic -= 15*dnvp_normalized*(pro_republic/100)
 
-The DNVP campaigns against the republic and its institutions, attempting to invigorate support for authoritarian regime, specifically imperial restoration, as an alternative project and mode of governance.
+国家人民党抨击共和国及其制度,试图鼓动人们支持威权统治 —— 具体而言即帝制复辟 —— 作为一种替代性的方案与治理模式。
 
 @hugenberg
 frequency: 50
@@ -323,18 +323,18 @@ Q.coup_progress += Q.sh_force/10;
 
 !}
 
-The DNVP's uncompromising line under Hugenberg pushes the other bourgeois parties towards us by process of elimination, and risks isolating the party from broader masses.
+国家人民党在胡根贝格领导下毫不妥协的路线,通过排除法把其他资产阶级政党推向我们,同时也有可能使该党与更广大的群众隔绝。
 
 @moderation
 frequency: 50
 view-if: dnvp_reform
 on-arrival: z_relation -= dnvp_r/6; dvp_relation -= dnvp_r/3
 
-The DNVP declares itself a constructive party ready to work with the other bourgeois parties.
+国家人民党宣布自己是一个建设性政党,愿意与其他资产阶级政党合作。
 
 @nsdap
 subtitle: Fascists seeking the imposition of their will upon the whole European continent through violent dictatorship, conquest, and war.
 max-choices: 1
 
-The Nazis are a dangerous movement, indeed the most out of them all. They are Germany's adaptation of fascism, and threaten democracy acutely and constantly, even in times of relative stabilization.
+纳粹是一场危险的、甚至是所有势力中最危险的运动。他们是法西斯主义在德国的变体,始终尖锐而持续地威胁着民主 —— 即便在相对稳定的时期也不例外。
 
