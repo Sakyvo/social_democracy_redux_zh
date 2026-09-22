@@ -7,9 +7,9 @@ view-if: spd_in_government = 1 and (economic_minister_party == "SPD" or finance_
 card-image: img/portraits/SchmidtRobert.jpg
 #subtitle: Policies to address the economic crisis.
 
-= Economic Policy
+= 经济政策
 
-We have already formulated an economic plan. Now we have to implement it.
+我们已经制定好了一份经济计划。现在必须加以实施。
 
 - @wtb_2
 - @wtb_2_deficit
@@ -40,23 +40,23 @@ We have already formulated an economic plan. Now we have to implement it.
 @wtb_2
 title: Continue the implementation of the WTB-Plan.
 subtitle: -3 budget
-unavailable-subtitle: [? if unemployed <= 8 : Unemployment is low enough that the time for the WTB-Plan has passed. ?][? if economic_minister_party == "DVP" : The DVP-controlled Economic Ministry is obstructing our plans. ?]
+unavailable-subtitle: [? if unemployed <= 8 : 失业率已经够低,推行 WTB 计划的时机已过。 ?][? if economic_minister_party == "DVP" : 由人民党掌控的经济部正在阻挠我们的计划。 ?]
 view-if: wtb_implemented > 2 and budget >= 3 
 choose-if: unemployed > 8 and economic_minister_party != "DVP"
 on-arrival: works_program += 1; budget -= 3; workers_spd += 7*(1-dissent); workers += 1 if works_program <= 4; unemployed -= 3 if unemployed > 8; unemployed_spd += 7*(1-dissent); workers_kpd -= 3; workers_nsdap -= 3; wtb_implemented += 1; kpd_coalition_dissent += 1; kpd_relation -= 5 if in_popular_front or in_left_front; inflation += 2; economic_growth += 1.6; coalition_dissent += 1 if in_grand_coalition; economic_growth -= 0.6 if economic_growth > 5; socialism -= 3
 
-[? if works_program == 4 : We have commenced Phase 2 of the WTB-Plan. ?][? if works_program > 4 :  We have continued our implementation of the WTB-Plan. ?] In addition to public works, we are now focusing on rebuilding our industries.
+[? if works_program == 4 : 我们已启动 WTB 计划的第二阶段。 ?][? if works_program > 4 :  我们继续推行着 WTB 计划。 ?] 除公共工程之外,我们如今还着力重建我们的工业。
 
 
 @wtb_2_deficit
 title: Continue the implementation of the WTB-Plan.
 subtitle: -3 budget - we will enter a deficit.
-unavailable-subtitle: [? if unemployed <= 10 : Unemployment is low enough that we should not do deficit spending. ?][? if economic_minister_party == "DVP" : The DVP-controlled Economic Ministry is obstructing our plans. ?][? if finance_minister_party != "SPD" : Without control over finances, we cannot undertake such deficit spending. ?]
+unavailable-subtitle: [? if unemployed <= 10 : 失业率已经够低,我们不应再搞赤字开支。 ?][? if economic_minister_party == "DVP" : 由人民党掌控的经济部正在阻挠我们的计划。 ?][? if finance_minister_party != "SPD" : 不掌握财政,我们就无法进行这样的赤字开支。 ?]
 view-if: wtb_implemented > 2 and budget < 3 and budget >= -3
 choose-if: unemployed > 10 and economic_minister_party != "DVP" and finance_minister_party == "SPD"
 on-arrival: works_program += 1; budget -= 3; workers_spd += 6*(1-dissent); workers += 1 if works_program <= 4; unemployed -= 3 if unemployed > 8; unemployed_spd += 6*(1-dissent); workers_kpd -= 2; workers_nsdap -= 2; coalition_dissent += 1; coalition_dissent += 1 if in_grand_coalition; capital_strike_progress += 1; wtb_implemented += 1; kpd_coalition_dissent += 1; kpd_relation -= 5 if in_popular_front or in_left_front; inflation += 3; economic_growth += 1.6; economic_growth -= 0.6 if economic_growth > 5; socialism -= 4
 
-We have continued our implementation of the WTB-Plan, despite the continued deficit spending. In addition to public works, we are now focusing on rebuilding our industries.
+尽管仍在持续赤字开支,我们仍继续推行着 WTB 计划。除公共工程之外,我们如今还着力重建我们的工业。
 
 
 @wtb_continuation
@@ -64,49 +64,49 @@ title: Look back on our results, and continue our implementation...
 view-if: wtb_implemented >= 1 and wtb_implemented <= 2
 on-arrival: budget += 1 if works_program <= 2; unemployed -= 5 if (works_program <= 2 and unemployed > 15) else unemployed -= 3; unemployed += 3 if unemployed < 5; unemployed += 3 if unemployed < 0; workers += 2 if works_program <= 2 else workers += 1; workers_spd += 8*(1-dissent); unemployed_spd += 8*(1-dissent); workers_kpd -= 3; workers_nsdap -= 5; works_program += 1; z_relation += 3; coalition_dissent += 1 if in_grand_coalition; coalition_dissent -= 1 if coalition_dissent >= 1; wtb_implemented += 1; capital_strike_progress -= 1 if capital_strike_progress >= 3; inflation += 1.5; inflation += 1 if unemployed < 10; economic_growth += 1.2; economic_growth -= 0.5 if economic_growth > 5; socialism -= 1
 
-Our spending on public works has resulted in a lower need for unemployment insurance and welfare, and increased tax receipts through the multiplier effect as the new money courses through the economy, recuperating some of our spending. We continue to invest most of the new revenue into the program.
+我们在公共工程上的支出降低了失业保险与福利的需求,并随着新增货币在经济中流转、通过乘数效应增加了税收,从而回收了我们一部分支出。我们继续把大部分新增收入投入到该计划中。
 
-The economy is doing better, finally. Even the bourgeois parties are beginning to see the light[? if grand_coalition :, though the DVP continues to grumble about government intrusion into the economy ?].
+经济终于好转了。连资产阶级政党也开始明白过来[? if grand_coalition : ,尽管人民党仍在抱怨政府对经济的干预 ?]。
 
-[? if in_popular_front or in_left_front: The KPD, however, still opposes our policy of "rescuing" capitalism. ?]
+[? if in_popular_front or in_left_front: 然而,共产党仍然反对我们「拯救」资本主义的政策。 ?]
 
 @implement_wtb_no_deficit
 title: Implement the WTB plan.
 subtitle: -[+ wtb_budget +] budget. [? if wtb_budget == 3 : Our pro-labor policies have reduced the cost of the plan. ?]
-unavailable-subtitle: [? if unemployed <= 8 : Unemployment is low enough that the time for the WTB-Plan has passed. ?][? if economic_minister_party == "DVP" : The DVP-controlled Economic Ministry is obstructing our plans. ?]
+unavailable-subtitle: [? if unemployed <= 8 : 失业率已经够低,推行 WTB 计划的时机已过。 ?][? if economic_minister_party == "DVP" : 由人民党掌控的经济部正在阻挠我们的计划。 ?]
 view-if: budget >= wtb_budget and wtb_implemented == 0 and wtb_adopted == 1
 choose-if: unemployed > 8 and economic_minister_party != "DVP"
 on-arrival: wtb_no_deficit_vote = 1
 go-to: wtb_no_deficit_done if not legislature_enabled; legislative_menu if legislature_enabled
 
-We propose a bill to implement the WTB plan.
+我们提出一项议案,落实 WTB 计划。
 
 @wtb_no_deficit_done
 on-arrival: budget -= wtb_budget; works_program += 1; unemployed -= 4; workers_spd += 8*(1-dissent); unemployed_spd += 8*(1-dissent); wtb_implemented += 1; kpd_coalition_dissent += 1; kpd_relation -= 5 if in_popular_front or in_left_front; inflation += 2; economic_growth += 2.8; coalition_dissent += 1 if in_grand_coalition; pro_republic += 3*(1-dissent); socialism -= 3
 achievement: wirtschaftspolitik
 
-We have started to enact the WTB plan. Money is beginning to flow through the economy via investments in large-scale public works.
+我们已开始执行 WTB 计划。资金开始通过对大规模公共工程的投资在经济中流动。
 
-[? if in_popular_front or in_left_front: The KPD opposes the WTB plan, seeing it as a rescue of capitalism rather than a step towards real socialism. ?]
+[? if in_popular_front or in_left_front: 共产党反对 WTB 计划,视之为拯救资本主义,而非迈向真正社会主义的一步。 ?]
 
 @implement_wtb_deficit
 title: Implement the WTB plan.
 subtitle: -[+ wtb_budget +] budget - we will enter deficit spending. [? if wtb_budget == 3 : Our pro-labor policies have reduced the cost of the plan. ?]
-unavailable-subtitle: [? if unemployed <= 8 : Unemployment is low enough that the time for the WTB-Plan has passed. ?][? if economic_minister_party == "DVP" : The DVP-controlled Economic Ministry is obstructing our plans. ?][? if finance_minister_party != "SPD" : Without control over finances, we cannot undertake such deficit spending. ?]
+unavailable-subtitle: [? if unemployed <= 8 : 失业率已经够低,推行 WTB 计划的时机已过。 ?][? if economic_minister_party == "DVP" : 由人民党掌控的经济部正在阻挠我们的计划。 ?][? if finance_minister_party != "SPD" : Without control over finances, we cannot undertake such deficit spending. ?]
 view-if: budget < wtb_budget and wtb_implemented == 0 and wtb_adopted == 1
 choose-if: unemployed > 8 and economic_minister_party != "DVP" and finance_minister_party == "SPD"
 on-arrival: wtb_deficit_vote = 1
 go-to: wtb_deficit_done if not legislature_enabled; legislative_menu if legislature_enabled
 
-We propose a bill to implement the WTB plan, funded through deficit spending.
+我们提出一项议案,以赤字开支为资金来源落实 WTB 计划。
 
 @wtb_deficit_done
 on-arrival: coalition_dissent += 1; coalition_dissent += 1 if historical_mode; coalition_dissent += 1 if chancellor == "Brüning"; works_program += 1; budget -= wtb_budget; unemployed -= 4; workers += 2; workers_spd += 8*(1-dissent); unemployed_spd += 8*(1-dissent); capital_strike_progress += 1; wtb_implemented += 1; kpd_coalition_dissent += 1; kpd_relation -= 5 if in_popular_front or in_left_front; inflation += 3; economic_growth += 3; coalition_dissent += 1 if in_grand_coalition; pro_republic += 3*(1-dissent); socialism -= 4
 achievement: wirtschaftspolitik
 
-We have entered the realm of deficit spending. Our coalition partners are disgusted, but the works plan is enacted anyway. Money is beginning to flow through the economy via investments in large-scale public works.
+我们已踏入赤字开支的领域。我们的执政盟友对此深感厌恶,但公共工程计划还是实施了。资金开始通过对大规模公共工程的投资在经济中流动。
 
-[? if in_popular_front or in_left_front: The KPD opposes the WTB plan, seeing it as a rescue of capitalism rather than a step towards real socialism. ?]
+[? if in_popular_front or in_left_front: 共产党反对 WTB 计划,视之为拯救资本主义,而非迈向真正社会主义的一步。 ?]
 
 
 ####################### left economic policies (socializations)
@@ -120,7 +120,7 @@ unavailable-subtitle: [? if not capital_spd : The DVP-controlled Economic Minist
 on-arrival: nationalize_vote = 1
 go-to: nationalize_done if not legislature_enabled; legislative_menu if legislature_enabled
 
-We propose a bill to nationalize key and idle industries.
+我们提出一项议案,将关键产业与闲置产业国有化。
 
 @nationalize_done
 on-arrival: socialism += 4 if nationalization_progress < 1
@@ -131,16 +131,16 @@ go-to: nationalize_deficit if budget < nationalize_budget; nationalize_no_defici
 on-arrival: nationalization_progress += 1; capital_strike_progress += 2; bourgeois_power -= 0.05; unemployed -= 3.5 if unemployed >= 6; unemployed -= 1.2 if works_councils >= 3; workers += 2 if nationalization_progress < 2; budget -= nationalize_budget; works_program += 1; workers_spd += 8*(1-dissent); unemployed_spd += 5*(1-dissent); coalition_dissent += 1; coalition_dissent += 1 if in_grand_coalition; dvp_relation -= 4; left_dissent -= 5; new_middle_spd -= 2; new_middle_spd += 1 if new_middle_conscious; old_middle_spd -= 3; economy_goal_completed += 1; inflation += 2; economic_growth += 1.7 if economic_growth < 5
 achievement: wirtschaftspolitik
 
-[? if nationalization_progress == 1 : We have begun purchasing idling enterprises from the capitalists[? if works_councils >= 1: , and running them in coordination with empowered works councils ?]. By keeping production going, we can stave off the rising unemployment. ?]
+[? if nationalization_progress == 1 : 我们已开始从资本家手中收购闲置的企业[? if works_councils >= 1: ,并与获得赋权的工厂委员会协同经营 ?]。通过维持生产,我们可以挡住不断上升的失业。 ?]
 
-[? if nationalization_progress == 1 : The Left argues that this should only be a first step in the socialist transformation of the economy. Eventually, much of the economy must be brought under popular control. ?]
+[? if nationalization_progress == 1 : 左翼主张,这应当只是经济社会主义改造的第一步。最终,经济的大部分必须置于民众的控制之下。 ?]
 
-[? if nationalization_progress > 1 : We purchase additional underutilized enterprises and run them in a coordinated socialist fashion with the works councils, hiring formerly laid off workers. A significant portion of the economy is now under public control. ?]
+[? if nationalization_progress > 1 : 我们又收购了更多未被充分利用的企业,与工厂委员会以协调的社会主义方式经营,并重新雇用先前被裁的工人。如今,经济的相当一部分已处于公共控制之下。 ?]
 
 @nationalize_deficit
 on-arrival: socialism -= 2
 
-Unfortunately, we do not have the budget to begin buying out industrial facilities. Some are urging for deficit spending in order to purchase factories, while others are encouraging (currently illegal) factory takeovers by workers, or nationalization without compensation. Taking any of these actions would require a vast departure from our previous party stances.
+遗憾的是,我们没有开始收购工业设施的财政预算。有人主张以赤字开支来购买工厂,也有人鼓励工人(目前尚属非法的)接管工厂,或无偿国有化。采取其中任何一项行动,都将要求我们与党先前的立场大幅背离。
 
 - @nationalize_deficit_1
 - @nationalize_without_compensation
@@ -152,43 +152,43 @@ Unfortunately, we do not have the budget to begin buying out industrial faciliti
 title: Take a budget deficit to fund the nationalization program.
 choose-if: (left_strength > reformist_strength + center_strength or woytinsky_advisor == 1) and (finance_minister_party == "SPD" or finance_minister_party == "KPD")
 subtitle: [? if woytinsky_advisor: Woytinsky can bring us around to supporting a budget deficit. ?]
-unavailable-subtitle: [? if left_strength <= reformist_strength + center_strength: The party does not yet support budget deficits for this purpose. ?] [? if not woytinsky_advisor : Perhaps bringing on an advisor might help make this action palatable? ?][? if finance_minister_party != "SPD" and finance_minister_party != "KPD" : Without control over finances, we cannot undertake such deficit spending. ?]
+unavailable-subtitle: [? if left_strength <= reformist_strength + center_strength: 党内尚不支持为此目的而搞预算赤字。 ?] [? if not woytinsky_advisor : 或许引入一位顾问有助于让这一行动变得可以接受? ?][? if finance_minister_party != "SPD" and finance_minister_party != "KPD" : 不掌握财政,我们就无法进行这样的赤字开支。 ?]
 on-arrival: nationalization_progress += 1; bourgeois_power -= 0.05; capital_strike_progress += 3; unemployed -= 3 if unemployed >= 6; unemployed -= 1.2 if works_councils >= 3; budget -= nationalize_budget; works_program += 1; workers_spd += 8*(1-dissent); unemployed_spd += 5*(1-dissent); coalition_dissent += 2; coalition_dissent += 1 if in_grand_coalition; dvp_relation -= 7; z_relation -= 4; new_middle_spd -= 3; new_middle_spd += 1 if new_middle_conscious; old_middle_spd -= 3; economy_goal_completed += 1; inflation += 3; economic_growth += 2 if economic_growth < 5;
 achievement: wirtschaftspolitik
 
-[? if woytinsky_advisor: Most of the party, even on the left, are opposed to budget deficits for any purpose, with the exception of Wladimir Woytinsky. While he did not originally support the left's "transformational" plan, he has come around, and has persuaded the party and the Finance Ministry to support budget deficits in limited cases, for the purpose of exiting from the depression. ?]
+[? if woytinsky_advisor: 党内多数人 —— 即便是左翼 —— 都反对出于任何目的的预算赤字,唯独弗拉基米尔·沃伊京斯基例外。他原本并不支持左翼那套「转型」计划,但后来态度转变,并说服了全党与财政部:在有限情况下,为摆脱大萧条,可以支持预算赤字。 ?]
 
-[? if nationalization_progress == 1 : We have begun purchasing idling enterprises from the capitalists[? if works_councils >= 1: , and running them in coordination with empowered works councils ?]. By keeping production going, we can stave off the rising unemployment. ?]
+[? if nationalization_progress == 1 : 我们已开始从资本家手中收购闲置的企业[? if works_councils >= 1: ,并与获得赋权的工厂委员会协同经营 ?]。通过维持生产,我们可以挡住不断上升的失业。 ?]
 
-[? if nationalization_progress == 1 : The Left argues that this should only be a first step in the socialist transformation of the economy. Eventually, much of the economy must be brought under popular control. ?]
+[? if nationalization_progress == 1 : 左翼主张,这应当只是经济社会主义改造的第一步。最终,经济的大部分必须置于民众的控制之下。 ?]
 
-[? if nationalization_progress > 1 : We purchase additional underutilized enterprises and run them in a coordinated socialist fashion with the works councils, hiring formerly laid off workers. A significant portion of the economy is now under public control. ?]
+[? if nationalization_progress > 1 : 我们又收购了更多未被充分利用的企业,与工厂委员会以协调的社会主义方式经营,并重新雇用先前被裁的工人。如今,经济的相当一部分已处于公共控制之下。 ?]
 
 @nationalize_without_compensation
 title: Nationalize without compensation.
 subtitle: There is no reason why we should not simply take over idle factories. This is likely to provoke a confrontation with the capitalists.
-unavailable-subtitle: [? if left_strength <= reformist_strength + center_strength: The bulk of the party does not support this quasi-legal action. ?] [? if judicial_reform < 3 : The judiciary would oppose this action. ?] [? if left_coalition < 50 : We lack a majority in the Reichstag. ?]
+unavailable-subtitle: [? if left_strength <= reformist_strength + center_strength: 党内多数并不支持这一半合法的举措。 ?] [? if judicial_reform < 3 : 司法界会反对这一举措。 ?] [? if left_coalition < 50 : 我们在国会中没有多数。 ?]
 choose-if: left_strength > reformist_strength + center_strength and judicial_reform >= 3 and left_coalition >= 50
 on-arrival: nationalization_progress += 1; bourgeois_power -= 0.1; capital_strike_progress += 7; coup_progress += 3; unemployed -= 2.5 if unemployed >= 6; unemployed -= 1.2 if works_councils >= 3 and unemployed >= 3; works_program += 1; workers_spd += 8*(1-dissent); unemployed_spd += 6*(1-dissent); coalition_dissent += 2; coalition_dissent += 1 if in_grand_coalition; coalition_dissent += 1 if capital_strike_progress >= 10; dvp_relation -= 12; z_relation -= 8; ddp_relation -= 8; left_strength += 15; reformist_dissent += 10; left_dissent -= 10; new_middle_spd -= 5; new_middle_spd += 3 if new_middle_conscious; old_middle_spd -= 8; economy_goal_completed += 1; kpd_relation += 5*(1-dissent); inflation += 4; economic_growth += 1 if economic_growth < 4; socialism -= 1
 achievement: wirtschaftspolitik
 
-The capitalists are, predictably, up in arms about our policy of nationalization without compensation. They call it illegal expropriation, and it is. Nevertheless, it is clear that they have failed by keeping their factories idle, and we must take radical action.
+不出所料,资本家对我们无偿国有化的政策群情激愤。他们称之为非法征用 —— 确实如此。然而,他们让工厂闲置,失败显而易见,我们必须采取激进行动。
 
-[? if nationalization_progress == 1 : We have begun acquiring idling enterprises from the capitalists[? if works_councils >= 1: , and running them in coordination with empowered works councils ?]. By keeping production going, we can stave off the rising unemployment. ?]
+[? if nationalization_progress == 1 : 我们已开始从资本家手中取得闲置的企业[? if works_councils >= 1: ,并与获得赋权的工厂委员会协同经营 ?]。通过维持生产,我们可以挡住不断上升的失业。 ?]
 
-[? if nationalization_progress > 1 : We acquired additional underutilized enterprises and run them in a coordinated socialist fashion with the works councils, hiring formerly laid off workers. A significant portion of the economy is now under public control. ?]
+[? if nationalization_progress > 1 : 我们又取得了更多未被充分利用的企业,与工厂委员会以协调的社会主义方式经营,并重新雇用先前被裁的工人。如今,经济的相当一部分已处于公共控制之下。 ?]
 
 @empower_workers
 title: Empower workers to take over factories.
 subtitle: We can promise to legalize factory occupations, giving the factories over to worker unions. This is highly confrontational, and would likely provoke a reaction from right-wing militants as well as capitalists.
-unavailable-subtitle: [? if left_strength <= reformist_strength + neorevisionist_strength : The bulk of the party does not support this radical action. ?] [? if judicial_reform < 3 : The judiciary would oppose this action. ?] [? if rb_militancy < 0.25 : If we increased the strength of our paramilitary forces, perhaps we could do this. ?] [? if works_councils < 1 : We need the support of the works councils first. ?][? if left_coalition < 50 : We lack a majority in the Reichstag. ?]
+unavailable-subtitle: [? if left_strength <= reformist_strength + neorevisionist_strength : 党内多数并不支持这一激进举措。 ?] [? if judicial_reform < 3 : 司法界会反对这一举措。 ?] [? if rb_militancy < 0.25 : 若能增强我们准军事组织的力量,或许可以这么做。 ?] [? if works_councils < 1 : 我们需要先获得工厂委员会的支持。 ?][? if left_coalition < 50 : 我们在国会中没有多数。 ?]
 choose-if: left_strength > reformist_strength + neorevisionist_strength and (judicial_reform >= 3 or rb_militancy >= 0.25) and works_councils >= 1 and left_coalition >= 50
 on-arrival: nationalization_progress += 1; bourgeois_power -= 0.1; capital_strike_progress += 6; coup_progress += 5; unemployed -= 3 if unemployed >= 6; unemployed -= 1.5 if works_councils >= 3 and unemployed > 4; works_program += 1; workers_spd += 10*(1-dissent); unemployed_spd += 10*(1-dissent); coalition_dissent += 2; coalition_dissent += 1 if in_grand_coalition; coalition_dissent += 1 if capital_strike_progress >= 10; coalition_dissent += 1 if coup_progress >= 8; dvp_relation -= 12; z_relation -= 8; ddp_relation -= 8; workers_nsdap -= 5*(1-dissent); unemployed_nsdap -= 5*(1-dissent); left_strength += 15; reformist_dissent += 10; left_dissent -= 10; new_middle_spd -= 5; new_middle_spd += 2 if new_middle_conscious; old_middle_spd -= 10; factory_takeovers += 1; economy_goal_completed += 1; kpd_relation += 5*(1-dissent); inflation += 3; economic_growth += 1 if economic_growth < 3; socialism += 1
 achievement: wirtschaftspolitik
 
-The capitalists are, predictably, up in arms about our policy of legalizing factory occupations. They call it illegal expropriation, and it is. Nevertheless, it is clear that they have failed, and we must take radical action.
+不出所料,资本家对我们将工厂占领合法化的政策群情激愤。他们称之为非法征用 —— 确实如此。然而,他们的失败显而易见,我们必须采取激进行动。
 
-Fascists have been taking increasingly violent actions around the occupied factories, calling us thieves and looters. However, the some of the working-class supporters of the fascists have been peeled off, or at least the ones with a sense of class solidarity.
+法西斯分子在占领的工厂周围采取越来越暴力的行动,把我们称作盗贼与掠夺者。不过,法西斯分子中的一些工人阶级支持者已被拉走 —— 至少那些尚有阶级团结意识的人如此。
 
 
 @nationalize_2
@@ -196,11 +196,11 @@ title: Continue the Left plan for the transformation of the economy.
 subtitle: -[+ nationalize_budget +] budget. [? if works_councils >= 3 : Our works councils have reduced the budget necessary for this program. ?] [? if socializations + nationalization_progress >= 2: Our existing socialization policies have reduced the budget necessary for this program. ?]
 view-if: nationalization_adopted == 1 and nationalization_progress >= 1 and not capital_flight
 choose-if: economic_minister_party != "DVP"
-unavailable-subtitle: The DVP-controlled Economic Ministry could never allow such an action.
+unavailable-subtitle: 由人民党掌控的经济部绝不可能允许这样的行动。
 on-arrival: nationalize_vote = 1
 go-to: nationalize_done if not legislature_enabled; legislative_menu if legislature_enabled
 
-We propose a bill to nationalize key and idle industries.
+我们提出一项议案,将关键产业与闲置产业国有化。
 
 #######################################
 # Moderate economic plan
@@ -214,21 +214,21 @@ choose-if: budget >= 2 and unemployed >= 8
 on-arrival: reformist_vote = 1; reformist_budget = 2
 go-to: reformist_done_1 if not legislature_enabled; legislative_menu if legislature_enabled
 
-We propose a bill to begin a public works program.
+我们提出一项议案,启动一项公共工程计划。
 
 @reformist_done_1
 on-arrival: budget -= 2; works_program += 1; coalition_dissent += 1 if dvp_relation < 35 and in_grand_coalition; unemployed -= 3 if unemployed >= 8; inflation += 1.5; workers_spd += 6*(1-dissent); unemployed_spd += 4*(1-dissent); new_middle_spd += 3*(1-dissent); old_middle_spd += 2*(1-dissent); rural_spd += 2*(1-dissent); moderate_plan_progress += 1; kpd_coalition_dissent += 1; inflation += 1 if unemployed < 10; kpd_relation -= 5 if in_popular_front or in_left_front; economic_growth += 1.6; pro_republic += 3*(1-dissent); socialism -= 1
 achievement: wirtschaftspolitik
 
-[? if moderate_plan_progress == 1 : We have started to implement the job-creation plan! Funds are sent to build public works projects across Germany, reducing unemployment. ?]
+[? if moderate_plan_progress == 1 : 我们已开始实施创造就业计划!资金拨付出去,在德国各地兴建公共工程,降低失业。 ?]
 
-[? if moderate_plan_progress > 1 : We have continued to fund the job-creation plan, using our funds to build public works throughout Germany. ?]
+[? if moderate_plan_progress > 1 : 我们继续为创造就业计划提供资金,用我们的款项在德国各地兴建公共工程。 ?]
 
-[? if unemployed >= 10 : The bourgeois approve of this plan as the "least bad" alternative, seeing it as necessary to save Germany's economy[? if dvp_relation < 35 and in_grand_coalition : though the DVP is still somewhat opposed. ?]. ?]
+[? if unemployed >= 10 : 资产阶级认可这一计划,视之为「最不坏」的替代方案,认为它是拯救德国经济所必需的[? if dvp_relation < 35 and in_grand_coalition : ,尽管人民党仍有些反对。 ?]。 ?]
 
-[? if unemployed < 10 : Unemployment is low enough that the plan does not seem to have the intended effect. ?]
+[? if unemployed < 10 : 失业率已经够低,这项计划似乎并未产生预期效果。 ?]
 
-[? if in_popular_front or in_left_front: The KPD opposes the economic plan, seeing it as a rescue of capitalism rather than a step towards real socialism. ?]
+[? if in_popular_front or in_left_front: 共产党反对这项经济计划,视之为拯救资本主义,而非迈向真正社会主义的一步。 ?]
 
 @moderate_plan_limited_budget
 title: Partially implement the Reformists' job-creation plan, with a lower cost.
@@ -239,21 +239,21 @@ choose-if: budget >= 1 and unemployed >= 8
 on-arrival: reformist_vote = 1; reformist_budget = 1
 go-to: reformist_done_2 if not legislature_enabled; legislative_menu if legislature_enabled
 
-We propose a bill to begin a public works program.
+我们提出一项议案,启动一项公共工程计划。
 
 @reformist_done_2
 on-arrival: budget -= 1; works_program += 1; unemployed -= 2 if unemployed >= 8; inflation += 1; workers_spd += 4*(1-dissent); unemployed_spd += 2*(1-dissent); new_middle_spd += 2*(1-dissent); old_middle_spd += 1*(1-dissent); rural_spd += 1*(1-dissent); moderate_plan_progress += 1; kpd_coalition_dissent += 1; inflation += 1 if unemployed < 10; kpd_relation -= 5 if in_popular_front or in_left_front; economic_growth += 0.7; pro_republic += 3*(1-dissent);
 achievement: wirtschaftspolitik
 
-[? if moderate_plan_progress == 1 : We have started to implement the job-creation plan! Funds are sent to build public works projects across Germany, reducing unemployment. ?]
+[? if moderate_plan_progress == 1 : 我们已开始实施创造就业计划!资金拨付出去,在德国各地兴建公共工程,降低失业。 ?]
 
-[? if moderate_plan_progress > 1 : We have continued to fund the job-creation plan, using our funds to build public works throughout Germany. ?]
+[? if moderate_plan_progress > 1 : 我们继续为创造就业计划提供资金,用我们的款项在德国各地兴建公共工程。 ?]
 
 [? if unemployed >= 10 : The bourgeois approve of this plan as the "least bad" alternative, seeing it as necessary to save Germany's economy. ?]
 
-[? if unemployed < 10 : Unemployment is low enough that the plan does not seem to have the intended effect. ?]
+[? if unemployed < 10 : 失业率已经够低,这项计划似乎并未产生预期效果。 ?]
 
-[? if in_popular_front or in_left_front: The KPD opposes the economic plan, seeing it as a rescue of capitalism rather than a step towards real socialism. ?]
+[? if in_popular_front or in_left_front: 共产党反对这项经济计划,视之为拯救资本主义,而非迈向真正社会主义的一步。 ?]
 
 #######################################
 # Synthesis plan
@@ -261,21 +261,21 @@ achievement: wirtschaftspolitik
 @synthesis_plan
 title: Implement the Centrist job-creation and nationalization plan.
 subtitle: -[+ synthesis_budget +] budget. [? if synthesis_budget < 3 : Our existing programs makes this cheaper. ?]
-unavailable-subtitle: [? if budget < synthesis_budget : -[+ synthesis_budget +] budget. We do not have the necessary budget. ?][? if economic_minister_party == "DVP" : The DVP-controlled Economic Ministry is obstructing our plans. ?]
+unavailable-subtitle: [? if budget < synthesis_budget : -[+ synthesis_budget +] 财政预算。我们没有所需的预算。 ?][? if economic_minister_party == "DVP" : 由人民党掌控的经济部正在阻挠我们的计划。 ?]
 view-if: synthesis_plan_adopted == 1
 choose-if: budget >= synthesis_budget and economic_minister_party != "DVP"
 on-arrival: synthesis_vote = 1
 go-to: synthesis_done if not legislature_enabled; legislative_menu if legislature_enabled
 
-We propose a bill to begin a public works program coupled with nationalizations.
+我们提出一项议案,启动一个与国有化相结合的公共工程计划。
 
 @synthesis_done
 on-arrival: budget -= synthesis_budget; synthesis_progress += 1; works_program += 1; unemployed -= 2 if unemployed >= 8; inflation += 1; workers_spd += 8*(1-dissent); unemployed_spd += 5*(1-dissent); new_middle_spd += 2*(1-dissent); new_middle_spd -= 1*(1-dissent) if not new_middle_conscious; rural_spd += 1*(1-dissent); old_middle_spd -= 1; moderate_plan_progress += 1; inflation += 1 if unemployed < 10; economic_growth += 0.7; pro_republic += 3*(1-dissent); nationalization_progress += 1; capital_strike_progress += 1; unemployed -= 1.5 if unemployed >= 6; unemployed -= 0.5 if works_councils >= 3; workers += 1.5; workers_spd += 5*(1-dissent); unemployed_spd += 3*(1-dissent); coalition_dissent += 1 if in_grand_coalition; dvp_relation -= 3; left_dissent -= 3; economy_goal_completed += 1; inflation += 1; economic_growth += 0.8 if economic_growth < 5
 achievement: wirtschaftspolitik
 
-A simultaneous public works and nationalization program begins, intended to both begin progress towards dismantling capitalism and alleviate the immediate effects of the crisis on the German people.
+一项公共工程与国有化并举的计划启动,意在既迈出拆解资本主义的第一步,也缓解危机对德国人民的直接影响。
 
-[? if nationalization_progress == 1 : The Left argues that this should only be a first step in the socialist transformation of the economy. Eventually, much of the economy must be brought under popular control. ?]
+[? if nationalization_progress == 1 : 左翼主张,这应当只是经济社会主义改造的第一步。最终,经济的大部分必须置于民众的控制之下。 ?]
 
 @synthesis_only_works
 title: Implement the Centrist public works program without nationalizations.
@@ -286,7 +286,7 @@ choose-if: budget >= 1
 on-arrival: reformist_vote = 1; reformist_budget = 1
 go-to: reformist_done_2 if not legislature_enabled; legislative_menu if legislature_enabled
 
-We propose a bill to begin a public works program.ù
+我们提出一项议案,启动一项公共工程计划。ù
 
 ##############################
 # Five-year plan
@@ -298,17 +298,17 @@ choose-if: budget > 0
 subtitle: [? if budget <= 5 : -[+ budget +] budget. ?][? if budget > 5 : -5 budget. ?]
 on-arrival: invested = budget if budget <= 5; invested = 5 if budget > 5; budget = 0 if budget <= 5; budget -= 5 if budget > 5; economic_growth += 0.8*invested; unemployed -= 1.4*invested; inflation += 1*invested; inflation += 0.5*invested if inflation < 3; economic_growth += 0.4 if invested >= 3; economic_growth += 0.2 if invested == 5; unemployed -= 0.6 if invested >= 3; unemployed -= 1 if invested == 5; five_year_plan = 1
 
-We have begun, using our control over the economy, to implement a comprehensive economic plan, with which we hope to reduce unemployment to neglible margins and restore the economy. In a sense, this plan will be the trial of socialism; it is our task to demonstrate the superiority of this economic system. 
+我们已利用对经济的掌控,开始实施一项全面的经济计划,希望借此把失业率降至微不足道的水平、恢复经济。从某种意义上说,这项计划将成为社会主义的试炼;我们的任务是证明这一经济制度的优越性。
 
 @works_program
 view-if: year >= 1937 and in_recession
 title: Implement a works program, in view of the recession.
 subtitle: -2 财政预算.
 choose-if: budget >= 2 or wtb_adopted
-unavailable-subtitle: Not enough budget.
+unavailable-subtitle: 财政预算不足。
 on-arrival: budget -= 2; unemployed -= 1.5*(recession_severity/10); inflation += 0.4*(recession_severity/10); inflation += 0.3*(recession_severity/10) if inflation < 0; inflation += 0.5*(recession_severity/10) if budget < 0; unemployed -= (inflation/2)*(recession_severity/10) if inflation > 0; economic_growth += 0.7*(recession_severity/10); economic_growth += 0.5*(recession_severity/10) if inflation >= 0 and economic_growth < 0; economic_growth += (inflation/2)*(recession_severity/10) if inflation >= 0 and inflation < 3; coalition_dissent += 1 if budget < 0; coalition_dissent += 1 if in_grand_coalition; capital_strike_progress += 1; capital_strike_progress += 1 if budget < 0; capital_strike_progress -= 1 if economic_health >= old_economic_health; recession_severity -= 1
 
-We implement a public works program, to alleviate the recession's effects and try to get people back to work.
+我们实施一项公共工程计划,以缓解衰退的影响,设法让人们重返工作岗位。
 
 @further_plan
 view-if: five_year_plan and capital_flight
@@ -316,7 +316,7 @@ title: Invest further resources into the five-year plan.
 subtitle: -1 财政预算。 [? if budget < 1 : We will enter deficit spending. ?]
 on-arrival: budget -= 1; economic_growth += 0.6; unemployed -= 1.1; inflation += 0.9; inflation += 0.4 if inflation < 3; inflation += 0.4 if budget < 0; invested += 1
 
-We have slated more funds for our economic plan, which will allow it to achieve greater success in its implementation.
+我们为经济计划划拨了更多资金,这将使其实施取得更大成效。
 
 @reconcile_town_and_country1
 view-if: five_year_plan and reconcile_town_and_country == 1
@@ -324,7 +324,7 @@ title: Continue to undertake the development of urban agriculture.
 subtitle: We will reconcile town & country!
 on-arrival: reconcile_town_and_country += 1; inflation -= nationalization_progress/10; rural -= (invested/10); workers += (invested/10); unemployed -= (nationalization_progress+invested)/12
 
-We have continued to organize the development of urban agriculture, so as to increase the self-reliance of each and every city and reduce the divide between the country and the city. This is only the first step in working towards a permanent solution.
+我们继续组织城市农业的发展,以提升每一座城市的自给能力、缩小城乡之间的鸿沟。这只是迈向永久解决方案的第一步。
 
 ## todo: make food shortages a gov card which appears after the first event
 
@@ -335,9 +335,9 @@ subtitle: We will reconcile town & country!
 on-arrival: reconcile_town_and_country += 1; labor_dissent += 5
 max-visits: 1
 
-We have tasked our urban planners with beginning to conceptualize a new kind of settlement, unlike those built before, along the lines of the Marxist aim of reconciling town and country, something the disurbanists of the Soviet Union attempted to tackle as well.
+我们已责成城市规划者着手构想一种新型聚居地 —— 它与以往建成的那些不同,依循马克思主义调和城乡的目标,苏联的「反城市化派」也曾试图解决这一问题。
 
-While these disurbanists have proven as obvious sources of inspiration, some have further looked to Ebenezer Howard's "garden cities", with their attempt at making reasonably sized and self-sufficient cities to blend town and country together.
+尽管这些「反城市化派」显然是一大灵感来源,一些人还进一步借鉴了埃比尼泽·霍华德的「田园城市」—— 后者试图建造规模适中、自给自足的城市,把城乡融为一体。
 
 @reconcile_town_and_country3
 view-if: reconcile_town_and_country == 2 or reconcile_town_and_country == 3
@@ -346,7 +346,7 @@ subtitle: We will reconcile town & country!
 on-arrival: reconcile_town_and_country += 1; inflation -= 0.2; rural_spd -= 2; rural -= 1; workers += 1
 max-visits: 1
 
-By teaching workers basic agricultural skills, we increase the self-sufficiency of urban environments further, and dilute the division of labor, also creating more workers for our developing urban agroindustrial workplaces.
+通过向工人传授基本的农业技能,我们进一步提升了城市环境的自给能力,也淡化了分工,同时为我们正在发展的城市农工业工作场所培养了更多劳动力。
 
 @reconcile_town_and_country4
 view-if: reconcile_town_and_country == 4 or reconcile_town_and_country == 5
@@ -355,7 +355,7 @@ subtitle: -1 财政预算 - We will reconcile town & country!
 on-arrival: budget -= 1; inflation -= 0.1; inflation += 0.4 if budget < 0; economic_growth += 1; unemployed -= 1; garden_cities += 1; reconcile_town_and_country += 1; insurgency += 2; rural -= invested; workers += invested
 max-visits: 1
 
-With our urban planners having concentrated their proposals into a cohesive vision for a new kind of city, we can begin their construction. Many farmers have reacted intensely negatively, however, as we encroach deeper into the countryside with our development. 
+随着城市规划者把他们的方案凝练为一种关于新型城市的内聚愿景,我们可以着手建造了。然而,由于我们的开发向乡间深入推进,许多农民反应极为负面。
 
 @reconcile_town_and_country5
 view-if: reconcile_town_and_country == 4 or reconcile_town_and_country == 5
@@ -363,7 +363,7 @@ title: Organize seasonal rotations of rural & urban work between workers' counci
 subtitle: -1 财政预算 - We will reconcile town & country!
 on-arrival: budget -= 1; inflation += 0.6 if budget < 0; rural_spd += 3*(1-dissent); workers_spd += 3*(1-dissent); economic_growth += 0.2; unemployed -= 0.3; reconcile_town_and_country += 1; inflation -= 1 if inflation > 3
 
-We organize seasonal rotations of urban & rural workers, bringing the two fields closer together and diminishing the stark divide in worldviews between the two. 
+我们组织城乡工人的季节性轮换,使两个领域彼此靠拢,并削弱二者世界观之间尖锐的鸿沟。
 
 @reconcile_town_and_country6
 view-if: reconcile_town_and_country == 6
@@ -371,14 +371,14 @@ title: Reconcile town & country!
 subtitle: We will reconcile town & country!
 on-arrival: reconcile_town_and_country += 1; inflation -= 3 if inflation >= 3; economic_growth += 2; rural -= invested; workers += invested; workers += rural if rural < 0; rural = 0 if rural < 0
 
-We have reconciled town and country, or at least made significant progress towards doing so, anyway. While there is still a long ways to go, we have constructed many new settlements based around the principle, and through seasonal labor rotation and the construction of urban agriculture in existing cities, we are helping to reduce the conflict in other manners as well.
+我们已经调和了城乡 —— 或至少已朝此方向取得重大进展。虽然仍有很长的路要走,但我们已围绕这一原则建造了许多新聚居地,并通过季节性劳动轮换与在现有城市中发展城市农业,也在其他方面帮助缓解了冲突。
 
 @tighten_controls
 view-if: price_controls
 title: Tighten control on prices and wages, to lower inflation.
 on-arrival: inflation_goal -= 1 if inflation_goal > price_controls; capital_strike_progress += 2; inflation -= 2; black_market += 6; hyperinflation = 0; coalition_dissent += 1; unemployed += 1; old_middle_spd -= 2; new_middle_spd -= 2; rural_spd -= 4; workers_spd -= 1; unemployed_spd += 2; labor_dissent += 3; dvp_relation -= 3; z_relation -= 2; ddp_relation -= 2; economic_growth -= 0.2
 
-We tighten price controls, aiming to reduce inflation further beyond its current levels. This causes further growth in the black market.
+我们收紧物价管制,力求把通货膨胀压到当前水平以下。这导致黑市进一步滋长。
 
 @cybersyn
 view-if: five_year_plan and invested >= 5 and science >= 3
@@ -386,4 +386,4 @@ title: Look into the unorthodox and speculative ideas of some of our planners an
 subtitle: Some suggest that future advances in computation could revolutionize planning.
 on-arrival: cybersyn += 1
 
-We have begun to investigate the possibility of future advances in automated computation, tabulation, and statistical methods enabling an eventual revolutionization of planning. Currently, research remains overwhelmingly speculative, and some planners are annoyed that we are focusing on this, rather than the more pressing and immediate concerns of their constituents.
+我们已开始探讨一个可能:自动计算、制表与统计方法未来的进步,或能最终使计划工作发生革命性变化。目前,相关研究仍基本停留在思辨层面,而一些计划者对我们把注意力放在这上面、而非其服务对象更紧迫切身的关切感到恼火。

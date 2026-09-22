@@ -8,9 +8,9 @@ card-image: img/portraits/BreitscheidRudolf.jpg
 go-to: fp_menu
 #subtitle: International relations and dealing with Versailles.
 
-= Foreign Policy
+= 外交政策
 
-What should our foreign policy priority be?
+我们的外交政策当以何为优先?
 
 @fp_menu
 
@@ -38,21 +38,21 @@ What should our foreign policy priority be?
 title: Improve our relations with the Western Allies.
 on-arrival: west_relation += 2; reparations_negotiation += 1
 
-The key to peace in Europe is a rapproachment between France and Germany. We are taking steps towards that rapproachment. [? if young_plan_seen == 0 : This is difficult to do when France is occupying a major portion of Germany's territory, but we are working on that part. ?]
+欧洲和平的关键在于法德之间的和解。我们正朝着这一和解迈出步伐。 [? if young_plan_seen == 0 : 在法国占领着德国大片领土之时,这很难做到,但我们正在处理这一环节。 ?]
 
 @improve_east
 title: Improve our relations with our eastern neighbors.
 on-arrival: east_relation += 2;
 
-We also aim to improve relations with our eastern neighbors, Poland and Czechoslovakia, who are righfully terrified of German aggression. Hopefully we can convince them of our peaceful intentions.
+我们还力求改善与东部邻邦波兰、捷克斯洛伐克的关系 —— 它们对德国的侵略心怀恐惧,这种恐惧是有道理的。但愿我们能让他们相信我们的和平意图。
 
 @improve_soviet
 title: Improve our relations with the Soviet Union.
 subtitle: We could also broach the question of the KPD...
 
-The Soviet Union also suffered from the international order created by the Treaty of Versailles; they have been participating in our secret rearmament program. The Treaty of Rapallo in 1922 affirmed our friendly relations.
+苏联同样深受《凡尔赛条约》所创国际秩序之害;他们一直参与我们的秘密重整军备计划。1922 年的《拉巴洛条约》确认了我们的友好关系。
 
-The Soviets are asking for economic and developmental assistance. They are still a poor country on the whole, and are desperately trying to catch up to the western powers. There is a chance that our anti-communist coalition partners would be upset, but we could assuage them by asking the Soviets for secret assistance in training and equiping the Reichswehr.
+苏联方面请求经济与发展援助。总的来说,他们仍是个贫穷的国家,正拼命力图赶上西方列强。我们的反共执政盟友可能会不满,但我们可以请苏联秘密协助训练、装备国防军,以此安抚他们。
 
 - @soviet_economic_aid_yes_mil: Provide aid, in exchange for Reichswehr assistance.
 - @soviet_economic_aid_yes: Provide aid, in exchange for only good relations.
@@ -63,14 +63,14 @@ choose-if: budget >= 1
 subtitle: -1 财政预算
 on-arrival: budget -= 1; soviet_relation += 1; reichswehr_strength += 20; reichswehr_loyalty += 0.05; foreign_goal_completed += 1
 
-The Soviets are pleased that we have sent them aid, and have agreed to help train our military. The Reichswehr appreciates our support.
+苏联对我们送去援助感到满意,并同意协助训练我们的军队。国防军对我们的支持心存感激。
 
 @soviet_economic_aid_yes
 choose-if: budget >= 1
 subtitle: -1 财政预算
 on-arrival: budget -= 1; soviet_relation += 2; coalition_dissent += 1; foreign_goal_completed += 1
 
-The Soviets are pleased that we have sent them aid, and have not asked for anything specific in exchange. Our coalition partners are less pleased.
+苏联对我们送去援助感到满意,而我们没有要求任何具体的回报。我们的执政盟友对此就不那么高兴了。
 
 - @kpd: Ask if Moscow could help repair our relations with the KPD.
 - @wittorf: Do the Soviets know about the Wittorf Affair? Do they know that we know?
@@ -78,33 +78,33 @@ The Soviets are pleased that we have sent them aid, and have not asked for anyth
 
 @soviet_economic_aid_no
 
-The Soviets are slightly upset, but they seemed to expect this answer.
+苏联方面略有不满,但他们似乎本已料到会是这个答复。
 
 
 @kpd
 on-arrival: kpd_relation += 8*(1-dissent); communist_coalition += 1 if kpd_foreign_seen == 0; kpd_foreign_seen = 1
 
-We also mention the KPD in our conversations with the Soviet ambassador. They claim that the KPD is entirely independent of the Soviet government, and that the conflict is Thälmann's doing. But, soon after our conversation we notice a slight improvement in attitudes from the KPD.
+我们在与苏联大使的交谈中也提到了共产党。他们声称共产党完全独立于苏联政府,冲突是台尔曼一手造成的。不过,谈话后不久,我们便注意到共产党的态度略有改善。
 
 @wittorf
 view-if: wittorf_secret = 1 and ((year = 1929 and month < 6) or year = 1928) and wittorf_soviet_union = 0
-unavailable-subtitle: It is impossible that Stalin and the Comintern could be moved on their policy.
+unavailable-subtitle: 要斯大林与共产国际改变政策,是不可能的。
 on-arrival: wittorf_soviet_union = 1; kpd_relation += 6*(1-dissent); kpd_foreign_seen = 1
 max-visits: 1
 
-Of course Stalin and the various leaders of the Comintern know about the Wittorf Affair, but they do not seem to know that we know as well. The Comintern was planning to build a narrative around the affair that absolves Thälmann, but perhaps now they will be less inclined to defend him.
+斯大林与共产国际的各位领导人当然知道维托夫事件,但他们似乎并不知道我们也知道。共产国际原本打算围绕此事构建一套为台尔曼开脱的说辞,但如今他们或许不那么愿意替他辩护了。
 
 
 @customs_union
 title: Form a customs union with Austria?
 subtitle: This will likely incur the wrath of France.
-unavailable-subtitle: This is superseded by the European Union.
+unavailable-subtitle: 此事已被欧洲联盟取代。
 choose-if: eu = 0
 view-if: black_thursday_seen = 1 and customs_union = 0
 
-The right has long desired closer ties with Austria, with the eventual goal of the merger of the two German-speaking countries. A customs union with Austria is the first step towards this goal. Additionally, many believe that a union with Austria would improve our current economic circumstances.
+右翼长期以来渴望与奥地利建立更紧密的联系,最终目标是两个德语国家的合并。与奥地利建立关税同盟是迈向这一目标的第一步。此外,许多人相信,与奥地利的联合将改善我们当前的经济状况。
 
-However, the Allies, especially France, are likely to object. This agreement would break the terms of the Versailles Treaty, and could lead to economic sanctions, further hurting our economy.
+然而,协约国 —— 尤其是法国 —— 很可能会反对。这项协定会破坏《凡尔赛条约》的条款,并可能导致经济制裁,进一步伤害我们的经济。
 
 - @customs_union_2: Yes, do it!
 - @fp_menu: No, we should do something else.
@@ -113,9 +113,9 @@ However, the Allies, especially France, are likely to object. This agreement wou
 on-arrival: banking_crisis_timer = 2; customs_union = 1; west_relation -= 2; east_relation -= 2; z_relation += 6; dvp_relation += 6; coalition_dissent -= 1  if coalition_dissent > 0; coup_progress -= 1
 max-visits: 1
 
-We have formed a customs union with Austria! The right-wing parties are praising us for this unexpected turn of events.
+我们已与奥地利结成关税同盟!右翼政党对这一出人意料的转变大加称赞。
 
-Immediately, France and other neighboring countries lodge their protests. The longer-term response is yet to be seen.
+法国及其他邻邦立即提出抗议。更长期的回应尚待观察。
 
 
 @negotiate
@@ -124,7 +124,7 @@ subtitle: [? if young_plan_seen == 1 : After passing the Young Plan, France has 
 view-if: reparations > -2 and reparations_negotiation < 3
 on-arrival: west_relation += 1; reparations_negotiation += 1; reparations_negotiation += 1 if pacifism >= 3; reparations_negotiations += 1 if nationalism <= 50; reparations_negotiation += 1 if west_relation >= 3
 
-Negotiations procede smoothly for the most part. The Western powers are convinced of Germany's sincerity and goodwill. [? if nationalism <= 50 or pacifism >= 3 : They are pleased to see that we are renouncing militarism. ?]
+谈判大体上进展顺利。西方列强相信了德国的诚意与善意。 [? if nationalism <= 50 or pacifism >= 3 : 他们乐见我们放弃军国主义。 ?]
 
 
 @reduce_reparations
@@ -134,18 +134,18 @@ view-if: reparations_negotiation >= 3 and black_thursday_seen == 1 and reparatio
 on-arrival: west_relation += 1; reparations = -2; budget += 2 if hoover_memorandum_seen == 0; budget += 1 if hoover_memorandum_seen == 1; coalition_dissent -= 1 if coalition_dissent > 0; workers_spd += 8*(1-dissent); old_middle_spd += 5*(1-dissent); new_middle_spd += 5*(1-dissent); rural_spd += 5*(1-dissent); coup_progress -= 2 if coup_progress > 2; economic_growth += 0.7; economic_growth += 0.5 if economic_growth < 0
 max-visits: 1
 
-Finally, given both the economic circumstances and our continued negotiations, the Western Allies are willing to pause our reparations payments! Much of the credit must go to American president Hoover, who has been friendlier towards us than the Europeans.
+终于,鉴于经济形势与我们持续不断的谈判,西方协约国愿意暂停我们的赔款支付!这很大程度上要归功于美国总统胡佛 —— 他比欧洲人待我们更为友好。
 
-This has reduced tensions within our government, and our party has gotten credit for the achievement.
+这缓和了我们政府内部的紧张,而我党也因这一成就赢得声望。
 
 @expose
 title: Expose the secret rearmament plans of the previous foreign ministry!
 view-if: rearmament_exposed == 0
 on-arrival: west_relation += 2; east_relation += 1; nationalism -= 5*(1-dissent); pro_republic += 5*(1-dissent); coalition_dissent += 1; rearmament_exposed += 1; reparations_negotiation += 3; coup_progress += 2
 
-The previous foreign ministry, despite its benevolent and peaceful face, was secretly helping the Reichswehr to build up its forces, in contravention of the Treaty of Versailles.
+前任外交部虽然摆出仁善和平的面孔,却暗中协助国防军扩充军力,违背了《凡尔赛条约》。
 
-The Allies are grateful of our exposure and repudiation of militarism. Our partners in the coalition are less supportive.
+协约国感激我们揭露并批判军国主义。我们在执政联盟中的伙伴则不那么支持。
 
 @withdraw_nonintervention
 title: Withdraw from the French non-intervention pact.
@@ -153,7 +153,7 @@ subtitle: This will displease them greatly, and may upset our bourgeois partners
 on-arrival: west_relation -= 2; coalition_dissent += 1; coalition_dissent += 1 if in_grand_coalition; coalition_dissent += 1 if z_party_leader == "Kaas"; z_relation -= 5; dvp_relation -= 5; coup_progress += 1; nonintervention = 0
 view-if: nonintervention and spd_intervention
 
-We have withdrawn from the non-intervention pact. Unfortunately, this leads to suspicion that we are planning to send aid to the Republicans. After all, why else would we?
+我们退出了不干涉协定。遗憾的是,这引来怀疑,认为我们打算向共和派提供援助。毕竟,除此之外我们还能图什么?
 
 @spanish_aid
 title: Begin sending aid to the Spanish Republicans.
@@ -166,9 +166,9 @@ title: Negotiate a Concordat between the Germany and the Vatican.
 view-if: prussian_concordat = 1 and reichskonkordat = 0 and reichskonkordat_progress < 4
 on-arrival: reichskonkordat_progress += 2; reichskonkordat_progress -= 1 if abortion_rights; reichskonkordat_progress -= 1 if family_law; z_relation += 3*(1-dissent)
 
-The Roman Catholic Church is interested in furthering relations with the German Republic, seeing us as preferable to the old anti-Catholic policies of the Empire. We are working towards the signing of a Concordat, an agreement between the Vatican and the Republic that formally recognizes the Church's rights and interests in the country. The Center Party is especially interested in making this agreement.
+罗马天主教会乐于推进与德意志共和国的关系,认为我们比帝国时期那些反天主教的老政策更可取。我们正推动签署一份政教协定 —— 梵蒂冈与共和国之间正式承认教会在这个国家权利与利益的协议。中央党尤其热衷于促成这项协议。
 
-[? if family_law : Our liberalized divorce policies make it difficult to build relations with the Vatican. ?] [? if abortion : Our legalization of abortion make it difficult to connect with the Church. ?]
+[? if family_law : 我们放宽的离婚政策使得与梵蒂冈建立关系变得困难。 ?] [? if abortion : 我们将堕胎合法化,使得与教会沟通变得困难。 ?]
 
 @concordat
 title: We can sign a Concordat with the Vatican!
@@ -176,20 +176,20 @@ view-if: reichskonkordat_progress >= 4 and reichskonkordat = 0
 on-arrival: concordat_vote = 1
 go-to: concordat_done if not legislature_enabled; legislative_menu if legislature_enabled
 
-We put the Reichskonkordat up for vote in the Reichstag.
+我们将国家政教协定提交国会表决。
 
 @concordat_done
 on-arrival: reichskonkordat = 1; z_relation += 15*(1-dissent); catholics_spd += 8*(1-dissent); catholics_z += 5 if in_weimar_coalition or in_grand_coalition or in_popular_front;
 achievement: reichskonkordat
 
-We have successfully signed a Concordat between Germany and the Roman Catholic Church! This treaty defines a formal relationship between the Church and the German state, guaranteeing freedom of worship for Catholics, and the right of the church to appoint their own clergy. Catholics in Germany are pleased, as are their representatives in the Center Party.
+我们成功签署了德国与罗马天主教会之间的政教协定!这一条约界定了教会与德国国家之间的正式关系,保障天主教徒的信仰自由,以及教会自行任命神职人员的权利。德国的天主教徒感到满意,他们在中央党中的代表亦然。
 
 @support_austria
 title: Diplomatically support Austrian democracy against the Dollfuß dictatorship.
 view-if: austrian_parliament_seen = 1 and austrian_civil_war_seen = 0
 on-arrival: sdapo_strength += 1; left_dissent -= 3; center_dissent -= 3
 
-We provide verbal backing to Austrian democracy, wage a war of words against Austrofascism, and promulgate additional trade sanctions. Time will tell if it will be enough.
+我们对奥地利民主给予口头支持,对奥地利法西斯主义展开言辞交锋,并颁布更多贸易制裁。是否足够,时间会给出答案。
 
 @support_austria_2
 title: Provide material support to Austrian democracy against the Dollfuß dictatorship.
@@ -198,17 +198,17 @@ choose-if: budget >= 1
 view-if: austrian_parliament_seen = 1 and austrian_civil_war_seen = 0
 on-arrival: budget -= 1; sdapo_strength += 3; left_dissent -= 6; center_dissent -= 6
 
-In public, we provide verbal backing to Austrian democracy, wage a war of words against Austrofascism, and promulgate additional trade sanctions. Privately, we provide financial and various forms of "support" to our comrades in Austria in their struggle against dictatorship.
+公开地,我们对奥地利民主给予口头支持,对奥地利法西斯主义展开言辞交锋,并颁布更多贸易制裁。私下里,我们向奥地利的同志们提供财政及各种形式的「支持」,助他们对抗独裁。
 
 @european_union
 title: Take steps to form a "European Union".
 subtitle: Is a "United States of Europe" possible?
-unavailable-subtitle: [? if west_relation < 5 : Our relations with the West are not good enough. ?] [? if east_relation < 4 : Our relations with the East are not good enough. ?]
+unavailable-subtitle: [? if west_relation < 5 : 我们与西方国家的关系还不够好。 ?] [? if east_relation < 4 : 我们与东方国家的关系还不够好。 ?]
 view-if: reparations <= -2 and eu_progress < 2
 choose-if: west_relation >= 5 and east_relation >= 4
 on-arrival: eu_progress += 1; west_relation += 1
 
-Forming a "United States of Europe" has long been part of the Social Democratic foreign program. Finally, we are taking steps towards it. Given our positive relations with the other countries of Europe, we can begin to hold multilateral negotiations for more European federalism. It will take time to hammer out the exact shape of this future "European Union", however.
+建立「欧洲合众国」一直是社会民主党外交纲领的一部分。我们终于朝着它迈出了步伐。鉴于我们与欧洲其他国家良好的关系,我们可以开始举行多边谈判,以推进欧洲的联邦化。不过,要敲定这个未来「欧洲联盟」的确切形态,还需要时间。
 
 
 @european_union_2
@@ -217,17 +217,17 @@ view-if: west_relation >= 5 and east_relation >= 4 and eu_progress >= 2 and not 
 on-arrival: eu_vote = 1
 go-to: eu_done if not legislature_enabled; legislative_menu if legislature_enabled
 
-We put the European Union up for vote in the Reichstag.
+我们将欧洲联盟提交国会表决。
 
 @eu_done
 on-arrival: eu = 1; unemployed -= 2 if unemployed >= 10; inflation += 2 if inflation <= -2; inflation -= 1 if inflation >= 4.5; workers_spd += 5*(1-dissent); new_middle_spd += 5*(1-dissent); old_middle_spd += 5*(1-dissent); rural_spd += 4*(1-dissent); catholics_spd += 4*(1-dissent); unemployed_spd += 4*(1-dissent); pro_republic += 5; nationalism -= 5; budget += 1; economic_growth += 1; economic_growth += 1 if economic_growth < 3
 achievement: eu
 
-Along with France, Great Britain, and many other states of Western and Eastern Europe, we have signed a treaty to form a European Union! It is hoped that Europe has learned the lessons of the Great War; never again will there be another war that tears the continent apart.
+我们与法国、英国,以及东西欧众多其他国家一道,签署了一项组建欧洲联盟的条约!但愿欧洲已吸取大战的教训;再也不会有另一场撕裂这片大陆的战争了。
 
-A major component of the union is the free movement of people and goods across the countries of Europe, as well as the stabilization of currency exchange rates. This provides new markets for German products and new sources of investment.
+这个联盟的一个主要组成部分,是欧洲各国之间人员与货物的自由流动,以及货币汇率的稳定。这为德国产品提供了新市场,也带来了新的投资来源。
 
-Fascist Italy remains a problem, and the Soviet Union also lies outside the system. But for now, there is new hope for peace and prosperity throughout the continent.
+法西斯意大利仍是个问题,苏联也处在这一体系之外。但就目前而言,整个大陆的和平与繁荣有了新的希望。
 
 @mingi_taw
 title: Send the Scythian on her woeful errand to the Kingdom of Mingi Taw.
@@ -236,7 +236,7 @@ view-if: decay and time_travelled_to_be_here
 on-arrival: scythian_deployed = 1
 max-visits: 1
 
-The Scythian bids us her humble farewells as she sails across the sea to the distant, faraway lands of Mingi Taw, up apon the mountains of the Caucasus. 
+斯基泰人向她谦恭地道别,扬帆渡海,前往高加索群山之上那遥远而渺茫的明吉陶之地。
 
-When we will next see her, we do not now, but it is possible that the Kingdom of Mingi Taw does not exist yet, and belongs further in the past, in which case we will have to hunker down and ward off this decay ourselves for a while longer.
+我们何时能再见到她,现在还不得而知;但明吉陶王国也许尚未存在,而是属于更遥远的过去 —— 若真如此,我们就得再蛰伏一阵子,独自抵御这腐朽。
 
