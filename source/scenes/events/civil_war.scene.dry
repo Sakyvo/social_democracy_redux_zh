@@ -859,11 +859,11 @@ view-if: electoral_threshold = 0
 
 # The left is opposed to this.
 
-Some political thinkers believe that the proliferation of minor parties is responsible for the instability of the republic. They believe that a higher electoral threshold will reduce the influence of small radical parties. Parties that win a plurality in a constituency will maintain their representation, a gift to regional parties such as the [+ bvp_name +]. 
+一些政治思想家认为,小党林立是共和国动荡的原因。他们相信,更高的选举门槛会削弱小型激进政党的影响。在选区中赢得相对多数的政党将保留其代表权 —— 这是送给 [+ bvp_name +] 这类地区性政党的礼物。
 
-The smaller parties will obviously oppose this reform. [? if z_relation > 30 : The Center Party supports this reform, while their [+ bvp_name +] partners oppose it. ?] [? if kpd_relation > 50 and kpd_normalized >= 0.1 : Perhaps surprisingly, the KPD supports this reform. ?] [? if nsdap_normalized >= 0.2 : The NSDAP supports this reform, as they believe they have something to gain. ?]
+小党显然会反对这项改革。 [? if z_relation > 30 : 中央党支持这项改革,而他们的 [+ bvp_name +] 伙伴则反对。 ?] [? if kpd_relation > 50 and kpd_normalized >= 0.1 : 或许出人意料,共产党支持这项改革。 ?] [? if nsdap_normalized >= 0.2 : 纳粹党支持这项改革,因为他们相信自己能从中获益。 ?]
 
-The SPD Left opposes this change, as they believe it to be anti-democratic.
+社民党左翼反对这一改动,认为它反民主。
 
 - @vote_threshold_2: And so it shall be.
 - @constitutional: See other reform options.
@@ -876,7 +876,7 @@ go-to: constitutional
 
 # this should result in a redistribution of votes - other parties should not get so many votes anymore. maybe ddp and dvp get a recovery of middle-class votes? or maybe they flow to the others.
 
-We have passed a constitutional amendment to increase the electoral threshold to 5%. This is likely to benefit the larger parties and harm the smaller ones.
+我们通过了一项宪法修正案,将选举门槛提高到 5%。这很可能会让大党受益,让小党受损。
 
 
 
@@ -884,7 +884,7 @@ We have passed a constitutional amendment to increase the electoral threshold to
 subtitle: Votes of no confidence can only be called if an alternative plan for government formation can be passed, greatly reducing their incidence.
 view-if: constructive_vonc = 0
 
-[? if z_relation >= 30 : The Weimar Coalition parties, the DDP and Center Party, support this reform, which will greatly improve the stability of the government. ?] [? if z_relation < 30 : The DDP supports this reform, but the Center Party does not trust us enough to support the constitutional referendum. ?] The more conservative and radical right-wing parties and the KPD are in opposition, as they seem to relish in the republican system's instability.
+[? if z_relation >= 30 : 魏玛联盟各党 —— 民主党与中央党 —— 支持这项改革,它将大大提升政府的稳定性。 ?] [? if z_relation < 30 : 民主党支持这项改革,但中央党对我们的信任不足以支持这场宪法公投。 ?] 较为保守与激进的右翼政党以及共产党则表示反对,他们似乎对共和体制的动荡乐在其中。
 
 - @constructive_vonc_2: And so it shall be.
 - @constitutional: See other reform options.
@@ -894,15 +894,15 @@ on-arrival: constitutional_reform += 1; constructive_vonc = 1
 achievement: verfassungsreform
 go-to: constitutional
 
-We have successfully passed a constitutional amendment to ban votes of no confidence when a new government cannot be formed. Hopefully this increases the stability of our governments.
+我们成功通过了一项宪法修正案,禁止在无法组建新政府时提出不信任案。但愿这能提升我们政府的稳定性。
 
 @presidential_powers
 subtitle: The president can no longer dissolve the Reichstag at will, or call a *Reichsexekution* on state governments.
 view-if: presidential_powers = 0
 
-The wide-ranging presidential powers promised by the constitution are a potential gateway to authoritarianism. Thus, we can support reforms that limit the powers of the president, ending his power to unilaterally terminate an elected government and to remove state governments.
+宪法所许诺的广泛总统权力,是通往威权主义的潜在门户。因此,我们可以支持限制总统权力的改革,终结他单方面终止民选政府、以及撤换州政府的权力。
 
-The KPD is in favor of this reform, having been victims of the *Reichsexekution* in the past (when KPD-supported state governments in Thuringia and Saxony were removed). The democrats of the DDP also support this. [? if president == "Hindenburg": However, the opposition from conservatives is vehement, as they see a reduction in presidential powers as disrespectful to Hindenburg. ?] [? if z_relation <= 49 and president == "Hindenburg" : Thus, the Center Party has been influenced to oppose these reforms. ?] [? if z_relation > 49 and president == "Hindenburg" : Despite this, the Center Party supports the proposed reform. ?] [? if president == "Braun" : The Center Party supports this reform. ?]
+共产党支持这项改革 —— 他们过去曾是*国家执行*的受害者(当时由图林根与萨克森共产党支持的州政府被撤换)。民主党的民主派也支持此举。 [? if president == "Hindenburg": 然而,保守派的反对极其激烈,他们认为削减总统权力是对兴登堡的不敬。 ?] [? if z_relation <= 49 and president == "Hindenburg" : 因此,中央党受到这种影响,转而反对这些改革。 ?] [? if z_relation > 49 and president == "Hindenburg" : 尽管如此,中央党仍支持拟议的改革。 ?] [? if president == "Braun" : 中央党支持这项改革。 ?]
 
 - @presidential_powers_2: And so it shall be.
 - @constitutional: See other reform options.
@@ -912,13 +912,13 @@ on-arrival: constitutional_reform += 1; presidential_powers = 1
 achievement: verfassungsreform
 go-to: constitutional
 
-We have successfully passed a constitutional amendment to limit presidential powers! Hopefully this results in a less authoritarian Germany.
+我们成功通过了一项宪法修正案,限制总统权力!但愿这能带来一个不那么威权的德国。
 
 @supreme_soviet
 subtitle: Establish a new "Supreme Soviet" elected by the works councils to replace the Reichstag.
 view-if: nationalization_progress + socializations >= 3 and works_councils >= 3 and (president != "Hindenburg" or presidential_powers == 1)
 
-Our large-scale socializations of the economy and empowerment of works councils has laid the groundwork for a transition into a full dictatorship of the proletariat, effectively turning the Reichstag into a rump parliament with little genuine power. All to the left of and including most of the SPD will vote for, but we will face immense opposition from everyone else.
+我们对经济的大规模社会化与对工厂委员会的赋权,已为向完全的无产阶级专政过渡奠定了基础,实际上把国会变成了一个几乎毫无实权的残存议会。社民党多数及其左侧的一切力量都会投赞成票,但我们也将面临来自其他所有人的巨大反对。
 
 - @supreme_soviet_2: And so it shall be.
 - @constitutional: See other reform options.
@@ -928,13 +928,13 @@ on-arrival: constitutional_reform += 1; supreme_soviet = 1; capital_strike_progr
 achievement: raterrepublik
 go-to: constitutional
 
-We have successfully passed a constitutional amendment to effectively make works councils the dominant body of governance in the country. 
+我们成功通过了一项宪法修正案,实际上使工厂委员会成为全国治理的主导机构。
 
 @decrees
 view-if: not decree_decided
 on-arrival: decree_decided = 1; judicial_purge_cost = (5 - (judicial_reform*2)); judicial_purge_cost = 1 if judicial_purge_cost < 1; land_seizure_cost = (4 - land_reform); nationalize_budget = 4; nationalize_budget -= 1 if works_councils >= 2; nationalize_budget -= 1 if works_councils >= 3; nationalize_budget -= 1 if socializations + nationalization_progress >= 2;
 
-With our triumph over the reactionaries, we have for a short while near free-reign in molding Germany to our will. Thus various politicians in the party have eagerly drafted decrees which they now present to us for signing. If we sign too many decrees, we risk weakening confidence in the republic and damaging our relations with the bourgeois parties, however.
+随着我们战胜反动派,我们曾短暂地近乎可以随心所欲地按自己的意志塑造德国。因此,党内各色政客热切地起草法令,如今呈交给我们签署。不过,若我们签署的法令太多,就有可能削弱人们对共和国的信心,并损害我们与资产阶级政党的关系。
 
 - @land_seizure: Sweeping land reform to destroy the base of the reactionaries for good.
 - @mass_nationalization: Mass nationalizations of industry.
@@ -949,7 +949,7 @@ With our triumph over the reactionaries, we have for a short while near free-rei
 @zca_ban
 view-if: zca_formed and not zca_banned
 choose-if: rb_force+rfb_force >= army_force
-unavailable-subtitle: The Reichswehr forbids it.
+unavailable-subtitle: 国防军不允许这样做。
 on-arrival: zca_banned = 1; pro_republic -= 10; socialism -= 5; coup_progress += 10; sa_strength += 200; sh_strength += 150; bourgeois_power -= 0.05; west_relation -= 3; east_relation -= 3; soviet_relation += 1
 subtitle: They are a trojan horse for reaction.
 go-to: decrees_2
@@ -959,7 +959,7 @@ go-to: decrees_2
 @judicial_purge
 view-if: judicial_reform < 5 and not judicial_purge
 choose-if: rb_force+rfb_force >= (army_force*(1-reichswehr_loyalty))
-unavailable-subtitle: The Reichswehr forbids it.
+unavailable-subtitle: 国防军不允许这样做。
 on-arrival: judicial_reform += 5; judicial_purge = 1; budget -= judicial_purge_cost; pro_republic -= (4*judicial_purge_cost); coalition_dissent += judicial_purge_cost; reformist_dissent += (judicial_purge_cost*5)
 go-to: decrees_2
 
@@ -968,7 +968,7 @@ go-to: decrees_2
 @land_seizure
 view-if: land_reform < 4 and not land_seizure
 choose-if: rb_force+rfb_force >= (army_force*(1-reichswehr_loyalty))
-unavailable-subtitle: The Reichswehr forbids it.
+unavailable-subtitle: 国防军不允许这样做。
 subtitle: -[+ land_seizure_cost +] budget.
 on-arrival: budget -= land_seizure_cost; land_seizure = 1; land_reform += land_seizure_cost; pro_republic -= (4*land_seizure_cost); coalition_dissent += land_seizure_cost; rural_spd += land_seizure_cost*(5*(1-dissent)); rural_nsdap -= land_seizure_cost*(4*(1-dissent)); unemployed -= land_seizure_cost if unemployed >= 5; dvp_relation -= (5*land_seizure_cost); z_relation -= (4*land_seizure_cost); left_strength += (8*land_seizure_cost); left_dissent -= (5*land_seizure_cost); rural_sol += (3*land_seizure_cost); rural_policy += land_seizure_cost; sa_strength += 25; sh_strength += 10; sa_militancy += 0.05
 
@@ -978,7 +978,7 @@ on-arrival: budget -= land_seizure_cost; land_seizure = 1; land_reform += land_s
 
 @mass_nationalization
 choose-if: rb_force+rfb_force >= army_force and left_strength >= reformist_strength+neorevisionist_strength
-unavailable-subtitle: [? if rb_force+rfb_force < army_force : The Reichswehr forbids it. ?][? if left_strength < reformist_strength+neorevisionist_strength : The party forbids it. ?]
+unavailable-subtitle: [? if rb_force+rfb_force < army_force : 国防军不允许这样做。 ?][? if left_strength < reformist_strength+neorevisionist_strength : 党内不允许这样做。 ?]
 subtitle: -[+ nationalize_budget +] budget. [? if works_councils >= 3 : Our works councils have reduced the budget necessary for this program. ?] [? if socializations >= 2: Our existing socialization policies have reduced the budget necessary for this program. ?]
 view-if: not mass_nationalization and not sapd_formed
 on-arrival: mass_nationalization = 1; ddp_relation -= 4; z_relation -= 5; dvp_relation -= 7; coalition_dissent += 1; capital_strike_progress += 1; pro_republic -= 6; reformist_dissent += 4
@@ -988,15 +988,15 @@ go-to: nationalize_deficit if budget < nationalize_budget; nationalize_no_defici
 on-arrival: nationalization_progress += 1; bourgeois_power -= 0.05; capital_strike_progress += 2; unemployed -= 3.5 if unemployed >= 6; unemployed -= 1.2 if works_councils >= 3; workers += 2.5; budget -= nationalize_budget; works_program += 1; workers_spd += 8*(1-dissent); unemployed_spd += 5*(1-dissent); coalition_dissent += 1; dvp_relation -= 4; left_dissent -= 5; new_middle_spd -= 2 if not new_middle_conscious; old_middle_spd -= 3; economy_goal_completed += 1; inflation += 2
 achievement: wirtschaftspolitik
 
-[? if nationalization_progress == 1 : We have begun purchasing idling enterprises from the capitalists[? if works_councils >= 1: , and running them in coordination with empowered works councils ?]. By keeping production going, we can stave off the rising unemployment. ?]
+[? if nationalization_progress == 1 : 我们已开始从资本家手中收购闲置的企业[? if works_councils >= 1: ,并与获得赋权的工厂委员会协同经营 ?]。通过维持生产,我们可以挡住不断上升的失业。 ?]
 
-[? if nationalization_progress == 1 : The Left argues that this should only be a first step in the socialist transformation of the economy. Eventually, much of the economy must be brought under popular control. ?]
+[? if nationalization_progress == 1 : 左翼主张,这应当只是经济社会主义改造的第一步。最终,经济的大部分必须置于民众的控制之下。 ?]
 
 - @decrees_2: Excellent.
 
 @nationalize_deficit
 
-Unfortunately, we do not have the budget to begin buying out industrial facilities. Some are urging for deficit spending in order to purchase factories, while others are encouraging (currently illegal) factory takeovers by workers, or nationalization without compensation. Taking any of these actions would require a vast departure from our previous party stances.
+遗憾的是,我们没有开始收购工业设施的财政预算。有人主张以赤字开支来购买工厂,也有人鼓励工人(目前尚属非法的)接管工厂,或无偿国有化。采取其中任何一项行动,都将要求我们与党先前的立场大幅背离。
 
 - @nationalize_deficit_1
 - @nationalize_without_compensation
@@ -1008,52 +1008,52 @@ Unfortunately, we do not have the budget to begin buying out industrial faciliti
 title: Take a budget deficit to fund the nationalization program.
 choose-if: left_strength > reformist_strength + center_strength or woytinsky_advisor == 1
 subtitle: [? if woytinsky_advisor: Woytinsky can bring us around to supporting a budget deficit. ?]
-unavailable-subtitle: [? if left_strength <= reformist_strength + center_strength: The party does not yet support budget deficits for this purpose. ?] [? if not woytinsky_advisor : Perhaps bringing on an advisor might help make this action palatable? ?]
+unavailable-subtitle: [? if left_strength <= reformist_strength + center_strength: 党内尚不支持为此目的而搞预算赤字。 ?] [? if not woytinsky_advisor : 或许引入一位顾问有助于让这一行动变得可以接受? ?]
 on-arrival: nationalization_progress += 1; bourgeois_power -= 0.05; capital_strike_progress += 3; unemployed -= 3 if unemployed >= 6; unemployed -= 1.2 if works_councils >= 3; budget -= nationalize_budget; works_program += 1; workers_spd += 8*(1-dissent); unemployed_spd += 5*(1-dissent); coalition_dissent += 2; dvp_relation -= 6; z_relation -= 4; new_middle_spd -= 3; new_middle_spd += 2 if new_middle_conscious; old_middle_spd -= 3; economy_goal_completed += 1; inflation += 3
 achievement: wirtschaftspolitik
 
-[? if woytinsky_advisor: Most of the party, even on the left, are opposed to budget deficits for any purpose, with the exception of Wladimir Woytinsky. While he did not originally support the left's "transformational" plan, he has come around, and has persuaded the party and the Finance Ministry to support budget deficits in limited cases, for the purpose of exiting from the depression. ?]
+[? if woytinsky_advisor: 党内多数人 —— 即便是左翼 —— 都反对出于任何目的的预算赤字,唯独弗拉基米尔·沃伊京斯基例外。他原本并不支持左翼那套「转型」计划,但后来态度转变,并说服了全党与财政部:在有限情况下,为摆脱大萧条,可以支持预算赤字。 ?]
 
-[? if nationalization_progress == 1 : We have begun purchasing idling enterprises from the capitalists[? if works_councils >= 1: , and running them in coordination with empowered works councils ?]. By keeping production going, we can stave off the rising unemployment. ?]
+[? if nationalization_progress == 1 : 我们已开始从资本家手中收购闲置的企业[? if works_councils >= 1: ,并与获得赋权的工厂委员会协同经营 ?]。通过维持生产,我们可以挡住不断上升的失业。 ?]
 
-[? if nationalization_progress == 1 : The Left argues that this should only be a first step in the socialist transformation of the economy. Eventually, much of the economy must be brought under popular control. ?]
+[? if nationalization_progress == 1 : 左翼主张,这应当只是经济社会主义改造的第一步。最终,经济的大部分必须置于民众的控制之下。 ?]
 
-[? if nationalization_progress > 1 : We purchase additional underutilized enterprises and run them in a coordinated socialist fashion with the works councils, hiring formerly laid off workers. A significant portion of the economy is now under public control. ?]
+[? if nationalization_progress > 1 : 我们又收购了更多未被充分利用的企业,与工厂委员会以协调的社会主义方式经营,并重新雇用先前被裁的工人。如今,经济的相当一部分已处于公共控制之下。 ?]
 
 - @decrees_2: Excellent.
 
 @nationalize_without_compensation
 title: Nationalize without compensation.
 subtitle: There is no reason why we should not simply take over idle factories. This is likely to provoke a confrontation with the capitalists.
-unavailable-subtitle: [? if left_strength <= reformist_strength + center_strength: The bulk of the party does not support this quasi-legal action. ?] [? if judicial_reform < 3 : The judiciary would oppose this action. ?]
+unavailable-subtitle: [? if left_strength <= reformist_strength + center_strength: 党内多数并不支持这一半合法的举措。 ?] [? if judicial_reform < 3 : 司法界会反对这一举措。 ?]
 choose-if: left_strength > reformist_strength + center_strength and judicial_reform >= 3
 on-arrival: nationalization_progress += 1; bourgeois_power -= 0.1; capital_strike_progress += 7; coup_progress += 3; unemployed -= 2.5 if unemployed >= 6; unemployed -= 1.2 if works_councils >= 3 and unemployed >= 3; works_program += 1; workers_spd += 8*(1-dissent); unemployed_spd += 6*(1-dissent); coalition_dissent += 2; dvp_relation -= 10; z_relation -= 8; ddp_relation -= 8; left_strength += 15; reformist_dissent += 10; left_dissent -= 10; new_middle_spd -= 5; new_middle_spd += 3 if new_middle_conscious; old_middle_spd -= 8; economy_goal_completed += 1; kpd_relation += 5*(1-dissent); inflation += 4
 achievement: wirtschaftspolitik
 
-The capitalists are, predictably, up in arms about our policy of nationalization without compensation. They call it illegal expropriation, and it is. Nevertheless, it is clear that they have failed by keeping their factories idle, and we must take radical action.
+不出所料,资本家对我们无偿国有化的政策群情激愤。他们称之为非法征用 —— 确实如此。然而,他们让工厂闲置,失败显而易见,我们必须采取激进行动。
 
-[? if nationalization_progress == 1 : We have begun acquiring idling enterprises from the capitalists[? if works_councils >= 1: , and running them in coordination with empowered works councils ?]. By keeping production going, we can stave off the rising unemployment. ?]
+[? if nationalization_progress == 1 : 我们已开始从资本家手中取得闲置的企业[? if works_councils >= 1: ,并与获得赋权的工厂委员会协同经营 ?]。通过维持生产,我们可以挡住不断上升的失业。 ?]
 
-[? if nationalization_progress > 1 : We acquired additional underutilized enterprises and run them in a coordinated socialist fashion with the works councils, hiring formerly laid off workers. A significant portion of the economy is now under public control. ?]
+[? if nationalization_progress > 1 : 我们又取得了更多未被充分利用的企业,与工厂委员会以协调的社会主义方式经营,并重新雇用先前被裁的工人。如今,经济的相当一部分已处于公共控制之下。 ?]
 
 - @decrees_2: Excellent.
 
 @empower_workers
 title: Empower workers to take over factories.
 subtitle: We can promise to legalize factory occupations, giving the factories over to worker unions. This is highly confrontational, and would likely provoke a reaction from right-wing militants as well as capitalists.
-unavailable-subtitle: [? if left_strength <= reformist_strength + neorevisionist_strength : The bulk of the party does not support this radical action. ?] [? if judicial_reform < 3 : The judiciary would oppose this action. ?] [? if rb_militancy < 0.25 : If we increased the strength of our paramilitary forces, perhaps we could do this. ?] [? if works_councils < 1 : We need the support of the works councils first. ?]
+unavailable-subtitle: [? if left_strength <= reformist_strength + neorevisionist_strength : 党内多数并不支持这一激进举措。 ?] [? if judicial_reform < 3 : 司法界会反对这一举措。 ?] [? if rb_militancy < 0.25 : 若能增强我们准军事组织的力量,或许可以这么做。 ?] [? if works_councils < 1 : 我们需要先获得工厂委员会的支持。 ?]
 choose-if: left_strength > reformist_strength + neorevisionist_strength and (judicial_reform >= 3 or rb_militancy >= 0.25) and works_councils >= 1
 on-arrival: nationalization_progress += 1; bourgeois_power -= 0.1; capital_strike_progress += 6; unemployed -= 3 if unemployed >= 6; unemployed -= 1.5 if works_councils >= 3 and unemployed > 4; works_program += 1; workers_spd += 10*(1-dissent); unemployed_spd += 10*(1-dissent); coalition_dissent += 2; dvp_relation -= 10; z_relation -= 8; ddp_relation -= 8; workers_nsdap -= 5*(1-dissent); unemployed_nsdap -= 5*(1-dissent); left_strength += 15; reformist_dissent += 10; left_dissent -= 10; new_middle_spd -= 5; new_middle_spd += 2 if new_middle_conscious; old_middle_spd -= 10; factory_takeovers += 1; economy_goal_completed += 1; kpd_relation += 5*(1-dissent); inflation += 3
 achievement: wirtschaftspolitik
 
-The capitalists are, predictably, up in arms about our policy of legalizing factory occupations. They call it illegal expropriation, and it is. Nevertheless, it is clear that they have failed, and we must take radical action.
+不出所料,资本家对我们将工厂占领合法化的政策群情激愤。他们称之为非法征用 —— 确实如此。然而,他们的失败显而易见,我们必须采取激进行动。
 
 - @decrees_2: Excellent.
 
 @wealth_seizure
 view-if: not wealth_seized
 choose-if: rb_force+rfb_force >= army_force and left_strength >= 50
-unavailable-subtitle: The Reichswehr forbids it.
+unavailable-subtitle: 国防军不允许这样做。
 subtitle: +7 budget.
 on-arrival: wealth_seized = 1; upper_tax_rates += 3; bourgeois_power -= 0.25; coalition_dissent += 3; workers_spd += 6*(1-dissent); unemployed_spd += 6*(1-dissent); z_relation -= 10; ddp_relation -= 12; dvp_relation -= 16; pro_republic -= 8; budget += 7; capital_strike_progress += 15; old_middle_spd *= 0.25; new_middle_spd *= 0.6
 
@@ -1064,7 +1064,7 @@ on-arrival: wealth_seized = 1; upper_tax_rates += 3; bourgeois_power -= 0.25; co
 @dnvp_ban
 view-if: not dnvp_banned
 choose-if: rb_force+rfb_force >= army_force
-unavailable-subtitle: [? if left_strength >= 50 : The Reichswehr forbids it. ?][? if left_strength < 50 : The party forbids it. ?]
+unavailable-subtitle: [? if left_strength >= 50 : 国防军不允许这样做。 ?][? if left_strength < 50 : 党内不允许这样做。 ?]
 subtitle: We will deny the remaining reactionaries a party.
 on-arrival: dnvp_banned = 1; dvp_relation -= 5; z_relation -= 4 if z_party_leader != "Joos"; pro_republic -= 4; old_middle_dnvp *= 0.9; rural_dnvp *= 0.95; new_middle_dnvp *= 0.8; sh_strength *= 0.9; sh_militancy -= 0.05
 
@@ -1074,7 +1074,7 @@ Recognizing the DNVP's own participation in the far-right struggle against the R
 
 @dvp_ban
 choose-if: rb_force+rfb_force >= army_force and (left_strength > reformist_strength + center_strength)
-unavailable-subtitle: The Reichswehr forbids it.
+unavailable-subtitle: 国防军不允许这样做。
 view-if: not dvp_banned and dnvp_banned
 subtitle: The DVP are hardly better than the other reactionaries.
 on-arrival: dvp_banned = 1; reformist_dissent += 15; center_dissent += 5; z_relation -= 10; ddp_relation -= 10; coalition_dissent += 2; pro_republic -= 7; new_middle_spd -= 4; old_middle_spd -= 5
@@ -1435,7 +1435,7 @@ on-arrival: constitutional_reform += 1; negotiating_power -= (amendment_cost/2);
 achievement: verfassungsreform
 go-to: other_amendments
 
-We have passed a constitutional amendment to increase the electoral threshold to 5%. This is likely to benefit the larger parties and harm the smaller ones.
+我们通过了一项宪法修正案,将选举门槛提高到 5%。这很可能会让大党受益,让小党受损。
 
 
 
@@ -1454,7 +1454,7 @@ on-arrival: constitutional_reform += 1; constructive_vonc = 1; negotiating_power
 achievement: verfassungsreform
 go-to: other_amendments
 
-We have successfully passed a constitutional amendment to ban votes of no confidence when a new government cannot be formed. Hopefully this increases the stability of our governments.
+我们成功通过了一项宪法修正案,禁止在无法组建新政府时提出不信任案。但愿这能提升我们政府的稳定性。
 
 @presidential_powers_kpd
 subtitle: The president can no longer dissolve the Reichstag at will, or call a *Reichsexekution* on state governments.
@@ -1473,7 +1473,7 @@ on-arrival: constitutional_reform += 1; presidential_powers = 1; negotiating_pow
 achievement: verfassungsreform
 go-to: other_amendments
 
-We have successfully passed a constitutional amendment to limit presidential powers! Hopefully this results in a less authoritarian Germany.
+我们成功通过了一项宪法修正案,限制总统权力!但愿这能带来一个不那么威权的德国。
 
 @decrees_kpd
 view-if: not decree_kpd_decided
