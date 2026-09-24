@@ -68,7 +68,7 @@ Snap elections are called, for [+ next_election_month : month +] [+ next_electio
 
 @defend
 title: Fight against the overthrow attempt!
-subtitle: Labor will call a general strike. The Reichsbanner and the loyal elements of the Prussian police will resist the coup.
+subtitle: 工会将发动总罢工。国旗团与普鲁士警察中的忠诚力量将抵抗这场政变。
 unavailable-subtitle: 我们没有抵抗的力量。
 choose-if: rb_strength*rb_militancy >= 200
 

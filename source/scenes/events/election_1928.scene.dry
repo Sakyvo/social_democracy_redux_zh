@@ -281,8 +281,8 @@ if (Q.dvp_r) {
 if (Q.other_r) {
     data.push({
             "id": "other",
-            "legend": "Other",
-            "name": "Other",
+            "legend": "其他",
+            "name": "其他",
             "seats": Math.round(Q.other_r*5),
             });
 }
@@ -1204,8 +1204,8 @@ With our victory in the civil war, the Communists have found the confidence to d
 - #drop_mins_left
 
 @labor_left
-title: Labor Ministry
-subtitle: Taking the Labor Ministry is expected of us. [? if historical_mode : Labor will be displeased if we do not. ?]
+title: 劳工部
+subtitle: 拿下劳工部是人们对我们期望所在。[? if historical_mode : 若不如此,工会派会不高兴。 ?]
 unavailable-subtitle: 我们的筹码不够。
 tags: mins_left
 choose-if: leverage >= 5
@@ -1311,7 +1311,7 @@ tags: mins_left
 This coalition arrangement is tolerable to all.
 
 @drop_labor_left
-title: Drop the Labor Ministry.
+title: 放弃劳工部。
 view-if: labor_minister_party = "SPD"
 on-arrival: labor_minister_party = "KPD"; leverage += 5;
 tags: drop_mins_left
@@ -3010,14 +3010,14 @@ We are seen as responsible for the failure to form a government, and many of our
 
 We can pick from any number of ministries. Controlling a ministry allows us to directly effect policy in that area. [? if in_left_front : Any ministry that we do not take will be given to the KPD. ?] [? if in_left_front and reichswehr_minister_party == "KPD" : If the KPD controls the Reichswehr Ministry, the army will most likely revolt. ?]
 
-[? if historical_mode : Labor expects us to take the Labor Ministry in order to represent their interests in government and will be upset if we do not. ?]
+[? if historical_mode : 工会派期望我们拿下劳工部,以便在政府中代表他们的利益;若不如此,他们会不满。 ?]
 
 - #mins_1928
 - #drop_mins_1928
 
 @labor
-title: Labor Ministry
-subtitle: Taking the Labor Ministry is expected of us. [? if historical_mode : Labor will be displeased if we do not. ?]
+title: 劳工部
+subtitle: 拿下劳工部是人们对我们期望所在。[? if historical_mode : 若不如此,工会派会不高兴。 ?]
 unavailable-subtitle: 我们的筹码不够。
 tags: mins_1928
 choose-if: leverage >= 5
@@ -3157,7 +3157,7 @@ tags: mins_1928
 This coalition arrangement is tolerable to all.
 
 @drop_labor
-title: Drop the Labor Ministry.
+title: 放弃劳工部。
 view-if: labor_minister_party = "SPD"
 on-arrival: labor_minister_party = "Z"; labor_minister = "Stegerwald"; leverage += 5;
 tags: drop_mins_1928

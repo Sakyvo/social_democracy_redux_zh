@@ -1,13 +1,13 @@
-title: Unions Declare Independence
+title: 工会宣布独立
 new-page: true 
-subtitle: Labor's disagreements with our policies have grown too severe.
+subtitle: 工会派对我们政策的不满已过于严重。
 tags: event
 view-if: labor_dissent >= 60 and not unions_independent
 on-arrival: unions_independent = 1; labor_strength = labor_strength/2; workers_spd -= 20; unemployed_spd -= 10; workers_sapd += 5; workers_sapd += 10 if sapd_consolidated == 1; workers_kpd += 5 if sapd_consolidated == 0; workers_nsdap += 5 if sapd_consolidated == 0; n_advisors -= 1 if woytinsky_advisor == 1; n_advisors -= 1 if leipart_advisor == 1; woytinsky_advisor = 0; leipart_advisor = 0; rb_strength -= 600; sapd_formed = 1 if left_split and sapd_formed != 1; socialism -= 6
 max-visits: 1
 
-= Unions Declare Independence
+= 工会宣布独立
 
-Our policy choices have greatly offended the labor movement. Union leaders have declared that they are independent of any political party, and some have been seen seeking accomodation with the KPD and NSDAP.
+我们的政策选择极大地触怒了工会运动。工会领袖已宣布独立于任何政党,其中一些人还被看到与共产党和纳粹党寻求和解。
 
-Much of our working-class base has defected, and labor's influence in our party has greatly diminished. [? if left_split = 1 and sapd_formed != 1 : The small SAPD has capitalized on this, helping its rise from an insignificant and small movement into a party able to achieve Reichstag representation, even if little. ?] [? if sapd_formed == 1 : The SAPD has capitalized on this, managing to rally the bulk of the unions around itself and presenting a serious threat to our working class base. ?]
+我们很大一部分工人阶级基本盘已经背离,工会派在我党内的影响力也大为削弱。 [? if left_split = 1 and sapd_formed != 1 : 小小的社会主义工人党借此机会崛起,从一个微不足道的小团体成长为能在国会取得席位(哪怕席位不多)的政党。 ?] [? if sapd_formed == 1 : 社会主义工人党借此机会,成功把大部分工会团结在自己周围,对我们的工人阶级基本盘构成了严重威胁。 ?]

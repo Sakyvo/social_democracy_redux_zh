@@ -1,32 +1,32 @@
-title: Labor Unrest
-subtitle: Clashes between workers and employers in the Ruhr...
+title: 劳工骚动
+subtitle: 鲁尔区工人与雇主之间爆发冲突……
 view-if: year = 1928 and month = 12 and spd_in_government and labor_minister_party != "SPD"
 max-visits: 1
 new-page: true
 tags: event
 
-= Labor Unrest
+= 劳工骚动
 
-The mining and metals industry of the Ruhr region is beset by a wave of strikes against cuts to wages and benefits. Meanwhile, employers have started a retaliatory lockout to force their workers to accept these cuts. Both the strikers and the employers look to the SPD in the government to resolve this crisis.
+鲁尔区的采矿与冶金业正遭遇一波针对削减工资与福利的罢工。与此同时,雇主发动报复性停工,以迫使工人接受这些削减。罢工者与雇主双方都指望政府中的社民党来化解这场危机。
 
-- @support_labor: Support labor in their demands.
-- @support_employers: Support the employers in their demands.
-- @balance: Try to strike a compromise between the sides.
+- @support_labor: 支持工人的诉求。
+- @support_employers: 支持雇主的诉求。
+- @balance: 设法让双方达成妥协。
 
 @support_labor
-subtitle: This will alienate the bourgeoisie.
+subtitle: 这会疏远资产阶级。
 on-arrival: labor_strength += 5; labor_dissent -= 5; left_dissent -= 5; workers_spd += 6*(1-dissent); coalition_dissent += 1; dvp_relation -= 4; capital_strike_progress += 1 if dvp_relation <= 30; capital_strike_progress += 1 if unemployed > 15; capital_strike_progress += 1 if unemployed > 24; labor_goal_completed += 1; inflation += 0.1; weimar_dissent += 1 if weimar_plan_adopted and z_party_leader != "Joos"; economic_growth -= 0.2; socialism -= 1
 
-Supporting labor is always popular in the SPD, although many of our coalition partners represent employers, and they are less enthused.
+支持工人一向在社民党内受欢迎,尽管我们的许多执政伙伴代表雇主,对此并不热衷。
 
 @support_employers
-subtitle: This will alienate the workers.
+subtitle: 这会疏远工人。
 on-arrival: labor_dissent += 8; left_dissent += 8; workers_spd -= 6; coalition_dissent -= 1; dvp_relation += 5; z_relation += 5; coalition_dissent -= 1; workers_kpd += 3; workers_kpd += 2 if sapd_consolidated == 0; workers_sapd += 2 if sapd_consolidated == 1; kpd_coalition_dissent += 1; kpd_relation -= 8; capital_strike_progress -= 1 if capital_strike_progress > 1; capital_strike_progress -= 1 if capital_strike_progress > 8; socialism -= 2
 
-Even though most workers grudgingly accept the our intervention, there is deep bitterness developing against the SPD, especially among the more radical workers. The Communists stand to gain.
+尽管多数工人勉强接受了我们的干预,但一股针对社民党的深切怨愤正在滋长,在更激进的工人中尤甚。共产党将从中获益。
 
 @balance
-subtitle: Both sides need to share the pain in the current crisis.
+subtitle: 在当前的危机中,双方都须分担苦痛。
 on-arrival: labor_dissent += 4; workers_spd -= 2; kpd_coalition_dissent += 1; kpd_relation -= 5; workers_kpd += 1; workers_kpd += 1 if sapd_consolidated == 0; workers_sapd += 1 if sapd_consolidated == 1; socialism -= 2
 
-Many workers are unhappy at our compromises, but they will learn to accept that we are all in a shared struggle against economic forces. This is perhaps the best we could do given the present circumstances.
+许多工人对我们的妥协不满,但他们终将明白,我们都在与经济力量的共同斗争中。就眼下情形而言,这或许已是我们所能做到的极限。

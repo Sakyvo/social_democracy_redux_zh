@@ -360,8 +360,8 @@ if (Q.sapd_formed == 1) {
         },
         {
             "id": "z",
-            "legend": "Center",
-            "name": "Center",
+            "legend": "Z",
+            "name": "Z",
             "seats": (Q.z_r - 3)*5,
         },
         {
@@ -378,8 +378,8 @@ if (Q.sapd_formed == 1) {
         },
         {
             "id": "other",
-            "legend": "Other",
-            "name": "Other",
+            "legend": "其他",
+            "name": "其他",
             "seats": Q.other_r*5,
         },
         {
@@ -417,8 +417,8 @@ else {
         },
         {
             "id": "z",
-            "legend": "Center",
-            "name": "Center",
+            "legend": "Z",
+            "name": "Z",
             "seats": (Q.z_r - 3)*5,
         },
         {
@@ -435,8 +435,8 @@ else {
         },
         {
             "id": "other",
-            "legend": "Other",
-            "name": "Other",
+            "legend": "其他",
+            "name": "其他",
             "seats": Q.other_r*5,
         },
         {

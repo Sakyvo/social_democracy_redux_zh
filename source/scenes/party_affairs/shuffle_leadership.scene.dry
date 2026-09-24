@@ -7,9 +7,9 @@ on-arrival: month_activities += 1; shuffle_leadership_timer = 8;
 card-image: img/vorwarts_2.jpg
 go-to: rm_main
 
-Changing the leadership of the party is painful, but perhaps it is necessary to adapt to changing circumstances.
+更换党内领导层是痛苦的,但为了适应时局的变化,或许有此必要。
 
-Removing advisors will increase dissent from their faction of the party, while selecting advisors will increase a faction's strength and reduce their dissent.
+撤换顾问会加剧其所属派系的异议;而增补顾问则会增强该派系的实力,并减少其异议。
 
 - @rm_main: Remove advisors
 - @add_advisors: 添加顾问
@@ -295,15 +295,15 @@ title: Add other advisors.
 tags: center_advisor, left_advisor, reformist_advisor, labor_advisor, neorev_advisor, nonfactional_advisor
 frequency: 1
 
-- @doraemon: Add Doraemon
-- @centrist: Add Centrists
-- @left: Add Leftists
-- @reformist: Add Reformists
-- @labor: Add Labor
-- @neorev: Add Neorevisionists
-- @nonfactional: Add non-factional advisors
-- @rm_main: Remove advisors instead.
-- @remove_none: Stop changing advisors.
+- @doraemon: 增补哆啦A梦
+- @centrist: 增补中间派
+- @left: 增补左翼
+- @reformist: 增补改良派
+- @labor: 增补工会派
+- @neorev: 增补新修正派
+- @nonfactional: 增补无派系顾问
+- @rm_main: 改为撤换顾问。
+- @remove_none: 停止更换顾问。
 
 @doraemon
 view-if: fun_value = 69 and not doraemon_advisor and n_advisors < 3

@@ -28,11 +28,11 @@ The Communist-run ministries are pursuing their own policy course. It is up to u
 - @judicial
 
 @labor
-title: Labor Ministry
-subtitle: The Labor Ministry is giving significant concessions to organized labor.
+title: 劳工部
+subtitle: 劳工部正向有组织的劳工做出重大让步。
 view-if: labor_minister_party = "KPD"
 
-The KPD-controlled Labor Ministry is taking a policy of supporting labor in every dispute between workers and employees, leading to a proliferation of strikes across the country. Given the economic circumstances, there are worries that this could harm any potential economic recovery, not to mention the conflicts this may engender with the bourgeois parties.
+共产党掌控的劳工部采取了一项政策:在工人与雇员之间的每一起纠纷中都支持劳工,导致全国罢工激增。鉴于当前的经济形势,人们担心这会损害任何潜在的经济复苏,更不用说这可能在资产阶级政党间引发的冲突了。
 
 Do we support their radical labor policy?
 

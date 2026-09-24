@@ -1,38 +1,38 @@
-title: The Centrists concede!
-subtitle: Hilferding has come around to an economic plan
+title: 中间派让步了!
+subtitle: 希法亭终于接受了一份经济计划
 view-if: year >= 1931 and not economic_plan and left_strength < 50 and labor_strength < 50 and reformist_strength < 50 and center_strength >= 20 and not centrists_resign and spd_votes < 28 and nazi_urgency >= 1 and ((dissent_percent+unemployed+(inflation*-1)+(economic_growth*-1)) >= 50)
 max-visits: 1
 tags: event
 new-page: true
 on-arrival: crisis_program_timer = 0; crisis_urgency += 1
 
-= Centrists concede
+= 中间派让步
 
-Seeing the worsening economic situation in Germany, the rising threat of the Nazis, the declining influence of Social Democracy, and the increasing dissent within the party, Rudolf Hilferding has folded and agreed that, while the Great Depression is an inevitable and periodic crisis of capitalism, this does not preclude measures to ease the burden of it upon the working class or begin a move towards socialism.
+眼见德国经济形势恶化、纳粹威胁上升、社会民主党的影响力下滑,党内的异议也日益增多,鲁道夫·希法亭终于让步,承认尽管大萧条是资本主义不可避免的周期性危机,但这并不妨碍我们采取措施,减轻工人阶级承受的负担,或着手迈向社会主义。
 
-- @reformist_plan: 中央党支持改良派计划。
-- @left_plan: 中央党支持左翼计划。
-- @synthesis_plan: 中央党支持左翼与改良派计划的综合方案。
+- @reformist_plan: 中间派支持改良派计划。
+- @left_plan: 中间派支持左翼计划。
+- @synthesis_plan: 中间派支持左翼与改良派计划的综合方案。
 
 @reformist_plan
 view-if: reformist_strength >= left_strength and reformist_strength >= center_strength
 choose-if: reformist_strength >= left_strength
 on-arrival: left_dissent += 5; left_strength -= 5; reformist_strength += 10; reformist_dissent -= 5; center_dissent -= 5; labor_dissent -= 2; moderate_plan_support += 1
 
-The Centrists have backed the Reformist economic plan for public works and job-creation without deficit spending. This has increased support for the plan within the party and will make it an easier idea to swallow for the rest of the party, though the Left remains opposed.
+中间派已转而支持改良派的方案 —— 在不搞赤字开支的前提下推行公共工程与创造就业。这提高了该方案在党内的支持度,也让党内其他人更容易接受它,不过左翼仍然反对。
 
 @left_plan
 view-if: left_strength >= reformist_strength and left_strength >= center_strength
 choose-if: left_strength >= reformist_strength
 on-arrival: reformist_dissent += 5; reformist_strength -= 5; left_strength += 10; left_dissent -= 5; center_dissent -= 5; labor_dissent -= 2; nationalization_support += 1
 
-The Centrists have backed the Left economic plan for large-scale nationalizations of key and idle industries. This has increased support for the plan within the party and will make it an easier idea to swallow for the rest of the party, though the Reformists remain opposed.
+中间派已转而支持左翼的方案 —— 对关键产业与闲置产业实行大规模国有化。这提高了该方案在党内的支持度,也让党内其他人更容易接受它,不过改良派仍然反对。
 
 @synthesis_plan
 view-if: center_strength >= left_strength and center_strength >= reformist_strength
 choose-if: center_strength >= left_strength and center_strength >= reformist_strength
 on-arrival: center_strength += 5; center_dissent -= 10; synthesis_support += 1
 
-The Centrists have, in an attempt to unite the party behind a single economic plan, combined the Left and Reformist concepts into a single plan, calling for public works without deficit spending to be combined with nationalizations of key and idle industries. Whether this plan will be adopted by the party or not remains to be seen.
+中间派为把全党团结在同一份经济计划之下,将左翼与改良派的构想合并为一份方案,主张把「不搞赤字开支的公共工程」与「关键产业及闲置产业的国有化」结合起来。该方案能否为全党所采纳,尚待分晓。
 
 # todo : should it be based on the view-ifs, with which plan the centrists back being outside of the player's control, or should it be based on choose-ifs, with it partially out of player control but still an ultimate choice?

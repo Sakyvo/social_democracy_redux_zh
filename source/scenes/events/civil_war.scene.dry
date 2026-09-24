@@ -503,8 +503,8 @@ go-to: real_cabinet_kpd
 - #drop_mins_kpd
 
 @labor_kpd
-title: Labor Ministry
-subtitle: Taking the Labor Ministry is expected of us. [? if historical_mode : Labor will be displeased if we do not. ?]
+title: 劳工部
+subtitle: 拿下劳工部是人们对我们期望所在。[? if historical_mode : 若不如此,工会派会不高兴。 ?]
 unavailable-subtitle: 我们的筹码不够。
 tags: mins_kpd
 choose-if: leverage >= 5
@@ -611,7 +611,7 @@ go-to: agenda_reb
 这一联盟安排对各方来说尚可接受。
 
 @drop_labor_kpd
-title: Drop the Labor Ministry.
+title: 放弃劳工部。
 view-if: labor_minister_party = "SPD"
 on-arrival: labor_minister_party = "KPD"; leverage += 5;
 tags: drop_mins_kpd
@@ -676,8 +676,8 @@ go-to: real_cabinet_kpd
 - #drop_mins_emergency
 
 @labor
-title: Labor Ministry
-subtitle: Taking the Labor Ministry is expected of us. [? if historical_mode : Labor will be displeased if we do not. ?]
+title: 劳工部
+subtitle: 拿下劳工部是人们对我们期望所在。[? if historical_mode : 若不如此,工会派会不高兴。 ?]
 unavailable-subtitle: 我们的筹码不够。
 tags: mins_emergency
 choose-if: leverage >= 5
@@ -784,7 +784,7 @@ go-to: agenda_reb
 这一联盟安排对各方来说尚可接受。
 
 @drop_labor
-title: Drop the Labor Ministry.
+title: 放弃劳工部。
 view-if: labor_minister_party = "SPD"
 on-arrival: labor_minister_party = "Z" if antifa_gov != 1; labor_minister = "Stegerwald" if antifa_gov != 1; leverage += 5; labor_minister_party = "KPD" if antifa_gov
 tags: drop_mins_emergency
@@ -1246,7 +1246,7 @@ go-to: begin_ministries
 
 我们要说服他们放弃哪些部委?
 
-- @sway_labor: Persuade them to drop the Labor Ministry.
+- @sway_labor: 说服他们放弃劳工部。
 - @sway_interior: Persuade them to drop the Interior Ministry.
 - @sway_finance: Persuade them to drop the Finance Ministry.
 - @sway_economic: Persuade them to drop the Economic Ministry.

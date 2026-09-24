@@ -160,8 +160,8 @@ if (Q.sapd_formed == 1) {
         },
         {
             "id": "other",
-            "legend": "Other",
-            "name": "Other",
+            "legend": "其他",
+            "name": "其他",
             "seats": Math.round(Q.other_tl*0.6),
         },
         {
@@ -211,8 +211,8 @@ else {
         },
         {
             "id": "other",
-            "legend": "Other",
-            "name": "Other",
+            "legend": "其他",
+            "name": "其他",
             "seats": Math.round(Q.other_tl*0.6),
         },
         {
@@ -349,7 +349,7 @@ We have won a majority in Thuringia alone.
 view-if: (nsdap_tl < 50) and (t_left_coalition < 50 or kpd_relation < 45 or communist_coalition < 2) and (frick_coalition < 50 or dvp_relation >= 60) and (t_bourgeois_coalition < 50 and (t_elections > 0 or t_bourgeois_coalition+ddp_tl+nsdap_tl < 50))
 title: There is no clear majority.
 
-There is no clear majority in the Landtag. As Thuringia does not operate on constructive VONCs, something must be done to prevent new elections.
+州议会中没有明确多数。由于图林根并不实行建设性不信任案,必须设法阻止新的选举。
 
 - @out_of_our_hands: This is out of our hands.
 

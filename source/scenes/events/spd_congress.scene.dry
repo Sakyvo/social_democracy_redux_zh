@@ -201,20 +201,20 @@ on-display: {!
 if (!Q.neorevisionism) {
     data = [
         {   "id": "left",
-            "legend": "Left",
-            "name": "Left",
+            "legend": "左翼",
+            "name": "左翼",
             "seats": Math.round(Q.left_c*0.5),
         },
         {
             "id": "center",
-            "legend": "Center",
-            "name": "Center",
+            "legend": "中间派",
+            "name": "中间派",
             "seats": Math.round(Q.center_c*0.5),
         },
         {
             "id": "labor",
-            "legend": "Labor",
-            "name": "Labor",
+            "legend": "工会派",
+            "name": "工会派",
             "seats": Math.round(Q.labor_c*0.5),
         },
         {
@@ -228,20 +228,20 @@ if (!Q.neorevisionism) {
 else {
     data = [
         {   "id": "left",
-            "legend": "Left",
-            "name": "Left",
+            "legend": "左翼",
+            "name": "左翼",
             "seats": Math.round(Q.left_c*0.5),
         },
         {
             "id": "center",
-            "legend": "Center",
-            "name": "Center",
+            "legend": "中间派",
+            "name": "中间派",
             "seats": Math.round(Q.center_c*0.5),
         },
         {
             "id": "labor",
-            "legend": "Labor",
-            "name": "Labor",
+            "legend": "工会派",
+            "name": "工会派",
             "seats": Math.round(Q.labor_c*0.5),
         },
         {
@@ -252,8 +252,8 @@ else {
         },
         {
             "id": "neorevisionist",
-            "legend": "Neorevisionists",
-            "name": "Neorevisionists",
+            "legend": "新修正派",
+            "name": "新修正派",
             "seats": Math.round(Q.neorevisionist_c*0.5),
         },
 ];
@@ -286,9 +286,9 @@ go-to: coalition_menu
 
 {!<tr><td><div class="box" style='background-color:#9c0000'> </div> !} Left: {!</td><td>!} [+ left_c +]% {!</td><td>!} [+ str_change_left +] {!</td></tr>!}
 
-{!<tr><td><div class="box" style='background-color:#e30000'> </div> !} Center: {!</td><td>!} [+ center_c +]% {!</td><td>!} [+ str_change_center +] {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#e30000'> </div> !} 中间派: {!</td><td>!} [+ center_c +]% {!</td><td>!} [+ str_change_center +] {!</td></tr>!}
 
-{!<tr><td><div class="box" style='background-color:#ff681d'> </div> !} Labor: {!</td><td>!} [+ labor_c +]% {!</td><td>!} [+ str_change_labor +] {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#ff681d'> </div> !} 工会派: {!</td><td>!} [+ labor_c +]% {!</td><td>!} [+ str_change_labor +] {!</td></tr>!}
 
 {!<tr><td><div class="box" style='background-color:#ff6ba9'> </div> !} Reformists: {!</td><td>!} [+ reformist_c +]% {!</td><td>!} [+ str_change_reformist +] {!</td></tr>!}
 
@@ -301,10 +301,10 @@ go-to: coalition_menu
 - @center_majority: The Center
 - @toleration_unity: The Pro-Toleration Wing
 - @pragmatic_unity: The Pragmatist Wing
-- @reformist_majority: The Reformists
-- @neorevisionist_majority: The Neorevisionists
-- @labor_majority: Labor
-- @antitoleration_unity: The Anti-Toleration Wing
+- @reformist_majority: 改良派
+- @neorevisionist_majority: 新修正派
+- @labor_majority: 工会派
+- @antitoleration_unity: 反容忍派
 - @lassalean_unity: Lassalean Unity
 
 @marxist_unity
@@ -344,7 +344,7 @@ The party has fallen under the control of the neorevisionists.
 
 @labor_majority  
 view-if: labor_c >= 50  
-subtitle: Labor ([+ labor_c +]%)  
+subtitle: 工会派 ([+ labor_c +]%)  
 on-arrival: labor_strength += 10; center_dissent += 10; left_dissent += 5; reformist_dissent += 5
 
 The party has fallen under the control of the trade unions.
@@ -365,7 +365,7 @@ The party pragmatists have won out in this congress.
 
 @antitoleration_unity  
 view-if: antitoleration_unity >= 50 and spd_toleration
-subtitle: Left + Labor ([+ antitoleration_unity +]%)  
+subtitle: 左翼 + 工会派 ([+ antitoleration_unity +]%)  
 on-arrival: center_strength -= 5; reformist_strength -= 5; neorevisionist_strength -= 5; reformist_dissent += 5; neorevisionist_dissent += 5
 
 The party has taken an anti-toleration course.

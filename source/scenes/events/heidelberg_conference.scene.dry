@@ -203,20 +203,20 @@ on-display: {!
 if (!Q.neorevisionism) {
     data = [
         {   "id": "left",
-            "legend": "Left",
-            "name": "Left",
+            "legend": "左翼",
+            "name": "左翼",
             "seats": Math.round(Q.left_c*3.98),
         },
         {
             "id": "center",
-            "legend": "Center",
-            "name": "Center",
+            "legend": "中间派",
+            "name": "中间派",
             "seats": Math.round(Q.center_c*3.98),
         },
         {
             "id": "labor",
-            "legend": "Labor",
-            "name": "Labor",
+            "legend": "工会派",
+            "name": "工会派",
             "seats": Math.round(Q.labor_c*3.98),
         },
         {
@@ -230,20 +230,20 @@ if (!Q.neorevisionism) {
 else {
     data = [
         {   "id": "left",
-            "legend": "Left",
-            "name": "Left",
+            "legend": "左翼",
+            "name": "左翼",
             "seats": Math.round(Q.left_c*3.98),
         },
         {
             "id": "center",
-            "legend": "Center",
-            "name": "Center",
+            "legend": "中间派",
+            "name": "中间派",
             "seats": Math.round(Q.center_c*3.98),
         },
         {
             "id": "labor",
-            "legend": "Labor",
-            "name": "Labor",
+            "legend": "工会派",
+            "name": "工会派",
             "seats": Math.round(Q.labor_c*3.98),
         },
         {
@@ -254,8 +254,8 @@ else {
         },
         {
             "id": "neorevisionist",
-            "legend": "Neorevisionists",
-            "name": "Neorevisionists",
+            "legend": "新修正派",
+            "name": "新修正派",
             "seats": Math.round(Q.neorevisionist_c*3.98),
         },
 ];

@@ -153,8 +153,8 @@ if (Q.sapd_formed == 1) {
         },
         {
             "id": "z",
-            "legend": "Center",
-            "name": "Center",
+            "legend": "Z",
+            "name": "Z",
             "seats": Math.round(Q.z_hl*1.6),
         },
         {
@@ -165,8 +165,8 @@ if (Q.sapd_formed == 1) {
         },
         {
             "id": "other",
-            "legend": "Other",
-            "name": "Other",
+            "legend": "其他",
+            "name": "其他",
             "seats": Math.round(Q.other_hl*1.6),
         },
         {
@@ -204,8 +204,8 @@ else {
         },
         {
             "id": "z",
-            "legend": "Center",
-            "name": "Center",
+            "legend": "Z",
+            "name": "Z",
             "seats": Math.round(Q.z_hl*1.6),
         },
         {
@@ -216,8 +216,8 @@ else {
         },
         {
             "id": "other",
-            "legend": "Other",
-            "name": "Other",
+            "legend": "其他",
+            "name": "其他",
             "seats": Math.round(Q.other_hl*1.6),
         },
         {
@@ -346,7 +346,7 @@ choose-if: reformist_strength < 50 or (in_spd_hamburg and spd_hl < 50)
 unavailable-subtitle: The Hamburg SPD wishes to partner with the bourgeois.
 on-arrival: in_spd_hamburg = 1; in_hamburg_soclib = 0; in_hamburg_left = 0; in_hamburg_groko = 0; in_nazi_hamburg = 0; workers_spd += 6*(1-dissent); new_middle_spd += 4*(1-dissent)
 
-The SPD governs solely in Hamburg. [? if spd_hl < 50 : This is thanks to the constructive VONC mechanism. ?]
+The SPD governs solely in Hamburg. [? if spd_hl < 50 : 这要归功于建设性不信任案的机制。 ?]
 
 @nsdap_majority
 title: The NSDAP has won a majority.

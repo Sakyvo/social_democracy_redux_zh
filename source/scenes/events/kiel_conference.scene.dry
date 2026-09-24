@@ -201,20 +201,20 @@ on-display: {!
 if (!Q.neorevisionism) {
     data = [
         {   "id": "left",
-            "legend": "Left",
-            "name": "Left",
+            "legend": "左翼",
+            "name": "左翼",
             "seats": Math.round(Q.left_c*4.15),
         },
         {
             "id": "center",
-            "legend": "Center",
-            "name": "Center",
+            "legend": "中间派",
+            "name": "中间派",
             "seats": Math.round(Q.center_c*4.15),
         },
         {
             "id": "labor",
-            "legend": "Labor",
-            "name": "Labor",
+            "legend": "工会派",
+            "name": "工会派",
             "seats": Math.round(Q.labor_c*4.15),
         },
         {
@@ -228,20 +228,20 @@ if (!Q.neorevisionism) {
 else {
     data = [
         {   "id": "left",
-            "legend": "Left",
-            "name": "Left",
+            "legend": "左翼",
+            "name": "左翼",
             "seats": Math.round(Q.left_c*4.15),
         },
         {
             "id": "center",
-            "legend": "Center",
-            "name": "Center",
+            "legend": "中间派",
+            "name": "中间派",
             "seats": Math.round(Q.center_c*4.15),
         },
         {
             "id": "labor",
-            "legend": "Labor",
-            "name": "Labor",
+            "legend": "工会派",
+            "name": "工会派",
             "seats": Math.round(Q.labor_c*4.15),
         },
         {
@@ -252,8 +252,8 @@ else {
         },
         {
             "id": "neorevisionist",
-            "legend": "Neorevisionists",
-            "name": "Neorevisionists",
+            "legend": "新修正派",
+            "name": "新修正派",
             "seats": Math.round(Q.neorevisionist_c*4.15),
         },
 ];
@@ -286,7 +286,7 @@ go-to: coalition_menu
 
 {!<tr><td><div class="box" style='background-color:#e30000'> </div> !} Center: {!</td><td>!} [+ center_c +]% {!</td></tr>!}
 
-{!<tr><td><div class="box" style='background-color:#ff681d'> </div> !} Labor: {!</td><td>!} [+ labor_c +]% {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#ff681d'> </div> !} 工会派: {!</td><td>!} [+ labor_c +]% {!</td></tr>!}
 
 {!<tr><td><div class="box" style='background-color:#ff6ba9'> </div> !} Reformists: {!</td><td>!} [+ reformist_c +]% {!</td></tr>!}
 
@@ -321,7 +321,7 @@ With the major polarizing issue out of the way, the next proposal to be voted on
 - @nah: The resolution is rejected.
 
 @union_support
-subtitle: -1 资源 - Labor ([+ labor_c +]%)
+subtitle: -1 资源 —— 工会派 ([+ labor_c +]%)
 choose-if: resources >= 1
 on-arrival: resources -= 1; labor_dissent -= 10; labor_strength += 5; new_middle_spd += 3*(1-dissent)
 go-to: agriculture_program

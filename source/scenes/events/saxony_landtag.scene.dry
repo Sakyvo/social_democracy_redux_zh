@@ -195,8 +195,8 @@ if (Q.sapd_formed == 1) {
         },
         {
             "id": "other",
-            "legend": "Other",
-            "name": "Other",
+            "legend": "其他",
+            "name": "其他",
             "seats": Math.round(Q.other_sl*0.96),
         },
         {
@@ -252,8 +252,8 @@ else {
         },
         {
             "id": "other",
-            "legend": "Other",
-            "name": "Other",
+            "legend": "其他",
+            "name": "其他",
             "seats": Math.round(Q.other_sl*0.96),
         },
         {

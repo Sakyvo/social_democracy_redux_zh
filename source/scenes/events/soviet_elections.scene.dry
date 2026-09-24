@@ -374,8 +374,8 @@ if (Q.spd_neorevisionist_s) {
 if (Q.unaffiliate_s) {
     data.push({
             "id": "other",
-            "legend": "Unaffiliated",
-            "name": "Unaffiliated",
+            "legend": "无党籍",
+            "name": "无党籍",
             "seats": Math.round(Q.unaffiliate_s*(Q.socialism/10)),
             });
 }
@@ -401,8 +401,8 @@ if (Q.z_s) {
 if (Q.bourgeois_s) {
     data.push({
             "id": "zca",
-            "legend": "Bourgeois",
-            "name": "Bourgeois",
+            "legend": "资产阶级",
+            "name": "资产阶级",
             "seats": Math.round(Q.bourgeois_s*(Q.socialism/10)),
             });
 }

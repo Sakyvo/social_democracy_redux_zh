@@ -152,8 +152,8 @@ if (Q.sapd_formed == 1) {
         },
         {
             "id": "z",
-            "legend": "Center",
-            "name": "Center",
+            "legend": "Z",
+            "name": "Z",
             "seats": Math.round(Q.z_pl*4.5),
         },
         {
@@ -164,8 +164,8 @@ if (Q.sapd_formed == 1) {
         },
         {
             "id": "other",
-            "legend": "Other",
-            "name": "Other",
+            "legend": "其他",
+            "name": "其他",
             "seats": Math.round(Q.other_pl*4.5),
         },
         {
@@ -203,8 +203,8 @@ else {
         },
         {
             "id": "z",
-            "legend": "Center",
-            "name": "Center",
+            "legend": "Z",
+            "name": "Z",
             "seats": Math.round(Q.z_pl*4.5),
         },
         {
@@ -215,8 +215,8 @@ else {
         },
         {
             "id": "other",
-            "legend": "Other",
-            "name": "Other",
+            "legend": "其他",
+            "name": "其他",
             "seats": Math.round(Q.other_pl*4.5),
         },
         {
@@ -326,7 +326,7 @@ on-departure: dvp_prussia = 0; kpd_prussia = 0;
 
 We have enough votes to form a Weimar Coalition. [? if dvp_prussia : The DVP's exclusion from government has upset them. ?]
 
-[? if p_weimar_coalition < 50 : We have retained this position thanks to the constructive VONC. ?]
+[? if p_weimar_coalition < 50 : 多亏了建设性不信任案,我们才保住了这一位置。 ?]
 
 - @braun_weimar: Otto Braun will lead the Weimar Coalition.
 - @stegerwald_weimar: Adam Stegerwald will lead the Weimar Coalition.
@@ -356,7 +356,7 @@ on-arrival: kpd_prussia = 0; dvp_relation += 5; left_dissent += 5; kpd_relation 
 
 The DVP has been included in government to foster goodwill. The left is upset by this.
 
-[? if p_grand_coalition < 50 : We have retained this position thanks to the constructive VONC. ?]
+[? if p_grand_coalition < 50 : 多亏了建设性不信任案,我们才保住了这一位置。 ?]
 
 - @braun_groko: Otto Braun will lead the Grand Coalition.
 - @stegerwald_groko: Adam Stegerwald will lead the Grand Coalition.
@@ -387,7 +387,7 @@ on-departure: z_prussia = 1; spd_prussia = 0; prussia_spd -= 0.1 if prussia_spd 
 
 [? if spd_prussia : Otto Braun has been de-seated and replaced by Adam Stegerwald. ?][? if z_prussia : Adam Stegerwald has been re-elected M-P of Prussia. ?]
 
-[? if p_right_coalition < 50 : The right-wing government has been retained thanks to the constructive VONC. ?]
+[? if p_right_coalition < 50 : 多亏了建设性不信任案,右翼政府才得以留任。 ?]
 
 @left_prussia
 title: A "United Front" of the left-wing parties.
@@ -400,7 +400,7 @@ on-departure: dvp_prussia = 0; kpd_prussia = 1; spd_prussia = 1; z_prussia = 0; 
 
 We have enough votes to form a United Front with the KPD. [? if dvp_prussia : The DVP's exclusion from government has upset them. ?]
 
-[? if p_left_coalition < 50 : We have retained this position thanks to the constructive VONC. ?]
+[? if p_left_coalition < 50 : 多亏了建设性不信任案,我们才保住了这一位置。 ?]
 
 @popular_front_prussia
 title: Is a "Popular Front" possible?
@@ -413,7 +413,7 @@ on-departure: dvp_prussia = 0; kpd_prussia = 1; spd_prussia = 1; z_prussia = 0; 
 
 We have enough votes to form a Popular Front with the KPD and Z. [? if dvp_prussia : The DVP's exclusion from government has upset them. ?]
 
-[? if p_popular_front_coalition < 50 : We have retained this position thanks to the constructive VONC. ?]
+[? if p_popular_front_coalition < 50 : 多亏了建设性不信任案,我们才保住了这一位置。 ?]
 
 ## todo: should have an actual thing for choosing M-Ps rather than messily assigning based on who is probably maybe incumbent...
 
@@ -422,14 +422,14 @@ title: Otto Braun's cabinet falls apart.
 view-if: spd_prussia and not ((p_far_right_coalition >= 50) or (spd_prussia and (p_right_coalition < 50 or z_relation >= 40 or not dnvp_reform or year >= 1930)) or p_popular_front_coalition >= 50 and kpd_relation >= 60 and z_relation >= 60 and communist_coalition >= 3) and not ((spd_prussia and (p_right_coalition < 50 or z_relation >= 45 or not dnvp_reform or year >= 1930)) or p_left_coalition >= 50 and kpd_relation >= 55 and communist_coalition >= 3) and not ((p_right_coalition >= 50 or (z_prussia and not (p_left_coalition >= 50 and kpd_relation >= 55 and communist_coalition >= 3))) and (z_relation < 35 or (z_relation < 45 and (p_left_coalition >= 50 and kpd_relation >= 55 and communist_coalition >= 3))) and (dnvp_reform or year < 1930)) and not ((spd_prussia or (z_prussia and z_relation >= 45)) or p_grand_coalition >= 50 and dvp_relation >= 40 and z_relation >= 40) and not ((spd_prussia or (z_prussia and z_relation >= 50)) or (p_weimar_coalition >= 50 and z_relation >= 35))
 on-arrival: prussian_crisis = 1; prussia_nsdap += 0.1; pro_republic -= 5
 
-No clear government can be formed, even despite the constructive VONC. Braun remains as M-P due to the inability to dislodge him, but effectively as the head of an SPD minority government, and the reactionaries may use this as a pretext to perform a *Reichsexekution* on the government.
+即便有了建设性不信任案,也无法组建出明确的政府。由于无法把布劳恩赶下台,他仍留任州总理,但实质上只是社民党少数派政府的首脑;反动派或会以此为借口,对该政府实施*国家执行*。
 
 @no_majority_stegerwald
 title: Adam Stegerwald's cabinet falls apart.
 view-if: z_prussia and not ((p_far_right_coalition >= 50) or (spd_prussia and (p_right_coalition < 50 or z_relation >= 40  or not dnvp_reform or year >= 1930)) or p_popular_front_coalition >= 50 and kpd_relation >= 60 and z_relation >= 60 and communist_coalition >= 3) and not ((spd_prussia and (p_right_coalition < 50 or z_relation >= 45 or not dnvp_reform or year >= 1930)) or p_left_coalition >= 50 and kpd_relation >= 55 and communist_coalition >= 3) and not ((p_right_coalition >= 50 or (z_prussia and not (p_left_coalition >= 50 and kpd_relation >= 55 and communist_coalition >= 3))) and (z_relation < 35 or (z_relation < 45 and (p_left_coalition >= 50 and kpd_relation >= 55 and communist_coalition >= 3)))  and (dnvp_reform or year < 1930)) and not ((spd_prussia or (z_prussia and z_relation >= 45)) or p_grand_coalition >= 50 and dvp_relation >= 40 and z_relation >= 40) and not ((spd_prussia or (z_prussia and z_relation >= 50)) or (p_weimar_coalition >= 50 and z_relation >= 35))
 on-arrival: prussian_crisis = 1; prussia_nsdap += 0.1; pro_republic -= 5
 
-No clear government can be formed, even despite the constructive VONC. Stegerwald remains as M-P due to the inability to dislodge him, but effectively as the head of a Zentrum minority government. Let's just hope he doesn't turn to the Nazis for backing.
+即便有了建设性不信任案,也无法组建出明确的政府。由于无法把施特格瓦尔德赶下台,他仍留任州总理,但实质上只是中央党少数派政府的首脑。但愿他别转向纳粹寻求支持。
 
 - @actually: Actually...
 - @pfft: I'm sure he would never.

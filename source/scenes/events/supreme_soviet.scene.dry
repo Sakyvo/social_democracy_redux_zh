@@ -246,8 +246,8 @@ if (Q.dvp_r) {
 if (Q.other_r) {
     data.push({
             "id": "other",
-            "legend": "Other",
-            "name": "Other",
+            "legend": "其他",
+            "name": "其他",
             "seats": Math.round(Q.other_r*5),
             });
 }

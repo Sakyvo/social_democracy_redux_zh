@@ -201,20 +201,20 @@ on-display: {!
 if (!Q.neorevisionism) {
     data = [
         {   "id": "left",
-            "legend": "Left",
-            "name": "Left",
+            "legend": "左翼",
+            "name": "左翼",
             "seats": Math.round(Q.left_c*3.97),
         },
         {
             "id": "center",
-            "legend": "Center",
-            "name": "Center",
+            "legend": "中间派",
+            "name": "中间派",
             "seats": Math.round(Q.center_c*3.97),
         },
         {
             "id": "labor",
-            "legend": "Labor",
-            "name": "Labor",
+            "legend": "工会派",
+            "name": "工会派",
             "seats": Math.round(Q.labor_c*3.97),
         },
         {
@@ -228,20 +228,20 @@ if (!Q.neorevisionism) {
 else {
     data = [
         {   "id": "left",
-            "legend": "Left",
-            "name": "Left",
+            "legend": "左翼",
+            "name": "左翼",
             "seats": Math.round(Q.left_c*3.97),
         },
         {
             "id": "center",
-            "legend": "Center",
-            "name": "Center",
+            "legend": "中间派",
+            "name": "中间派",
             "seats": Math.round(Q.center_c*3.97),
         },
         {
             "id": "labor",
-            "legend": "Labor",
-            "name": "Labor",
+            "legend": "工会派",
+            "name": "工会派",
             "seats": Math.round(Q.labor_c*3.97),
         },
         {
@@ -252,8 +252,8 @@ else {
         },
         {
             "id": "neorevisionist",
-            "legend": "Neorevisionists",
-            "name": "Neorevisionists",
+            "legend": "新修正派",
+            "name": "新修正派",
             "seats": Math.round(Q.neorevisionist_c*3.97),
         },
 ];
@@ -286,7 +286,7 @@ go-to: coalition_menu if spd_in_government and in_grand_coalition; spd_military_
 
 {!<tr><td><div class="box" style='background-color:#e30000'> </div> !} Center: {!</td><td>!} [+ center_c +]% {!</td></tr>!}
 
-{!<tr><td><div class="box" style='background-color:#ff681d'> </div> !} Labor: {!</td><td>!} [+ labor_c +]% {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#ff681d'> </div> !} 工会派: {!</td><td>!} [+ labor_c +]% {!</td></tr>!}
 
 {!<tr><td><div class="box" style='background-color:#ff6ba9'> </div> !} Reformists: {!</td><td>!} [+ reformist_c +]% {!</td></tr>!}
 
@@ -300,7 +300,7 @@ Thus, to pre-empt the left, a motion is submitted by the centrists to pass the m
 - @preserve_groko: The motion to pass the matter on to the agenda so as to preserve the government is passed.
 
 @destroy_groko
-subtitle: The Left and Labor ([+ antitoleration_unity +]%) [? if antitoleration_unity < 50 : - some centrists may be swayed. ?]
+subtitle: 左翼与工会派 ([+ antitoleration_unity +]%) [? if antitoleration_unity < 50 : —— 部分中间派或许会被说动。 ?]
 choose-if: pragmatic_unity < 65
 on-arrival: reformist_dissent += 15; dvp_relation -= 10; z_relation -= 5; ddp_relation -= 5; left_strength += 10; center_dissent += 5; coalition_dissent += 2
 go-to: spd_military_policy
