@@ -92,7 +92,7 @@ achievement: wirtschaftspolitik
 @implement_wtb_deficit
 title: Implement the WTB plan.
 subtitle: -[+ wtb_budget +] budget - we will enter deficit spending. [? if wtb_budget == 3 : Our pro-labor policies have reduced the cost of the plan. ?]
-unavailable-subtitle: [? if unemployed <= 8 : 失业率已经够低,推行 WTB 计划的时机已过。 ?][? if economic_minister_party == "DVP" : 由人民党掌控的经济部正在阻挠我们的计划。 ?][? if finance_minister_party != "SPD" : Without control over finances, we cannot undertake such deficit spending. ?]
+unavailable-subtitle: [? if unemployed <= 8 : 失业率已经够低,推行 WTB 计划的时机已过。 ?][? if economic_minister_party == "DVP" : 由人民党掌控的经济部正在阻挠我们的计划。 ?][? if finance_minister_party != "SPD" : 不掌握财政,我们就无法进行这样的赤字开支。 ?]
 view-if: budget < wtb_budget and wtb_implemented == 0 and wtb_adopted == 1
 choose-if: unemployed > 8 and economic_minister_party != "DVP" and finance_minister_party == "SPD"
 on-arrival: wtb_deficit_vote = 1
@@ -208,7 +208,7 @@ go-to: nationalize_done if not legislature_enabled; legislative_menu if legislat
 @moderate_plan
 title: Implement the Reformists' job-creation plan.
 subtitle: -2 财政预算.
-unavailable-subtitle: -2 财政预算. [? if budget < 2 : We do not have the necessary budget. ?] [? if unemployed < 8 : Unemployment is low enough that job creation is not necessary. ?]
+unavailable-subtitle: -2 财政预算。[? if budget < 2 : 我们没有所需的预算。 ?] [? if unemployed < 8 : 失业率已经够低,无需创造就业。 ?]
 view-if: moderate_plan_adopted == 1
 choose-if: budget >= 2 and unemployed >= 8
 on-arrival: reformist_vote = 1; reformist_budget = 2
@@ -233,7 +233,7 @@ achievement: wirtschaftspolitik
 @moderate_plan_limited_budget
 title: Partially implement the Reformists' job-creation plan, with a lower cost.
 subtitle: -1 财政预算。
-unavailable-subtitle: -1 财政预算。 [? if budget < 1 : We do not have the necessary budget. ?] [? if unemployed < 8 : Unemployment is low enough that job creation is not necessary. ?]
+unavailable-subtitle: -1 财政预算。[? if budget < 1 : 我们没有所需的预算。 ?] [? if unemployed < 8 : 失业率已经够低,无需创造就业。 ?]
 view-if: moderate_plan_adopted == 1
 choose-if: budget >= 1 and unemployed >= 8
 on-arrival: reformist_vote = 1; reformist_budget = 1
@@ -280,7 +280,7 @@ achievement: wirtschaftspolitik
 @synthesis_only_works
 title: Implement the Centrist public works program without nationalizations.
 subtitle: -1 财政预算。
-unavailable-subtitle: -1 财政预算。 [? if budget < 1 : We do not have the necessary budget. ?]
+unavailable-subtitle: -1 财政预算。[? if budget < 1 : 我们没有所需的预算。 ?]
 view-if: synthesis_plan_adopted
 choose-if: budget >= 1
 on-arrival: reformist_vote = 1; reformist_budget = 1
@@ -313,7 +313,7 @@ on-arrival: budget -= 2; unemployed -= 1.5*(recession_severity/10); inflation +=
 @further_plan
 view-if: five_year_plan and capital_flight
 title: Invest further resources into the five-year plan.
-subtitle: -1 财政预算。 [? if budget < 1 : We will enter deficit spending. ?]
+subtitle: -1 财政预算。[? if budget < 1 : 我们将转入赤字开支。 ?]
 on-arrival: budget -= 1; economic_growth += 0.6; unemployed -= 1.1; inflation += 0.9; inflation += 0.4 if inflation < 3; inflation += 0.4 if budget < 0; invested += 1
 
 我们为经济计划划拨了更多资金,这将使其实施取得更大成效。
@@ -351,7 +351,7 @@ max-visits: 1
 @reconcile_town_and_country4
 view-if: reconcile_town_and_country == 4 or reconcile_town_and_country == 5
 title: Begin construction of new proletarian garden cities, as conceived by our urban planners.
-subtitle: -1 财政预算 - We will reconcile town & country!
+subtitle: -1 财政预算 —— 我们将调和城乡!
 on-arrival: budget -= 1; inflation -= 0.1; inflation += 0.4 if budget < 0; economic_growth += 1; unemployed -= 1; garden_cities += 1; reconcile_town_and_country += 1; insurgency += 2; rural -= invested; workers += invested
 max-visits: 1
 
@@ -360,7 +360,7 @@ max-visits: 1
 @reconcile_town_and_country5
 view-if: reconcile_town_and_country == 4 or reconcile_town_and_country == 5
 title: Organize seasonal rotations of rural & urban work between workers' councils and agricultural cooperatives.
-subtitle: -1 财政预算 - We will reconcile town & country!
+subtitle: -1 财政预算 —— 我们将调和城乡!
 on-arrival: budget -= 1; inflation += 0.6 if budget < 0; rural_spd += 3*(1-dissent); workers_spd += 3*(1-dissent); economic_growth += 0.2; unemployed -= 0.3; reconcile_town_and_country += 1; inflation -= 1 if inflation > 3
 
 我们组织城乡工人的季节性轮换,使两个领域彼此靠拢,并削弱二者世界观之间尖锐的鸿沟。

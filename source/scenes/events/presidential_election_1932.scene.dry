@@ -47,9 +47,9 @@ unavailable-subtitle: 资源不足。
 on-arrival: resources -= 2; braun_campaign = 1; hindenburg_motivated = 1 if hindenburg_running != 1 and dvp_relation < 50; hindenburg_running = 1 if hindenburg_running != 1 and dvp_relation < 50; hitler_support_hindenburg = 1 if hindenburg_running and largest_party != "NSDAP" and nsdap_votes < dnvp_votes + other_votes + dvp_votes + z_votes; hitler_dropped = 1 if hitler_support_hindenburg
 go-to: braun_campaign
 
-发起一场多少出人意料的竞选是要费一番功夫的。首先,必须说服布劳恩参选。 He himself had supported [? if not hindenburg_motivated and dvp_relation < 50 : 投票支持兴登堡?][? if hindenburg_motivated or dvp_relation >= 50 : 推举胡戈·埃克纳?],要费不少口舌才能让他相信自己的使命。
+发起一场多少出人意料的竞选是要费一番功夫的。首先,必须说服布劳恩参选。 他本人曾支持 [? if not hindenburg_motivated and dvp_relation < 50 : 投票支持兴登堡?][? if hindenburg_motivated or dvp_relation >= 50 : 推举胡戈·埃克纳?],要费不少口舌才能让他相信自己的使命。
 
-[? if hindenburg_motivated : Our decision to run Otto Braun has motivated Hindenburg to stay in the race and run for re-election with the backing of the remaining Bürgerblock, unwilling to allow a socialist into power. [? if hitler_support_hindenburg : 他甚至赢得了纳粹的支持 —— 纳粹最终选择不参选,转而把反动派团结在兴登堡周围。 ?] ?]
+[? if hindenburg_motivated : 我们推举奥托·布劳恩的决定,促使兴登堡留在竞选中争取连任,并得到市民联盟残余势力的背书 —— 他不愿让一个社会主义者掌权。 [? if hitler_support_hindenburg : 他甚至赢得了纳粹的支持 —— 纳粹最终选择不参选,转而把反动派团结在兴登堡周围。 ?] ?]
 
 民主党(现名德国国家党)的微小残余势力很可能支持我们。还会有谁? [? if not zca_formed : 我们能否说服中央党支持布劳恩? ?] 共产党方面呢?
 
@@ -66,7 +66,7 @@ unavailable-subtitle: [? if kpd_relation < 50 : 我们与共产党的关系还�
 @support_thalmann_2
 on-arrival: spd_support_thalmann = 1; reformist_dissent += 15; center_dissent += 10; labor_dissent += 5; neorevisionist_dissent += 10; catholics_spd -= 5; workers_spd -= 3; kpd_relation += 10; communist_coalition += 2; z_relation -= 15; dvp_relation -= 15; ddp_relation -= 10; weimar_dissent += 3; hindenburg_motivated = 1 if not hindenburg_running; hindenburg_running = 1 if not hindenburg_running; hitler_support_hindenburg = 1 if hindenburg_running and largest_party != "NSDAP" and nsdap_votes < dnvp_votes + other_votes + dvp_votes + z_votes 
 
-好。我们把支持投给了共产党的主席台尔曼。 [? if hindenburg_motivated : Our decision to rally behind Thälmann has motivated Hindenburg to stay in the race and run for re-election with the backing of the remaining Bürgerblock, horrified at the prospect of a communist in power. [? if hitler_support_hindenburg : 他甚至赢得了纳粹的支持 —— 纳粹最终选择不参选,转而把反动派团结在兴登堡周围。 ?] ?]
+好。我们把支持投给了共产党的主席台尔曼。 [? if hindenburg_motivated : 我们转而支持台尔曼的决定,促使兴登堡留在竞选中争取连任,并得到市民联盟残余势力的背书 —— 他对共产党人掌权的前景深感惊恐。 [? if hitler_support_hindenburg : 他甚至赢得了纳粹的支持 —— 纳粹最终选择不参选,转而把反动派团结在兴登堡周围。 ?] ?]
 
 - @final_election: The final vote...
 
@@ -88,7 +88,7 @@ on-arrival: spd_support_thalmann = 1; reformist_dissent += 15; center_dissent +=
 
 @support_eckener
 subtitle: -1 资源
-unavailable-subtitle: -1 资源 - [? if resources < 1 : Not enough resources. ?][? if z_relation < 35 : The Center Party is unwilling to run a joint candidate. ?]
+unavailable-subtitle: -1 资源 —— [? if resources < 1 : 资源不足。 ?][? if z_relation < 35 : 中央党不愿推举联合候选人。 ?]
 choose-if: resources >= 1 and z_relation >= 35
 on-arrival: eckener_campaign = 1; resources -= 1
 go-to: eckener_campaign
@@ -452,7 +452,7 @@ go-to: round2_menu
 
 There is no majority in this round. In the second round, any candidate who wins a plurality will win overall. What should we do?
 
-[? if not duesterburg_plurality : Duesterburg has dropped out of the race after realizing he was Jewish, a fact that completely destroyed his campaign. [? if not hindenburg_running : 接替他的是钢盔团的另一位领袖弗朗茨·泽尔特。 ?] ?]
+[? if not duesterburg_plurality : 迪斯特贝格在意识到自己是犹太人后退出了竞选 —— 这一事实彻底摧毁了他的选情。 [? if not hindenburg_running : 接替他的是钢盔团的另一位领袖弗朗茨·泽尔特。 ?] ?]
 
 [? if braun_plurality or thalmann_plurality and hindenburg_running and not hitler_dropped : 为整合右翼的选票、并阻止一位社会主义者当选总统,[+ nsdap_candidate +] 不再参加第二轮竞选,并改而支持兴登堡。 ?]
 
@@ -511,7 +511,7 @@ max-visits: 1
 go-to: round2_menu
 on-departure: hitler_support_hindenburg = 1 if braun_votes + z_votes > hitler_votes
 
-[? if hitler_support_hindenburg : The Center's opinion is affected by the Nazis' support of Hindenburg, and is willing to turn away from him. ?] 中央党被说服了!他们将成为布劳恩阵营的一员。 [? if hitler_support_hindenburg : 此外,他们还会带来一些支持我们的小党。 ?]
+[? if hitler_support_hindenburg : 中央党的立场因纳粹对兴登堡的支持而动摇,如今愿意弃他而去。 ?] 中央党被说服了!他们将成为布劳恩阵营的一员。 [? if hitler_support_hindenburg : 此外,他们还会带来一些支持我们的小党。 ?]
 
 
 [? if not hitler_support_hindenburg and braun_votes + z_votes > hitler_votes: 随着中央党支持布劳恩,[+ nsdap_candidate +] 退出竞选,纳粹转而支持兴登堡,以阻止一位社会主义者当选总统。 ?]
@@ -549,7 +549,7 @@ unavailable-subtitle: 共产党知道自己比我们更受欢迎;他们看不出
 view-if: braun_campaign > 0 and kpd_support_braun == 0 
 max-visits: 1
 
-The KPD is committed to supporting Ernst Thälmann. [? if kpd_relation >= 45 : 不过,纳粹与兴登堡的联盟让他们足够担忧,因此愿意被说服放弃竞选、转支持布劳恩。 ?][? if kpd_relation < 45 : 他们似乎不愿被说服。 ?]
+共产党决心支持恩斯特·台尔曼。 [? if kpd_relation >= 45 : 不过,纳粹与兴登堡的联盟让他们足够担忧,因此愿意被说服放弃竞选、转支持布劳恩。 ?][? if kpd_relation < 45 : 他们似乎不愿被说服。 ?]
 
 - @r2_kpd_resources: Use our resources.
 - @r2_kpd_relations: Use our good relations.
@@ -601,7 +601,7 @@ view-if: not hindenburg_running
 on-arrival: burgerblock_campaign = 0; eckener_campaign = 0; spd_support_thalmann = 1; reformist_dissent += 15; center_dissent += 10; labor_dissent += 5; neorevisionist_dissent += 10; catholics_spd -= 5; workers_spd -= 3; kpd_relation += 10; communist_coalition += 2; z_relation -= 15; dvp_relation -= 15; ddp_relation -= 10; weimar_dissent += 3; hindenburg_motivated = 1; hindenburg_running = 1; hitler_support_hindenburg = 1 if hitler_support_seldte; seldte_campaign = 0;
 on-departure: z_support_braun = 0; kpd_support_braun = 0;
 
-好。我们把支持投给了共产党的主席台尔曼。 The move sends shockwaves across the political spectrum so strong that Hindenburg re-enters the race to unite the right-wing parties.
+好。我们把支持投给了共产党的主席台尔曼。 此举在整个政治光谱中激起如此强烈的震荡,以至于兴登堡重新参选,以图团结各右翼政党。
 
 - @round2_vote: Let the second round voting begin.
 

@@ -329,7 +329,7 @@ view-if: president == "Hindenburg"
 view-if: spd_rebel = 1
 on-arrival: judicial_reform += 4; soviets_exist = 1; soviet_election_time = time+6
 
-反动派的失败给了我们一个独特的机会。我们有多项议题需要处理。 Meanwhile, workers' councils which formed during the general strike have begun to form into workers' councils.
+反动派的失败给了我们一个独特的机会。我们有多项议题需要处理。 与此同时,总罢工期间形成的工人委员会已开始凝聚为工人委员会。
 
 - @presidency: 总统职位。
 - @chancellorship: The cabinet.

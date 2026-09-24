@@ -86,7 +86,7 @@ go-to: support_left_progress if nationalization_support < 3; adopt_left if natio
 @adopt_left
 on-arrival: left_strength += 15; left_dissent -= 10; reformist_dissent += 10; neorevisionist_dissent += 8; labor_dissent += 6; nationalization_adopted = 1; coup_progress += 1; economic_plan = 3; kpd_relation += 5*(1-dissent)
 
-经过我们的努力,我们说服党内多数采纳了社会主义经济计划! [? if spd_in_government == 1 : 只要掌握经济部或财政部,我们就能尽快开始实施该计划。 ?] 资产阶级的反对很可能会很激烈。 [? if spd_in_government == 0 : It might be difficult to enact the plan, given present conditions. ?]
+经过我们的努力,我们说服党内多数采纳了社会主义经济计划! [? if spd_in_government == 1 : 只要掌握经济部或财政部,我们就能尽快开始实施该计划。 ?] 资产阶级的反对很可能会很激烈。 [? if spd_in_government == 0 : 鉴于目前的条件,推行该计划或许会有困难。 ?]
 
 @support_moderate
 subtitle: Call for a limited program of job creation without deficit spending.
@@ -104,7 +104,7 @@ go-to: adopt_moderate if moderate_plan_support >= 2; support_moderate_progress i
 @adopt_moderate
 on-arrival: reformist_strength += 10; reformist_dissent -= 10; left_dissent += 8; labor_dissent += 6; moderate_plan_adopted = 1; economic_plan = 2; coalition_dissent -= 1 if unemployed > 15; z_relation += 5;
 
-经过我们的努力,我们说服党内多数采纳了温和的创造就业计划! [? if spd_in_government == 1 : We can begin implementing the plan as soon as possible, as long as we have the Economic or Finance ministries. ?]
+经过我们的努力,我们说服党内多数采纳了温和的创造就业计划! [? if spd_in_government == 1 : 只要我们掌握经济部或财政部,就能尽快着手实施该计划。 ?]
 
 - @continue: 继续……
 

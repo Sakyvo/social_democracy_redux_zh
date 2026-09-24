@@ -349,7 +349,7 @@ go-to: braun_consolidation if braun_campaign; gessler_consolidation if gessler_c
 on-arrival: hellpach_campaign = 0; ddp_support_marx = 1; braun_percent += 0.1 if braun_percent <= 0.9; braun_percent = 1 if braun_percent > 0.9
 go-to: braun2_menu
 
-Otto Braun has landed [? if braun_votes_disp > spd_r : a stunning ?] [+ braun_votes_disp +]%, easily ahead of all other parties in the Weimar Coalition. 尽管如此,德意志帝国时期选举的经验表明,资产阶级选民在决选中很少投票给社会民主党人 —— 在第二轮中转而支持威廉·马克思或许更好,尤其是他们已承诺:若我们这样做,便投票支持奥托·布劳恩出任普鲁士州总理。
+奥托·布劳恩获得 [? if braun_votes_disp > spd_r : 令人惊叹的 ?] [+ braun_votes_disp +]% 的选票,轻松领先魏玛联盟中的其他所有政党。 尽管如此,德意志帝国时期选举的经验表明,资产阶级选民在决选中很少投票给社会民主党人 —— 在第二轮中转而支持威廉·马克思或许更好,尤其是他们已承诺:若我们这样做,便投票支持奥托·布劳恩出任普鲁士州总理。
 
 与此同时,右翼的**国家联盟**开始拼命寻找一位能为其阵营拉高投票率的候选人。他们能否成功,尚待分晓。
 
@@ -481,13 +481,13 @@ max-visits: 1
 on-arrival: workers_spd += 4*(1-dissent); unemployed_spd += 3*(1-dissent) if left_strength > reformist_strength; workers_spd += 4*(1-dissent) if nationalization_progress > 0; unemployed_spd += 3*(1-dissent) if nationalization_progress > 0; left_strength += 5; left_dissent -= 5; old_middle_spd -= 3; new_middle_spd -= 2 if not new_middle_conscious; socialism += 2*(1-dissent); ddp_relation -= 10; z_relation -= 10; dvp_relation -= 10
 go-to: bc2
 
-我们的阶级斗争主张吸引了工人阶级中的左翼,却可能疏远中间阶层。 [? if nationalization_progress > 0 : Our achievements in nationalization have assisted our messaging. ?]
+我们的阶级斗争主张吸引了工人阶级中的左翼,却可能疏远中间阶层。 [? if nationalization_progress > 0 : 我们在国有化上的成就助长了我们的宣传。 ?]
 
 @welfare
 on-arrival: workers_spd += 3*(1-dissent); workers_spd += 3*(1-dissent) if welfare > 0; unemployed_spd += 3*(1-dissent) if welfare > 0; unemployed_spd += 4*(1-dissent) if welfare > 1; reformist_strength += 3; labor_strength += 4; reformist_dissent -= 3; labor_dissent -= 3;
 go-to: bc2
 
-改良派的主张吸引着组织起来的工人 —— 他们的福利正是社会民主的成就。 [? if welfare > 1 : Our achievements in expanding welfare have made this message more effective. ?]
+改良派的主张吸引着组织起来的工人 —— 他们的福利正是社会民主的成就。 [? if welfare > 1 : 我们在扩大福利上的成就使这一主张更为有效。 ?]
 
 @democracy
 on-arrival: democratization += 1; pro_republic += 2*(1 - dissent); workers_spd += 4*(1-dissent) if democratization >= 3; unemployed_spd += 3*(1-dissent) if democratization >= 3; pro_republic += 4*(1 - dissent) if democratization >= 3; new_middle_spd += 4*(1-dissent) if democratization >= 3 
@@ -547,7 +547,7 @@ go-to: bc2
 on-arrival: rural_spd += 5*(1-dissent); rural_spd -= 3*(1-dissent) if peoples_party == 0; peoples_party_support += 1; rural_spd += 3*(1-dissent) if rural_policy >= 2
 go-to: bc2
 
-我们加强了在农民中的宣传。 [? if peoples_party == 0: 我们历来很少在农民中开展宣传,他们也不信任我们。 ?][? if peoples_party > 0: As a people's party, we have an easier time increasing support among farmers than before. ?][? if rural_policy >= 2 : 我们的乡村政策使我们更容易在农民中建立支持。 ?]
+我们加强了在农民中的宣传。 [? if peoples_party == 0: 我们历来很少在农民中开展宣传,他们也不信任我们。 ?][? if peoples_party > 0: 作为一个全民党,我们如今比以往更容易在农民中扩大支持。 ?][? if rural_policy >= 2 : 我们的乡村政策使我们更容易在农民中建立支持。 ?]
 
 @unemployed
 on-arrival: unemployed_spd += 6*(1-dissent); unemployed_spd -= 3 if welfare < 0; unemployed_spd += 6*(1-dissent) if wtb_adopted = 1; unemployed_spd += 3*(1-dissent) if welfare >= 2;

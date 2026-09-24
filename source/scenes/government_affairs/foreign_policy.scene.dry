@@ -157,7 +157,7 @@ view-if: nonintervention and spd_intervention
 
 @spanish_aid
 title: Begin sending aid to the Spanish Republicans.
-subtitle: -1 财政预算。 This violates Versailles[? if nonintervention : as well as the non-intervention pact ?].
+subtitle: -1 财政预算。这违反《凡尔赛条约》[? if nonintervention : ,也违反不干涉协定 ?]。
 view-if: spanish_civil_war and (not nonintervention or spd_intervention) and not spain_involved
 go-to: spanish_civil_war.aid
 

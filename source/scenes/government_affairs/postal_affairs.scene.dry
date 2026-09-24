@@ -89,7 +89,7 @@ set-bg: img/map_2.jpg
 view-if: postal_loyalty >= 0.7
 choose-if: resources >= 2 and postal_loyalty >= 0.8
 subtitle: -2 资源
-unavailable-subtitle: -2 资源 - the postmen must be committed and hardened social democrats.
+unavailable-subtitle: -2 资源 —— 邮递员必须是坚定而经受过锤炼的社民党人。
 on-arrival: resources -= 2; rb_strength += postmen; rb_militancy += 0.15; coup_progress += 5; coalition_dissent += (5-blackmail)
 max-visits: 1
 set-bg: img/map_2.jpg

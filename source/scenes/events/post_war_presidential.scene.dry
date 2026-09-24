@@ -11,9 +11,9 @@ set-jump: pres_election
 
 = 总统选举
 
-终于,随着国家走出内战,总统选举即将举行。 [? if not kpd_banned : The KPD is planning to run [? if kpd_party_leader == "Conciliators" : Willi Münzenberg?][? if kpd_party_leader != "Conciliators" : Ernst Thälmann?] ?][? if z_relation < 50 or dvp_banned != 1 or dnvp_banned != 1 :[? if not kpd_banned :, while the?][? if kpd_banned : The?] right rallies behind[? if dnvp_banned != 1 : Oskar Hergt?][? if dnvp_banned and dvp_banned != 1 and dvp_relation < 35 : Hans Luther?][? if dnvp_banned and dvp_banned and president == "Wirth" : Joseph Wirth?][? if dnvp_banned and dvp_banned and president != "Wirth" and z_relation < 50 : Konrad Adenauer?][? if dvp_banned != 1 and dnvp_banned and dvp_relation >= 35 : Otto Gessler ?] ?]. 
+终于,随着国家走出内战,总统选举即将举行。 [? if not kpd_banned : 共产党打算推举 [? if kpd_party_leader == "Conciliators" : 维利·明岑贝格?][? if kpd_party_leader != "Conciliators" : 恩斯特·台尔曼?] ?][? if z_relation < 50 or dvp_banned != 1 or dnvp_banned != 1 :[? if not kpd_banned :;而 ?][? if kpd_banned : ?]右翼则团结在[? if dnvp_banned != 1 : 奥斯卡·赫尔格特?][? if dnvp_banned and dvp_banned != 1 and dvp_relation < 35 : 汉斯·路德?][? if dnvp_banned and dvp_banned and president == "Wirth" : 约瑟夫·维尔特?][? if dnvp_banned and dvp_banned and president != "Wirth" and z_relation < 50 : 康拉德·阿登纳?][? if dvp_banned != 1 and dnvp_banned and dvp_relation >= 35 : 奥托·格斯勒 ?] 身后 ?]。 
 
-[? if president == "Wirth" : Joseph Wirth is tired, but will run for re-election if we support him. ?] 我们可以说服奥托·布劳恩参选,也可以支持另一位候选人。库尔特·舒马赫在内战期间崭露头角;若布劳恩不愿参选,我们也可以选择推他出马。
+[? if president == "Wirth" : 约瑟夫·维尔特已感疲惫,但若我们支持他,他愿竞选连任。 ?] 我们可以说服奥托·布劳恩参选,也可以支持另一位候选人。库尔特·舒马赫在内战期间崭露头角;若布劳恩不愿参选,我们也可以选择推他出马。
 
 @pres_election
 
@@ -140,7 +140,7 @@ subtitle: Otto Gessler is running as the DVP's candidate.
 view-if: not dvp_banned and gessler_campaign and not wirth_campaign
 on-arrival: left_dissent += 5; spd_support_gessler = 1; z_support_gessler = 1 if z_relation >= 45; adenauer_campaign = 0 if z_relation >= 45
 
-We have endorsed Otto Gessler of the Bürgerblock. [? if z_relation >= 45 : 中央党随即跟进。 ?]
+我们已背书市民联盟的奥托·格斯勒。 [? if z_relation >= 45 : 中央党随即跟进。 ?]
 
 - @final_election: 最终结果……
 

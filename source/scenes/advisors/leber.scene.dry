@@ -28,7 +28,7 @@ on-arrival: advisor_action_timer = 6; pro_republic += 5; democratization += 1; n
 勒贝尔协助我们动员民众保卫民主。
 
 @weimar_rally
-title: 为民主集会 and the Weimar Plan with our allies!
+title: 为民主、为魏玛计划,与我们的盟友并肩集会!
 subtitle: 与各魏玛政党一道,动员德国人民捍卫民主与共和国,并终结经济危机。
 view-if: weimar_plan_adopted == 1
 choose-if: advisor_action_timer == 0

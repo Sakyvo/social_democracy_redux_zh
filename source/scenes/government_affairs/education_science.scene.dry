@@ -122,7 +122,7 @@ title: Change the structure and funding of education.
 @secularize
 title: Support secular schools to end the religious dominance in education.
 subtitle: -1 财政预算
-unavailable-subtitle: -1 财政预算 - requres a majority of parties to support secular schools.
+unavailable-subtitle: -1 财政预算 —— 需要多数政党支持世俗学校。
 choose-if: budget >= 1 and (progressive_coalition + dvp_r >= 50)
 view-if: secularized = 0
 

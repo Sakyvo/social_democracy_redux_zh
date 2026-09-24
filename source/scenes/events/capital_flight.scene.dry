@@ -46,7 +46,7 @@ We have begun, using our control over the economy, to implement a comprehensive 
 @nothing
 on-arrival: unemployed_spd += 10*(1-dissent); bourgeoisie_spd += 10*(1-dissent); center_dissent -= 5; reformist_dissent -= 5; labor_dissent -= 5; neorevisionist_dissent -= 5
 
-There is no need to hurry. 我们赢了。 We can prove this victory later; for now, let us rest. Many of society's lazier individuals echo this sentiment, while the relaxed tone eases tensions in our party.
+不必着急。我们赢了。我们日后再来证明这场胜利;眼下,且让我们歇一歇。社会上有不少懒散之人也附和这一说法,而这种松弛的调子倒也缓和了我党内的紧张。
 
 ## todo: economic policy card now holds planning related decisions
 ## cybersyn if sufficient Investment

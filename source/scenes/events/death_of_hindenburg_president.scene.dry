@@ -61,7 +61,7 @@ go-to: candidate_menu
 - @cultural_figure: Support a nonpartisan cultural figure?
 
 @eckener_r1
-subtitle: -1 资源 - After nominating him, we still have to convince the other parties to support him.
+subtitle: -1 资源 —— 提名他之后,我们仍须说服其他政党支持他。
 unavailable-subtitle: [? if resources < 1 : -1 资源 —— 资源不足。 ?]
 choose-if: resources >= 1
 on-arrival: spd_candidate = "Eckener"; is_unity_candidate = 1
@@ -169,7 +169,7 @@ go-to: r1_menu
 [+ ddp_name +] 将表态支持爱因斯坦的候选资格。
 
 @mann_r1
-subtitle: -2 资源 - He might be too far left for the bourgeois parties.
+subtitle: -2 资源 —— 对资产阶级政党来说,他可能过于左倾。
 view-if: kpd_relation >= 50
 choose-if: resources >= 2
 on-arrival: spd_candidate = "Mann"; resources -= 2; is_unity_candidate = 0; is_cultural_candidate = 1;
@@ -181,7 +181,7 @@ go-to: r1_menu
 
 @ossietzky_r1
 view-if: weltbuhne_dropped = 1
-subtitle: -2 资源 - He might be too far left for the bourgeois parties.
+subtitle: -2 资源 —— 对资产阶级政党来说,他可能过于左倾。
 choose-if: resources >= 2
 on-arrival: spd_candidate = "Ossietzky"; resources -= 2; is_unity_candidate = 0; is_cultural_candidate = 1;
 go-to: r1_menu
@@ -758,7 +758,7 @@ on-arrival: chancellor = "Hitler"; chancellor_party = "NSDAP"; hitler_seen = 0; 
 @seldte_victory
 on-arrival: chancellor = "Hitler"; chancellor_party = "NSDAP"; hitler_seen = 0
 
-With Seldte's victory, the balance of power passes to the Nazis. [? if hitler_deported and not hitler_dead: 他的第一个动作就是罢免现任总理,任命阿道夫·希特勒为总理,并先撤销对希特勒的驱逐。 ?][? if not hitler_deported: 他的第一个动作就是罢免现任总理,任命阿道夫·希特勒为总理。 ?][? if hitler_dead : 他的第一个动作就是罢免现任总理,并用撒旦仪式让希特勒复活,为他打开一条通往权力的路。 ?]
+随着泽尔特胜出,力量的天平转向了纳粹。 [? if hitler_deported and not hitler_dead: 他的第一个动作就是罢免现任总理,任命阿道夫·希特勒为总理,并先撤销对希特勒的驱逐。 ?][? if not hitler_deported: 他的第一个动作就是罢免现任总理,任命阿道夫·希特勒为总理。 ?][? if hitler_dead : 他的第一个动作就是罢免现任总理,并用撒旦仪式让希特勒复活,为他打开一条通往权力的路。 ?]
 
 - @hitler_takes_power: What next?
 - @hitler_constitutional: This is blatantly unconstitutional!

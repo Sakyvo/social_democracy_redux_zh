@@ -37,6 +37,6 @@ go-to: womens_rights
 title: 科学经费
 subtitle: 增加对科学研究的经费投入。
 choose-if: advisor_action_timer = 0 and spd_in_government and economic_minister_party = "SPD" and chancellor_party = "SPD"
-unavailable-subtitle: [? if advisor_action_timer > 0 : 距下次顾问行动还有 [+ advisor_action_timer +] 个月。 ?][? if not spd_in_government : 社民党目前不在政府之中。 ?][? if economic_minister_party != "SPD": This requires the Economic Ministry. ?][? if chancellor_party != "SPD": The Chancellor must be an SPD member. ?]
+unavailable-subtitle: [? if advisor_action_timer > 0 : 距下次顾问行动还有 [+ advisor_action_timer +] 个月。 ?][? if not spd_in_government : 社民党目前不在政府之中。 ?][? if economic_minister_party != "SPD": 这需要掌握经济部。 ?][? if chancellor_party != "SPD": 总理必须是社民党成员。 ?]
 on-arrival: advisor_action_timer = 6; last_advisor_action = 1
 go-to: education_science.increase_science

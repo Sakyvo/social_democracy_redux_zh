@@ -1,4 +1,4 @@
-title: Secret 重整军备 Exposed!
+title: 秘密重整军备曝光!
 subtitle: We have found evidence of illegal rearmament by the Reichswehr
 view-if: (year == 1926 and month >= 12) or year == 1927
 new-page: true

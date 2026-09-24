@@ -248,7 +248,7 @@ on-arrival: gov_tension += 1 if z_party_leader == "Joos"; bourgeois_power += 0.0
 view-if: not unions_independent and not spd_toleration
 subtitle: -1 资源
 choose-if: resources >= 1
-unavailable-subtitle: -1 资源 - We can't afford this.
+unavailable-subtitle: -1 资源 —— 我们负担不起。
 on-arrival: resources -= 1; workers_spd += 4*(1-dissent); labor_dissent -= 5; labor_strength += 5; unemployed_spd += 4*(1-dissent); workers_z -= 2; 
 
 我们为针对政府的持续罢工提供财政支持,加剧了他们所挑起的阶级冲突,并加强了与政府的关系。
@@ -597,14 +597,14 @@ subtitle: The government has fallen to its internal disagreements
 ## Concordat (requires no DNVP in government?)
 ## Supporting employers in labor disputes (requires no Joos Z?)
 ## Compromise in labor disputes (requires Joos Z?)
-## 重整军备 (requires DNVP in government and budget)
+## 重整军备(需国家人民党执政,且需财政预算)
 ## Anti - judicial reform (requires high judicial reform and DNVP in government)
 ## Anti - interior reform (requires high police loyalty and DNVP in government)
-## 剥夺工厂委员会的权力 (requires empowered works councils and less powerful bourgeoisie)
-## 私有化 (requires nationalizations, wont remove the dedicated event tho this will just be another way for the same effect to fire)
-## 取消物价管制 (requires price controls)
+## 剥夺工厂委员会的权力(需工厂委员会已被赋权,且资产阶级较弱)
+## 私有化(需已有国有化;不会移除专属事件,这只是同一效果的另一条触发途径)
+## 取消物价管制(需已实行物价管制)
 ## Privatizing media (requires socialized media)
-## 解除对私人政党融资的禁令 (requires private party financing)
-## 镇压国旗团 (should probably also make this a dedicated event like privatizations, requires militant reichsbanner with centrists & liberals left)
-## 镇压共产党人 (would also effect a leftist SPD, and SAPD, if DNVP is in government)
+## 解除对私人政党融资的禁令(需已实行私人政党融资)
+## 镇压国旗团(大概也该像私有化那样做成专属事件;需国旗团尚具战斗性,且仍有中间派与自由派留存)
+## 镇压共产党人(若国家人民党执政,也会作用于左翼社民党与社会主义工人党)
 ## Maybe also one for the government collapsing of its own accord

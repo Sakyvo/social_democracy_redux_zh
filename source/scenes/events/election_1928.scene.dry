@@ -2198,7 +2198,7 @@ go-to: papen_second_term if papen_two_term
 
 After the elections, Papen is still deeply unpopular, without any hint of coalition support, and there is a vote of no confidence called against him almost immediately. No matter how we vote, the measure would pass. The Reichstag is dissolved once more.
 
-新的选举已定于 [+ next_election_month : month +] [+ next_election_year +]。 [? if largest_party == "NSDAP" : With the Nazis, despite becoming the largest party, failing to form a government, their movement loses steam and gives ground to the KPD and DNVP. ?]
+新的选举已定于 [+ next_election_month : month +] [+ next_election_year +]。 [? if largest_party == "NSDAP" : 纳粹虽成为第一大党,却组阁失败,其运动因此势头受挫,让位于共产党与国家人民党。 ?]
 
 Nazi refusal to support Papen's government has lead to confusion and disappointment amongst its far-right base.
 
@@ -2743,7 +2743,7 @@ view-if: neo_weimar_coalition < 50
 call: set_next_election_time
 on-arrival: time_to_election = 3; strife += 0.5; marx_relation -= 5; pro_republic -= 5; rural_nsdap += 2; old_middle_nsdap += 2; new_middle_nsdap += 2; political_crisis_progress += 1
 
-As the anti-democratic parties hold a majority, there is no path to a majority government. 新的选举已定于 [+ next_election_month : month +] [+ next_election_year +]。
+由于各反民主政党掌握多数,已无组建多数派政府的可能。 新的选举已定于 [+ next_election_month : month +] [+ next_election_year +]。
 
 @toleration_bruning
 choose-if: neo_weimar_coalition >= 50
@@ -2995,7 +2995,7 @@ on-arrival: chancellor = "Brüning"; new_middle_spd -= 3; old_middle_spd -= 2; w
 
 There are enough votes to form a right-wing coalition of the Z, DVP, DNVP, and various minor parties, essentially replicating the previous Marx government. However, the DNVP is very reluctant to join the government[? if year <= 1928 : , as it had just exited from a coalition with the Center. ?][? if year > 1928 : , as its leader, Alfred Hugenberg, is against the very existence of parliamentary democracy, and is unwilling to join such a coalition anymore. ?]
 
-Chancellor Heinrich Brüning of the Center Party currently rules on an emergency basis, as part of a "presidential government". 新的选举已定于 [+ next_election_month : month +] [+ next_election_year +]
+中央党的海因里希·布吕宁总理目前以紧急状态为依据执政,是所谓「总统内阁」的一部分。 新的选举已定于 [+ next_election_month : month +] [+ next_election_year +]
 
 
 @new_elections_spd

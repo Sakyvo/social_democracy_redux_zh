@@ -126,7 +126,7 @@ on-arrival: state_buyer_passed = 1; budget -= 2; state_buyer = 1; rural_spd += 3
 Q.referendum_support.toFixed(1);
 !}
 
-公投以 [+ referendum_support +]% 的得票获得成功! A state buyer program is initialized, though with reluctance from the Economic Minister, [+ economic_minister +]. Let us hope that the farmers and workers remember that it is us who campaigned for this stabilization of prices and the market.
+公投以 [+ referendum_support +]% 的得票获得成功!国家收购计划得以启动,尽管经济部长 [+ economic_minister +] 态度勉强。但愿农民与工人记住:为这种价格与市场的稳定而奔走的是我们。
 
 @state_buyer_fail
 view-if: not referendum_succeed
@@ -151,13 +151,13 @@ max-visits: 1
 view-if: referendum_succeed and budget >= wtb_budget
 on-arrival: budget -= wtb_budget; works_program += 1; unemployed -= 3; workers_spd += 4*(1-dissent); unemployed_spd += 4*(1-dissent); wtb_implemented += 1; inflation += 3; economic_growth += 1.4; economic_growth -= 0.7 if economic_growth > 5
 
-公投以 [+ referendum_support +]% 的得票获得成功! Money is beginning to flow through the economy via investments in large-scale public works, though the reluctant Economic Minister, [+ economic_minister +], is executing the plan less efficiently than we would be able to. Nevertheless, the economy seems to improve, and we claim credit.
+公投以 [+ referendum_support +]% 的得票获得成功!资金开始通过对大规模公共工程的投资在经济中流动,尽管态度勉强的经济部长 [+ economic_minister +] 执行起该计划来不如我们那样高效。尽管如此,经济似乎在好转,而功劳要记在我们头上。
 
 @wtb_vote_success_deficit
 view-if: referendum_succeed and budget < wtb_budget
 on-arrival: works_program += 1; budget -= wtb_budget; unemployed -= 3; workers += 2; workers_spd += 3*(1-dissent); unemployed_spd += 3*(1-dissent); capital_strike_progress += 1; wtb_implemented += 1; inflation += 4; welfare -= 2 if not spd_toleration; inflation -= 3 if not spd_toleration; unemployed += 2 if not spd_toleration; budget += 2 if not spd_toleration; economic_growth += 1.4; economic_growth -= 0.7 if economic_growth > 5; economic_growth -= 0.4; 
 
-公投以 [+ referendum_support +]% 的得票获得成功! Money is beginning to flow through the economy via investments in large-scale public works, though a deficit manifests. The government plans to handle this deficit by, as always, cutting welfare, and they blame us for creating the necessity to do so. Of course, this argument is ridiculous, but it does dampen our celebrations. 
+公投以 [+ referendum_support +]% 的得票获得成功!资金开始通过对大规模公共工程的投资在经济中流动,不过也出现了赤字。政府打算一如既往地靠削减福利来应对这一赤字,并把造成这种必要性的责任推给我们。当然,这种说法荒谬,但确实给我们的庆祝泼了冷水。 
 
 [? if spd_toleration : 我们可以投票反对拟议中的紧缩措施,实际上搞垮政府 —— 尽管这意味着提前选举。 ?][? if not spd_toleration : 遗憾的是,我们无法阻止这些紧缩措施的实施。 ?]
 

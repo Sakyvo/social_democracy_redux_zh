@@ -33,7 +33,7 @@ go-to: fiscal_menu
 
 @raise_progressive
 subtitle: 这不改变总体财政收入。[? if lower_tax_rates < -5 : 下层税率已太低,无法再降。 ?] [? if upper_tax_rates > 5 : 上层税率已太高,无法再升。 ?][? if status_quo : 我们已同意不动这份预算。 ?]
-unavailable-subtitle: 这不改变总体财政收入。[? if lower_tax_rates < -5 : 下层税率已太低,无法再降。 ?] [? if upper_tax_rates > 5 : 上层税率已太高,无法再升。 ?][? if status_quo : 我们已同意不动这份预算。 ?][? if capital_spd : <span style="color:rgb(170,150,60);font-family:'Times New Roman',serif;font-weight:700;letter-spacing:0.5px;">Think of the economy! You're better than this.</span> ?]
+unavailable-subtitle: 这不改变总体财政收入。[? if lower_tax_rates < -5 : 下层税率已太低,无法再降。 ?] [? if upper_tax_rates > 5 : 上层税率已太高,无法再升。 ?][? if status_quo : 我们已同意不动这份预算。 ?][? if capital_spd : <span style="color:rgb(170,150,60);font-family:'Times New Roman',serif;font-weight:700;letter-spacing:0.5px;">想想经济吧!你本不该是这样的人。</span> ?]
 choose-if: lower_tax_rates >= -5 and upper_tax_rates <= 5 and not status_quo and not capital_spd
 on-arrival: progressive_tax_vote = 1
 go-to: progressive_tax_done if not legislature_enabled; legislative_menu if legislature_enabled
@@ -133,7 +133,7 @@ title: 改为调整关税。
 
 @raise_tariffs
 title: 提高进口关税。
-subtitle: +2 财政预算. Other countries will retaliate by increasing tariffs of their own. [? if tariffs > 5 : Further increases in tariffs will not raise revenue, as we have already nearly reached econonmic autarky. ?]
+subtitle: +2 财政预算。其他国家将以提高自身关税作为报复。[? if tariffs > 5 : 进一步提高关税不会再增加收入,因为我们已近乎实现经济上的自给自足。 ?]
 choose-if: tariffs <= 5
 on-arrival: tariff_hike_vote = 1
 go-to: tariff_hike_done if not legislature_enabled; legislative_menu if legislature_enabled

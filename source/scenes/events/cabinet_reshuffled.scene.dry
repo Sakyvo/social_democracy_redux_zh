@@ -120,7 +120,7 @@ on-arrival: time_to_election = 3; chancellor = "Wels"; chancellor_party = "SPD";
 
 Unable to bear the stress of keeping the coalition together, Wirth has announced his intentions to resign as chancellor.
 
-[+ president +] has appointed as replacement Wels, who is immediately faced with a successful motion of no confidence. 新的选举已定于 [+ next_election_month : month +] [+ next_election_year +]。
+[+ president +] 任命韦尔斯为接替者,而他随即遭遇了一场成功的不信任案。 新的选举已定于 [+ next_election_month : month +] [+ next_election_year +]。
 
 @wirth_resign_hindenburg
 on-arrival: chancellor = "Brüning"; chancellor_party = "Z"

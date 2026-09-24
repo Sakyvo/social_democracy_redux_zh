@@ -132,7 +132,7 @@ on-arrival: rb_militancy += (council_resources/50)*(left_strength/100); rfb_mili
 @fund_councils
 view-if: labor_minister_party == "SPD" and finance_minister_party == "SPD"
 choose-if: budget >= 1 and judicial_reform >= 3
-unavailable-subtitle: -1 财政预算 [? if judicial_reform < 3 : - The courts would block this as illegal ?]
+unavailable-subtitle: -1 财政预算 [? if judicial_reform < 3 : —— 法院会以违法为由加以阻止 ?]
 on-arrival: budget -= 1; council_resources += (3+economic_democracy); coalition_dissent += 3; z_relation -= 5; ddp_relation -= 5; dvp_relation -= 5; capital_strike_progress += 3; coup_progress += 1
 
 我们把政府资金挪向这些委员会,此举迅即被资产阶级政党斥为不但浪费,而且违法、腐败、充满政治动机。

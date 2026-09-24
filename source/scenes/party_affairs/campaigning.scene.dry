@@ -42,7 +42,7 @@ choose-if: resources >= 1
 unavailable-subtitle: 资源不足。
 on-arrival: old_middle_spd += 5*(1-dissent); resources -= 1; old_middle_spd -= 3 if nationalism >= 51 and peoples_party == 0; peoples_party_support += 1; old_middle_spd -= (3*bourgeois_power*(capital_strike_progress/10)) if not capital_spd; old_middle_spd += capital_spd*bourgeois_power;
 
-我们加强了在旧中间阶层中的宣传。 [? if nationalism >= 51 and peoples_party == 0: 这一群体中高涨的民族主义情绪,使我们的宣传更加困难。 ?] [? if peoples_party > 0: As a people's party, we have an easier time increasing support among the middle class than before. ?]
+我们加强了在旧中间阶层中的宣传。 [? if nationalism >= 51 and peoples_party == 0: 这一群体中高涨的民族主义情绪,使我们的宣传更加困难。 ?] [? if peoples_party > 0: 作为一个全民党,我们如今比以往更容易在中间阶层中扩大支持。 ?]
 
 @rural
 subtitle: -1 资源

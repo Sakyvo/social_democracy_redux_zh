@@ -230,7 +230,7 @@ on-arrival: capital_strike_timer += 3; soviet_election_time = time+6; soviets_ex
 title: Reach out to the DVP.
 view-if: reconcile_business >= 3 and dvp_relation < 50
 choose-if: resources >= 1
-subtitle: -1 资源. [? if dvp_relation < 35 : We are unlikely to see much success. ?]
+subtitle: -1 资源。[? if dvp_relation < 35 : 我们恐怕难以取得多少成效。 ?]
 on-arrival: dvp_relation += 5; resources -= 1; socialism -= 2; economic_growth += 0.5 if dvp_relation >= 35; unemployed -= 0.3 if dvp_relation >= 35
 
 我们主动联络人民党,试图把他们当作一个中介,借此恢复工商界的信任与信心。

@@ -50,7 +50,7 @@ We refuse to budge from our set prices, demanding that the farmers sell at the a
 
 @lower_tariffs
 choose-if: tariffs > -5
-subtitle: -2 财政预算. [? if tariffs <= -5 : There are no tariffs left to cut. ?]
+subtitle: -2 财政预算。[? if tariffs <= -5 : 已没有可再削减的关税了。 ?]
 on-arrival: tariff_cut_vote = 1
 go-to: tariff_cut_done if not legislature_enabled; legislative_menu if legislature_enabled
 

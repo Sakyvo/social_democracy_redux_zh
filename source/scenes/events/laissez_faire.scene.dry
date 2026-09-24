@@ -26,7 +26,7 @@ view-if: spd_toleration
 on-arrival: time_to_election = 3; spd_toleration = 0; spd_in_government = 0
 call: set_next_election_time
 
-We have called for a vote of no confidence in the Reichstag, bringing down the [+ chancellor +] government. 新的选举已定于 [+ next_election_month : month +] [+ next_election_year +]。
+我们在国会提出不信任案,搞垮了 [+ chancellor +] 政府。 新的选举已定于 [+ next_election_month : month +] [+ next_election_year +]。
 
 @no_choice
 view-if: spd_toleration
@@ -38,7 +38,7 @@ We have no choice but to tolerate these actions for the preservation of democrac
 view-if: not unions_independent and not spd_toleration
 subtitle: -1 资源
 choose-if: resources >= 1
-unavailable-subtitle: -1 资源 - We can't afford this.
+unavailable-subtitle: -1 资源 —— 我们负担不起。
 on-arrival: resources -= 1; workers_spd += 4*(1-dissent); labor_dissent -= 5; labor_strength += 5; unemployed_spd += 4*(1-dissent); workers_z -= 2; 
 
 We provide financial support to the ongoing strikes against the government, intensifying the class conflict that they have initiated and strengthening our relationship with the government.

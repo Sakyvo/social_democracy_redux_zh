@@ -71,7 +71,7 @@ on-arrival: bourgeois_power -= 0.03; economic_democracy += 1; socialism += 3; wo
 @nationalize_1
 title: 开始对关键产业进行社会化。
 subtitle: -1 财政预算 —— 我们应当收购产业,并与工人和消费者共同管理它们。
-unavailable-subtitle: -1 财政预算 —— 我们应当收购产业,并与工人和消费者共同管理它们。 [? if capital_spd : <span style="color:rgb(170,150,60);font-family:'Times New Roman',serif;font-weight:700;letter-spacing:0.5px;">But that would infringe upon the right to private property!</span> ?]
+unavailable-subtitle: -1 财政预算 —— 我们应当收购产业,并与工人和消费者共同管理它们。 [? if capital_spd : <span style="color:rgb(170,150,60);font-family:'Times New Roman',serif;font-weight:700;letter-spacing:0.5px;">可那会侵犯私有财产权!</span> ?]
 choose-if: budget >= 1 and not capital_spd
 max-visits: 3
 on-arrival: socialization_vote = 1
