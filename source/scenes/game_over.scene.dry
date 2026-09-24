@@ -257,7 +257,7 @@ view-if: chancellor_party == "KPD" or president == "Thälmann" or socialist_unit
 tags: endings
 go-to: eg_menu
 
-在我们的协助下,德国共产党在德国赢得了政权。他们将试图按苏联的模样重塑德国。成效几何,尚未可知。
+在我们的协助下,共产党在德国赢得了政权。他们将试图按苏联的模样重塑德国。成效几何,尚未可知。
 
 @reactionary_victory
 title: 反动派胜利
