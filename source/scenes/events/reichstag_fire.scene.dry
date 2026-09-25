@@ -5,11 +5,11 @@ tags: event
 new-page: true
 max-visits: 1
 
-= Reichstag Fire
+= 国会纵火案
 
-The Reichstag has been burned to the ground, ostensibly by a foreign communist. Whether their accusations are true or not, the Nazis have used this as a pretext to consolidate power as [+ president +] signs the **Decree of the Reich President for the Protection of People and State**, or **Reichstag Fire Decree** suspending essential civil liberties under the pretext of preventing communist revolution. 
+国会大厦已被烧毁,表面上是死于一名外国共产党人之手。无论他们的指控是否属实,纳粹党都以此为借口巩固权力:[+ president +] 签署了**《保护人民与国家之帝国总统法令》**,即**国会纵火法令**,以阻止共产党革命为借口,中止了各项基本公民自由。
 
-This decree gives [+ chancellor +] wide-ranging powers with which to suppress us and arrest our leaders in the leadup to the [+ next_election_month : month +] election. Despite its blatantly dictatorial nature, there is not much we can do about it.
+该法令赋予 [+ chancellor +] 广泛的权力,使其能在 [+ next_election_month : month +] 选举之前镇压我们并逮捕我们的领袖。尽管它露骨地带有独裁性质,我们也无能为力。
 
 - @fight: 只能战斗了,趁还来得及。
 - @lib: 我们只能往好处想。
@@ -18,7 +18,7 @@ This decree gives [+ chancellor +] wide-ranging powers with which to suppress us
 on-arrival: spd_rebel = 1; kpd_relation += 20
 go-to: civil_war
 
-We mobilize what's left of the Reichsbanner and ADGB to resist this blatant crackdown. [? if kpd_party_leader != "Conciliators" : The KPD, seeing its leaders jailed, is more inclined to join us in our final fight against fascism, but will it be enough? ?]
+我们动员国旗团与德国工会总联合会的残存力量来抵抗这场露骨的镇压。[? if kpd_party_leader != "Conciliators" : 共产党眼见其领袖入狱,更倾向于加入我们对抗法西斯主义的最后一战,但这够吗? ?]
 
 @lib
 on-arrival: {!

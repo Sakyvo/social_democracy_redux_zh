@@ -5,11 +5,11 @@ max-visits: 1
 new-page: true
 view-if: capital_strike_seen and (class_war*capital_strike_progress) >= (bourgeois_power*100)
 
-= Socialism IS Barbarism!
+= 社会主义就是野蛮!
 
-Recently, a new pamphlet, the newest among many to have circulated since the capital strike begun, has been making the rounds [? if not socialized_media : in the bourgeois presses ?][? if socialized_media : in bourgeois circles ?] attacking socialism visciously and charging us with totalitarianism and unnaturality, proclaiming instead, both philosophically and with their supposed science of economics, that the freedom of each individual to compete meritocratically on a free market be the way a society ought to be structured instead.
+最近,一本新小册子正在[? if not socialized_media : 资产阶级报刊上 ?][? if socialized_media : 资产阶级圈子里 ?]流传 —— 它是资本罢工开始以来涌现的众多小册子中最新的一本。它恶毒攻击社会主义,指控我们搞极权主义、反自然,并从哲学与他们那套所谓的经济学出发宣称:社会应有的构造方式,是让每个个体在自由市场上凭才能竞争。
 
-While this pamphlet is by no means special, what is special is the desperation with which the bourgeoisie now seek to oppose our project, such that they now mobilize every tool at their disposal behind this unremarkably libelous pamphlet in an attempt to slander away the revolution.
+这本小册子本身绝无特别之处;特别的是资产阶级如今反对我们事业的那份绝望 —— 他们竟为这本平庸的诽谤小册子动用了手头的一切工具,企图靠污蔑把这场革命抹掉。
 
 - @pathetic: 他们的图谋当然都是徒劳。
 - @worrying: 事态令人相当担忧。
@@ -58,7 +58,7 @@ if (!Q.capital_nazi) {
 
 !}
 
-This is, unfortunately, quite the worrying development. With the bourgeoisie still controlling newspapers and printing presses all across Germany, it is very probable that this will influence opinions, as ridiculous as the pamphlet is.
+不幸的是,这是个相当令人担忧的动向。既然资产阶级仍掌控着全德国的报纸与印刷厂,哪怕这本小册子再荒唐,它也很可能影响舆论。
 
 @pathetic
 view-if: socialized_media
@@ -104,4 +104,4 @@ if (!Q.capital_nazi) {
 
 !}
 
-With us having already socialized the newspapers and printing presses, the influence that the bourgeoisie can exert over public opinion through pamphlets like these has greatly diminished. Still, this coordinated effort does hurt somewhat, atleast amongst the more bourgeois demographics.
+由于我们已把报纸与印刷厂社会化,资产阶级借这类小册子对舆论施加的影响已大为减弱。不过,这场协同行动仍造成了一定伤害 —— 至少是在较为资产阶级化的群体中。

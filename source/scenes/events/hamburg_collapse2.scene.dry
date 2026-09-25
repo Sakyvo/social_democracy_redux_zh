@@ -9,21 +9,21 @@ go-to: landtag_dissolved if dissolve_hl >= 50; landtag_not_dissolved if dissolve
 
 = 汉堡州议会解散
 
-Following the collapse of our national cooperation and further declining relations, the Hamburg DVP has turned on our regional Grand Coalition. Though they cannot remove the state government from power, due to the constructive VONC mechanism, they can dissolve the Landtag by a simple majority vote.
+随着我们全国层面合作的破裂以及关系的进一步恶化,汉堡人民党已转而反对我们的地区大联盟。尽管由于建设性不信任案机制,他们无法把州政府赶下台,但他们能以简单多数表决解散州议会。
 
 @landtag_dissolved
 on-arrival: nazi_urgency += 1; hamburg_nsdap += 0.05; hamburg_dvp -= 0.05; hamburg_dnvp -= 0.05; hamburg_other -= 0.05; hamburg_election_year = year; hamburg_election_month = month+3; hamburg_election_year += 1 if hamburg_election_month > 12; hamburg_election_month -= 12 if hamburg_election_month > 12
 go-to: kpd_responsible if (((kpd_relation < 60 and kpd_party_leader != "Conciliators") or (kpd_relation < 30 and kpd_party_leader == "Conciliators")) and (dissolve_hl-kpd_hl < 50))
 
-Ultimately, with [+ dissolve_hl +]% in favor, the Landtag is dissolved. [? if not ((kpd_relation < 70 and kpd_party_leader != "Conciliators") or (kpd_relation < 50 and kpd_party_leader == "Conciliators")) : This is due to the KPD's crucial vote to dissolve the Landtag. ?]
+最终,以 [+ dissolve_hl +]% 赞成,州议会被解散。[? if not ((kpd_relation < 70 and kpd_party_leader != "Conciliators") or (kpd_relation < 50 and kpd_party_leader == "Conciliators")) : 这要归因于共产党那一票关键的赞成解散。 ?]
 
-New elections have been called for [+ hamburg_election_month : month +] [+ hamburg_election_year +].
+新的选举已定于 [+ hamburg_election_month : month +] [+ hamburg_election_year +]。
 
 @kpd_responsible
 on-arrival: hamburg_kpd -= 0.15; hamburg_spd += 0.1
 
-The KPD's vote to dissolve the Landtag seems to have backfired, as many of their voters, feeling that they are voting not for communism but for the Nazism that the KPD is enabling in their virulent focus on attacking Social Democracy, have jumped ship to the SPD.
+共产党赞成解散州议会的那一票似乎适得其反:许多他们的选民感到自己投的不是共产主义,而是共产党在猛烈攻击社会民主党的过程中所助长的纳粹主义,于是纷纷转投社民党。
 
 @landtag_not_dissolved
 
-Surprisingly, the motion fails, with only [+ dissolve_hl +]% in favor. [? if ((kpd_relation < 70 and kpd_party_leader != "Conciliators") or (kpd_relation < 50 and kpd_party_leader == "Conciliators"))  : This is due to the KPD's crucial vote not to dissolve the Landtag. ?]
+出人意料,动议失败,仅有 [+ dissolve_hl +]% 赞成。[? if ((kpd_relation < 70 and kpd_party_leader != "Conciliators") or (kpd_relation < 50 and kpd_party_leader == "Conciliators"))  : 这要归因于共产党那一票关键的反对解散。 ?]

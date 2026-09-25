@@ -8,7 +8,7 @@ new-page: true
 
 = Panzerkreuzer
 
-Navy leaders are asking for the construction of a new battlecruiser, as promised by the previous government. Since we control the Reichswehr ministry, it is our decision as to whether to build the battlecruiser or not.
+海军领袖要求建造一艘新的战列巡洋舰,这是前政府许下的承诺。既然国防部掌握在我们手中,是否建造这艘战列巡洋舰便由我们决定。
 
 - @vote_yes: 建造这艘战列巡洋舰。
 - @vote_no: 不建造这艘战列巡洋舰。
@@ -16,11 +16,11 @@ Navy leaders are asking for the construction of a new battlecruiser, as promised
 @vote_yes
 on-arrival: left_dissent += 10; labor_dissent += 10; center_dissent += 5; reformist_dissent += 5; neorevisionist_dissent += 5; reichswehr_loyalty += 0.1; panzerkreuzer_funded = 1; socialism -= 3
 
-We have pleased the military by supporting the construction of the battlecruiser. However, our grassroots party members are shocked by our intransigence! Many party branches have begun agitating against the Reichstag delegation.
+我们支持建造战列巡洋舰,令军方满意。然而,我党基层成员对我们的固执大为震惊!许多党部已开始鼓动反对国会代表团。
 
 @vote_no
 on-arrival: coalition_dissent += 1; reichswehr_loyalty -= 0.05; left_dissent -= 10; labor_dissent -= 10; center_dissent -= 5; reformist_dissent -= 5; neorevisionist_dissent -= 5; nationalism -= 5; pacifism += 1; z_relation -= 5; dvp_relation -= 5; workers_spd += 5*(1-dissent); panzerkreuzer_failed = 1; coup_progress += 1; coup_progress += 1 if reichswehr_strength < 100
 
-Military leaders are upset at the Ministry's decision to not construct the battlecruiser, and they have taken the complaints to our coalition partners. However, there is not much they can do to force the construction, as we have control over the Reichswehr ministry.
+军方领袖对国防部不建造这艘战列巡洋舰的决定感到不满,并把不满带到我们的执政伙伴那里去。然而,由于我们掌控着国防部,他们没什么办法强推建造。
 
-No matter what, the battlecruiser will not be built. We have fulfilled one of our campaign promises, and our supporters are pleased.
+无论如何,这艘战列巡洋舰不会建成。我们兑现了竞选承诺之一,支持者们感到满意。

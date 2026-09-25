@@ -6,11 +6,11 @@ tags: event
 max-visits: 1
 new-page: true
 
-= Red Autumn
+= 红色之秋
 
-As the Nazis collapsed in on themselves and we aided in Schleicher’s unconstitutional moves towards holding on to power, the Communists have filled the growing void of opposition towards Schleicher as best they can, mobilizing radicals into the RFB and organizing in workplaces against what they allege to be fascist dictatorship. Though their message is blunted by the ongoing public works program and the complacency of the trade unions, they have managed to monopolize the antifascist vote and even, though in a lesser sense, breached into the republican vote.
+随着纳粹党自我崩塌,而我们又协助了施莱谢尔为了保住权力而采取的那些违宪举动,共产党人已尽其所能填补起日益扩大的反对施莱谢尔的空缺:把激进分子动员进红色前线战士同盟,并在厂矿中组织起来,反对他们所称的法西斯独裁。尽管他们的宣传因正在推行的公共工程计划与工会的自我满足而大打折扣,他们仍成功垄断了反法西斯的选票,甚至在一定程度上打入了共和派的票源。
 
-Schleicher has used this supposed threat of communist revolution to justify more emergency measures of suspending press freedoms and the like, further enflaming tensions with the communists.
+施莱谢尔借这个所谓共产党革命的威胁,为进一步的紧急措施 —— 中止新闻自由之类 —— 辩护,进一步加剧了与共产党人的紧张关系。
 
 - @reichstag_fire_schleicher: 然后……
 
@@ -18,9 +18,9 @@ Schleicher has used this supposed threat of communist revolution to justify more
 view-if: strife >= 12
 subtitle: 国会大厦被烧毁了!
 
-The Reichstag has been burned to the ground by a foreign communist. [+ president +] signs the **Decree of the Reich President for the Protection of People and State**, or **Reichstag Fire Decree** suspending essential civil liberties under the pretext of preventing communist revolution. 
+国会大厦已被一名外国共产党人付之一炬。[+ president +] 签署了**《保护人民与国家之帝国总统法令》**,即**国会纵火法令**,以阻止共产党革命为借口,中止了各项基本公民自由。
 
-This decree gives [+ chancellor +] wide-ranging powers with which to suppress the communists and arrest their leaders in the leadup to the [+ next_election_month : month +] election. Despite its blatantly dictatorial nature, there is not much we can do about it.
+该法令赋予 [+ chancellor +] 广泛的权力,使其能在 [+ next_election_month : month +] 选举之前镇压共产党人并逮捕其领袖。尽管它露骨地带有独裁性质,我们也无能为力。
 
 - @fight: 只能战斗了,趁还来得及。
 - @lib: 我们只能往好处想。
@@ -29,7 +29,7 @@ This decree gives [+ chancellor +] wide-ranging powers with which to suppress th
 on-arrival: spd_rebel = 1; kpd_relation += 10; rb_strength *= 0.8; rfb_strength += 100; workers_spd -= 10; workers_dne += 10
 go-to: civil_war
 
-We mobilize what's left of the Reichsbanner and ADGB to resist this blatant crackdown  However, the ADGB refuses to follow along. [? if kpd_party_leader != "Conciliators" : The KPD, seeing its leaders jailed, is more inclined to join us in our final fight against fascism, but will it be enough? ?]
+我们动员国旗团与德国工会总联合会的残存力量来抵抗这场露骨的镇压。然而,德国工会总联合会拒绝跟随。[? if kpd_party_leader != "Conciliators" : 共产党眼见其领袖入狱,更倾向于加入我们对抗法西斯主义的最后一战,但这够吗? ?]
 
 @lib
 on-arrival: {!

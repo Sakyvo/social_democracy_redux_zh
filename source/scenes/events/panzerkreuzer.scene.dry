@@ -8,7 +8,7 @@ new-page: true
 
 = Panzerkreuzer
 
-The Reichswehr Ministry is demanding the construction of a new battlecruiser, as part of Germany's rearmament. Our coalition partners are united in support. While many of our members are vehemently against new military spending, this vote may be necessary to preserve the coalition. 
+国防部要求建造一艘新的战列巡洋舰,作为德国重整军备的一部分。我们的执政伙伴一致支持。虽然我党许多成员激烈反对新增军费支出,但这次表决或许对保住联盟是必要的。
 我们当初是以「给孩子面包,而不是战列巡洋舰」为口号竞选的。我们真的背弃竞选承诺吗?
 
 - @vote_yes: 投赞成票,建造这艘战列巡洋舰。
@@ -20,7 +20,7 @@ on-arrival: bill_support = bourgeois_coalition+far_right_coalition; bill_support
 Q.bill_support = Math.round(Q.bill_support);
 !}
 
-Our grassroots party members are shocked by our intransigence! Many party branches have begun agitating against the cabinet, and our Reichstag members even plan a full vote on the proposal, contravening the government's decision.
+我党基层成员对我们的固执大为震惊!许多党部已开始鼓动反对内阁,我们的国会议员甚至打算就这项提案举行全院表决,公然违抗政府的决定。
 
 共产党:反对
 
@@ -64,7 +64,7 @@ go-to: muller_passed if left_coalition < 50; muller_beaten if left_coalition >= 
 @muller_beaten
 on-arrival: panzerkreuzer_funded = 0; nationalism -= 3*(1-dissent); panzerkreuzer_failed = 1; workers_spd += 5*(1-dissent); coup_progress += 1; bill_support = bourgeois_coalition+far_right_coalition
 
-Our coalition partners are shocked by our intransigence! Despite Chancellor Müller's rejection of the proposal, the other parties bring the matter to a Reichstag vote, which too fails, even with only the SPD and KPD voting against. The ship will not be built!
+我们的执政伙伴对我们的固执大为震惊!尽管米勒总理否决了该提案,其他政党仍把此事提交国会表决 —— 结果同样失败,即便只有社民党与共产党投了反对票。这艘舰不会建成!
 
 共产党:反对
 
@@ -91,7 +91,7 @@ Our coalition partners are shocked by our intransigence! Despite Chancellor Mül
 @muller_passed
 on-arrival: panzerkreuzer_funded = 1; bill_support = bourgeois_coalition+far_right_coalition
 
-Our coalition partners are shocked by our intransigence! Despite Chancellor Müller's rejection of the proposal, the other parties bring the matter to a Reichstag vote, which easily passes, with only the SPD and KPD voting against. The ship will be built.
+我们的执政伙伴对我们的固执大为震惊!尽管米勒总理否决了该提案,其他政党仍把此事提交国会表决,结果轻松通过 —— 只有社民党与共产党投了反对票。这艘舰将建成。
 
 共产党:反对
 

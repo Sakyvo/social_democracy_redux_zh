@@ -5,16 +5,16 @@ tags: event
 new-page: true
 max-visits: 1
 
-= Through the Eye of a Needle
+= 如骆驼穿过针眼
 
-The Center Party has called an extraordinary party congress to address the recent crisis with regards to the capital strike as well as the SPD's reactions to it. The party, while traditionally staunchly conservative and democratic, is nonetheless *bourgeois*-democratic, and has thus been under massive assault to oppose our project.
+中央党召开了一次特别党代会,以应对近来围绕资本罢工以及社民党对其反应的危机。该党虽然传统上坚定地既保守又民主,却毕竟是*资产阶级*民主派,因此一直承受着反对我们事业的巨大压力。
 
 - @result: 但他们拒绝屈服。
 
 @result
 on-arrival: z_socialist = 1; z_relation += socialism/10; socialism += z_votes; workers_z += socialism/10; new_middle_z *= (1-bourgeois_power); old_middle_z *= (1-bourgeois_power); rural_z *= (1-bourgeois_power); catholics_z *= (1-(bourgeois_power*0.25))
 
-With private party financing banned, the influence of industry on the Center was already scarce, their relationship with us providing them far greater political power. So it is no surprising, although still surprising, when Joseph Joos speaks alongside Wirth, championing us as stalwart defenders of democracy and the rights of Catholics, attacking capital for siding with antidemocratic forces, and affirming then in its charter a belief in a Christian socialism, founded on the ideals of compassion and brotherhood.
+由于私人政党经费已被禁止,工业界对中央党的影响力本就十分有限,而他们与我们的关系又给他们带来了大得多的政治权力。因此,当约瑟夫·约斯与维尔特并肩发言,把我们称作民主与天主教徒权利的坚定捍卫者,抨击资本站到反民主势力一边,并在党章中确认一种以慈悲与手足之情为理想的基督教社会主义信仰时,这虽仍令人意外,却也并不出人意料。
 
 - @waow: 哇哦。
 

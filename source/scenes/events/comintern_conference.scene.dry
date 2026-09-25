@@ -7,9 +7,9 @@ new-page: true
 
 = 共产国际第七次代表大会
 
-The "7th World Congress of the Communist International" has begun in Moscow, seeing representatives from Communist parties around the world convene to discuss policy and strategy going forward.
+「共产国际第七次世界代表大会」已在莫斯科开幕,来自世界各地共产党的代表齐聚一堂,讨论今后的政策与战略。
 
-Previously, the Comintern adopted the "Third Period" thesis, positing an end to collaboration with "social fascists" to defend the position of the workers and instead the beginning of a revolutionary offensive against capitalism. Perhaps this will change with this congress.
+此前,共产国际采纳了「第三时期」论断,主张终止与「社会法西斯」的合作以捍卫工人的地位,转而开始对资本主义的革命攻势。或许这次大会会让局面有所改变。
 
 - @third_period: 维持「第三时期」理论。
 - @popular_front: 放弃「第三时期」理论,转而采取「人民阵线」。
@@ -19,14 +19,14 @@ Previously, the Comintern adopted the "Third Period" thesis, positing an end to 
 view-if: (kpd_party_leader != "Conciliators" and (communist_coalition*soviet_relation < 10) and not kpd_ally and not in_left_front) or ((kpd_relation <= 40 and rfb_banned == 1) or kpd_relation <= 20)
 on-arrival: workers_spd -= 4*(left_dissent/100); workers_kpd += 3*(left_dissent/100); unemployed_spd -= 6*(left_dissent/100); unemployed_kpd += 6*(left_dissent/100); workers_kpd -= 3*(left_strength/100); unemployed_kpd -= 6*(left_strength/100); kpd_relation -= 10; third_period = 1; socialism -= 2
 
-With the threat from fascism deemed insufficient, the Third Period thesis is maintained by the Communist International. This will hurt any attempts of ours to ally the KPD, and weaken leftism worldwide.
+由于法西斯主义的威胁被认为尚不充分,共产国际维持了第三时期论断。这将损害我们与共产党结盟的任何努力,并削弱全世界的左翼力量。
 
 @popular_front
 choose-if: (kpd_party_leader == "Conciliators" or (communist_coalition*soviet_relation >= 10) or kpd_ally or in_left_front) and ((kpd_relation > 40 or rfb_banned != 1) and kpd_relation > 20)
 unavailable-subtitle: 对人民阵线的支持不足。
 on-arrival: third_period = 0; kpd_relation += 10; communist_coalition += 3; socialism += 1
 
-Inspired by the relative success of cooperation between the KPD and the SPD in Germany in halting the spread of fascism, and for the Soviets wanting a more flexible diplomatic doctrine in order to break out of isolation, the 7th Comintern Congress ends with the Third Period thesis being dropped in favor of a new theory, that of the "Popular Front", an alliance of left-wing and socialist groups to halt the spread of fascism and defend the gains of the working class.
+受德国共产党与社民党合作遏制法西斯蔓延的相对成功所启发,加之苏联希望采取更灵活的外交方针以打破孤立,共产国际第七次代表大会最终放弃了第三时期论断,转而采纳一套新理论 —— 「人民阵线」,即左翼与社会主义团体结成联盟,以遏制法西斯蔓延、捍卫工人阶级的成果。
 
 @influence_popular_front
 subtitle: -1 资源
@@ -35,4 +35,4 @@ choose-if: resources >= 1
 unavailable-subtitle: -1 资源。我们缺乏所需的资源。
 on-arrival: resources -= 1; third_period = 0; kpd_relation += 10; communist_coalition += 3; socialism += 1
 
-With a little nudge through our spy network in the comintern and inspired by the relative success of cooperation between the KPD and the SPD in Germany in halting the spread of fascism, the 7th Comintern Congress ends with the Third Period thesis being dropped in favor of a new theory, that of the "Popular Front", an alliance of left-wing and socialist groups to halt the spread of fascism and defend the gains of the working class.
+借我们在共产国际中的间谍网络稍加推动,并受德国共产党与社民党合作遏制法西斯蔓延的相对成功所启发,共产国际第七次代表大会最终放弃了第三时期论断,转而采纳一套新理论 —— 「人民阵线」,即左翼与社会主义团体结成联盟,以遏制法西斯蔓延、捍卫工人阶级的成果。

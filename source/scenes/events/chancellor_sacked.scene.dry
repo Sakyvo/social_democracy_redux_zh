@@ -8,19 +8,19 @@ tags: event
 
 = [+ chancellor +] Sacked
 
-It seems that in our attempts to pursue our policy plans and dismantle the power that the reactionaries hold over our republic, we have earned the ire of President Hindenburg, who has today unilaterally dismissed our government as is unfortunately legal by the German constitution. Some on the left of our party are calling to resist but this does not seem to be a coup, not yet anyway.
+看来,在我们推行政策计划、拆解反动派对共和国所持权力的过程中,我们惹恼了兴登堡总统。他今天单方面解散了我们的政府 —— 遗憾地说,这按德国宪法是合法的。我党左翼一些人呼吁抵抗,但这似乎并非政变,至少现在还不是。
 
-[? if (in_weimar_coalition and black_thursday_seen and (spd_votes+ddp_votes+(z_votes-3)) < (30+coup_progress+capital_strike_progress)) : Hindenburg claims this is due to the increasing unpopularity of our cabinet and inability to deal with the crisis effectively. ?]
+[? if (in_weimar_coalition and black_thursday_seen and (spd_votes+ddp_votes+(z_votes-3)) < (30+coup_progress+capital_strike_progress)) : 兴登堡声称,这是因为我们的内阁日益不得人心、无力有效应对危机。 ?]
 
 @bruning_right
 on-arrival: spd_in_government = 0; spd_toleration = 0; chancellor = "Brüning"; chancellor_party = "Z"; foreign_minister_party = "DVP"; interior_minister_party = "Z"; justice_minister_party = "Z"; labor_minister_party = "Z"; reichswehr_minister_party = "I"; economic_minister_party = "Z"; finance_minister_party = "Z"; agriculture_minister_party = "Z"; in_right_coalition = 1
 
-Replacing us is Brüning of the Center Party, who has reorganized his cabinet to encompass the right-wing parties, including the DNVP who reluctantly accede to Hindenburg's wishes for a government. Their coalition frustratingly holds a majority in the Reichstag, meaning we are forced to accept the loss and prepare for the next elections.
+接替我们的是中央党的布吕宁,他重组内阁,将其扩展到包容右翼政党 —— 包括不情愿地依从兴登堡组阁意愿的国家人民党。他们的联盟令人恼火地在国会中占有多数,这意味着我们只能接受失败,并为下次选举做准备。
 
 @no_majority
 on-arrival: spd_in_government = 0; spd_toleration = 1; chancellor = "Brüning"; chancellor_party = "Z"; foreign_minister_party = "DVP"; interior_minister_party = "Z"; justice_minister_party = "Z"; labor_minister_party = "Z"; reichswehr_minister_party = "I"; economic_minister_party = "Z"; finance_minister_party = "Z"; agriculture_minister_party = "Z"
 
-Replacing us is Brüning of the Center Party, who has reorganized his cabinet to encompass the bourgeois parties. Although they lack a majority in the Reichstag, we could tolerate their government at the next session to prevent new elections, effectively acquiscing to Hindenburg's wishes.
+接替我们的是中央党的布吕宁,他重组内阁,将其扩展到包容资产阶级政党。尽管他们在国会中不占多数,我们也可以在下次会期容忍他们的政府,以避免新的选举 —— 这实质上等于默许了兴登堡的意愿。
 
 - @tolerate: 我们将达成容忍协议。
 - @dont_tolerate: 没有多数,就没有政府。那就举行选举!
@@ -28,7 +28,7 @@ Replacing us is Brüning of the Center Party, who has reorganized his cabinet to
 @tolerate
 on-arrival: left_dissent += 5
 
-We will tolerate Brüning's government, protecting it from motions of no confidence in the name of stability.
+我们将容忍布吕宁的政府,以稳定的名义保护它免受不信任案冲击。
 
 @dont_tolerate
 on-arrival: time_to_election = 3; spd_in_government = 0; in_grand_coalition = 0; spd_toleration = 0; weimar_dissent += 1 if weimar_plan_adopted

@@ -6,11 +6,11 @@ max-visits: 1
 on-arrival: agenda_seen = 1; nazi_peak = 1; judicial_reform -= 2 if judicial_reform >= 2; judicial_reform = 0 if judicial_reform < 2; reichswehr_loyalty -= 0.15 if reichswehr_loyalty >= 0.15; reichswehr_loyalty = 0 if reichswehr_loyalty < 0.15; interior_police_loyalty -= 0.1 if interior_police_loyalty >= 0.1; interior_police_loyalty = 0 if interior_police_loyalty < 0.1; workers_kpd -= 10; unemployed_kpd -= 10; rfb_harzburg = 1 if rfb_banned != 1; harzburg_rb = 1 if rb_militancy >= 0.2; rfb_strength -= 50 if rfb_strength >= 50 and rfb_banned != 1; rfb_banned = 1 if rfb_banned != 1; rfb_strength *= 0.7; rb_strength -= 25; rb_strength *= 0.9 if rb_militancy >= 0.2; rb_militancy *= 0.9 if rb_militancy >= 0.2; rb_militancy -= 0.05 if rb_militancy >= 0.05; pro_republic -= 10; nationalism += 10; democratization -= 3 if democratization >= 3; democratization = 0 if democratization < 3; stalhelm_militancy += 0.05; workers_nsdap += 5; unemployed_nsdap += 5; rural_dnvp += 5; old_middle_dnvp += 5; new_middle_dnvp += 5; stalhelm_strength += 60; sa_strength += 40; reichswehr_strength += 20 if reichswehr_strength <= 80; budget -= 1 if reuchswehr_strength <= 80; reichswehr_militancy += 1 if reichswehr_militancy <= 4; budget -= 1 if reichswehr_militancy <= 4; budget += 1 if welfare >= 2; welfare -= 1 if welfare >= 2; unemployed += 1.1; workers_spd -= 5; new_middle_spd -= 4; rural_spd -= 4; old_middle_spd -= 4; unemployed_spd -= 5; catholics_spd -= 4; left_dissent -= 5; left_strength -= 10
 tags: event
 
-= The Seldte Agenda
+= 泽尔特的议程
 
-With the assumption of power by the Harzburg Cabinet [? if march_on_berlin_seen : following the March on Berlin?], work was quickly begun in undoing our progress democratizing Germany. With the help of President [ + president +] and his generous use of Article 48 to allow minority rule by decree, state institutions are once again turned into reactionary organs while the Stalhelm begins a heavy-handed campaign of political violence against the left-wing. The communist RFB has [? if rfb_harzburg == 1 : been banned for suspicion of preparing a revolution and been ?] heavily persecuted by the reactionary government, with mass arrests of communist politicians for ties to it being conducted as well. Social Democracy is not spared in these purges, either. Those on the Left of our party are persecuted aggressively as well[? if harzburg_rb == 1 :, while the Reichsbanner sees its armories raided and arms confiscated, clearly viewed as a credible threat to the Harzburg Cabinet's aspirations ?].
+随着哈茨堡内阁[? if march_on_berlin_seen : 在进军柏林之后?]掌权,逆转我们使德国民主化的进展的工作迅速启动。在 [ + president +] 总统的帮助及其对第 48 条的慷慨运用(从而得以以法令实行少数统治)之下,国家机构再度变成反动的工具;同时,钢盔团开始对左翼发动一场强硬的政治暴力运动。共产党的红色前线战士同盟[? if rfb_harzburg == 1 : 因被怀疑准备革命而遭查禁,并 ?]受到反动政府的严厉迫害,共产党政治人物也因与其有关联而被大规模逮捕。社会民主党也未能在这场清洗中幸免。我党左翼同样遭到猛烈的迫害[? if harzburg_rb == 1 :;国旗团的军械库被查抄、武器被没收 —— 显然被视为对哈茨堡内阁图谋的一个可信威胁 ?]。
 
-Many in our party are calling for us to reverse course from our previous decision not to rebel, arguing that now may be the last chance to prevent a full reactionary victory. The Nazis have used the Harzburg Cabinet's suppression of the left to prepare a campaign of their own, and many fear that even if Seldte fails to fully bring down German democracy as Chancellor, Hitler will finish the job for him.
+我党许多人呼吁我们逆转先前不起事的决定,主张现在或许已是阻止反动派全面获胜的最后机会。纳粹党利用哈茨堡内阁对左翼的镇压来筹备自己的运动;许多人担心,即便泽尔特作为总理未能彻底摧毁德国民主,希特勒也会替他完成这件事。
 
 - @fight: 我们要现在就起来反抗,趁还来得及。
 - @submit: 我们无能为力。
@@ -18,14 +18,14 @@ Many in our party are calling for us to reverse course from our previous decisio
 @fight
 on-arrival: spd_rebel = 1
 
-We mobilize our forces for an uprising against Seldte, and they are quickly met with units of the Harzburg Front and government.
+我们动员力量起事反抗泽尔特,随即与哈茨堡阵线和政府的部队遭遇。
 
 - @civil_war: 这就是内战。
 
 @submit
 on-arrival: rb_strength *= 0.9; kpd_relation -= 15; left_dissent += 10; neorevisionist_dissent += 10; rb_militancy *= 0.95; rfb_strength *= 0.8; workers_spd -= 3; workers_kpd -= 5; unemployed_nsdap += 5; sh_strength += 20; sa_strength += 40; new_middle_nsdap -= 5; old_middle_nsdap -= 5; nazi_peak_timer = 2; nazi_peak_timer += (nsdap_votes/5); sh_strength += 100; sa_strength -= 50; sh_militancy += 0.02; z_relation -= 5; dvp_relation -= 5; dvp_relation -= 5 if pro_republic < 45; workers_dnvp += 5; new_middle_dnvp += 10; old_middle_dnvp += 10; rural_dnvp += 10; unemployed_dnvp += 5; catholics_dnvp += 5; catholics_spd -= 5; socialism -= 6
 
-Realistically, there is nothing we can do at this stage but hope for the best. The reactionary consolidation of power continues, and we do nothing to stop it.
+现实地说,在这个阶段我们除了寄望于最好的结果什么也做不了。反动派的集权仍在继续,而我们无力阻止。
 
 ## note: new_middle_nsdap -= 5; old_middle_nsdap -= 5; should be in the original on arrival, not the submit result, but wont work
 

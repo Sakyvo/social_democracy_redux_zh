@@ -5,9 +5,9 @@ tags: event
 max-visits: 1
 new-page: true
 
-= Desertions from the Reichsbanner
+= 国旗团的离队潮
 
-With the SPD an increasingly far-left party, and public support for socialism not nearly as great as the SPD's fervor for it, less enthusiastic members of the Reichsbanner have begun departing from the organization, fearing they will be expected to fight not for the republic but for an insurrectionary socialism that they do not subscribe to.
+随着社民党日益成为一个极左政党,而公众对社会主义的支持远不如社民党自身的热情,国旗团中不那么热衷的成员开始脱离该组织 —— 他们担心自己将被迫为之战斗的不是共和国,而是他们并不认同的暴动式社会主义。
 
 - @socialism: 那我们就必须加强对社会主义的支持。
 - @denounce_left: 我们并没有他们想的那么革命。
@@ -16,14 +16,14 @@ With the SPD an increasingly far-left party, and public support for socialism no
 @socialism
 on-arrival: commissars = 1; socialism += 2*(1-dissent); socialism += 2*(1-dissent) if new_middle_conscious; socialism += (left_strength/10)*(1-dissent); socialism -= 2*bourgeois_power
 
-We disseminate socialist propaganda amongst members of the Reichsbanner in an attempt to stem the tide. Hopefully, this, as well as our overall program for socialist agitation, will manage to maintain the Reichsbanner as a means of self-defence for the workers.
+我们在国旗团成员中传播社会主义宣传,试图遏制这股潮流。但愿此举连同我们整体的社会主义鼓动纲领,能让国旗团继续作为工人自卫的手段维持下去。
 
 @denounce_left
 on-arrival: left_strength -= 5; left_dissent += 5; rb_militancy -= 0.02
 
-We rebuke the leftists in our organization who are pushing for the Reichsbanner to become a means of socialist revolution, affirming it as a republican front first and foremost. This disgruntles our left, but helps to stem the tide somewhat.
+我们斥责组织中那些推动把国旗团变成社会主义革命工具的左翼分子,重申它首先是一个共和派阵线。这让我党左翼不满,却多少有助于遏制这股潮流。
 
 @rfb
 on-arrival: rb_militancy -= 0.05; rfb_militancy += 0.05; kpd_relation += 5; left_strength += 5*(1-dissent); socialism += 5*(1-dissent); rfb_militancy += 0.02 if funded_reichsbanner >= 1; funded_reichsbanner -= 1 if funded_reichsbanner >= 1
 
-With the RFB having its roots firmly in the working class and in socialism, to a greater extent than the Reichsbanner, it may indeed prove a more reliable institution for the defense of the workers.
+由于红色前线战士同盟在工人阶级与社会主义中的根基比国旗团更深,它或许确实能成为捍卫工人的更可靠机构。

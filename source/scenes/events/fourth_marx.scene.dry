@@ -9,11 +9,11 @@ tags: event
 
 = 新政府成立
 
-Following the fall of the previous government over secret rearmament plans by the Reichswehr, negotiations for a new one were begun. Due to our role in bringing down the government, we have been excluded from talks.
+在前一届政府因国防军的秘密重整军备计划而垮台之后,关于新政府的谈判随之启动。由于我们在搞垮政府中所起的作用,我们被排除在谈判之外。
 
 @hindenburg_menu
 
-Now, President Hindenburg has announced the formation of a new government.
+现在,兴登堡总统已宣布新政府成立。
 
 - @marx_iv: 马克思第四届内阁。
 
@@ -21,11 +21,11 @@ Now, President Hindenburg has announced the formation of a new government.
 subtitle: 中央党 + 巴伐利亚人民党 + 人民党 + 国家人民党 ([+ right_coalition +]%)
 on-arrival: in_right_coalition = 1; dnvp_in_government = 1; old_middle_dnvp -= 3; old_middle_other += 3; new_middle_dnvp -= 3; new_middle_other += 3; rural_dnvp -= 3; rural_other += 3
 
-The DNVP has managed to make its way back into the government, as the cabinet is reshuffled to accomodate them. The DDP stays outside of this framework for now, finding Marx's planned policy on schools too favorable towards the denominational schools. 
+国家人民党已设法重返政府,内阁为容纳他们而改组。民主党暂时留在这一框架之外,因为它认为马克思拟定的学校政策对教派学校过于有利。
 
 @marx_menu
 
-Now, President Marx has announced the formation of a new government.
+现在,马克思总统已宣布新政府成立。
 
 - @bruning_ii: 布吕宁第二届内阁。
 
@@ -33,4 +33,4 @@ Now, President Marx has announced the formation of a new government.
 subtitle: 中央党 + 巴伐利亚人民党 + 人民党 + 国家人民党 ([+ right_coalition +]%)
 on-arrival: in_right_coalition = 1; dnvp_in_government = 1; old_middle_dnvp -= 3; old_middle_other += 3; new_middle_dnvp -= 3; new_middle_other += 3; rural_dnvp -= 3; rural_other += 3
 
-The DNVP has managed to make its way back into the government, as the cabinet is reshuffled to accomodate them. The DDP stays outside of this framework for now, finding Brüning's planned policy on schools too favorable towards the denominational schools. 
+国家人民党已设法重返政府,内阁为容纳他们而改组。民主党暂时留在这一框架之外,因为它认为布吕宁拟定的学校政策对教派学校过于有利。

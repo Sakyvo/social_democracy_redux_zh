@@ -20,9 +20,9 @@ max-visits: 1
 
 = 胡根贝格对布吕宁
 
-Following the dislodging of us from Brüning's government through the unemployment insurance crisis, the DNVP has been split roughly down the middle as Hugenberg attempts to bring down Brüning's cabinet, met with resistance by Westarp and the remaining "moderates" in the party.
+在失业保险危机把我们逐出布吕宁政府之后,国家人民党大致一分为二:胡根贝格试图搞垮布吕宁内阁,却遭到韦斯塔普及党内残余「温和派」的抵制。
 
-We stand to potentially be able to bring Brüning down by voting to override his recent emergency budget cuts, though whether or not we succeed to do so depends on the DNVP's decision.
+我们有可能通过投票推翻他近来的紧急预算削减来搞垮布吕宁,不过能否成功,取决于国家人民党的抉择。
 
 - @vote_against: 在国会动议推翻布吕宁的预算削减。
 
@@ -30,15 +30,15 @@ We stand to potentially be able to bring Brüning down by voting to override his
 on-arrival: bourgeois_coalition += pro_bruning; rural_dnvp -= 5; old_middle_dnvp -= 3; new_middle_dnvp -= 3; catholics_dnvp -= 2; rural_other += 3; old_middle_other += 2; catholics_other += 2
 go-to: successful_motion if bourgeois_coalition < 50; failed_motion if bourgeois_coalition >= 50
 
-Of course, we will not stand idly by as the bourgeois first expel us from government and then unleash austerity upon the nation. We owe nothing to them after they blew our government up.
+当然,我们不会在资产阶级先是把我们赶出政府、继而又向全国释放紧缩时袖手旁观。既然他们炸毁了我们的政府,我们对他们便毫无义务。
 
 @successful_motion
 on-arrival: time_to_election = 3; dnvp_toleration = 0;
 call: set_next_election_time
 
-Despite the defection of Westarp's wing from the party, most of the DNVP still turns on Brüning as per Hugenberg's wishes, allowing the motion to succeed. The Reichstag is dissolved, and snap elections called for [+ next_election_month : month +] [+ next_election_year +].
+尽管韦斯塔普一翼脱党而去,国家人民党的大部分仍按胡根贝格的意愿转而反对布吕宁,使动议获得通过。国会随之解散,提前大选定于 [+ next_election_month : month +] [+ next_election_year +]。
 
 @failed_motion
 on-arrival: in_bourgeois_coalition = 1; dnvp_toleration = 0; what_the_hell = 1
 
-A majority of the DNVP's deputies follow Westarp in leaving the party and tolerating Brüning, and our motion just barely fails. Perhaps this is a hidden blessing, as we will have more time untainted in opposition with which to rebuild our popularity, all while the bourgeois parties tear themselves up.
+国家人民党的多数议员跟随韦斯塔普脱党并容忍布吕宁,我们的动议以毫厘之差失败。或许这是因祸得福:我们将有更多不受牵连的在野时间用来重建声望,而资产阶级政党则自相撕咬。

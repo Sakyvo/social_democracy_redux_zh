@@ -8,9 +8,9 @@ max-visits: 1
 
 = 国家阵线
 
-With the Nazis embracing their new tactic of subverting democracy truly from within, many doors have been opened. The "National Opposition" has fallen apart and given way to the "National Front", a new alliance of the BVP, DVP, DNVP and NSDAP as well as many other smaller right-wing parties into a firmly reactionary bloc. [? if z_national : Even the Center Party has joined, despite initial reluctance, thanks to our great hostility. ?]
+随着纳粹党拥抱其真正从内部颠覆民主的新策略,许多大门被打开了。「国家反对派」已分崩离析,让位于「国家阵线」—— 一个把巴伐利亚人民党、人民党、国家人民党与纳粹党以及许多其他较小右翼政党结成牢固反动集团的新联盟。[? if z_national : 甚至连中央党也因我们的强烈敌意而在起初不情愿之后加入了。 ?]
 
-The moderate right, of course, believes that they are using the NSDAP's Reichstag seats to take power for themselves, but the NSDAP cannot be underestimated. Hitler is sure to try and ride the wave of the National Front to power if it ever so much as gets close to a parliamentary majority.
+温和右翼当然相信自己是在利用纳粹党的国会议席为自己夺权,但纳粹党绝不可小觑。一旦国家阵线哪怕只是接近议会多数,希特勒必定会试图乘其浪潮上台。
 
 - @worrying: 令人担忧。
 
@@ -45,4 +45,4 @@ Q.catholics_other *= 0.9;
 Q.unemployed_other *= 0.9;
 !}
 
-We will have to keep an eye on them.
+我们得盯紧他们。

@@ -6,9 +6,9 @@ max-visits: 1
 view-if: year == 1931 and month >= 4 and t_elections <= 1 and landtags_enabled and nazi_thuringia and not victory_republic and not (uf_formed or dvp_relation < 20 or coup_progress >= 7)
 on-arrival: nazi_thuringia = 0
 
-= Thuringian Government Collapses
+= 图林根政府垮台
 
-The Thuringian government, a coalition of the bourgeois parties with the Nazis, has finally collapsed following intensified disputes between the DVP and WP (Economic Party) on one end and NSDAP on the other. The result is that the government threatens to fall, unless the local SPD branch provides toleration to the bourgeois so as to enable a smooth removal of Nazis from the state government.
+图林根政府 —— 资产阶级政党与纳粹党的联盟 —— 终于垮台,起因是人民党、经济党(WP)一方与纳粹党另一方之间的争端加剧。结果是政府濒临倒台,除非当地社民党组织向资产阶级提供容忍,以便顺利把纳粹党从州政府中清除出去。
 
 - @thuringia_spd: 这掌握在图林根社民党手中。
 
@@ -18,7 +18,7 @@ go-to: new_elections if left_strength >= 30 or uf_formed; toleration if left_str
 @new_elections
 on-arrival: thuringia_spd += 0.05; thuringia_dvp += 0.05; thuringia_dnvp -= 0.1; thuringia_other -= 0.05; thuringia_election_month = month+4; thuringia_election_year -= 1 if thuringia_election_month > 12; thuringia_election_month -= 12 if thuringia_election_month > 12
 
-The regional SPD branch refuses to provide toleration to a bourgeois government, leading to new elections to be called for [+ thuringia_election_month : month +] [+ thuringia_election_year +].
+该州社民党组织拒绝向资产阶级政府提供容忍,导致新的选举定于 [+ thuringia_election_month : month +] [+ thuringia_election_year +]。
 
 - @based: 图林根社民党做得对。
 - @cringe: 图林根社民党犯了个错误。
@@ -36,4 +36,4 @@ on-arrival: left_dissent += 10; left_strength -= 5; reformist_dissent -= 10; cen
 @toleration
 on-arrival: thuringeration_timer = 10-(left_strength/10); thuringia_spd -= 0.05; thuringia_toleration = 1; thuringia_kpd += 0.05; left_dissent += 3
 
-The Thuringian SPD provides toleration to the local bourgeois parties as to prevent new elections.
+图林根社民党向当地资产阶级政党提供容忍,以避免新的选举。

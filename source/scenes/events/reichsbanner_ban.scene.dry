@@ -4,9 +4,9 @@ view-if: judicial_reform == 0 and interior_minister_party == "NSDAP" and rb_bann
 new-page: true
 tags: event
 
-= Reichsbanner Banned
+= 国旗团被禁
 
-The Nazi government has decided to ban the Reichsbanner to assist in their ongoing consolidation of power. This has outraged many of the SPD members who are fully ready to resist, many wondering why we haven't already risen up against the Nazi regime. If we do not rise up, this will destroy our capability to ever fight back again.
+纳粹政府决定查禁国旗团,以助其正在进行的集权。这激怒了许多已完全准备好抵抗的社民党成员,许多人纳闷我们为何还没有起而反抗纳粹政权。若我们不起事,这将摧毁我们今后再度反击的能力。
 
 - @fight: 我们要在街头战斗,阻止希特勒掌权。
 - @give_up: 以我们目前的处境,无法反击。
@@ -23,4 +23,4 @@ on-arrival: spd_rebel = 1
 @give_up
 on-arrival: left_dissent += 15; neorevisionist_dissent += 15; labor_dissent += 10; center_dissent += 10; reformist_dissent += 5; workers_spd *= 0.8; unemployed_spd *= 0.8; new_middle_spd *= 0.9; old_middle_spd *= 0.9; rural_spd *= 0.9; workers_spd -= 5; workers_kpd += 5; unemployed_spd -= 5; unemployed_kpd += 5; rb_banned = 1; rb_strength *= 0.6
 
-Our compliance in the Nazi consolidation of power is attacked by many, who begin to look to parties like the KPD for true antifascist commitment.
+我们在纳粹集权过程中的顺从遭到许多人的抨击,他们开始把目光投向共产党这样真正致力于反法西斯的政党。

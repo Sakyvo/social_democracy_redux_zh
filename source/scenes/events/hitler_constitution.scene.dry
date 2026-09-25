@@ -7,7 +7,7 @@ tags: event
 
 = 宪法公投
 
-With Hitler's election as president he has wasted no time in attempting to consolidate power. His efforts are impeded however thanks to our own changes to the constitution in weakening the powers of the presidency. To bypass this he has called a constitutional referendum on undoing our changes and restoring the presidency's power, and the SA has already mobilized to intimidate voters and attempt to force the referendum through. If this referendum passes, it will mean the end of Germany democracy.
+希特勒一经当选总统,便毫不迟疑地着手集权。然而,由于我们自己推动的宪法修改削弱了总统权力,他的图谋受阻。为绕过这一点,他发起了一场宪法公投,以推翻我们的修改、恢复总统权力;而冲锋队已经动员起来恐吓选民,试图强行推动公投通过。若这场公投通过,就意味着德国民主的终结。
 
 - @mobilize_1: 动员国旗团,设法限制纳粹对选举的干扰!
 - @mobilize_2: 动员国旗团与普鲁士警察,设法限制纳粹对选举的干扰!
@@ -65,7 +65,7 @@ Clashes in the streets between the SA and the Reichsbanner escalate as the Stalh
 
 @results_unimpeded
 
-The election proceeds, with limited electoral interference thanks to our efforts. The results are tallied and Germany holds her breath. [? if nazi_reform >= 0.5 : Despite our successes in ensuring little electoral interference, the referendum succeeds. ?] [? if nazi_reform < 0.5 : Thanks to our efforts in preventing Nazi electoral interference, the referendum fails. Though this is a great victory for democracy, the struggle is not over yet. His recent failures have only frustrated Hitler and he may take much more drastic measures if we continue to impede his efforts of consolidating power. ?]
+选举在多亏我们的努力、干扰有限的情况下进行。票数统计完毕,整个德国屏息以待。[? if nazi_reform >= 0.5 : 尽管我们成功确保了选举几无干扰,公投还是通过了。 ?] [? if nazi_reform < 0.5 : 多亏我们阻止了纳粹对选举的干扰,公投失败了。尽管这是民主的一场大胜,但斗争尚未结束。近来的失败只是让希特勒更加恼火,若我们继续阻挠他的集权,他很可能会采取远为激烈的手段。 ?]
 
 - @republic_doomed: 民主的黯淡之日。
 - @republic_safe: 民主的大好日子。
@@ -73,7 +73,7 @@ The election proceeds, with limited electoral interference thanks to our efforts
 @results_rigged
 on-arrival: pro_republic -= 6*(enemy_strength/defense_strength); workers_nsdap += 3*(enemy_strength/defense_strength); unemployed_nsdap += 6*(enemy_strength/defense_strength); new_middle_nsdap += 4*(enemy_strength/defense_strength); old_middle_nsdap += 5*(enemy_strength/defense_strength); rural_nsdap += 5*(enemy_strength/defense_strength); unemployed_kpd -= 8*(enemy_strength/defense_strength); workers_kpd -= 3*(enemy_strength/defense_strength); unemployed_spd -= 4*(enemy_strength/defense_strength); workers_spd -= 2*(enemy_strength/defense_strength)
   
-The election proceeds under the watchful eye of the SA in the streets, who continue attacks on socialist and communist organizers throughout the voting period and violently disperse attempts to oppose the reform. This reign of terror continues all throughout the voting period and when voting finishes it is [? if nazi_reform >= 0.5 : no surprise for anyone to hear that Hitler's reforms have been approved by a supposed majority of the populace. ?] [? if nazi_reform < 0.5 : a great surprise for everyone when Hitler's reforms are defeated, though barely. ?]
+选举在街头冲锋队的注视下进行,他们在整个投票期间持续袭击社会主义与共产党的组织者,并暴力驱散反对该改革的企图。这场恐怖统治贯穿整个投票期;投票结束时,结果是[? if nazi_reform >= 0.5 : 听到希特勒的改革据称得到民众多数批准,谁也不感到意外。 ?] [? if nazi_reform < 0.5 : 希特勒的改革竟以微弱差距被否决,令所有人深感意外。 ?]
 
 - @judicial_help: 我们能否让司法系统宣布结果无效?
 - @hitler_victorious: 我们现在该怎么办?

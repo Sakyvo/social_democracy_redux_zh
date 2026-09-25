@@ -8,12 +8,12 @@ go-to: hindie if president == "Hindenburg"; marx if president == "Marx"
 
 = 科赫-韦泽辞职
 
-Unable to hold the Grand Coalition together, Koch-Weser has resigned as chancellor.
+由于无法维系大联盟,科赫-韦泽辞去总理之职。
 
 @hindie
 on-arrival: chancellor = "Marx"; chancellor_party = "Z"
 
-Hindenburg has asked to form a government Wilhelm Marx, who has formed a minority government of the bourgeois parties, to act as a stepping stone either towards a reformed Grand Coalition or a right-wing one.
+兴登堡请威廉·马克思组阁,后者组织了一个资产阶级政党的少数派政府,作为通向改革后的大联盟或右翼联盟的踏脚石。
 
 - @dnvp_tolerates: 无论我们怎么投票,内阁都能赢得国会的信任。
 
@@ -21,13 +21,13 @@ Hindenburg has asked to form a government Wilhelm Marx, who has formed a minorit
 subtitle: 国家人民党会反对我们提出的任何不信任案。
 on-arrival: spd_in_government = 0; spd_toleration = 0; foreign_minister_party = "DVP"; interior_minister_party = "Z"; justice_minister_party = "Z"; labor_minister_party = "Z"; reichswehr_minister_party = "I"; economic_minister_party = "Z"; finance_minister_party = "Z"; agriculture_minister_party = "Z"
 
-We have returned to opposition.
+我们已回归在野。
 
 # todo: set dnvp_toleration to one from this, and if DNVP toleration is one then upon rearmament scandal rather than VONCing the DNVP will block our VONC and join gov
 
 @marx
 on-arrival: chancellor = "Brüning"; chancellor_party = "Z"; marx_relation -= 5
 
-Marx has asked to form a government Heinrich Brüning, who has formed a minority government of the bourgeois parties, to act as a stepping stone either towards a reformed Grand Coalition or a right-wing one.
+马克思请海因里希·布吕宁组阁,后者组织了一个资产阶级政党的少数派政府,作为通向改革后的大联盟或右翼联盟的踏脚石。
 
 - @dnvp_tolerates: 无论我们怎么投票,内阁都能赢得国会的信任。

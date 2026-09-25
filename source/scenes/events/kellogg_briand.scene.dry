@@ -9,9 +9,9 @@ tags: event
 
 = 白里安-凯洛格公约
 
-An international treaty has been negotiated which promises an end to war. The treaty, negotiated by American Secretary of State Frank Kellogg and French foreign minister Aristide Briand, promises that its signatories will renounce the use of war, and will promise to settle their disputes peacefully. Countries throughout the world are lining up to sign this idealistic agreement. Its detractors argue that it has no enforcement mechanism, and thus is merely a worthless piece of paper.
+一项承诺终结战争的国际条约已谈判达成。该条约由美国国务卿弗兰克·凯洛格与法国外交部长阿里斯蒂德·白里安谈成,承诺其签署国放弃以战争为解决手段,并承诺和平解决彼此争端。世界各国正排着队签署这份理想主义的协议。批评者则称它没有强制执行机制,因而只是一张废纸。
 
-[? if foreign_minister_party = "DVP": Our foreign Minister Gustav Stresemann has signed the treaty. The reaction is generally muted; both pacifists and militarists are skeptical about the efficacy of the treaty. ?]
+[? if foreign_minister_party = "DVP": 我们的外交部长古斯塔夫·施特雷泽曼已签署该条约。反应总体平淡;和平主义者与军国主义者都对条约的效力持怀疑态度。 ?]
 
 - @sign_treaty: 外交部长布赖特沙伊德当然会签署这份条约。
 - @step_forward
@@ -21,7 +21,7 @@ An international treaty has been negotiated which promises an end to war. The tr
 view-if: spd_in_government and foreign_minister_party = "SPD"
 on-arrival: kellogg_briand_signed = 1
 
-Foreign Minister Breitscheid will sign the treaty, of course. The reaction is generally muted; both pacifists and militarists are skeptical about the efficacy of the treaty.
+外交部长布赖特沙伊德当然会签署该条约。反应总体平淡;和平主义者与军国主义者都对条约的效力持怀疑态度。
 
 - @step_forward
 - @not_enough
@@ -30,10 +30,10 @@ Foreign Minister Breitscheid will sign the treaty, of course. The reaction is ge
 title: 这份条约是迈向和平的一步。
 view-if: kellogg_briand_signed
 
-Despite our misgivings about the treaty, it still represents a step forward for the cause of international peace.
+尽管我们对该条约有所疑虑,它仍代表着国际和平事业向前迈出的一步。
 
 @not_enough
 title: 这份条约还不够。
 view-if: kellogg_briand_signed
 
-Despite the idealism behind the treaty, it is inadequate for its goal of preventing wars. There must be some enforcement mechanism, perhaps automatic trade sanctions, or an intervention force controlled by the League of Nations. As it stands, the League of Nations and this treaty is toothless.
+尽管该条约背后有其理想主义,但就防止战争的目标而言它仍不足够。必须要有某种强制执行机制 —— 或许是自动贸易制裁,或是由国际联盟掌控的干预部队。就现状而言,国际联盟与这项条约都是没有牙齿的。

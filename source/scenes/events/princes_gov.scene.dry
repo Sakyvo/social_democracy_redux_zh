@@ -21,7 +21,7 @@ choose-if: ((dvp_relation+spd_votes+kpd_votes+socialism) >= 125) or (marx_relati
 unavailable-subtitle: 中右翼政党认为它过于激进
 on-arrival: coalition_dissent += 1; dvp_relation += 5; rural_spd += 4*(1-dissent); workers_kpd -= 2*(1-dissent); workers_spd += 2*(1-dissent); princes_initiated = 0; kpd_relation -= 5
 
-We have managed to pressure the bourgeois parties into backing the DDP's proposal from last year. With this, we are able to justify non-participation in the referendum, though the KPD attack us anyway. 
+我们成功施压资产阶级政党,使其支持民主党去年的提案。由此,我们便能为自己不参与公投找到正当理由 —— 尽管共产党照样攻击我们。
 
 @accept_dvp
 choose-if: reformist_strength > left_strength+center_strength or (reformist_strength > left_strength and not princes_initiated)
@@ -34,7 +34,7 @@ on-arrival: coalition_dissent -= 1; marx_relation += 5; left_dissent += 5; kpd_r
 view-if: princes_initiated
 on-arrival: coalition_dissent += 1; marx_relation -= 5
 
-This compromise is utterly unacceptable. Instead, we will go ahead with the referendum for the expropriation of the princes. On that matter, a decision must be made on how the campaign should be conducted.
+这项妥协完全无法接受。相反,我们将推进没收诸侯财产的公投。为此,必须就竞选该如何进行作出决定。
 
 - @spd_only: 社民党将独自为这场公投奔走。
 - @united_front: 社民党与共产党必须组成统一战线共同行动。
@@ -42,7 +42,7 @@ This compromise is utterly unacceptable. Instead, we will go ahead with the refe
 @whoops
 view-if: not princes_initiated
 
-None of these compromises are acceptable. With no possibility of resolving the matter within the Reichstag, many call for us to still join in the referendum, late though we may be.
+这些妥协没有一个可以接受。既然无法在国会内部解决此事,许多人呼吁我们仍加入公投 —— 哪怕为时已晚。
 
 - @join_referendum: 社民党将加入共产党发起的倡议。
 - @delulu: 在这场公投中,共产党将孤军奋战。
@@ -50,7 +50,7 @@ None of these compromises are acceptable. With no possibility of resolving the m
 @spd_only
 on-arrival: workers_spd += 3*(1-dissent); workers_kpd -= 1; unemployed_spd += 2*(1-dissent); unemployed_kpd -= 1; rural_spd += 2*(1-dissent); z_relation += 3; ddp_relation += 3; dvp_relation += 1
 
-Let there be no mistake that our support for this referendum signals a united front with the KPD. We shall agitate for the bill always separately from the KPD, and carry out our campaigns independently.
+我们的支持绝不能让人误以为这是与共产党的统一战线。我们将始终与共产党分开为该法案鼓动,并各自独立开展竞选。
 
 @united_front
 on-arrival: coalition_dissent += 1; princes_bonus += 3; marx_relation -= 5; kpd_relation += 10; reformist_dissent += 10; workers_spd += 2*(1-dissent); workers_kpd += 2; unemployed_spd += 1*(1-dissent); unemployed_kpd += 3; rural_spd += 2*(1-dissent); socialism += 4; z_relation -= 4; ddp_relation -= 3; dvp_relation -= 5
@@ -60,9 +60,9 @@ on-arrival: coalition_dissent += 1; princes_bonus += 3; marx_relation -= 5; kpd_
 @join_referendum
 on-arrival: princes_initiated = 1; coalition_dissent += 1; marx_relation -= 3; workers_spd += 1*(1-dissent); rural_spd += 1*(1-dissent); z_relation -= 2; ddp_relation -= 2; dvp_relation -= 3; left_dissent += 5; reformist_dissent += 5
 
-Though there is no way we could directly back the communist suggestion, the ADGB has mediated a bill that both parties are able to agree on after much indecision on our part. The indecision hurts our party's credibility, and leaves both the left and right feeling unsatisfied. Meanwhile, our campaigning for the referendum is carried out separately from the KPD's, so as to not give the impression of a true united front.
+虽然我们绝无可能直接支持共产党的提议,但在我们犹豫良久之后,德国工会总联合会调解出了一份两党都能同意的法案。这番犹豫损害了我党的公信力,也让左翼与右翼都不满意。与此同时,我们为公投开展的竞选与共产党分开进行,以免给人以真正统一战线的印象。
 
 @delulu
 on-arrival: workers_kpd += 2; workers_spd -= 2; unemployed_spd -= 3; unemployed_kpd += 3; left_dissent += 10; marx_relation += 4
 
-Despite the continuing pressure, we continue to refuse to join the referendum initiative. Let's hope the consistency and cooperation with bourgeois parties will be worth the inevitable bleed in support towards the communist party.
+尽管压力持续,我们仍拒绝加入公投倡议。但愿与资产阶级政党保持一致与合作的收益,值得支持不可避免地向共产党流失的代价。

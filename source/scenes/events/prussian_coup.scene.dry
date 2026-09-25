@@ -6,11 +6,11 @@ new-page: true
 tags: event
 max-visits: 1
 
-= Coup in Prussia
+= 普鲁士政变
 
-A crisis! Chancellor [+ chancellor +] has ordered the dismissal of the Prussian government in a procedure known as the *Reichsexecution*. His argument is that the Prussian state government is unable to maintain order due to the battles on the streets between the SA, Reichsbanner, and other paramilitaries. This is despite his own government legalizing them.
+危机![+ chancellor +] 总理下令解散普鲁士政府,这一程序被称为*国家执行*。他的理由是:由于冲锋队、国旗团及其他准军事组织在街头的混战,普鲁士州政府无力维持秩序。可这明明是他自己的政府把它们合法化的。
 
-The legality of the action is questionable. Many of our members are ready to resist.
+此举的合法性存疑。我党许多成员已准备抵抗。
 
 - @defend
 - @surrender
@@ -46,7 +46,7 @@ achievement: drei_pfeile
 @defend_2_defeat
 on-arrival: rb_militancy *= 0.25; rb_strength *= (0.9*(1-dissent)); pro_republic -= 10; workers_spd -= 5; unemployed_spd -= 5; workers_nsdap += 5; unemployed_nsdap += 5
 
-Our forces confront the government troops and their reactionary auxiliaries, and, somehow, retreat without a fight. They were overwhelmed by the fascist display of strength, and have chosen to slink away.
+我们的力量与政府军及其反动辅助部队对峙,却不知怎地未经战斗便撤退了。他们被法西斯的力量展示所震慑,选择悄悄溜走。
 
 - @defend: 他们居然不战而退?!把人派回去,该死!怎么回事! 
 - @surrender: 好吧,看来我们终究只能投降了……

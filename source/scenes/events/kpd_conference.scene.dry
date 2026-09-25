@@ -8,9 +8,9 @@ tags: event
 
 = 共产党代表大会
 
-Now is the KPD's national party conference, where they will choose their new leadership. The shadow of the Wittorf Affair hangs over it. On one hand are the hardline supporters of Thälmann, who support a "social fascist" policy that places the SPD as equivalent to the Nazis. On the other hand is the "Conciliator" faction, who support a more cooperative policy towards the SPD.
+现在是共产党的全国代表大会,他们将选出新的领导层。维托夫事件的阴影笼罩其上。一边是台尔曼的强硬派支持者,他们支持把社民党与纳粹党等同看待的「社会法西斯」政策。另一边是「调和派」,他们支持对社民党采取更合作的政策。
 
-After our discussion with the Soviets, we are inclined to believe that Stalin is at least open to the Conciliators. In order to affect the KPD's leadership elections, we have to influence both the Comintern leaders as as well as the KPD membership.
+在与苏联人交涉之后,我们倾向于相信斯大林至少对调和派持开放态度。要影响共产党的领导层选举,我们必须同时影响共产国际的领导人以及共产党的成员。
 
 - @conciliator_success
 - @conciliator_fail
@@ -23,10 +23,10 @@ unavailable-subtitle: [? if not levi_advisor and not rosenfeld_advisor: 我党�
 on-arrival: kpd_party_leader = "Conciliators"; communist_coalition += 3; kpd_relation += 10*(1-dissent); left_strength += 5; left_dissent -= 8
 achievement: versohnler
 
-With our support, the Conciliators have won the leadership contest! The new leadership is a group of Conciliators, including Arthur Ewert, Hugo Eberlein, and Ernst Meyer. Thälmann remains, but largely as a figurehead only, it seems. We hope that the new leadership will be more inclined towards cooperation.
+在我们的支持下,调和派赢得了领导权之争!新的领导层是一批调和派,包括阿图尔·埃韦特、胡戈·埃伯莱因与恩斯特·迈耶。台尔曼留任,但看来大体上只是个傀儡。我们希望新领导层会更倾向于合作。
 
 
 @conciliator_fail
 title: 台尔曼保住了他的领导地位。
 
-Unfortunately, we could not influence the KPD leadership election against the hardliners. Thälmann quickly moves to consolidate absolute leadership, expelling or exiling his opponents.
+遗憾的是,我们未能影响共产党的领导层选举以对抗强硬派。台尔曼迅速着手巩固绝对领导,驱逐或流放他的对手。
