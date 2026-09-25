@@ -10,9 +10,9 @@ set-jump: bavaria_election_1928
 # the low priority means that this event is only seen after all other events are resolved for the month.
 # note: z_coalition = z_blelation + (pro_republic/2); z_coalition *= 1.25 if z_party_leader == "Joos";
 
-= Bavarian Elections, [+ month : month +] [+ year +]
+= 巴伐利亚选举,[+ month : month +] [+ year +]
 
-The Bavarian elections are to be held now.
+巴伐利亚的选举即将举行。
 
 - @election_algorithm: 愿我们尽力而为……
 
@@ -364,17 +364,17 @@ go-to: coalition_menu
 
 **潜在执政联盟:**
 
-Weimar Coalition (SPD + Z + [+ ddp_name +]): [+ b_weimar_coalition +]%
+魏玛联盟(社民党 + 中央党 + [+ ddp_name +]):[+ b_weimar_coalition +]%
 
-Grand Coalition (SPD + Z + [+ bvp_name +] + [+ ddp_name +] + DVP): [+ b_grand_coalition +]%
+大联盟(社民党 + 中央党 + [+ bvp_name +] + [+ ddp_name +] + 人民党):[+ b_grand_coalition +]%
 
-Bourgeois Coalition (Z + [+ bvp_name +] + [+ ddp_name +] + DVP + Others): [+ b_bourgeois_coalition +]%
+资产阶级联盟(中央党 + [+ bvp_name +] + [+ ddp_name +] + 人民党 + 其他):[+ b_bourgeois_coalition +]%
 
-Right-wing Coalition (Z + [+ bvp_name +] + DVP + Others + DNVP): [+ b_right_coalition +]%
+右翼联盟(中央党 + [+ bvp_name +] + 人民党 + 其他 + 国家人民党):[+ b_right_coalition +]%
 
-[? if nazi_urgency <= 1 and nsdap_bl >= 15 : The rapid rise in NSDAP votes is extremely worrying. Many had believed that the party was moribound; now, some of us consider it to be the greatest threat to democracy in Germany. ?]
+[? if nazi_urgency <= 1 and nsdap_bl >= 15 : 纳粹党得票的飞速攀升令人极为担忧。许多人曾以为该党已奄奄一息;如今,我们中的一些人已视其为德国民主最大的威胁。 ?]
 
-[? if b_anti_democratic_coalition >= 50 : Together, the anti-democratic KPD, DNVP, and NSDAP have a majority in the Reichstag. A stable governing majority will be almost impossible. ?]
+[? if b_anti_democratic_coalition >= 50 : 反民主的共产党、国家人民党与纳粹党加在一起,已在国会占据多数。要组成稳定的执政多数几乎不可能。 ?]
 
 存在若干可能的组阁方案。
 
@@ -391,7 +391,7 @@ subtitle: 巴伐利亚人民党 + 巴伐利亚农民联盟 + 国家人民党 + �
 choose-if: nsdap_bl < 50 and spd_bl < 50
 unavailable-subtitle: 巴伐利亚人民党 + 巴伐利亚农民联盟 + 国家人民党 + 其他 ([+ b_bourgeois_coalition +]%)—— 可以组成替代政府。
 
-Heinrich Held, the leader of the BVP's parliamentary delegation, has been re-elected Minister-President of Bavaria. [? if b_bourgeois_coalition < 50 : He has survived as a minority government thanks to the constructive VONC of the Bavarian constitution. ?]
+巴伐利亚人民党议会党团领袖海因里希·黑尔德已再次当选巴伐利亚州总理。[? if b_bourgeois_coalition < 50 : 多亏巴伐利亚宪法中的建设性不信任案制度,他得以以一个少数派政府的形式存续。 ?]
 
 @nazi_bavaria
 title: 纳粹多数政府。
@@ -399,7 +399,7 @@ subtitle: 纳粹党 ([+ nsdap_bl +]%)
 view-if: nsdap_bl >= 50
 on-arrival: rural_nsdap += 6; old_middle_nsdap += 4; catholics_nsdap += 3; bavaria_other -= 0.2; bavaria_nsdap += 0.3; coup_progress += 2; sa_militancy += 0.05; sa_strength += 20
 
-Somehow, the Nazis have won a majority in Bavaria. Epp has been made Minister-President and now leads an all-Nazi coalition government, which quickly sets to work consolidating power within the state.
+不知怎的,纳粹党在巴伐利亚赢得了多数。埃普被任命为州总理,如今领导一个清一色纳粹的联盟政府,该政府随即着手在该州内巩固权力。
 
 @left_bavaria
 title: 巴伐利亚左翼各党的「人民阵线」。
@@ -409,7 +409,7 @@ view-if: b_popular_front_coalition >= 50
 choose-if: ((kpd_relation >= 55 and communist_coalition >= 3) or (spd_bl+ddp_bl >= 50 and ddp_relation >= 45)) and ((ddp_relation >= 45) or (kpd_bl+spd_bl >= 50 and kpd_relation >= 55 and communist_coalition >= 3))
 on-arrival: spd_bavaria = 1; workers_spd += 4*(1-dissent); catholics_spd += 4*(1-dissent); rural_spd += 4*(1-dissent); sh_militancy -= 0.05; rb_militancy += 0.05; coup_progress += 1; capital_strike_progress += 2
 
-Somehow, a "Popular Front" of the KPD, [+ ddp_name +] and us has been able to outvote the right-wing parties for rulership of Bavaria, instating a social democrat as Minister-President.
+不知怎的,由共产党、[+ ddp_name +] 与我们组成的人民阵线竟在巴伐利亚的执政权争夺中压过了右翼政党,把一位社会民主党人推上了州总理之位。
 
 @spd_bavaria
 title: 社民党多数政府
@@ -417,6 +417,6 @@ subtitle: 社民党 ([+ spd_bl +]%)
 view-if: spd_bl >= 50
 on-arrival: spd_bavaria = 1; workers_spd += 5*(1-dissent); catholics_spd += 8*(1-dissent); rural_spd += 8*(1-dissent); sh_militancy -= 0.05; rb_militancy += 0.1
 
-Somehow, the SPD has won a majority in Bavaria.
+不知怎的,社民党在巴伐利亚赢得了多数。
 
 - @root: 太疯狂了。

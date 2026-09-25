@@ -9,9 +9,9 @@ set-jump: post_congress
 # the low priority means that this event is only seen after all other events are resolved for the month.
 # note: z_coalition = z_celation + (pro_cepublic/2); z_coalition *= 1.25 if z_faction_leader == "Joos";
 
-= SPD Party Congress, [+ month : month +] [+ year +]
+= 社民党代表大会,[+ month : month +] [+ year +]
 
-The Party congress is to be held now.
+党的代表大会即将举行。
 
 - @faction_algorithm: 愿我们尽力而为……
 
@@ -312,67 +312,67 @@ view-if: marxist_unity >= 50
 subtitle: 左翼 + 中间派 ([+ marxist_unity +]%)
 on-arrival: reformist_strength -= 5; neorevisionist_strength -= 5; labor_strength -= 5; left_dissent -= 5; center_dissent -= 5
 
-The party retains a Marxist platform.
+该党维持着一份马克思主义的纲领。
 
 @left_majority  
 view-if: left_c >= 50  
 subtitle: 左翼 ([+ left_c +]%)  
 on-arrival: left_strength += 10; reformist_dissent += 10; neorevisionist_dissent += 10; labor_dissent += 5; center_dissent += 5
 
-The party is increasingly driven by the radical left.
+该党日益被激进左翼所驱动。
 
 @center_majority  
 view-if: center_c >= 50  
 subtitle: 中间派 ([+ center_c +]%)  
 on-arrival: center_strength += 10; left_dissent += 5; reformist_dissent += 5; neorevisionist_dissent += 5; labor_dissent += 5
 
-The party remains in the hands of the Centrist Marxists.
+该党仍掌握在中间派马克思主义者手中。
 
 @reformist_majority  
 view-if: reformist_c >= 50  
 subtitle: 改良派 ([+ reformist_c +]%)  
 on-arrival: reformist_strength += 10; left_dissent += 10; center_dissent += 5; labor_dissent += 5
 
-The party emphasizes legal reform and parliamentary pragmatism over confrontation.
+该党强调法律改革与议会务实,而非对抗。
 
 @neorevisionist_majority  
 view-if: neorevisionist_c >= 50  
 subtitle: 新修正派 ([+ neorevisionist_c +]%)  
 on-arrival: neorevisionist_strength += 10; left_dissent += 15; center_dissent += 10; labor_dissent += 5
 
-The party has fallen under the control of the neorevisionists.
+该党已落入新修正派的掌控之下。
 
 @labor_majority  
 view-if: labor_c >= 50  
 subtitle: 工会派 ([+ labor_c +]%)  
 on-arrival: labor_strength += 10; center_dissent += 10; left_dissent += 5; reformist_dissent += 5
 
-The party has fallen under the control of the trade unions.
+该党已落入工会的掌控之下。
 
 @toleration_unity  
 view-if: toleration_unity >= 50 and spd_toleration and neorevisionism
 subtitle: 中间派 + 改良派 + 新修正派 ([+ toleration_unity +]%)  
 on-arrival: labor_strength -= 5; left_strength -= 5; left_dissent += 5; z_relation += 5
 
-The party has taken a pro-toleration course.
+该党走上了支持容忍的路线。
 
 @pragmatic_unity
 view-if: pragmatic_unity >= 50 and (not spd_toleration or not neorevisionism)
 subtitle: 中间派 + 改良派 ([+ pragmatic_unity +]%)
 on-arrival: center_strength += 5; reformist_strength += 5
 
-The party pragmatists have won out in this congress.
+务实派在本次代表大会上占了上风。
 
 @antitoleration_unity  
 view-if: antitoleration_unity >= 50 and spd_toleration
 subtitle: 左翼 + 工会派 ([+ antitoleration_unity +]%)  
 on-arrival: center_strength -= 5; reformist_strength -= 5; neorevisionist_strength -= 5; reformist_dissent += 5; neorevisionist_dissent += 5
 
-The party has taken an anti-toleration course.
+该党走上了反容忍的路线。
 
 @lassalean_unity  
 view-if: lassalean_unity >= 50  
 subtitle: 改良派 + 新修正派 ([+ lassalean_unity +]%)  
 on-arrival: reformist_strength += 5; neorevisionist_strength += 5; left_dissent += 10; center_dissent += 5
 
-The party has taken a less than Marxist course.
+该党走上了一条不那么马克思主义的路线。

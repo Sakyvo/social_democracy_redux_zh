@@ -12,9 +12,9 @@ call: will_anschluss
 
 极右翼正在动员。钢盔团与冲锋队的准军事力量在哈茨堡阵线的组织下向柏林进军,威胁要以暴力推翻政府。
 
-They demand either immediate elections under the "supervision" of the nationalist paramilitaries, or else the immediate resignation of the government and appointment of a Harzburg Front cabinet headed by Franz Seldte of the Stalhelm. It is obvious that they are threatening a civil war if their demands are not met.
+他们要求或是立即举行由民族主义准军事组织「监督」的选举,或是政府立即辞职并任命一个由钢盔团的弗朗茨·泽尔特领衔的哈茨堡阵线内阁。显而易见,若其要求得不到满足,他们便以内战相威胁。
 
-[? if anschluss_attempt : Using this coup as an opportunity, meanwhile, forces of the Austrian army and SA have crossed the border into Bavaria, clashing with government forces there. Democracy is under a grand assault. ?]
+[? if anschluss_attempt : 与此同时,奥地利军队与冲锋队的力量利用这场政变之机越过边境进入巴伐利亚,与当地的政府军交战。民主正遭受一场大规模进攻。 ?]
 
 @non_govt_menu
 
@@ -31,21 +31,21 @@ go-to: accept_seldte
 on-arrival: chancellor = "Seldte"; chancellor_party = "DNVP"; labor_minister_party = "I"; interior_minister_party = "DNVP"; finance_minister_party = "I"; justice_minister_party = "DNVP"; economic_minister_party = "I"; foreign_minister_party = "I"; agriculture_minister_party = "DNVP"; reichswehr_minister_party = "I"; spd_in_government = 0; harzburg_r = dnvp_r; harzburg_r += other_r; harzburg_r += 3; harzburg_r += dvp_r if dvp_relation + pro_republic < 85; harzburg_r += z_minus_bvp_r if z_relation + pro_republic < 60 and z_party_leader != "Joos"; coup_progress *= 0.6
 go-to: harzburg_collapse if harzburg_r < 50; harzburg_survive if harzburg_r >= 50
 
-After the resignation of the chancellor, Stalhelm leader Franz Seldte has been appointed chancellor, heading a highly reactionary Harzburg Front cabinet with army general Kurt von Schleicher being made Reichswehr Minister. Despite this development, the Nazis refuse to back or enter the government, straining the Harzburg Front's unity.
+在总理辞职之后,钢盔团领袖弗朗茨·泽尔特被任命为总理,领衔一个高度反动的哈茨堡阵线内阁,陆军将领库尔特·冯·施莱谢尔则出任国防部长。尽管有此进展,纳粹党仍拒绝支持或加入政府,使哈茨堡阵线的团结趋于紧张。
 
 @harzburg_collapse
 go-to: new_elections_2
 
-With only [+ harzburg_r +]% behind the coup-instated government, a motion of no confidence soon brings the minority Harzburg Cabinet down. Though the coup has not yet lead to an outright destruction of democracy, the Stalhelm spends this time harshly persecuting the political left, while continued minority rule by decree from the reactionaries threatens to undo much of our reforms.
+由于政变上台的政府仅有 [+ harzburg_r +]% 的支持,一场不信任案很快便把这个少数派哈茨堡内阁拉下台。尽管这场政变尚未导致民主的彻底毁灭,钢盔团却在此期间严酷迫害政治左翼;而反动派持续的少数派法令统治,则有可能推翻我们的许多改革。
 
 # todo: seldte reichsexekutes prussia? martial law?
 
 @harzburg_survive
 on-arrival: anschluss_attempted = 1 if anschluss_attempt == 1; anschluss_attempt = 0
 
-Somehow, the Harzburg Cabinet has cobbled together a majority in the Reichstag of [+ harzburg_r +]%, surviving a motion of no confidence. Immediately, harsh persecution of the political left is initiated by the Stalhelm while the state turns a blind eye, and our progressive reforms in government are undone.
+不知怎的,哈茨堡内阁竟在国会凑出了 [+ harzburg_r +]% 的多数,在不信任案中幸存下来。钢盔团随即开始严酷迫害政治左翼,而国家对此视而不见;我们在政府中所推行的进步改革也一一被撤销。
 
-[? if anschluss_attempted : The short-lived invasion by Austria, meanwhile, has been called off by Hitler, who seems to have recognized his inability to control the situation. ?]
+[? if anschluss_attempted : 与此同时,希特勒取消了奥地利那场短暂的入侵 —— 他似乎已认识到自己无力掌控局势。 ?]
 
 @ask_resign
 
@@ -124,7 +124,7 @@ go-to: new_elections_braun_2 if nsdap_normalized + dnvp_normalized >= 0.5; new_e
 
 @new_elections_braun_reject
 
-The fascists reject our offer of free and fair elections. They are demanding that President [+ president +] dismisses the current government and appoints Seldte chancellor.
+法西斯分子拒绝了举行自由公正选举的提议。他们要求 [+ president +] 总统解散现任政府并任命泽尔特为总理。
 
 - @braun_appoints_seldte
 - @fight
@@ -147,7 +147,7 @@ go-to: austrian_issue if anschluss_attempt
 
 @new_elections_hindenburg_reject
 
-Influenced by his inner circle and by the fascists in the streets, President [+ president +] rejects our offer of new free and fair elections, and again demands that we resign. There is no arguing.
+受其亲信小圈子与街头法西斯分子的影响,[+ president +] 总统拒绝了我们举行自由公正新选举的提议,并再次要求我们辞职。无从争辩。
 
 - @resign
 - @fight
@@ -173,20 +173,20 @@ unavailable-subtitle: [+ president +] 总统绝不可能做出如此露骨的反
 on-arrival: chancellor = "Seldte"; chancellor_party = "DNVP"; spd_in_government = 0; reichswehr_loyalty -= 0.05; sh_militancy += 0.05; sh_strength += 25; workers_spd -= 6
 go-to: enabling_act
 
-Threatened with a civil war, and unwilling to fight anymore, President [+ president +] dismisses the current government and appoints Seldte of the Stalhelm as chancellor.
+在内战的威胁下,又不再愿意继续缠斗,[+ president +] 总统解散现任政府,任命钢盔团的泽尔特为总理。
 
 # TODO: needs to actually carry weight if braun is president
 
 @enabling_act
 
-Chancellor Seldte's first action is to put forward many decrees for [+ president +] to sign and force through via Article 48 of the Weimar Constitution. One of the most major ones, if signed, would suspend Articles 114, 115, 117, 118, 123, 124 and 153 of the German constitution, effectively turning Germany into a police state at the whims of the Harzburg Front and paving the way for rampant suppression of the political left. It is clear that he is threatening a civil war if his demands are not met.
+泽尔特总理的第一项动作,是提出许多法令交 [+ president +] 总统签署,并借魏玛宪法第 48 条强行通过。其中最重要的一条若获签署,将中止德国宪法第 114、115、117、118、123、124 与 153 条,从而把德国实际上变成任哈茨堡阵线摆布的警察国家,并为对政治左翼的肆意镇压铺路。显然,若其要求得不到满足,他便以内战相威胁。
 
 - @sign: 我们别无选择,只能签署这项法令。
 - @civil_war: 罢免泽尔特!这无法接受!
 
 @presidential_support
 
-Luckily, President [+ president +] is on [? if spd_in_government : our ?][? if not spd_in_government : [+ chancellor +]'s ?] side in this crisis. He has recognized the coup for what it is, and is prepared to stand by the government if we resist.
+所幸在这场危机中,[+ president +] 总统站在[? if spd_in_government : 我们 ?][? if not spd_in_government : [+ chancellor +] ?]一边。他已认清这场政变的本质,并准备在我们抵抗时支持政府。
 
 - @fight
 - @new_elections
@@ -195,4 +195,4 @@ Luckily, President [+ president +] is on [? if spd_in_government : our ?][? if n
 on-arrival: seldte_enabled = 1
 go-to: austrian_issue if anschluss_attempt
 
-Faced with the threat of civil war, we have caved to Seldte's demands.
+面对内战的威胁,我们对泽尔特的要求屈服了。

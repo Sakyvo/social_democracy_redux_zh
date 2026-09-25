@@ -42,26 +42,26 @@ go-to: goals_success if kpd_goals_completed; goals_failed if not kpd_goals_compl
 
 = 共产党的目标
 
-At the start of this government, the KPD presented a list of goals for the coalition:
+在本届政府成立之初,共产党提出了它对联盟的目标清单:
 
-[? if welfare_goal = 1 : - Expand social welfare programs - [? if welfare_goal_completed : success ?][? if not welfare_goal_completed: failed ?] ?]
+[? if welfare_goal = 1 : - 扩大社会福利计划 - [? if welfare_goal_completed : 成功 ?][? if not welfare_goal_completed: 失败 ?] ?]
 
-[? if agriculture_goal = 1 : - Enact a land reform program. - [? if agriculture_goal_completed : success ?][? if not agriculture_goal_completed: failed ?] ?]
+[? if agriculture_goal = 1 : - 推行土地改革计划。 - [? if agriculture_goal_completed : 成功 ?][? if not agriculture_goal_completed: 失败 ?] ?]
 
-[? if economy_goal = 1 : - Start substantial nationalization of the economy. - [? if economy_goal_completed : success ?][? if not economy_goal_completed: failed ?] ?]
+[? if economy_goal = 1 : - 着手对经济进行大规模国有化。 - [? if economy_goal_completed : 成功 ?][? if not economy_goal_completed: 失败 ?] ?]
 
-[? if finance_goal = 1 : - Make taxes more progressive. - [? if finance_goal_completed : success ?][? if not finance_goal_completed: failed ?] ?]
+[? if finance_goal = 1 : - 让税制更具累进性。 - [? if finance_goal_completed : 成功 ?][? if not finance_goal_completed: 失败 ?] ?]
 
-[? if labor_goal = 1 : - Support workers in labor disputes. - [? if labor_goal_completed : success ?][? if not labor_goal_completed: failed ?] ?]
+[? if labor_goal = 1 : - 在劳资纠纷中支持工人。 - [? if labor_goal_completed : 成功 ?][? if not labor_goal_completed: 失败 ?] ?]
 
-[? if foreign_goal = 1 : - Improve our relations with the Soviet Union. - [? if foreign_goal_completed : success ?][? if not foreign_goal_completed: failed ?] ?]
+[? if foreign_goal = 1 : - 改善我们与苏联的关系。 - [? if foreign_goal_completed : 成功 ?][? if not foreign_goal_completed: 失败 ?] ?]
 
-[? if reichswehr_goal = 1 : - Reduce funding for the Reichswehr. - [? if reichswehr_goal_completed : success ?][? if not reichswehr_goal_completed: failed ?] ?]
+[? if reichswehr_goal = 1 : - 削减国防军的经费。 - [? if reichswehr_goal_completed : 成功 ?][? if not reichswehr_goal_completed: 失败 ?] ?]
 
 @goals_failed
 on-arrival: kpd_relation -= 10; workers_spd -= 8; unemployed_spd -= 8;
 
-Unfortunately, we have failed to accomplish all of the goals the KPD set out. They plan to call a vote of no confidence against our government, and have already begun mounting a propaganda campaign to delegitimize our government in the eyes of the workers.
+遗憾的是,我们未能实现共产党设定的全部目标。他们打算对我们的政府提出不信任案,并已开始发动宣传攻势,在工人眼中削弱我们政府的合法性。
 
 - @appeal: 恳请共产党人耐心一些 —— 我们正在努力!
 - @kpd_vote_of_no_confidence.support_center: 我们能否以中央党与 [+ ddp_name +](或许还有人民党)为基础组建一个新政府?
@@ -73,14 +73,14 @@ choose-if: (kpd_score >= 4 and kpd_relation > 50 and kpd_appeal_seen = 0) or kpd
 unavailable-subtitle: [? if kpd_score < 4: 他们不认为我们在认真争取实现联盟的目标。 ?] [? if kpd_relation < 50: 我们的关系太差。 ?] [? if kpd_appeal_seen = 1: 我们没有更多时间了。 ?]
 on-arrival: kpd_ultimatum_seen = 0; kpd_ultimatum_timer += 6; kpd_appeal_seen = 1
 
-We argue that we are working hard to achieve most of the coalition's goals, and in the name of proletarian solidarity, we must make this coalition function. Surprisingly, the KPD hears our pleas, and is willing to give us six more months before the coalition goals must be achieved.
+我们辩称正努力实现联盟的大部分目标,并且为了无产阶级团结,我们必须让这个联盟运转起来。出乎意料,共产党听取了我们的陈情,愿意再给我们六个月时间去达成联盟目标。
 
 
 @goals_success
 on-arrival: workers_spd += 8; unemployed_spd += 8; kpd_relation += 10; workers_kpd += 5; kpd_coalition_success += 1
 go-to: popular_front_achievement if in_popular_front; united_front_achievement if in_left_front
 
-Against all expectations, the KPD's goals have all been met! Apparently the Communists did not prepare for this eventuality, a worker's government successfully built through democratic means. They will continue to "tolerate" our government for the rest of our term, while still acting as a watchdog against bourgeois backsliding.
+出乎所有人的预料,共产党的目标全部实现了!显然,共产党人并未为这种可能做准备 —— 一个通过民主手段成功建立的工人政府。在本届任期的余下时间里,他们将继续「容忍」我们的政府,同时仍充当监督资产阶级倒退的看门狗。
 
 
 @popular_front_achievement
@@ -95,4 +95,4 @@ achievement: einheitsfront_2
 view-if: constructive_vonc
 on-arrival: in_popular_front = 0; in_left_front = 0; in_minority_government = 1;
 
-We have been effectively made a minority government, and the KPD intends to obstruct our attempts to pass policy.
+我们实际上已被变成一个少数派政府,共产党打算阻挠我们通过任何政策。

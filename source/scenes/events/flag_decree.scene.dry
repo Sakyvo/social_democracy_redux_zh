@@ -7,15 +7,15 @@ tags: event
 
 = 国旗之争
 
-It has come to Chancellor Luther's attention that German expatriate groups abroad only accept the black-white-red colors of the Imperial flag, in conflict with the official black-red-gold colors of the foreign service. 
+路德总理注意到,海外的德国侨民团体只接受帝国旗帜的黑白红三色,这与外交机关官方的黑红金三色相冲突。
 
-To ease over tensions with these expatriates, Luther is pushing for a revision of the flag law to make the black-white-red trade flag a secondary flag.
+为缓和与这些侨民的紧张关系,路德正力推修订国旗法,使黑白红的商旗成为一面次要旗帜。
 
 - @unacceptable: 这无法接受。
 
 @unacceptable
 
-And so echo the Center and Democratic parties. Luther has caved, modifying the proposal so that it should only apply in consular institutions abroad. This, still, is too great of a concession to German nationalism, and the DDP is in agreement on this manner.
+中央党与民主党也是如此表态。路德让步了,把提案修改为只适用于海外的领事机构。即便如此,这对德国民族主义而言仍是过大的让步,民主党在这一点上也是如此看法。
 
 - @in_government: 在内阁表决中击败路德。
 - @vonc_luther: 对路德提出不信任案。
@@ -24,7 +24,7 @@ And so echo the Center and Democratic parties. Luther has caved, modifying the p
 view-if: spd_in_government and not spd_toleration
 on-arrival: coalition_dissent += 1
 
-A cabinet vote is called, and Luther is defeated. The matter is dropped, for now.
+内阁进行表决,路德落败。此事暂时被搁置。
 
 @vonc_luther
 view-if: spd_toleration and not spd_in_government
@@ -35,13 +35,13 @@ on-arrival: chancellor = "Gessler"; chancellor_party = "DDP"
 
 在不信任投票中,国家人民党站在路德一边,投票未能通过。然而民主党提出的针对路德的不信任动议获得成功;路德随即宣布辞职,实际效果等同于不信任投票。
 
-Otto Gessler of the DDP has been appointed as chancellor while a new government is negotiated, with Hindenburg hoping that Gessler may successfully form a government.
+民主党的奥托·格斯勒在磋商新政府期间被任命为总理,兴登堡希望格斯勒能成功组阁。
 
 - @vonc_gessler: 我们不能支持一个受国防军操纵的政府。
 
 @vonc_gessler
 
-Of course, there is no way that we could support Gessler's assumption of chancellorship. Another alternative is Konrad Adenauer of the Center Party; he is unwilling to preside over a minority government, and seeks to include us.
+我们当然绝不可能支持格斯勒出任总理。另一个选项是中央党的康拉德·阿登纳;他不愿主持一个少数派政府,并希望把我们拉进来。
 
 - @grand_coalition_adenauer: 大联盟组成了!
 - @failed: 阿登纳组阁失败。
@@ -53,7 +53,7 @@ unavailable-subtitle: 社民党 + 中央党 + 巴伐利亚人民党 + 民主党 
 on-arrival: left_dissent += 5; coalition_dissent += 1; spd_toleration = 0; in_grand_coalition = 1; spd_in_government = 1; leverage = spd_r; leverage -= 5; chancellor = "Adenauer"; chancellor_party = "Z"; workers_spd -= 2; unemployed_spd -= 3; old_middle_dvp -= 2; new_middle_dvp -= 2
 go-to: election_1928.ministries
 
-Surprisingly, negotiations are successful! A "Grand Coalition" has been formed around Konrad Adenauer, and tensions eased over for now.
+出乎意料,磋商竟然成功了!一个以康拉德·阿登纳为核心的大联盟组成了,紧张局势暂时得以缓解。
 
 @failed
 subtitle: 各党之间的分歧过大。
@@ -67,7 +67,7 @@ on-arrival: z_relation -= 5 if z_relation >= 50 and dvp_relation >= 50; dvp_rela
 subtitle: 威廉·马克思接下组阁任务。
 on-arrival: chancellor = "Marx"; chancellor_party = "Z"
 
-In the end, another minority government is formed, with Wilhelm Marx at its head. While the DVP[? if z_relation < 40 : and Center Party?] view this minority government as a stepping stone towards a majority one with the DNVP, the DDP[? if z_relation > 50 : and Center Party?] view it as a stepping stone towards a majority one with us.
+最终,又一个少数派政府组成,由威廉·马克思领衔。人民党[? if z_relation < 40 : 与中央党?]把这个少数派政府视为通向与国家人民党组成多数派政府的跳板,而民主党[? if z_relation > 50 : 与中央党?]则把它视为通向与我们组成多数派政府的跳板。
 
 最终会是哪一种,尚待分晓。眼下,这就是将要统治德国的政府。
 
@@ -81,14 +81,14 @@ on-arrival: chancellor = "Gessler"; chancellor_party = "DDP"
 
 在不信任投票中,国家人民党站在路德一边,投票未能通过。然而民主党提出的针对路德的不信任动议获得成功;路德随即宣布辞职,实际效果等同于不信任投票。
 
-With Luther refusing to serve as interim, Otto Gessler succeeds him as Vice Chancellor. However, he and President Marx are under no illusion that he would win our support for a minority government.
+由于路德拒绝担任过渡职务,奥托·格斯勒接替他出任副总理。不过,他与马克思总统都不抱幻想,认为自己能赢得我们对一个少数派政府的支持。
 
 - @so_who: 那接下来是谁?
 
 @so_who
 subtitle: 马克思请阿登纳组阁
 
-President Marx asks Konrad Adenauer to take on the task of government formation. Unwilling to preside over a temporary minority government as a stepping stone towards a majority one, he has immediately made overtures towards us, hoping to form a Grand Coalition.
+马克思总统请康拉德·阿登纳承担组阁任务。由于不愿主持一个作为通向多数派政府跳板的临时少数派政府,他立刻向我们伸出橄榄枝,希望组成一个大联盟。
 
 - @grand_coalition_adenauer2: 大联盟组成了!
 - @failed2: 阿登纳组阁失败。
@@ -100,7 +100,7 @@ unavailable-subtitle: 社民党 + 中央党 + 巴伐利亚人民党 + 民主党 
 on-arrival: left_dissent += 5; in_grand_coalition = 1; spd_toleration = 0; spd_in_government = 1; leverage = spd_r; leverage -= 5; chancellor = "Adenauer"; chancellor_party = "Z"; workers_spd -= 1; unemployed_spd -= 2; old_middle_dvp -= 2; new_middle_dvp -= 2
 go-to: election_1928.ministries
 
-Surprisingly, negotiations are successful! A "Grand Coalition" has been formed around Konrad Adenauer, and tensions eased over for now. This may not have been possible without the efforts of Marx to ease over tensions.
+出乎意料,磋商竟然成功了!一个以康拉德·阿登纳为核心的大联盟组成了,紧张局势暂时得以缓解。 This may not have been possible without the efforts of Marx to ease over tensions.
 
 @failed2
 subtitle: 各党之间的分歧过大。
@@ -114,7 +114,7 @@ on-arrival: z_relation -= 5 if z_relation >= 45 and dvp_relation >= 50; dvp_rela
 subtitle: 中央党 + 巴伐利亚人民党 + 民主党 + 人民党 (35%)
 on-arrival: chancellor = "Brüning"; chancellor_party = "Z"
 
-In the end, another minority government is formed, with Heinrich Brüning at its head. While the DVP[? if z_relation < 40 : and Center Party?] view this minority government as a stepping stone towards a majority one with the DNVP, the DDP[? if z_relation > 50 : and Center Party?] view it as a stepping stone towards a majority one with us.
+最终,又一个少数派政府组成,由海因里希·布吕宁领衔。人民党[? if z_relation < 40 : 与中央党?]把这个少数派政府视为通向与国家人民党组成多数派政府的跳板,而民主党[? if z_relation > 50 : 与中央党?]则把它视为通向与我们组成多数派政府的跳板。
 
 最终会是哪一种,尚待分晓。眼下,这就是将要统治德国的政府。
 
