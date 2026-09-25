@@ -50,7 +50,7 @@ on-arrival: works_program += 1; budget -= 3; workers_spd += 7*(1-dissent); worke
 
 @wtb_2_deficit
 title: 继续实施 WTB 计划。
-subtitle: -3 财政预算 - we will enter a deficit.
+subtitle: -3 财政预算 —— 我们将陷入赤字。
 unavailable-subtitle: [? if unemployed <= 10 : 失业率已经够低,我们不应再搞赤字开支。 ?][? if economic_minister_party == "DVP" : 由人民党掌控的经济部正在阻挠我们的计划。 ?][? if finance_minister_party != "SPD" : 不掌握财政,我们就无法进行这样的赤字开支。 ?]
 view-if: wtb_implemented > 2 and budget < 3 and budget >= -3
 choose-if: unemployed > 10 and economic_minister_party != "DVP" and finance_minister_party == "SPD"
@@ -249,7 +249,7 @@ achievement: wirtschaftspolitik
 
 [? if moderate_plan_progress > 1 : 我们继续为创造就业计划提供资金,用我们的款项在德国各地兴建公共工程。 ?]
 
-[? if unemployed >= 10 : The bourgeois approve of this plan as the "least bad" alternative, seeing it as necessary to save Germany's economy. ?]
+[? if unemployed >= 10 : 资产阶级认可这一计划,视之为「最不坏」的选项,认为它是挽救德国经济的必要之举。 ?]
 
 [? if unemployed < 10 : 失业率已经够低,这项计划似乎并未产生预期效果。 ?]
 

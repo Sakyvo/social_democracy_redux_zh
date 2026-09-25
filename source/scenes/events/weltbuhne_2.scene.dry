@@ -8,12 +8,12 @@ face-image: img/weltbune.jpg
 tags: event
 go-to: weltbuhne_dropped if judicial_reform >= 3; weltbuhne_convicted if judicial_reform < 3
 
-= The Weltbühne Trial, Conclusion
+= 《世界舞台》审判案:结案
 
 @weltbuhne_convicted
 on-arrival: west_relation -= 1; east_relation -= 1; reparations_negotiation -= 1; nationalism += 5; pacifism -= 1
 
-Finally, a court has made a decision in the Weltbühne case, sentencing the editor Carl von Ossietzky and journalist Walter Kreiser to prison for 18 months for revealing military secrets. There is outrage in the international community, who see this as yet another example of Germany's slide into militarism.
+终于,法院就《世界舞台》一案作出裁决,以泄露军事机密为由判处主编卡尔·冯·奥西茨基与记者瓦尔特·克赖泽尔 18 个月监禁。国际社会大为震怒,视之为德国滑向军国主义的又一例证。
 
 - @drop_case: 等等!或许我们可以赦免这些记者?
 - @root: 接受法院的判决。
@@ -24,10 +24,10 @@ view-if: spd_in_government
 unavailable-subtitle: 我们不掌控司法部。
 on-arrival: west_relation += 1; east_relation += 1; reparations_negotiation += 1; pacifism += 1
 
-With our control of the Justice Ministry, we are able to pardon von Ossietzky and Kreiser. This restores some of our reputation with pacifists and the international community.
+凭借对司法部的掌控,我们得以赦免奥西茨基与克赖泽尔。这恢复了我们在和平主义者与国际社会中的部分声誉。
 
 
 @weltbuhne_dropped
 on-arrival: west_relation += 1; east_relation += 1; reparations_negotiation += 1; ddp_relation += 3; pacifism += 1
 
-Finally, a judge has made a decision in the Weltbühne case, clearing the editor Carl von Ossietzky and journalist Walter Kreiser of all charges! The international community and pacifists within Germany are rejoicing in the verdict. Finally Germany can be said to have overcome its old imperial militarism.
+终于,法官就《世界舞台》一案作出裁决,宣告主编卡尔·冯·奥西茨基与记者瓦尔特·克赖泽尔的所有指控不成立!国际社会与德国国内的和平主义者都为这一判决欢欣鼓舞。德国终于可以说已克服了它那陈旧的帝制军国主义。

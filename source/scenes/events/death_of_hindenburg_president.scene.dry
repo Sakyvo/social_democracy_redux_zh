@@ -376,18 +376,18 @@ on-arrival: {!
 var candidate_descs = {
 Hitler: "Adolf Hitler of the NSDAP",
 Goring: "Hermann Göring of the NSDAP",
-Seldte: "Franz Seldte of the Stahlhelm/DNVP",
-Eckener: "the independent republican candidate Hugo Eckener",
-Adenauer: "Konrad Adenauer of the Center Party",
-Gessler: "Otto Gessler, independent formerly of the DDP",
+Seldte: "钢盔团/国家人民党的弗朗茨·泽尔特",
+Eckener: "无党籍共和派候选人胡戈·埃克纳",
+Adenauer: "中央党的康拉德·阿登纳",
+Gessler: "奥托·格斯勒,无党籍,出身民主党",
 Thalmann: "Ernst Thälmann of the KPD",
 Munzenberg: "Willi Münzenberg of the KPD",
-Braun: "Otto Braun of the SPD",
-Schumacher: "Kurt Schumacher of the SPD",
-Juchacz: "Marie Juchacz of the SPD",
+Braun: "社民党的奥托·布劳恩",
+Schumacher: "社民党的库尔特·舒马赫",
+Juchacz: "社民党的玛丽·尤哈茨",
 Einstein: "Albert Einstein, scientist",
 Mann: "Heinrich Mann, writer",
-Ossietzky: "Carl von Ossietzky, journalist"
+Ossietzky: "卡尔·冯·奥西茨基,记者"
 }
 for (var k in candidate_descs) {
     Q[k + '_running'] = 0;
@@ -557,27 +557,27 @@ go-to: r2_start if round = 1 and not has_majority; election_end if round > 1; r1
 
 选举结果:
 
-[? if Hitler_running : Hitler - [+ Hitler_votes_disp +]% ?]
-[? if Goring_running : Göring - [+ Goring_votes_disp +]% ?]
+[? if Hitler_running : 希特勒 - [+ Hitler_votes_disp +]% ?]
+[? if Goring_running : 戈林 - [+ Goring_votes_disp +]% ?]
 
-[? if Seldte_running : Seldte - [+ Seldte_votes_disp +]% ?]
+[? if Seldte_running : 泽尔特 - [+ Seldte_votes_disp +]% ?]
 
-[? if Thalmann_running : Thälmann - [+ Thalmann_votes_disp +]% ?]
-[? if Munzenberg_running : Münzenberg - [+ Munzenberg_votes_disp +]% ?]
+[? if Thalmann_running : 台尔曼 - [+ Thalmann_votes_disp +]% ?]
+[? if Munzenberg_running : 明岑贝格 - [+ Munzenberg_votes_disp +]% ?]
 
-[? if Adenauer_running : Adenauer - [+ Adenauer_votes_disp +]% ?]
+[? if Adenauer_running : 阿登纳 - [+ Adenauer_votes_disp +]% ?]
 
-[? if Gessler_running : Gessler - [+ Gessler_votes_disp +]% ?]
+[? if Gessler_running : 格斯勒 - [+ Gessler_votes_disp +]% ?]
 
-[? if Eckener_running : Eckener - [+ Eckener_votes_disp +]% ?]
+[? if Eckener_running : 埃克纳 - [+ Eckener_votes_disp +]% ?]
 
-[? if Braun_running : Braun - [+ Braun_votes_disp +]% ?]
-[? if Schumacher_running : Schumacher - [+ Schumacher_votes_disp +]% ?]
-[? if Juchacz_running : Juchacz - [+ Juchacz_votes_disp +]% ?]
+[? if Braun_running : 布劳恩 - [+ Braun_votes_disp +]% ?]
+[? if Schumacher_running : 舒马赫 - [+ Schumacher_votes_disp +]% ?]
+[? if Juchacz_running : 尤哈茨 - [+ Juchacz_votes_disp +]% ?]
 # cultural candidates
-[? if Einstein_running : Einstein - [+ Einstein_votes_disp +]% ?]
-[? if Ossietzky_running : Ossietzky - [+ Ossietzky_votes_disp +]% ?]
-[? if Mann_running : Mann - [+ Mann_votes_disp +]% ?]
+[? if Einstein_running : 爱因斯坦 - [+ Einstein_votes_disp +]% ?]
+[? if Ossietzky_running : 奥西茨基 - [+ Ossietzky_votes_disp +]% ?]
+[? if Mann_running : 曼 - [+ Mann_votes_disp +]% ?]
 
 @r2_start
 on-arrival: {!

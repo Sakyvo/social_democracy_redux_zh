@@ -11,7 +11,7 @@ Q.bavaria_sa_disp = Q.bavaria_sa.toFixed(1);
 Q.austria_strength_disp = Q.austria_strength.toFixed(1);
 
 var total_bavaria = 0;
-console.log("Starting normalization of bavarian votes...");
+console.log("开始对巴伐利亚选票进行归一化...");
 // normalize bavarian votes
 for (var party of Q.parties) {
     Q[party+'_votes_bavaria'] = 0;

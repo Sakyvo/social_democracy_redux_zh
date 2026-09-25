@@ -8,7 +8,7 @@ tags: event
 
 = 进军柏林
 
-The far right is mobilizing. Paramilitary forces of the Stahlhelm and SA, organized under the Harzburg Front, have marched on Berlin, threatening to violently seize power. Forces of the Interior and Reichswehr ministries have been deployed in the streets under orders from their respective Nazi-controlled ministries and have begun securing key points across the country. Clearly, [+ president +] has tired of our attempts to constitutionally obstruct his plans and has decided to ignore the constitution.
+极右翼正在动员。在哈茨堡阵线下组织起来的钢盔团与冲锋队准军事力量已进军柏林,威胁要以暴力夺取权力。内政部与国防部的力量已按各自被纳粹控制的主管部之命部署上街,并开始控制全国的关键地点。显然,[+ president +] 已厌倦我们用宪法手段阻挠他的计划,决意无视宪法。
 
 - @fight: 我们要在街头战斗,阻止希特勒掌权。
 - @give_up: 我们无能为力。
@@ -24,7 +24,7 @@ on-arrival: spd_rebel = 1
 
 @give_up
 
-Speeches are made. Votes are held. Bullets fly in the streets. Some socialists are killed or jailed. Others flee the country. The Nazis with total control over the streets unilaterally suspend the constitution.
+演讲发表,表决进行,子弹在街头横飞。一些社会主义者被杀或入狱,另一些逃离了这个国家。完全掌控街头的纳粹党单方面中止了宪法。
 
 德国沦陷了。
 

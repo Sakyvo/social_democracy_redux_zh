@@ -282,15 +282,15 @@ go-to: coalition_menu
 {!<svg id="reichstag" style="width: 500px; height: 250px;"> </svg>!}
 
 {!<table>!} 
-{!<tr><td>Party</td><td>Vote share</td></tr>!}
+{!<tr><td>党派</td><td>得票份额</td></tr>!}
 
-{!<tr><td><div class="box" style='background-color:#9c0000'> </div> !} Left: {!</td><td>!} [+ left_c +]% {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#9c0000'> </div> !} 左翼: {!</td><td>!} [+ left_c +]% {!</td></tr>!}
 
-{!<tr><td><div class="box" style='background-color:#e30000'> </div> !} Center: {!</td><td>!} [+ center_c +]% {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#e30000'> </div> !} 中间派: {!</td><td>!} [+ center_c +]% {!</td></tr>!}
 
-{!<tr><td><div class="box" style='background-color:#ff681d'> </div> !} Labor: {!</td><td>!} [+ labor_c +]% {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#ff681d'> </div> !} 工会派: {!</td><td>!} [+ labor_c +]% {!</td></tr>!}
 
-{!<tr><td><div class="box" style='background-color:#ff6ba9'> </div> !} Reformists: {!</td><td>!} [+ reformist_c +]% {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#ff6ba9'> </div> !} 改良派: {!</td><td>!} [+ reformist_c +]% {!</td></tr>!}
 
 @coalition_menu
 
@@ -338,7 +338,7 @@ subtitle: 中间派与右翼 ([+ pragmatic_unity +]%)
 on-arrival: reformist_dissent -= 5; left_dissent += 5
 #go-to: saxon_struggle
 
-果不其然,motion is defeated. The party remains too attached to the Weimar Coalition for such a move to be feasible.
+果不其然,动议被否决了。本党对魏玛联盟的眷恋仍太深,以致这样的举动无法实行。
 
 @saxon_struggle
 

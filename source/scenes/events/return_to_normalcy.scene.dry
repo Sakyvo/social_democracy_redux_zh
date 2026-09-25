@@ -8,13 +8,13 @@ Q.recession_time = Q.time + (Math.floor(Math.random() * (120 - 72 + 1)) + 72);
 !}
 tags: event
 
-= Return to Normalcy
+= 回归常态
 
-Germany is finally recovering from the Great Depression. As the economy gradually improves, the political crisis begins to unravel as well.
+德国终于从大萧条中复苏。随着经济逐步好转,政治危机也开始消解。
 
-Finally, the internal contradictions of the NSDAP have caught up to it. With the improving economic conditions, many business leaders are less interested in supporting them. Tensions between their remaining big capitalist funders and their lower middle class frontliners have come to a head, leading to desertions and public spats. This all saps Hitler's aura of strength, weakening Nazi support across a variety of demographics.
+纳粹党的内部矛盾终于让它自食其果。随着经济状况好转,许多工商界领袖对支持它不再那么感兴趣。它残余的大资本家金主与其中下阶层前线分子之间的紧张终于爆发,导致脱党与公开争吵。这一切都在消磨希特勒的强势光环,削弱纳粹在诸多群体中的支持。
 
-[? if weimar_dissent >= 3 and weimar_plan_adopted == 1 : As the crisis diminishes, questions about the necessity of the Weimar Plan are beginning to spread amongst the Center Party. [? if z_party_leader == "Joos" : Joseph Joos is resisting these pushes, but his grip on the party may not be so strong. ?] ?]
+[? if weimar_dissent >= 3 and weimar_plan_adopted == 1 : 随着危机消退,关于魏玛计划必要性的疑问开始在中央党内蔓延。[? if z_party_leader == "Joos" : 约瑟夫·约斯正在抵制这些压力,但他对党的掌控或许并不那么牢固。 ?] ?]
 
 - @celebrate: 这是个值得庆祝的时刻。
 - @complacency: 纳粹仍是威胁。我们不能过于自满。

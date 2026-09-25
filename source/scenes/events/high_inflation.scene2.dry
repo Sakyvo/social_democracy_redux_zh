@@ -9,7 +9,7 @@ tags: event
 
 通胀已经上升。各社会阶层的人都眼看着自己的购买力下降。尽管当前的通胀远没有那么严重,1923 年恶性通胀时期的记忆仍在大众意识中回荡。
 
-民众与媒体都在大声呼吁采取行动降低通胀。 Since we are in opposition, we stand to benefit, especially as the government turns to austerity as solution.
+民众与媒体都在大声呼吁采取行动降低通胀。 由于我们在野,我们将从中获益 —— 尤其是当政府转向以紧缩作为对策之时。
 
 - @campaign: 展开反对政府的宣传!
 - @toleration: 我们处于容忍执政地位。
@@ -21,13 +21,13 @@ choose-if: resources >= 1
 subtitle: -1 资源
 on-arrival: resources -= 1; workers_spd += 4; unemployed_spd += 4; new_middle_spd += 3; new_middle_spd += 3 if new_middle_conscious or peoples_party; old_middle_spd += 2; old_middle_spd += 2 if peoples_party; rural_spd += 2 if peoples_party; rural_spd += rural_policy
 
-We campaign against the government, expanding our support amongst the demographics most affected by the inflation and the measures employed to curtail it.
+我们展开反对政府的运动,在受通胀及遏制通胀措施影响最深的群体中扩大我们的支持。
 
 @toleration
 view-if: spd_toleration
 on-arrival: workers_spd -= 4; unemployed_spd -= 4;
 
-An astute observation, sir. What should we do about it?
+观察得真敏锐,阁下。我们该如何应对?
 
 - @break_toleration: 终止容忍协议!
 - @do_nothing: 我们就等着熬过去。
@@ -35,10 +35,10 @@ An astute observation, sir. What should we do about it?
 @do_nothing
 on-arrival: new_middle_nsdap += inflation; old_middle_nsdap += inflation; rural_nsdap += (inflation-land_reform);
 
-We do nothing. Predictably, nothing happens.
+我们什么也不做。不出所料,什么也没发生。
 
 @break_toleration
 on-arrival: time_to_election = 3; workers_spd += 5; unemployed_spd += 5; new_middle_spd += 2
 call: set_next_election_time
 
-We bring down the government, forcing the dissolution of the Reichstag for new elections. 
+我们搞垮政府,迫使国会解散以举行新的选举。 

@@ -139,7 +139,7 @@ on-arrival: kpd_relation -= 10; workers_kpd -= 3; workers_spd += 1; workers_sapd
 view-if: kpd_refuse and not (kpd_good_faith or kpd_bad_faith)
 on-arrival: reformist_dissent += 5; neorevisionist_dissent += 10; z_relation -= 5 if z_party_leader != "Joos"; dvp_relation -= 5; coalition_dissent += 1 if spd_in_government; workers_kpd -= 10; workers_sapd += 7; workers_spd += 3; unemployed_kpd -= 5; unemployed_sapd += 5; left_dissent -= 5; left_strength -= 5
 
-We attend the SAPD conference, but are alone in doing so, with the KPD refusing. We accuse the KPD of being the reason for the failure of an Einheitsfront to take form, and our ties with the left and SAPD are somewhat repaired. The SAPD campaigns off of the KPD's failure to participate, taking yet more support away from them. The right-wing though, both of our party and as a whole, are nevertheless disgruntled by our participation.
+我们出席了社会主义工人党的大会,但孤身前往 —— 共产党拒绝参加。我们指责共产党正是统一战线未能形成的罪魁,我们与左翼及社会主义工人党的关系因此有所修复。社会主义工人党借共产党缺席大做文章,又从他们那里拉走更多支持。不过,无论是本党右翼还是整体右翼,都对我们的出席感到不满。
 
 @participate_bad_faith_1
 view-if: kpd_good_faith and not (kpd_bad_faith or kpd_refuse)
@@ -173,7 +173,7 @@ on-arrival: kpd_relation -= 25; communist_coalition = 0; workers_spd -= 10; unem
 @kpd_refuse_offer
 on-arrival: kpd_relation -= 5; workers_spd -= 3; workers_kpd += 1; workers_sapd += 2; left_dissent += 5; reformist_strength += 5
 
-果不其然,KPD refuses our outrageous demands. The conference is a failure, and the KPD and SAPD both blame us. The SAPD continues to agitate for a united front, pointing to the failure of the SPD and KPD to cooperate as a reason to vote for the SAPD instead, to some success.
+果不其然,共产党拒绝了我们那些过分的要求。会议以失败告终,共产党与社会主义工人党都怪罪我们。社会主义工人党继续为统一战线鼓动,以社民党与共产党合作失败为由,劝人改投社会主义工人党,并取得了一定成效。
 
 @participate_bad_faith_2
 view-if: kpd_bad_faith and not (kpd_good_faith or kpd_refuse)
@@ -185,7 +185,7 @@ on-arrival: reformist_dissent += 5; neorevisionist_dissent += 10; z_relation -= 
 view-if: kpd_refuse and not (kpd_good_faith or kpd_bad_faith)
 on-arrival: reformist_dissent += 5; neorevisionist_dissent += 10; z_relation -= 5 if z_party_leader != "Joos"; dvp_relation -= 5; coalition_dissent += 1 if spd_in_government; workers_kpd -= 10; workers_sapd += 7; workers_spd += 3; unemployed_kpd -= 5; unemployed_sapd += 5; left_dissent -= 5; left_strength -= 5
 
-We attend the SAPD conference, but are alone in doing so, with the KPD refusing. We accuse the KPD of being the reason for the failure of an Einheitsfront to take form, and our ties with the left and SAPD are somewhat repaired. The SAPD campaigns off of the KPD's failure to participate, taking yet more support away from them. The right-wing though, both of our party and as a whole, are nevertheless disgruntled by our participation.
+我们出席了社会主义工人党的大会,但孤身前往 —— 共产党拒绝参加。我们指责共产党正是统一战线未能形成的罪魁,我们与左翼及社会主义工人党的关系因此有所修复。社会主义工人党借共产党缺席大做文章,又从他们那里拉走更多支持。不过,无论是本党右翼还是整体右翼,都对我们的出席感到不满。
 
 @refuse_1
 view-if: (kpd_good_faith or kpd_bad_faith) and not kpd_refuse

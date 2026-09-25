@@ -45,16 +45,16 @@ go-to: defeated if princes_support < 50; success if princes_support >= 50
 
 = 没收诸侯财产
 
-The referendum on the expropriation of the princes has been held, and the results are in.
+关于没收诸侯财产的公投已经举行,结果已出。
 
 @defeated
 view-if: petition_support < 50 and (not princes_constitutional or princes_support < 50)
 on-arrival: kpd_relation -= 5; socialism -= 2
 
-Unfortunately, the referendum has failed, with only [+ referendum_turnout +]% voting [? if princes_constitutional : and [+ princes_support +] in favor?]. Nonetheless, it has demonstrated the immense support of the workers' parties and shown that the German left is not dead. Perhaps, if this momentum continues, the socialist parties will achieve a victory come the next elections.
+遗憾的是,公投失败了,仅有 [+ referendum_turnout +]% 的人投票[? if princes_constitutional : ,其中 [+ princes_support +] 赞成?]。尽管如此,它展示了各工人政党巨大的支持度,也表明德国左翼并未死去。或许,若这股势头延续下去,各社会主义政党将在下次选举中取得胜利。
 
 @success
 view-if: petition_support >= 50 or (princes_constitutional and princes_support >= 50)
 on-arrival: rural_spd += 5*(1-dissent); unemployed_spd += 3*(1-dissent); unemployed_kpd += 2; workers_spd += 4*(1-dissent); workers_dnvp -= 5; rural_dnvp -= 5; old_middle_dnvp -= 2; old_middle_spd += 2*(1-dissent); nationalism -= 5; socialism += 5; kpd_relation += 5; land_reform += 1; unemployed -= 1
 
-With [+ referendum_turnout +]% voting [? if princes_constitutional : and [+ princes_support +]% in favor of the bill ?] the referendum has succeeded! This is a massive victory for the left [? if president == "Hindenburg" :showing that despite the victory of Hindenburg last year, the socialism prevails over reaction?].
+以 [+ referendum_turnout +]% 的投票率[? if princes_constitutional : ,其中 [+ princes_support +]% 赞成该法案 ?],公投获得了成功!这是左翼的一场大胜[? if president == "Hindenburg" : ,表明尽管去年兴登堡获胜,社会主义依然战胜了反动派 ?]。

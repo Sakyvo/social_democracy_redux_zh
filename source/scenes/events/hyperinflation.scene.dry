@@ -8,9 +8,9 @@ tags: event
 
 = Hyperinflation
 
-Inflation has skyrocketed. People of all classes have seen their purchasing power plummet, and blame the SPD as it seems 1923 is repeating all over again. The extremists against the republic clamor at this opportunity [? if sapd_consolidated : , as does the SAPD, which rallies against us ?].
+通胀已飞涨。各阶层的人都看到自己的购买力暴跌,并把矛头指向社民党,仿佛 1923 年又要重演。反对共和国的极端分子借机鼓噪[? if sapd_consolidated : ,社会主义工人党亦然 —— 它正集会反对我们 ?]。
 
-We must take some action.
+我们必须采取一些行动。
 
 - @taxes: 我们必须加税。
 - @welfare: 我们必须削减福利与社会开支。

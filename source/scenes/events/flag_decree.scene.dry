@@ -49,7 +49,7 @@ on-arrival: chancellor = "Gessler"; chancellor_party = "DDP"
 @grand_coalition_adenauer
 subtitle: 社民党 + 中央党 + 巴伐利亚人民党 + 民主党 + 人民党 (61%)
 choose-if: z_relation >= 50 and dvp_relation >= 50
-unavailable-subtitle: 社民党 + 中央党 + 巴伐利亚人民党 + 民主党 + 人民党 (61%) - [? if z_relation < 50 : The Center Party is unwilling. ?][? if dvp_relation < 50 : The DVP is unwilling. ?]
+unavailable-subtitle: 社民党 + 中央党 + 巴伐利亚人民党 + 民主党 + 人民党 (61%) - [? if z_relation < 50 : 中央党不愿。 ?][? if dvp_relation < 50 : 人民党不愿。 ?]
 on-arrival: left_dissent += 5; coalition_dissent += 1; spd_toleration = 0; in_grand_coalition = 1; spd_in_government = 1; leverage = spd_r; leverage -= 5; chancellor = "Adenauer"; chancellor_party = "Z"; workers_spd -= 2; unemployed_spd -= 3; old_middle_dvp -= 2; new_middle_dvp -= 2
 go-to: election_1928.ministries
 
@@ -96,11 +96,11 @@ subtitle: 马克思请阿登纳组阁
 @grand_coalition_adenauer2
 subtitle: 社民党 + 中央党 + 巴伐利亚人民党 + 民主党 + 人民党 (61%)
 choose-if: z_relation >= 45 and dvp_relation >= 50 or (dvp_relation >= 45 and marx_relation >= 55)
-unavailable-subtitle: 社民党 + 中央党 + 巴伐利亚人民党 + 民主党 + 人民党 (61%) - [? if z_relation < 45 : The Center Party is unwilling. ?][? if dvp_relation < 50 : The DVP is unwilling. ?]
+unavailable-subtitle: 社民党 + 中央党 + 巴伐利亚人民党 + 民主党 + 人民党 (61%) - [? if z_relation < 45 : 中央党不愿。 ?][? if dvp_relation < 50 : 人民党不愿。 ?]
 on-arrival: left_dissent += 5; in_grand_coalition = 1; spd_toleration = 0; spd_in_government = 1; leverage = spd_r; leverage -= 5; chancellor = "Adenauer"; chancellor_party = "Z"; workers_spd -= 1; unemployed_spd -= 2; old_middle_dvp -= 2; new_middle_dvp -= 2
 go-to: election_1928.ministries
 
-出乎意料,磋商竟然成功了!一个以康拉德·阿登纳为核心的大联盟组成了,紧张局势暂时得以缓解。 This may not have been possible without the efforts of Marx to ease over tensions.
+出乎意料,磋商竟然成功了!一个以康拉德·阿登纳为核心的大联盟组成了,紧张局势暂时得以缓解。 若不是马克思出力缓和紧张,这或许不可能实现。
 
 @failed2
 subtitle: 各党之间的分歧过大。

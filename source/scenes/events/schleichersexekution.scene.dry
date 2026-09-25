@@ -7,9 +7,9 @@ max-visits: 1
 face-image: img/portraits/SchleicherKurt.jpg
 tags: event
 
-= Schleicher's Reichsexekutions
+= 施莱谢尔的国家执行
 
-In his work to eliminate the continued violence in the streets and any potential threat against him, Schleicher and [+ president +] have been imposing federal interventions against unruly or disobedient states, placing them under direct government control, and in areas without direct Reichsexekutions been forcing state governments to nonetheless essentially subjugate themselves to central government control and reshuffle their cabinets in accordance with Schleicher's rule.
+为了消除街头持续的暴力以及任何针对他的潜在威胁,施莱谢尔与 [+ president +] 一直在对不驯服、不顺从的各州实施联邦干预,将其置于政府的直接控制之下;在没有直接实施国家执行的地区,他们则迫使州政府无论如何都要在实质上屈服于中央政府的控制,并按施莱谢尔的规则改组内阁。
 
 - @coup: 纳粹党反抗了!
 
@@ -17,6 +17,6 @@ In his work to eliminate the continued violence in the streets and any potential
 view-if: coup_progress >= 10
 on-arrival: kpd_relation -= 100
 
-Claiming, funnily, to champion a fight for democracy and the constitution, the Nazis have mobilized the SA to defend the state governments to which they are sympathetic from Schleicher's imposition of military force. Fighting erupts and spirals into civil war.
+说来好笑,纳粹党竟声称自己是在为民主与宪法而战,并动员冲锋队去保卫那些与他们同气的州政府,抵抗施莱谢尔的武力强加。战斗爆发,并迅速升级为内战。
 
 - @civil_war: 动员国旗团保卫施莱谢尔!

@@ -7,8 +7,8 @@ view-if: year == 1930 and month >= 3 and saxon_dispute and landtags_enabled and 
 on-arrival: saxon_dispute = 0; saxony_election_year = year; saxony_election_month = month+3; saxony_election_year -= 1 if saxony_election_month > 12; saxony_election_month -= 12 if saxony_election_month > 12
 on-departure: saxony_spd += 0.15; saxony_kpd -= 0.05; saxony_nsdap -= 0.25; saxony_dvp -= 0.1; saxony_ddp += 0.5; saxony_other += 0.1; saxony_dnvp += 0.05; saxony_z -= 0.2
 
-= Saxon Government Collapses
+= 萨克森政府垮台
 
-Following the Saxon delegation to the Reichsrat's support for the Young Plan's ratification, the DNVP [? if s_center_right_coalition < 50 and not saxony_toleration : and NSDAP?] have withdrawn their confidence in the bourgeois cabinet.
+在出席联邦参议院的萨克森代表团支持批准杨格计划之后,国家人民党[? if s_center_right_coalition < 50 and not saxony_toleration : 与纳粹党?]已撤回对资产阶级内阁的信任。
 
-New elections have been called for [+ saxony_election_year +] [+ saxony_election_month : month +].
+新的选举已定于 [+ saxony_election_year +] [+ saxony_election_month : month +]。

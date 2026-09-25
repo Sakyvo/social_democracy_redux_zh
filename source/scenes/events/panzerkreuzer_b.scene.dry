@@ -5,7 +5,7 @@ on-arrival: panzerkreuzer_b_seen = 1
 new-page: true
 view-if: panzerkreuzer_b_seen = 0 and year = 1931 and month >= 2 and (spd_in_government = 1 or spd_toleration = 1)
 
-= Panzerkreuzer B
+= 装甲巡洋舰 B
 
 海军要求再建造一艘新的战列巡洋舰。[? if panzerkreuzer_funded: 上一艘战列巡洋舰已获拨款,且已下水。再建一艘将进一步推进德国的重整军备。 ?][? if not panzerkreuzer_funded: 海军此前申请的那艘战列巡洋舰,因我们的缘故未获拨款。军方仍耿耿于怀,但他们仍在推进重整军备计划,必须向国会寻求拨款。 ?]
 
@@ -21,7 +21,7 @@ on-arrival: bill_support = bourgeois_coalition+far_right_coalition; bill_support
 Q.bill_support = Math.round(Q.bill_support);
 !}
 
-我们基层党员对我们的决定大加批评。许多党的分支加大了对我们议会党团的鼓动。 [? if panzerkreuzer_funded : However, given the construction of the previous battlecruiser, this seemed to be a foregone conclusion, and the reaction is muted. ?]
+我们基层党员对我们的决定大加批评。许多党的分支加大了对我们议会党团的鼓动。 [? if panzerkreuzer_funded : 不过,鉴于上一艘战列巡洋舰已经建造,这似乎是既定之事,反应也较为平淡。 ?]
 
 共产党:反对
 
@@ -114,7 +114,7 @@ on-arrival: panzerkreuzer_b_funded = 1
 @not_built
 on-arrival: panzerkreuzer_b_funded = 0; budget += 1 if panzerkreuzer_funded = 0; coup_progress += 1
 
-我们反对战列巡洋舰的表决获得成功,得到共产党与 [+ ddp_name +] 中反战人士的支持。这艘军舰将不会被建造! [? if panzerkreuzer_funded == 0 : We have saved some budget from not funding the two ships. ?]
+我们反对战列巡洋舰的表决获得成功,得到共产党与 [+ ddp_name +] 中反战人士的支持。这艘军舰将不会被建造! [? if panzerkreuzer_funded == 0 : 由于未为这两艘舰拨款,我们省下了一笔预算。 ?]
 
 共产党:反对
 

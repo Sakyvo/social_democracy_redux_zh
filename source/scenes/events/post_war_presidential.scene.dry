@@ -524,18 +524,18 @@ go-to: braun_wins if braun_majority == 1; schumacher_wins if schumacher_majority
 结果:
 
 [? if thalmann_campaign : 台尔曼 - [+ thalmann_votes_disp +]% ?]
-[? if munzenberg_campaign : Münzenberg - [+ munzenberg_votes_disp +]% ?]
+[? if munzenberg_campaign : 明岑贝格 - [+ munzenberg_votes_disp +]% ?]
 
-[? if braun_campaign : Braun - [+ braun_votes_disp +]% ?]
-[? if schumacher_campaign : Schumacher - [+ schumacher_votes_disp +]% ?]
+[? if braun_campaign : 布劳恩 - [+ braun_votes_disp +]% ?]
+[? if schumacher_campaign : 舒马赫 - [+ schumacher_votes_disp +]% ?]
 
-[? if wirth_campaign : Wirth - [+ wirth_votes_disp +]% ?]
-[? if adenauer_campaign : Adenauer - [+ adenauer_votes_disp +]% ?]
+[? if wirth_campaign : 维尔特 - [+ wirth_votes_disp +]% ?]
+[? if adenauer_campaign : 阿登纳 - [+ adenauer_votes_disp +]% ?]
 
-[? if gessler_campaign : Gessler - [+ gessler_votes_disp +]% ?]
-[? if luther_campaign : Luther - [+ luther_votes_disp +]% ?]
+[? if gessler_campaign : 格斯勒 - [+ gessler_votes_disp +]% ?]
+[? if luther_campaign : 路德 - [+ luther_votes_disp +]% ?]
 
-[? if hergt_campaign : Hergt - [+ hergt_votes_disp +]% ?]
+[? if hergt_campaign : 赫尔特 - [+ hergt_votes_disp +]% ?]
 
 @no_majority_round1
 go-to: luther_back_hergt if hergt_campaign and luther_campaign and hergt_votes >= (luther_votes*2) and (hergt_votes >= adenauer_votes and hergt_votes >= wirth_votes) and (braun_plurality or thalmann_plurality or schumacher_plurality or munzenberg_plurality); luther_back_adenauer if luther_campaign and adenauer_campaign and adenauer_votes >= luther_votes and (adenauer_votes >= hergt_votes) and (braun_plurality or thalmann_plurality or schumacher_plurality or munzenberg_plurality); hergt_drop_out if hergt_campaign and (braun_plurality or thalmann_plurality or munzenberg_plurality or schumacher_plurality) and (not luther_campaign or (adenauer_votes >= luther_votes and (adenauer_votes >= hergt_votes))); luther_back_wirth if luther_campaign and wirth_campaign and (thalmann_plurality or munzenberg_plurality and hergt_votes < wirth_votes); gessler_back_wirth if wirth_campaign and gessler_campaign and (thalmann_plurality or munzenberg_plurality or (hergt_plurality and dvp_relation >= 40)); munzenberg_back_wirth if wirth_campaign and munzenberg_campaign and (kpd_relation >= 45 and hergt_plurality) or (kpd_relation >= 65 and luther_plurality); gessler_back_adenauer if gessler_campaign and adenauer_votes >= gessler_votes and not adenauer_plurality and not spd_support_gessler; adenauer_back_gessler if adenauer_campaign and gessler_campaign and gessler_votes >= adenauer_votes and not gessler_plurality and not spd_support_adenauer
@@ -565,7 +565,7 @@ go-to: no_majority_round1
 on-arrival: hergt_campaign = 0; dvp_support_adenauer = 1 if dvp_support_hergt; dvp_support_hergt = 0;
 go-to: no_majority_round1
 
-Oskar Hergt of the DNVP has dropped out, leaving the right-wing parties to rally behind[? if luther_campaign : Luther?][? if gessler_campaign : Gessler ?][? if adenauer_campaign and not gessler_campaign and not luther_campaign : Adenauer ?][? if not adenauer_campaign and not gessler_campaign and not luther_campaign and wirth_campaign : Wirth ?].
+国家人民党的奥斯卡·赫尔特已退出,右翼政党只能转而支持[? if luther_campaign : 路德?][? if gessler_campaign : 格斯勒 ?][? if adenauer_campaign and not gessler_campaign and not luther_campaign : 阿登纳 ?][? if not adenauer_campaign and not gessler_campaign and not luther_campaign and wirth_campaign : 维尔特 ?]。
 
 @luther_back_wirth
 on-arrival: dvp_support_wirth = 1; luther_campaign = 0

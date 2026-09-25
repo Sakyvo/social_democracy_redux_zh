@@ -19,7 +19,7 @@ set-jump: saxony_election_1928
 @saxony_election_1928
 on-arrival: {!
 var total_saxony = 0;
-console.log("Starting normalization of Saxon votes...");
+console.log("开始对萨克森选票进行归一化...");
 // normalize Saxon votes
 for (var party of Q.parties) {
     Q[party+'_votes_saxony'] = 0;
@@ -294,7 +294,7 @@ go-to: coalition_menu
 {!<svg id="reichstag" style="width: 500px; height: 250px;"> </svg>!}
 
 {!<table>!} 
-{!<tr><td>Party</td><td>Vote share</td><td>% Change</td></tr>!}
+{!<tr><td>党派</td><td>得票份额</td><td>% 变化</td></tr>!}
 {!<tr><td><div class="box" style='background-color:#E3000F; outline: 2px; outline-style: solid;'> </div> !} **SPD:** {!</td><td>!} **[+ spd_sl +]%** {!</td><td>!} **[+ stsl_change_spd +]** {!</td></tr>!}
 
 [? if sapd_formed == 1 : {!<tr><td><div class="box" style='background-color:#C40000'> </div> !}SAPD: {!</td><td>!} [+ sapd_sl +]% {!</td><td>!} [+ stsl_change_sapd +] {!</td></tr>!} ?]
@@ -309,7 +309,7 @@ go-to: coalition_menu
 
 {!<tr><td><div class="box" style='background-color:#D5AC27'> </div> !} DVP: {!</td><td>!} [+ dvp_sl +]% {!</td><td>!} [+ stsl_change_dvp +] {!</td></tr>!}
  
-{!<tr><td><div class="box" style='background-color:#a0a0a0'> </div> !} Others: {!</td><td>!} [+ other_sl +] % {!</td><td>!} [+ stsl_change_other +] {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#a0a0a0'> </div> !} 其他: {!</td><td>!} [+ other_sl +] % {!</td><td>!} [+ stsl_change_other +] {!</td></tr>!}
 
 {!<tr><td><div class="box" style='background-color:#3f7bc1'> </div> !} DNVP: {!</td><td>!} [+ dnvp_sl +]% {!</td><td>!} [+ stsl_change_dnvp +] {!</td></tr>!}
 
@@ -363,7 +363,7 @@ title: 一个反共联盟 —— 由资产阶级及其同情者组成。
 subtitle: 萨克森旧社会民主党 + [+ ddp_name +] + 中央党 + 人民党 + 其他 + 国家人民党 + 纳粹党 ([+ s_anticommunist_coalition +]%)
 view-if: s_anticommunist_coalition >= 50 or s_elections <= 1
 choose-if: s_anticommunist_coalition >= 50 and s_center_right_coalition < 50 and s_progressive_coalition < 50 and (year < 1930 or ((dnvp_reform and nazi_reform) or (s_neo_weimar_coalition < 50)))
-unavailable-subtitle: 萨克森旧社会民主党 + [+ ddp_name +] + 中央党 + 人民党 + 其他 + 国家人民党 + 纳粹党 ([+ s_anticommunist_coalition +]%)[? if s_center_right_coalition >= 50 : - the bourgeois don't need the Nazis. ?][? if year >= 1930 : The bourgeois and the reactionaries are no longer open to cooperation. ?]
+unavailable-subtitle: 萨克森旧社会民主党 + [+ ddp_name +] + 中央党 + 人民党 + 其他 + 国家人民党 + 纳粹党 ([+ s_anticommunist_coalition +]%)[? if s_center_right_coalition >= 50 : - 资产阶级并不需要纳粹党。 ?][? if year >= 1930 : 资产阶级与反动派已不再愿意合作。 ?]
 on-arrival: saxon_dispute = 1; saxony_nsdap += 0.05 if saxony_nsdap < 1.2; reformist_strength -= 2; nazi_saxony = 1 if nsdap_sl >= s_center_right_coalition; saxony_nsdap += 0.05 if nazi_saxony; saxony_spd -= 0.05 if nazi_saxony; kpd_relation += 5 if nazi_saxony; nazi_urgency += 1 if nazi_saxony;
 
 由于萨克森资产阶级政党对该地区社民党极度的左倾倾向、以及该州不同于其他州的阶级斗争历史深怀戒心,一个反共联盟组成了。

@@ -45,14 +45,14 @@ Q.unemployed_nsdap += 5;
 tags: event
 new-page: true
 
-= Recession
+= 衰退
 
-The global economy, including the German one, has entered into a recession. Hard times are ahead of us.
+全球经济,包括德国经济在内,已陷入衰退。我们前路艰难。
 
 - @it_happens: 这种事总会发生。
 
 @it_happens
 on-arrival: socialism += recession_severity*(1-(0.5*bourgeois_power))
 
-Sure does. Man, if there was only like, an economic system which would put an end to this.
+确实如此。唉,要是能有那么一种经济制度,能终结这一切就好了。
 

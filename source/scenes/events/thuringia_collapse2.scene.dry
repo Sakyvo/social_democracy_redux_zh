@@ -5,6 +5,6 @@ tags: event
 view-if: landtags_enabled and thuringia_toleration and thuringeration_timer <= 0 and (reformist_strength < left_strength+labor_strength or reformist_strength < center_strength)
 on-arrival: thuringia_toleration = 0; thuringia_election_year = year; thuringia_election_month = month+2; thuringia_election_year += 1 if thuringia_election_month > 12; thuringia_election_month -= 12 if thuringia_election_month > 12;
 
-= End of Toleration in Thuringia
+= 图林根容忍的终结
 
-The Thuringian SPD has always been one of the most left-wing in the country, and as such an unstable toleration agreement with the bourgeois parties has fallen apart, forcing new elections for [+ thuringia_election_month : month +] [+ thuringia_election_year +].
+图林根社民党一向是全国最左的党组织之一,因此与资产阶级政党的那份不稳定的容忍协议终于破裂,迫使新的选举定于 [+ thuringia_election_month : month +] [+ thuringia_election_year +]。

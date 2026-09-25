@@ -109,10 +109,10 @@ if (Q.sh_force+Q.sa_force < Q.rb_force+Q.rfb_force) {
 
 !}
 
-= The Centre Christian Alliance
+= 中央党基督教联盟
 
-With the bourgeoisie's grip on Germany weaker than ever and Germany seemingly sliding towards socialism, a new party has been announced, the ZCA, intended to merge Catholics and liberals into a single bourgeois-interests party. Electing Otto Gessler as leader, they intend to oppose our socialist agenda, although they do not appear overtly antidemocratic. [? if nsdap_banned : There is some fear that the Nazis will use them as a trojan horse, however. ?]
+在资产阶级对德国的掌控前所未有地薄弱、德国似乎正滑向社会主义之际,一个新政党宣告成立:中央党基督教联盟(ZCA),意在把天主教徒与自由派合并为一个代表资产阶级利益的单一政党。他们推举奥托·格斯勒为领袖,打算反对我们的社会主义议程 —— 尽管他们并不显得公然反民主。[? if nsdap_banned : 不过,有人担心纳粹会把他们当作特洛伊木马。 ?]
 
-[? if capital_strike_seen : It is clear that they embody the interests of the business community which has struck against us. ?][? if victory_republic : Their formation is sure to spice up emerging post-war politics. ?]
+[? if capital_strike_seen : 显然,他们体现的是那个曾对我们发动罢工的工商界的利益。 ?][? if victory_republic : 他们的成立必定会为正在成形的战后政治增添波澜。 ?]
 
-While the merger has been approved by majorities in each of the constituent parties, small splinters remain for each, composed of the minorities that were opposed.
+尽管这场合并已获各组成政党多数的批准,各党仍各自留下了一些小碎片,由反对的少数派构成。

@@ -21,7 +21,7 @@ go-to: bribe if dvp_relation >= 35 and z_relation >= 40 and ddp_relation >= 50 a
 @grand_coalition_marx
 subtitle: 社民党 + 中央党 + 巴伐利亚人民党 + 民主党 + 人民党 ([+ grand_coalition +]%)
 choose-if: left_strength+center_strength < reformist_strength
-unavailable-subtitle: 社民党 + 中央党 + 巴伐利亚人民党 + 民主党 + 人民党 ([+ grand_coalition +]%) - The party is too opposed.
+unavailable-subtitle: 社民党 + 中央党 + 巴伐利亚人民党 + 民主党 + 人民党 ([+ grand_coalition +]%) - 本党反对过于强烈。
 on-arrival: left_dissent += 10; leverage = spd_r; leverage += 5; center_dissent += 5; labor_dissent += 5; pacifism -= 2; workers_spd -= 3; new_middle_spd -= 2; unemployed_spd -= 3; workers_kpd += 2; unemployed_kpd += 2; reichswehr_loyalty += 0.05; spd_toleration = 0; spd_in_government = 1
 go-to: election_1928.ministries
 
@@ -31,7 +31,7 @@ go-to: election_1928.ministries
 on-arrival: spd_toleration = 0; dvp_relation -= 5; ddp_relation -= 2; z_relation -= 2; marx_relation -= 5; marx_rearmament = 1
 subtitle: 若他们拒绝,我们将提出不信任案。
 
-果不其然,cabinet refuses to resign. We attack the government for its complacency in allowing the Reichswehr to rearm and call a motion of no confidence. Though the far-right brand us traitors, they vote alongside us against the government anyway.
+果不其然,内阁拒绝辞职。我们抨击政府纵容国防军重整军备的懈怠,并提出一项不信任案。尽管极右翼把我们骂作叛徒,他们还是与我们一道投票反对政府。
 
 @no_bribe
 

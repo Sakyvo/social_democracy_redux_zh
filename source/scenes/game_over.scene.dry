@@ -45,7 +45,7 @@ if (Q.homosexual_rights >= 2) {
     this.achieve('hirschfeld');
 }
 // Mädchen und Uniform - a woman's place is in the Reichsbanner.
-// Gleichheit - Support and enact reforms for women's rights.
+// Gleichheit - Support and enact reforms for women 的妇女权利。
 if ((Q.womens_work && Q.womens_rights >= 5) || (Q.abortion_rights && Q.womens_rights >= 3)) {
     this.achieve('equality');
 }
@@ -114,7 +114,7 @@ if ((Q.welfare > 0 && Q.judicial_reform >= 2 && Q.womens_work >= 1 && Q.family_l
 }
 !}
 
-= End
+= 结束
 
 
 @eg_menu

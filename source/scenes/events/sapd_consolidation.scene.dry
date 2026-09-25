@@ -52,10 +52,10 @@ max-visits: 1
 new-page: true
 tags: event
 
-= Consolidation of the SAPD
+= 社会主义工人党的整合
 
-With the unions having left the SPD and the Left and Center defecting to form a new party with them, the SAPD has consolidated and become a genuine competitor to our party. Seeing this growth, anti-Stalinists in the KPD too defect and join the SAPD, creating a strong bloc between our two parties.
+随着工会脱离社民党、左翼与中间派倒戈与他们共组新党,社会主义工人党已完成整合,成为我党真正的竞争者。眼见其壮大,共产党内的反斯大林主义者也倒戈加入社会主义工人党,在我们两党之间形成了一个强大的阵营。
 
-[? if economic_plan == 0 : Our failure to formulate an economic plan has only strengthened this bloc further as many unemployed supporters of our party join the SAPD in the hopes of getting their jobs back. ?] [? if moderate_plan_adopted == 1 : Our adoption of the moderate economic plan has only bolstered the SAPD further as many of the more radical members in our party feel it is inadequate and find accomodation elsewhere. ?]
+[? if economic_plan == 0 : 我们未能制定出一份经济计划,这只会进一步壮大这一阵营 —— 许多失业的我们党支持者怀着拿回工作的希望加入了社会主义工人党。 ?] [? if moderate_plan_adopted == 1 : 我们采纳温和的经济计划,只会进一步壮大社会主义工人党 —— 我党内许多更激进的人认为它不够,转而另寻归宿。 ?]
 
 - @root: 令人不安。

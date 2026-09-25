@@ -10,14 +10,14 @@ max-visits: 2
 
 经济危机在德国各地造成大规模裁员,工业工人阶级受到的打击最为严重。由于需求增加,我们的福利开支也在上升。
 
-In the midst of all this, our unemployment insurance program is underfunded; the program was never budgeted for this much unemployment. We have to either increase funding or cut benefits.
+在这一切之中,我们的失业保险计划资金不足;该计划从未为如此高的失业率编列预算。我们要么增加资金,要么削减给付。
 
 - @cut_benefits: 削减给付。
 - @increase_employers: 提高雇主缴款。
 - @balance: 同时提高雇主与雇员的缴款。
 
 @cut_benefits
-subtitle: +1 财政预算. The workers will regard this as a betrayal.
+subtitle: +1 财政预算。工人会把这视为背叛。
 on-arrival: cut_benefits_vote = 1
 go-to: cut_benefits_done if not legislature_enabled; legislative_menu if legislature_enabled
 
@@ -26,7 +26,7 @@ go-to: cut_benefits_done if not legislature_enabled; legislative_menu if legisla
 @cut_benefits_done
 on-arrival: workers_spd -= 0.12*workers_spd; unemployed_spd -= 0.2*unemployed_spd; workers_kpd += 6; workers_nsdap += 6; unemployed_kpd += 5; unemployed_nsdap += 5; left_dissent += 15; center_dissent += 10; labor_dissent += 15; reformist_dissent += 5; welfare -= 2; budget += 1; unemployed += 3; pro_republic -= 4; kpd_relation -= 8; inflation -= 2; unemployment_insurance_threshold = unemployed; unemployment_insurance_timer = 10; economic_growth -= 0.4; socialism -= 1
 
-For budgetary reasons, we have cut unemployment insurance benefits. Unfortunately, our reasons for fiscal discipline are alien to the workers. They are furious at our betrayal, as are a good portion of our membership throughout the factions. Our loss is the KPD's gain, and even the NSDAP, those lapdogs of the bourgeoisie, have joined in criticizing us for our austerity.
+出于预算原因,我们削减了失业保险给付。遗憾的是,我们那套财政纪律的理由对工人来说陌生难解。他们对我们的背叛大为愤怒,党内各派系中的相当一部分人亦然。我们的损失就是共产党的收获;甚至连纳粹党 —— 资产阶级的走狗 —— 也加入了抨击我们紧缩政策的行列。
 
 
 @increase_employers
@@ -39,7 +39,7 @@ go-to: increase_employers_done if not legislature_enabled; legislative_menu if l
 @increase_employers_done
 on-arrival: capital_strike_progress += 2; coalition_dissent = 2 if in_grand_coalition; coalition_dissent += 1; welfare += 1; workers_spd += 6*(1-dissent); unemployed_spd += 6*(1-dissent); old_middle_spd -= 6*(1-dissent); new_middle_spd -= 2*(1-dissent); unemployment_insurance_threshold = unemployed; unemployment_insurance_timer = 10; weimar_dissent += 1 if weimar_plan_adopted == 1; economic_growth -= 0.4; socialism -= 2
 
-We have increased employer contributions to the unemployment insurance fund, allowing the program to continue without hurting workers and the unemployed. Perhaps understandably, the capitalists and their political parties are furious, while our base in the unions and among the unemployed are pleased.
+我们提高了雇主对失业保险基金的缴款,使该计划得以延续,又不伤害工人与失业者。资本家及其政党大为震怒 —— 这或许可以理解;而我们在工会与失业者中的基本盘则感到满意。
 
 
 @balance
@@ -52,4 +52,4 @@ go-to: balance_done if not legislature_enabled; legislative_menu if legislature_
 @balance_done
 on-arrival: workers_spd -= 4; unemployed_spd -= 5; workers_kpd += 4; unemployed_kpd += 3; unemployed_nsdap += 3; left_dissent += 10; labor_dissent += 8; center_dissent += 5; welfare -= 1; budget += 1; month += 1; kpd_relation -= 4; inflation -= 1; unemployment_insurance_threshold = unemployed; unemployment_insurance_timer = 10; coalition_dissent = 2 if in_grand_coalition and dvp_relation < 30; coalition_dissent += 1 if in_grand_coalition; economic_growth -= 0.2; socialism -= 1
 
-Neither side is entirely satisfied by our compromise solution. Many of the workers and unemployed see this as a betrayal, although we present it as the successful aversion of a much worse alternative. [? if in_grand_coalition: Meanwhile, the DVP is aghast at the prospect of raising any taxes on businesses at all. ?]
+我们这种折中方案令双方都不完全满意。许多工人与失业者视之为背叛 —— 尽管我们把它说成是成功避免了一个远为糟糕的选择。[? if in_grand_coalition: 与此同时,人民党一想到要对企业加税就惊骇不已。 ?]

@@ -93,7 +93,7 @@ choose-if: resources >= 1 and z_relation >= 35
 on-arrival: eckener_campaign = 1; resources -= 1
 go-to: eckener_campaign
 
-## note: and nsdap_votes + dnvp_votes + kpd_votes + unemployed >= 50, [? if nsdap_votes + kpd_votes + unemployed < 50 : Hugo Eckener isn't willing to unnecessarily run, nor is our party willing to back him. ?]
+## note: and nsdap_votes + dnvp_votes + kpd_votes + unemployed >= 50, [? if nsdap_votes + kpd_votes + unemployed < 50 : 胡戈·埃克纳不愿做无谓的参选,我党也不愿支持他。 ?]
 
 胡戈·埃克纳原本不愿参选,但当他听说兴登堡不会参选时,便决定出马,作为抵御反民主候选人的一道屏障。
 
@@ -428,29 +428,29 @@ Q.seldte_votes_disp = Q.seldte_votes.toFixed(1);
 !}
 go-to: hindenburg_wins if hindenburg_majority == 1; thalmann_wins if thalmann_majority == 1; hitler_wins if hitler_majority == 1; braun_wins if braun_majority == 1; eckener_wins if eckener_majority == 1; gessler_wins if gessler_majority == 1; duesterburg_wins if duesterburg_majority == 1; seldte_wins if seldte_majority == 1; no_majority_round1 if any_majority == 0 and election_round == 1; round2_results if election_round >= 2
 
-Results:
+结果:
 
-[? if eckener_campaign : Eckener - [+ eckener_votes_disp +]% ?]
+[? if eckener_campaign : 埃克纳 - [+ eckener_votes_disp +]% ?]
 
-[? if burgerblock_campaign : Gessler - [+ gessler_votes_disp +]% ?]
+[? if burgerblock_campaign : 格斯勒 - [+ gessler_votes_disp +]% ?]
 
 [? if hindenburg_running : Hindenburg - [+ hindenburg_votes_disp +]% ?]
 
-[? if duesterburg_campaign : Duesterburg - [+ duesterburg_votes_disp +]% ?]
+[? if duesterburg_campaign : 杜斯特贝格 - [+ duesterburg_votes_disp +]% ?]
 
-[? if seldte_campaign : Seldte - [+ seldte_votes_disp +]% ?]
+[? if seldte_campaign : 泽尔特 - [+ seldte_votes_disp +]% ?]
 
 [? if not hitler_support_hindenburg and not hitler_support_seldte : [+ nsdap_candidate +] - [+ hitler_votes_disp +]% ?]
 
-[? if kpd_support_braun == 0 : Thälmann - [+ thalmann_votes_disp +]% ?]
+[? if kpd_support_braun == 0 : 台尔曼 - [+ thalmann_votes_disp +]% ?]
 
-[? if braun_campaign > 0 : Braun - [+ braun_votes_disp +]% ?]
+[? if braun_campaign > 0 : 布劳恩 - [+ braun_votes_disp +]% ?]
 
 @no_majority_round1
 on-arrival: hitler_support_hindenburg = 1 if (braun_plurality or thalmann_plurality) and hindenburg_running; hitler_support_seldte = 1 if (eckener_plurality or gessler_plurality or thalmann_plurality or braun_plurality) and not hindenburg_running; duesterburg_campaign = 0 if not duesterburg_pluality; seldte_campaign = 1 if not duesterburg_plurality and not hindenburg_running; dvp_support_eckener = 1 if hitler_plurality or thalmann_plurality and eckener_campaign and burgerblock_campaign; burgerblock_campaign = 0 if hitler_plurality or thalmann_plurality and eckener_campaign and burgerblock_campaign; 
 go-to: round2_menu
 
-There is no majority in this round. In the second round, any candidate who wins a plurality will win overall. What should we do?
+这一轮没有多数。在第二轮中,任何赢得相对多数的候选人都将整体胜出。我们该怎么办?
 
 [? if not duesterburg_plurality : 迪斯特贝格在意识到自己是犹太人后退出了竞选 —— 这一事实彻底摧毁了他的选情。 [? if not hindenburg_running : 接替他的是钢盔团的另一位领袖弗朗茨·泽尔特。 ?] ?]
 

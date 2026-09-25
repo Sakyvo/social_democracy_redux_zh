@@ -5,9 +5,9 @@ view-if: what_the_hell = 1 and in_bourgeois_coalition = 1 and ((year = 1930 and 
 tags: event
 max-visits: 1
 
-= Brüning's government falls
+= 布吕宁政府垮台
 
-Despite winning a majority through defections from the DNVP, Brüning's austerity measures have still alienated many minor middle class and special interest parties, most prominently the Economic Party which has now turned on him, calling a vote of no confidence.
+尽管借助国家人民党的倒戈赢得了多数,布吕宁的紧缩措施仍然疏远了许多小型的中间阶层政党与特殊利益政党 —— 其中尤以经济党最为突出,它如今已转而反对他,提出了一项不信任案。
 
 - @vote_against: 投票支持不信任案,并支持举行新的选举。
 - @vote_for: 投票反对不信任案,实际上提供容忍支持。
@@ -16,9 +16,9 @@ Despite winning a majority through defections from the DNVP, Brüning's austerit
 on-arrival: time_to_election = 3; what_the_hell = 0; in_bourgeois_coalition = 0
 call: set_next_election_time
 
-With our continued opposition, the motion of no confidence succeeds, and new elections are called for [+ next_election_month : month +] [+ next_election_year +].
+随着我们持续反对,不信任案获得通过,新的选举定于 [+ next_election_month : month +] [+ next_election_year +]。
 
 @vote_for
 on-arrival: spd_toleration = 1; what_the_hell = 0; in_bourgeois_coalition = 0; left_dissent += 10; labor_dissent += 5; workers_spd -= 3; unemployed_spd -= 5
 
-We reason that the Nazi growth in local elections is reason to avoid new elections, which may see them grow significantly. The party's left and labor wings are dissatisfied with our arguments, reminding us of the betrayal of the bourgeois parties prior.
+我们推断,纳粹在地方选举中的增长正是避免新选举的理由 —— 新选举可能让他们大幅扩张。我党左翼与工会翼对我们的论证不满意,还提醒我们别忘了资产阶级政党此前的背叛。

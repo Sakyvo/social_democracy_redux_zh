@@ -10,7 +10,7 @@ go-to: menu if chancellor != "Wirth"; wirth_resign_hindenburg if chancellor == "
 
 @menu
 
-[+ chancellor +] has announced his intentions to [+ president +] to reshuffle the cabinet, sacking and replacing all current SPD ministers and replacing them with bourgeois ones. [? if bourgeois_coalition < 50 and right_coalition < 50 : Luckily, they lack a majority without us, so we can bring them down with a simple motion of no confidence. ?]
+[+ chancellor +] 已向 [+ president +] 表明打算改组内阁:解除所有现任社民党部长之职,改以资产阶级人士替换。[? if bourgeois_coalition < 50 and right_coalition < 50 : 所幸没有我们他们便不占多数,所以我们能以一次简单的不信任案把他们搞垮。 ?]
 
 - @try_assuage: 设法安抚我们的盟友。
 - @right_coalition: 国家人民党取代我们进入政府。

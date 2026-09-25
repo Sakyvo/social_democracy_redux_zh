@@ -8,9 +8,9 @@ tags: event
 
 = [+ year +] 年纳粹党代表大会
 
-After abandoning revolutionary tactics with the failure of the Beer Hall Putsch and instead attempting to subvert democracy from within through hardline, non-compromising parliamentary participation, the Nazis have seen their tactics yet again fail.
+在啤酒馆政变失败后放弃革命策略、转而试图通过强硬而不妥协的议会参与从内部颠覆民主之后,纳粹党再次见证了自己的策略失败。
 
-Now, emerging from a long period of internal re-consolidation, the Nazis have unveiled their new party manifesto. On the surface a significant moderation, [+ nsdap_leader +]'s convictions and those of his party remain unchanged. The Nazis have simply undergone the next natural change in the strategy for destroying democracy, becoming a true trojan horse.
+如今,在经历漫长的内部重新整合后,纳粹党公布了新的党纲。表面上是显著的温和化,但 [+ nsdap_leader +] 及其政党的信念丝毫未变。纳粹党只是走上了摧毁民主战略的下一步自然演变 —— 成为一匹真正的特洛伊木马。
 
 - @concern: 事态堪忧。
 - @iron_front: 用铁前线对法西斯分子保持压力!
@@ -18,4 +18,4 @@ Now, emerging from a long period of internal re-consolidation, the Nazis have un
 @concern
 on-arrival: nazi_urgency += 1
 
-Hopefully, by now democracy has been entrenched enough that it will be impossible for the Nazis to dislodge.
+但愿民主至今已足够根深蒂固,纳粹党再也无力撼动它。

@@ -36,7 +36,7 @@ go-to: marx if president == "Marx"; thing_did if president != "Marx"
 choose-if: grand_coalition >= 50 and (z_relation >= 45 or z_party_leader == "Joos") and (dvp_relation >= 30 or stresemann_dead == 0)
 subtitle: 社民党 + 中央党 + 巴伐利亚人民党 + 民主党 + 人民党 ([+ grand_coalition +]%)
 on-arrival: leverage = spd_r
-unavailable-subtitle: 社民党 + 中央党 + 巴伐利亚人民党 + 民主党 + 人民党 ([+ grand_coalition +]%) - [? if grand_coalition < 50 : We do not have the votes. ?][? if (z_relation < 45 and z_party_leader != Joos) or (dvp_relation < 30 and stresemann_dead == 1) : The right would rather see their government fall than let us into government. ?]
+unavailable-subtitle: 社民党 + 中央党 + 巴伐利亚人民党 + 民主党 + 人民党 ([+ grand_coalition +]%) - [? if grand_coalition < 50 : 我们没有足够的票数。 ?][? if (z_relation < 45 and z_party_leader != Joos) or (dvp_relation < 30 and stresemann_dead == 1) : 右翼宁可看着自己的政府垮台,也不愿让我们进入政府。 ?]
 go-to: election_1928.grand_coalition_z_lead
 
 我们已进入政府,接替了国家人民党的位置。

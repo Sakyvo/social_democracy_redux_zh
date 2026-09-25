@@ -8,6 +8,6 @@ max-visits: 1
 
 = 左翼成员分裂
 
-Our policy choices have greatly offended the left, and many of their leaders have split to form a new party, the SAPD, or Socialist Worker's Party. They do not count a huge section of our membership, so this should be survivable. 
+我们的政策选择极大触怒了左翼,他们的许多领袖已经分裂出去,组建了一个新政党:社会主义工人党(SAPD)。他们并未带走我们党员的很大一部分,所以这应该是可以承受的。
 
-[? if centrists_resign = 1 : Many former Centrist Marxists have joined with the SAPD, the party formed by dissident leftists. They have brought their support base and organization skills to the party, leading to its growth as a nascent rival to the SPD for the support of the working class. ?] [? if unions_independent == 1 : Many formerly SPD-affiliated unions have flocked to the SAPD, helping unite the previously scattered trade unions behind it. [? if centrists_resign == 1 : The Center Marxists have helped bring the unions under the SAPD's fold. ?] ?]
+[? if centrists_resign = 1 : 许多前中间派马克思主义者加入了社会主义工人党 —— 那个由异见左翼组成的政党。他们为该党带来了自己的支持基础与组织才能,使它成长为社民党在工人阶级支持上的一个初生对手。 ?] [? if unions_independent == 1 : 许多原先附属于社民党的工会已涌向社会主义工人党,帮助把此前零散的工会统一到其旗下。[? if centrists_resign == 1 : 中间派马克思主义者帮助把工会纳入了社会主义工人党的怀抱。 ?] ?]

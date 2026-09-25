@@ -8,8 +8,8 @@ tags: event
 
 = 洛桑会议
 
-At the Lausanne Conference, the Allies have met with Germany's representatives in order to deal with the issue of war reparations once and for all. In light of the current economic crisis, the Allies believe that Germany is unable to make the reparation payments.
+在洛桑会议上,协约国与德国代表会面,意在一劳永逸地解决战争赔款问题。鉴于当前的经济危机,协约国认为德国无力支付赔款。
 
-Therefore, our reparations have been paused indefinitely! This should reduce the strain on our budget. [? if spd_in_government and foreign_minister_party == "SPD": Even though this is not our accomplishment, our foreign ministry is eager to take credit for this accomplishment. ?][? if not spd_in_government and foreign_minister_party != "SPD": Even though this is not the work of the foreign ministry, it is eager to take credit for this accomplishment. ?]
+因此,我们的赔款已被无限期暂停!这应会减轻我们预算的压力。 [? if spd_in_government and foreign_minister_party == "SPD": 尽管这不是我们的功劳,我们的外交部仍急于把这份功绩揽到自己身上。 ?][? if not spd_in_government and foreign_minister_party != "SPD": 尽管这不是外交部的功劳,它仍急于把这份功绩揽到自己身上。 ?]
 
 

@@ -63,7 +63,7 @@ call: set_next_election_time
 
 @debug_never
 title: DEBUG:绝不
-subtitle: Never = 1
+subtitle: 永不具备 = 1
 view-if: legislature_enabled
 on-arrival: never = 1
 

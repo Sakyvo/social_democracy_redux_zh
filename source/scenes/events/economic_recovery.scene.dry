@@ -8,4 +8,4 @@ max-visits: 1
 
 = 全球经济复苏
 
-Finally, countries across the world seem to be recovering from the worst effects of the Great Depression. It is an uneven recovery, but we seem to be exiting the worst period of crisis. [? if unemployed >= 10: Our unemployment has fallen. ?]
+终于,世界各国似乎正从大萧条最严重的后果中复苏。这是一场不均衡的复苏,但我们似乎正在走出危机最艰难的时期。[? if unemployed >= 10: 我们的失业率已经下降。 ?]

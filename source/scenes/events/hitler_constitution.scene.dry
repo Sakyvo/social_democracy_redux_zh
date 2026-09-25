@@ -59,7 +59,7 @@ Q.nazi_reform *= ((Q.enemy_strength*4)/Q.defense_strength)
 @prevention_civil_war
 on-arrival: spd_rebel = 1
 
-Clashes in the streets between the SA and the Reichsbanner escalate as the Stalhelm enters against our forces under the direction of the Harzburg Front. Communist fighters, emboldened by the chaos, enter the fray as well, and soon any semblance of law and order has collapsed as real control devolves to the clashing paramilitaries. In an attempt to salvage control of the situation Hitler attempts to deploy the Reichswehr and quell the fighting but this has only escalated things further as the ADGB prepares to call a general strike. Whether we want one or not, we have been forced into fighting a civil war.
+随着钢盔团在哈茨堡阵线的指挥下加入对我方力量的进攻,冲锋队与国旗团在街头的冲突不断升级。共产党战士受混乱的鼓舞也加入了混战;很快,任何法律与秩序的表象都崩塌了,真正的控制权下落到相互厮杀的准军事组织手中。为挽救对局面的掌控,希特勒试图调动国防军平息战斗,但这只是让事态进一步升级,因为德国工会总联合会正准备发动总罢工。无论我们愿不愿意,我们都被迫卷入了一场内战。
 
 - @civil_war: 这就是内战。
 

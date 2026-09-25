@@ -6,7 +6,7 @@ on-arrival: panzerkreuzer_seen = 1
 view-if: panzerkreuzer_seen = 0 and year = 1928 and month >= 8 and reichswehr_minister_party = "SPD" and spd_in_government = 1
 new-page: true
 
-= Panzerkreuzer
+= 装甲巡洋舰
 
 海军领袖要求建造一艘新的战列巡洋舰,这是前政府许下的承诺。既然国防部掌握在我们手中,是否建造这艘战列巡洋舰便由我们决定。
 

@@ -38,12 +38,12 @@ on-arrival: price_controls = 1; black_market += 3; black_market += 6 if capital_
 view-if: price_controls
 on-arrival: inflation_goal -= 1 if inflation_goal > price_controls; capital_strike_progress += 2; inflation -= 2; black_market += 6; hyperinflation = 0; coalition_dissent += 1; unemployed += 1; old_middle_spd -= 2; new_middle_spd -= 2; rural_spd -= 4; workers_spd -= 1; unemployed_spd += 2; labor_dissent += 3; dvp_relation -= 3; z_relation -= 2; ddp_relation -= 2; economic_growth -= 0.2
 
-We tighten price controls, aiming to reduce inflation further beyond its current levels. This causes further growth in the black market.
+我们收紧价格管制,力求把通胀压到当前水平以下。这导致黑市进一步膨胀。
 
 @bank
 on-arrival: capital_strike_progress += 2
 
-Unfortunately, but perhaps expectedly, the Reichsbank is refusing to help the government, claiming that our socialist policies are solely to blame. Reichsbank president [? if year <= 1930 : Hjalmar Schacht ?][? if year > 1930 : Hans Luther ?] is all but calling for the fall of the government.
+不幸但或许也在意料之中,国家银行拒绝帮助政府,声称全怪我们的社会主义政策。国家银行总裁[? if year <= 1930 : 亚尔马·沙赫特 ?][? if year > 1930 : 汉斯·路德 ?] 简直就是在呼吁政府下台。
 
 @nothing
 on-arrival: capital_strike_progress += 1

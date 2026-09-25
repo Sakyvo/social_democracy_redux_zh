@@ -15,6 +15,6 @@ on-arrival: reichswehr_loyalty -= 0.05 if reichswehr_loyalty >= 0.05; reichswehr
 on-arrival: spd_rebel = 1
 subtitle: 到了内战摊牌的时候了。
 
-We mobilize the Reichsbanner to meet the SA in the streets as the Reichswehr is called out of its barracks to fight us. [? if judicial_reform >= 2 : The courts strike down the martial law, handing us legitimacy. ?][? if judicial_reform < 2 : The courts certify the martial law, but we know they're illegitimate. ?]
+我们动员国旗团上街迎击冲锋队,而国防军则被调出营房来与我们作战。[? if judicial_reform >= 2 : 法院判定戒严无效,给了我们正当性。 ?][? if judicial_reform < 2 : 法院认可了戒严,但我们知道它们不具备正当性。 ?]
 
 - @civil_war: 这就是内战。

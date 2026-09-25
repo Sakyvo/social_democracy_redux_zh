@@ -8,9 +8,9 @@ tags: event
 
 = 希特勒在奥地利
 
-We have just heard from Vienna that Hitler, who, following his deportation from Germany chose to become politically active in the Austrian Nazi movement, has called on his German compatriots to take the struggle to Austria where he claims the seeds for German renewal are being sown in a far riper environment. 
+我们刚刚从维也纳得到消息:希特勒在被驱逐出德国之后选择在奥地利纳粹运动中从政,如今已号召他的德国同胞把斗争带到奥地利去 —— 他声称,德国复兴的种子正在那里远为肥沃的土壤中播下。
 
-[? if sa_banned == 1 : This call has resonated with many in the now-illegal SA, who have grown tired of being part of an illegal and clandestine group and would prefer to return to open thuggery in the streets. ?]
+[? if sa_banned == 1 : 这一号召在如今已属非法的冲锋队中引起许多共鸣 —— 他们已厌倦作为一个非法秘密团体的一员,宁愿回到街头上公然行凶。 ?]
 
 - @welp: 我们只能指望奥地利社会民主党像我党一样,能保卫奥地利工人免受法西斯侵害。
 - @support_them: 我们必须向奥地利社会民主党提供支持!
@@ -18,7 +18,7 @@ We have just heard from Vienna that Hitler, who, following his deportation from 
 @welp
 on-arrival: left_dissent += 5
 
-Of course, it is out of our control. But some in our party nonetheless feel as though we surely can do something...?
+当然,此事不由我们掌控。但我党一些人仍觉得,我们总该能做点什么……?
 
 @support_them
 on-arrival: resources -= 1; sdapo_strength += 1; austria_relation += 1
@@ -26,4 +26,4 @@ choose-if: resources >= 1
 unavailable-subtitle: -1 资源。我们负担不起。
 subtitle: -1 资源.
 
-We have provided our comrades in Austria with resources, in the hopes that they might use these to defend against the now truly international Nazi threat.
+我们向奥地利的同志提供了资源,希望他们能用这些来抵御如今真正国际化的纳粹威胁。

@@ -6,7 +6,7 @@ on-arrival: panzerkreuzer_seen = 1
 view-if: panzerkreuzer_seen = 0 and year = 1928 and month >= 8 and reichswehr_minister_party != "SPD" and spd_in_government = 1
 new-page: true
 
-= Panzerkreuzer
+= 装甲巡洋舰
 
 国防部要求建造一艘新的战列巡洋舰,作为德国重整军备的一部分。我们的执政伙伴一致支持。虽然我党许多成员激烈反对新增军费支出,但这次表决或许对保住联盟是必要的。
 我们当初是以「给孩子面包,而不是战列巡洋舰」为口号竞选的。我们真的背弃竞选承诺吗?
@@ -56,7 +56,7 @@ go-to: braun if chancellor = "Braun"; muller if chancellor = "Müller"
 @braun
 on-arrival: panzerkreuzer_funded = 0; nationalism -= 3*(1-dissent); panzerkreuzer_failed = 1; workers_spd += 5*(1-dissent); coup_progress += 1
 
-我们执政伙伴对我们的强硬态度感到震惊!不过,布劳恩总理成功说服了我们的内阁部长们,放弃就战列巡洋舰进行表决的计划。 The ship will not be built!
+我们执政伙伴对我们的强硬态度感到震惊!不过,布劳恩总理成功说服了我们的内阁部长们,放弃就战列巡洋舰进行表决的计划。 这艘舰不会建成!
 
 @muller
 go-to: muller_passed if left_coalition < 50; muller_beaten if left_coalition >= 50
@@ -118,7 +118,7 @@ on-arrival: panzerkreuzer_funded = 1; bill_support = bourgeois_coalition+far_rig
 @vote_no_success
 on-arrival: panzerkreuzer_funded = 0; nationalism -= 3*(1-dissent); panzerkreuzer_failed = 1; workers_spd += 5*(1-dissent); coup_progress += 1; bill_support = bourgeois_coalition+far_right_coalition
 
-我们执政伙伴对我们的强硬态度感到震惊![+ chancellor +] 总理将此事项提交国会表决 —— 即便除社民党与共产党之外的各党都赞成,表决仍未通过。 The ship will not be built!
+我们执政伙伴对我们的强硬态度感到震惊![+ chancellor +] 总理将此事项提交国会表决 —— 即便除社民党与共产党之外的各党都赞成,表决仍未通过。 这艘舰不会建成!
 
 共产党:反对
 

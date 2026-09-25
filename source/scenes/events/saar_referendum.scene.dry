@@ -48,7 +48,7 @@ Q.unemployed_spd -= 3;
 view-if: saar_pro >= 50
 on-arrival: saarland = 1; catholics += 1; workers_nsdap += 5 if ((saar_pro-sa_force) < 50); workers_spd -= 3 if saar_pro < 70; dvp_relation -= 4 if saar_pro < 70; nationalism += 3
 
-果不其然,vote to rejoin Germany wins with [+ saar_pro +]%. [? if ((saar_pro-sa_force) < 50) : The Nazis were very active in the campaign, intimidating voters with their SA, and have claimed the victory as theirs. ?]
+果不其然,重新并入德国的投票以 [+ saar_pro +]% 获胜。 [? if ((saar_pro-sa_force) < 50) : 纳粹党在这场运动中非常活跃,以冲锋队恐吓选民,并把胜利据为己有。 ?]
 
 [? if saar_pro < 70 : 获胜的差距近得令人不安,我们的公信力也因此受损。 ?]
 

@@ -10,7 +10,7 @@ set-jump: post_election_1928
 # the low priority means that this event is only seen after all other events are resolved for the month.
 # note: z_coalition = z_relation + (pro_republic/2); z_coalition *= 1.25 if z_party_leader == "Joos";
 
-= Elections, [+ month : month +] [+ year +]
+= 选举,[+ month : month +] [+ year +]
 
 国会选举即将举行。
 
@@ -338,7 +338,7 @@ go-to: coalition_menu if not vonc_formed; coalition_vonc if vonc_formed
 {!<svg id="reichstag" style="width: 500px; height: 250px;"> </svg>!}
 
 {!<table>!} 
-{!<tr><td>Party</td><td>Vote share</td><td>% Change</td></tr>!}
+{!<tr><td>党派</td><td>得票份额</td><td>% 变化</td></tr>!}
 {!<tr><td><div class="box" style='background-color:#E3000F; outline: 2px; outline-style: solid;'> </div> !} **SPD:** {!</td><td>!} **[+ spd_r +]%** {!</td><td>!} **[+ str_change_spd +]** {!</td></tr>!}
 
 [? if vonc_formed == 1 : {!<tr><td><div class="box" style='background-color:#ffffff00'> </div> !}Voncspartei: {!</td><td>!} [+ vonc_r +]% {!</td><td>!} [+ str_change_vonc +] {!</td></tr>!} ?]
@@ -357,7 +357,7 @@ go-to: coalition_menu if not vonc_formed; coalition_vonc if vonc_formed
 
 {!<tr><td><div class="box" style='background-color:#D5AC27'> </div> !} DVP: {!</td><td>!} [+ dvp_r +]% {!</td><td>!} [+ str_change_dvp +] {!</td></tr>!}
  
-{!<tr><td><div class="box" style='background-color:#a0a0a0'> </div> !} Others: {!</td><td>!} [+ other_r +] % {!</td><td>!} [+ str_change_other +] {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#a0a0a0'> </div> !} 其他: {!</td><td>!} [+ other_r +] % {!</td><td>!} [+ str_change_other +] {!</td></tr>!}
 
 {!<tr><td><div class="box" style='background-color:#3f7bc1'> </div> !} DNVP: {!</td><td>!} [+ dnvp_r +]% {!</td><td>!} [+ str_change_dnvp +] {!</td></tr>!}
 
@@ -997,7 +997,7 @@ subtitle: [? if times_waited >= 6 : 他们怎么这么久? ?]
 [? if times_waited == 1 : 我相信,快了。 ?]
 [? if times_waited == 2 : 他们大概在照料希特勒的伤势。 ?]
 [? if times_waited == 3 : 等他们忙完就会过来。 ?]
-[? if times_waited == 4 : Probably. ?]
+[? if times_waited == 4 : 大概吧。 ?]
 [? if times_waited == 5 : 反正我是这么想的。 ?]
 [? if times_waited == 6 : 我的意思是「我们」这么以为。抱歉。 ?]
 [? if times_waited == 7 : 这段本来该用第二人称写的。 ?]
@@ -1032,9 +1032,9 @@ subtitle: [? if times_waited >= 6 : 他们怎么这么久? ?]
 [? if times_waited == 209 : 但前提是你别告诉任何人。 ?]
 [? if times_waited == 210 : 到 Reddit 或 Discord 上找我来领奖就行。 ?]
 [? if times_waited == 211 : 好了,专属台词到此结束。 ?]
-[? if times_waited == 212 : Bye. ?]
+[? if times_waited == 212 : 再见。 ?]
 [? if times_waited > 213 and times_waited < 1000 : 这次真的再见了。 ?]
-[? if times_waited == 1000 : Psyche! ?]
+[? if times_waited == 1000 : 逗你的! ?]
 [? if times_waited >= 1001 : 其实没有。 ?]
 
 - @wait: 等等。
@@ -2102,7 +2102,7 @@ title: 一个涵盖所有拥护宪法政党的「新大联盟」?
 subtitle: 社民党 + 中央党 + [+ bvp_name +] + [+ ddp_name +] + 人民党 + 其他 ([+ neo_weimar_coalition +]%)
 view-if: neo_weimar_coalition >= 50 and grand_coalition < 50
 choose-if: z_relation >= 50 and dvp_relation >= 30 and president != "Hitler"
-unavailable-subtitle: 社民党 + 中央党 + [+ bvp_name +] + [+ ddp_name +] + 人民党 + 其他 ([+ neo_weimar_coalition +]%) - [? if z_relation < 50 : We do not have adequate relations with the Center Party. ?][? if dvp_relation < 30 : We do not have adequate relations with the DVP. ?][? if president == "Hitler" : Hitler refuses to appoint a chancellor under such a governing arrangement. ?]
+unavailable-subtitle: 社民党 + 中央党 + [+ bvp_name +] + [+ ddp_name +] + 人民党 + 其他 ([+ neo_weimar_coalition +]%) - [? if z_relation < 50 : 我们与中央党的关系还不够好。 ?][? if dvp_relation < 30 : 我们与人民党的关系还不够好。 ?][? if president == "Hitler" : 希特勒拒绝在这样的执政安排下任命总理。 ?]
 
 我们要如何说服那些激烈反社会主义的政党,容许我们组成一个多数派联盟?我们与中央党及人民党大体友善的关系,或许能给我们一些筹码。
 
@@ -2141,7 +2141,7 @@ go-to: ministries
 @unity_government
 title: 中央党提议由约瑟夫·维尔特出任总理,组建一个「民族团结政府」。
 subtitle: 社民党 + 中央党 + [+ bvp_name +] + [+ ddp_name +] + 人民党 + 其他 ([+ neo_weimar_coalition +]%)
-unavailable-subtitle: 社民党 + 中央党 + [+ bvp_name +] + [+ ddp_name +] + 人民党 + 其他 ([+ neo_weimar_coalition +]%) - [? if president == "Hitler" : Hitler refuses to appoint a chancellor under such a governing arrangement. ?]
+unavailable-subtitle: 社民党 + 中央党 + [+ bvp_name +] + [+ ddp_name +] + 人民党 + 其他 ([+ neo_weimar_coalition +]%) - [? if president == "Hitler" : 希特勒拒绝在这样的执政安排下任命总理。 ?]
 choose-if: president != "Hitler"
 view-if: z_party_leader == "Joos" and neo_weimar_coalition >= 50 and weimar_coalition < 50  and z_relation >= 10 and (anti_democratic_coalition + unemployed) >= 50 and unity_refused != 1
 
@@ -2212,7 +2212,7 @@ on-arrival: chancellor = "Schleicher"; pro_republic -= 10; next_election_time = 
 
 看不到通往多数派政府的道路。兴登堡对帕彭不满,要求他辞职。于是前陆军将领库尔特·冯·施莱谢尔被任命为总理,仍属于总统内阁的一部分。
 
-施莱谢尔的政府在国会各党中极不受欢迎。尽管他支持与纳粹党组成联盟,纳粹党却想独揽大权,不要施莱谢尔。[? if largest_party == "NSDAP" : However, the Nazis failure again to form a government leads to further loss of momentum. ?]
+施莱谢尔的政府在国会各党中极不受欢迎。尽管他支持与纳粹党组成联盟,纳粹党却想独揽大权,不要施莱谢尔。[? if largest_party == "NSDAP" : 然而,纳粹党再次组阁失败,进一步丧失了势头。 ?]
 
 新的选举已定于 [+ next_election_month : month +] [+ next_election_year +]。
 
@@ -2732,7 +2732,7 @@ if (Q.no_majority_elections >= 2) {
 }
 !}
 
-There is no path to a workable Reichstag majority or minority government. 下一次选举定于 [+ next_election_month : month +] [+ next_election_year +]。
+已无通往可行的国会多数或少数派政府的道路。下一次选举定于 [+ next_election_month : month +] [+ next_election_year +]。
 
 这场磨难动摇了人民对民主的信心。纳粹党当然正利用这种动荡,声称民主行不通,德国需要一位强有力的领袖。
 

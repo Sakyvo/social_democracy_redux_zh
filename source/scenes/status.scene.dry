@@ -49,15 +49,15 @@ SPD: [+ spd_r +]%
 # 1928: 15, 1930: 15, 1932: 
 Z + BVP: [+ z_r +]%
 # 1928: 10, 1930: 13
-KPD: [+ kpd_r +]%
+共产党: [+ kpd_r +]%
 # 1928: 5, 1930: 4 (as DstP)
-DDP: [+ ddp_r +]%
+民主党: [+ ddp_r +]%
 # 1928: 9, 1930: 5
-DVP: [+ dvp_r +]%
+人民党: [+ dvp_r +]%
 # 1928: 14, 1930: 7
-DNVP: [+ dnvp_r +]%
+国家人民党: [+ dnvp_r +]%
 # 1928: 3, 1930: 18
-NSDAP: [+ nsdap_r +]%
+纳粹党: [+ nsdap_r +]%
 # 1928: 9, 1930: 10
 其他: [+ other_r +]%
 
@@ -82,17 +82,17 @@ NSDAP: [+ nsdap_r +]%
 = 党际关系
 
 
-Z: [+ z_relation : relationships +]
+中央党: [+ z_relation : relationships +]
 
-DDP: [+ ddp_relation : relationships +]
+民主党: [+ ddp_relation : relationships +]
 
-DVP: [+ dvp_relation : relationships +]
+人民党: [+ dvp_relation : relationships +]
 
-KPD: [+ kpd_relation : relationships +]
+共产党: [+ kpd_relation : relationships +]
 
-DNVP: [+ dnvp_relation : relationships +]
+国家人民党: [+ dnvp_relation : relationships +]
 
-NSDAP: [+ nsdap_relation : relationships +]
+纳粹党: [+ nsdap_relation : relationships +]
 
 = 社民党内部派系
 
@@ -186,17 +186,17 @@ SPD: [+ spd_votes +]%
 
 Z + BVP: [+ z_votes +]%
 
-KPD: [+ kpd_votes +]%
+共产党: [+ kpd_votes +]%
 
 [? if not ddp_name: DDP?][? if ddp_name != 0 : [+ ddp_name +]?]: [+ ddp_votes +]%
 
-DVP: [+ dvp_votes +]%
+人民党: [+ dvp_votes +]%
 
-DNVP: [+ dnvp_votes +]%
+国家人民党: [+ dnvp_votes +]%
 
 [? if dne_formed : DNE: [+ dne_votes +]% ?]
 
-NSDAP: [+ nsdap_votes +]%
+纳粹党: [+ nsdap_votes +]%
 
 其他: [+ other_votes +]%
 

@@ -39,7 +39,7 @@ on-arrival: recognition_withheld = 1; coup_progress += 1; coup_progress += 1 if 
 
 作为有原则的反法西斯主义者,我们绝不能为那些我们曾竭力在本国抵御的法西斯分子对邻邦德意志国家的敌意接管背书(经济上的制裁除外)。我们不会拿原则做交易,把奥地利的友人弃于纳粹主义之下。我们必须无限期地拒绝承认这个政府,直到它作为一个孤立实体自行崩溃。
 
-然而,这一决定在民族主义与资产阶级右翼中大体上不受欢迎,他们攻击我们冷落奥地利、破坏德意志统一。 It seems they are too single-minded to realize that it is not German unity we are opposing but Hitler, the same man who would have done the same here as he is doing now in Austria if not for our efforts. When will they ever learn?
+然而,这一决定在民族主义与资产阶级右翼中大体上不受欢迎,他们攻击我们冷落奥地利、破坏德意志统一。 他们似乎一根筋得看不明白:我们反对的不是德意志统一,而是希特勒 —— 若不是我们的努力,这个人在德国本会做出他如今在奥地利所做的同样的事。他们究竟何时才能明白?
 
 - @sanction: 对奥地利实施经济制裁[? if customs_union : ,以实质上废除关税同盟?]。
 - @enough: 这就够了。

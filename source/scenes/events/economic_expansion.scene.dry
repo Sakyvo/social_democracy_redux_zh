@@ -7,9 +7,9 @@ tags: event
 
 = 经济扩张
 
-The German economy has been growing steadily for an extended period of time, and has low inflation and unemployment. The government is rewarded by additional tax revenue from the same tax rates. [? if not class_war : Even the capitalists find that they have little to complain about when it comes to government policies. ?][? if class_war : The success of our economy is attributed to socialism, which is finding widespread support. ?] One downside of this economic growth, however, is the rising risk of inflation.
+德国经济在较长时期内稳步增长,通胀与失业都处于低位。税率不变,政府却因额外的税收而受益。[? if not class_war : 连资本家都觉得,就政府政策而言,他们没什么好抱怨的。 ?][? if class_war : 我们经济的成功被归功于社会主义,后者正获得广泛支持。 ?] 不过,这种经济增长的一个弊端是通胀风险的上升。
 
-[? if capital_strike_progress < 0 and expansion_seen >= 2 and not in_grand_coalition and peoples_party : The economic growth under our governance has reached such a point that some industrialists are coming around to social democracy, at least under the form we have taken. ?]
+[? if capital_strike_progress < 0 and expansion_seen >= 2 and not in_grand_coalition and peoples_party : 在我们治理下的经济增长已达到这样的程度:一些工业家开始转而对社会民主抱有认同 —— 至少是我们所采取的这种形态。 ?]
 
 - @welcome_industry: [? if not capital_spd : 嗯,全民党就是全民党嘛…… ?][? if capital_spd : <span style="color:rgb(170,150,60);font-family:'Times New Roman',serif;font-weight:700;letter-spacing:0.5px;">照常做生意,很愉快。</span> ?]
 - @ew: 他们不想公开冲突,这挺好,但我们仍然反对他们的利益。
@@ -19,7 +19,7 @@ view-if: capital_strike_progress < 0 and expansion_seen >= 2 and not in_grand_co
 subtitle: +3 资源
 on-arrival: resources += 3; bourgeois_power += 0.02; left_dissent += 10; center_dissent += 10; labor_dissent += 5; bourgeoisie_spd += (2*economic_growth)*(1-dissent); bourgeoisie_dvp -= economic_growth; socialism -= (spd_votes*bourgeois_power)/10; capital_spd += 2; old_middle_spd += 5*bourgeois_power; new_middle_spd += 5*bourgeois_power; rural_spd += (5-land_reform)*bourgeois_power; kpd_relation -= 20
 
-We are not a party to turn away supports just because of their economic class; we abandoned that practice when we become a people's party. Corporations are people, too. It's only a natural progression of our policy.
+我们不是一个会因经济阶级而拒绝支持者的政党;自我们成为全民党以来,便已放弃了那种做法。公司也是人嘛。这不过是我们政策的自然演进。
 
 - @sylvan_sprite
 
@@ -38,6 +38,6 @@ unavailable-subtitle: <span style="color:rgb(170,150,60);font-family:'Times New 
 choose-if: not capital_spd
 on-arrival: capital_rejected = 1; capital_strike_progress = 2
 
-We're a party for the people against the elites; and, while it's great that we are able to constructively govern without obstruction by capital, we are still fundamentally against them. This will never change.
+我们是一个站在人民一边对抗精英的政党;能够不受资本阻挠而建设性地施政固然很好,但我们从根本上仍反对他们。这一点绝不会改变。
 
 ## if the DVP is in government, the economic growth is just credited to DVP policy

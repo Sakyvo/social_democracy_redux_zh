@@ -9,6 +9,6 @@ call: set_next_election_time
 
 = [? if chancellor == "Marx" : 马克思第四届 ?][? if chancellor == "Brüning" : 布吕宁第二届 ?] 政府的倒台
 
-The cabinet of [? if chancellor == "Marx" : Wilhelm Marx ?][? if chancellor == "Brüning" : Heinrich Brüning ?] has finally collapsed in a dispute over school law, with the coalition unable to agree on one due to the concerns of the DVP's more secular wing.
+[? if chancellor == "Marx" : 威廉·马克思 ?][? if chancellor == "Brüning" : 海因里希·布吕宁 ?] 的内阁终于因学校法之争而垮台 —— 由于人民党内较为世俗的一翼的顾虑,联盟无法就此达成一致。
 
-As a result, the Reichstag has been dissolved for new elections for [+ next_election_month : month +] [+ next_election_year +].
+结果,国会为举行新的选举而解散,选举定于 [+ next_election_month : month +] [+ next_election_year +]。

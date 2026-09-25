@@ -7,16 +7,16 @@ on-arrival: reformist_strength *= 0.3; workers_spd -= 10; workers_others += 5; n
 go-to: braun_resign_steg if p_weimar_coalition >= 50 and spd_prussia; braun_resign_elec if spd_prussia and p_weimar_coalition < 50
 max-visits: 1
 
-= Reformist leaders resign
+= 改良派领袖辞职
 
-Our policy choices have greatly offended the reformist faction. Many of our most experienced leaders have resigned.
+我们的政策选择极大地触怒了改良派。我们许多最有经验的领袖已经辞职。
 
 @braun_resign_steg
 on-arrival: spd_prussia = 0; z_prussia = 1
 
-Otto Braun, as Minister-President of Prussia, has resigned. His replacement is Adam Stegerwald, voted in by a majority of the Landtag.
+奥托·布劳恩已辞去普鲁士州总理一职。接替他的是由州议会多数选出的亚当·施特格瓦尔德。
 
 @braun_resign_elec
 on-arrival: prussia_election_month = month+3 if ((month+3 < prussia_election_month) or prussia_election_year < year); prussia_election_year = year; prussia_election_year += 1 if prussia_election_month > 12; prussia_election_month -= 12 if prussia_election_month > 12
 
-Otto Braun, as Minister-President of Prussia, has resigned. With no clear majority to replace him, he has dissolved the Landtag for elections.
+奥托·布劳恩已辞去普鲁士州总理一职。由于没有明确的多数可推出继任者,他已解散州议会以举行选举。

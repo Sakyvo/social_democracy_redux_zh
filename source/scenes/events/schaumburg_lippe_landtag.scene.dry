@@ -19,7 +19,7 @@ set-jump: schaumburg_lippe_election_1928
 @schaumburg_lippe_election_1928
 on-arrival: {!
 var total_schaumburg_lippe = 0;
-console.log("Starting normalization of Schaumburg-Lippe votes...");
+console.log("开始对绍姆堡-利珀选票进行归一化...");
 // normalize schaumburg_lippen votes
 for (var party of Q.parties) {
     Q[party+'_votes_schaumburg_lippe'] = 0;
@@ -248,7 +248,7 @@ go-to: coalition_menu
 {!<svg id="reichstag" style="width: 500px; height: 250px;"> </svg>!}
 
 {!<table>!} 
-{!<tr><td>Party</td><td>Vote share</td><td>% Change</td></tr>!}
+{!<tr><td>党派</td><td>得票份额</td><td>% 变化</td></tr>!}
 {!<tr><td><div class="box" style='background-color:#E3000F; outline: 2px; outline-style: solid;'> </div> !} **SPD:** {!</td><td>!} **[+ spd_schl +]%** {!</td><td>!} **[+ stpl_change_spd +]** {!</td></tr>!}
 
 [? if sapd_formed == 1 : {!<tr><td><div class="box" style='background-color:#C40000'> </div> !}SAPD: {!</td><td>!} [+ sapd_schl +]% {!</td><td>!} [+ stpl_change_sapd +] {!</td></tr>!} ?]
@@ -261,7 +261,7 @@ go-to: coalition_menu
 
 {!<tr><td><div class="box" style='background-color:#D5AC27'> </div> !} DVP: {!</td><td>!} [+ dvp_schl +]% {!</td><td>!} [+ stpl_change_dvp +] {!</td></tr>!}
  
-{!<tr><td><div class="box" style='background-color:#a0a0a0'> </div> !} Others: {!</td><td>!} [+ other_schl +] % {!</td><td>!} [+ stpl_change_other +] {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#a0a0a0'> </div> !} 其他: {!</td><td>!} [+ other_schl +] % {!</td><td>!} [+ stpl_change_other +] {!</td></tr>!}
 
 {!<tr><td><div class="box" style='background-color:#3f7bc1'> </div> !} DNVP: {!</td><td>!} [+ dnvp_schl +]% {!</td><td>!} [+ stpl_change_dnvp +] {!</td></tr>!}
 
@@ -296,14 +296,14 @@ title: 社民党赢得了多数。
 subtitle: 社民党 ([+ spd_schl +]%)
 view-if: spd_schl >= 50
 choose-if: never
-unavailable-subtitle: 社民党 ([+ spd_schl +]%) - The SPD wants to include the bourgeois in government.
+unavailable-subtitle: 社民党 ([+ spd_schl +]%) - 社民党希望把资产阶级纳入政府。
 
 @social_liberal
 title: 一个「社会自由主义」联盟
 subtitle: 社民党 + [+ ddp_name +] ([+ sch_social_liberal +]%)
 view-if: sch_social_liberal >= 50 or (sch_social_liberal < 50 and spd_schl < 50 and (sch_huh < 50 or (year >= 1930 and not dnvp_reform)))
 choose-if: year >= 1930 and not dnvp_reform
-unavailable-subtitle: 社民党 + [+ ddp_name +] ([+ sch_social_liberal +]%) - They want to include the DNVP in government.
+unavailable-subtitle: 社民党 + [+ ddp_name +] ([+ sch_social_liberal +]%) - 他们希望把国家人民党纳入政府。
 
 一个包含 [+ ddp_name +] 的「社会自由主义」联盟组成了。[? if spd_schl >= 50 : 尽管社民党本身已占多数。真奇怪。 ?]
 

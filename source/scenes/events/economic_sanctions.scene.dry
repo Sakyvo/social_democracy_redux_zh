@@ -8,6 +8,6 @@ max-visits: 1
 
 = 经济制裁
 
-[? if not capital_flight : In response to our military rearmament in contravention of the Versailles Treaty, ?][? if capital_flight : In response to our socialist transformation, ?] the Western Allies have imposed economic sanctions on Germany. The costs of the sanctions are largely borne by the proletariat; the people are facing increasing poverty.
+[? if not capital_flight : 作为对我们违反《凡尔赛条约》重整军备的回应, ?][? if capital_flight : 作为对我们社会主义改造的回应, ?] 西方协约国对德国实施了经济制裁。制裁的代价主要由无产阶级承担;人民正面临日益加剧的贫困。
 
 # options: 

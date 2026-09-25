@@ -419,7 +419,7 @@ go-to: advisor_menu
 
 @add_juchacz
 title: 玛丽·尤哈茨
-subtitle: 玛丽·尤哈茨是互助组织「工人福利会」的创立者。's Welfare, a mutual-aid organization.
+subtitle: 玛丽·尤哈茨是互助组织「工人福利会」的创立者。
 is-card: true
 card-image: img/portraits/JuchaczMarie.jpg
 view-if: juchacz_advisor = 0 and n_advisors < 3 and not juchacz_dead
@@ -431,7 +431,7 @@ tags: reformist_advisor
 
 @add_pfulf
 title: 安东尼·普菲尔夫
-subtitle: 安东尼·普菲尔夫是社会政策与妇女权利领域的领袖。's rights.
+subtitle: 安东尼·普菲尔夫是社会政策与妇女权利领域的领袖。
 is-card: true
 card-image: img/portraits/PfülfAntonie.jpg
 view-if: pfulf_advisor = 0 and n_advisors < 3 and not pfulf_dead
@@ -459,7 +459,7 @@ tags: left_advisor
 
 @add_sender
 title: 托尼·森德尔
-subtitle: 托尼·森德尔是一位反战与妇女权利的倡导者,也是国会议员。' rights advocate, and Reichstag member.
+subtitle: 托尼·森德尔是一位反战与妇女权利的倡导者,也是国会议员。
 is-card: true
 card-image: img/portraits/SenderToni.jpg
 view-if: sender_advisor = 0 and n_advisors < 3 and not sender_dead
@@ -561,7 +561,7 @@ go-to: advisor_menu
 
 @add_mierendorff
 title: 卡洛·米伦多夫
-subtitle: 卡洛·米伦多夫是国会最年轻的议员之一,也是「新修正主义」运动的发起人。他是一位反纳粹的战略家。 "Neo-Revisionist" movement. He is an anti-Nazi strategist.
+subtitle: 卡洛·米伦多夫是国会最年轻的议员之一,也是「新修正主义」运动的发起人。他是一位反纳粹的战略家。
 is-card: true
 card-image: img/portraits/MierendorffCarlo.jpg
 view-if: mierendorff_advisor = 0 and n_advisors < 3 and not mierendorff_dead

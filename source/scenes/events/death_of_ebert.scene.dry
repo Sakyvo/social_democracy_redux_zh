@@ -300,19 +300,19 @@ go-to: hindenburg_wins if hindenburg_majority == 1; marx_wins if marx_majority =
 
 [? if thalmann_campaign : 台尔曼 - [+ thalmann_votes_disp +]% ?]
 
-[? if braun_campaign : Braun - [+ braun_votes_disp +]% ?]
+[? if braun_campaign : 布劳恩 - [+ braun_votes_disp +]% ?]
 
 [? if hellpach_campaign : Hellpach - [+ hellpach_votes_disp +]% ?]
 
-[? if marx_campaign : Marx - [+ marx_votes_disp +]% ?]
+[? if marx_campaign : 马克思 - [+ marx_votes_disp +]% ?]
 
-[? if gessler_campaign : Gessler - [+ gessler_votes_disp +]% ?]
+[? if gessler_campaign : 格斯勒 - [+ gessler_votes_disp +]% ?]
 
 [? if held_campaign : Held - [+ held_votes_disp +]% ?]
 
 [? if jarres_campaign : Jarres - [+ jarres_votes_disp +]% ?]
 
-[? if hergt25_campaign : Hergt - [+ hergt_votes_disp +]% ?]
+[? if hergt25_campaign : 赫尔特 - [+ hergt_votes_disp +]% ?]
 
 [? if hindenburg_campaign : Hindenburg - [+ hindenburg_votes_disp +]% ?]
 

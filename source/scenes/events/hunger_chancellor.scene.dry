@@ -8,9 +8,9 @@ max-visits: 1
 
 = 饥饿总理
 
-People are calling Chancellor [+ chancellor +] the Hunger Chancellor because of his perceived callousness in the face of the depression. [? if chancellor_party == "SPD" : This is obviously a very bad sign for us. ?]
+人们把 [+ chancellor +] 总理称作「饥饿总理」,因为他在大萧条面前被认为冷酷无情。[? if chancellor_party == "SPD" : 这显然对我们是个很不好的信号。 ?]
 
-[? if spd_toleration == 1 : As we are currently tolerating the [+ chancellor +] government, this could very well reflect badly on us. ?]
+[? if spd_toleration == 1 : 由于我们目前正容忍 [+ chancellor +] 政府,这很可能会连累到我们的名声。 ?]
 
 - @maintain_toleration: 维持当前的执政安排。
 - @break_toleration: 结束容忍;投票反对这个政府。
@@ -20,7 +20,7 @@ subtitle: 为了维护民主,这是必要的。
 view-if: spd_toleration == 1
 on-arrival: left_dissent += 10; workers_nsdap += 2; workers_kpd += 3; unemployed_nsdap += 4; workers_spd -= 2; pro_republic -= 4; kpd_relation -= 5
 
-Our policy of toleration continues.
+我们的容忍政策继续。
 
 
 @break_toleration

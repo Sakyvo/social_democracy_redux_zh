@@ -6,9 +6,9 @@ on-arrival: right_coalition_failed = 1; dnvp_in_government = 0
 view-if: year = 1940 and month >= 8 and young_plan_seen == 1 and dnvp_in_government == 1
 max-visits: 1
 
-= Government Collapses
+= 政府垮台
 
-果不其然,ruling government has collapsed as a result of the DNVP's staunch nationalism and opposition to the Young Plan. They have prepared a motion of no confidence which they are expected to call at the next session of the Reichstag. We must decide what we should do.
+果不其然,执政政府已因国家人民党坚定的民族主义及其对杨格计划的反对而垮台。他们已准备好一项不信任案,预计将在国会下个会期提出。如今我们必须决定,该怎么做。
 
 - @enter_government: 我们应取代国家人民党进入政府,组成大联盟。
 - @toleration: 我们将投票反对那项不信任案,让一个少数派政府继续下去。
@@ -18,7 +18,7 @@ max-visits: 1
 choose-if: grand_coalition >= 50 and (z_relation >= 45 or z_party_leader == "Joos") and (dvp_relation >= 30 or stresemann_dead == 0)
 subtitle: 社民党 + 中央党 + 巴伐利亚人民党 + 民主党 + 人民党
 on-arrival: leverage = spd_r
-unavailable-subtitle: 社民党 + 中央党 + 巴伐利亚人民党 + 民主党 + 人民党 - [? if grand_coalition < 50 : We do not have the votes. ?][? if (z_relation < 45 and z_party_leader != Joos) or (dvp_relation < 30 and stresemann_dead == 1) : The right would rather see their government fall than let us into government. ?]
+unavailable-subtitle: 社民党 + 中央党 + 巴伐利亚人民党 + 民主党 + 人民党 - [? if grand_coalition < 50 : 我们没有足够的票数。 ?][? if (z_relation < 45 and z_party_leader != Joos) or (dvp_relation < 30 and stresemann_dead == 1) : 右翼宁可看着自己的政府垮台,也不愿让我们进入政府。 ?]
 go-to: election_1928.grand_coalition_z_lead
 
 @toleration
@@ -27,10 +27,10 @@ subtitle: 只要我们投票反对国家人民党的不信任案,现任政府就
 unavailable-subtitle: 我们没有足够的票数否决这项不信任案。
 on-arrival: spd_toleration = 1; left_dissent += 5
 
-We have entered into a toleration agreement, allowing a center-right minority government to persist as any motion of no confidence attempted will be defeated. 
+我们已达成一项容忍协议,容许一个中右翼少数派政府存续下去,因为任何不信任案企图都将被否决。 
 
 @let_election
 subtitle: 政府将垮台,新的选举将排上日程。
 on-arrival: next_election_time = time+3; next_election_month = month + 3; next_election_year = year; next_election_year = year + 1 if next_election_month > 12; next_election_month = next_election_month - 12 if next_election_month > 12
 
-We will not save the bourgeois government. It is time for new elections!
+我们不会去挽救这个资产阶级政府。是时候举行新的选举了!

@@ -38,13 +38,13 @@ Q.unemployed_nsdap -= 5;
 tags: event
 new-page: true
 
-= Recession Ends
+= 衰退结束
 
-The global economy, including the German one, has recovered from the recession.
+全球经济,包括德国经济在内,已从衰退中复苏。
 
 - @hurray: 万岁。
 
 @hurray
 on-arrival: socialism -= 5*bourgeois_power
 
-That's pretty good.
+这挺不错。

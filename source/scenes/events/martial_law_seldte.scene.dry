@@ -5,7 +5,7 @@ new-page: true
 on-arrival: sh_militancy += 0.03
 tags: event
 
-= Martial Law
+= 戒严
 
 眼见德国的秩序持续崩坏,又确信自己能镇压任何抵抗,[+ president +] 总统与泽尔特总理联手宣布在德国全境实施戒严。尽管此举违宪,法院对这支跃跃欲试的军队却没什么约束力。
 

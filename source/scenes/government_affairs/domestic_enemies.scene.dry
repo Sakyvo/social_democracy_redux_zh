@@ -66,7 +66,7 @@ view-if: sh_banned == 0
 view-if: sh_banned = 1
 on-arrival: sh_banned = 0; sh_strength += 100
 
-The Stahlhelm is no longer banned.
+钢盔团不再被查禁。
 
 @persecute_sh
 title: 进一步打击钢盔团。

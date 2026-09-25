@@ -6,7 +6,7 @@ tags: event
 
 = 共产党的目标
 
-The KPD presents us with a new list of goals for the coalition:
+共产党向我们提交了一份新的联盟目标清单:
 
 [? if welfare_goal = 1 : - 扩大社会福利计划。 ?]
 

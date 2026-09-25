@@ -7,7 +7,7 @@ new-page: true
 
 = 经济计划
 
-As we embark now on our economic plan, the question has come up of what exactly should be done with the petty bourgeoisie; the owners of small businesses and enterprises who work alongside those they employ, and even those who are entirely self-employed. If we are to work towards abolishing the anarchy of production, then they must be integrated into the economic plan. But how can we do so?
+如今我们着手推行经济计划,一个问题是:究竟该如何对待小资产阶级 —— 那些与雇员一起劳作的小业主与企业主,乃至完全自食其力的人。若要致力于废除生产的无政府状态,就必须把他们纳入经济计划。可我们该怎么做?
 
 - @nationalize: 绝不例外。他们的财产必须被没收,并置于集体控制之下。
 - @subordinate: 与其直接没收,我们不如只是要求他们自己遵循并执行我们的计划。
@@ -44,16 +44,16 @@ Q.sh_strength += 50;
 
 !}
 
-We decree that no exceptions will be made for the petty-bourgeoisie as compared with the haute, and that they too shall see their property expropriated. The old middle class is, understandably, up in arms over the prospect of their effective cessation of existence - literally. For a time, this will disrupt our economic project, but we may find planning easier in future.
+我们颁布法令:小资产阶级与大资产阶级一视同仁,不作例外,他们的财产同样将被没收。旧中间阶层对这一实际等同于消灭其存在的图景群起反对 —— 这可以理解,而且是字面意义上的「消灭」。一段时间内,这会扰乱我们的经济计划,但将来我们或许会发现统筹更容易。
 
 @subordinate
 subtitle: 有人认为这是最好的中间路线。
 on-arrival: old_middle_subjugated = 1; black_market += old_middle/4
 
-We have determined that there is no reason individual economic actors should not exist, so long as they execute and comply with our plans anyway. In the long term, we will plan to phase out petty production, through continued and directed development of the productive forces, but in the meantime, to destroy the petty-bourgeoisie entirely would be premature.
+我们认定:只要个体经济参与者照样执行并服从我们的计划,就没有理由不容许他们存在。长远来看,我们计划通过持续而有方向地发展生产力来逐步淘汰小生产;但在此期间,彻底消灭小资产阶级为时尚早。
 
 @allowance
 subtitle: 这将相当没有原则。
 on-arrival: economic_growth += 1; old_middle_spd += 5*(1-dissent); socialism -= 2; bourgeois_power += 0.05; left_dissent += 5; kpd_relation -= 10; old_middle += 3; rural -= 3
 
-We have decided that the economic plan must allow for the existence of petty-bourgeois elements in the time being. This has been justified by planners as necessary to avoid economic disruption and allow the further development of Germany's productive forces, but most Marxists are highly skeptical.
+我们决定,经济计划暂时必须容许小资产阶级成分存在。计划部门为此辩解称,这是避免经济紊乱、让德国生产力得以进一步发展的必要之举,但多数马克思主义者深表怀疑。

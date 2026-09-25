@@ -60,7 +60,7 @@ on-arrival: nazis_implicated = 1; coup_progress += 3; sa_banned = 1; sa_strength
 
 @investigate_march_failure
 
-Unfortunately, our investigation has failed to turn up anything. Rumors are that the targets of our investigation were tipped off by infiltrators within the police.
+遗憾的是,我们的调查一无所获。有传言说,被调查的对象得到了警察内部渗透者的通风报信。
 
 @prosecute_far_right
 view-if: prosecution_unlocked and not nsdap_banned

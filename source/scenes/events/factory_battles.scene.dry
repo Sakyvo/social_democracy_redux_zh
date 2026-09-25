@@ -21,7 +21,7 @@ new-page: true
 
 = 工业冲突
 
-Following our policy of factory takeovers, the bourgeoisie have determined to break these occupations by force and take their property back. To this aim, they have enlisted forces of the Harzburg Front.
+在我们的工厂接管政策之后,资产阶级决意以武力打破这些占领、夺回他们的财产。为此,他们招募了哈茨堡阵线的力量。
 
 - @defend: 部署国旗团保卫被占领的工厂。
 - @police: 调动普鲁士警察保卫被占领的工厂。
@@ -37,7 +37,7 @@ go-to: pickets_maintained if picket_power >= scabber_power; scabbers_win if scab
 @pickets_maintained
 on-arrival: bourgeois_power -= 0.01; workers_spd += 3*(1-dissent); socialism += 1; kpd_relation += 5
 
-We have managed to defend our occupied factories from the paramilitary thugs that attempted to retake them. Our support is strengthened amongst the workers we defended, and so is socialism as a whole.
+我们成功守住了被占领的工厂,击退了企图夺回它们的准军事暴徒。在我们所保护的工人中,我们的支持得到加强,社会主义整体亦然。
 
 @police
 view-if: spd_prussia
@@ -47,7 +47,7 @@ go-to: pickets_maintained if picket_power >= scabber_power; scabbers_win if scab
 @scabbers_win
 on-arrival: rb_militancy -= 0.05 if rb_militancy >= 0.15; rfb_militancy -= 0.02 if kpd_relation >= 50 and kpd_truce; factory_takeovers -= 1; bourgeois_power += 0.05 if bourgeois_power <= 0.95; bourgeois_power += 0.05; workers -= 1; unemployed += 1; unemployed_nsdap += 8*bourgeois_power if not socialized_media; unemployed_spd -= 4*bourgeois_power if not socialized_media; socialism -= 5*bourgeois_power if not socialized_media
 
-Our pickets have been broken, and factories retaken. Spirits have been hurt in the party, while the bourgeoisie gloat. [? if not socialized_media : The bourgeois presses frame this as a victory for the free market, and us as the lawless ones. ?]
+我们的纠察线被冲破,工厂被夺回。党内士气受挫,而资产阶级得意洋洋。[? if not socialized_media : 资产阶级报刊把这说成自由市场的胜利,把我们描绘成无法无天的一方。 ?]
 
 @teamwork
 view-if: spd_prussia and rb_militancy >= 0.15
@@ -59,4 +59,4 @@ go-to: pickets_maintained if picket_power >= scabber_power; scabbers_win if scab
 @back_down
 on-arrival: rb_militancy -= 0.02; factory_takeovers -= 1; bourgeois_power += 0.05 if bourgeois_power <= 0.95; bourgeois_power += 0.05; unemployed_nsdap += 5*bourgeois_power if not socialized_media; unemployed_spd -= 2*bourgeois_power if not socialized_media; socialism -= 3*bourgeois_power if not socialized_media; socialism -= 3; left_dissent += 5; labor_dissent += 5; left_strength -= 5; kpd_relation -= 5; workers_spd -= 7; workers_kpd += 4
 
-Our refusal to act has led to the occupied factories being inevitably retaken. The workers feel betrayed, as the same party which directed them to industrial action abandoned them to the wolves of the rich.
+我们拒绝行动,导致被占领的工厂不可避免地遭夺回。工人们感到被出卖:正是同一个曾指引他们采取工业行动的党,把他们抛给了富人的狼群。

@@ -332,13 +332,13 @@ go-to: thalmann_wins if thalmann_majority == 1; hitler_wins if hitler_majority =
 
 [? if thalmann_campaign : 台尔曼 - [+ thalmann_votes_disp +]% ?]
 
-[? if braun_campaign : Braun - [+ braun_votes_disp +]% ?]
+[? if braun_campaign : 布劳恩 - [+ braun_votes_disp +]% ?]
 
-[? if marx_campaign : Marx - [+ marx_votes_disp +]% ?]
-[? if adenauer_campaign : Adenauer - [+ adenauer_votes_disp +]% ?]
+[? if marx_campaign : 马克思 - [+ marx_votes_disp +]% ?]
+[? if adenauer_campaign : 阿登纳 - [+ adenauer_votes_disp +]% ?]
 
-[? if duesterberg_campaign : Duesterberg - [+ duesterberg_votes_disp +]% ?]
-[? if seeckt_campaign : Seeckt - [+ seeckt_votes_disp +]% ?]
+[? if duesterberg_campaign : 杜斯特贝格 - [+ duesterberg_votes_disp +]% ?]
+[? if seeckt_campaign : 泽克特 - [+ seeckt_votes_disp +]% ?]
 
 [? if hitler_campaign : [+ nsdap_candidate +] - [+ hitler_votes_disp +]% ?]
 

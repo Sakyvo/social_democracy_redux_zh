@@ -104,7 +104,7 @@ on-arrival: dvp_relation += 5*(1 - dissent)
 
 随着古斯塔夫·施特雷泽曼的去世,人民党迁就我们的可能性大大降低。此外,自由派政党在选举中日渐式微,或许我们的精力最好用在别处。
 
-However, given the influence of the DVP among the other right-leaning parties [? if president == "Hindenburg": and with President Hindenburg ?], it can still be helpful to influence them.
+然而,考虑到人民党在其他右倾政党中的影响力[? if president == "Hindenburg": ,以及兴登堡总统 ?],设法影响它们仍可能有所助益。
 
 @dvp_moribound
 on-arrival: dvp_relation += 5*(1 - dissent)

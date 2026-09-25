@@ -6,8 +6,8 @@ new-page: true
 tags: event
 max-visits: 1
 
-President Hindenburg's secretive group of advisors (often called the "camarilla") has turned against [+ old_chancellor +], and Hindenburg his dismissed the Chancellor, replacing him with the more reactionary Franz von Papen, an independent formerly of the Center Party. [? if year == 1932 and old_chancellor == "Brüning" : Brüning's final straw was his "agricultural settlement" policy, sending unemployed workers to homestead in underutilized lands (that happen to be owned by aristocrats). ?] [? if strife > 6 : Seeing the chaos that has gripped the country, Hindenburg's advisors seem to believe that the country needs stronger, more authoritarian rulers, and they see Papen as that kind of ruler. ?]
+兴登堡总统那伙隐秘的顾问(常被称为「幕僚小圈子」)已转而反对 [+ old_chancellor +];兴登堡免去了这位总理,改以更反动的弗朗茨·冯·帕彭接替 —— 他是出身中央党的无党籍人士。[? if year == 1932 and old_chancellor == "Brüning" : 压垮布吕宁的最后一根稻草,是他的「农业垦殖」政策 —— 把失业工人送到未充分利用的土地上(这些土地恰好属于贵族)去开垦。 ?] [? if strife > 6 : 目睹笼罩全国的混乱,兴登堡的顾问们似乎认为国家需要更强硬、更威权的统治者,而他们眼中的这种统治者就是帕彭。 ?]
 
-Papen is immediately faced with a vote of no confidence, given his unpopularity. However the SPD votes, he is guaranteed to fall, due to the unanimous hatred against him from all other parties. Meanwhile, he is governing via emergency powers with Hindenburg. His first policy is to legalize the Nazi SA, but this does not win their loyalty.
+鉴于其不受欢迎,帕彭随即面临一场不信任案。无论社民党怎么投票,他注定倒台 —— 因为其他所有政党都一致憎恨他。与此同时,他正与兴登堡一道通过紧急权力施政。他的第一项政策是使纳粹冲锋队合法化,但这并未换来他们的效忠。
 
 新的选举已定于 [+ next_election_month : month +] [+ next_election_year +]。

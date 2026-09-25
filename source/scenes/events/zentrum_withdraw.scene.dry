@@ -1,16 +1,16 @@
 title: 魏玛计划瓦解!
 new-page: true
-subtitle: 中间派 Party has abandoned the Weimar Plan...
+subtitle: 中央党已抛弃了魏玛计划……
 tags: event
 view-if: weimar_dissent >= 6 and z_party_leader != "Joos" and weimar_plan_adopted
 on-arrival: weimar_plan_adopted = 0; weimar_rejected = 1; left_dissent += 5; center_dissent += 5; labor_dissent += 2; workers_spd -= 3; workers_z -= 2; new_middle_spd -= 2; new_middle_ddp -= 1; pro_republic -= 6; z_relation -= 15; workers_sapd += 2 if sapd_consolidated; workers_z -= 3 if unemployed >= 13; z_relation += 10 if return_to_normalcy; pro_republic += 4 if return_to_normalcy
 max-visits: 1
 
-= Weimar Plan Collapse
+= 魏玛计划瓦解
 
-A crisis! The Center Party has abandoned the Weimar Plan at a recent party congress, removing it from their party platform and cancelling plans for further joint rallies. They believe the crisis has subsided and there is no purpose to further cooperation. [? if unemployed >= 13 : This is despite the best attempts of Joseph Joos to rally the Catholic trade unions to the plan's defense. ?]
+危机!中央党在近来的党代会上抛弃了魏玛计划,将其从党纲中剔除,并取消了进一步联合集会的计划。他们认为危机已经消退,继续合作毫无意义。[? if unemployed >= 13 : 尽管约瑟夫·约斯竭尽全力动员天主教工会为这项计划辩护,仍是如此。 ?]
 
-The Left and Center have, feeling vindicated, renewed their dissent, with the Left calling for a pivot towards the Communists for reliable allies against fascism. Meanwhile the [+ ddp_name +]'s status is uncertain, with some in their party calling to also move on.
+左翼与中间派感到自己的判断得到印证,于是重新提出异议;左翼呼吁转向共产党,以寻得对抗法西斯主义的可靠盟友。与此同时,[+ ddp_name +] 的地位尚不确定,党内有人呼吁也该往前走了。
 
 - @break_toleration: 没有魏玛计划,就没有执政授权。
 - @troubling: 令人不安的事态……
@@ -26,4 +26,4 @@ on-arrival: next_election_time = time+3 if next_election_time >= time+3; next_el
 
 @troubling
 
-With the Weimar Plan's discrediting in other parties, its future even within Social Democracy becomes uncertain.
+随着魏玛计划在其他政党中声誉受损,它在社会民主党内乃至自身的前途也变得难以预料。

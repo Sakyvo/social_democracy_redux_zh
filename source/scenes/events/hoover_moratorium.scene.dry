@@ -8,7 +8,7 @@ max-visits: 1
 
 = 胡佛延期偿付
 
-In light of the current economic situation, and the German banking crisis, President Herbert Hoover of the United States has issued a moratorium on war debt payments from the Great War, including Germany's. Our budget situation should improve somewhat.
+鉴于当前的经济形势与德国银行业危机,美国总统赫伯特·胡佛发布了大战争债偿付的延期令,德国的债务也包括在内。我们的预算状况应有所改善。
 
-[? if spd_in_government and foreign_minister_party == "SPD": Even though this is not our accomplishment, our foreign ministry is eager to take credit for this accomplishment. ?][? if not spd_in_government and foreign_minister_party != "SPD": Even though this is not the work of the foreign ministry, it is eager to take credit for this accomplishment. ?]
+[? if spd_in_government and foreign_minister_party == "SPD": 尽管这不是我们的功劳,我们的外交部仍急于把这份功绩揽到自己身上。 ?][? if not spd_in_government and foreign_minister_party != "SPD": 尽管这不是外交部的功劳,它仍急于把这份功绩揽到自己身上。 ?]
 

@@ -6,9 +6,9 @@ tags: event
 new-page: true
 go-to: choose if not spd_prussia and not z_prussia; prussian_overthrow if spd_prussia or z_prussia
 
-[? if hitler_deported and president != "Hitler" and chancellor != "Hitler": The first act that Chancellor [+ chancellor +] takes upon assuming office is bringing Adolf Hitler back to [? if hitler_dead : life and then to?] Germany, and giving him citizenship and an official cabinet position. ?]
+[? if hitler_deported and president != "Hitler" and chancellor != "Hitler": [+ chancellor +] 总理上任后的第一件事,就是把阿道夫·希特勒带回[? if hitler_dead : 人间,随后带回?]德国,并给予他国籍与一个正式的内阁职位。 ?]
 
-Hitler has promised a campaign of revenge against the socialists, and the Nazis have already spilled much blood on the streets. In his published manifesto, he promises a campaign of unspeakable horror against our Jews, and endless wars of violent expansion that will ruin all of Europe.
+希特勒许诺要对社会主义者展开一场复仇之战,而纳粹党已在街头见血。在他公开发表的宣言中,他承诺要对我们的犹太人发动一场难以言喻的恐怖运动,并发动无休无止的暴力扩张战争,那将毁掉整个欧洲。
 
 [? if spd_prussia or z_prussia : 作为巩固绝对权力的第一步,希特勒下令以所谓*国家执行*的方式罢免普鲁士州政府。我党许多成员已准备好抵抗,因为屈服必定意味着终结。 ?]
 

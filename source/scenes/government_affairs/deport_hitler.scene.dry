@@ -23,7 +23,7 @@ go-to: deport_violence if sa_strength >= 200; deport_success if sa_strength < 20
 on-arrival: {!
 var total_allied_strength = Q.rb_strength*Q.rb_militancy + Q.prussian_police_strength*Q.prussian_police_militancy*Q.prussian_police_loyalty;
 var enemy_strength = Q.sa_strength*Q.sa_militancy;
-console.log('Deporting Hitler - force approach');
+console.log('Deporting 希特勒 - force approach');
 console.log(total_allied_strength, enemy_strength);
 
 if (total_allied_strength > enemy_strength) {

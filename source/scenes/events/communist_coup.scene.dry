@@ -7,20 +7,20 @@ max-visits: 1
 
 = 首都危机!
 
-One morning, when [+ chancellor +] is meeting with his ministers, a warrant is produced for him and his entire cabinet. All access to Berlin is suspended as they are arrested, and, over national radio, it is proclaimed that [+ chancellor +]'s government had been planning an illegal self-coup to destroy German democracy.
+一天早晨,当 [+ chancellor +] 正在与他的部长们开会时,一份逮捕令出示在他和他整个内阁面前。通往柏林的一切通道被封锁,他们随即被捕;全国广播中宣布:[+ chancellor +] 的政府一直在策划一场非法的自我政变,以摧毁德国民主。
 
 - @naive: 哇,我真不敢相信 [+ chancellor +] 会那样做!
 - @streetsmart: 这显然是场政变。
 
 @naive
 
-Yeah, it's crazy, right? Thankfully we have the police forces to protect us from coups like this. It's a good thing the communists reformed them to be loyal to the republic!
+是啊,太疯狂了,对吧?幸好我们有警察部队保护,免受这类政变之害。幸亏共产党人改造了他们,让他们忠于共和国!
 
 - @rigged_election: 新的紧急选举已排定日程。
 
 @streetsmart
 
-It is plain to see that this is a communist coup. Having secured so much influence over state institutions, and then deprived the management of those institutions, they seek to wrestle back power.
+显而易见,这是一场共产党政变。他们先是对国家机构取得了如此大的影响力,随后又剥夺了那些机构的管理层,如今想要把权力再夺回去。
 
 - @rigged_election: 新的紧急选举已排定日程。
 - @soviet_germany.resist: 只要同心协力,我们就能阻止 [? if president != "Thälmann" and president != "Münzenberg" and chancellor_party != "KPD" : [+ kpd_leader +] ?][? if president == "Thälmann" or president == "Münzenberg" : [+ president +] ?][? if chancellor_party == "KPD" and president != "Thälmann" and president != "Münzenberg" : [+ chancellor +] ?] 发动的政变!
@@ -33,4 +33,4 @@ Q.rural_other *= (1-(Q.rfb-force/100));
 !}
 call: set_next_election_time
 
-New elections have been called, under the oversight of communist-aligned forces.
+新的选举已经宣布,在亲共产党的力量监督之下举行。

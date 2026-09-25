@@ -1631,7 +1631,7 @@ on-arrival: {!
 Q.bill_support = Math.round(Q.bill_support);
 !}
 
-Currently, [+ bill_support +]% is in favor of our bill.
+目前有 [+ bill_support +]% 支持我们的法案。
 
 - @sway_kpd: 说服共产党。
 - @sway_sapd: 说服社会主义工人党。
@@ -1661,7 +1661,7 @@ BVP: [+ bvp_vote : vote_display +]
 
 DVP: [+ dvp_vote : vote_display +]
 
-Others: [? if not other_split : [+ other_vote : vote_display +] ?][? if other_split : 意见不一 ?]
+其他: [? if not other_split : [+ other_vote : vote_display +] ?][? if other_split : 意见不一 ?]
 
 DNVP: [+ dnvp_vote : vote_display +]
 
@@ -1674,14 +1674,14 @@ view-if: in_left_front or in_popular_front and not welfare_cut_vote and not kpd_
 on-arrival: bill_support += kpd_r; kpd_coalition_dissent += 1; kpd_vote = 1; kpd_relation -= 5; reformist_dissent += 10; left_strength += 5; workers_spd -= 2; workers_kpd += 2; unemployed_spd -= 1; unemployed_kpd += 1
 go-to: success if bill_support >= 50; swaying_menu if bill_support < 50
 
-We give concessions to the KPD enough that they agree to vote in favor of our bill.
+我们向共产党作出足够让步,使他们同意投票支持我们的法案。
 
 @sway_sapd
 view-if: in_left_front or in_popular_front or in_weimar_coalition and not welfare_cut_vote and not wtb_deficit_vote and not sapd_vote and sapd_formed
 on-arrival: bill_support += sapd_r; sapd_vote = 1; reformist_dissent += 10; left_strength += 5; workers_spd -= 2; workers_sapd += 2
 go-to: success if bill_support >= 50; swaying_menu if bill_support < 50
 
-We give concessions to the SAPD enough that they agree to vote in favor of our bill.
+我们向社会主义工人党作出足够让步,使他们同意投票支持我们的法案。
 
 @sway_ddp
 view-if: in_popular_front or in_weimar_coalition or in_grand_coalition and not ddp_vote
@@ -1690,7 +1690,7 @@ unavailable-subtitle: 民主党不愿被说动。
 on-arrival: bill_support += ddp_r; ddp_vote = 1; left_dissent += 5; new_middle_spd -= 1; new_middle_ddp += 1
 go-to: success if bill_support >= 50; swaying_menu if bill_support < 50
 
-WWe give concessions to the [+ ddp_name +] enough that they agree to vote in favor of our bill.
+我们向 [+ ddp_name +] 作出足够让步,使他们同意投票支持我们的法案。
 
 @sway_z
 view-if: in_popular_front or in_weimar_coalition or in_grand_coalition and not z_vote and not women_family_vote and (not nationalize_vote or budget > nationalize_budget)
@@ -1699,7 +1699,7 @@ unavailable-subtitle: 中央党不愿被说动。
 on-arrival: bill_support += z_minus_bvp_r; coalition_dissent += 1; z_vote = 1; left_dissent += 5; catholics_spd -= 1; catholics_z += 1
 go-to: success if bill_support >= 50; swaying_menu if bill_support < 50
 
-We give concessions to the Z enough that they agree to vote in favor of our bill.
+我们向中央党作出足够让步,使他们同意投票支持我们的法案。
 
 @sway_dvp
 view-if: in_grand_coalition and not dvp_vote and not state_buyer_vote and not shorten_hours_vote and not disarmament_vote and not socialization_vote and not synthesis_vote and not progressive_tax_vote and not increase_employers_vote and not wtb_deficit_vote and not nationalize_vote
@@ -1708,7 +1708,7 @@ unavailable-subtitle: 人民党不愿被说动。
 on-arrival: bill_support += dvp_r; coalition_dissent += 1; dvp_vote = 1; bill_support += 3 if not bvp_vote and not women_family_vote; bvp_vote = 1 if not women_family_vote; left_dissent += 10; old_middle_spd -= 2; old_middle_dvp += 2; workers_spd -= 1
 go-to: success if bill_support >= 50; swaying_menu if bill_support < 50
 
-We give concessions to the DVP enough that they agree to vote in favor of our bill.
+我们向人民党作出足够让步,使他们同意投票支持我们的法案。
 
 @motion_fails
 on-arrival: left_dissent += 5 if left_dissent < 40; center_dissent += 5 if center_dissent < 40; reformist_dissent += 5 if reformist_dissent < 50; neorevisionist_dissent += 5 if neorevisionist_dissent < 50; labor_dissent += 5 if labor_dissent < 50
@@ -1728,7 +1728,7 @@ BVP: [+ bvp_vote : vote_display +]
 
 DVP: [+ dvp_vote : vote_display +]
 
-Others: [? if not other_split : [+ other_vote : vote_display +] ?][? if other_split : 意见不一 ?]
+其他: [? if not other_split : [+ other_vote : vote_display +] ?][? if other_split : 意见不一 ?]
 
 DNVP: [+ dnvp_vote : vote_display +]
 

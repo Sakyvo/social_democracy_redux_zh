@@ -293,8 +293,8 @@ const data = [];
 if (Q.faud_s) {
     data.push({
             "id": "faud",
-            "legend": "FAUD",
-            "name": "FAUD",
+            "legend": "自由工人联盟",
+            "name": "自由工人联盟",
             "seats": Math.round(Q.faud_s*(Q.socialism/10)), 
             });
 }
@@ -439,17 +439,17 @@ if (window && d3) {
 {!<svg id="reichstag" style="width: 500px; height: 250px;"> </svg>!}
 
 {!<table>!} 
-{!<tr><td>Party</td><td>Vote share</td><td>% Change</td></tr>!}
+{!<tr><td>党派</td><td>得票份额</td><td>% 变化</td></tr>!}
 
-{!<tr><td><div class="box" style='background-color:#9c0000; outline: 2px; outline-style: solid;'> </div> !} **SPD (Left):** {!</td><td>!} **[+ spd_left_s +]%** {!</td><td>!} **[+ str_change_spd_left +]** {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#9c0000; outline: 2px; outline-style: solid;'> </div> !} **社民党(左翼):** {!</td><td>!} **[+ spd_left_s +]%** {!</td><td>!} **[+ str_change_spd_left +]** {!</td></tr>!}
 
-{!<tr><td><div class="box" style='background-color:#e30000; outline: 2px; outline-style: solid;'> </div> !} **SPD (Center):** {!</td><td>!} **[+ spd_center_s +]%** {!</td><td>!} **[+ str_change_spd_center +]** {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#e30000; outline: 2px; outline-style: solid;'> </div> !} **社民党(中间派):** {!</td><td>!} **[+ spd_center_s +]%** {!</td><td>!} **[+ str_change_spd_center +]** {!</td></tr>!}
 
-{!<tr><td><div class="box" style='background-color:#ff681d; outline: 2px; outline-style: solid;'> </div> !} **SPD (Labor):** {!</td><td>!} **[+ spd_labor_s +]%** {!</td><td>!} **[+ str_change_spd_labor +]** {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#ff681d; outline: 2px; outline-style: solid;'> </div> !} **社民党(工会派):** {!</td><td>!} **[+ spd_labor_s +]%** {!</td><td>!} **[+ str_change_spd_labor +]** {!</td></tr>!}
 
-{!<tr><td><div class="box" style='background-color:#ff6ba9; outline: 2px; outline-style: solid;'> </div> !} **SPD (Reform):** {!</td><td>!} **[+ spd_reformist_s +]%** {!</td><td>!} **[+ str_change_spd_reformist +]** {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#ff6ba9; outline: 2px; outline-style: solid;'> </div> !} **社民党(改良派):** {!</td><td>!} **[+ spd_reformist_s +]%** {!</td><td>!} **[+ str_change_spd_reformist +]** {!</td></tr>!}
 
-[? if neorevisionism : {!<tr><td><div class="box" style='background-color:#ff14a5; outline: 2px; outline-style: solid;'> </div> !} **SPD (Neorevisionist):** {!</td><td>!} **[+ spd_neorevisionist_s +]%** {!</td><td>!} **[+ str_change_spd_neorevisionist +]** {!</td></tr>!} ?]
+[? if neorevisionism : {!<tr><td><div class="box" style='background-color:#ff14a5; outline: 2px; outline-style: solid;'> </div> !} **社民党(新修正派):** {!</td><td>!} **[+ spd_neorevisionist_s +]%** {!</td><td>!} **[+ str_change_spd_neorevisionist +]** {!</td></tr>!} ?]
 
 [? if sapd_formed == 1 : {!<tr><td><div class="box" style='background-color:#C40000'> </div> !}SAPD: {!</td><td>!} [+ sapd_s +]% {!</td><td>!} [+ str_change_sapd +] {!</td></tr>!} ?]
 
@@ -457,15 +457,15 @@ if (window && d3) {
 
 {!<tr><td><div class="box" style='background-color:#4e0000'> </div> !}KAPD: {!</td><td>!} [+ kapd_s +]% {!</td><td>!} [+ str_change_kapd +] {!</td></tr>!}
 
-{!<tr><td><div class="box" style='background-color:#612828'> </div> !}FAUD: {!</td><td>!} [+ faud_s +]% {!</td><td>!} [+ str_change_faud +] {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#612828'> </div> !}自由工人联盟: {!</td><td>!} [+ faud_s +]% {!</td><td>!} [+ str_change_faud +] {!</td></tr>!}
 
 {!<tr><td><div class="box" style='background-color:#000'> </div> !} Z: {!</td><td>!} [+ z_s +]% {!</td><td>!} [+ str_change_z +] {!</td></tr>!}
 
 [? if ddp_socialist : {!<tr><td><div class="box" style='background-color:#DCCA4A'> </div> !} DDP: {!</td><td>!} [+ ddp_s +]% {!</td><td>!} [+ str_change_ddp +] {!</td></tr>!} ?]
 
-{!<tr><td><div class="box" style='background-color:#85754e'> </div> !}Bourgeois: {!</td><td>!} [+ bourgeois_s +]% {!</td><td>!} [+ str_change_bourgeois +] {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#85754e'> </div> !}资产阶级: {!</td><td>!} [+ bourgeois_s +]% {!</td><td>!} [+ str_change_bourgeois +] {!</td></tr>!}
 
-{!<tr><td><div class="box" style='background-color:#909090'> </div> !}Unaffiliated: {!</td><td>!} [+ unaffiliate_s +]% {!</td><td>!} [+ str_change_unaffiliate +] {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#909090'> </div> !}无党籍: {!</td><td>!} [+ unaffiliate_s +]% {!</td><td>!} [+ str_change_unaffiliate +] {!</td></tr>!}
 
 {!<tr><td><div class="box" style='background-color:#954B00'> </div> !} NSDAP: {!</td><td>!} [+ nsdap_s +]% {!</td><td>!} [+ str_change_nsdap +] {!</td></tr>!}
 {!</table>!}

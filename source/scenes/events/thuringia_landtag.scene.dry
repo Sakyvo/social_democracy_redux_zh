@@ -19,7 +19,7 @@ set-jump: thuringia_election_1928
 @thuringia_election_1928
 on-arrival: {!
 var total_thuringia = 0;
-console.log("Starting normalization of thuringian votes...");
+console.log("开始对图林根选票进行归一化...");
 // normalize thuringian votes
 for (var party of Q.parties) {
     Q[party+'_votes_thuringia'] = 0;
@@ -259,7 +259,7 @@ go-to: coalition_menu
 {!<svg id="reichstag" style="width: 500px; height: 250px;"> </svg>!}
 
 {!<table>!} 
-{!<tr><td>Party</td><td>Vote share</td><td>% Change</td></tr>!}
+{!<tr><td>党派</td><td>得票份额</td><td>% 变化</td></tr>!}
 {!<tr><td><div class="box" style='background-color:#E3000F; outline: 2px; outline-style: solid;'> </div> !} **SPD:** {!</td><td>!} **[+ spd_tl +]%** {!</td><td>!} **[+ sttl_change_spd +]** {!</td></tr>!}
 
 [? if sapd_formed == 1 : {!<tr><td><div class="box" style='background-color:#C40000'> </div> !}SAPD: {!</td><td>!} [+ sapd_tl +]% {!</td><td>!} [+ sttl_change_sapd +] {!</td></tr>!} ?]
@@ -268,13 +268,13 @@ go-to: coalition_menu
 
 {!<tr><td><div class="box" style='background-color:#DCCA4A'> </div> !} [+ ddp_name +]: {!</td><td>!} [+ ddp_tl +]% {!</td><td>!} [+ sttl_change_ddp +] {!</td></tr>!}
 
-{!<tr><td><div class="box" style='background-color:#000'> </div> !} Z [? if dr_exists : (Unity List) ?]: {!</td><td>!} [+ z_tl +]% {!</td><td>!} [+ sttl_change_z +] {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#000'> </div> !} Z [? if dr_exists : (统一名单) ?]: {!</td><td>!} [+ z_tl +]% {!</td><td>!} [+ sttl_change_z +] {!</td></tr>!}
  
-{!<tr><td><div class="box" style='background-color:#a0a0a0'> </div> !} Others: {!</td><td>!} [+ other_tl +] % {!</td><td>!} [+ sttl_change_other +] {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#a0a0a0'> </div> !} 其他: {!</td><td>!} [+ other_tl +] % {!</td><td>!} [+ sttl_change_other +] {!</td></tr>!}
 
-{!<tr><td><div class="box" style='background-color:#D5AC27'> </div> !} DVP [? if dr_exists : (Unity List) ?]: {!</td><td>!} [+ dvp_tl +]% {!</td><td>!} [+ sttl_change_dvp +] {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#D5AC27'> </div> !} DVP [? if dr_exists : (统一名单) ?]: {!</td><td>!} [+ dvp_tl +]% {!</td><td>!} [+ sttl_change_dvp +] {!</td></tr>!}
 
-{!<tr><td><div class="box" style='background-color:#3f7bc1'> </div> !} DNVP [? if dr_exists : (Unity List) ?]: {!</td><td>!} [+ dnvp_tl +]% {!</td><td>!} [+ sttl_change_dnvp +] {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#3f7bc1'> </div> !} DNVP [? if dr_exists : (统一名单) ?]: {!</td><td>!} [+ dnvp_tl +]% {!</td><td>!} [+ sttl_change_dnvp +] {!</td></tr>!}
 
 {!<tr><td><div class="box" style='background-color:#954B00'> </div> !} NSDAP: {!</td><td>!} [+ nsdap_tl +]% {!</td><td>!} [+ sttl_change_nsdap +] {!</td></tr>!}
 {!</table>!}
@@ -311,7 +311,7 @@ title: 一个右翼资产阶级联盟。
 subtitle: 人民党 + 国家人民党 + 其他 ([+ t_bourgeois_coalition +]%)
 view-if: t_bourgeois_coalition >= 50 or t_elections <= 1
 choose-if: t_bourgeois_coalition >= 50 or (t_elections <= 0 and t_bourgeois_coalition+ddp_tl+nsdap_tl >= 50)
-unavailable-subtitle: 人民党 + 国家人民党 + 其他 ([+ t_bourgeois_coalition +]%) - The bourgeois have fallen short of a majority.
+unavailable-subtitle: 人民党 + 国家人民党 + 其他 ([+ t_bourgeois_coalition +]%) - 资产阶级未能达到多数。
 
 现任资产阶级联盟得以存续[? if t_bourgeois_coalition >= 50 : ,所幸无需纳粹容忍。 ?][? if t_bourgeois_coalition < 50 : ,不过只有得到纳粹党的容忍它才能做到。 ?]
 

@@ -11,7 +11,7 @@ go-to: menu
 
 = [+ chancellor +] 的经济计划
 
-As the crisis begins to subside worldwide, the [+ chancellor +] cabinet, hoping to stimulate foreign investment to get the economy repaired, have begun rolling back workers' protections, backing employers strongly in labor disputes, cutting welfare, and cutting taxes. Economic growth has marginally increased, but the fruits of this recovery are not being felt in the slightest by the working class.
+随着危机在世界范围内开始消退,[+ chancellor +] 内阁为刺激外国投资以修复经济,已开始回撤对工人的保护、在劳资纠纷中强力支持雇主、削减福利并减税。经济增长略有起色,但工人阶级丝毫感受不到这场复苏的果实。
 
 @menu 
 on-arrival: old_middle_dvp += 5; workers_kpd += 3; unemployed_kpd += 5; new_middle_dvp += 2; old_middle_other += 4
@@ -32,7 +32,7 @@ call: set_next_election_time
 view-if: spd_toleration
 on-arrival: workers_spd -= 5; unemployed_spd -= 5; dvp_relation += 2; labor_dissent += 5; left_dissent += 5; reformist_strength += 5
 
-We have no choice but to tolerate these actions for the preservation of democracy.
+为了保住民主,我们别无选择,只能容忍这些举动。
 
 @support_strikes
 view-if: not unions_independent and not spd_toleration
@@ -41,7 +41,7 @@ choose-if: resources >= 1
 unavailable-subtitle: -1 资源 —— 我们负担不起。
 on-arrival: resources -= 1; workers_spd += 4*(1-dissent); labor_dissent -= 5; labor_strength += 5; unemployed_spd += 4*(1-dissent); workers_z -= 2; 
 
-We provide financial support to the ongoing strikes against the government, intensifying the class conflict that they have initiated and strengthening our relationship with the government.
+我们向正在进行的反政府罢工提供财政支持,加剧了他们挑起的阶级冲突,也加强了我们与政府的关系。
 
 @rally_
 view-if: not spd_toleration
