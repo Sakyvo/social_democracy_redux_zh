@@ -5,11 +5,11 @@ tags: event
 max-visits: 1
 view-if: reichswehr_minister_party == "KPD"
 
-= Crisis in the Army
+= 军队危机
 
-A crisis! With the KPD taking control over the Reichswehr Ministry in our most recent coalition, generals in the army have openly refused to cooperate. Entire barracks and garrisons have effectively risen up in defiance, while the KPD, for their part, have prepared an extensive set of reforms which would effectively dissolve the Reichswehr entirely. 
+危机!在我们最近一次联合执政中,共产党接管了国防部,军队的将领们公然拒绝合作。整个营房与驻防部队实际上已起事反抗;而共产党这边,则准备了一整套改革方案,实际上将彻底解散国防军。
 
-The army demands we sack the KPD Reichswehr Minister, while the Communists stand ready to crush the mutinies by force with the RFB, expecting us to support them in this endeveour by arming loyal worker's militias and deploying the police alongside. What do we do?
+军队要求我们解除共产党的国防部长之职;而共产党则随时准备以红色前线战士同盟的武力镇压哗变,并期望我们武装忠诚的工人民兵、同时调动警察予以配合。我们该怎么办?
 
 - @gegen_groener: 我们将协助共产党镇压这场哗变。
 - @gegen_thalmann: 我们别无选择,只能解除国防部长之职。
@@ -17,7 +17,7 @@ The army demands we sack the KPD Reichswehr Minister, while the Communists stand
 @gegen_groener
 on-arrival: government_strength = rfb_strength*rfb_militancy; government_strength += ((left_strength/100)*rb_strength*rb_militancy)/2; government_strength += (prussian_police_strength*prussian_police_militancy*prussian_police_loyalty); mutiny_strength = (reichswehr_strength*reichswehr_militancy*(1-(reichswehr_loyalty/2))); mutiny_strength += (sa_strength*sa_militancy) if sa_banned != 1; mutiny_strength += (sh_strength*sh_militancy) if sh_banned != 1
 
-We choose to crush the mutiny by force and stand by our coalition partners. The Communists however worry that this will not be enough, and call for us to arm SPD and KPD aligned workers into state-sanctioned militias to help occupy rebellious barracks.
+我们选择以武力镇压哗变,并站在执政伙伴一边。不过共产党担心这还不够,呼吁我们把亲社民党与亲共产党的工人武装成国家认可的民兵,以协助占领叛乱的营房。
 
 - @arm_workers: 我们将武装工人。
 - @the_fight: 这太过分了。法律能处理此事。
@@ -30,23 +30,23 @@ go-to: the_fight
 @the_fight
 go-to: mutiny_suppressed if government_strength >= mutiny_strength; mutiny_victorious if mutiny_strength >= government_strength
 
-We send our forces to suppress the mutiny and a confrontation quickly erupts.
+我们派出力量镇压哗变,很快便爆发了对峙。
 
 @mutiny_suppressed
 on-arrival: workers_kpd += 5; unemployed_kpd += 10; reichswehr_strength = 0; kpd_influence += 2; rb_militancy += 0.05; rfb_militancy += 0.15; coup_progress = 0; sa_strength *= 0.9 if sa_banned != 1; sh_strength *= 0.9 if sh_banned != 1; pro_republic += 2; nationalism -= 7
 
-The mutiny has successfully been suppressed. The officers involved are tried and punished harshly while the Communists proceed with their plans, seeing the effective dissolution of the army. Arms are redirected towards our paramilitaries, though the RFB's is the most bolstered, receiving an influx of military grade equipment.
+哗变已被成功镇压。涉事军官受到审判与严厉惩处,而共产党人则推进他们的计划,实质上解散了军队。武器转而流向我们的准军事组织,不过得到增强最多的是红色前线战士同盟 —— 它获得了一批军用品级的装备。
 
-The bourgeois parties have rallied against us, but their cries are ineffectual.
+资产阶级政党群起反对我们,但他们的呼声没什么效力。
 
 @mutiny_victorious
 on-arrival: nationalism += 10; pro_republic -= 7; sa_strength += 100; sh_strength += 100; rb_strength -= 200; reichswehr_loyalty = 0; rfb_strength -= 25; reichswehr_strength *= 0.95
 
-We send our forces against the mutinies, but, despite hard-fought victories against some garrisons, it quickly becomes clear that even with the full force of the government on our side, we have been unable to restore order. Our attempts at suppressing the Reichswehr mutinies have only fully turned it against us, and, once the initial fighting settles down, they are quick to mobilize and march on Berlin.
+我们派出力量对付哗变,尽管在一些驻防部队那里取得了苦战的胜利,但很快就清楚:即便有政府全部力量的支撑,我们也未能恢复秩序。我们镇压国防军哗变的努力,只是彻底让它转而与我们为敌;一旦最初的战斗平息,他们便迅速动员并进军柏林。
 
 - @civil_war: 那就是一场内战。
 
 @gegen_thalmann
 on-arrival: reichswehr_minister_party = "I"; kpd_relation -= 15; kpd_coalition_dissent += 4; coup_progress += 2; reichswehr_loyalty -= 0.05; chancellor = "Breitscheid" if chancellor_party == "KPD"; chancellor_party = "SPD" if chancellor_party == "KPD"; left_dissent += 15; rb_strength -= 200; rfb_strength += 100
 
-We cave to the Reichswehr's demands and sack the Reichswehr Minister. The KPD is outraged at this betrayal and plans to do what they can to collapse the coalition, while the message given to the Reichswehr is that rebelling pays off. Let's hope this was not a mistake.
+我们对国防军的要求屈服,解除了国防部长之职。共产党对这番背叛大为震怒,并打算尽其所能搞垮联盟;而给国防军传递的信息则是:叛乱有回报。但愿这不是个错误。

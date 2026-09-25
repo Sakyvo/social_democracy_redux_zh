@@ -8,7 +8,7 @@ on-arrival: capital_strike_timer -= 1; inflation += 2; inflation += 0.4 if not s
 
 = 粮食短缺
 
-As we attempt to transition to socialism in our ongoing rupture with the bourgeoisie, we have encountered an obstacle in the form of the rural petty-bourgeoisie, upon whom we largely rely upon for food. Long a bastion of reaction, [? if land_reform : albeit limited in this by our land reform programs, ?] they have begun hoarding food out of hostility to our socialist project, causing prices to rise sharply-
+在我们与资产阶级持续决裂、尝试向社会主义过渡的过程中,我们遇到了一个障碍:我们很大程度上依赖其供应粮食的农村小资产阶级。这个长期的反动堡垒[? if land_reform : —— 尽管我们的土地改革计划在其中有所削弱它 —— ?]出于对我们社会主义事业的敌意,已开始囤积粮食,导致价格急剧上涨——
 
 - @state_buyer: 没有国家收购计划,我们就无从着手解决这个问题。
 - @meet: 我们将按他们的新价格成交。
@@ -23,12 +23,12 @@ subtitle: -2 财政预算.
 on-arrival: state_buyer_vote = 1; from_food_shortages = 1
 go-to: legislative_menu if legislature_enabled; state_buyer_done2 if not legislature_enabled
 
-We propose a bill to create a state monopoly for grain purchases.
+我们提出一项法案,建立国家对粮食收购的垄断。
 
 @state_buyer_done2
 on-arrival: bourgeois_power -= 0.05; budget -= 2; state_buyer = 1; inflation -= 0.5 if inflation >= 3; workers_spd += 2*(1-dissent); unemployed_spd += 3*(1-dissent); coalition_dissent += 1 if (in_grand_coalition or in_weimar_coalition); dvp_relation -= 5; z_relation -= 3; rural_policy += 2; capital_strike_progress += 1; economic_growth += 0.4; socialism += 2
 
-By initiating a state buyer program, we have facilitated for the proper tackling of this issue. Given the circumstances, however, farmers do not appreciate the creation of a state monopoly on grain purchases, seeing it as preparation for coercion against them to make them lower their prices. 
+通过启动国家收购计划,我们为妥善解决这一问题创造了条件。然而,在当前情形下,农民并不喜欢建立国家对粮食收购的垄断 —— 他们视之为准备胁迫自己降价的先声。
 
 - @meet: 他们不必担心;我们将按他们的新价格成交。
 - @kill: 他们违抗经济计划,不是我们的错。
@@ -39,14 +39,14 @@ view-if: state_buyer
 subtitle: -1 财政预算
 on-arrival: budget -= 1; pro_consumer += 1; inflation -= 0.6; rural_spd += 3*(1-dissent); workers_spd += 3*(1-dissent); unemployed_spd += 4*(1-dissent); workers_sol += 4; coalition_dissent += 1 if black_thursday_seen; economic_growth += 0.2
 
-We cave to their demanded new prices. This helps ease the crisis significantly, and improves our reputation amongst farmers. Still, we will have to work harder, and some frown at our letting ourselves be bullied.
+我们屈服于他们要求的新价格。这大大缓解了危机,也改善了我们在农民中的名声。不过,我们还得更加努力,也有人对我们任人摆布感到不满。
 
 @kill
 view-if: state_buyer
 subtitle: 这会激起一场针对所谓布尔什维主义的轩然大波。
 on-arrival: socialism -= rural/10; socialism -= 6*bourgeois_power; black_market += (rural*(1-(rb_force+rfb_force)/100)); bourgeois_power -= 0.05; insurgency += 5; sh_militancy += 0.01; sa_militancy += 0.02; sa_strength += rural*insurgency; sh_strength += (rural*insurgency)/4; inflation -= 1; economic_growth -= black_market/10; rural_nsdap += 100; rural_dnvp += 100; rural_zca += 100 if zca_formed; rural_spd = 0; strife += 1; kpd_relation += 10; coup_progress += 5; west_relation -= 2; east_relation -= 2
 
-We refuse to budge from our set prices, demanding that the farmers sell at the agreed price and cracking down harshly on those who continue to withhold their grain and demand more for it. The results see short term success, though some fear we are creating the long term conditions for a conflict between the country and the town, quite contrary to the reconciliation Marx hoped for. Indeed, the Harzburg Front swells, recruiting from dejected farmers.
+我们坚持既定价格不肯退让,要求农民按约定价格出售,并严惩那些继续囤货抬价的人。结果短期见效,不过有人担心我们正在为城乡冲突制造长期条件 —— 这与马克思所期望的调和恰恰相反。事实上,哈茨堡阵线正从失意的农民中招兵买马、日益壮大。
 
 @lower_tariffs
 choose-if: tariffs > -5
@@ -54,21 +54,21 @@ subtitle: -2 财政预算。[? if tariffs <= -5 : 已没有可再削减的关税
 on-arrival: tariff_cut_vote = 1
 go-to: tariff_cut_done if not legislature_enabled; legislative_menu if legislature_enabled
 
-We propose a bill to decrease tariff rates.
+我们提出一项降低关税税率的法案。
 
 @tariff_cut_done
 on-arrival: tariffs -= 1; budget -= 2; inflation -= 2; workers_spd += 4*(1-dissent); unemployed_spd += 4*(1-dissent); rural_spd -= 5; old_middle_spd -= 3; economic_growth += 0.4; socialism += 2; rural_zca += 10 if zca_formed; rural_nsdap += 10; rural_dnvp += 10; sa_strength += rural
 
-By lowering tariffs, we alleviate much of the food crisis. However, farmers are not happy at being undercut and sidelined. While in the end, they are forced to meet the new market prices, it worsens their quality of life, and leads many to turn to the Harzburg Front.
+通过降低关税,我们缓解了大部分粮食危机。然而,农民对被压价、被边缘化并不满意。尽管最终他们被迫接受新的市场价格,但这降低了他们的生活质量,并使许多人转向哈茨堡阵线。
 
-Farmers are hurt by this policy, as cheap imported grain leads to ruin for some small producers. In general, cheap imports are detrimental for small-scale industries aimed at the domestic market.
+这项政策伤害了农民,廉价的进口粮食导致一些小型生产者破产。总体而言,廉价进口对面向国内市场的小型产业是不利的。
 
 @reconcile_town_and_country
 view-if: not reconcile_town_and_country
 subtitle: -3 财政预算。许多人持怀疑态度;这对眼下的危机帮助不大。
 on-arrival: budget -= 3; inflation -= 0.2; inflation -= 0.5 if capital_flight; inflation -= nationalization_progress/10 if five_year_plan; coalition_dissent += 2; labor_dissent += 5; rural -= 1; workers += 1; reconcile_town_and_country += 1
 
-We have set aside significant funding towards the development of urban agriculture as a step towards the reconciliation of town and country, as advocated by Marx. In the short term, this yields very little results, and the issue of food shortages remains present on the minds of many who grow frustrated with our failure to address their immediate issues. We counter by saying that we are treating the cause and not the symptom, and that the long term crisis requires a fundamental re-evaluation of labor divisions. Unfortunately for us, it does not seem trade unions like being lectured to on Marxist theory. We will have to hope for results to vindicate our thesis.
+我们拨出大笔资金,用于发展都市农业,以此作为迈向马克思所主张的城乡调和的一步。短期内,这收效甚微;粮食短缺的问题仍萦绕在许多人心头,他们对我们未能解决其眼前困境日益不满。我们反驳说,我们治的是病根而非症状,长期危机需要对劳动分工进行根本性的重新评估。对我们不幸的是,工会似乎并不喜欢听马克思主义理论的训导。我们只能寄望于结果来印证我们的论断。
 
 
 ## todo: doing the reconcile town and country one while doing nothing short term unlocks a path long term where you can actually succeed

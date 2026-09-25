@@ -12,12 +12,12 @@ tags: event
 # TODO: if you've recovered, you get economic recovery
 # if you haven't recovered, you can either support Roosevelt or support the UK/France
 
-The League of Nations is hosting a conference to discuss the state of the global economy and potential solutions to the ongoing depression. All parties want to reduce tariffs to encourage trade. However, the Western powers are at an impasse; France and to a lesser extent Britain are calling for fixed currency exchange rates, while President Roosevelt of the United States wants to print new money to stimulate demand, calling for "controlled inflation". The Europeans want to reduce their debts to the US, while America favors continued full payments.
+国际联盟正在主办一场会议,讨论全球经济状况以及应对持续萧条的潜在方案。各方都想降低关税以鼓励贸易。然而,西方列强陷入了僵局:法国以及程度稍轻的英国主张固定汇率,而美国总统罗斯福则想增发货币以刺激需求,主张「受控的通胀」。欧洲人希望削减欠美国的债务,而美国则倾向于继续全额偿付。
 
 @economic_recovery
 
-[? if wtb_adopted or budget <= 0: Germany has largely recovered from the crisis, owing in large part to the same sorts of economic policies that Roosevelt is pursuing. ?]
-[? if not wtb_adopted and budget > 0: Germany has largely recovered from the crisis, without having to resort to budget deficits or devaling the currency. ?]
+[? if wtb_adopted or budget <= 0: 德国大体上已从危机中复苏,这在很大程度上得益于与罗斯福正在推行的同类型经济政策。 ?]
+[? if not wtb_adopted and budget > 0: 德国大体上已从危机中复苏,且未曾诉诸预算赤字或货币贬值。 ?]
 
 - @support_roosevelt
 - @support_france
@@ -27,7 +27,7 @@ The League of Nations is hosting a conference to discuss the state of the global
 
 @no_recovery
 
-Germany, like the rest of the world, is still deep in the economic crisis, even if it has appeared to bottom out.
+德国与世界其他地方一样,仍深陷经济危机之中 —— 即便看起来已经触底。
 
 - @support_roosevelt
 - @support_france
@@ -52,21 +52,21 @@ title: 支持罗斯福的主张 —— 我们必须让货币贬值。
 view-if: spd_in_government
 
 
-We support Roosevelt's plan for controlled inflation, leaving us at odds with the European powers. In response to the continued support for fixed currency exchange rates by France and Britain and the impasse on debts, the Americans pull out of the conference, leaving it with no agreements whatsoever.
+我们支持罗斯福受控通胀的方案,这使我们与欧洲列强产生分歧。由于法国与英国继续支持固定汇率、债务问题又陷僵局,美国人退出了会议,使这场会议没有达成任何协议。
 
 @support_france
 title: 支持法国与英国 —— 我们必须维持货币稳定。
 view-if: spd_in_government
 on-arrival: west_relation += 1; eu_progress += 1
 
-Our position brings us closer to other European powers. In response to the continued support for fixed currency exchange rates and the impasse on debts, the Americans pull out of the conference, leaving it with no agreements whatsoever.
+我们的立场使我们更靠近其他欧洲列强。由于各方继续支持固定汇率、债务问题又陷僵局,美国人退出了会议,使这场会议没有达成任何协议。
 
 
 @salvage
 title: 我们能设法挽救这场谈判吗?
 view-if: spd_in_government
 
-How should we try to salvage the negotiations?
+我们该如何设法挽救这场谈判?
 
 - @salvage_currency: 设法说服法国与英国:缓慢且受控的通胀既可能,也可取。
 - @salvage_debts: 设法说服美国为了和平而削减战债。
@@ -77,20 +77,20 @@ choose-if: woytinsky_advisor = 1 and wtb_implemented > 1
 unavailable-subtitle: 此刻若有弗拉基米尔·沃伊京斯基相助,将极有帮助。
 on-arrival: unemployed -= 2 if unemployed >= 10; unemployed -= 1.5 if unemployed >= 5; inflation += 1.5; workers_spd += 4*(1-dissent); new_middle_spd += 3*(1-dissent); economic_growth += 1.5 if economic_growth < 3; socialism -= 2
 
-Wladimir Woytinsky, now part of our delegation to the conference, uses our successful implementation of the WTB-plan in order to argue for loosening currency valuation. The argument is at least somewhat convincing, and an agreement is reached, leading to increased inflation and demand stimulus throughout the world.
+弗拉基米尔·沃伊京斯基如今是我们出席这场会议代表团的一员,他利用我们成功实施 WTB 计划的经验,主张放宽货币估值。这一论证多少有些说服力,协议得以达成,从而在世界各地带来通胀上升与需求刺激。
 
 @salvage_debts
 choose-if: reparations <= -2 and pacifism >= 3 and (rearmament_exposed or west_relation >= 3)
 unavailable-subtitle: 以我们目前的处境,无法为和平主义辩护。
 on-arrival: budget += 1; unemployed -= 1 if unemployed >= 10; unemployed -= 1 if unemployed >= 5; inflation += 1 if inflation < 0; new_middle_spd += 4*(1-dissent); workers_spd += 3*(1-dissent); economic_growth += 1 if economic_growth < 3; socialism -= 2
 
-We try to argue that reducing war debts will reduce the risk of a future European war, using our successful disarmament and the reduction in Versailles reparation payments as an argument. The argument is at least somewhat convincing to the Americans, leading to an agreement to reduce debts from the Great War. This indirectly also improves our economy.
+我们设法论证:削减战债将降低未来欧洲爆发战争的风险 —— 以我们成功的裁军以及《凡尔赛条约》赔款支付的减少为论据。这一论证对美国人有几分说服力,促成了一份削减大战债务的协议。这间接也改善了我们自己的经济。
 
 @no_business
 title: 这场会议与我们无关。
 view-if: spd_in_government
 
-The conference collapses, as expected. In response to the continued support for fixed currency exchange rates and the impasse on debts, the Americans pull out of the conference, leaving it with no agreements whatsoever.
+会议如所料般破裂。由于各方继续支持固定汇率、债务问题又陷僵局,美国人退出了会议,使这场会议没有达成任何协议。
 
 [? if unemployed >= 15 : 尽管如此,受益于罗斯福政府的经济刺激与更自由的贸易政策,世界经济正在缓慢好转。 ?]
 [? if unemployed < 15 : 不过,由于罗斯福政府的经济刺激与更自由的贸易政策,也由于我们自己的经济计划,世界经济正在缓慢好转。 ?]

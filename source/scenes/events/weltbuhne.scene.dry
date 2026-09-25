@@ -11,12 +11,12 @@ tags: event
 # If in a grand coalition then the SPD can pressure the coalition to cancel the trial at the expense of dissent.
 # If the trial goes ahead, then reparations negotiation process gets set back by a few steps and relations with the west suffers.
 
-= The Weltbühne Trial
+= 《世界舞台》审判案
 
-The left-wing news and literary magazine Weltbühne has been targeted by the national authorities for allegedly revealing state secrets. The magazine published articles alleging a secret rearmament program by the Reichswehr, in contravention of the Treaty of Versailles. The military authorities obviously do not want this information to be known. It does not help that the magazine's editor, Carl von Ossietzky, is a well-known pacifist.
+左翼新闻与文学杂志《世界舞台》因涉嫌泄露国家机密而成为国家当局的目标。该杂志发表文章,指称国防军有一项违反《凡尔赛条约》的秘密重整军备计划。军方当局显然不愿让这一信息为人所知。更糟的是,该杂志主编卡尔·冯·奥西茨基是知名的和平主义者。
 
-[? if spd_in_government and justice_minister_party = "SPD" : With our control of the Justice Ministry, we could simply drop the case. ?]
-[? if spd_in_government and justice_minister_party != "SPD" : The Justice Ministry is seeking to persecute the editor and journalist of Weltbühne. We can try to persuade our coalition partners to drop the case, but they will likely resist. ?]
+[? if spd_in_government and justice_minister_party = "SPD" : 既然司法部掌握在我们手中,我们大可直接撤回此案。 ?]
+[? if spd_in_government and justice_minister_party != "SPD" : 司法部正图谋迫害《世界舞台》的主编与记者。我们可以设法说服执政伙伴撤回此案,但他们多半会抵制。 ?]
 
 - @drop_case: 撤回此案。
 - @let_persecute: 让司法照常进行。
@@ -29,28 +29,28 @@ choose-if: spd_in_government and justice_minister_party = "SPD"
 unavailable-subtitle: [? if not spd_in_government : 社民党不在政府之中。 ?] [? if spd_in_government and justice_minister_party != "SPD": 社民党并不掌控司法部。 ?]
 on-arrival: weltbuhne_dropped = 1; dvp_relation -= 4; nationalism -= 3*(1-dissent); coalition_dissent += 1 if in_grand_coalition; reichswehr_loyalty -= 0.1; west_relation += 1; east_relation += 1; coup_progress += 1; reparations_negotiation += 1; pacifism += 1
 
-The Justice Ministry has dropped all persecution of Carl von Ossietzky and Walter Kreiser, the journalist responsible for the offending publication. In fact, some say that the Weltbühne journalists should be feted as heroes.
+司法部已放弃对卡尔·冯·奥西茨基以及那篇惹祸文章的记者瓦尔特·克赖泽尔的一切迫害。事实上,有人说《世界舞台》的记者们应当被奉为英雄。
 
 西方列强以及所有感到受德国军国主义威胁的国家,都乐见我们翻过了历史上的这一页。
-[? if in_grand_coalition: On the other hand, the right-wing members of our governing coalition disapprove of this action, as does the Reichswehr. ?][? if not in_grand_coalition : On the other hand, the Reichswehr disapproves of dropping the case. ?]
+[? if in_grand_coalition: 另一方面,我们执政联盟中的右翼成员不赞同此举,国防军亦然。 ?][? if not in_grand_coalition : 另一方面,国防军不赞同撤回此案。 ?]
 
 @let_persecute
 view-if: spd_in_government
 on-arrival: weltbuhne_dropped = 0; dvp_relation += 4; reichswehr_loyalty += 0.05; west_relation -= 1; east_relation -= 1; reparations_negotiation -= 1; pacifism -= 1; nationalism += 4; left_dissent += 5
 
-The case progresses slowly, given the military secrets involved, and there will be no determination made for a while. The Reichswehr is pleased of our loyalty. However, the affair has made the Western powers suspicious of our resurgent militarism, as well as displeasing the left wing of the party.
+考虑到所涉军事机密,此案进展缓慢,短期内不会有裁决。国防军对我们的忠诚感到满意。然而,这一事件让西方列强对我们重新抬头的军国主义起了疑心,也惹恼了我党左翼。
 
 @pressure_drop
 view-if: spd_in_government and justice_minister_party != "SPD"
 on-arrival: weltbuhne_dropped = 1; dvp_relation -= 5; nationalism += 3*(1-dissent); coalition_dissent += 1; coalition_dissent += 1 if in_grand_coalition; reichswehr_loyalty -= 0.1; coup_progress += 1; west_relation += 1; east_relation += 1; reparations_negotiation += 1
 
-We have pressured the Justice Ministry to drop the case against the Weltbühne, raising tensions with our coalition.
+我们施压司法部撤回对《世界舞台》的诉讼,这加剧了我们与联盟的紧张关系。
 
 西方列强以及所有感到受德国军国主义威胁的国家,都乐见我们翻过了历史上的这一页。
-On the other hand, the Reichswehr disapproves of dropping the case.
+另一方面,国防军不赞同撤回此案。
 
 @nothing
 view-if: not spd_in_government
 on-arrival: weltbuhne_dropped = 0; west_relation -= 1; east_relation -= 1; reparations_negotiation -= 1; pacifism -= 1; nationalism += 4
 
-The case progresses slowly, given the military secrets involved, and there will be no determination made for a while. However, the affair has made the Western powers suspicious of our resurgent militarism.
+考虑到所涉军事机密,此案进展缓慢,短期内不会有裁决。然而,这一事件已让西方列强对我们重新抬头的军国主义起了疑心。

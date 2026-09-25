@@ -202,7 +202,7 @@ subtitle: 他们声称该法案违宪 —— 若果真如此,这次公投便属�
 view-if: justice_minister_party == "SPD"
 on-arrival: princes_constitutional = 1; coalition_dissent += 1; reichswehr_loyalty -= 0.05; coup_progress += 2
 
-Justice Minister Gustav Radbruch has reviewed the DVP's opinion and found his own, that the referendum is indeed constitutional, serving the common good as the constitution prescribes, to be the correct one. 
+司法部长古斯塔夫·拉德布鲁赫审视了人民党的意见,并得出自己的结论:这次公投确实合宪 —— 它如宪法所规定的那样服务于公共福祉 —— 自己的判断才是正确的。
 
 这引发与人民党的严重摩擦 —— 该党正被其右翼推着转而反对大联合政府。
 

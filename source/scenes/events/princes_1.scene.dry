@@ -8,11 +8,11 @@ new-page: true
 
 = 没收诸侯财产
 
-As the economy worsens and the Communists search for ways to revitalize their movement after the embarassing result of [+ thalmann_votes_disp +]% in March, they attempt to capitalize on the current debate over the status of princely lands, and have submitted a bill for the expropriation without compensation.
+随着经济恶化,共产党人又在 3 月 [+ thalmann_votes_disp +]% 的难堪结果之后寻求重振其运动,他们试图利用当下关于诸侯领地地位的争论,提交了一份无偿没收的法案。
 
-The DDP, meanwhile, has also submitted a bill on the matter, which would empower state Landtags to pass laws for the settling of disputes with the former princely houses. This, as opposed to the communist proposal, may stand a chance of approval in Reichstag; the KPD has no illusions of the Reichstag accepting the bill, and have already begun preparing a referendum, and have even invited us to help organize it, likely expecting a refusal so as to paint us as puppets of the bourgeois.
+与此同时,民主党也就此事提交了一份法案,将授权各州议会通过法律,以解决与前诸侯家族的纠纷。与共产党的提案不同,这份法案或许有机会在国会获得通过;共产党对国会接受自己的法案不抱幻想,已开始筹备公投,甚至邀请我们协助组织 —— 多半是料定我们会拒绝,以便把我们描绘成资产阶级的傀儡。
 
-At the same time, if we joined the initiative for referendum we would risk alienating our bourgeois parties, and certainly eliminate the chance of a Grand Coalition succeeding the Luther cabinet.
+与此同时,若我们加入公投倡议,就要冒疏远资产阶级政党的风险,并且肯定断送在路德内阁之后组成大联盟的机会。
 
 - @early_initiative: 退出联盟谈判,加入共产党发起的倡议。
 - @historical_one: 暂时支持民主党的提案。
@@ -22,9 +22,9 @@ choose-if: left_strength > reformist_strength
 unavailable-subtitle: 党内多数持怀疑态度。
 on-arrival: princes_time = time+2; princes_initiated = 1; reformist_dissent += 5; kpd_relation += 5; dvp_relation -= 5; new_middle_spd -= 3; old_middle_spd -= 3; catholics_spd -= 1; marx_relation -= 5
 
-We surprise the bourgeois and party right by effectively withdrawing from coalition talks to focus on opposition politics through the backing of a referendum for the expropriation without compensation of the princes. Though there is no way we could directly back the communist suggestion, the ADGB has mediated a bill that both parties are able to agree on, and preparations for referendum are underway.
+我们实际退出执政联盟谈判,转而通过支持无偿没收诸侯财产的公投来专注于在野政治,这令资产阶级与我党右翼大为意外。虽然我们绝无可能直接支持共产党的提议,但德国工会总联合会已调解出一份两党都能同意的法案,公投的筹备正在进行。
 
 @historical_one
 on-arrival: ddp_relation += 5; dvp_relation += 2; z_relation += 2; workers_spd -= 5; unemployed_spd -= 2
 
-The greater priority in the present moment is to entertain this potential Grand Coalition. We must not burn bridges by throwing our lot in with the far-left.
+眼下更重要的优先事项是考虑这个可能的大联盟。我们绝不能因投靠极左而自断后路。

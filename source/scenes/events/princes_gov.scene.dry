@@ -7,9 +7,9 @@ new-page: true
 
 = 没收诸侯财产
 
-As the date for the petition on the expropriation of the princes draws nearer, the DVP has proposed a compromise bill of its own, through which it hopes to resolve the issue without the need for such a direct confrontation in the form of a referendum.
+随着没收诸侯财产的请愿日期临近,人民党提出了它自己的一份妥协法案,希望借此在无需以公投形式正面交锋的情况下解决这一问题。
 
-This law would create a special court, which would settle the disputes between princely houses and state governments. It is markedly worse than the DDP's suggestion of last year, which we could most probably get [+ chancellor +] and thus the cabinet as a whole to back.
+这项法律将设立一个特别法庭,以裁决诸侯家族与州政府之间的纠纷。它明显劣于民主党去年的提案 —— 我们多半能争取到 [+ chancellor +] 乃至整个内阁支持那份提案。
 
 - @ddp_proposal: 施压内阁,迫其支持民主党的提案。
 - @accept_dvp: 接受这项妥协,尽管它乏善可陈。
@@ -28,7 +28,7 @@ choose-if: reformist_strength > left_strength+center_strength or (reformist_stre
 unavailable-subtitle: 本党绝大多数人反对这项法案
 on-arrival: coalition_dissent -= 1; marx_relation += 5; left_dissent += 5; kpd_relation -= 10; workers_kpd += 4; workers_spd -= 4; unemployed_kpd += 4; unemployed_spd -= 4; princes_initiated = 0; dvp_relation += 5; z_relation += 5
 
-We have managed to convince our own party into backing the compromise proposed by the DVP. The left is furious, and many will be voting alongside the KPD anyway.
+我们成功说服本党支持人民党提出的妥协。左翼大为愤怒,许多人无论如何都会与共产党一道投票。
 
 @referendum_ftw
 view-if: princes_initiated
@@ -55,7 +55,7 @@ Let there be no mistake that our support for this referendum signals a united fr
 @united_front
 on-arrival: coalition_dissent += 1; princes_bonus += 3; marx_relation -= 5; kpd_relation += 10; reformist_dissent += 10; workers_spd += 2*(1-dissent); workers_kpd += 2; unemployed_spd += 1*(1-dissent); unemployed_kpd += 3; rural_spd += 2*(1-dissent); socialism += 4; z_relation -= 4; ddp_relation -= 3; dvp_relation -= 5
 
-This referendum shall only succeed through the joint mobilization of the proletariat by the SPD and the KPD together. We cannot hope to win if we do not campaign alongside the KPD. Our coalition partners are disgusted.
+这场公投只有通过社民党与共产党共同动员无产阶级才能成功。若不与共产党并肩竞选,我们绝无获胜的希望。我们的执政伙伴对此深恶痛绝。
 
 @join_referendum
 on-arrival: princes_initiated = 1; coalition_dissent += 1; marx_relation -= 3; workers_spd += 1*(1-dissent); rural_spd += 1*(1-dissent); z_relation -= 2; ddp_relation -= 2; dvp_relation -= 3; left_dissent += 5; reformist_dissent += 5

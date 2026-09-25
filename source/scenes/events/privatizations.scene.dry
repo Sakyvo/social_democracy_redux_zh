@@ -7,7 +7,7 @@ on-arrival: papenomics_timer += 5
 
 = Privatization
 
-In government, we have worked towards the socialization of the economy through the Left Plan in order to advance our agenda. Recently, the new bourgeois cabinet of [+ chancellor +] has announced its intentions to work towards the reversal of this policy.
+在执政期间,我们通过左翼计划推进经济的社会化,以推动我们的议程。最近,[+ chancellor +] 的新资产阶级内阁宣布打算着手逆转这一政策。
 
 - @break_toleration: 我们将投反对票,搞垮这个政府。
 - @nothing_to_be_done: 我们无能为力。
@@ -23,25 +23,25 @@ go-to: break_toleration_success if left_coalition+sapd_r >= 50; break_toleration
 on-arrival: time_to_election = 3; pro_republic -= 4
 call: set_next_election_time
 
-We have managed to vote down the privatizations, collapsing the government and forcing [+ president +] to dissolve the Reichstag for new elections, which have been set for [+ next_election_month : month +] [+ next_election_year +].
+我们成功否决了私有化措施,搞垮了政府,迫使 [+ president +] 解散国会以举行新的选举,选举定于 [+ next_election_month : month +] [+ next_election_year +]。
 
 @break_toleration_failure
 on-arrival: socialism += 1; nationalization_progress -= 1; capital_strike_progress -= 2; bourgeois_power += 0.05; unemployed += 3.5 if unemployed < 6; unemployed += 1.2 if works_councils < 3; workers -= 2 if nationalization_progress >= 2; budget += 3; works_program -= 1; workers_spd += 3*(1-dissent); unemployed_spd += 2*(1-dissent); new_middle_spd -= 2; new_middle_spd += 1 if new_middle_conscious; old_middle_spd -= 3; inflation -= 2; economic_growth -= 1.7 if economic_growth >= 5
 
-Unfortunately, the bourgeois parties, including the far-right, have united to restore the bourgeoisie's economic supremacy by voting against us. The privatizations pass.
+遗憾的是,包括极右翼在内的资产阶级政党联合起来,通过投票反对我们来恢复资产阶级的经济主导地位。私有化措施获得通过。
 
 @nothing_to_be_done
 view-if: not spd_toleration
 on-arrival: socialism -= 1; nationalization_progress -= 1; capital_strike_progress -= 2; bourgeois_power += 0.05; unemployed += 3.5 if unemployed < 6; unemployed += 1.2 if works_councils < 3; workers -= 2 if nationalization_progress >= 2; budget += 3; works_program -= 1; workers_spd += 2*(1-dissent); unemployed_spd += 3*(1-dissent); new_middle_spd -= 2; new_middle_spd += 1 if new_middle_conscious; old_middle_spd -= 3; inflation -= 2; economic_growth -= 1.7 if economic_growth >= 5
 
-With no leverage on the government, there is nothing we can do to stop the privatizations from being implemented. 
+由于对政府毫无影响力,我们无力阻止私有化措施付诸实施。
 
 @no_choice
 view-if: spd_toleration
 subtitle: 我党将为此震怒。
 on-arrival: left_dissent += 10; left_strength -= 5; socialism -= 4; capital_strike_progress -= 2; bourgeois_power += 0.05; unemployed += 3.5 if unemployed < 6; unemployed += 1.2 if works_councils < 3; workers -= 2 if nationalization_progress >= 2; budget += 3; works_program -= 1; workers_kpd += 2*(1-dissent); unemployed_kpd += 3*(1-dissent); new_middle_spd -= 2; new_middle_spd += 1 if new_middle_conscious; old_middle_spd -= 3; inflation -= 2; economic_growth -= 1.7 if economic_growth >= 5; kpd_relation -= 5
 
-We cannot afford to trigger new elections now, so we have no choice but to continue toleration. Unfortunately, many in our party do not see things the same way, and the KPD benefits from our seeming abandonment of our legacy.
+我们现在经不起提前选举的代价,因此别无选择,只能继续容忍。遗憾的是,我党许多人并不这么看;而共产党则从我们看似背弃自身传统中获益。
 
 @fight
 view-if: factory_takeovers
@@ -49,7 +49,7 @@ choose-if: (rb_militancy*(left_strength/100)) >= 0.1
 unavailable-subtitle: 国旗团的战斗性不足。
 on-arrival: reformist_dissent += 5
 
-Are we sure? This would mean obstruction of justice, at least in the eyes of the bourgeoisie and their courts. Even considering this option infuriates our reformist wing.
+我们确定吗?这至少从资产阶级及其法院的眼中看,将是妨碍司法。光是考虑这个选项就足以激怒我们的改良派。
 
 - @fight_2: 对,战斗。
 - @break_toleration: 我们将投反对票,搞垮这个政府。
@@ -64,15 +64,15 @@ go-to: fight_2_win if striker_power >= scab_power; fight_2_loss if striker_power
 on-arrival: socialism += 2; pro_republic -= 5; capital_strike_progress += 5; strife += 2; sa_militancy += 0.05; coup_progress += 3; time_to_election = 2
 call: set_next_election_time
 
-We deploy the armed contingents of the Reichsbanner and other workers' forces to defend the occupied factories by force and prevent the restoration of private control over them. 
+我们部署国旗团及其他工人力量的武装队伍,以武力保卫被占领的工厂,阻止私人重新取得对它们的控制。
 
-In disgrace, [+ chancellor +] has resigned, and [+ president +] has called new elections, set for [+ next_election_month : month +] [+ next_election_year +].
+[+ chancellor +] 在耻辱中辞职,[+ president +] 宣布新的选举,定于 [+ next_election_month : month +] [+ next_election_year +]。
 
 ## todo: if the government is still non-fascist when this happens this should really make basically anyone appoint hitler or declare martial law or something
 
 @fight_2_loss
 on-arrival: socialism -= 3; rb_militancy -= 0.05; workers_kpd += 5; unemployed_kpd += 5; workers_spd -= 10; unemployed_spd -= 10; rb_did_illegal_stuff = 1
 
-We deploy the armed contingents of the Reichsbanner and other workers' forces to defend the occupied factories from the government, but they are quashed. Our mythopoetic struggle comes to a woeful end.
+我们部署国旗团及其他工人力量的武装队伍抵御政府、保卫被占领的工厂,但他们被镇压了。我们神话般的斗争以悲凉收场。
 
 ## todo: reichsbanner ban lol

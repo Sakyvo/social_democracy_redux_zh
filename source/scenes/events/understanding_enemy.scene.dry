@@ -6,22 +6,22 @@ max-visits: 1
 tags: event
 new-page: true
 
-= Understanding the Enemy
+= 认清敌人
 
-The Nazis' rise is unprecedented for a political party in modern Germany, and socialist intellectuals are doing their best to come to terms with the rapid rise of this dangerous party.
+纳粹党的崛起在近代德国的政党中史无前例,社会主义知识分子正尽力去理解这个危险政党的迅速壮大。
 
 # Harsch p. 106-109
 
-The trade union researcher Theodor Geiger has written an article titled "Panik im Mittelstand", in which he describes the Nazis as being primarily a movement of the middle class, especially lower-middle civil servants and professionals who fear the proletarianizing effects of the Depression. Geiger argues that the middle class has been economically and politically unmoored, long split between many competing parties, squeezed between the big businesses and the proletariat. The mix of nationalist, anti-democratic, and loosely anti-capitalist rhetoric of the Nazis appeals to this group, perhaps only temporarily before the middle class discovers its true class interests.
+工会研究者特奥多尔·盖格写了一篇题为《中产阶层的恐慌》的文章,其中把纳粹党描述为主要是一场中间阶层的运动,尤其是那些害怕大萧条带来无产阶级化的中下层公务员与专业人士。盖格认为,中间阶层在经济与政治上已失去锚定,长期分裂于众多相互竞争的政党之间,被大企业与无产阶级两头挤压。纳粹党那套民族主义、反民主以及含糊反资本主义的言辞混合,对这个群体颇具吸引力 —— 或许只是暂时的,直到中间阶层认清自己真正的阶级利益。
 
-By contrast, the theoretician Alexander Schifrin understands the Nazis as a new, unprecedented type of political movement, a fascist party that has non-economic appeal across class lines. He calls to attention its use of violent propaganda and street demonstrations as central to their rise.
+相比之下,理论家亚历山大·希夫林把纳粹党理解为一种前所未有的新型政治运动 —— 一个跨越阶级界限、具有非经济吸引力的法西斯政党。他提醒人们注意:暴力的宣传与街头示威在其崛起中居于核心地位。
 
 # Harsch p. 77-78
 
-Carlo Mierendorff, a leader of the "new revisionists", understands the Nazis as a politically incoherent but nevertheless powerful movement. They are kept together by the strength of their organizing machine and the emotional appeal of their nebulous ideology, which is able to attract less informed voters who voted based on feeling. Countering them would require a new style of campaigning, focused more on symbols and emotion rather than reason.
+「新修正派」的领袖卡洛·米伦多夫把纳粹党理解为一个政治上并不自洽却依然强大的运动。维系他们的是其组织机器的力量,以及那套模糊意识形态的情感感召力 —— 它足以吸引那些凭感觉投票、见识不多的选民。要对抗他们,需要的是一种新的竞选风格,更侧重符号与情感,而非理性。
 
 
-It is possible that all or none of these hypotheses are correct. Whatever the case, there must be something we can do to stop their rise.
+这些假说或许全都正确,或许全都不对。无论如何,总该有些办法能阻止他们的崛起。
 
 # Georg Decker
 
@@ -37,22 +37,22 @@ It is possible that all or none of these hypotheses are correct. Whatever the ca
 @p1
 on-arrival: socialism += 1
 
-The Nazis are the fault of the petit bourgeoisie. It is not our responsibility as a working-class party to stop them.
+纳粹是小资产阶级的产物。作为一个工人阶级政党,阻止他们不是我们的责任。
 
 @p2
 on-arrival: peoples_party_support += 1; neorevisionist_strength += 5; left_strength -= 3; left_dissent += 4; center_dissent += 3;
 
-We can combat the Nazis by adopting a "People's Party" posture that might compete for support among the middle class. In order to do this, we can create a new and inclusive vision of the party that encompasses all people who work for a living, which is almost everyone in the country save the aristocrats and top capitalists.
+我们可以采取「全民党」的姿态来对抗纳粹,以在中间阶层中争夺支持。为此,我们可以为党打造一种新的、包容性的愿景,涵盖所有靠劳动为生的人 —— 除了贵族与顶级资本家,这个国家几乎人人都是。
 
-[? if peoples_party = 0 : This effort faces great opposition from the left and center of our party, who would prefer a party focused on the working class. To fully adopt the vision of a people's party, we should increase our campaigning among other demographics. ?]
+[? if peoples_party = 0 : 这一努力遭到我党左翼与中间派的强烈反对,他们更希望党专注于工人阶级。要彻底确立全民党的愿景,我们应当加强在其他群体中的宣传。 ?]
 
 
 @p3
 on-arrival: neorevisionist_strength += 10; nazi_urgency += 1; neorevisionism += 1;
 
-Working together with other "neorevisionists" such as Sergei Chakhotin, Mierendorff has developed new propaganda methods to fight the rise of the Nazis. They focus on visually striking symbols and repetitious slogans. Time will tell how effective they are.
+米伦多夫与谢尔盖·恰霍京等其他「新修正派」合作,开发出对抗纳粹崛起的新宣传手段。它们着眼于视觉上抢眼的符号与反复的口号。它们的效果如何,时间自会给出答案。
 
 @p4
 on-arrival: left_strength += 4; center_strength += 4; labor_strength += 4; left_dissent -= 3; center_dissent -= 3; labor_dissent -= 3; workers_spd += 2*(1-dissent); unemployed_spd += 2*(1-dissent)
 
-The Nazis' appeals are making in-roads even among the working class, so we must redouble our propaganda campaigns among our base in order to prevent any Nazi attachment.
+纳粹的号召甚至在工人阶级中也开始渗透,因此我们必须加倍在我们基本盘中的宣传攻势,以防任何人对纳粹产生依附。
