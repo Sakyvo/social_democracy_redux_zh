@@ -86,7 +86,7 @@ if (!Q.stresemann_dead) {
 !}
 view-if: constructive_vonc = 0
 
-[? if z_relation >= 30 : 魏玛联盟各党 —— [+ ddp_name +] 与中央党 —— 支持这项改革,它将大大提升政府的稳定性。 ?] [? if z_relation < 30 : [+ ddp_name +] 支持这项改革,但中央党对我们的信任不足以支持这场宪法公投。 ?] 较为保守与激进的右翼政党以及共产党则表示反对,他们似乎对共和体制的动荡乐在其中。
+[? if z_relation >= 30 : 魏玛联盟各党 —— [+ ddp_display +] 与中央党 —— 支持这项改革,它将大大提升政府的稳定性。 ?] [? if z_relation < 30 : [+ ddp_display +] 支持这项改革,但中央党对我们的信任不足以支持这场宪法公投。 ?] 较为保守与激进的右翼政党以及共产党则表示反对,他们似乎对共和体制的动荡乐在其中。
 
 - @constructive_vonc_2: 发起宪法公投以通过这项改革!
 - @reforms_menu: 查看其他改革选项。
@@ -113,7 +113,7 @@ view-if: presidential_powers = 0
 
 宪法所许诺的广泛总统权力,是通往威权主义的潜在门户。因此,我们可以支持限制总统权力的改革,终结他单方面终止民选政府、以及撤换州政府的权力。
 
-共产党支持这项改革 —— 他们过去曾是*国家执行*的受害者(当时由图林根与萨克森共产党支持的州政府被撤换)。[+ ddp_name +] 的民主派也支持此举。 [? if president == "Hindenburg": 然而,保守派的反对极其激烈,他们认为削减总统权力是对兴登堡的不敬。 ?] [? if z_relation <= 49 and president == "Hindenburg" : 因此,中央党受到这种影响,转而反对这些改革。 ?] [? if z_relation > 49 and president == "Hindenburg" : 尽管如此,中央党仍支持拟议的改革。 ?] [? if president == "Braun" : 中央党支持这项改革。 ?]
+共产党支持这项改革 —— 他们过去曾是*国家执行*的受害者(当时由图林根与萨克森共产党支持的州政府被撤换)。[+ ddp_display +] 的民主派也支持此举。 [? if president == "Hindenburg": 然而,保守派的反对极其激烈,他们认为削减总统权力是对兴登堡的不敬。 ?] [? if z_relation <= 49 and president == "Hindenburg" : 因此,中央党受到这种影响,转而反对这些改革。 ?] [? if z_relation > 49 and president == "Hindenburg" : 尽管如此,中央党仍支持拟议的改革。 ?] [? if president == "Braun" : 中央党支持这项改革。 ?]
 
 - @presidential_powers_2: 发起宪法公投以通过这项改革!
 - @reforms_menu: 查看其他改革选项。

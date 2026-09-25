@@ -305,27 +305,27 @@ Q.neo_weimar_coalition = Q.spd_r + Q.ddp_r + Q.z_r + Q.dvp_r + Q.other_r;
 **选举结果：**
 
 # 1928: 30, 1930: 25, 1932: 22
-SPD: [+ spd_r +]
+社民党: [+ spd_r +]
 
-[? if sapd_formed == 1 : SAPD: [+ sapd_votes +]% ?]
+[? if sapd_formed == 1 : 社会主义工人党: [+ sapd_votes +]% ?]
 
 # 1928: 15, 1930: 15, 1932: 
-Z + BVP: [+ z_r +]
+中央党 + 巴伐利亚人民党: [+ z_r +]
 
 # 1928: 10, 1930: 13
-KPD: [+ kpd_r +]
+共产党: [+ kpd_r +]
 
 # 1928: 5, 1930: 4 (as DstP)
-DDP: [+ ddp_r +]
+民主党: [+ ddp_r +]
 
 # 1928: 9, 1930: 5
-DVP: [+ dvp_r +]
+人民党: [+ dvp_r +]
 
 # 1928: 14, 1930: 7
-DNVP: [+ dnvp_r +]
+国家人民党: [+ dnvp_r +]
 
 # 1928: 3, 1930: 18
-NSDAP: [+ nsdap_r +]
+纳粹党: [+ nsdap_r +]
 
 # 1928: 9, 1930: 10
 其他: [+ other_r +]

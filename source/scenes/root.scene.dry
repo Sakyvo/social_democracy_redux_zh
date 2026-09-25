@@ -379,6 +379,9 @@ Q.old_other_r = 9;
 // for changing the DDP's name to the DStP
 Q.ddp_name = "DDP";
 Q.bvp_name = "BVP";
+// 显示层:党派译名随代码值同步(值本身被代码用作比较,不可直接改)
+Q.ddp_display = "民主党";
+Q.bvp_display = "巴伐利亚人民党";
 
 // nazis have not peaked..
 Q.nazi_peaked = 0;

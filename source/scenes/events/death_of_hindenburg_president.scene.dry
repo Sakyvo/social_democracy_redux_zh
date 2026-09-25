@@ -31,9 +31,9 @@ go-to: candidate_menu
 [? if kpd_party_leader = "Conciliators" : 鉴于台尔曼此前竞选总统屡屡失利、在党内地位日降,共产党将推出维利·明岑贝格 —— 一位争议人物,有时被称作「红色百万富翁」。他是媒体大亨,领导着若干共产党的外围组织。 ?]
 [? if kpd_party_leader != "Conciliators" : 这将是恩斯特·台尔曼作为共产党领袖第三次竞选总统。尽管此前选举屡败,他仍保有党内以及斯大林苏联的忠诚。 ?]
 
-中央党、[+ ddp_name +] 与社民党中的许多共和派人士提出一个设想:推举全国闻名的齐柏林船长胡戈·埃克纳作为团结候选人。尽管他有一些民族主义观点,但他同样坚决反对纳粹主义。
+中央党、[+ ddp_display +] 与社民党中的许多共和派人士提出一个设想:推举全国闻名的齐柏林船长胡戈·埃克纳作为团结候选人。尽管他有一些民族主义观点,但他同样坚决反对纳粹主义。
 
-否则,若社民党推出自己的候选人,中央党与 [+ ddp_name +] 打算在第一轮中各自推出候选人。中央党正考虑提名科隆市长、普鲁士州议会议员康拉德·阿登纳。他呼吁组建一个囊括天主教徒与新教徒的保守派基督教民主党联盟。[+ ddp_name +] 则可能提名前国防部长奥托·格斯勒 —— 他对人民党等政党中厌恶国家人民党—纳粹党阵线的保守派颇有跨界吸引力。
+否则,若社民党推出自己的候选人,中央党与 [+ ddp_display +] 打算在第一轮中各自推出候选人。中央党正考虑提名科隆市长、普鲁士州议会议员康拉德·阿登纳。他呼吁组建一个囊括天主教徒与新教徒的保守派基督教民主党联盟。[+ ddp_display +] 则可能提名前国防部长奥托·格斯勒 —— 他对人民党等政党中厌恶国家人民党—纳粹党阵线的保守派颇有跨界吸引力。
 
 至于社民党,我们既可以支持一位魏玛联盟的联合候选人,也可以推出自己的人。
 [? if braun_campaign : 奥托·布劳恩累了。他在前两届总统选举中参选均告失败,不愿再出战。他妻子病重,他想守在她身边。 ?][? if braun_campaign = 0 and not spd_prussia: 奥托·布劳恩累了。在普鲁士被罢黜后,他大体上已退出政坛,把时间用来照料奄奄一息的妻子。 ?][? if braun_campaign = 0 and spd_prussia : 奥托·布劳恩累了。他不愿参选,但愿意被说服此刻需要他出马。他的妻子已是绝症,他不想再添责任。 ?]
@@ -52,7 +52,7 @@ go-to: candidate_menu
 
 - @eckener_r1: 支持胡戈·埃克纳作为魏玛联盟的联合候选人。
 - @adenauer_r1: 支持中央党的康拉德·阿登纳。
-- @gessler_r1: 支持 [+ ddp_name +] 的奥托·格斯勒。
+- @gessler_r1: 支持 [+ ddp_display +] 的奥托·格斯勒。
 - @thalmann_r1: 支持共产党的恩斯特·台尔曼。
 - @munzenberg_r1: 支持共产党的维利·明岑贝格。
 - @braun_r1: 支持奥托·布劳恩。
@@ -166,7 +166,7 @@ go-to: r1_menu
 
 他原本不愿竞选总统,不喜欢竞选的公开性质;但我们不知怎的说服了他,让他相信他的参选对德国与世界的未来至关重要。作为一位犹太裔德国和平主义者,他当选总统将是对纳粹所标榜一切的全盘否定。
 
-[+ ddp_name +] 将表态支持爱因斯坦的候选资格。
+[+ ddp_display +] 将表态支持爱因斯坦的候选资格。
 
 @mann_r1
 subtitle: -2 资源 —— 对资产阶级政党来说,他可能过于左倾。
@@ -267,7 +267,7 @@ go-to: r1_menu if round = 0; r2_campaigning if round > 0
 
 中央党被说服了!他们将在选举中支持 [+ spd_candidate +]。
 
-[? if z_relation < 40 : 遗憾的是,[+ bvp_name +] 在这次选举中与中央党决裂,转而支持国家人民党的泽尔特。 ?]
+[? if z_relation < 40 : 遗憾的是,[+ bvp_display +] 在这次选举中与中央党决裂,转而支持国家人民党的泽尔特。 ?]
 
 @z_partial
 
@@ -285,29 +285,29 @@ go-to: r1_menu if round = 0; r2_campaigning if round > 0
 
 凭借我们的资源,中央党被说服支持 [+ spd_candidate +]。康拉德·阿登纳将退出竞选。
 
-[? if z_relation < 40 and dnvp_candidate = "Seldte" : 遗憾的是,[+ bvp_name +] 在这次选举中与中央党决裂,转而支持国家人民党的泽尔特。 ?]
+[? if z_relation < 40 and dnvp_candidate = "Seldte" : 遗憾的是,[+ bvp_display +] 在这次选举中与中央党决裂,转而支持国家人民党的泽尔特。 ?]
 
 
 @convince_ddp_unity
-title: 说服 [+ ddp_name +] 支持 [+ spd_candidate +]。
+title: 说服 [+ ddp_display +] 支持 [+ spd_candidate +]。
 view-if: (spd_candidate = "Eckener" or spd_candidate = "Adenauer") and ddp_candidate != spd_candidate
 on-arrival: ddp_candidate = spd_candidate if ddp_relation >= 30
 go-to: r1_menu if round = 0; r2_campaigning if round > 0
 max-visits: 1
 
-[? if ddp_candidate = spd_candidate: [+ ddp_name +] 很轻易就被说服支持 [+ spd_candidate +]! ?]
-[? if ddp_candidate != spd_candidate: 遗憾的是,[+ ddp_name +] 不愿支持 [+ spd_candidate +]。魏玛联盟似乎正在分裂。 ?]
+[? if ddp_candidate = spd_candidate: [+ ddp_display +] 很轻易就被说服支持 [+ spd_candidate +]! ?]
+[? if ddp_candidate != spd_candidate: 遗憾的是,[+ ddp_display +] 不愿支持 [+ spd_candidate +]。魏玛联盟似乎正在分裂。 ?]
 
 
 @convince_ddp_spd
-title: 说服 [+ ddp_name +] 支持 [+ spd_candidate +]。
+title: 说服 [+ ddp_display +] 支持 [+ spd_candidate +]。
 view-if: (spd_candidate = "Braun" or spd_candidate = "Schumacher" or spd_candidate = "Juchacz"or is_cultural_candidate) and ddp_candidate != spd_candidate
 on-arrival: ddp_candidate = spd_candidate if ddp_relation >= 40
 go-to: r1_menu if round = 0; r2_campaigning if round > 0
 max-visits: 1
 
-[? if ddp_candidate = spd_candidate: [+ ddp_name +] 很轻易就被说服支持 [+ spd_candidate +]! ?]
-[? if ddp_candidate != spd_candidate: 遗憾的是,[+ ddp_name +] 不愿支持 [+ spd_candidate +]。 ?]
+[? if ddp_candidate = spd_candidate: [+ ddp_display +] 很轻易就被说服支持 [+ spd_candidate +]! ?]
+[? if ddp_candidate != spd_candidate: 遗憾的是,[+ ddp_display +] 不愿支持 [+ spd_candidate +]。 ?]
 
 @convince_kpd_spd
 title: 说服共产党支持 [+ spd_candidate +]。
@@ -662,7 +662,7 @@ on-arrival: reformist_dissent += 15; center_dissent += 10; labor_dissent += 5; n
 on-departure: z_candidate = "Adenauer" if z_candidate = "Braun" or z_candidate = "Schumacher" or z_candidate = "Juchacz"; ddp_candidate = z_candidate if ddp_candidate = "Braun" or ddp_candidate = "Schumacher" or ddp_candidate = "Juchacz"; dvp_candidate = z_candidate if dvp_candidate = "Braun" or dvp_candidate = "Schumacher" or dvp_candidate = "Juchacz"; spd_candidate = "Thälmann"; 
 max-visits: 1
 
-我们改而表态支持共产党的恩斯特·台尔曼。 [? if z_candidate = spd_candidate : 我们昔日在中央党的盟友把这视为背叛。 ?][? if z_candidate = "Braun" or z_candidate = "Schumacher" or z_candidate = "Juchacz": 如今,他们将再次支持康拉德·阿登纳。 ?][? if ddp_candidate = "Braun" or ddp_candidate = "Schumacher" or ddp_candidate = "Juchacz": [+ ddp_name +] 将把支持转向中央党候选人。 ?][? if dvp_candidate = "Braun" or dvp_candidate = "Schumacher" or dvp_candidate = "Juchacz": 人民党也将支持中央党候选人。 ?]
+我们改而表态支持共产党的恩斯特·台尔曼。 [? if z_candidate = spd_candidate : 我们昔日在中央党的盟友把这视为背叛。 ?][? if z_candidate = "Braun" or z_candidate = "Schumacher" or z_candidate = "Juchacz": 如今,他们将再次支持康拉德·阿登纳。 ?][? if ddp_candidate = "Braun" or ddp_candidate = "Schumacher" or ddp_candidate = "Juchacz": [+ ddp_display +] 将把支持转向中央党候选人。 ?][? if dvp_candidate = "Braun" or dvp_candidate = "Schumacher" or dvp_candidate = "Juchacz": 人民党也将支持中央党候选人。 ?]
 
 - @r2_vote: 开始投票吧。
 
@@ -676,7 +676,7 @@ on-arrival: reformist_dissent += 12; center_dissent += 10; labor_dissent += 5; n
 on-departure: z_candidate = "Adenauer" if z_candidate = "Braun" or z_candidate = "Schumacher" or z_candidate = "Juchacz"; ddp_candidate = z_candidate if ddp_candidate = "Braun" or ddp_candidate = "Schumacher" or ddp_candidate = "Juchacz"; dvp_candidate = z_candidate if dvp_candidate = "Braun" or dvp_candidate = "Schumacher" or dvp_candidate = "Juchacz"; spd_candidate = "Münzenberg"; 
 max-visits: 1
 
-我们改而表态支持共产党的维利·明岑贝格。 [? if z_candidate = spd_candidate : 我们昔日在中央党的盟友把这视为背叛。 ?][? if z_candidate = "Braun" or z_candidate = "Schumacher" or z_candidate = "Juchacz": 如今,他们将再次支持康拉德·阿登纳。 ?][? if ddp_candidate = "Braun" or ddp_candidate = "Schumacher" or ddp_candidate = "Juchacz": [+ ddp_name +] 将把支持转向中央党候选人。 ?][? if dvp_candidate = "Braun" or dvp_candidate = "Schumacher" or dvp_candidate = "Juchacz": 人民党也将支持中央党候选人。 ?]
+我们改而表态支持共产党的维利·明岑贝格。 [? if z_candidate = spd_candidate : 我们昔日在中央党的盟友把这视为背叛。 ?][? if z_candidate = "Braun" or z_candidate = "Schumacher" or z_candidate = "Juchacz": 如今,他们将再次支持康拉德·阿登纳。 ?][? if ddp_candidate = "Braun" or ddp_candidate = "Schumacher" or ddp_candidate = "Juchacz": [+ ddp_display +] 将把支持转向中央党候选人。 ?][? if dvp_candidate = "Braun" or dvp_candidate = "Schumacher" or dvp_candidate = "Juchacz": 人民党也将支持中央党候选人。 ?]
 
 - @r2_vote: 开始投票吧。
 

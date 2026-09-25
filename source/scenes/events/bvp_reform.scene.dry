@@ -4,7 +4,7 @@ tags: event
 view-if: supreme_soviet and not z_banned
 max-visits: 1
 new-page: true
-on-arrival: bvp_name = "BAP"
+on-arrival: bvp_name = "BAP"; bvp_display = "巴伐利亚工人党"
 
 = 巴伐利亚工人党
 

@@ -191,7 +191,7 @@ go-to: braun_campaign
 max-visits: 1
 go-to: convince_liberals_success if dvp_relation >= 50; convince_liberals_fail if dvp_relation < 50
 
-自由派的选票([+ ddp_name +] 与人民党)一直呈下降趋势,所以他们对我们的帮助大概微乎其微。无论如何,[+ ddp_name +] 已经愿意支持布劳恩。
+自由派的选票([+ ddp_display +] 与人民党)一直呈下降趋势,所以他们对我们的帮助大概微乎其微。无论如何,[+ ddp_display +] 已经愿意支持布劳恩。
 
 @convince_liberals_success
 on-arrival: dvp_support_braun = 1

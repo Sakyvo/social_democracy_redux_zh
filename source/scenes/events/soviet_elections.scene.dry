@@ -451,23 +451,23 @@ if (window && d3) {
 
 [? if neorevisionism : {!<tr><td><div class="box" style='background-color:#ff14a5; outline: 2px; outline-style: solid;'> </div> !} **社民党(新修正派):** {!</td><td>!} **[+ spd_neorevisionist_s +]%** {!</td><td>!} **[+ str_change_spd_neorevisionist +]** {!</td></tr>!} ?]
 
-[? if sapd_formed == 1 : {!<tr><td><div class="box" style='background-color:#C40000'> </div> !}SAPD: {!</td><td>!} [+ sapd_s +]% {!</td><td>!} [+ str_change_sapd +] {!</td></tr>!} ?]
+[? if sapd_formed == 1 : {!<tr><td><div class="box" style='background-color:#C40000'> </div> !}社会主义工人党: {!</td><td>!} [+ sapd_s +]% {!</td><td>!} [+ str_change_sapd +] {!</td></tr>!} ?]
 
-{!<tr><td><div class="box" style='background-color:#8B0000'> </div> !}KPD: {!</td><td>!} [+ kpd_s +]% {!</td><td>!} [+ str_change_kpd +] {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#8B0000'> </div> !}共产党: {!</td><td>!} [+ kpd_s +]% {!</td><td>!} [+ str_change_kpd +] {!</td></tr>!}
 
-{!<tr><td><div class="box" style='background-color:#4e0000'> </div> !}KAPD: {!</td><td>!} [+ kapd_s +]% {!</td><td>!} [+ str_change_kapd +] {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#4e0000'> </div> !}德国共产主义工人党: {!</td><td>!} [+ kapd_s +]% {!</td><td>!} [+ str_change_kapd +] {!</td></tr>!}
 
 {!<tr><td><div class="box" style='background-color:#612828'> </div> !}自由工人联盟: {!</td><td>!} [+ faud_s +]% {!</td><td>!} [+ str_change_faud +] {!</td></tr>!}
 
-{!<tr><td><div class="box" style='background-color:#000'> </div> !} Z: {!</td><td>!} [+ z_s +]% {!</td><td>!} [+ str_change_z +] {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#000'> </div> !} 中央党: {!</td><td>!} [+ z_s +]% {!</td><td>!} [+ str_change_z +] {!</td></tr>!}
 
-[? if ddp_socialist : {!<tr><td><div class="box" style='background-color:#DCCA4A'> </div> !} DDP: {!</td><td>!} [+ ddp_s +]% {!</td><td>!} [+ str_change_ddp +] {!</td></tr>!} ?]
+[? if ddp_socialist : {!<tr><td><div class="box" style='background-color:#DCCA4A'> </div> !} 民主党: {!</td><td>!} [+ ddp_s +]% {!</td><td>!} [+ str_change_ddp +] {!</td></tr>!} ?]
 
 {!<tr><td><div class="box" style='background-color:#85754e'> </div> !}资产阶级: {!</td><td>!} [+ bourgeois_s +]% {!</td><td>!} [+ str_change_bourgeois +] {!</td></tr>!}
 
 {!<tr><td><div class="box" style='background-color:#909090'> </div> !}无党籍: {!</td><td>!} [+ unaffiliate_s +]% {!</td><td>!} [+ str_change_unaffiliate +] {!</td></tr>!}
 
-{!<tr><td><div class="box" style='background-color:#954B00'> </div> !} NSDAP: {!</td><td>!} [+ nsdap_s +]% {!</td><td>!} [+ str_change_nsdap +] {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#954B00'> </div> !} 纳粹党: {!</td><td>!} [+ nsdap_s +]% {!</td><td>!} [+ str_change_nsdap +] {!</td></tr>!}
 {!</table>!}
 
 委员会选举已经举行,德国各行业的代表经选举产生,以决定工人阶级未来的道路,以及这一阶级对政治权力的追求。首要事项是选举产生一个执行机构。

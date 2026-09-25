@@ -1635,7 +1635,7 @@ Q.bill_support = Math.round(Q.bill_support);
 
 - @sway_kpd: 说服共产党。
 - @sway_sapd: 说服社会主义工人党。
-- @sway_ddp: 说服 [+ ddp_name +]。
+- @sway_ddp: 说服 [+ ddp_display +]。
 - @sway_z: 说服中央党。
 - @sway_dvp: 说服人民党。
 - @motion_fails: 该动议未能通过。
@@ -1647,25 +1647,25 @@ Q.bill_support = Math.round(Q.bill_support);
 !}
 on-departure: corporatism_vote = 0; welfare_cut_vote = 0; welfare_fund_pre_depression_vote = 0; welfare_fund_post_depression_vote = 0; women_vote = 0; council_vote_1 = 0; council_vote_2 = 0; council_vote_3 = 0; socialization_vote = 0; cooperative_vote = 0; judicial_vote = 0; concordat_vote = 0; eu_vote = 0; progressive_tax_vote = 0; raise_rich_vote = 0; cut_vote = 0; raise_vote = 0; regressive_vote = 0; tariff_cut_vote = 0; tariff_hike_vote = 0; women_labor_vote = 0; women_family_vote = 0; cut_benefits_vote = 0; increase_employers_vote = 0; balance_vote = 0; wtb_no_deficit_vote = 0; wtb_deficit_vote = 0; nationalize_vote = 0; reformist_vote = 0; synthesis_vote = 0; rearmament_vote = 0; disarmament_vote = 0; military_reform_vote = 0; school_board_vote = 0; public_hs_vote = 0; kwg_vote = 0; applied_vote = 0; medical_vote = 0; cut_science_vote = 0; war_guilt_vote = 0; shorten_hours_vote = 0; land_reform_vote = 0; state_buyer_vote = 0
 
-KPD: [+ kpd_vote : vote_display +]
+共产党: [+ kpd_vote : vote_display +]
 
-[? if sapd_formed : SAPD: [+ sapd_vote : vote_display +] ?]
+[? if sapd_formed : 社会主义工人党: [+ sapd_vote : vote_display +] ?]
 
-SPD: [? if not spd_split : 赞成 ?][? if spd_split : 意见不一 ?]
+社民党: [? if not spd_split : 赞成 ?][? if spd_split : 意见不一 ?]
 
-[+ ddp_name +]: [+ ddp_vote : vote_display +]
+[+ ddp_display +]: [+ ddp_vote : vote_display +]
 
-Z: [+ z_vote : vote_display +]
+中央党: [+ z_vote : vote_display +]
 
-BVP: [+ bvp_vote : vote_display +]
+巴伐利亚人民党: [+ bvp_vote : vote_display +]
 
-DVP: [+ dvp_vote : vote_display +]
+人民党: [+ dvp_vote : vote_display +]
 
 其他: [? if not other_split : [+ other_vote : vote_display +] ?][? if other_split : 意见不一 ?]
 
-DNVP: [+ dnvp_vote : vote_display +]
+国家人民党: [+ dnvp_vote : vote_display +]
 
-NSDAP: [+ nsdap_vote : vote_display +]
+纳粹党: [+ nsdap_vote : vote_display +]
 
 以 [+ bill_support +]% 赞成,议案获得通过。
 
@@ -1690,7 +1690,7 @@ unavailable-subtitle: 民主党不愿被说动。
 on-arrival: bill_support += ddp_r; ddp_vote = 1; left_dissent += 5; new_middle_spd -= 1; new_middle_ddp += 1
 go-to: success if bill_support >= 50; swaying_menu if bill_support < 50
 
-我们向 [+ ddp_name +] 作出足够让步,使他们同意投票支持我们的法案。
+我们向 [+ ddp_display +] 作出足够让步,使他们同意投票支持我们的法案。
 
 @sway_z
 view-if: in_popular_front or in_weimar_coalition or in_grand_coalition and not z_vote and not women_family_vote and (not nationalize_vote or budget > nationalize_budget)
@@ -1714,24 +1714,24 @@ go-to: success if bill_support >= 50; swaying_menu if bill_support < 50
 on-arrival: left_dissent += 5 if left_dissent < 40; center_dissent += 5 if center_dissent < 40; reformist_dissent += 5 if reformist_dissent < 50; neorevisionist_dissent += 5 if neorevisionist_dissent < 50; labor_dissent += 5 if labor_dissent < 50
 on-departure: corporatism_vote = 0; welfare_cut_vote = 0; welfare_fund_pre_depression_vote = 0; welfare_fund_post_depression_vote = 0; women_vote = 0; council_vote_1 = 0; council_vote_2 = 0; council_vote_3 = 0; socialization_vote = 0; cooperative_vote = 0; judicial_vote = 0; concordat_vote = 0; eu_vote = 0; progressive_tax_vote = 0; raise_rich_vote = 0; cut_vote = 0; raise_vote = 0; regressive_vote = 0; tariff_cut_vote = 0; tariff_hike_vote = 0; women_labor_vote = 0; women_family_vote = 0; cut_benefits_vote = 0; increase_employers_vote = 0; balance_vote = 0; wtb_no_deficit_vote = 0; wtb_deficit_vote = 0; nationalize_vote = 0; reformist_vote = 0; synthesis_vote = 0; rearmament_vote = 0; disarmament_vote = 0; military_reform_vote = 0; school_board_vote = 0; public_hs_vote = 0; kwg_vote = 0; applied_vote = 0; medical_vote = 0; cut_science_vote = 0; war_guilt_vote = 0; shorten_hours_vote = 0; land_reform_vote = 0; state_buyer_vote = 0
 
-KPD: [+ kpd_vote : vote_display +]
+共产党: [+ kpd_vote : vote_display +]
 
-[? if sapd_formed : SAPD: [+ sapd_vote : vote_display +] ?]
+[? if sapd_formed : 社会主义工人党: [+ sapd_vote : vote_display +] ?]
 
-SPD: [? if not spd_split : 赞成 ?][? if spd_split : 意见不一 ?]
+社民党: [? if not spd_split : 赞成 ?][? if spd_split : 意见不一 ?]
 
-[+ ddp_name +]: [+ ddp_vote : vote_display +]
+[+ ddp_display +]: [+ ddp_vote : vote_display +]
 
-Z: [+ z_vote : vote_display +]
+中央党: [+ z_vote : vote_display +]
 
-BVP: [+ bvp_vote : vote_display +]
+巴伐利亚人民党: [+ bvp_vote : vote_display +]
 
-DVP: [+ dvp_vote : vote_display +]
+人民党: [+ dvp_vote : vote_display +]
 
 其他: [? if not other_split : [+ other_vote : vote_display +] ?][? if other_split : 意见不一 ?]
 
-DNVP: [+ dnvp_vote : vote_display +]
+国家人民党: [+ dnvp_vote : vote_display +]
 
-NSDAP: [+ nsdap_vote : vote_display +]
+纳粹党: [+ nsdap_vote : vote_display +]
 
 赞成票仅有 [+ bill_support +]%,该动议未获通过并被撤回。

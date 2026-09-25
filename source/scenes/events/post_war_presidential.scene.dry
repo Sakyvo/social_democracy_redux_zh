@@ -102,7 +102,7 @@ subtitle: 现任的临时总统。
 view-if: wirth_campaign
 on-arrival: z_relation += 5
 
-约瑟夫·维尔特经过一番考虑,同意作为魏玛派候选人竞选连任,并得到我们、[+ ddp_name +],当然还有中央党的支持。
+约瑟夫·维尔特经过一番考虑,同意作为魏玛派候选人竞选连任,并得到我们、[+ ddp_display +],当然还有中央党的支持。
 
 - @final_election: 最终结果……
 

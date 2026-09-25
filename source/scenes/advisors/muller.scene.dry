@@ -22,7 +22,7 @@ choose-if: advisor_action_timer <= 0 and spd_in_government = 1
 unavailable-subtitle: [? if advisor_action_timer > 0 : 距下次顾问行动还有 [+ advisor_action_timer +] 个月。 ?][? if not spd_in_government: 社民党不在政府之中。 ?]
 on-arrival: advisor_action_timer = 6; coalition_dissent -= 1 if spd_in_government = 1 and coalition_dissent > 0; z_relation += 5; ddp_relation += 5; dvp_relation += 5
 
-我们改善了与中央党、[+ ddp_name +] 及人民党的关系,并缓和了执政联盟内的紧张。
+我们改善了与中央党、[+ ddp_display +] 及人民党的关系,并缓和了执政联盟内的紧张。
 
 
 @toleration

@@ -339,42 +339,42 @@ go-to: coalition_menu if not vonc_formed; coalition_vonc if vonc_formed
 
 {!<table>!} 
 {!<tr><td>党派</td><td>得票份额</td><td>% 变化</td></tr>!}
-{!<tr><td><div class="box" style='background-color:#E3000F; outline: 2px; outline-style: solid;'> </div> !} **SPD:** {!</td><td>!} **[+ spd_r +]%** {!</td><td>!} **[+ str_change_spd +]** {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#E3000F; outline: 2px; outline-style: solid;'> </div> !} **社民党:** {!</td><td>!} **[+ spd_r +]%** {!</td><td>!} **[+ str_change_spd +]** {!</td></tr>!}
 
-[? if vonc_formed == 1 : {!<tr><td><div class="box" style='background-color:#ffffff00'> </div> !}Voncspartei: {!</td><td>!} [+ vonc_r +]% {!</td><td>!} [+ str_change_vonc +] {!</td></tr>!} ?]
+[? if vonc_formed == 1 : {!<tr><td><div class="box" style='background-color:#ffffff00'> </div> !}不信任联盟党: {!</td><td>!} [+ vonc_r +]% {!</td><td>!} [+ str_change_vonc +] {!</td></tr>!} ?]
 
-[? if sapd_formed == 1 : {!<tr><td><div class="box" style='background-color:#C40000'> </div> !}SAPD: {!</td><td>!} [+ sapd_r +]% {!</td><td>!} [+ str_change_sapd +] {!</td></tr>!} ?]
+[? if sapd_formed == 1 : {!<tr><td><div class="box" style='background-color:#C40000'> </div> !}社会主义工人党: {!</td><td>!} [+ sapd_r +]% {!</td><td>!} [+ str_change_sapd +] {!</td></tr>!} ?]
 
-{!<tr><td><div class="box" style='background-color:#8B0000'> </div> !}KPD: {!</td><td>!} [+ kpd_r +]% {!</td><td>!} [+ str_change_kpd +] {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#8B0000'> </div> !}共产党: {!</td><td>!} [+ kpd_r +]% {!</td><td>!} [+ str_change_kpd +] {!</td></tr>!}
 
-{!<tr><td><div class="box" style='background-color:#DCCA4A'> </div> !} [+ ddp_name +]: {!</td><td>!} [+ ddp_r +]% {!</td><td>!} [+ str_change_ddp +] {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#DCCA4A'> </div> !} [+ ddp_display +]: {!</td><td>!} [+ ddp_r +]% {!</td><td>!} [+ str_change_ddp +] {!</td></tr>!}
 
-[? if zca_formed : {!<tr><td><div class="box" style='background-color:#85754e'> </div> !}ZCA: {!</td><td>!} [+ zca_r +]% {!</td><td>!} [+ str_change_zca +] {!</td></tr>!} ?]
+[? if zca_formed : {!<tr><td><div class="box" style='background-color:#85754e'> </div> !}中央基督教联盟: {!</td><td>!} [+ zca_r +]% {!</td><td>!} [+ str_change_zca +] {!</td></tr>!} ?]
 
-{!<tr><td><div class="box" style='background-color:#000'> </div> !} Z: {!</td><td>!} [+ z_minus_bvp_r +]% {!</td><td>!} [+ str_change_z +] {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#000'> </div> !} 中央党: {!</td><td>!} [+ z_minus_bvp_r +]% {!</td><td>!} [+ str_change_z +] {!</td></tr>!}
 
-{!<tr><td><div class="box" style='background-color:#69A2BE'> </div> !} [+ bvp_name +]: {!</td><td>!} 3% {!</td><td>!} 0 {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#69A2BE'> </div> !} [+ bvp_display +]: {!</td><td>!} 3% {!</td><td>!} 0 {!</td></tr>!}
 
-{!<tr><td><div class="box" style='background-color:#D5AC27'> </div> !} DVP: {!</td><td>!} [+ dvp_r +]% {!</td><td>!} [+ str_change_dvp +] {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#D5AC27'> </div> !} 人民党: {!</td><td>!} [+ dvp_r +]% {!</td><td>!} [+ str_change_dvp +] {!</td></tr>!}
  
 {!<tr><td><div class="box" style='background-color:#a0a0a0'> </div> !} 其他: {!</td><td>!} [+ other_r +] % {!</td><td>!} [+ str_change_other +] {!</td></tr>!}
 
-{!<tr><td><div class="box" style='background-color:#3f7bc1'> </div> !} DNVP: {!</td><td>!} [+ dnvp_r +]% {!</td><td>!} [+ str_change_dnvp +] {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#3f7bc1'> </div> !} 国家人民党: {!</td><td>!} [+ dnvp_r +]% {!</td><td>!} [+ str_change_dnvp +] {!</td></tr>!}
 
-[? if dne_formed == 1 : {!<tr><td><div class="box" style='background-color:#b81191'> </div> !}DNE: {!</td><td>!} [+ dne_r +]% {!</td><td>!} [+ str_change_dne +] {!</td></tr>!} ?]
+[? if dne_formed == 1 : {!<tr><td><div class="box" style='background-color:#b81191'> </div> !}国家人民阵线: {!</td><td>!} [+ dne_r +]% {!</td><td>!} [+ str_change_dne +] {!</td></tr>!} ?]
 
-{!<tr><td><div class="box" style='background-color:#954B00'> </div> !} NSDAP: {!</td><td>!} [+ nsdap_r +]% {!</td><td>!} [+ str_change_nsdap +] {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#954B00'> </div> !} 纳粹党: {!</td><td>!} [+ nsdap_r +]% {!</td><td>!} [+ str_change_nsdap +] {!</td></tr>!}
 {!</table>!}
 
 **潜在执政联盟:**
 
-魏玛联盟(社民党 + 中央党 + [+ ddp_name +]):[+ weimar_coalition +]%
+魏玛联盟(社民党 + 中央党 + [+ ddp_display +]):[+ weimar_coalition +]%
 
-大联盟(社民党 + 中央党 + [+ bvp_name +] + [+ ddp_name +] + 人民党):[+ grand_coalition +]%
+大联盟(社民党 + 中央党 + [+ bvp_display +] + [+ ddp_display +] + 人民党):[+ grand_coalition +]%
 
-资产阶级联盟(中央党 + [+ bvp_name +] + [+ ddp_name +] + 人民党 + 其他):[+ bourgeois_coalition +]%
+资产阶级联盟(中央党 + [+ bvp_display +] + [+ ddp_display +] + 人民党 + 其他):[+ bourgeois_coalition +]%
 
-右翼联盟(中央党 + [+ bvp_name +] + 人民党 + 其他 + 国家人民党):[+ right_coalition +]%
+右翼联盟(中央党 + [+ bvp_display +] + 人民党 + 其他 + 国家人民党):[+ right_coalition +]%
 
 [? if nazi_urgency <= 1 and nsdap_r >= 15 : 纳粹党得票的飞速攀升令人极为担忧。许多人曾以为该党已奄奄一息;如今,我们中的一些人已视其为德国民主最大的威胁。 ?]
 
@@ -482,13 +482,13 @@ on-arrival: reichswehr_militancy += 1 if reichswehr_militancy < 4; kpd_relation 
 - @game_over: 暂时游戏结束 —— 等我哪天心血来潮,为休克疗法做出一条完整的专属路线再说。
 
 @ddp_majority
-title: [+ ddp_name +] 赢得了多数。
+title: [+ ddp_display +] 赢得了多数。
 view-if: ddp_r >= 50
-subtitle: [+ ddp_name +] ([+ ddp_r +]%)
+subtitle: [+ ddp_display +] ([+ ddp_r +]%)
 
 好吧,就此收场。
 
-[+ ddp_name +] 一赢得多数,便立刻组建了一个清一色自由派政府。他们显露出自己自始至终都是某个国际光明会的傀儡,并让爱因斯坦宣誓就任总统。不过,结果反倒更好。他们动用了先进的灵能技术,把整场反动运动尽数安抚下来,让那些人在新德国作为普通百姓安于生活。全自由派议程得以推行:各州被废除,月球被殖民,恐龙被复活,警察队伍被一支全新的「自由派犯罪小队」取代。奥托·布劳恩与台尔曼亲吻,而希特勒在经历一次 LSD 体验后接受了身心重建,成了一名巴伐利亚园丁,以善良友善的性情著称。保罗·列维从死里复活,加入了布劳恩与台尔曼的多角恋关系;后两人迁居福冈,建立了一个社会主义共和国。在月球上,人们建起一座宏大的修道院,以纪念我们社会民主党人为促成一个全自由派政府得以成立所做的努力。资产阶级作为阶级和平地消解了 —— 他们被社会主义的论点说服,这最终驳倒了卡尔·马克思关于社会主义不会靠思想的力量、而只会靠物质的力量建成的信念。乌托邦社会主义者得胜,庆祝的方式是迁往月球:他们乘坐由新近自我消解的资产阶级出资的飞船,一边喝着香槟一边远航;披头士(约翰·列侬、保罗·麦卡特尼、乔治·哈里森与林戈·斯塔尔)也随之前往,在火星上开了一家度假村。世界在一面旗帜下团结起来,再不会兵戎相见。地球自由而完整,所有问题都被根除。最后,在为了向高级共产主义社会过渡而解散国家之前的最后一次行动中,全自由派政府公布了一份「迷幻药、大赦与堕胎」的政纲,一部新宪法以此为基础被奉为自由世界共和国的根本大法。于是,阶级、国家与货币皆被废除;取而代之的,是自由主义 —— 从今往后,永永远远 —— 将统治群星。
+[+ ddp_display +] 一赢得多数,便立刻组建了一个清一色自由派政府。他们显露出自己自始至终都是某个国际光明会的傀儡,并让爱因斯坦宣誓就任总统。不过,结果反倒更好。他们动用了先进的灵能技术,把整场反动运动尽数安抚下来,让那些人在新德国作为普通百姓安于生活。全自由派议程得以推行:各州被废除,月球被殖民,恐龙被复活,警察队伍被一支全新的「自由派犯罪小队」取代。奥托·布劳恩与台尔曼亲吻,而希特勒在经历一次 LSD 体验后接受了身心重建,成了一名巴伐利亚园丁,以善良友善的性情著称。保罗·列维从死里复活,加入了布劳恩与台尔曼的多角恋关系;后两人迁居福冈,建立了一个社会主义共和国。在月球上,人们建起一座宏大的修道院,以纪念我们社会民主党人为促成一个全自由派政府得以成立所做的努力。资产阶级作为阶级和平地消解了 —— 他们被社会主义的论点说服,这最终驳倒了卡尔·马克思关于社会主义不会靠思想的力量、而只会靠物质的力量建成的信念。乌托邦社会主义者得胜,庆祝的方式是迁往月球:他们乘坐由新近自我消解的资产阶级出资的飞船,一边喝着香槟一边远航;披头士(约翰·列侬、保罗·麦卡特尼、乔治·哈里森与林戈·斯塔尔)也随之前往,在火星上开了一家度假村。世界在一面旗帜下团结起来,再不会兵戎相见。地球自由而完整,所有问题都被根除。最后,在为了向高级共产主义社会过渡而解散国家之前的最后一次行动中,全自由派政府公布了一份「迷幻药、大赦与堕胎」的政纲,一部新宪法以此为基础被奉为自由世界共和国的根本大法。于是,阶级、国家与货币皆被废除;取而代之的,是自由主义 —— 从今往后,永永远远 —— 将统治群星。
 
 - @skeptic: 我觉得事情不是这样的。
 
@@ -515,7 +515,7 @@ go-to: root
 
 @bourgeois_coalition
 title: 一个「资产阶级」联盟
-subtitle: 中央党 + 巴伐利亚人民党 + [+ ddp_name +] [? if not dvp_banned : + 人民党 ?] + 其他 ([+ bourgeois_coalition +]%)
+subtitle: 中央党 + 巴伐利亚人民党 + [+ ddp_display +] [? if not dvp_banned : + 人民党 ?] + 其他 ([+ bourgeois_coalition +]%)
 view-if: bourgeois_coalition >= 50 and (weimar_coalition < 50 or z_willing != 1)
 
 拥护宪法的资产阶级政党已握有足够票数自行组阁,甚至无需我们容忍。除非我们出手阻止,这样一个政府很可能会成立。
@@ -524,8 +524,8 @@ view-if: bourgeois_coalition >= 50 and (weimar_coalition < 50 or z_willing != 1)
 - @let_it_form: 随它去组吧。
 
 @plead_grand
-subtitle: 社民党 + 中央党 + [+ bvp_name +] + [+ ddp_name +] + 人民党  ([+ grand_coalition +]%)
-unavailable-subtitle: 社民党 + 中央党 + [+ bvp_name +] + [+ ddp_name +] + 人民党 ([+ grand_coalition +]%)—— 人民党不愿加入这样的政府[? if z_relation < 30 :,中央党亦然?]。
+subtitle: 社民党 + 中央党 + [+ bvp_display +] + [+ ddp_display +] + 人民党  ([+ grand_coalition +]%)
+unavailable-subtitle: 社民党 + 中央党 + [+ bvp_display +] + [+ ddp_display +] + 人民党 ([+ grand_coalition +]%)—— 人民党不愿加入这样的政府[? if z_relation < 30 :,中央党亦然?]。
 view-if: not grand_coalition_failed and grand_coalition >= 50
 choose-if: dvp_relation >= 30 and z_relation >= 30
 go-to: grand_coalition
@@ -540,8 +540,8 @@ on-arrival: spd_in_government = 0; spd_toleration = 0; in_bourgeois_coalition = 
 
 @popular_front_coalition
 title: 一个新的「人民阵线」联盟?
-subtitle: 社民党 + 共产党 + 中央党 + [+ ddp_name +] ([+ popular_front_coalition +]%)
-unavailable-subtitle: 社民党 + 共产党 + 中央党 + [+ ddp_name +] ([+ popular_front_coalition +]%)—— [? if kpd_relation < 50: 我们与共产党的关系还不够好。 ?][? if z_relation < 50: 我们与中央党的关系还不够好。 ?][? if communist_coalition < 3 : 共产党人根本不愿妥协。 ?][? if president == "Hitler" : 希特勒拒绝在这样的执政安排下任命总理。 ?][? if president == "Hindenburg" and coup_progress >= 8 and popular_front < 55 and historical_mode : 兴登堡不愿任命这样一个政府。 ?]
+subtitle: 社民党 + 共产党 + 中央党 + [+ ddp_display +] ([+ popular_front_coalition +]%)
+unavailable-subtitle: 社民党 + 共产党 + 中央党 + [+ ddp_display +] ([+ popular_front_coalition +]%)—— [? if kpd_relation < 50: 我们与共产党的关系还不够好。 ?][? if z_relation < 50: 我们与中央党的关系还不够好。 ?][? if communist_coalition < 3 : 共产党人根本不愿妥协。 ?][? if president == "Hitler" : 希特勒拒绝在这样的执政安排下任命总理。 ?][? if president == "Hindenburg" and coup_progress >= 8 and popular_front < 55 and historical_mode : 兴登堡不愿任命这样一个政府。 ?]
 view-if: popular_front_coalition >= 50 or (sapd_formed == 1 and (popular_front_coalition + sapd_r) >= 50)
 choose-if: ((((kpd_relation >= 65 and kpd_party_leader == "Thälmann") or (kpd_relation >= 45 and kpd_party_leader == "Conciliators")) and ((z_relation >= 45 and z_party_leader == "Joos") or (z_relation >= 65 and z_party_leader != "Joos" and kpd_party_leader != "Conciliators") or (z_relation >= 55 and z_party_leader != "Joos" and kpd_party_leader == "Conciliators")) and ddp_relation >= 50 and communist_coalition >= 3) or (z_party_leader == "Joos" and kpd_party_leader == "Conciliators" and z_relation >= 30 and kpd_relation >= 30)) and president != "Hitler" and (president != "Hindenburg" or ((coup_progress < 8 or popular_front >= 55 or not historical_mode) and not spd_sackings))
 
@@ -667,7 +667,7 @@ go-to: enabling_menu
 
 @enabling_menu
 
-- @contact_ddp: 我们能说服 [+ ddp_name +] 投反对票吗?
+- @contact_ddp: 我们能说服 [+ ddp_display +] 投反对票吗?
 - @contact_z: 我们能说服中央党投反对票吗?
 - @contact_dvp: 我们能说服人民党投反对票吗?
 - @voting_results: 我们已尽一切所能。现在只能投下反对票。
@@ -765,11 +765,11 @@ go-to: success_ddp if ddp_relation >= 70; partial_ddp if ddp_relation >= 45 and 
 on-arrival: ddp_relation += 5; against_enable += ddp_r; ddp_voted = 1;
 go-to: enabling_menu
 
-多亏关系良好,[+ ddp_name +] 承诺投反对票。
+多亏关系良好,[+ ddp_display +] 承诺投反对票。
 
 @partial_ddp
 
-[+ ddp_name +] 没那么容易被我们的论点说服,他们要的不只是反法西斯的思想共识。
+[+ ddp_display +] 没那么容易被我们的论点说服,他们要的不只是反法西斯的思想共识。
 
 - @bribe_ddp: 给他们所需的资源。
 - @failure_ddp: 我们已尽一切所能。
@@ -780,13 +780,13 @@ subtitle: -1 资源
 on-arrival: resources -= 1; against_enable += ddp_r; ddp_voted = 1
 go-to: enabling_menu
 
-靠着我们的资源与论点,[+ ddp_name +] 被说服了,承诺投反对票。
+靠着我们的资源与论点,[+ ddp_display +] 被说服了,承诺投反对票。
 
 @failure_ddp
 on-arrival: ddp_relation -= 10; enabling_r += ddp_r; ddp_voted = 1
 go-to: enabling_menu
 
-尽管我们竭尽全力,[+ ddp_name +] 仍未被说服。我们只能寄望于在没有他们的情况下也能拉到多数。
+尽管我们竭尽全力,[+ ddp_display +] 仍未被说服。我们只能寄望于在没有他们的情况下也能拉到多数。
 
 @voting_results
 on-arrival: enabling_r += dvp_r if not dvp_voted; enabling_r += z_r if not z_voted; enabling_r += ddp_r if not ddp_voted; {!
@@ -1396,13 +1396,13 @@ on-arrival: chancellor_party = "KPD"; chancellor = "Thälmann"
 
 @right_coalition
 title: 一个右翼联盟或将组建。
-subtitle: 中央党 + [+ bvp_name +] + 人民党 + 国家人民党 + 其他 ([+ right_coalition +]%)
+subtitle: 中央党 + [+ bvp_display +] + 人民党 + 国家人民党 + 其他 ([+ right_coalition +]%)
 unavailable-subtitle: 国家人民党无意与中央党组成联盟。
 view-if: right_coalition >= 50
 choose-if: year < 1928 or dnvp_reform or ((not zca_formed or counterrevolution_r < 50) and (weimar_coalition < 50 or z_willing != 1) and (grand_coalition < 50 or grand_coalition_failed == 1 or dvp_willing != 1) and far_right_coalition < 50 and (hitler_right_coalition < 50 or left_strength < 50 or political_crisis_progress < 1 or chancellor != "Brüning" or bb_failed) and bourgeois_coalition < 50 and not (dne_formed and chancellor == "Schleicher"))
 go-to: no_right_coalition if year >= 1930 and not dnvp_reform and (neo_weimar_coalition >= 50 or not return_to_normalcy or dnvp_r < bourgeois_coalition or z_relation > dnvp_r); right_coalition_2 if year <= 1929 and not dnvp_reform; right_coalition_3 if dnvp_reform; right_coalition_4 if year >= 1930 and not dnvp_reform and neo_weimar_coalition < 50 and return_to_normalcy and dnvp_r >= bourgeois_coalition and z_relation < dnvp_r
 
-中央党(连同 [+ bvp_name +])、人民党、国家人民党以及若干小保守党组成的右翼联盟,票数已经足够。
+中央党(连同 [+ bvp_display +])、人民党、国家人民党以及若干小保守党组成的右翼联盟,票数已经足够。
 
 @right_coalition_4
 on-arrival: spd_in_government = 0; spd_toleration = 0; chancellor = "Hugenberg"; chancellor_party = "DNVP"; foreign_minister_party = "DVP"; interior_minister_party = "Z"; justice_minister_party = "Z"; labor_minister_party = "Z"; reichswehr_minister_party = "I"; economic_minister_party = "Z"; finance_minister_party = "Z"; agriculture_minister_party = "Z"; rb_militancy -= 0.05; coup_progress += 2; sh_militancy += 0.1; in_right_coalition = 1; gov_tension += 1; workers_spd -= 5; new_middle_spd -= 5; judicial_reform -= 2; reichswehr_loyalty -= 0.1; interior_police_loyalty -= 0.1; welfare -= 1; budget += 1; nationalism += 8; pro_republic -= 5; rural_dnvp += 5; old_middle_dnvp += 5; new_middle_dnvp += 5; catholics_dnvp += 5; workers_dnvp += 5; hugenberg_consolidation = 1
@@ -1455,7 +1455,7 @@ on-arrival: spd_in_government = 0; spd_toleration = 1; dvp_relation += 3; foreig
 @kulz_lead
 on-arrival: chancellor = "Külz"; chancellor_party = ddp_name
 
-看不到任何明显可行的多数路径。[+ ddp_name +] 成员威廉·屈尔茨受格斯勒总统之托组阁 —— 总统厌倦了布吕宁屡屡组阁失败,并希望争取到我们的支持。
+看不到任何明显可行的多数路径。[+ ddp_display +] 成员威廉·屈尔茨受格斯勒总统之托组阁 —— 总统厌倦了布吕宁屡屡组阁失败,并希望争取到我们的支持。
 
 - @toleration_kulz: 我们将容忍屈尔茨。
 - @new_elections: 我们将举行新的选举。
@@ -1612,7 +1612,7 @@ go-to: schleicher_menu
 @schleicher_menu
 
 - @schleicher_spd: 社民党?
-- @schleicher_ddp: [+ ddp_name +]?
+- @schleicher_ddp: [+ ddp_display +]?
 - @schleicher_z: 中央党?
 - @schleicher_dvp: 人民党?
 - @schleicher_dnvp: 国家人民党?
@@ -1648,7 +1648,7 @@ max-visits: 1
 on-arrival: schleicher_support += ddp_r; ddp_support_schleicher = 1
 go-to: schleicher_menu
 
-[+ ddp_name +] 已同意支持施莱谢尔。
+[+ ddp_display +] 已同意支持施莱谢尔。
 
 @schleicher_z
 view-if: schleicher_support < 50
@@ -2099,10 +2099,10 @@ on-arrival: no_majority_bruning_elections += 1
 
 @new_grand_coalition
 title: 一个涵盖所有拥护宪法政党的「新大联盟」?
-subtitle: 社民党 + 中央党 + [+ bvp_name +] + [+ ddp_name +] + 人民党 + 其他 ([+ neo_weimar_coalition +]%)
+subtitle: 社民党 + 中央党 + [+ bvp_display +] + [+ ddp_display +] + 人民党 + 其他 ([+ neo_weimar_coalition +]%)
 view-if: neo_weimar_coalition >= 50 and grand_coalition < 50
 choose-if: z_relation >= 50 and dvp_relation >= 30 and president != "Hitler"
-unavailable-subtitle: 社民党 + 中央党 + [+ bvp_name +] + [+ ddp_name +] + 人民党 + 其他 ([+ neo_weimar_coalition +]%) - [? if z_relation < 50 : 我们与中央党的关系还不够好。 ?][? if dvp_relation < 30 : 我们与人民党的关系还不够好。 ?][? if president == "Hitler" : 希特勒拒绝在这样的执政安排下任命总理。 ?]
+unavailable-subtitle: 社民党 + 中央党 + [+ bvp_display +] + [+ ddp_display +] + 人民党 + 其他 ([+ neo_weimar_coalition +]%) - [? if z_relation < 50 : 我们与中央党的关系还不够好。 ?][? if dvp_relation < 30 : 我们与人民党的关系还不够好。 ?][? if president == "Hitler" : 希特勒拒绝在这样的执政安排下任命总理。 ?]
 
 我们要如何说服那些激烈反社会主义的政党,容许我们组成一个多数派联盟?我们与中央党及人民党大体友善的关系,或许能给我们一些筹码。
 
@@ -2140,8 +2140,8 @@ go-to: ministries
 
 @unity_government
 title: 中央党提议由约瑟夫·维尔特出任总理,组建一个「民族团结政府」。
-subtitle: 社民党 + 中央党 + [+ bvp_name +] + [+ ddp_name +] + 人民党 + 其他 ([+ neo_weimar_coalition +]%)
-unavailable-subtitle: 社民党 + 中央党 + [+ bvp_name +] + [+ ddp_name +] + 人民党 + 其他 ([+ neo_weimar_coalition +]%) - [? if president == "Hitler" : 希特勒拒绝在这样的执政安排下任命总理。 ?]
+subtitle: 社民党 + 中央党 + [+ bvp_display +] + [+ ddp_display +] + 人民党 + 其他 ([+ neo_weimar_coalition +]%)
+unavailable-subtitle: 社民党 + 中央党 + [+ bvp_display +] + [+ ddp_display +] + 人民党 + 其他 ([+ neo_weimar_coalition +]%) - [? if president == "Hitler" : 希特勒拒绝在这样的执政安排下任命总理。 ?]
 choose-if: president != "Hitler"
 view-if: z_party_leader == "Joos" and neo_weimar_coalition >= 50 and weimar_coalition < 50  and z_relation >= 10 and (anti_democratic_coalition + unemployed) >= 50 and unity_refused != 1
 
@@ -2313,7 +2313,7 @@ on-arrival: chancellor = "Hitler"; chancellor_party = "NSDAP"
 
 @spd_majority
 title: 社民党单独多数
-subtitle: 社民党:[+ spd_r +]% [? if spd_r < 50 : —— [+ ddp_name +] 愿意容忍之。 ?]
+subtitle: 社民党:[+ spd_r +]% [? if spd_r < 50 : —— [+ ddp_display +] 愿意容忍之。 ?]
 unavailable-subtitle: 社民党:[+ spd_r +]% —— [? if president == "Hitler" : 希特勒拒绝在这样的执政安排下任命总理。 ?]
 view-if: spd_r >= 50 or (spd_r+ddp_r >= 50 and ddp_relation >= 75)
 choose-if: president != "Hitler"
@@ -2540,9 +2540,9 @@ achievement: minderheitsregierung
 
 @weimar_coalition
 title: 我们可以组成魏玛联盟。
-subtitle: 社民党 + 中央党 + [+ ddp_name +] ([+ weimar_coalition +]%)
+subtitle: 社民党 + 中央党 + [+ ddp_display +] ([+ weimar_coalition +]%)
 choose-if: president != "Hitler" and z_willing == 1
-unavailable-subtitle: 社民党 + 中央党 + [+ ddp_name +] ([+ weimar_coalition +]%)—— [? if president == "Hitler" : 希特勒拒绝在这样的执政安排下任命总理。 ?][? if not z_willing : 中央党不愿与我们结盟。 ?]
+unavailable-subtitle: 社民党 + 中央党 + [+ ddp_display +] ([+ weimar_coalition +]%)—— [? if president == "Hitler" : 希特勒拒绝在这样的执政安排下任命总理。 ?][? if not z_willing : 中央党不愿与我们结盟。 ?]
 view-if: weimar_coalition >= 50 or (weimar_coalition + sapd_r >= 50 and kpd_relations >= 30)
 on-arrival: leverage += 5; leverage += 5 if z_party_leader == "Joos"; in_weimar_coalition = 1; spd_in_government = 1; in_popular_front = 0; in_left_front = 0; foreign_minister_party = "Z"; interior_minister_party = "Z"; justice_minister_party = ddp_name; labor_minister_party = "Z"; reichswehr_minister_party = "I"; economic_minister_party = ddp_name; finance_minister_party = "Z"; agriculture_minister_party = "Z"; foreign_minister = "Wirth"; interior_minister = "Wirth"; justice_minister = "Koch-Weser"; labor_minister = "Stegerwald"; reichswehr_minister = "Groener"; economic_minister = "Dietrich"; finance_minister = "Köhler"; agriculture_minister = "Hermes";
 achievement: weimar_coalition
@@ -2550,7 +2550,7 @@ go-to: weimar_normal if z_relation >= 40 and bourgeois_coalition < 50; weimar_z 
 
 @weimar_normal
 
-我们已有足够票数[? if weimar_coalition < 50 : (把社会主义工人党的容忍也计入) ?],可以组成一个由社民党、中央党(中央党)与民主党([+ ddp_name +])构成的「魏玛联盟」政府!这一直是我们偏好的执政联盟。[? if weimar_coalition < 50 : 不过,我们得留意别得罪社会主义工人党。 ?]
+我们已有足够票数[? if weimar_coalition < 50 : (把社会主义工人党的容忍也计入) ?],可以组成一个由社民党、中央党(中央党)与民主党([+ ddp_display +])构成的「魏玛联盟」政府!这一直是我们偏好的执政联盟。[? if weimar_coalition < 50 : 不过,我们得留意别得罪社会主义工人党。 ?]
 
 谁该出任总理?
 
@@ -2573,7 +2573,7 @@ go-to: ministries
 
 @weimar_z
 
-我们已有足够票数组成一个由社民党、中央党(中央党)与民主党([+ ddp_name +])构成的「魏玛联盟」政府!这一直是我们偏好的执政联盟。然而,我们不知怎么得罪了中央党,他们要求总理之位
+我们已有足够票数组成一个由社民党、中央党(中央党)与民主党([+ ddp_display +])构成的「魏玛联盟」政府!这一直是我们偏好的执政联盟。然而,我们不知怎么得罪了中央党,他们要求总理之位
 
 - @let_bruning: 让布吕宁来领导。
 - @let_wirth: 让维尔特来领导。
@@ -2599,8 +2599,8 @@ go-to: coalition_menu if bourgeois_coalition < 50; let_it_form if bourgeois_coal
 title: 我们可以组成大联盟。
 view-if: grand_coalition >= 50 and grand_coalition_failed == 0
 choose-if: president != "Hitler" and dvp_willing == 1
-unavailable-subtitle: 社民党 + 中央党 + [+ bvp_name +] + [+ ddp_name +] + 人民党 ([+ grand_coalition +]%)—— [? if president == "Hitler" : 希特勒拒绝在这样的执政安排下任命总理。 ?][? if not dvp_willing : 人民党不愿与我们合作。 ?]
-subtitle: 社民党 + 中央党 + [+ bvp_name +] + [+ ddp_name +] + 人民党  ([+ grand_coalition +]%)
+unavailable-subtitle: 社民党 + 中央党 + [+ bvp_display +] + [+ ddp_display +] + 人民党 ([+ grand_coalition +]%)—— [? if president == "Hitler" : 希特勒拒绝在这样的执政安排下任命总理。 ?][? if not dvp_willing : 人民党不愿与我们合作。 ?]
+subtitle: 社民党 + 中央党 + [+ bvp_display +] + [+ ddp_display +] + 人民党  ([+ grand_coalition +]%)
 on-arrival: in_grand_coalition = 1; in_popular_front = 0; in_left_front = 0
 go-to: grand_coalition_spd_lead if ((n_elections <= 1 and largest_party == "SPD") or (largest_party == "SPD" and spd_r >= 30) and spd_sackings <= 0) or president = "Braun"; grand_coalition_z_lead if president != "Braun" and (spd_sackings > 0 or (n_elections > 1 and spd_r < 30) or (n_elections <= 1 and largest_party != "SPD"))
 
@@ -2610,7 +2610,7 @@ go-to: grand_coalition_spd_lead if ((n_elections <= 1 and largest_party == "SPD"
 @grand_coalition_z_lead
 go-to: grand_coalition_z_lead_2 if dvp_relation >= 30; grand_coalition_fail if dvp_relation < 30
 
-社民党、中央党(中央党)、巴伐利亚人民党([+ bvp_name +])、民主党([+ ddp_name +])与人民党(DVP)的票数已足以组成一个多数派联盟。鉴于我们的选举表现相当疲弱[? if spd_no_confidence = 1 : ,加上我们此前对政府提出过不信任案, ?][? if no_confidence_against_spd = 1 : ,加上针对我们的那场不信任案, ?],[+ president +] 总统已请中央党主导组阁。
+社民党、中央党(中央党)、巴伐利亚人民党([+ bvp_display +])、民主党([+ ddp_display +])与人民党(DVP)的票数已足以组成一个多数派联盟。鉴于我们的选举表现相当疲弱[? if spd_no_confidence = 1 : ,加上我们此前对政府提出过不信任案, ?][? if no_confidence_against_spd = 1 : ,加上针对我们的那场不信任案, ?],[+ president +] 总统已请中央党主导组阁。
 
 # TODO: if the SPD participated in bringing down the previous government via a vote-of-no-confidence, or if we were essentially removed from government by our coalition partners, we should be more reluctant to participate in a new government.
 
@@ -2755,7 +2755,7 @@ on-arrival: spd_in_government = 0; spd_toleration = 1; minority_government = 1; 
 @grand_coalition_fail
 on-arrival: grand_coalition_failed = 1
 
-遗憾的是,人民党与 [+ bvp_name +] 不愿再与社民党组成联盟,因此大联盟无法组建。
+遗憾的是,人民党与 [+ bvp_display +] 不愿再与社民党组成联盟,因此大联盟无法组建。
 
 - @no_majority: 于是,没有明确的多数。
 - @brauns_dilemma
@@ -2772,7 +2772,7 @@ go-to: dvp_conservative if stresemann_dead == 1; dvp_majority if stresemann_dead
 @dvp_majority
 go-to: join_bruning
 
-在古斯塔夫·施特雷泽曼的影响下,人民党同意让我们加入联盟,[+ bvp_name +] 亦然。
+在古斯塔夫·施特雷泽曼的影响下,人民党同意让我们加入联盟,[+ bvp_display +] 亦然。
 
 
 @dvp_conservative
@@ -2803,7 +2803,7 @@ go-to: no_majority
 
 @budget_dispute
 
-不出所料,社民党是第一大党,而这一次,预期将由我们主导组建下一届政府,包括挑选总理。[+ president +] 总统已请我们与中央党(中央党)、巴伐利亚人民党([+ bvp_name +])、民主党([+ ddp_name +])及人民党(DVP)组成一个多数派联盟。
+不出所料,社民党是第一大党,而这一次,预期将由我们主导组建下一届政府,包括挑选总理。[+ president +] 总统已请我们与中央党(中央党)、巴伐利亚人民党([+ bvp_display +])、民主党([+ ddp_display +])及人民党(DVP)组成一个多数派联盟。
 
 然而,人民党与社民党在预算问题上分歧严重。人民党想拆掉福利国家以挽救德国的财政,这对我们显然无法接受;而我们乐于向富人加税,他们又不肯。在政府组成之前,这场争端须先行解决。
 
@@ -2842,7 +2842,7 @@ go-to: grand_coalition_spd_lead
 on-arrival: leverage -= 15 if dvp_relation < 20
 go-to: budget_dispute if not budget_resolved and historical_mode
 
-[? if n_elections <= 1 : 不出所料,社民党是第一大党,而这一次,预期将由我们主导组建下一届政府,包括挑选总理。[+ president +] 总统已请我们与中央党(中央党)、巴伐利亚人民党([+ bvp_name +])、民主党([+ ddp_name +])及人民党(DVP)组成一个多数派联盟。 ?]
+[? if n_elections <= 1 : 不出所料,社民党是第一大党,而这一次,预期将由我们主导组建下一届政府,包括挑选总理。[+ president +] 总统已请我们与中央党(中央党)、巴伐利亚人民党([+ bvp_display +])、民主党([+ ddp_display +])及人民党(DVP)组成一个多数派联盟。 ?]
 
 [? if dvp_relation < 20 : 由于我们与人民党的关系不佳,他们要求获得更多部长席位,才肯留在联盟内。 ?]
 

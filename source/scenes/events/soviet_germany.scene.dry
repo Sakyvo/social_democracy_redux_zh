@@ -133,8 +133,8 @@ on-arrival: kpd_banned = 1; party_bans = 1; left_dissent += 25
 
 政变主义不可宽恕。共产党人已落在我们手中,我们通过查禁该党,把他们的野心永远终结。
 
-- @unban_bourgeois: 解除对 [+ ddp_name +] 与中央党的查禁。
-- @unban_ddp: 解除对 [+ ddp_name +] 的查禁。
+- @unban_bourgeois: 解除对 [+ ddp_display +] 与中央党的查禁。
+- @unban_ddp: 解除对 [+ ddp_display +] 的查禁。
 - @unban_z: 解除对中央党的查禁。
 - @maintain: 从今往后,永永远远,社会民主将统治一切。
 
@@ -156,7 +156,7 @@ view-if: ddp_banned and not z_banned
 on-arrival: ddp_banned = 0
 subtitle: 我们必须着手消除共产党所造成的破坏。
 
-当然,我们让 [+ ddp_name +] 重新合法化。共产党曾竭力扼杀民主,如今我们将让它重新繁荣。
+当然,我们让 [+ ddp_display +] 重新合法化。共产党曾竭力扼杀民主,如今我们将让它重新繁荣。
 
 @unban_z
 view-if: z_banned and not ddp_banned

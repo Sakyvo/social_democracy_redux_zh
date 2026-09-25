@@ -1,18 +1,18 @@
-title: [+ ddp_name +] 特别代表大会
+title: [+ ddp_display +] 特别代表大会
 subtitle: 连资产阶级也能找到通往社会主义的路。
 view-if: capital_strike_seen and not ddp_socialist and capital_strike_timer < 1 and ddp_relation >= 75 and socialism >= 60 and class_war and (financing_banned or ddp_tension >= 9) and (in_weimar_coalition or in_popular_front) and pro_republic >= nationalism*2
 tags: event
 new-page: true
 max-visits: 1
 
-= [+ ddp_name +] 特别代表大会
+= [+ ddp_display +] 特别代表大会
 
-[+ ddp_name +] 召开了一次特别党代会,以应对近来围绕资本罢工以及社民党对其反应的危机。该党虽然传统上坚定地既自由又民主,却毕竟是*资产阶级*民主派,因此一直承受着反对我们事业的巨大压力。
+[+ ddp_display +] 召开了一次特别党代会,以应对近来围绕资本罢工以及社民党对其反应的危机。该党虽然传统上坚定地既自由又民主,却毕竟是*资产阶级*民主派,因此一直承受着反对我们事业的巨大压力。
 
 - @result: 但他们拒绝屈服。
 
 @result
-on-arrival: ddp_name = "RDP"; ddp_socialist = 1; ddp_relation += socialism/10; socialism += ddp_votes; workers_ddp += socialism/10; new_middle_ddp *= (1-bourgeois_power); old_middle_ddp *= (1-bourgeois_power); rural_ddp *= (1-bourgeois_power)
+on-arrival: ddp_name = "RDP"; ddp_display = "激进民主党"; ddp_socialist = 1; ddp_relation += socialism/10; socialism += ddp_votes; workers_ddp += socialism/10; new_middle_ddp *= (1-bourgeois_power); old_middle_ddp *= (1-bourgeois_power); rural_ddp *= (1-bourgeois_power)
 
 由于私人政党经费已被禁止,工商界对民主党人的影响力本就十分有限,而他们与我们的关系又给他们带来了大得多的政治权力。于是,或许出人意料地,他们没有站到资本一边,反而直截了当地谴责资本把德国拖入越来越深的衰退,并声明在针对资产阶级的阶级斗争中坚定不移地支持工人 —— 尽管党内许多人仍反对这一转向,并成批离去。
 

@@ -258,32 +258,32 @@ go-to: coalition_menu
 
 {!<table>!} 
 {!<tr><td>党派</td><td>得票份额</td><td>% 变化</td></tr>!}
-{!<tr><td><div class="box" style='background-color:#E3000F; outline: 2px; outline-style: solid;'> </div> !} **SPD:** {!</td><td>!} **[+ spd_pl +]%** {!</td><td>!} **[+ stpl_change_spd +]** {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#E3000F; outline: 2px; outline-style: solid;'> </div> !} **社民党:** {!</td><td>!} **[+ spd_pl +]%** {!</td><td>!} **[+ stpl_change_spd +]** {!</td></tr>!}
 
-[? if sapd_formed == 1 : {!<tr><td><div class="box" style='background-color:#C40000'> </div> !}SAPD: {!</td><td>!} [+ sapd_pl +]% {!</td><td>!} [+ stpl_change_sapd +] {!</td></tr>!} ?]
+[? if sapd_formed == 1 : {!<tr><td><div class="box" style='background-color:#C40000'> </div> !}社会主义工人党: {!</td><td>!} [+ sapd_pl +]% {!</td><td>!} [+ stpl_change_sapd +] {!</td></tr>!} ?]
 
-{!<tr><td><div class="box" style='background-color:#8B0000'> </div> !}KPD: {!</td><td>!} [+ kpd_pl +]% {!</td><td>!} [+ stpl_change_kpd +] {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#8B0000'> </div> !}共产党: {!</td><td>!} [+ kpd_pl +]% {!</td><td>!} [+ stpl_change_kpd +] {!</td></tr>!}
 
-{!<tr><td><div class="box" style='background-color:#DCCA4A'> </div> !} [+ ddp_name +]: {!</td><td>!} [+ ddp_pl +]% {!</td><td>!} [+ stpl_change_ddp +] {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#DCCA4A'> </div> !} [+ ddp_display +]: {!</td><td>!} [+ ddp_pl +]% {!</td><td>!} [+ stpl_change_ddp +] {!</td></tr>!}
 
-{!<tr><td><div class="box" style='background-color:#000'> </div> !} Z: {!</td><td>!} [+ z_pl +]% {!</td><td>!} [+ stpl_change_z +] {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#000'> </div> !} 中央党: {!</td><td>!} [+ z_pl +]% {!</td><td>!} [+ stpl_change_z +] {!</td></tr>!}
 
-{!<tr><td><div class="box" style='background-color:#D5AC27'> </div> !} DVP: {!</td><td>!} [+ dvp_pl +]% {!</td><td>!} [+ stpl_change_dvp +] {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#D5AC27'> </div> !} 人民党: {!</td><td>!} [+ dvp_pl +]% {!</td><td>!} [+ stpl_change_dvp +] {!</td></tr>!}
  
 {!<tr><td><div class="box" style='background-color:#a0a0a0'> </div> !} 其他: {!</td><td>!} [+ other_pl +] % {!</td><td>!} [+ stpl_change_other +] {!</td></tr>!}
 
-{!<tr><td><div class="box" style='background-color:#3f7bc1'> </div> !} DNVP: {!</td><td>!} [+ dnvp_pl +]% {!</td><td>!} [+ stpl_change_dnvp +] {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#3f7bc1'> </div> !} 国家人民党: {!</td><td>!} [+ dnvp_pl +]% {!</td><td>!} [+ stpl_change_dnvp +] {!</td></tr>!}
 
-{!<tr><td><div class="box" style='background-color:#954B00'> </div> !} NSDAP: {!</td><td>!} [+ nsdap_pl +]% {!</td><td>!} [+ stpl_change_nsdap +] {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#954B00'> </div> !} 纳粹党: {!</td><td>!} [+ nsdap_pl +]% {!</td><td>!} [+ stpl_change_nsdap +] {!</td></tr>!}
 {!</table>!}
 
 **潜在执政联盟:**
 
-魏玛联盟(社民党 + 中央党 + [+ ddp_name +]):[+ p_weimar_coalition +]%
+魏玛联盟(社民党 + 中央党 + [+ ddp_display +]):[+ p_weimar_coalition +]%
 
-大联盟(社民党 + 中央党 + [+ ddp_name +] + 人民党):[+ p_grand_coalition +]%
+大联盟(社民党 + 中央党 + [+ ddp_display +] + 人民党):[+ p_grand_coalition +]%
 
-资产阶级联盟(中央党 + [+ ddp_name +] + 人民党 + 其他):[+ p_bourgeois_coalition +]%
+资产阶级联盟(中央党 + [+ ddp_display +] + 人民党 + 其他):[+ p_bourgeois_coalition +]%
 
 右翼联盟(中央党 + 人民党 + 其他 + 国家人民党):[+ p_right_coalition +]%
 
@@ -318,9 +318,9 @@ on-arrival: in_spd_prussia = 1
 
 @weimar_prussia
 title: 魏玛联盟 —— 在普鲁士一向占据主导。
-subtitle: 社民党 + 中央党 + [+ ddp_name +] ([+ p_weimar_coalition +]%)[? if spd_prussia and p_weimar_coalition < 50 : —— 我们靠建设性不信任案保住了普鲁士。 ?]
+subtitle: 社民党 + 中央党 + [+ ddp_display +] ([+ p_weimar_coalition +]%)[? if spd_prussia and p_weimar_coalition < 50 : —— 我们靠建设性不信任案保住了普鲁士。 ?]
 choose-if: (spd_prussia or (z_prussia and z_relation >= 50)) or (p_weimar_coalition >= 50 and z_relation >= 35)
-unavailable-subtitle: 社民党 + 中央党 + [+ ddp_name +] ([+ p_weimar_coalition +]%)—— 我们票数不足。
+unavailable-subtitle: 社民党 + 中央党 + [+ ddp_display +] ([+ p_weimar_coalition +]%)—— 我们票数不足。
 on-arrival: dvp_relation -= 5 if dvp_prussia
 on-departure: dvp_prussia = 0; kpd_prussia = 0;
 
@@ -349,9 +349,9 @@ on-arrival: z_prussia = 1; spd_prussia = 0; left_dissent += 10; center_dissent +
 
 @groko_prussia
 title: 一个「大联盟」,人民党也参与执政。
-subtitle: 社民党 + 中央党 + [+ ddp_name +] + 人民党 ([+ p_grand_coalition +]%)
+subtitle: 社民党 + 中央党 + [+ ddp_display +] + 人民党 ([+ p_grand_coalition +]%)
 choose-if: (spd_prussia or (z_prussia and z_relation >= 45)) or p_grand_coalition >= 50 and dvp_relation >= 40 and z_relation >= 40
-unavailable-subtitle: 社民党 + 中央党 + [+ ddp_name +] + 人民党 ([+ p_grand_coalition +]%) - [? if p_grand_coalition < 50 : 我们缺乏票数。 ?][? if dvp_relation < 40 : 人民党不愿。 ?][? if z_relation < 40 : 中央党不愿。 ?]
+unavailable-subtitle: 社民党 + 中央党 + [+ ddp_display +] + 人民党 ([+ p_grand_coalition +]%) - [? if p_grand_coalition < 50 : 我们缺乏票数。 ?][? if dvp_relation < 40 : 人民党不愿。 ?][? if z_relation < 40 : 中央党不愿。 ?]
 on-arrival: kpd_prussia = 0; dvp_relation += 5; left_dissent += 5; kpd_relation -= 5; dvp_prussia = 1; democratization -= 1; stalhelm_militancy += 0.05; prussian_police_loyalty -= 0.1; prussia_dvp += 0.05 if prussia_dvp < 1.25; prussia_dnvp -= 0.1 if prussia_dnvp >= 0.7; prussia_nsdap += 0.05 if prussia_nsdap < 1.25
 
 人民党已被纳入政府以促进善意。左翼对此不满。
@@ -404,10 +404,10 @@ on-departure: dvp_prussia = 0; kpd_prussia = 1; spd_prussia = 1; z_prussia = 0; 
 
 @popular_front_prussia
 title: 「人民阵线」有可能吗?
-subtitle: 共产党 + 社民党 + [+ ddp_name +] + 中央党 ([+ p_popular_front_coalition +]%)
+subtitle: 共产党 + 社民党 + [+ ddp_display +] + 中央党 ([+ p_popular_front_coalition +]%)
 view-if: spd_prussia or p_popular_front_coalition >= 50
 choose-if: (spd_prussia and (p_right_coalition < 50 or z_relation >= 40 or not dnvp_reform or year >= 1930)) or p_popular_front_coalition >= 50 and kpd_relation >= 60 and z_relation >= 60 and communist_coalition >= 3
-unavailable-subtitle: 共产党 + 社民党 + [+ ddp_name +] + 中央党 ([+ p_popular_front_coalition +]%) - [? if p_popular_front_coalition < 50 : 我们缺乏票数。 ?][? if kpd_relation < 60 or communist_coalition < 3 : 共产党不愿。 ?][? if z_relation < 60 : 中央党不愿。 ?]
+unavailable-subtitle: 共产党 + 社民党 + [+ ddp_display +] + 中央党 ([+ p_popular_front_coalition +]%) - [? if p_popular_front_coalition < 50 : 我们缺乏票数。 ?][? if kpd_relation < 60 or communist_coalition < 3 : 共产党不愿。 ?][? if z_relation < 60 : 中央党不愿。 ?]
 on-arrival: dvp_relation -= 5; dvp_relation -= 5 if dvp_prussia
 on-departure: dvp_prussia = 0; kpd_prussia = 1; spd_prussia = 1; z_prussia = 0; prussia_kpd += 0.05 if prussia_kpd < 1.2; prussia_spd -= 0.05 if prussia_spd >= 0.9; coup_progress += 3; capital_strike_progress += 1
 

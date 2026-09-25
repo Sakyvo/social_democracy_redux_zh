@@ -64,7 +64,7 @@ on-arrival: kpd_relation -= 10; workers_spd -= 8; unemployed_spd -= 8;
 遗憾的是,我们未能实现共产党设定的全部目标。他们打算对我们的政府提出不信任案,并已开始发动宣传攻势,在工人眼中削弱我们政府的合法性。
 
 - @appeal: 恳请共产党人耐心一些 —— 我们正在努力!
-- @kpd_vote_of_no_confidence.support_center: 我们能否以中央党与 [+ ddp_name +](或许还有人民党)为基础组建一个新政府?
+- @kpd_vote_of_no_confidence.support_center: 我们能否以中央党与 [+ ddp_display +](或许还有人民党)为基础组建一个新政府?
 - @kpd_vote_of_no_confidence.let_it_happen: 让投票进行吧。
 - @no_vonc: 由于宪法改革,他们无法提出不信任案,但他们可以在每一个机会上阻挠我们的政府。
 

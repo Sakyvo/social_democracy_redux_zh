@@ -92,7 +92,7 @@ unavailable-subtitle: 资源不足。
 on-arrival: resources -= 1; ddp_relation += 5*(1 - dissent)
 go-to: dvp_stresemann if stresemann_dead = 0; dvp_loss if stresemann_dead = 1 and year <= 1930; dvp_moribound if year > 1930
 
-在共和国的历程中,[+ ddp_name +] 一直是我们最亲密的盟友之一。
+在共和国的历程中,[+ ddp_display +] 一直是我们最亲密的盟友之一。
 
 @dvp_stresemann
 on-arrival: dvp_relation += 8*(1 - dissent)
@@ -109,7 +109,7 @@ on-arrival: dvp_relation += 5*(1 - dissent)
 @dvp_moribound
 on-arrival: dvp_relation += 5*(1 - dissent)
 
-自由派政党([+ ddp_name +] 与人民党)在选举层面已奄奄一息,或许我们的精力最好用在别处。
+自由派政党([+ ddp_display +] 与人民党)在选举层面已奄奄一息,或许我们的精力最好用在别处。
 
 不过,鉴于人民党在其他偏右政党中的影响力[? if president == "Hindenburg":,以及与总统兴登堡的关系 ?],影响他们仍可能有帮助。
 

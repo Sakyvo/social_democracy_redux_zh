@@ -44,10 +44,10 @@ if (Q.economic_growth) {
 国会席位:
 
 # 1928: 30, 1930: 25, 1932: 22
-SPD: [+ spd_r +]%
-[? if sapd_formed == 1 : SAPD: [+ sapd_r +]% ?]
+社民党: [+ spd_r +]%
+[? if sapd_formed == 1 : 社会主义工人党: [+ sapd_r +]% ?]
 # 1928: 15, 1930: 15, 1932: 
-Z + BVP: [+ z_r +]%
+中央党 + 巴伐利亚人民党: [+ z_r +]%
 # 1928: 10, 1930: 13
 共产党: [+ kpd_r +]%
 # 1928: 5, 1930: 4 (as DstP)
@@ -178,23 +178,23 @@ Q.socialism_disp = Math.round(Q.socialism);
 
 (若此刻举行选举):
 
-SPD: [+ spd_votes +]%
+社民党: [+ spd_votes +]%
 
-[? if sapd_formed == 1 : SAPD: [+ sapd_votes +]% ?]
+[? if sapd_formed == 1 : 社会主义工人党: [+ sapd_votes +]% ?]
 
-[? if zca_formed : ZCA: [+ zca_votes +]% ?]
+[? if zca_formed : 中央基督教联盟: [+ zca_votes +]% ?]
 
-Z + BVP: [+ z_votes +]%
+中央党 + 巴伐利亚人民党: [+ z_votes +]%
 
 共产党: [+ kpd_votes +]%
 
-[? if not ddp_name: DDP?][? if ddp_name != 0 : [+ ddp_name +]?]: [+ ddp_votes +]%
+[? if not ddp_name: DDP?][? if ddp_name != 0 : [+ ddp_display +]?]: [+ ddp_votes +]%
 
 人民党: [+ dvp_votes +]%
 
 国家人民党: [+ dnvp_votes +]%
 
-[? if dne_formed : DNE: [+ dne_votes +]% ?]
+[? if dne_formed : 国家人民阵线: [+ dne_votes +]% ?]
 
 纳粹党: [+ nsdap_votes +]%
 
@@ -208,14 +208,14 @@ Z + BVP: [+ z_votes +]%
 
 对民族主义的支持: [+ nationalism_disp +]%
 
-工人: SPD: [+ workers_spd_display +]%,[? if sapd_formed == 1 : SAPD: [+ workers_sapd_display +]%, ?] Z: [+ workers_z_display +]%,KPD: [+ workers_kpd_display +]%,DDP: [+ workers_ddp_display +]%,DVP: [+ workers_dvp_display +]%; DNVP: [+ workers_dnvp_display +]%,[? if dne_formed : DNE: [+ workers_dne_display +]%, ?] NSDAP: [+ workers_nsdap_display +]%,其他: [+ workers_other_display +]%
+工人: 社民党: [+ workers_spd_display +]%,[? if sapd_formed == 1 : 社会主义工人党: [+ workers_sapd_display +]%, ?] 中央党: [+ workers_z_display +]%,共产党: [+ workers_kpd_display +]%,民主党: [+ workers_ddp_display +]%,人民党: [+ workers_dvp_display +]%; 国家人民党: [+ workers_dnvp_display +]%,[? if dne_formed : 国家人民阵线: [+ workers_dne_display +]%, ?] 纳粹党: [+ workers_nsdap_display +]%,其他: [+ workers_other_display +]%
 
-新中间阶层: SPD: [+ new_middle_spd_display +]%,[? if sapd_formed == 1 : SAPD: [+ new_middle_sapd_display +]%, ?] Z: [+ new_middle_z_display +]%,KPD: [+ new_middle_kpd_display +]%,DDP: [+ new_middle_ddp_display +]%,DVP: [+ new_middle_dvp_display +]%; DNVP: [+ new_middle_dnvp_display +]%,[? if dne_formed : DNE: [+ new_middle_dne_display +]%, ?] NSDAP: [+ new_middle_nsdap_display +]%,其他: [+ new_middle_other_display +]%
+新中间阶层: 社民党: [+ new_middle_spd_display +]%,[? if sapd_formed == 1 : 社会主义工人党: [+ new_middle_sapd_display +]%, ?] 中央党: [+ new_middle_z_display +]%,共产党: [+ new_middle_kpd_display +]%,民主党: [+ new_middle_ddp_display +]%,人民党: [+ new_middle_dvp_display +]%; 国家人民党: [+ new_middle_dnvp_display +]%,[? if dne_formed : 国家人民阵线: [+ new_middle_dne_display +]%, ?] 纳粹党: [+ new_middle_nsdap_display +]%,其他: [+ new_middle_other_display +]%
 
-旧中间阶层: SPD: [+ old_middle_spd_display +]%,[? if sapd_formed == 1 : SAPD: [+ old_middle_sapd_display +]%, ?] Z: [+ old_middle_z_display +]%,KPD: [+ old_middle_kpd_display +]%,DDP: [+ old_middle_ddp_display +]%,DVP: [+ old_middle_dvp_display +]%; DNVP: [+ old_middle_dnvp_display +]%,[? if dne_formed : DNE: [+ old_middle_dne_display +]%, ?] NSDAP: [+ old_middle_nsdap_display +]%,其他: [+ old_middle_other_display +]%
+旧中间阶层: 社民党: [+ old_middle_spd_display +]%,[? if sapd_formed == 1 : 社会主义工人党: [+ old_middle_sapd_display +]%, ?] 中央党: [+ old_middle_z_display +]%,共产党: [+ old_middle_kpd_display +]%,民主党: [+ old_middle_ddp_display +]%,人民党: [+ old_middle_dvp_display +]%; 国家人民党: [+ old_middle_dnvp_display +]%,[? if dne_formed : 国家人民阵线: [+ old_middle_dne_display +]%, ?] 纳粹党: [+ old_middle_nsdap_display +]%,其他: [+ old_middle_other_display +]%
 
-乡村: SPD: [+ rural_spd_display +]%,[? if sapd_formed == 1 : SAPD: [+ rural_sapd_display +]%, ?] Z: [+ rural_z_display +]%,KPD: [+ rural_kpd_display +]%,DDP: [+ rural_ddp_display +]%,DVP: [+ rural_dvp_display +]%; DNVP: [+ rural_dnvp_display +]%,[? if dne_formed : DNE: [+ rural_dne_display +]%, ?] NSDAP: [+ rural_nsdap_display +]%,其他: [+ rural_other_display +]%
+乡村: 社民党: [+ rural_spd_display +]%,[? if sapd_formed == 1 : 社会主义工人党: [+ rural_sapd_display +]%, ?] 中央党: [+ rural_z_display +]%,共产党: [+ rural_kpd_display +]%,民主党: [+ rural_ddp_display +]%,人民党: [+ rural_dvp_display +]%; 国家人民党: [+ rural_dnvp_display +]%,[? if dne_formed : 国家人民阵线: [+ rural_dne_display +]%, ?] 纳粹党: [+ rural_nsdap_display +]%,其他: [+ rural_other_display +]%
 
-失业者: SPD: [+ unemployed_spd_display +]%,[? if sapd_formed == 1 : SAPD: [+ unemployed_sapd_display +]%, ?] Z: [+ unemployed_z_display +]%,KPD: [+ unemployed_kpd_display +]%,DDP: [+ unemployed_ddp_display +]%,DVP: [+ unemployed_dvp_display +]%; DNVP: [+ unemployed_dnvp_display +]%,[? if dne_formed : DNE: [+ unemployed_dne_display +]%, ?] NSDAP: [+ unemployed_nsdap_display +]%,其他: [+ unemployed_other_display +]%
+失业者: 社民党: [+ unemployed_spd_display +]%,[? if sapd_formed == 1 : 社会主义工人党: [+ unemployed_sapd_display +]%, ?] 中央党: [+ unemployed_z_display +]%,共产党: [+ unemployed_kpd_display +]%,民主党: [+ unemployed_ddp_display +]%,人民党: [+ unemployed_dvp_display +]%; 国家人民党: [+ unemployed_dnvp_display +]%,[? if dne_formed : 国家人民阵线: [+ unemployed_dne_display +]%, ?] 纳粹党: [+ unemployed_nsdap_display +]%,其他: [+ unemployed_other_display +]%
 
-天主教徒: SPD: [+ catholics_spd_display +]%,[? if sapd_formed == 1 : SAPD: [+ catholics_sapd_display +]%, ?] Z: [+ catholics_z_display +]%,KPD: [+ catholics_kpd_display +]%,DDP: [+ catholics_ddp_display +]%,DVP: [+ catholics_dvp_display +]%; DNVP: [+ catholics_dnvp_display +]%,[? if dne_formed : DNE: [+ catholics_dne_display +]%, ?] NSDAP: [+ catholics_nsdap_display +]%,其他: [+ catholics_other_display +]%
+天主教徒: 社民党: [+ catholics_spd_display +]%,[? if sapd_formed == 1 : 社会主义工人党: [+ catholics_sapd_display +]%, ?] 中央党: [+ catholics_z_display +]%,共产党: [+ catholics_kpd_display +]%,民主党: [+ catholics_ddp_display +]%,人民党: [+ catholics_dvp_display +]%; 国家人民党: [+ catholics_dnvp_display +]%,[? if dne_formed : 国家人民阵线: [+ catholics_dne_display +]%, ?] 纳粹党: [+ catholics_nsdap_display +]%,其他: [+ catholics_other_display +]%

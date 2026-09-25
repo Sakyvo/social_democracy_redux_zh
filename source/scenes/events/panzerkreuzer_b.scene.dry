@@ -25,11 +25,11 @@ Q.bill_support = Math.round(Q.bill_support);
 
 共产党:反对
 
-[? if sapd_formed : SAPD: 反对 ?]
+[? if sapd_formed : 社会主义工人党: 反对 ?]
 
 社民党: [? if panzerkreuzer_funded : 赞成 ?][? if not panzerkreuzer_funded : 意见不一 ?]
 
-[+ ddp_name +]:赞成
+[+ ddp_display +]:赞成
 
 中央党:赞成
 
@@ -64,11 +64,11 @@ Q.bill_support = Math.round(Q.bill_support);
 
 共产党:反对
 
-[? if sapd_formed : SAPD: 反对 ?]
+[? if sapd_formed : 社会主义工人党: 反对 ?]
 
 社民党:弃权
 
-[+ ddp_name +]:赞成
+[+ ddp_display +]:赞成
 
 中央党:赞成
 
@@ -91,11 +91,11 @@ on-arrival: panzerkreuzer_b_funded = 1
 
 共产党:反对
 
-[? if sapd_formed : SAPD: 反对 ?]
+[? if sapd_formed : 社会主义工人党: 反对 ?]
 
 社民党:反对
 
-[+ ddp_name +]:赞成
+[+ ddp_display +]:赞成
 
 中央党:赞成
 
@@ -114,15 +114,15 @@ on-arrival: panzerkreuzer_b_funded = 1
 @not_built
 on-arrival: panzerkreuzer_b_funded = 0; budget += 1 if panzerkreuzer_funded = 0; coup_progress += 1
 
-我们反对战列巡洋舰的表决获得成功,得到共产党与 [+ ddp_name +] 中反战人士的支持。这艘军舰将不会被建造! [? if panzerkreuzer_funded == 0 : 由于未为这两艘舰拨款,我们省下了一笔预算。 ?]
+我们反对战列巡洋舰的表决获得成功,得到共产党与 [+ ddp_display +] 中反战人士的支持。这艘军舰将不会被建造! [? if panzerkreuzer_funded == 0 : 由于未为这两艘舰拨款,我们省下了一笔预算。 ?]
 
 共产党:反对
 
-[? if sapd_formed : SAPD: 反对 ?]
+[? if sapd_formed : 社会主义工人党: 反对 ?]
 
 社民党:反对
 
-[+ ddp_name +]:赞成
+[+ ddp_display +]:赞成
 
 中央党:赞成
 

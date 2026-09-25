@@ -341,36 +341,36 @@ go-to: coalition_menu
 
 {!<table>!} 
 {!<tr><td>党派</td><td>得票份额</td><td>% 变化</td></tr>!}
-{!<tr><td><div class="box" style='background-color:#E3000F; outline: 2px; outline-style: solid;'> </div> !} **SPD:** {!</td><td>!} **[+ spd_bl +]%** {!</td><td>!} **[+ stbl_change_spd +]** {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#E3000F; outline: 2px; outline-style: solid;'> </div> !} **社民党:** {!</td><td>!} **[+ spd_bl +]%** {!</td><td>!} **[+ stbl_change_spd +]** {!</td></tr>!}
 
-[? if sapd_formed == 1 : {!<tr><td><div class="box" style='background-color:#C40000'> </div> !}SAPD: {!</td><td>!} [+ sapd_bl +]% {!</td><td>!} [+ stbl_change_sapd +] {!</td></tr>!} ?]
+[? if sapd_formed == 1 : {!<tr><td><div class="box" style='background-color:#C40000'> </div> !}社会主义工人党: {!</td><td>!} [+ sapd_bl +]% {!</td><td>!} [+ stbl_change_sapd +] {!</td></tr>!} ?]
 
-{!<tr><td><div class="box" style='background-color:#8B0000'> </div> !}KPD: {!</td><td>!} [+ kpd_bl +]% {!</td><td>!} [+ stbl_change_kpd +] {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#8B0000'> </div> !}共产党: {!</td><td>!} [+ kpd_bl +]% {!</td><td>!} [+ stbl_change_kpd +] {!</td></tr>!}
 
-{!<tr><td><div class="box" style='background-color:#DCCA4A'> </div> !} [+ ddp_name +]: {!</td><td>!} [+ ddp_bl +]% {!</td><td>!} [+ stbl_change_ddp +] {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#DCCA4A'> </div> !} [+ ddp_display +]: {!</td><td>!} [+ ddp_bl +]% {!</td><td>!} [+ stbl_change_ddp +] {!</td></tr>!}
 
-{!<tr><td><div class="box" style='background-color:#38C538'> </div> !} BB: {!</td><td>!} [+ bb_bl +]% {!</td><td>!} [+ stbl_change_bb +] {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#38C538'> </div> !} 巴伐利亚农民联盟: {!</td><td>!} [+ bb_bl +]% {!</td><td>!} [+ stbl_change_bb +] {!</td></tr>!}
 
-{!<tr><td><div class="box" style='background-color:#69A2BE'> </div> !} BVP: {!</td><td>!} [+ z_bl +]% {!</td><td>!} [+ stbl_change_z +] {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#69A2BE'> </div> !} 巴伐利亚人民党: {!</td><td>!} [+ z_bl +]% {!</td><td>!} [+ stbl_change_z +] {!</td></tr>!}
 
-{!<tr><td><div class="box" style='background-color:#D5AC27'> </div> !} DVP: {!</td><td>!} [+ dvp_bl +]% {!</td><td>!} [+ stbl_change_dvp +] {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#D5AC27'> </div> !} 人民党: {!</td><td>!} [+ dvp_bl +]% {!</td><td>!} [+ stbl_change_dvp +] {!</td></tr>!}
  
 {!<tr><td><div class="box" style='background-color:#a0a0a0'> </div> !} 其他: {!</td><td>!} [+ other_bl +] % {!</td><td>!} [+ stbl_change_other +] {!</td></tr>!}
 
-{!<tr><td><div class="box" style='background-color:#3f7bc1'> </div> !} DNVP: {!</td><td>!} [+ dnvp_bl +]% {!</td><td>!} [+ stbl_change_dnvp +] {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#3f7bc1'> </div> !} 国家人民党: {!</td><td>!} [+ dnvp_bl +]% {!</td><td>!} [+ stbl_change_dnvp +] {!</td></tr>!}
 
-{!<tr><td><div class="box" style='background-color:#954B00'> </div> !} NSDAP: {!</td><td>!} [+ nsdap_bl +]% {!</td><td>!} [+ stbl_change_nsdap +] {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#954B00'> </div> !} 纳粹党: {!</td><td>!} [+ nsdap_bl +]% {!</td><td>!} [+ stbl_change_nsdap +] {!</td></tr>!}
 {!</table>!}
 
 **潜在执政联盟:**
 
-魏玛联盟(社民党 + 中央党 + [+ ddp_name +]):[+ b_weimar_coalition +]%
+魏玛联盟(社民党 + 中央党 + [+ ddp_display +]):[+ b_weimar_coalition +]%
 
-大联盟(社民党 + 中央党 + [+ bvp_name +] + [+ ddp_name +] + 人民党):[+ b_grand_coalition +]%
+大联盟(社民党 + 中央党 + [+ bvp_display +] + [+ ddp_display +] + 人民党):[+ b_grand_coalition +]%
 
-资产阶级联盟(中央党 + [+ bvp_name +] + [+ ddp_name +] + 人民党 + 其他):[+ b_bourgeois_coalition +]%
+资产阶级联盟(中央党 + [+ bvp_display +] + [+ ddp_display +] + 人民党 + 其他):[+ b_bourgeois_coalition +]%
 
-右翼联盟(中央党 + [+ bvp_name +] + 人民党 + 其他 + 国家人民党):[+ b_right_coalition +]%
+右翼联盟(中央党 + [+ bvp_display +] + 人民党 + 其他 + 国家人民党):[+ b_right_coalition +]%
 
 [? if nazi_urgency <= 1 and nsdap_bl >= 15 : 纳粹党得票的飞速攀升令人极为担忧。许多人曾以为该党已奄奄一息;如今,我们中的一些人已视其为德国民主最大的威胁。 ?]
 
@@ -403,13 +403,13 @@ on-arrival: rural_nsdap += 6; old_middle_nsdap += 4; catholics_nsdap += 3; bavar
 
 @left_bavaria
 title: 巴伐利亚左翼各党的「人民阵线」。
-subtitle: 共产党 + 社民党 + [+ ddp_name +] ([+ b_popular_front_coalition +]%)
-unavailable-subtitle: 共产党 + 社民党 + [+ ddp_name +] ([+ b_popular_front_coalition +]%)—— [? if ddp_relation < 45 : [+ ddp_name +] 不会投我们的票。 ?][? if kpd_relation < 55 or communist_coalition < 3 : 共产党不会投我们的票。 ?]
+subtitle: 共产党 + 社民党 + [+ ddp_display +] ([+ b_popular_front_coalition +]%)
+unavailable-subtitle: 共产党 + 社民党 + [+ ddp_display +] ([+ b_popular_front_coalition +]%)—— [? if ddp_relation < 45 : [+ ddp_display +] 不会投我们的票。 ?][? if kpd_relation < 55 or communist_coalition < 3 : 共产党不会投我们的票。 ?]
 view-if: b_popular_front_coalition >= 50
 choose-if: ((kpd_relation >= 55 and communist_coalition >= 3) or (spd_bl+ddp_bl >= 50 and ddp_relation >= 45)) and ((ddp_relation >= 45) or (kpd_bl+spd_bl >= 50 and kpd_relation >= 55 and communist_coalition >= 3))
 on-arrival: spd_bavaria = 1; workers_spd += 4*(1-dissent); catholics_spd += 4*(1-dissent); rural_spd += 4*(1-dissent); sh_militancy -= 0.05; rb_militancy += 0.05; coup_progress += 1; capital_strike_progress += 2
 
-不知怎的,由共产党、[+ ddp_name +] 与我们组成的人民阵线竟在巴伐利亚的执政权争夺中压过了右翼政党,把一位社会民主党人推上了州总理之位。
+不知怎的,由共产党、[+ ddp_display +] 与我们组成的人民阵线竟在巴伐利亚的执政权争夺中压过了右翼政党,把一位社会民主党人推上了州总理之位。
 
 @spd_bavaria
 title: 社民党多数政府

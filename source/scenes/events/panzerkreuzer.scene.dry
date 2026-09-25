@@ -24,11 +24,11 @@ Q.bill_support = Math.round(Q.bill_support);
 
 共产党:反对
 
-[? if sapd_formed : SAPD: 反对 ?]
+[? if sapd_formed : 社会主义工人党: 反对 ?]
 
 社民党:意见不一
 
-[+ ddp_name +]:赞成
+[+ ddp_display +]:赞成
 
 中央党:赞成
 
@@ -68,11 +68,11 @@ on-arrival: panzerkreuzer_funded = 0; nationalism -= 3*(1-dissent); panzerkreuze
 
 共产党:反对
 
-[? if sapd_formed : SAPD: 反对 ?]
+[? if sapd_formed : 社会主义工人党: 反对 ?]
 
 社民党:反对
 
-[+ ddp_name +]:赞成
+[+ ddp_display +]:赞成
 
 中央党:赞成
 
@@ -95,11 +95,11 @@ on-arrival: panzerkreuzer_funded = 1; bill_support = bourgeois_coalition+far_rig
 
 共产党:反对
 
-[? if sapd_formed : SAPD: 反对 ?]
+[? if sapd_formed : 社会主义工人党: 反对 ?]
 
 社民党:反对
 
-[+ ddp_name +]:赞成
+[+ ddp_display +]:赞成
 
 中央党:赞成
 
@@ -122,11 +122,11 @@ on-arrival: panzerkreuzer_funded = 0; nationalism -= 3*(1-dissent); panzerkreuze
 
 共产党:反对
 
-[? if sapd_formed : SAPD: 反对 ?]
+[? if sapd_formed : 社会主义工人党: 反对 ?]
 
 社民党:反对
 
-[+ ddp_name +]:赞成
+[+ ddp_display +]:赞成
 
 中央党:赞成
 
@@ -149,11 +149,11 @@ on-arrival: panzerkreuzer_funded = 1; bill_support = bourgeois_coalition+far_rig
 
 共产党:反对
 
-[? if sapd_formed : SAPD: 反对 ?]
+[? if sapd_formed : 社会主义工人党: 反对 ?]
 
 社民党:反对
 
-[+ ddp_name +]:赞成
+[+ ddp_display +]:赞成
 
 中央党:赞成
 
@@ -178,11 +178,11 @@ Q.bill_support = Math.round(Q.bill_support);
 
 共产党:反对
 
-[? if sapd_formed : SAPD: 反对 ?]
+[? if sapd_formed : 社会主义工人党: 反对 ?]
 
 社民党:弃权
 
-[+ ddp_name +]:赞成
+[+ ddp_display +]:赞成
 
 中央党:赞成
 

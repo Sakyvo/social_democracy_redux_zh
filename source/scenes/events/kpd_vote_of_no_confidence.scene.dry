@@ -12,7 +12,7 @@ go-to: menu
 @menu
 
 - @try_assuage: 设法安抚他们。
-- @support_center: 我们能否以中央党与 [+ ddp_name +](或许还有人民党)为基础组建新政府?
+- @support_center: 我们能否以中央党与 [+ ddp_display +](或许还有人民党)为基础组建新政府?
 - @let_it_happen: 让表决照常进行。
 
 @try_assuage
@@ -21,7 +21,7 @@ go-to: menu
 
 - @resources: 用我们的资源降低执政联盟内部的异议。
 - @thalmann: 任命台尔曼取代 [+ chancellor +] 出任总理。
-- @support_center: 我们能否以中央党与 [+ ddp_name +](或许还有人民党)为基础组建新政府?
+- @support_center: 我们能否以中央党与 [+ ddp_display +](或许还有人民党)为基础组建新政府?
 - @let_it_happen: 算了。让表决照常进行。
 
 @thalmann

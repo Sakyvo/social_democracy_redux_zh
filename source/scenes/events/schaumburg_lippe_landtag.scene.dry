@@ -249,32 +249,32 @@ go-to: coalition_menu
 
 {!<table>!} 
 {!<tr><td>党派</td><td>得票份额</td><td>% 变化</td></tr>!}
-{!<tr><td><div class="box" style='background-color:#E3000F; outline: 2px; outline-style: solid;'> </div> !} **SPD:** {!</td><td>!} **[+ spd_schl +]%** {!</td><td>!} **[+ stpl_change_spd +]** {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#E3000F; outline: 2px; outline-style: solid;'> </div> !} **社民党:** {!</td><td>!} **[+ spd_schl +]%** {!</td><td>!} **[+ stpl_change_spd +]** {!</td></tr>!}
 
-[? if sapd_formed == 1 : {!<tr><td><div class="box" style='background-color:#C40000'> </div> !}SAPD: {!</td><td>!} [+ sapd_schl +]% {!</td><td>!} [+ stpl_change_sapd +] {!</td></tr>!} ?]
+[? if sapd_formed == 1 : {!<tr><td><div class="box" style='background-color:#C40000'> </div> !}社会主义工人党: {!</td><td>!} [+ sapd_schl +]% {!</td><td>!} [+ stpl_change_sapd +] {!</td></tr>!} ?]
 
-{!<tr><td><div class="box" style='background-color:#8B0000'> </div> !}KPD: {!</td><td>!} [+ kpd_schl +]% {!</td><td>!} [+ stpl_change_kpd +] {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#8B0000'> </div> !}共产党: {!</td><td>!} [+ kpd_schl +]% {!</td><td>!} [+ stpl_change_kpd +] {!</td></tr>!}
 
-{!<tr><td><div class="box" style='background-color:#DCCA4A'> </div> !} [+ ddp_name +]: {!</td><td>!} [+ ddp_schl +]% {!</td><td>!} [+ stpl_change_ddp +] {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#DCCA4A'> </div> !} [+ ddp_display +]: {!</td><td>!} [+ ddp_schl +]% {!</td><td>!} [+ stpl_change_ddp +] {!</td></tr>!}
 
-{!<tr><td><div class="box" style='background-color:#000'> </div> !} Z: {!</td><td>!} [+ z_schl +]% {!</td><td>!} [+ stpl_change_z +] {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#000'> </div> !} 中央党: {!</td><td>!} [+ z_schl +]% {!</td><td>!} [+ stpl_change_z +] {!</td></tr>!}
 
-{!<tr><td><div class="box" style='background-color:#D5AC27'> </div> !} DVP: {!</td><td>!} [+ dvp_schl +]% {!</td><td>!} [+ stpl_change_dvp +] {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#D5AC27'> </div> !} 人民党: {!</td><td>!} [+ dvp_schl +]% {!</td><td>!} [+ stpl_change_dvp +] {!</td></tr>!}
  
 {!<tr><td><div class="box" style='background-color:#a0a0a0'> </div> !} 其他: {!</td><td>!} [+ other_schl +] % {!</td><td>!} [+ stpl_change_other +] {!</td></tr>!}
 
-{!<tr><td><div class="box" style='background-color:#3f7bc1'> </div> !} DNVP: {!</td><td>!} [+ dnvp_schl +]% {!</td><td>!} [+ stpl_change_dnvp +] {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#3f7bc1'> </div> !} 国家人民党: {!</td><td>!} [+ dnvp_schl +]% {!</td><td>!} [+ stpl_change_dnvp +] {!</td></tr>!}
 
-{!<tr><td><div class="box" style='background-color:#954B00'> </div> !} NSDAP: {!</td><td>!} [+ nsdap_schl +]% {!</td><td>!} [+ stpl_change_nsdap +] {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#954B00'> </div> !} 纳粹党: {!</td><td>!} [+ nsdap_schl +]% {!</td><td>!} [+ stpl_change_nsdap +] {!</td></tr>!}
 {!</table>!}
 
 **潜在执政联盟:**
 
-魏玛联盟(社民党 + 中央党 + [+ ddp_name +]):[+ sch_weimar_coalition +]%
+魏玛联盟(社民党 + 中央党 + [+ ddp_display +]):[+ sch_weimar_coalition +]%
 
-大联盟(社民党 + 中央党 + [+ ddp_name +] + 人民党):[+ sch_grand_coalition +]%
+大联盟(社民党 + 中央党 + [+ ddp_display +] + 人民党):[+ sch_grand_coalition +]%
 
-资产阶级联盟(中央党 + [+ ddp_name +] + 人民党 + 其他):[+ sch_bourgeois_coalition +]%
+资产阶级联盟(中央党 + [+ ddp_display +] + 人民党 + 其他):[+ sch_bourgeois_coalition +]%
 
 右翼联盟(中央党 + 人民党 + 其他 + 国家人民党):[+ sch_right_coalition +]%
 
@@ -300,19 +300,19 @@ unavailable-subtitle: 社民党 ([+ spd_schl +]%) - 社民党希望把资产阶�
 
 @social_liberal
 title: 一个「社会自由主义」联盟
-subtitle: 社民党 + [+ ddp_name +] ([+ sch_social_liberal +]%)
+subtitle: 社民党 + [+ ddp_display +] ([+ sch_social_liberal +]%)
 view-if: sch_social_liberal >= 50 or (sch_social_liberal < 50 and spd_schl < 50 and (sch_huh < 50 or (year >= 1930 and not dnvp_reform)))
 choose-if: year >= 1930 and not dnvp_reform
-unavailable-subtitle: 社民党 + [+ ddp_name +] ([+ sch_social_liberal +]%) - 他们希望把国家人民党纳入政府。
+unavailable-subtitle: 社民党 + [+ ddp_display +] ([+ sch_social_liberal +]%) - 他们希望把国家人民党纳入政府。
 
-一个包含 [+ ddp_name +] 的「社会自由主义」联盟组成了。[? if spd_schl >= 50 : 尽管社民党本身已占多数。真奇怪。 ?]
+一个包含 [+ ddp_display +] 的「社会自由主义」联盟组成了。[? if spd_schl >= 50 : 尽管社民党本身已占多数。真奇怪。 ?]
 
 @huh 
 title: ……咦。
-subtitle: 社民党 + [+ ddp_name +] + 国家人民党 ([+ sch_huh +]%)
+subtitle: 社民党 + [+ ddp_display +] + 国家人民党 ([+ sch_huh +]%)
 view-if: sch_huh >= 50 and (year < 1930 or dnvp_reform)
 
-这……很古怪。[? if spd_schl >= 50 : 社民党明明单独就占多数,却特意……把国家人民党拉进来? ?][? if spd_schl < 50 and sch_social_liberal >= 50 : 社民党明明与 [+ ddp_name +] 一起就占多数,却特意……把国家人民党拉进来? ?]
+这……很古怪。[? if spd_schl >= 50 : 社民党明明单独就占多数,却特意……把国家人民党拉进来? ?][? if spd_schl < 50 and sch_social_liberal >= 50 : 社民党明明与 [+ ddp_display +] 一起就占多数,却特意……把国家人民党拉进来? ?]
 
 - @no_judging: 社民党不予评判。这或许有点奇怪,但他们一定有充分的理由。
 - @judging: 社民党*绝对*在评判。绍姆堡-利珀到底为什么要这么做?

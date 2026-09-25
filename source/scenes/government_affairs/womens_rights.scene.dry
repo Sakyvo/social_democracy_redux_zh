@@ -76,4 +76,4 @@ on-arrival: z_relation -= 5; coalition_dissent += 1; workers_spd += 3*(1-dissent
 @liberalize_success
 on-arrival: abortion_rights += 1; womens_rights += 1; coalition_dissent += 1; z_relation -= 8; catholics_spd -= 10; dvp_relation -= 5; workers_spd += 3*(1-dissent); new_middle_spd += 3*(1-dissent); workers_z += 3; new_middle_z += 3; old_middle_z += 3; old_middle_dnvp += 3; rural_dnvp += 3; workers_nsdap -= 3; new_middle_nsdap -= 3; old_middle_nsdap -= 2; rural_nsdap -= 2; unemployed_nsdap -= 2; unemployed_z += 3; unemployed_spd += 3*(1-dissent); weimar_dissent += 1 if weimar_plan_adopted; weimar_dissent += 1 if z_party_leader == "Kaas" and weimar_plan_adopted
 
-在包括共产党与 [+ ddp_name +] 的「进步联盟」支持下,我们成功通过了一项使堕胎在德国合法化的法案!这鼓舞了我们较为进步的支持者,却损害了我们与中央党的关系。随着围绕堕胎的政治讨论日益升温,宗教取向的中央党与国家人民党以牺牲纳粹党为代价,赢得了保守派选票。
+在包括共产党与 [+ ddp_display +] 的「进步联盟」支持下,我们成功通过了一项使堕胎在德国合法化的法案!这鼓舞了我们较为进步的支持者,却损害了我们与中央党的关系。随着围绕堕胎的政治讨论日益升温,宗教取向的中央党与国家人民党以牺牲纳粹党为代价,赢得了保守派选票。

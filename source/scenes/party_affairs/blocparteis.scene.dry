@@ -9,11 +9,11 @@ view-if: zca_formed and not (ddp_socialist and z_socialist) and not blocparteis_
 
 = 集团政党
 
-随着中央基督教联盟的成立以及私人政党融资被取缔,那些拒绝并入这个资产阶级巨兽的中央党与 [+ ddp_name +] 残余势力,给了我们一个机会。党内一些人主张,我们大可以实际接管他们的党务架构,建立社会主义集团政党,以便在资产阶级选民群体中与资产阶级政党争夺选票。
+随着中央基督教联盟的成立以及私人政党融资被取缔,那些拒绝并入这个资产阶级巨兽的中央党与 [+ ddp_display +] 残余势力,给了我们一个机会。党内一些人主张,我们大可以实际接管他们的党务架构,建立社会主义集团政党,以便在资产阶级选民群体中与资产阶级政党争夺选票。
 
-- @ddp_bloc2: 我们可以把 [+ ddp_name +] 变成集团政党!
+- @ddp_bloc2: 我们可以把 [+ ddp_display +] 变成集团政党!
 - @z_bloc2: 我们可以把中央党变成集团政党!
-- @ddp_bloc: 我们试着把 [+ ddp_name +] 变成集团政党。
+- @ddp_bloc: 我们试着把 [+ ddp_display +] 变成集团政党。
 - @z_bloc: 我们试着把中央党变成集团政党。
 - @reject: 多阴险的提议。
 - @nothing: 我们什么都不做。
@@ -25,7 +25,7 @@ choose-if: resources >= 1
 view-if: ddp_bloc < 5
 on-arrival: resources -= 1; ddp_bloc += 1; ddp_bloc += 1 if interior_minister_party == "SPD"; ddp_relation += 10*ddp_bloc; new_middle_ddp += ddp_bloc; old_middle_ddp += ddp_bloc/1.5; rural_ddp += ddp_bloc/2; rural_ddp += (ddp_bloc*land_reform)/5
 
-我们着手把 [+ ddp_name +] 转变为集团政党 —— 我们的组织者联络其残余的、已无力偿债的地方支部,并渗透其中[? if interior_minister_party == "SPD" :,在内政部的协助之下?]。
+我们着手把 [+ ddp_display +] 转变为集团政党 —— 我们的组织者联络其残余的、已无力偿债的地方支部,并渗透其中[? if interior_minister_party == "SPD" :,在内政部的协助之下?]。
 
 @z_bloc
 subtitle: -1 资源
@@ -38,7 +38,7 @@ on-arrival: resources -= 1; z_bloc += 1; z_bloc += 1 if interior_minister_party 
 @ddp_bloc2
 view-if: ddp_bloc >= 5 and not ddp_socialist
 subtitle: 即便是资产阶级,也能找到通往社会主义的路。
-on-arrival: ddp_name = "RDP"; ddp_socialist = 1; ddp_relation = 100; socialism += ddp_votes; workers_ddp += 5*(socialism/100); new_middle_ddp += 8*(socialism/100); old_middle_ddp += 6*(socialism/100); rural_ddp += 5*(socialism/100)
+on-arrival: ddp_name = "RDP"; ddp_display = "激进民主党"; ddp_socialist = 1; ddp_relation = 100; socialism += ddp_votes; workers_ddp += 5*(socialism/100); new_middle_ddp += 8*(socialism/100); old_middle_ddp += 6*(socialism/100); rural_ddp += 5*(socialism/100)
 
 我们成功改造了民主党人 —— 在一场非常党代表大会之后,他们更换了党的名称,以彰显其新近宣称的信念:社会主义是人类社会的指导原则,也是自由主义原则的自然延伸。
 

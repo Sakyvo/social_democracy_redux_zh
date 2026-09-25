@@ -303,27 +303,27 @@ go-to: coalition_menu
 
 {!<table>!} 
 {!<tr><td>党派</td><td>得票份额</td><td>% 变化</td></tr>!}
-{!<tr><td><div class="box" style='background-color:#E3000F; outline: 2px; outline-style: solid;'> </div> !} **SPD:** {!</td><td>!} **[+ spd_r +]%** {!</td><td>!} **[+ str_change_spd +]** {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#E3000F; outline: 2px; outline-style: solid;'> </div> !} **社民党:** {!</td><td>!} **[+ spd_r +]%** {!</td><td>!} **[+ str_change_spd +]** {!</td></tr>!}
 
-[? if sapd_formed == 1 : {!<tr><td><div class="box" style='background-color:#C40000'> </div> !}SAPD: {!</td><td>!} [+ sapd_r +]% {!</td><td>!} [+ str_change_sapd +] {!</td></tr>!} ?]
+[? if sapd_formed == 1 : {!<tr><td><div class="box" style='background-color:#C40000'> </div> !}社会主义工人党: {!</td><td>!} [+ sapd_r +]% {!</td><td>!} [+ str_change_sapd +] {!</td></tr>!} ?]
 
-{!<tr><td><div class="box" style='background-color:#8B0000'> </div> !}KPD: {!</td><td>!} [+ kpd_r +]% {!</td><td>!} [+ str_change_kpd +] {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#8B0000'> </div> !}共产党: {!</td><td>!} [+ kpd_r +]% {!</td><td>!} [+ str_change_kpd +] {!</td></tr>!}
 
-{!<tr><td><div class="box" style='background-color:#DCCA4A'> </div> !} DDP: {!</td><td>!} [+ ddp_r +]% {!</td><td>!} [+ str_change_ddp +] {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#DCCA4A'> </div> !} 民主党: {!</td><td>!} [+ ddp_r +]% {!</td><td>!} [+ str_change_ddp +] {!</td></tr>!}
 
-{!<tr><td><div class="box" style='background-color:#000'> </div> !} Z: {!</td><td>!} [+ z_minus_bvp_r +]% {!</td><td>!} [+ str_change_z +] {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#000'> </div> !} 中央党: {!</td><td>!} [+ z_minus_bvp_r +]% {!</td><td>!} [+ str_change_z +] {!</td></tr>!}
 
-[? if zca_formed : {!<tr><td><div class="box" style='background-color:#85754e'> </div> !}ZCA: {!</td><td>!} [+ zca_r +]% {!</td><td>!} [+ str_change_zca +] {!</td></tr>!} ?]
+[? if zca_formed : {!<tr><td><div class="box" style='background-color:#85754e'> </div> !}中央基督教联盟: {!</td><td>!} [+ zca_r +]% {!</td><td>!} [+ str_change_zca +] {!</td></tr>!} ?]
 
-{!<tr><td><div class="box" style='background-color:#69A2BE'> </div> !} [+ bvp_name +]: {!</td><td>!} 3% {!</td><td>!} 0 {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#69A2BE'> </div> !} [+ bvp_display +]: {!</td><td>!} 3% {!</td><td>!} 0 {!</td></tr>!}
 
-{!<tr><td><div class="box" style='background-color:#D5AC27'> </div> !} DVP: {!</td><td>!} [+ dvp_r +]% {!</td><td>!} [+ str_change_dvp +] {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#D5AC27'> </div> !} 人民党: {!</td><td>!} [+ dvp_r +]% {!</td><td>!} [+ str_change_dvp +] {!</td></tr>!}
  
 {!<tr><td><div class="box" style='background-color:#a0a0a0'> </div> !} 其他: {!</td><td>!} [+ other_r +] % {!</td><td>!} [+ str_change_other +] {!</td></tr>!}
 
-{!<tr><td><div class="box" style='background-color:#3f7bc1'> </div> !} DNVP: {!</td><td>!} [+ dnvp_r +]% {!</td><td>!} [+ str_change_dnvp +] {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#3f7bc1'> </div> !} 国家人民党: {!</td><td>!} [+ dnvp_r +]% {!</td><td>!} [+ str_change_dnvp +] {!</td></tr>!}
 
-{!<tr><td><div class="box" style='background-color:#954B00'> </div> !} NSDAP: {!</td><td>!} [+ nsdap_r +]% {!</td><td>!} [+ str_change_nsdap +] {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#954B00'> </div> !} 纳粹党: {!</td><td>!} [+ nsdap_r +]% {!</td><td>!} [+ str_change_nsdap +] {!</td></tr>!}
 {!</table>!}
 
 存在若干可能的组阁方案。
