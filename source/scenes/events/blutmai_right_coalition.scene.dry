@@ -7,9 +7,9 @@ max-visits: 1
 
 = 1929 年五一节
 
-Tensions run high in Berlin. The Communists are planning a demonstration to commemorate the 10th anniversary of the Spartacist Uprising, in defiance of a ban on public gatherings in Berlin made by the right-wing government, which fears the possibility of another violent uprising.
+柏林的紧张气氛高涨。共产党人正筹划一场示威,以纪念斯巴达克起义十周年 —— 此举公然违抗右翼政府对柏林公共集会所下的禁令,后者担心可能再次发生暴力起义。
 
-Many on our party's left-wing have called on us to join in the demonstration, but this would only increase the risk of violence and could make reconciliation with the right-wing parties impossible. What should we do?
+我党左翼的许多人呼吁我们加入示威,但这只会增加暴力的风险,并可能使与右翼政党的和解彻底无望。我们该怎么办?
 
 - @join: 我们将加入示威。
 - @not: 我们置身事外。
@@ -21,17 +21,17 @@ on-arrival: kpd_relation += 20; volksmai = 1; z_relation -= 10; z_relation -= 5 
 achievement: die_rote_fahne
 face-image: img/blutmai.jpg
 
-We join in the demonstrations, though most of the party right boycott and refuse to participate. The police are sent to disperse our demonstration and violence erupts. Reports say that the Berlin police killed dozens of demonstrators and innocent bystanders. We are already calling this incident *Blutmai*, "Bloody May".
+我们加入了示威,尽管党内右翼多数予以抵制、拒绝参加。警察被派来驱散我们的示威,暴力随之爆发。据报,柏林警察杀害了数十名示威者与无辜旁观者。我们已把这一事件称为*血腥五月*。
 
-This may end any attempt at reconciliation with the right, but the Communists approve of our action.
+这或许会终结与右翼和解的任何可能,但共产党人赞同我们的举措。
 
 
 @not
 on-arrival: kpd_relation -= 5; left_dissent += 5; workers_kpd += 3; unemployed_kpd += 3; rfb_banned = 1; rfb_strength -= 100; strife += 1; socialism -= 2
 
-We do not participate in the demonstration, and it is a good thing that we didn't as it erupts into violence when the police are sent to disperse the Communists. Reports say that the Berlin police killed dozens of demonstrators and innocent bystanders. The Communists are already calling this incident *Blutmai*, "Bloody May".
+我们没有参加这场示威 —— 幸好没有,因为当警察被派去驱散共产党人时,示威便演变成了暴力。据报,柏林警察杀害了数十名示威者与无辜旁观者。共产党人已把这一事件称为*血腥五月*。
 
-What is our party's position?
+我党的立场是什么?
 
 - @dont: 本党不会就这场悲剧表态。
 - @pacifism: 我们谴责各方的政治暴力,这一次也不例外。
@@ -45,14 +45,14 @@ What is our party's position?
 @pacifism
 on-arrival: workers_spd += 1*(1-dissent); new_middle_spd += 3*(1-dissent); old_middle_spd += 2*(1-dissent); pacifism += 1; dvp_relation -= 5; kpd_relation -= 5; left_dissent += 5; rb_militancy -= 0.05; sh_militancy -= 0.02; rfb_militancy -= 0.02
 
-What happened is a tragedy of political violence, and we will use this as an opportunity to direct our campaigning towards pacifistic messaging and urge against violence on all sides of the political spectrum, regardless of affiliation. 
+所发生的一切是一场政治暴力的悲剧;我们将借此机会把我们的竞选转向和平主义的讯息,呼吁政治光谱各方 —— 无论归属 —— 都不要诉诸暴力。
 
 @pro_kpd
 on-arrival: workers_z -= 3; workers_dnvp -= 3; workers_spd += 2*(1-dissent); old_middle_spd -= 2; new_middle_spd -= 1 if not new_middle_conscious; kpd_relation += 10; z_relation -= 5; dvp_relation -= 10; prussian_police_loyalty += 0.05; reformist_dissent += 5; socialism += 1
 
-What happened is the fault of the police who suppressed the demonstration, and the right-wing government's fault for ordering it. We will use our power in the Prussian Interior Ministry to purge those responsible, while blaming the government for the incident in official party communications.
+所发生的一切要归咎于镇压示威的警察,以及下令镇压的右翼政府。我们将利用在普鲁士内政部的权力清洗相关责任人,同时在党的官方文告中把这一事件归咎于政府。
 
 @pro_z
 on-arrival: new_middle_spd += 2*(1-dissent); old_middle_spd += 3*(1-dissent); workers_spd -= 1; kpd_relation -= 10; z_relation += 10; dvp_relation += 5; left_dissent += 15
 
-What happened is the fault of the Communists for defying the rule of law and holding the demonstration in spite of the ban. We will defend the actions of the government, and the Prussian police force which we control, in the incident.
+所发生的一切要归咎于共产党人 —— 他们无视法治,不顾禁令举行示威。我们将为政府以及我们所掌控的普鲁士警察队伍在这一事件中的行动辩护。

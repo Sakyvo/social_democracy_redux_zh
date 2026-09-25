@@ -8,7 +8,7 @@ max-visits: 1
 
 = 黑色星期四
 
-The stock market in America has had its biggest crash in history. It is too early to tell what the international effects will be, but it cannot be good. Our economy is already feeling the effects - unemployment will rise even more, and wages will fall. As always, it is the capitalists' crisis, and the workers' burden.
+美国股市遭遇了历史上最严重的崩盘。现在判断国际影响还为时过早,但绝好不了。我们的经济已经感受到冲击 —— 失业将进一步上升,工资将下降。一如既往,这是资本家的危机,工人的负担。
 
 
 - @cap: 这就是资本主义的本性……
@@ -18,15 +18,15 @@ The stock market in America has had its biggest crash in history. It is too earl
 @cap
 on-arrival: socialism += 4
 
-Perhaps this is simply one of the periodic crises of capitalism. Perhaps this moment will simply pass.
+或许这只是资本主义周期性的危机之一。或许这一刻终会过去。
 
 @do_something
 on-arrival: crisis_urgency += 1
 
-What can we do to staunch the workers' suffering? It is becoming a hotly debated question.
+我们能为止住工人的苦难做些什么?这已成为激烈争论的问题。
 
 @blame
 view-if: right_coalition_failed == 1 and spd_in_government == 0 and spd_toleration == 0
 on-arrival: z_relation -= 5; workers_spd += 3; workers_kpd -= 2; workers_nsdap -= 1; new_middle_dnvp -= 2; old_middle_dnvp -= 2; rural_dnvp -= 2; catholics_z -= 1
 
-We blame the crisis on the collapsed right-wing government and pitch ourselves as a more moderate alternative to those turning to the NSDAP and the KPD, though until we have adopted a programme to fix the economy there is only so much campaigning on this that we can do.
+我们把危机归咎于已然垮台的右翼政府,并把自己包装成那些转投纳粹党与共产党的人面前一个更温和的替代 —— 不过在采纳一份修复经济的纲领之前,我们能在这方面开展的宣传也很有限。

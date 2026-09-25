@@ -9,9 +9,9 @@ new-page: true
 
 # reference: Evans, Ellen L. “Adam Stegerwald and the Role of the Christian Trade Unions in the Weimar Republic.” The Catholic Historical Review 59, no. 4 (1974): 602–26.
 
-Wilhelm Marx, former Center Party chancellor and presidential candidate, has chosen to resign from leadership of the Center Party. Now, the party holds a conference to replace him.
+前任中央党总理与总统候选人威廉·马克思已选择辞去中央党的领导职务。如今,该党召开代表大会以选出继任者。
 
-The consensus candidate on the right is Ludwig Kaas, a Catholic priest who represents the party's traditionalists. On the other hand, there is Joseph Joos, a leader of the Catholic trade unions, who has been more supportive of cooperation with the SPD than most of the Center Party.
+右翼的共识人选是路德维希·卡斯,一位代表该党传统派的天主教神父。另一边则是约瑟夫·约斯,天主教工会的领袖,他比中央党多数人更支持与社民党合作。
 
 - @kaas: 中央党选举路德维希·卡斯为党主席。
 - @stegerwald: 中央党选举亚当·施特格瓦尔德为党主席。
@@ -23,7 +23,7 @@ on-arrival: z_party_leader = "Kaas"; z_relation -= 5
 choose-if: not (((z_relation < 35 and pro_republic < 55) or (in_right_coalition and not spd_prussia)) and (in_right_coalition or not spd_prussia))
 unavailable-subtitle: 施特格瓦尔德已掌握多数。
 
-Ludwig Kaas has been selected as the chairman of the Center Party. He seems to represent a rightward turn from Marx, and will preside over a Center Party less inclined to compromise with the left.
+路德维希·卡斯被选为中央党主席。他似乎代表着相对马克思的右转,并将主持一个不那么愿意与左翼妥协的中央党。
 
 @joos
 unavailable-subtitle: 我们的关系还不够好。
@@ -31,7 +31,7 @@ subtitle: 约斯很可能比卡斯对我们更友好。
 choose-if: z_relation >= 70
 on-arrival: z_party_leader = "Joos"; catholics_spd += 5; workers_z += 3
 
-With our grassroots connections, we have been able to influence the Center delegates to support Joseph Joos as the new Center chairman. He has long been a friend of the SPD, and will be more inclined to collaborate with us compared to Kaas. He also increases the appeal of the Center Party to the working class.
+凭借我们的基层关系,我们成功影响了中央党的代表,让他们支持约瑟夫·约斯出任新的中央党主席。他长期以来是社民党的朋友,相比卡斯更愿意与我们合作。他也提升了中央党对工人阶级的吸引力。
 
 @joos_campaign
 choose-if: z_relation >= 62 and resources >= 1 
@@ -40,7 +40,7 @@ unavailable-subtitle: [? if z_relation < 62 : 我们的关系还不够好。 ?] 
 subtitle: -1 资源。约斯很可能比卡斯对我们更友好。
 on-arrival: resources -= 1; z_party_leader = "Joos"; catholics_spd += 5; workers_z += 3
 
-With our grassroots connections as well as a professional campaign, we have been able to influence the Center delegates to support Joseph Joos as the new Center chairman. He has long been a friend of the SPD, and will be more inclined to collaborate with us compared to Kaas. He also increases the appeal of the Center Party to the working class.
+凭借我们的基层组织以及一场专业的竞选,我们成功影响了中央党的代表,让他们支持约瑟夫·约斯出任新的中央党主席。他长期以来是社民党的朋友,相比卡斯更愿意与我们合作。他也提升了中央党对工人阶级的吸引力。
 
 @stegerwald
 view-if: z_relation < 45 or pro_republic < 50 or in_right_coalition or not spd_prussia
@@ -48,6 +48,6 @@ choose-if: ((z_relation < 35 and pro_republic < 55) or (in_right_coalition and n
 unavailable-subtitle: 施特格瓦尔德缺乏取胜所需的影响力。
 on-arrival: z_party_leader = "Stegerwald"; z_relation -= 10; nationalism += 4; socialism -= 3; left_strength += 5; catholics_z -= 10; catholics -= 5; stegerwald_timer = 1
 
-Adam Stegerwald has been elected as chairman of the Center Party. He represents a significant rightward turn from Marx, and will preside over a Center Party inclined to work with the right-wing over us. 
+亚当·施特格瓦尔德当选为中央党主席。他代表着相对马克思的明显右转,并将主持一个倾向于与右翼而非我们合作的中央党。
 
-Importantly, he also supports "leaving the tower", that is, transforming the Center into a party for all Christians, beyond just Catholics. This has caused an upset amongst the party's Catholic base, and significantly hurt the party.
+重要的是,他还支持「走出钟楼」,也就是把中央党改造成一个面向所有基督徒、而不只是天主教徒的政党。这在党的天主教基本盘中引起震动,并严重损害了该党。

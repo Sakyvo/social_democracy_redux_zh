@@ -24,14 +24,14 @@ Q.old_economy = Q.economic_health;
 
 = 资本外逃
 
-After months of aggressive attempts by the bourgeoisie to reclaim state power and put an end to the revolution, most seem to have now recognized the futility of their efforts, and our victory. What is left of private industry is abandoned en masse, as industrialists pack their bags and set out for better horizons, lobbying governments wherever they go against our project, telling tales of horrifying Bolshevik barbarism, of looting and pillaging. What is left of the abandoned industries, we have no issues in taking over the operation of. 
+在资产阶级数月来夺回国家权力、终结革命的猛烈尝试之后,他们中的多数似乎已认识到自己的徒劳,以及我们的胜利。残余的私营工业被成批抛弃:工业家们收拾行装,前往更美好的天地,所到之处游说各国政府反对我们的事业,讲述着布尔什维克可怕野蛮、劫掠抢劫的传闻。至于那些被抛弃的产业,我们接管其经营毫无问题。
 
 - @victory: 我们赢了。
 
 @victory
 subtitle: 现在我们必须向德国与世界证明这一点。
 
-With the working class in control of the state and now economy, we have won. Our decisive confrontation with the bourgeoisie has yielded as victory a nation in the hands of the proletariat. Now, however, remains a task before us. We must prove our victory.
+随着工人阶级掌控了国家、如今又掌控了经济,我们赢了。我们与资产阶级的决定性较量,以一个国家落入无产阶级之手作为胜利果实。然而,我们面前还有一项任务:我们必须证明自己的胜利。
 
 - @five_year_plan: 我们将着手实施一项全面的经济计划,利用我们对经济的掌控来推进。
 - @nothing: 这个我们以后再说吧。
@@ -41,7 +41,7 @@ choose-if: budget > 0
 subtitle: [? if budget <= 5 : -[+ budget +] 财政预算。 ?][? if budget > 5 : -5 财政预算。 ?]
 on-arrival: invested = budget if budget <= 5; invested = 5 if budget > 5; budget = 0 if budget <= 5; budget -= 5 if budget > 5; economic_growth += 0.8*invested; unemployed -= 1.4*invested; inflation += 1*invested; inflation += 0.5*invested if inflation < 3; economic_growth += 0.4 if invested >= 3; economic_growth += 0.2 if invested == 5; unemployed -= 0.6 if invested >= 3; unemployed -= 1 if invested == 5; five_year_plan = 1
 
-We have begun, using our control over the economy, to implement a comprehensive economic plan, with which we hope to reduce unemployment to neglible margins and restore the economy. In a sense, this plan will be the trial of socialism; it is our task to demonstrate the superiority of this economic system. 
+我们已开始利用对经济的掌控,推行一份全面的经济计划,希望以此把失业降至微不足道的水平并恢复经济。在某种意义上,这份计划将成为社会主义的试炼;我们的任务就是证明这种经济制度的优越性。
 
 @nothing
 on-arrival: unemployed_spd += 10*(1-dissent); bourgeoisie_spd += 10*(1-dissent); center_dissent -= 5; reformist_dissent -= 5; labor_dissent -= 5; neorevisionist_dissent -= 5

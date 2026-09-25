@@ -10,13 +10,13 @@ max-visits: 1
 
 = 奥地利关税同盟
 
-[? if spd_in_government: The [+ foreign_minister_party +] foreign minister has a proposal for a customs union with Austria. We can either accept or reject this agreement. ?]
-[? if not spd_in_government: The government of Chancellor [+ chancellor +] has a proposal for a customs union with Austria. Most likely, this will happen whatever we decide. ?]
+[? if spd_in_government: [+ foreign_minister_party +] 的外交部长提出了与奥地利结成关税同盟的提议。我们可以接受或拒绝这一协议。 ?]
+[? if not spd_in_government: [+ chancellor +] 总理的政府提出了与奥地利结成关税同盟的提议。无论我们怎么决定,这多半都会成真。 ?]
 
 
-The nationalist right has long yearned for closer ties with Austria, with the eventual goal of the merger of the two German-speaking countries. A customs union with Austria is the first step towards this goal. Additionally, many believe that a union with Austria would improve our current economic circumstances.
+民族主义右翼早已渴望与奥地利建立更紧密的关系,最终目标是让两个德语国家合并。与奥地利的关税同盟便是迈向这一目标的第一步。此外,许多人相信与奥地利结盟能改善我们当前的经济状况。
 
-However, the Allies, especially France, are likely to object. This agreement would break the terms of the Versailles Treaty, and could lead to economic sanctions, further hurting our economy.
+然而,协约国 —— 尤其是法国 —— 很可能会反对。这一协议将违反《凡尔赛条约》的条款,并可能导致经济制裁,进一步损害我们的经济。
 
 - @let_it_happen: 随它去吧。
 - @end_coalition: 阻止这一安排!
@@ -25,13 +25,13 @@ However, the Allies, especially France, are likely to object. This agreement wou
 @let_it_happen
 on-arrival: banking_crisis_timer = 2; customs_union = 1; west_relation -= 2; east_relation -= 2
 
-The customs union has been formed. Immediately, France and other neighboring countries lodge their protests. The longer-term response is yet to be seen.
+关税同盟已结成。法国及其他邻国立刻提出抗议。更长远的反应尚待观察。
 
 @end_coalition
 view-if: spd_in_government = 1
 on-arrival: coalition_dissent += 1; dvp_relation -= 5; z_relation -= 4; z_relation -= 3 if chancellor_party == "Z"; dvp_relation -= 3 if chancellor_party == "Z"
 
-We attempt to impress upon our coalition partners the gravity of the potential Allied response. The proposal is dead, although the DVP and Center are not pleased.
+我们设法让执政伙伴认识到协约国潜在反应的严重性。该提议就此夭折,尽管人民党与中央党并不满意。
 
 
 @end_toleration
@@ -43,11 +43,11 @@ go-to: end_toleration_success if spd_r + kpd_r + ddp_r >= 50; end_toleration_fai
 on-arrival: time_to_election = 3; spd_in_government = 0; in_grand_coalition = 0; spd_toleration = 0;
 call: set_next_election_time
 
-With the support of the KPD and [+ ddp_name +], we have successfully stopped the formation of the customs union. This results in the fall of the [+ chancellor +] government.
+在共产党与 [+ ddp_name +] 的支持下,我们成功阻止了关税同盟的结成。这导致 [+ chancellor +] 政府的垮台。
 
 新的选举已定于 [+ next_election_month : month +] [+ next_election_year +]。
 
 @end_toleration_fail
 on-arrival: banking_crisis_timer = 2; customs_union = 1; west_relation -= 2; east_relation -= 2
 
-Unfortunately, the far-right parties united with the government to outvote us. The customs union will be formed.
+遗憾的是,极右翼政党与政府联手,在表决中压过了我们。关税同盟将被结成。

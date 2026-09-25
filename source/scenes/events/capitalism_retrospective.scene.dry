@@ -7,9 +7,9 @@ view-if: capital_strike_timer < 1 and capital_flight
 
 = 资本的悼词
 
-It has been a year now since we proclaimed the victory of socialism and the defeat of capital following their withdrawal from Germany. Since, we have been working tirelessly to prove our thesis, that this victory be a victory for all workers, and a victory to have been worth struggling and fighting for.
+自从我们在资本撤离德国之后宣告社会主义的胜利与资本的失败以来,已经过去一年了。此后,我们一直不倦地工作,以证明我们的论断:这场胜利是全体工人的胜利,是一场值得为之奋斗与战斗的胜利。
 
-Now, a year later, Germans across the nation look back and ponder how their lives have changed under socialism, if they are truly better than before the revolution. 
+如今一年过去,全国各地的德国人回望过去,思索在社会主义下他们的生活究竟改变了多少,是否真的比革命前更好。
 
 ## todo: split by class depending on how you treated them? petty bourgeoisie will look back with a different perspective than a factory worker
 
@@ -20,11 +20,11 @@ Now, a year later, Germans across the nation look back and ponder how their live
 view-if: economic_health > old_economy
 on-arrival: socialism += 5; socialism += (spd_votes+kpd_votes+sapd_votes)/10; catholics *= 0.75; new_middle *= 0.9; old_middle *= 0.9; rural *= 0.9; new_middle_spd += 5*(1-dissent); new_middle_spd += 5*(1-dissent) if new_middle_conscious
 
-Thankfully, we have proven the merits of socialism, and avoided devastating damage to the economy from the bourgeoisie's attempts to inflict it. Most remnants of the old order grow compliant under this fact.
+所幸我们证明了社会主义的优越性,并避免了资产阶级企图造成的毁灭性经济破坏。旧秩序的残存者在这样的事实面前大多变得顺从。
 
 @burgerstalgia
 view-if: economic_health <= old_economy
 on-arrival: socialism -= 9; workers_zca += 3; new_middle_zca += 5; rural_zca += 5; old_middle_zca += 5; workers_spd -= 5; burgerstalgia = 1
 
-Unfortunately, the general consensus amongst Germans seems to be that socialism has not truly been to their benefit. Support for the socialist project falters as support for the bourgeois ideologies remains steadfast and strong, even without the bourgeoisie as a class to back them directly.
+遗憾的是,德国人普遍的共识似乎是:社会主义并未真正给他们带来好处。对社会主义事业的支持动摇,而对资产阶级意识形态的支持却依旧坚定强大 —— 即便已没有作为一个阶级的资产阶级直接为它们撑腰。
 

@@ -59,7 +59,7 @@ tags: event
 
 = 资本罢工
 
-Our policies have greatly angered the capitalists. Investment has fallen, and factories are idling, preventing the workers from fulfilling their jobs. Meanwhile, the bourgeois press is a constant chorus of venomous invective directed at us and our economic policies.
+我们的政策极大地激怒了资本家。投资下降,工厂停摆,使工人无法履行自己的工作。与此同时,资产阶级报刊不停地对我们和我们的经济政策发起恶毒的谩骂合唱。
 
 - @revolutionary_approach: 阶级斗争升级。
 - @right_approach: 这显然是我们治理的失败。
@@ -71,7 +71,7 @@ subtitle: 社民党的马克思主义战略一贯是:通过社会主义改革挑
 on-arrival: reformist_dissent += 10; left_strength += 10; left_dissent -= 10; class_war += 1; class_war += 1 if left_plan_adopted
 go-to: address
 
-The revolutionaries of the party put forward their proposed approach to the crisis. They say that this is a success of our strategies, so long as we take it to the next level and wage the class war from below, just as the businesses now do so from above by seeking to bleed the economy dry.
+党内的革命派提出了他们应对危机的方案。他们说,这是我们战略的成功 —— 只要我们把它推进到下一阶段,从下方展开阶级斗争,正如企业如今从上方试图把经济抽干一样。
 
 这一主张尚未被采纳。还需要更多说服工作。
 
@@ -81,14 +81,14 @@ subtitle: 我们的最终目标是改善工人的生活境况。这只能通过�
 on-arrival: left_dissent += 10; reformist_strength += 10; reformist_dissent -= 10; reconcile_business += 1; reconcile_business += 1 if wtb_adopted or weimar_plan_adopted
 go-to: address
 
-The rightists of the party put forward their proposed approach to the crisis. They say that this is a failure of our strategies, a result of us failing to account for the business community's opinions in our haste to deliver for the workers, and that the transition to socialism must be a gradual process which at all steps benefits the worker, without economic crises.
+党内的右派提出了他们应对危机的方案。他们说,这是我们战略的失败 —— 我们急于为工人谋利,却未顾及工商界的意见;向社会主义的过渡必须是一个渐进的进程,每一步都让工人受益,而不伴随经济危机。
 
 这一主张尚未被采纳。还需要更多说服工作。
 
 @address
 subtitle: 我们必须就眼下的危机本身加以应对。
 
-For the time being, we can make no grander statements as to the character of this crisis. We must focus on the immediate crisis. 
+眼下,我们无法就这场危机的性质作出更宏大的论断。我们必须专注于眼前的危机。
 
 - @seize
 - @capital_controls
@@ -102,7 +102,7 @@ unavailable-subtitle: [? if left_strength <= reformist_strength + neorevisionist
 choose-if: class_war >= 1 and left_strength > reformist_strength + neorevisionist_strength and (judicial_reform >= 3 or rb_militancy >= 0.25) and works_councils >= 1 and ((left_coalition+sapd_r >= 50) or (rb_force+rfb_force >= 50))
 on-arrival: class_war += 1; bourgeois_power -= 0.07; nationalization_progress += 1; coup_progress += 6; unemployed -= 2; unemployed -= 1 if works_councils >= 3; works_program += 1; workers_spd += 10*(1-dissent); unemployed_spd += 10*(1-dissent); coalition_dissent += 2; dvp_relation -= 4; workers_nsdap -= 8*(1-dissent); unemployed_nsdap -= 8*(1-dissent); left_strength += 15; reformist_dissent += 10; left_dissent -= 10; factory_takeovers += 1; economic_growth += 2; socialism += 3; capital_occupations = 1
 
-If the capitalists are going to attack us, then we must hit them back. We have empowered the workers to seize and take full control of the factories that the capitalists have idled. The fascists, of course, call us thieves and looters.
+既然资本家要向我们进攻,我们就必须回击。我们已赋权工人夺取并完全掌控资本家闲置的工厂。法西斯分子当然把我们称作盗贼和掳掠者。
 
 
 @capital_controls
@@ -111,7 +111,7 @@ choose-if: judicial_reform >= 2 and (left_coalition+sapd_r >= 50) or (popular_fr
 unavailable-subtitle: [? if judicial_reform < 2 : 司法系统绝不会允许此事。 ?][? if judicial_reform >= 2 : 国会反对。 ?]
 on-arrival: unemployed -= 1.5; bourgeois_power -= 0.03; workers_spd += 6*(1-dissent); unemployed_spd += 6*(1-dissent); economic_growth += 2; capital_controls = 1
 
-Capital controls might blunt some of the worst economic components of the capital strike.
+资本管制或许能削弱资本罢工中最严重的经济冲击。
 
 
 
@@ -122,7 +122,7 @@ choose-if: (radio >= 2 or commercialized_media >= 3) and resources >= 1
 unavailable-subtitle: [? if radio < 2 and commercialized_media < 3 : 我们的媒体建设得还不够。 ?] [? if resources < 1: 我们没有足够的资源。 ?]
 on-arrival: workers_spd += 7*(1-dissent); new_middle_spd += 6*(1-dissent); unemployed_spd += 6*(1-dissent); pro_republic += 5*(1-dissent); resources -= 1; socialism += 5; capital_propaganda = 1
 
-We launch a counter-propaganda campaign to blame the economic crisis on the capitalists, using all of our media channels to do so. Because of our existing media framework, this is moderately successful in directing popular criticisms towards the capitalists and away from us.
+我们发动了一场反宣传攻势,动用我们所有的媒体渠道,把经济危机归咎于资本家。由于我们既有的媒体框架,这在把民众的批评引向资本家、从我们身上引开方面取得了一定成效。
 
 
 @business
@@ -131,9 +131,9 @@ choose-if: reformist_strength > left_strength+center_strength and dvp_relation >
 unavailable-subtitle: [? if reformist_strength < left_strength+center_strength : 党内多数不支持这一温和举措。 ?][? if dvp_relation < 35 : 我们与企业界没有联系。 ?][? if reconcile_business < 1 : 这与我们应对危机的策略相悖。 ?]
 on-arrival: reconcile_business += 1; economic_growth += 0.3; unemployed -= 0.2; inflation += 0.2; bourgeois_power += 0.02; socialism -= (5*bourgeois_power); coup_progress -= 1; coalition_dissent -= 1; dvp_relation += 3; reformist_strength += 15; left_dissent += 10; reformist_dissent -= 10; bourgeoisie_dnvp *= 0.9; bourgeoisie_nsdap *= 0.9; bourgeoisie_dvp += 5; capital_reconcile = 1
 
-We meet with several leaders from the business community to try and assuage their concerns. Though little progress is made, we think we have at least established contacts through which we might continue in the future.
+我们与工商界的几位领袖会面,设法消解他们的顾虑。尽管进展甚微,我们认为至少建立了日后可以继续的联系渠道。
 
 @nothing
 title: 我们无能为力。
 
-There is nothing we can do that is within constitutional and legal bounds.
+在宪法与法律的界限之内,我们无能为力。

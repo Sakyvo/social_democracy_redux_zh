@@ -7,9 +7,9 @@ max-visits: 1
 
 = 反法西斯统一战线
 
-As the bourgeois voters and industrialists flock to the Nazis following the recent instability and the republic, with Brüning and the Center Party even considering turning to the Nazis for support before negotiations fell apart, the KPD, with whom we have made mends with, proposes the formation of a "united front". [? if iron_front_formed : This would include the already existing Iron Front, but expanded to include KPD-affiliate organizations as well as a joint plan of action. ?]
+在近来的动荡与共和国的乱局之下,资产阶级选民与工业家纷纷投靠纳粹党 —— 布吕宁与中央党甚至在谈判破裂前还考虑过转向纳粹寻求支持;与我们已重修旧好的共产党,于是提议组建一个「统一战线」。[? if iron_front_formed : 这将包含已有的铁前线,但扩大为纳入共产党的附属组织,并制定一份共同行动纲领。 ?]
 
-What remains of the party's right-wing is highly opposed, but doing this would significantly bolster the strength of our forces on the left in case a confrontation with the fascists becomes inevitable. It may also instigate the reactionaries into preempting us, however.
+我党右翼的残部对此强烈反对,但此举将大大增强我们在左翼的力量,以备与法西斯分子的对抗变得不可避免。不过,它也可能刺激反动派抢先对我们下手。
 
 - @form_uf: 在社民党与共产党之间组建统一战线!
 - @literally_why_would_anyone_whos_at_this_point_in_the_game_choose_this_like_what: 我们只能拒绝这一提议。
@@ -18,7 +18,7 @@ What remains of the party's right-wing is highly opposed, but doing this would s
 on-arrival: antifa_formed = 1; kpd_relation += 10; rb_militancy += 0.03; rfb_militancy += 0.04; coup_progress += communist_coalition; workers_kpd += 4; workers_spd += 6*(1-dissent); unemployed_kpd += 5; unemployed_spd += 5*(1-dissent); new_middle_spd += 5*(1-dissent) if new_middle_conscious; workers_nsdap -= 2; new_middle_nsdap -= 2; unemployed_nsdap -= 2
 go-to: uf_menu
 
-We have formed a United Front, composed of the KPD and SPD's various affiliate organizations through which to fight the class war against the increasingly fascistic bourgeoisie.
+我们已组建统一战线,由共产党与社民党的各类附属组织构成,以此对日益法西斯化的资产阶级展开阶级斗争。
 
 @uf_menu
 
@@ -35,7 +35,7 @@ subtitle: -1 资源
 on-arrival: uf_strength += 2; workers_spd += 3*(1-dissent); rb_strength += 100*(1-dissent); rfb_strength += 20; unemployed_spd += 2*(1-dissent); unemployed_kpd += 1; new_middle_spd += 1*(1-dissent); workers_nsdap -= 3*(1-dissent); unemployed_nsdap -= 2*(1-dissent); new_middle_nsdap -= 2*(1-dissent);
 go-to: uf_menu
 
-We launch an ambitious campaign through the new organization, targeting the working class and attacking the bourgeois class. The Reichsbanner swells in membership, as does the RFB.
+我们通过这个新组织发动了一场雄心勃勃的竞选,以工人阶级为目标,并对资产阶级发起攻击。国旗团的成员激增,红色前线战士同盟亦然。
 
 @rally_left
 max-visits: 1
@@ -43,7 +43,7 @@ view-if: nationalization_adopted
 on-arrival: uf_strength += 2; workers_spd += 3*(1-dissent); workers_kpd += 2; unemployed_kpd += 3; unemployed_spd += 2*(1-dissent); workers_nsdap -= 3*(1-dissent); unemployed_nsdap -= 2*(1-dissent); old_middle_nsdap += 3; rural_nsdap += 2; new_middle_nsdap += 2 if not new_middle_conscious
 go-to: uf_menu
 
-We rally behind the Left Plan together with the KPD.
+我们与共产党一道支持左翼计划。
 
 @rally_iron_front
 max-visits: 1
@@ -51,7 +51,7 @@ view-if: iron_front_formed
 on-arrival: uf_strength += 2; workers_spd += 3*(1-dissent); new_middle_spd += 2*(1-dissent); unemployed_spd += 2*(1-dissent); new_middle_nsdap -= 2*(1-dissent); neorevisionist_strength += 5; neorevisionist_dissent -= 5; rb_strength += 50*(1-dissent);
 go-to: uf_menu
 
-We rally the Iron Front behind the United Front, increasing the SPD's strength compared to the KPD's as well as overall further bolstering the campaign.
+我们让铁前线站到统一战线一边,从而相对增强了社民党对共产党的优势,并进一步壮大了整场运动。
 
 @rally_afa
 max-visits: 1
@@ -59,15 +59,15 @@ view-if: new_middle_conscious
 on-arrival: uf_strength += 2; new_middle_spd += 5*(1-dissent); new_middle_nsdap -= 3*(1-dissent); workers_spd -= 1; workers_kpd += 1; unemployed_spd -= 2; unemployed_kpd += 2;
 go-to: uf_menu
 
-We rally the AfA-bund behind the United Front, taking advantage of the recent inclination of the new middle class to align with the rest of the proletariat to put an end to Nazi gains in the demographic. As a consequence, however, we have allowed the KPD to grow further in traditional working class groups.
+我们让自由职员总联合会站到统一战线一边,利用新中间阶层近来倾向与其他无产阶级结盟的势头,终结纳粹在这一群体中的得势。不过其结果是,我们让共产党在传统工人阶级群体中进一步壮大。
 
 @done
 on-arrival: old_middle_nsdap += uf_strength; rural_nsdap += uf_strength/2; new_middle_nsdap += uf_strength/4 if not new_middle_conscious;
 
-That is enough to get the United Front off of its feet and ready to fight fascism. United through this new organization, we shall stand strong. The Nazis grow further amongst the bourgeoisie, who are frightened by our unity, but it is in vain.
+这就足以让统一战线站住脚,并准备好与法西斯主义斗争。通过这个新组织联合起来,我们将坚强屹立。纳粹党在被我们的团结吓到的资产阶级中进一步扩张,但这是徒劳。
 
 @literally_why_would_anyone_whos_at_this_point_in_the_game_choose_this_like_what
 subtitle: [? if fun_value >= 61 and fun_value <= 67 : 我知道你不会选这个的,老兄。 ?]
 on-arrival: communist_coalition -= 1; kpd_relation -= 5; left_dissent += 15; reformist_strength += 10; reformist_dissent -= 20; sa_militancy += 0.02
 
-We politely turn the offer down, so as to retain the party's organizational independence. The dominant Left is perplexed.
+我们礼貌地拒绝了这一提议,以保持本党在组织上的独立。占主导地位的左翼对此感到困惑。

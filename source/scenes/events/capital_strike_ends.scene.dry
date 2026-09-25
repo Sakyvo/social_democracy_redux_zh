@@ -10,6 +10,6 @@ dendryUI.dendryEngine.state.visits.capital_strike = 0;
 
 = 资本回归
 
-The capital strike has come to an end, and Germany's economy begun to recover from the incident. [? if class_war : The revolutionary window of opportunity seems to have passed. ?]
+资本罢工已经结束,德国经济开始从这一事件中复苏。[? if class_war : 革命的机遇之窗似乎已经过去。 ?]
 
 # todo: make it so they can fire again. until then, disabled

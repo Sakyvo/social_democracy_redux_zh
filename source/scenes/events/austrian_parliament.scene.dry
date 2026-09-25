@@ -11,9 +11,9 @@ tags: event
 
 = 奥地利议会被中止
 
-Due to a controversial proposal regarding a railroad strike in the Austrian National Council, all three presidents of the National Council resigned, leaving it without any presiding officers. This is a constitutional crisis. Austrian chancellor Engelbert Dollfuß has taken advantage of this crisis by suspending the parliament and ruling by emergency decree, forming an "Austrofascist" government. Dollfuß consolidates his power by persecuting his political opponents, especially our fellow Social Democrats in the SDAPÖ (Social Democratic Worker's Party of Austria) [? if nazi_migration : as well as the Austrian Nazis under Hitler ?].
+由于奥地利国民议会中一项关于铁路罢工的争议提案,国民议会的三位议长全部辞职,议会因此失去任何主持者。这是一场宪政危机。奥地利总理恩格尔伯特·陶尔斐斯利用这场危机中止议会,以紧急法令施政,组建了一个「奥地利法西斯」政府。陶尔斐斯通过迫害政治对手来巩固权力,尤其是我们在奥地利社会民主党(奥地利社会民主工人党)中的社会民主党同志[? if nazi_migration : ,以及希特勒麾下的奥地利纳粹 ?]。
 
-Is there anything we could do?
+我们能做些什么吗?
 
 # - use EU to sanction Austria (will prevent civil war and restore democracy)
 # - apply diplomatic pressure to Austria (without EU)
@@ -29,27 +29,27 @@ Is there anything we could do?
 view-if: eu = 1
 on-arrival: sdapo_strength += 3; sdapo_strength += 1 if customs_union; eu_austria = 1
 
-The European Union is a largely untested body, and from the beginning contained members that are at best quasi-democratic. Most of its members are more concerned by power politics than democratic values. However, as its founder, Germany holds a special influence in the EU, and we manage to persuade the other members to join in the pressure against Austrofascism.
+欧洲联盟基本上还是一个未经考验的机构,成立之初就包含了一些充其量只能算准民主的成员。其大多数成员更关心强权政治而非民主价值。不过,作为其创立者,德国在欧盟中拥有特殊的影响力;我们成功说服其他成员加入对奥地利法西斯主义的施压。
 
-The Dollfuß regime does not give in, but it is weakened and isolated.
+陶尔斐斯政权并未屈服,但它已遭削弱、陷入孤立。
 
 @diplomatic_pressure
 view-if: foreign_minister_party = "SPD"
 on-arrival: sdapo_strength += 1; sdapo_strength += 2 if customs_union
 
-We still have much economic influence in Austria, and the threat of sanctions.
+我们在奥地利仍有很大的经济影响力,还有制裁的威胁。
 
-The Dollfuß regime does not give in, but it is somewhat weakened. 
+陶尔斐斯政权并未屈服,但已有所削弱。
 
 @fund_schutzbund
 on-arrival: resources -= 1; sdapo_strength += 1; sdapo_strength += 1 if customs_union
 subtitle: -1 资源
 choose-if: resources >= 1
 
-It is somewhat of a breach of diplomatic protocol for the SPD to so directly interfere in another country's affairs, supporting the Austrian social democrats.
+社民党如此直接地干涉他国内政、支持奥地利的社会民主党人,这多少有点违背外交惯例。
 
-The Dollfuß regime does not give in, but its opponents have an added advantage. That may not be enough when dealing with the total force of the fascist state.
+陶尔斐斯政权并未屈服,但其对手多了一项优势。面对法西斯国家的全部力量时,这或许还不够。
 
 @nothing
 
-Unfortunately, there is nothing we can do for our Austrian comrades.
+遗憾的是,我们对奥地利的同志无能为力。
