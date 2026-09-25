@@ -22,7 +22,7 @@ d3.linegraph = function(noTicks, noDots, parties, partyColors, partyNames, dataM
         partyColors = {'spd': '#E3000F', 'sapd': '#FF7F50', 'kpd': '#8B0000', 'ddp': '#DCCA4A', 'z': '#000', 'dvp': '#D5AC27', 'dnvp': '#3f7bc1', 'nsdap': '#954B00', 'other': '#a0a0a0'};
     }
     if (!partyNames) {
-        partyNames = {'spd': 'SPD', 'sapd': 'SAPD', 'kpd': 'KPD', 'ddp': 'DDP', 'z': 'Z + BVP', 'dvp': 'DVP', 'dnvp': 'DNVP', 'nsdap': 'NSDAP', 'other': 'Others'};
+        partyNames = {'spd': '社民党', 'sapd': '社会主义工人党', 'kpd': '共产党', 'ddp': '民主党', 'z': '中央党 + 巴伐利亚人民党', 'dvp': '人民党', 'dnvp': '国家人民党', 'nsdap': '纳粹党', 'other': '其他'};
     }
     if (!additionalMonths) {
         additionalMonths = 10;
