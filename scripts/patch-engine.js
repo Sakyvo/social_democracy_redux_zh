@@ -66,7 +66,10 @@ ed('lib/ui/browser.js', [
 ed('lib/engine.js', [
   ['c.unavailableSubtitle || "No cards available from deck."',
    'c.unavailableSubtitle || "牌库中已无可用卡牌。"'],
-  ["title:'Continue...'", "title:'继续……'"],
+  ["title:'Continue...'", "title:'继续......'"],
+  // 基类默认实现(Node/CLI 路径)也一并汉化;浏览器路径由 browser.js 覆写
+  ["this.displayContent(simpleContent('Game Over'));",
+   "this.displayContent(simpleContent('游戏结束'));"],
   ['return "almost impossible";', 'return "几乎不可能";'],
   ['return "high-risk";', 'return "高风险";'],
   ['return "tough";', 'return "艰难";'],
