@@ -19,9 +19,9 @@ It seems that the man who would have destroyed German democracy is gone, after a
 - @sylvan_sprite
 
 @sylvan_sprite
-title: <span style="color:rgb(131, 210, 255);font-family:Palatino,'Palatino Linotype',serif;font-weight:700;letter-spacing:0.5px;">Release a Sylvan sprite!</span>
+title: <span style="color:rgb(131, 210, 255);font-family:Palatino,'Palatino Linotype',serif;font-weight:700;letter-spacing:0.5px;">释放一个林间精灵!</span>
 view-if: achievement_megatome and sworcery and not achievement_antifa_sylvan
-subtitle: Miracles! Miracles! Miracles!
+subtitle: 奇迹!奇迹!奇迹!
 achievement: antifa_sylvan
 max-visits: 1
 

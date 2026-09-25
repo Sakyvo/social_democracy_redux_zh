@@ -1,4 +1,4 @@
-title: The Death of Hindenburg
+title: 兴登堡之死
 subtitle: The Great War hero and one-time president has died...
 new-page: true
 view-if: year = 1934 and month >= 7 and president != "Hindenburg"

@@ -1,4 +1,4 @@
-title: Council Elections
+title: 委员会选举
 new-page: true
 tags: event
 priority: -1
@@ -20,7 +20,7 @@ view-if: in_emergency_government == 1 and president == "Braun" and not president
 
 Since we are currently ruling as part of an emergency government, we may use quasi-constitutional trickery to significantly delay these elections, and continue governing via Article 48. This is likely to be extremely unpopular both with our base and with the other parties. However, this may be necessary to prevent the extremists from gaining power.
 
-- @cancel_elections_2: Yes, do it.
+- @cancel_elections_2: 是,就这么办。
 - @election_algorithm: No, let's hold the elections.
 
 @cancel_elections_2

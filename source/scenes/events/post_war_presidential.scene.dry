@@ -1,4 +1,4 @@
-title: Presidential Election
+title: 总统选举
 subtitle: Finally, presidential elections can be held again...
 view-if: presidential_timer <= 0 and victory_republic and not presidency_abolished and presidency_vacated
 frequency: 1000
@@ -125,7 +125,7 @@ on-arrival: spd_support_thalmann = 1; reformist_dissent += 15; center_dissent +=
 - @final_election: 最终结果……
 
 @support_munzenberg
-subtitle: Supporting Münzenberg is unpopular among the reformists, but less so than Thälmann would've been.
+subtitle: 支持明岑贝格在改良派中不受欢迎,但总好过支持台尔曼。
 view-if: kpd_party_leader == "Conciliators"
 choose-if: kpd_relation >= 40 and reformist_strength < left_strength
 unavailable-subtitle: [? if kpd_relation < 40 : 我们与共产党的关系还不够好,他们甚至不愿接受我们的支持。 ?] [? if reformist_strength >= left_strength : 改良派能够劝住全党,不支持这一安排。 ?]
@@ -170,7 +170,7 @@ unavailable-subtitle: 中央党不愿被说服。
 
 - @pay_z: Promise to front the resources needed for a joint campaign.
 - @appeal_hergt: Appeal to the threat of Oskar Hegt's election.
-- @spd_presidential: Find another party to support us.
+- @spd_presidential: 另找一个政党来支持我们。
 
 @pay_z
 choose-if: resources >= 2
@@ -199,7 +199,7 @@ unavailable-subtitle: 共产党不愿被说服。
 - @use_relations: 动用我们的关系。
 - @pay_kpd: Promise to front the resources needed for a joint campaign.
 - @appeal_hergt_2: Appeal to the threat of Oskar Hegt's election.
-- @spd_presidential: Find another party to support us.
+- @spd_presidential: 另找一个政党来支持我们。
 
 @use_relations
 choose-if: kpd_relation >= 60 or (kpd_relation >= 50 and kpd_party_leader == "Conciliators")
@@ -541,13 +541,13 @@ go-to: braun_wins if braun_majority == 1; schumacher_wins if schumacher_majority
 go-to: luther_back_hergt if hergt_campaign and luther_campaign and hergt_votes >= (luther_votes*2) and (hergt_votes >= adenauer_votes and hergt_votes >= wirth_votes) and (braun_plurality or thalmann_plurality or schumacher_plurality or munzenberg_plurality); luther_back_adenauer if luther_campaign and adenauer_campaign and adenauer_votes >= luther_votes and (adenauer_votes >= hergt_votes) and (braun_plurality or thalmann_plurality or schumacher_plurality or munzenberg_plurality); hergt_drop_out if hergt_campaign and (braun_plurality or thalmann_plurality or munzenberg_plurality or schumacher_plurality) and (not luther_campaign or (adenauer_votes >= luther_votes and (adenauer_votes >= hergt_votes))); luther_back_wirth if luther_campaign and wirth_campaign and (thalmann_plurality or munzenberg_plurality and hergt_votes < wirth_votes); gessler_back_wirth if wirth_campaign and gessler_campaign and (thalmann_plurality or munzenberg_plurality or (hergt_plurality and dvp_relation >= 40)); munzenberg_back_wirth if wirth_campaign and munzenberg_campaign and (kpd_relation >= 45 and hergt_plurality) or (kpd_relation >= 65 and luther_plurality); gessler_back_adenauer if gessler_campaign and adenauer_votes >= gessler_votes and not adenauer_plurality and not spd_support_gessler; adenauer_back_gessler if adenauer_campaign and gessler_campaign and gessler_votes >= adenauer_votes and not gessler_plurality and not spd_support_adenauer
 set-jump: no_majority_round1
 
-- @round2_convince_z: Convince the Center to switch their support to us.
-- @round2_convince_kpd: Convince the KPD to switch their support to us. 
+- @round2_convince_z: 说服中央党把支持转给我们。
+- @round2_convince_kpd: 说服共产党把支持转给我们。 
 - @round2_adenauer: Switch our support to Adenauer.
 - @round2_gessler: Switch our support to Gessler.
 - @round2_thalmann: Switch our support to Thälmann.
 - @round2_munzenberg: Switch our support to Münzenberg.
-- @round2_vote: Let the second round voting begin.
+- @round2_vote: 开始第二轮投票吧。
 
 @luther_back_hergt
 on-arrival: dvp_support_hergt = 1; luther_campaign = 0; hergt_plurality = 1 if luther_votes + hergt_votes >= plurality_votes
@@ -678,7 +678,7 @@ on-arrival: braun_campaign = 0; schumacher_campaign = 0; motivate_gessler = 1 if
 
 我们改而表态支持中央党的康拉德·阿登纳。 [? if motivate_gessler : 奥托·格斯勒随之跟进,退出竞选并表态支持康拉德·阿登纳。 ?]
 
-- @round2_vote: Let the second round of voting begin...
+- @round2_vote: 开始第二轮投票……
 
 @round2_gessler
 view-if: not spd_support_gessler and gessler_campaign
@@ -686,7 +686,7 @@ on-arrival: braun_campaign = 0; schumacher_campaign = 0; motivate_ade = 1 if spd
 
 我们改而表态支持奥托·格斯勒。 [? if motivate_ade : 康拉德·阿登纳随之跟进,退出竞选并表态支持奥托·格斯勒。 ?]
 
-- @round2_vote: Let the second round of voting begin...
+- @round2_vote: 开始第二轮投票……
 
 @round2_thalmann
 view-if: not spd_support_thalmann and not kpd_support_braun and not kpd_support_schumacher and thalmann_campaign
@@ -704,10 +704,10 @@ on-arrival: spd_support_thalmann = 1; reformist_dissent += 15; center_dissent +=
 
 好。我们把支持投给了共产党的主席台尔曼。
 
-- @round2_vote: Let the second round of voting begin...
+- @round2_vote: 开始第二轮投票……
 
 @round2_munzenberg
-subtitle: Supporting Münzenberg is unpopular among the reformists, but less so than Thälmann would've been.
+subtitle: 支持明岑贝格在改良派中不受欢迎,但总好过支持台尔曼。
 view-if: munzenberg_campaign and not spd_support_munzenberg and not kpd_support_braun and not kpd_support_schumacher
 choose-if: kpd_relation >= 40 and reformist_strength < left_strength
 unavailable-subtitle: [? if kpd_relation < 40 : 我们与共产党的关系还不够好,他们甚至不愿接受我们的支持。 ?] [? if reformist_strength >= left_strength : 改良派能够劝住全党,不支持这一安排。 ?]
@@ -715,7 +715,7 @@ on-arrival: spd_support_munzenberg = 1; kpd_relation += 5; reformist_dissent += 
 
 我们表态支持共产党的维利·明岑贝格。
 
-- @round2_vote: Let the second round of voting begin...
+- @round2_vote: 开始第二轮投票……
 
 @round2_vote
 go-to: election_algorithm

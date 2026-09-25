@@ -1,4 +1,4 @@
-title: Voncspartei
+title: 不信任联盟党
 on-arrival: {!
 Q.parties.push ('vonc');
 Q.vonc_formed = 1;

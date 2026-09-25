@@ -1,5 +1,5 @@
 title: 1931
-subtitle: A new year 
+subtitle: 新的一年 
 on-arrival: older_republic = old_republic; old_republic = pro_republic; {!
 // increase NSDAP vote share
 Q.unemployed_kpd -= Q.strife;

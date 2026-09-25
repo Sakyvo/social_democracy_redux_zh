@@ -1,5 +1,5 @@
-title: High Inflation
-subtitle: Workers are seeing their purchasing power decline.
+title: 高通胀
+subtitle: 工人的购买力正在下降。
 view-if: inflation >= 7 and high_inflation_timer = 0 and spd_in_government
 new-page: true
 on-arrival: capital_strike_progress += 1; hyperinflation += 0.2; workers_spd -= 4; workers_spd += nationalization_progress; old_middle_spd -= 6; new_middle_spd -= 6; rural_spd -= 5; unemployed_spd -= 4; unemployed_spd += welfare; high_inflation_timer = 4 if inflation > 8; high_inflation_timer = 2 if inflation >= 10; pro_republic -= 5; old_middle_nsdap += 2; new_middle_nsdap += 2; rural_nsdap += 2; socialism -= 2
@@ -12,7 +12,7 @@ Inflation has risen. People of all social classes are seeing their purchasing po
 The people and the press are clamoring for action to reduce inflation.
 
 - @taxes: Raise taxes.
-- @welfare: Reduce welfare and social spending.
+- @welfare: 削减福利与社会开支。
 - @price_controls: Impose price and wage controls.
 - @tighten_controls: Tighten price and wage controls.
 - @bank: Surely the Reichsbank has a plan this time?

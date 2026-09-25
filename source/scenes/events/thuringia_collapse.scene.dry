@@ -20,8 +20,8 @@ on-arrival: thuringia_spd += 0.05; thuringia_dvp += 0.05; thuringia_dnvp -= 0.1;
 
 The regional SPD branch refuses to provide toleration to a bourgeois government, leading to new elections to be called for [+ thuringia_election_month : month +] [+ thuringia_election_year +].
 
-- @based: The Thuringian SPD did the right thing.
-- @cringe: The Thuringian SPD made a mistake.
+- @based: 图林根社民党做得对。
+- @cringe: 图林根社民党犯了个错误。
 
 @based
 on-arrival: left_strength += 5; left_dissent -= 10; reformist_dissent += 5; center_dissent += 5

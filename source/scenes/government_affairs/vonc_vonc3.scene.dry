@@ -10,8 +10,8 @@ frequency: 2000
 
 不信任联盟已对社民党提出不信任案。他们认为没有任何谈判余地。[+ chancellor +] 必须辞职。
 
-- @what: <span style="color: transparent;">VONC</span>  
-- @what2: <span style="color: transparent;">VONC</span>
+- @what: <span style="color: transparent;">不信任联盟</span>  
+- @what2: <span style="color: transparent;">不信任联盟</span>
 
 @what
 choose-if: never

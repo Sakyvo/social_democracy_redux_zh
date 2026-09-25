@@ -1,4 +1,4 @@
-title: Civil War
+title: 内战
 audio: music/communist/A_las_barricadas.ogg
 on-arrival: decree_decided = 0; chancellorship_decided = 0; government_decided = 0; constitution_decided = 0; communists_decided = 0; reichstag_decided = 0; {!
 Q.rb_strength = Math.round(Q.rb_strength);
@@ -111,11 +111,11 @@ go-to: war_menu
 
 @war_menu
 
-- @rw_help: Appeal to the Reichswehr to stand down.
-- @kpd_help: Call for support from the Communists.
-- @general_strike: Call a general strike!
-- @loyal_police: Call up the loyal portions of the police.
-- @war_outcome: Now, the battle...
+- @rw_help: 呼吁国防军保持克制。
+- @kpd_help: 呼吁共产党提供支援。
+- @general_strike: 发动总罢工!
+- @loyal_police: 调动警察中的忠诚力量。
+- @war_outcome: 现在,开战……
 
 @rw_help
 max-visits: 1
@@ -194,10 +194,10 @@ go-to: long_war_intervention if resist_coup == 0; game_over_menu if resist_coup 
 
 @long_war_intervention
 
-- @west_aid: Perhaps we can receive aid from the Western powers, France and Britain.
-- @soviet_aid: Perhaps we can receive aid from the Soviet Union.
-- @east_aid: Perhaps our eastern neighbors, Poland and Czechoslovakia, can help us. If they know anything, they do not want fascists coming to power in Germany.
-- @austria_aid: Perhaps the SDAPÖ can help us in our fight?
+- @west_aid: 或许我们能从西方列强 —— 法国与英国 —— 那里得到援助。
+- @soviet_aid: 或许我们能从苏联得到援助。
+- @east_aid: 或许我们的东方邻国 —— 波兰与捷克斯洛伐克 —— 能帮我们。但凡他们知道些分量,就不会希望法西斯在德国上台。
+- @austria_aid: 或许奥地利社会民主党能在我们的斗争里帮上忙?
 - @game_over: 游戏结束。
 
 @west_aid
@@ -260,41 +260,41 @@ Q.prussia_force = Math.round((Q.prussia_force/total_force)*100);
 
 [? if anschluss_attempt : 纳粹在奥地利已然崩溃,该国陷入一场同时爆发的内战,至今仍在激烈进行。我们听说希特勒已经殒命。 ?]
 
-- @agenda_gov: We must decide our new agenda.
-- @agenda_reb: We must decide our new agenda.
-- @agenda_kpd: We must decide our new agenda.
+- @agenda_gov: 我们必须决定新的议程。
+- @agenda_reb: 我们必须决定新的议程。
+- @agenda_kpd: 我们必须决定新的议程。
 
 @agenda_gov
 view-if: nazi_rebel = 1 and president != "Thälmann"
 
 反动派的失败给了我们一个独特的机会。我们有多项议题需要处理。
 
-- @hindenburg: The presidency.
-- @government: The government.
+- @hindenburg: 总统之位。
+- @government: 政府。
 
 @hindenburg
 view-if: president == "Hindenburg" and not presidency_decided
 on-arrival: presidency_decided = 1
-subtitle: We may force Hindenburg to resign.
+subtitle: 我们或许能迫使兴登堡辞职。
 
 现任总统兴登堡无疑 —— 至少通过其懈怠 —— 助长了反动势力的壮大与得势。既然这些反动势力已被击败,我们或许可以迫使他辞职。不过,也有人警告不要搅动局势。
 
-- @keep: Let Hindenburg stay President.
-- @resign: Demand Hindenburg's resignation.
+- @keep: 让兴登堡继续担任总统。
+- @resign: 要求兴登堡辞职。
 
 @keep
 on-arrival: left_dissent += 5; kpd_relation -= 5
 
 我们选择让兴登堡的总统任期继续。
 
-- @agenda_gov: Continue...
+- @agenda_gov: 继续……
 
 @resign
 on-arrival: presidency_vacated = 1; pro_republic -= 5; z_relation -= 5; dvp_relation -= 10; presidential_timer = 1 if year < 1933; president = "Bumke" if year >= 1933 and judicial_reform < 4; president = "Großmann" if year >= 1933 and judicial_reform >= 4; presidential_timer = 3 if year >= 1933; president = "N/A" if year < 1933
 
 兴登堡在我们的力量逼迫下辞职。 [? if year >= 1933 : 按照程序,最高法院院长将接替他担任临时总统。 ?]
 
-- @agenda_gov: Continue...
+- @agenda_gov: 继续……
 
 # todo: hindenburg may refuse to resign, allowing the SPD to attempt to impeach him if judicial reform or otherwise referendum against, or just illegally depose him
 # todo: successor election if successfully deposed
@@ -306,8 +306,8 @@ on-arrival: government_decided = 1
 反动势力虽已被击败,却远未被彻底清除。有人呼吁通过一部「授权法案」把治理权暂时移交给内阁,以便政府迅速行动。
 
 - @enabling: 我们别无选择,只能通过一部为期六个月的授权法案。
-- @enable_hindenburg: We have no choice but to pass an Enabling Act with a six-month duration.
-- @agenda_gov: We will operate entirely by the book in denazification of Germany.
+- @enable_hindenburg: 我们别无选择,只能通过一项为期六个月的授权法案。
+- @agenda_gov: 在德国的去纳粹化中,我们将完全按章程办事。
 
 @enabling
 view-if: president != "Hindenburg"
@@ -315,15 +315,15 @@ on-arrival: pro_republic -= 10; z_relation -= 5; z_relation -= 5 if z_party_lead
 
 我们凭借 [+ president +] 的签署与国会三分之二多数的表决通过了授权法案。若愿意,这也使我们得以继续推行更多法令。
 
-- @decrees: We must sign decrees.
-- @agenda_gov: That'll be enough.
+- @decrees: 我们必须签署法令。
+- @agenda_gov: 这就够了。
 
 @enable_hindenburg
 view-if: president == "Hindenburg"
 
 兴登堡总统拒绝签署我们的授权法案,要求将其交付公投。我们该怎么办?
 
-- @government: Absolutely nothing, I'm not coding this yet.
+- @government: 什么都不做 —— 我还没写这段代码。
 
 @agenda_reb
 view-if: spd_rebel = 1
@@ -332,11 +332,11 @@ on-arrival: judicial_reform += 4; soviets_exist = 1; soviet_election_time = time
 反动派的失败给了我们一个独特的机会。我们有多项议题需要处理。 与此同时,总罢工期间形成的工人委员会已开始凝聚为工人委员会。
 
 - @presidency: 总统职位。
-- @chancellorship: The cabinet.
-- @constitutional: The constitution.
-- @decrees: The country.
-- @communists: The KPD.
-- @council: The Reichstag.
+- @chancellorship: 内阁。
+- @constitutional: 宪法。
+- @decrees: 国家。
+- @communists: 共产党。
+- @council: 国会。
 
 @presidency
 view-if: not presidency_decided
@@ -344,10 +344,10 @@ on-arrival: presidency_decided = 1
 
 [? if president == "Hindenburg" : 由于兴登堡是反动派、且曾为希特勒掌权开路,迫使他辞职在党内是个受欢迎的想法。 ?][? if president == "Hitler" : 随着希特勒被击败,总统之位已空缺。通常的程序是举行提前选举,但这里说了算的是我们。 ?]
 
-- @snap_election: We will hold new presidential elections.
+- @snap_election: 我们将举行新的总统选举。
 #- @braun: We will install Braun as President.
-- @provisional: The Reichstag will elect a provisional president to serve until elections can be held.
-- @abolish: We will abolish the Presidency entirely.
+- @provisional: 国会将选出一位临时总统,任职至可以举行选举之时。
+- @abolish: 我们将彻底废除总统制。
 
 @snap_election
 on-arrival: presidency_vacated = 1; presidential_timer = 2; president = "Bumke" if year >= 1933 and judicial_reform < 4; president = "Großmann" if year >= 1933 and judicial_reform >= 4; president = "N/A" if year < 1933; presidential_timer -= 1 if year < 1933
@@ -360,21 +360,21 @@ on-arrival: president = "Braun"
 
 我们让奥托·布劳恩成为德国总统。
 
-- @agenda_reb: Continue...
+- @agenda_reb: 继续……
 
 @provisional
 on-arrival: president = "Wirth"; presidential_timer = 12; presidency_vacated = 1; 
 
 我们把选举交给国会,它选出了中央党的约瑟夫·维尔特作为妥协人选。
 
-- @agenda_reb: Continue...
+- @agenda_reb: 继续……
 
 @abolish
 on-arrival: presidency_abolished = 1; presidential_powers = 1; president = "N/A"
 
 我们选择彻底废除总统制,转而建立一个严格的议会制共和国。
 
-- @agenda_reb: Continue...
+- @agenda_reb: 继续……
 
 @chancellorship
 view-if: not chancellorship_decided
@@ -382,10 +382,10 @@ on-arrival: leverage = spd_votes; chancellorship_decided = 1; spd_in_government 
 
 我们已通过内战推翻了纳粹内阁,现在必须决定如何填补这些职位、如何分配战后临时政府中的位置。不过,首先我们必须选择与我们共同组建临时政府的政党。
 
-- @kpd_coalition: Naturally, the Communists.
-- @weimar_coalition_: Naturally, our Weimar partners.
-- @antifa: Perhaps we can build one with both?
-- @no_allies: The SPD will govern alone.
+- @kpd_coalition: 自然是共产党人。
+- @weimar_coalition_: 自然是我们的魏玛伙伴。
+- @antifa: 或许我们可以把两者都拉进来?
+- @no_allies: 社民党将单独执政。
 
 @kpd_coalition
 view-if: kpd_relation >= 45 and communist_coalition >= 3 and kpd_tried != 1
@@ -399,8 +399,8 @@ call: set_next_election_time
 
 共产党乐于加入我们的临时政府。我们该选谁出任总理?
 
-- @breitscheid_2: Appoint Rudolf Breitscheid.
-- @thalmann: Appoint Ernst Thälmann of the Communists.
+- @breitscheid_2: 任命鲁道夫·布赖特沙伊德。
+- @thalmann: 任命共产党的恩斯特·台尔曼。
 
 @sway_kpd
 on-arrival: z_relation -= 5; ddp_relation -= 5; dvp_relation -= 10
@@ -408,9 +408,9 @@ on-departure: kpd_tried = 1
 
 共产党要求把总理之位作为参与临时政府的先决条件。我们可以让步,可以另寻盟友,也可以换别的方式满足他们。
 
-- @thalmann: We will concede the Chancellorship to Ernst Thälmann of the Communists.
-- @bribe: Smooth things over with our resources, and appoint Rudolf Breitscheid.
-- @chancellorship: The Communists are unworkable. We'll find other allies.
+- @thalmann: 我们将把总理之位让给共产党的恩斯特·台尔曼。
+- @bribe: 动用资源把事情摆平,并任命鲁道夫·布赖特沙伊德。
+- @chancellorship: 共产党人没法共事。我们另寻盟友。
 
 @bribe
 subtitle: -3 资源.
@@ -425,9 +425,9 @@ view-if: z_relation >= 40 and ddp_relation >= 20
 on-arrival: in_weimar_coalition = 1; time_to_election = 3
 call: set_next_election_time
 
-- @breitscheid: Appoint Rudolf Breitscheid.
-- @wels: Appoint Otto Wels.
-- @bruning: Appoint Heinrich Brüning of the Center.
+- @breitscheid: 任命鲁道夫·布赖特沙伊德。
+- @wels: 任命奥托·韦尔斯。
+- @bruning: 任命中央党的海因里希·布吕宁。
 
 @antifa
 view-if: ((((kpd_relation >= 65 and kpd_party_leader == "Thälmann") or (kpd_relation >= 45 and kpd_party_leader == "Conciliators")) and ((z_relation >= 45 and z_party_leader == "Joos") or (z_relation >= 65 and z_party_leader != "Joos" and kpd_party_leader != "Conciliators") or (z_relation >= 55 and z_party_leader != "Joos" and kpd_party_leader == "Conciliators")) and ddp_relation >= 50 and communist_coalition >= 3) or (z_party_leader == "Joos" and kpd_party_leader == "Conciliators" and z_relation >= 30 and kpd_relation >= 30))
@@ -436,15 +436,15 @@ call: set_next_election_time
 
 出人意料,共产党与中央党都愿意组建一个由布赖特沙伊德领导的临时人民阵线政府;由于形势已变,共产党甚至愿意在内阁中占据一两个位置。中央党唯一愿意让给共产党的职位,是内政部或劳工部。
 
-- @ministries: Let's see.
+- @ministries: 看看吧。
 
 @no_allies
 on-arrival: in_spd_majority = 1; pro_republic -= 10; rfb_strength += 100; sa_strength += 25; workers_spd -= 3; new_middle_spd -= 3; sh_strength += 50; rb_strength -= 100; z_relation -= 10; ddp_relation -= 10; dvp_relation -= 10; kpd_relation -= 10; coup_progress += 3; reichswehr_loyalty -= 0.05; labor_minister_party = "SPD"; interior_minister_party = "SPD"; finance_minister_party = "SPD"; justice_minister_party = "SPD"; economic_minister_party = "SPD"; foreign_minister_party = "SPD"; agriculture_minister_party = "SPD"; reichswehr_minister_party = "SPD"
 
 我们被迫在临时政府中单独执政。这损害了人们对战后政府的信心,各党都争先恐后地反对我们。至少我们会如期举行提前选举,对吧?
 
-- @of_course: Of course.
-- @mocharooms: How can we hold elections in an environment this volatile?
+- @of_course: 当然。
+- @mocharooms: 在如此动荡的环境下,我们怎么举行选举?
 
 @of_course
 call: set_next_election_time
@@ -452,42 +452,42 @@ on-arrival: time_to_election = 3
 
 我们当然绝不会做出取消选举这种公然不民主的事。
 
-- @agenda_reb: Indeed so. We would never.
+- @agenda_reb: 确实如此。我们绝不会那样做。
 
 @mocharooms
 on-arrival: pro_republic -= 3; coup_progress += 2
 
 布劳恩先生,您……您确……确定要这么做吗?真的?好吧,既然您这么说……我就去办。我们不会让那些纳粹……我们不会……您为什么那样看着我?布劳恩先生?
 
-- @agenda_reb: Let's move on.
+- @agenda_reb: 继续吧。
 
 @breitscheid
 on-arrival: chancellor = "Breitscheid"; chancellor_party = "SPD"
 
-- @ministries: Now for the cabinet.
+- @ministries: 接下来是内阁。
 
 @wels
 on-arrival: chancellor = "Wels"; chancellor_party = "SPD"
 
-- @ministries: Now for the cabinet.
+- @ministries: 接下来是内阁。
 
 @bruning
 view-if: z_relation >= 45
 on-arrival: chancellor = "Brüning"; chancellor_party = "Z"; leverage += 5; z_relation += 5; kpd_relation -= 10
 
-- @ministries: Now for the cabinet.
+- @ministries: 接下来是内阁。
 
 @thalmann
 view-if: kpd_relation >= 60 and left_strength > reformist_strength + center_strength + neorevisionist_strength
 on-arrival: chancellor = "Thälmann"; chancellor_party = "KPD"; z_relation -= 10; reformist_dissent += 10; kpd_relation += 5; leverage *= (2*((rb_strength*rb_militancy)/(rfb_strength*rfb_militancy))); time_to_election = 3
 call: set_next_election_time
 
-- @cabinet_kpd: Now for the cabinet.
+- @cabinet_kpd: 接下来是内阁。
 
 @breitscheid_2
 on-arrival: chancellor = "Breitscheid"; chancellor_party = "SPD"
 
-- @cabinet_kpd: Now for the cabinet.
+- @cabinet_kpd: 接下来是内阁。
 
 @cabinet_kpd
 on-arrival: labor_minister_party = "KPD"; interior_minister_party = "KPD"; finance_minister_party = "KPD"; economic_minister_party = "KPD"; justice_minister_party = "KPD"; foreign_minister_party = "KPD"; agriculture_minister_party = "KPD"; reichswehr_minister_party = "KPD"
@@ -515,8 +515,8 @@ go-to: real_cabinet_kpd
 社民党的鲁道夫·维塞尔被任命为劳工部长。
 
 @interior_kpd
-title: Interior Ministry
-subtitle: Taking the Interior Ministry is expected of us. The Interior Ministry controls domestic security.
+title: 内政部
+subtitle: 拿下内政部是人们对我们期望所在。内政部掌控国内治安。
 unavailable-subtitle: 我们的筹码不够。
 tags: mins_kpd
 choose-if: leverage >= 10
@@ -527,8 +527,8 @@ go-to: real_cabinet_kpd
 社民党的卡尔·泽韦林被任命为内政部长。
 
 @finance_kpd
-title: Finance Ministry
-subtitle: The Finance Ministry controls the government budget and taxes.
+title: 财政部
+subtitle: 财政部掌控政府预算与税收。
 unavailable-subtitle: 我们的筹码不够。
 tags: mins_kpd
 choose-if: leverage >= 10 
@@ -539,8 +539,8 @@ go-to: real_cabinet_kpd
 社民党的鲁道夫·希法亭被任命为财政部长。
 
 @economic_kpd
-title: Economic Ministry
-subtitle: The Economic Ministry controls broader economic policy.
+title: 经济部
+subtitle: 经济部掌管更广泛的经济政策。
 unavailable-subtitle: 我们的筹码不够。
 tags: mins_kpd
 choose-if: leverage >= 15
@@ -551,8 +551,8 @@ go-to: real_cabinet_kpd
 社民党的罗伯特·施密特被任命为经济部长。
 
 @justice_kpd
-title: Justice Ministry
-subtitle: The Justice Ministry controls the courts.
+title: 司法部
+subtitle: 司法部掌管法院。
 unavailable-subtitle: 我们的筹码不够。
 tags: mins_kpd
 choose-if: leverage >= 10 
@@ -563,8 +563,8 @@ go-to: real_cabinet_kpd
 社民党的古斯塔夫·拉德布鲁赫被任命为司法部长。
 
 @foreign_kpd
-title: Foreign Ministry
-subtitle: This is usually the domain of Gustav Stresemann of the DVP.
+title: 外交部
+subtitle: 这通常是人民党的古斯塔夫·施特雷泽曼的地盘。
 unavailable-subtitle: 我们的筹码不够。
 tags: mins_kpd
 choose-if: leverage >= 10 
@@ -576,8 +576,8 @@ go-to: real_cabinet_kpd
 
 
 @agriculture_kpd
-title: Agricultural Ministry
-subtitle: This is not our usual domain.
+title: 农业部
+subtitle: 这并非我们惯常的领域。
 unavailable-subtitle: 我们的筹码不够。
 choose-if: leverage >= 5
 view-if: agriculture_minister_party != "SPD"
@@ -588,8 +588,8 @@ tags: mins_kpd
 社民党的弗里茨·巴德被任命为农业部长。
 
 @reichswehr_kpd
-title: Reichswehr Ministry
-subtitle: Leaving this to the Communists could lead to a coup.
+title: 国防部
+subtitle: 若把这一部交给共产党,可能导致政变。
 unavailable-subtitle: 我们的筹码不够。
 tags: mins_kpd
 choose-if: leverage >= 5 
@@ -602,9 +602,9 @@ go-to: real_cabinet_kpd
 
 
 @no_more_kpd
-title: No more ministries.
+title: 不再要部会了。
 on-arrival: labor_dissent += 10 if historical_mode and labor_minister_party != "SPD"
-subtitle: [? if leverage >= 10 : We still have some more leverage to gain ministries. ?][? if leverage < 10 : We do not have much leverage left. ?]
+subtitle: [? if leverage >= 10 : 我们还有一些筹码,可再争取几个部会。 ?][? if leverage < 10 : 我们剩下的筹码不多了。 ?]
 tags: mins_kpd
 go-to: agenda_reb
 
@@ -618,49 +618,49 @@ tags: drop_mins_kpd
 go-to: real_cabinet_kpd
 
 @drop_interior_kpd
-title: Drop the Interior Ministry.
+title: 放弃内政部。
 view-if: interior_minister_party = "SPD"
 on-arrival: interior_minister_party = "KPD"; leverage += 10;
 tags: drop_mins_kpd
 go-to: real_cabinet_kpd
 
 @drop_finance_kpd
-title: Drop the Finance Ministry.
+title: 放弃财政部。
 view-if: finance_minister_party = "SPD"
 on-arrival: leverage += 10; finance_minister_party = "KPD"
 tags: drop_mins_kpd
 go-to: real_cabinet_kpd
 
 @drop_economic_kpd
-title: Drop the Economic Ministry.
+title: 放弃经济部。
 view-if: economic_minister_party = "SPD"
 on-arrival: leverage += 15; economic_minister_party = "KPD"
 tags: drop_mins_kpd
 go-to: real_cabinet_kpd
 
 @drop_justice_kpd
-title: Drop the Justice Ministry.
+title: 放弃司法部。
 view-if: justice_minister_party = "SPD"
 on-arrival: justice_minister_party = "KPD"; leverage += 10;
 tags: drop_mins_kpd
 go-to: real_cabinet_kpd
 
 @drop_foreign_kpd
-title: Drop the Foreign Ministry.
+title: 放弃外交部。
 view-if: foreign_minister_party = "SPD"
 on-arrival: leverage += 10; foreign_minister_party = "KPD"
 tags: drop_mins_kpd
 go-to: real_cabinet_kpd
 
 @drop_agriculture_kpd
-title: Drop the Agriculture Ministry.
+title: 放弃农业部。
 view-if: agriculture_minister_party = "SPD"
 on-arrival: agriculture_minister_party = "KPD"; leverage += 5
 tags: drop_mins_kpd
 go-to: real_cabinet_kpd
 
 @drop_reichswehr_kpd
-title: Drop the Reichswehr Ministry.
+title: 放弃国防部。
 view-if: reichswehr_minister_party = "SPD"
 on-arrival: reichswehr_minister_party = "KPD"; leverage += 5;
 tags: drop_mins_kpd
@@ -688,8 +688,8 @@ go-to: ministries
 社民党的鲁道夫·维塞尔被任命为劳工部长。
 
 @interior
-title: Interior Ministry
-subtitle: Taking the Interior Ministry is expected of us. The Interior Ministry controls domestic security.
+title: 内政部
+subtitle: 拿下内政部是人们对我们期望所在。内政部掌控国内治安。
 unavailable-subtitle: 我们的筹码不够。
 tags: mins_emergency
 choose-if: leverage >= 5
@@ -700,8 +700,8 @@ go-to: ministries
 社民党的卡尔·泽韦林被任命为内政部长。
 
 @finance
-title: Finance Ministry
-subtitle: The Finance Ministry controls the government budget and taxes.
+title: 财政部
+subtitle: 财政部掌控政府预算与税收。
 unavailable-subtitle: 我们的筹码不够。
 tags: mins_emergency
 choose-if: leverage >= 10 
@@ -712,8 +712,8 @@ go-to: ministries
 社民党的鲁道夫·希法亭被任命为财政部长。
 
 @economic
-title: Economic Ministry
-subtitle: The Economic Ministry controls broader economic policy.
+title: 经济部
+subtitle: 经济部掌管更广泛的经济政策。
 unavailable-subtitle: 我们的筹码不够。
 tags: mins_emergency
 choose-if: leverage >= 10 
@@ -724,8 +724,8 @@ go-to: ministries
 社民党的罗伯特·施密特被任命为经济部长。
 
 @justice
-title: Justice Ministry
-subtitle: The Justice Ministry controls the courts.
+title: 司法部
+subtitle: 司法部掌管法院。
 unavailable-subtitle: 我们的筹码不够。
 tags: mins_emergency
 choose-if: leverage >= 10 
@@ -736,8 +736,8 @@ go-to: ministries
 社民党的古斯塔夫·拉德布鲁赫被任命为司法部长。
 
 @foreign
-title: Foreign Ministry
-subtitle: This is usually the domain of Gustav Stresemann of the DVP.
+title: 外交部
+subtitle: 这通常是人民党的古斯塔夫·施特雷泽曼的地盘。
 unavailable-subtitle: 我们的筹码不够。
 tags: mins_emergency
 choose-if: leverage >= 10 
@@ -749,8 +749,8 @@ go-to: ministries
 
 
 @agriculture
-title: Agricultural Ministry
-subtitle: This is not our usual domain.
+title: 农业部
+subtitle: 这并非我们惯常的领域。
 unavailable-subtitle: 我们的筹码不够。
 choose-if: leverage >= 10 
 view-if: agriculture_minister_party != "SPD"
@@ -761,8 +761,8 @@ tags: mins_emergency
 社民党的弗里茨·巴德被任命为农业部长。
 
 @reichswehr
-title: Reichswehr Ministry
-subtitle: The Ministry responsible for the armed forces is not typically our domain; General Groener and the bourgeois-conservatives will be displeased.
+title: 国防部
+subtitle: 掌管武装力量的这个部通常不是我们的地盘;格勒纳将军与资产阶级保守派会不高兴。
 unavailable-subtitle: 我们的筹码不够。
 tags: mins_emergency
 choose-if: leverage >= 15 
@@ -775,9 +775,9 @@ go-to: ministries
 
 
 @no_more
-title: No more ministries.
+title: 不再要部会了。
 on-arrival: labor_dissent += 10 if historical_mode and labor_minister_party != "SPD"; antifa_gov = 0
-subtitle: [? if leverage >= 10 : We still have some more leverage to gain ministries. ?][? if leverage < 10 : We do not have much leverage left. ?]
+subtitle: [? if leverage >= 10 : 我们还有一些筹码,可再争取几个部会。 ?][? if leverage < 10 : 我们剩下的筹码不多了。 ?]
 tags: mins_emergency
 go-to: agenda_reb
 
@@ -791,49 +791,49 @@ tags: drop_mins_emergency
 go-to: ministries
 
 @drop_interior
-title: Drop the Interior Ministry.
+title: 放弃内政部。
 view-if: interior_minister_party = "SPD"
 on-arrival: interior_minister_party = "Z" if antifa_gov != 1; interior_minister = "Wirth" if antifa_gov != 1; leverage += 5; interior_minister_party = "KPD" if antifa_gov
 tags: drop_mins_emergency
 go-to: ministries
 
 @drop_finance
-title: Drop the Finance Ministry.
+title: 放弃财政部。
 view-if: finance_minister_party = "SPD"
 on-arrival: leverage += 10; finance_minister_party = "Z"; finance_minister = "Köhler"
 tags: drop_mins_emergency
 go-to: ministries
 
 @drop_economic
-title: Drop the Economic Ministry.
+title: 放弃经济部。
 view-if: economic_minister_party = "SPD"
 on-arrival: leverage += 10; economic_minister_party = "DDP"; economic_minister = "Dietrich"
 tags: drop_mins_emergency
 go-to: ministries
 
 @drop_justice
-title: Drop the Justice Ministry.
+title: 放弃司法部。
 view-if: justice_minister_party = "SPD"
 on-arrival: justice_minister_party = "DDP"; justice_minister = "Koch-Weser"; leverage += 10;
 tags: drop_mins_emergency
 go-to: ministries
 
 @drop_foreign
-title: Drop the Foreign Ministry.
+title: 放弃外交部。
 view-if: foreign_minister_party = "SPD"
 on-arrival: leverage += 10; foreign_minister_party = "Z"; foreign_minister = "Wirth"
 tags: drop_mins_emergency
 go-to: ministries
 
 @drop_agriculture
-title: Drop the Agriculture Ministry.
+title: 放弃农业部。
 view-if: agriculture_minister_party = "SPD"
 on-arrival: agriculture_minister_party = "DDP"; agriculture_minister = "Dietrich"; leverage += 10
 tags: drop_mins_emergency
 go-to: ministries
 
 @drop_reichswehr
-title: Drop the Reichswehr Ministry.
+title: 放弃国防部。
 view-if: reichswehr_minister_party = "SPD"
 on-arrival: reichswehr_minister_party = "DDP"; reichswehr_minister = "Gessler"; leverage += 15;
 tags: drop_mins_emergency
@@ -845,16 +845,16 @@ on-arrival: constitution_decided = 1
 
 既然我们掌握着实际权力,想推行多少宪法改革都能推行。
 
-- @vote_threshold: Change the vote threshold.
-- @constructive_vonc: Ban non-constructive votes of no confidence.
-- @presidential_powers: Reduce presidential powers.
-- @supreme_soviet: Empower work councils to make them the new basis of governance.
-- @agenda_reb: We have done enough in this department. Next.
+- @vote_threshold: 修改得票门槛。
+- @constructive_vonc: 禁止非建设性的不信任案。
+- @presidential_powers: 削减总统权力。
+- @supreme_soviet: 赋权工厂委员会,使其成为新的治理基础。
+- @agenda_reb: 这一块我们已经做得够多了。下一项。
 #- @constitutional_bans: Allow the banning of anti-constitutional parties.
 #- @constitutional_convention: Hold a constitutional convention to draft a wholly new constitution for the country.
 
 @vote_threshold
-subtitle: Change the vote threshold to 5% for parties to be represented in the Reichstag.
+subtitle: 把政党进入国会所需的得票门槛改为 5%。
 view-if: electoral_threshold = 0
 
 # The left is opposed to this.
@@ -865,8 +865,8 @@ view-if: electoral_threshold = 0
 
 社民党左翼反对这一改动,认为它反民主。
 
-- @vote_threshold_2: And so it shall be.
-- @constitutional: See other reform options.
+- @vote_threshold_2: 就这么办吧。
+- @constitutional: 查看其他改革选项。
 
 
 @vote_threshold_2
@@ -881,13 +881,13 @@ go-to: constitutional
 
 
 @constructive_vonc
-subtitle: Votes of no confidence can only be called if an alternative plan for government formation can be passed, greatly reducing their incidence.
+subtitle: 只有当存在一份可行的替代组阁方案时,才能提出不信任案 —— 这将大幅减少此类提案的发生。
 view-if: constructive_vonc = 0
 
 [? if z_relation >= 30 : 魏玛联盟各党 —— 民主党与中央党 —— 支持这项改革,它将大大提升政府的稳定性。 ?] [? if z_relation < 30 : 民主党支持这项改革,但中央党对我们的信任不足以支持这场宪法公投。 ?] 较为保守与激进的右翼政党以及共产党则表示反对,他们似乎对共和体制的动荡乐在其中。
 
-- @constructive_vonc_2: And so it shall be.
-- @constitutional: See other reform options.
+- @constructive_vonc_2: 就这么办吧。
+- @constitutional: 查看其他改革选项。
 
 @constructive_vonc_2
 on-arrival: constitutional_reform += 1; constructive_vonc = 1
@@ -897,15 +897,15 @@ go-to: constitutional
 我们成功通过了一项宪法修正案,禁止在无法组建新政府时提出不信任案。但愿这能提升我们政府的稳定性。
 
 @presidential_powers
-subtitle: The president can no longer dissolve the Reichstag at will, or call a *Reichsexekution* on state governments.
+subtitle: 总统不再能随意解散国会,或对州政府实施*国家执行*。
 view-if: presidential_powers = 0
 
 宪法所许诺的广泛总统权力,是通往威权主义的潜在门户。因此,我们可以支持限制总统权力的改革,终结他单方面终止民选政府、以及撤换州政府的权力。
 
 共产党支持这项改革 —— 他们过去曾是*国家执行*的受害者(当时由图林根与萨克森共产党支持的州政府被撤换)。民主党的民主派也支持此举。 [? if president == "Hindenburg": 然而,保守派的反对极其激烈,他们认为削减总统权力是对兴登堡的不敬。 ?] [? if z_relation <= 49 and president == "Hindenburg" : 因此,中央党受到这种影响,转而反对这些改革。 ?] [? if z_relation > 49 and president == "Hindenburg" : 尽管如此,中央党仍支持拟议的改革。 ?] [? if president == "Braun" : 中央党支持这项改革。 ?]
 
-- @presidential_powers_2: And so it shall be.
-- @constitutional: See other reform options.
+- @presidential_powers_2: 就这么办吧。
+- @constitutional: 查看其他改革选项。
 
 @presidential_powers_2
 on-arrival: constitutional_reform += 1; presidential_powers = 1
@@ -915,13 +915,13 @@ go-to: constitutional
 我们成功通过了一项宪法修正案,限制总统权力!但愿这能带来一个不那么威权的德国。
 
 @supreme_soviet
-subtitle: Establish a new "Supreme Soviet" elected by the works councils to replace the Reichstag.
+subtitle: 设立一个新的「最高苏维埃」,由工厂委员会选举产生,以取代国会。
 view-if: nationalization_progress + socializations >= 3 and works_councils >= 3 and (president != "Hindenburg" or presidential_powers == 1)
 
 我们对经济的大规模社会化与对工厂委员会的赋权,已为向完全的无产阶级专政过渡奠定了基础,实际上把国会变成了一个几乎毫无实权的残存议会。社民党多数及其左侧的一切力量都会投赞成票,但我们也将面临来自其他所有人的巨大反对。
 
-- @supreme_soviet_2: And so it shall be.
-- @constitutional: See other reform options.
+- @supreme_soviet_2: 就这么办吧。
+- @constitutional: 查看其他改革选项。
 
 @supreme_soviet_2
 on-arrival: constitutional_reform += 1; supreme_soviet = 1; capital_strike_progress += 15; z_relation -= 15; ddp_relation -= 25; dvp_relation -= 50; coalition_dissent += 3
@@ -936,22 +936,22 @@ on-arrival: decree_decided = 1; judicial_purge_cost = (5 - (judicial_reform*2));
 
 随着我们战胜反动派,我们曾短暂地近乎可以随心所欲地按自己的意志塑造德国。因此,党内各色政客热切地起草法令,如今呈交给我们签署。不过,若我们签署的法令太多,就有可能削弱人们对共和国的信心,并损害我们与资产阶级政党的关系。
 
-- @land_seizure: Sweeping land reform to destroy the base of the reactionaries for good.
-- @mass_nationalization: Mass nationalizations of industry.
-- @wealth_seizure: Seize the Reichsbank and other assets of the rich.
-- @judicial_purge: Purge the judiciary of all reactionary elements.
-- @dnvp_ban: Ban the DNVP.
-- @dvp_ban: Ban the DVP.
-- @zca_ban: Ban the ZCA.
-- @enable: A sixth-month long Enabling Act to speed denazification up.
-- @agenda_1: That is enough.
+- @land_seizure: 推行彻底的土改,一劳永逸地摧毁反动派的根基。
+- @mass_nationalization: 对工业实行大规模国有化。
+- @wealth_seizure: 没收国家银行及其他富人资产。
+- @judicial_purge: 清除司法系统中的一切反动分子。
+- @dnvp_ban: 查禁国家人民党。
+- @dvp_ban: 查禁人民党。
+- @zca_ban: 查禁中央党基督教联盟。
+- @enable: 一项为期六个月的授权法案,以加快去纳粹化。
+- @agenda_1: 这就够了。
 
 @zca_ban
 view-if: zca_formed and not zca_banned
 choose-if: rb_force+rfb_force >= army_force
 unavailable-subtitle: 国防军不允许这样做。
 on-arrival: zca_banned = 1; pro_republic -= 10; socialism -= 5; coup_progress += 10; sa_strength += 200; sh_strength += 150; bourgeois_power -= 0.05; west_relation -= 3; east_relation -= 3; soviet_relation += 1
-subtitle: They are a trojan horse for reaction.
+subtitle: 他们是反动派特洛伊木马。
 go-to: decrees_2
 
 我们取缔了中央基督教联盟,使资产阶级失去其统一的政党。这引起了相当强烈的反应 —— 大多数人当然错误地以为他们是无害的自由民主派。
@@ -969,17 +969,17 @@ go-to: decrees_2
 view-if: land_reform < 4 and not land_seizure
 choose-if: rb_force+rfb_force >= (army_force*(1-reichswehr_loyalty))
 unavailable-subtitle: 国防军不允许这样做。
-subtitle: -[+ land_seizure_cost +] budget.
+subtitle: -[+ land_seizure_cost +] 财政预算。
 on-arrival: budget -= land_seizure_cost; land_seizure = 1; land_reform += land_seizure_cost; pro_republic -= (4*land_seizure_cost); coalition_dissent += land_seizure_cost; rural_spd += land_seizure_cost*(5*(1-dissent)); rural_nsdap -= land_seizure_cost*(4*(1-dissent)); unemployed -= land_seizure_cost if unemployed >= 5; dvp_relation -= (5*land_seizure_cost); z_relation -= (4*land_seizure_cost); left_strength += (8*land_seizure_cost); left_dissent -= (5*land_seizure_cost); rural_sol += (3*land_seizure_cost); rural_policy += land_seizure_cost; sa_strength += 25; sh_strength += 10; sa_militancy += 0.05
 
 在一项大规模的土地改革计划中,我们夺取贵族庄园,分给在上面劳作的无地农民。资产阶级政党谴责我们滥用战后地位,称之为违宪;而土地被我们夺走的贵族,则向残余的纳粹叛乱分子寻求慰藉。
 
-- @decrees_2: Excellent.
+- @decrees_2: 好极了。
 
 @mass_nationalization
 choose-if: rb_force+rfb_force >= army_force and left_strength >= reformist_strength+neorevisionist_strength
 unavailable-subtitle: [? if rb_force+rfb_force < army_force : 国防军不允许这样做。 ?][? if left_strength < reformist_strength+neorevisionist_strength : 党内不允许这样做。 ?]
-subtitle: -[+ nationalize_budget +] budget. [? if works_councils >= 3 : Our works councils have reduced the budget necessary for this program. ?] [? if socializations >= 2: Our existing socialization policies have reduced the budget necessary for this program. ?]
+subtitle: -[+ nationalize_budget +] 财政预算。[? if works_councils >= 3 : 我们的工厂委员会降低了该计划所需的预算。 ?] [? if socializations >= 2: 我们既有的社会化政策降低了该计划所需的预算。 ?]
 view-if: not mass_nationalization and not sapd_formed
 on-arrival: mass_nationalization = 1; ddp_relation -= 4; z_relation -= 5; dvp_relation -= 7; coalition_dissent += 1; capital_strike_progress += 1; pro_republic -= 6; reformist_dissent += 4
 go-to: nationalize_deficit if budget < nationalize_budget; nationalize_no_deficit if budget >= nationalize_budget
@@ -992,7 +992,7 @@ achievement: wirtschaftspolitik
 
 [? if nationalization_progress == 1 : 左翼主张,这应当只是经济社会主义改造的第一步。最终,经济的大部分必须置于民众的控制之下。 ?]
 
-- @decrees_2: Excellent.
+- @decrees_2: 好极了。
 
 @nationalize_deficit
 
@@ -1001,13 +1001,13 @@ achievement: wirtschaftspolitik
 - @nationalize_deficit_1
 - @nationalize_without_compensation
 - @empower_workers
-- @decrees: No, we should not do this.
+- @decrees: 不,我们不该这么做。
 
 
 @nationalize_deficit_1
-title: Take a budget deficit to fund the nationalization program.
+title: 以预算赤字为该国有化计划提供资金。
 choose-if: left_strength > reformist_strength + center_strength or woytinsky_advisor == 1
-subtitle: [? if woytinsky_advisor: Woytinsky can bring us around to supporting a budget deficit. ?]
+subtitle: [? if woytinsky_advisor: 沃伊京斯基能说服我们接受预算赤字。 ?]
 unavailable-subtitle: [? if left_strength <= reformist_strength + center_strength: 党内尚不支持为此目的而搞预算赤字。 ?] [? if not woytinsky_advisor : 或许引入一位顾问有助于让这一行动变得可以接受? ?]
 on-arrival: nationalization_progress += 1; bourgeois_power -= 0.05; capital_strike_progress += 3; unemployed -= 3 if unemployed >= 6; unemployed -= 1.2 if works_councils >= 3; budget -= nationalize_budget; works_program += 1; workers_spd += 8*(1-dissent); unemployed_spd += 5*(1-dissent); coalition_dissent += 2; dvp_relation -= 6; z_relation -= 4; new_middle_spd -= 3; new_middle_spd += 2 if new_middle_conscious; old_middle_spd -= 3; economy_goal_completed += 1; inflation += 3
 achievement: wirtschaftspolitik
@@ -1020,11 +1020,11 @@ achievement: wirtschaftspolitik
 
 [? if nationalization_progress > 1 : 我们又收购了更多未被充分利用的企业,与工厂委员会以协调的社会主义方式经营,并重新雇用先前被裁的工人。如今,经济的相当一部分已处于公共控制之下。 ?]
 
-- @decrees_2: Excellent.
+- @decrees_2: 好极了。
 
 @nationalize_without_compensation
-title: Nationalize without compensation.
-subtitle: There is no reason why we should not simply take over idle factories. This is likely to provoke a confrontation with the capitalists.
+title: 无偿国有化。
+subtitle: 我们没理由不干脆接管那些闲置工厂。这很可能会引发与资本家的对抗。
 unavailable-subtitle: [? if left_strength <= reformist_strength + center_strength: 党内多数并不支持这一半合法的举措。 ?] [? if judicial_reform < 3 : 司法界会反对这一举措。 ?]
 choose-if: left_strength > reformist_strength + center_strength and judicial_reform >= 3
 on-arrival: nationalization_progress += 1; bourgeois_power -= 0.1; capital_strike_progress += 7; coup_progress += 3; unemployed -= 2.5 if unemployed >= 6; unemployed -= 1.2 if works_councils >= 3 and unemployed >= 3; works_program += 1; workers_spd += 8*(1-dissent); unemployed_spd += 6*(1-dissent); coalition_dissent += 2; dvp_relation -= 10; z_relation -= 8; ddp_relation -= 8; left_strength += 15; reformist_dissent += 10; left_dissent -= 10; new_middle_spd -= 5; new_middle_spd += 3 if new_middle_conscious; old_middle_spd -= 8; economy_goal_completed += 1; kpd_relation += 5*(1-dissent); inflation += 4
@@ -1036,11 +1036,11 @@ achievement: wirtschaftspolitik
 
 [? if nationalization_progress > 1 : 我们又取得了更多未被充分利用的企业,与工厂委员会以协调的社会主义方式经营,并重新雇用先前被裁的工人。如今,经济的相当一部分已处于公共控制之下。 ?]
 
-- @decrees_2: Excellent.
+- @decrees_2: 好极了。
 
 @empower_workers
-title: Empower workers to take over factories.
-subtitle: We can promise to legalize factory occupations, giving the factories over to worker unions. This is highly confrontational, and would likely provoke a reaction from right-wing militants as well as capitalists.
+title: 赋权工人接管工厂。
+subtitle: 我们可以承诺使占领工厂合法化,把工厂交给工人工会。此举极具对抗性,很可能招致右翼武装分子乃至资本家的反扑。
 unavailable-subtitle: [? if left_strength <= reformist_strength + neorevisionist_strength : 党内多数并不支持这一激进举措。 ?] [? if judicial_reform < 3 : 司法界会反对这一举措。 ?] [? if rb_militancy < 0.25 : 若能增强我们准军事组织的力量,或许可以这么做。 ?] [? if works_councils < 1 : 我们需要先获得工厂委员会的支持。 ?]
 choose-if: left_strength > reformist_strength + neorevisionist_strength and (judicial_reform >= 3 or rb_militancy >= 0.25) and works_councils >= 1
 on-arrival: nationalization_progress += 1; bourgeois_power -= 0.1; capital_strike_progress += 6; unemployed -= 3 if unemployed >= 6; unemployed -= 1.5 if works_councils >= 3 and unemployed > 4; works_program += 1; workers_spd += 10*(1-dissent); unemployed_spd += 10*(1-dissent); coalition_dissent += 2; dvp_relation -= 10; z_relation -= 8; ddp_relation -= 8; workers_nsdap -= 5*(1-dissent); unemployed_nsdap -= 5*(1-dissent); left_strength += 15; reformist_dissent += 10; left_dissent -= 10; new_middle_spd -= 5; new_middle_spd += 2 if new_middle_conscious; old_middle_spd -= 10; factory_takeovers += 1; economy_goal_completed += 1; kpd_relation += 5*(1-dissent); inflation += 3
@@ -1048,49 +1048,49 @@ achievement: wirtschaftspolitik
 
 不出所料,资本家对我们将工厂占领合法化的政策群情激愤。他们称之为非法征用 —— 确实如此。然而,他们的失败显而易见,我们必须采取激进行动。
 
-- @decrees_2: Excellent.
+- @decrees_2: 好极了。
 
 @wealth_seizure
 view-if: not wealth_seized
 choose-if: rb_force+rfb_force >= army_force and left_strength >= 50
 unavailable-subtitle: 国防军不允许这样做。
-subtitle: +7 budget.
+subtitle: +7 财政预算。
 on-arrival: wealth_seized = 1; upper_tax_rates += 3; bourgeois_power -= 0.25; coalition_dissent += 3; workers_spd += 6*(1-dissent); unemployed_spd += 6*(1-dissent); z_relation -= 10; ddp_relation -= 12; dvp_relation -= 16; pro_republic -= 8; budget += 7; capital_strike_progress += 15; old_middle_spd *= 0.25; new_middle_spd *= 0.6
 
 在一场大规模的财富再分配中,我们夺取了富人的资产乃至国家银行,大大增加了我们的预算。当然,资产阶级及其政党立即对此群情激愤,威胁着我们临时的执政联盟。
 
-- @decrees_2: Excellent.
+- @decrees_2: 好极了。
 
 @dnvp_ban
 view-if: not dnvp_banned
 choose-if: rb_force+rfb_force >= army_force
 unavailable-subtitle: [? if left_strength >= 50 : 国防军不允许这样做。 ?][? if left_strength < 50 : 党内不允许这样做。 ?]
-subtitle: We will deny the remaining reactionaries a party.
+subtitle: 我们将让残余的反动派失去政党。
 on-arrival: dnvp_banned = 1; dvp_relation -= 5; z_relation -= 4 if z_party_leader != "Joos"; pro_republic -= 4; old_middle_dnvp *= 0.9; rural_dnvp *= 0.95; new_middle_dnvp *= 0.8; sh_strength *= 0.9; sh_militancy -= 0.05
 
 我们认定国家人民党本身也参与了极右翼反共和国的斗争,因此同样取缔了该党,以防其在胡根贝格缺席、无人领导的情况下可能出现的温和转向。
 
-- @decrees_2: Excellent.
+- @decrees_2: 好极了。
 
 @dvp_ban
 choose-if: rb_force+rfb_force >= army_force and (left_strength > reformist_strength + center_strength)
 unavailable-subtitle: 国防军不允许这样做。
 view-if: not dvp_banned and dnvp_banned
-subtitle: The DVP are hardly better than the other reactionaries.
+subtitle: 人民党并不比其他反动派好到哪里去。
 on-arrival: dvp_banned = 1; reformist_dissent += 15; center_dissent += 5; z_relation -= 10; ddp_relation -= 10; coalition_dissent += 2; pro_republic -= 7; new_middle_spd -= 4; old_middle_spd -= 5
 
 我们取缔了人民党,以及许多与之相邻的较小资产阶级反动政党。让它们在我们的新共和国中继续存在,是对我们社会主义原则的威胁。遗憾的是,中央党与民主党 / 国家党并不这么看。
 
-- @decrees_2: Excellent.
+- @decrees_2: 好极了。
 
 @enable
 view-if: not enabling_act
-subtitle: This will be controversial.
+subtitle: 这将引发争议。
 on-arrival: pro_republic -= 10; z_relation -= 6; z_relation -= 6 if z_party_leader == "Kaas"; ddp_relation -= 5; dvp_relation -= 12; enabling_act = 1
 
 我们通过一部授权法案,赋予内阁极大的权力,以打击并彻底铲除纳粹。
 
-- @decrees_2: Excellent.
+- @decrees_2: 好极了。
 
 @decrees_2
 go-to: decrees
@@ -1108,15 +1108,15 @@ view-if: kpd_relation < 45 and not communists_decided
 
 共产党人在我们反抗希特勒的起义中并未相助。可以说,他们还通过自己极端反宪制的言辞,助长了希特勒的崛起。我们可以连同纳粹党一起取缔该党,尽管左翼对此坚决反对。
 
-- @ban: Ban the KPD
-- @agenda_reb: We will allow the KPD to continue to exist.
+- @ban: 查禁共产党
+- @agenda_reb: 我们将允许共产党继续存在。
 
 @ban
 on-arrival: kpd_banned = 1; left_dissent += 40; workers_spd -= 5; unemployed_spd -= 5; new_middle_spd += 2; old_middle_spd += 2; z_relation += 10; ddp_relation += 5; dvp_relation += 5
 
 我们取缔了共产党。许多工人退党 —— 是共产党鼓动他们这么做的;与此同时,我党左翼对我党政策越来越不满。
 
-- @agenda_reb: Continue...
+- @agenda_reb: 继续……
 
 @council
 view-if: (((kpd_relation >= 60 and ((left_strength >= reformist_strength + neorevisionist_strength) or (in_left_front == 1))) and supreme_soviet != 1 and not (nationalization_progress + socializations >= 3 and works_councils >= 3 and (president != "Hindenburg" or presidential_powers == 1))) and chancellorship_decided and constitution_decided) and reichstag_decided != 1
@@ -1124,8 +1124,8 @@ on-arrival: reichstag_decided = 1
 
 我党左翼以及共产党中的许多人都把纳粹夺取国家政权归咎于自由民主制本身,并呼吁解散国会,代之以工人委员会的「最高苏维埃」。这一想法遭到我党右翼与我们的资产阶级盟友反对。
 
-- @supreme_soviet_3: And so it shall be.
-- @bad_idea: No, we will keep the Reichstag.
+- @supreme_soviet_3: 就这么办吧。
+- @bad_idea: 不,我们将保留国会。
 
 @supreme_soviet_3
 on-arrival: economic_democracy += (3-works_councils) if works_councils < 3; works_councils = 3 if works_councils < 3; kpd_relation += 20; left_strength += 15; labor_strength += 10; labor_dissent += 5; left_dissent -= 10; reformist_dissent += 10; neorevisionist_dissent += 5; constitutional_reform += 1; supreme_soviet = 1; capital_strike_progress += 15; z_relation -= 15; ddp_relation -= 25; dvp_relation -= 50
@@ -1145,9 +1145,9 @@ on-arrival: workers_kpd += 10; workers_spd -= 5; unemployed_kpd += 15; unemploye
 
 反动派的失败让我们与我们的社会主义盟友近乎无可争议地掌控了这个国家。 [? if president == "Thälmann" : 然而,共产党在这段关系中占据明显上风,我们必须小心。 ?]
 
-- @the_agenda_kpd: Now, the agenda.
-- @the_agenda_spd: Now, the agenda.
-- @the_agenda_power: Now, the agenda.
+- @the_agenda_kpd: 现在,议程。
+- @the_agenda_spd: 现在,议程。
+- @the_agenda_power: 现在,议程。
 
 @the_agenda_kpd
 view-if: president == "Thälmann" and presidential_powers != 1
@@ -1162,11 +1162,11 @@ go-to: menu
 
 DEBUG: [+ negotiating_power +]
 
-- @chancellorship_kpd: The cabinet.
-- @party_legality: The parties.
+- @chancellorship_kpd: 内阁。
+- @party_legality: 各政党。
 - @constitution: 宪法。
-- @decrees_kpd: The country.
-- @noske: It is clear negotiation won't work. We must crush the KPD.
+- @decrees_kpd: 国家。
+- @noske: 显然谈判行不通。我们必须镇压共产党。
 
 @chancellorship_kpd
 view-if: not chancellorship_decided
@@ -1174,11 +1174,11 @@ on-arrival: chancellorship_decided = 1
 
 由于反动派在台尔曼当选后立即起事,他始终未能任命一个真正的内阁或总理。我们可以让共产党掌握总理之位以换取更多谈判筹码,或者按共产党大体上预期的那样提名布赖特沙伊德。
 
-- @pieck: Accept the KPD pick, Wilhelm Pieck.
-- @eberlein: Accept the KPD pick, Hugo Eberlein.
-- @breitscheid_kpd: Nominate Rudolf Breitscheid from our party.
-- @ossietzky: Perhaps the independent Carl von Ossietzky as a compromise?
-- @go_back: Back.
+- @pieck: 接受共产党的人选:威廉·皮克。
+- @eberlein: 接受共产党的人选:胡戈·埃伯莱因。
+- @breitscheid_kpd: 提名我党的鲁道夫·布赖特沙伊德。
+- @ossietzky: 或许以无党籍的卡尔·冯·奥西茨基作为折中?
+- @go_back: 返回。
 
 @pieck
 view-if: kpd_party_leader != "Conciliators"
@@ -1186,7 +1186,7 @@ on-arrival: negotiating_power += 10; chancellor_party = "KPD"; chancellor = "Pie
 
 我们接受共产党的选择威廉·皮克,把内阁的相当一部分控制权让给共产党。
 
-- @cabinet_thalmann: Now for the cabinet.
+- @cabinet_thalmann: 接下来是内阁。
 
 @eberlein
 view-if: kpd_party_leader == "Conciliators"
@@ -1194,7 +1194,7 @@ on-arrival: negotiating_power += 10; chancellor_party = "KPD"; chancellor = "Ebe
 
 我们接受共产党的选择胡戈·埃伯莱因,把内阁的相当一部分控制权让给共产党。
 
-- @cabinet_thalmann: Now for the cabinet.
+- @cabinet_thalmann: 接下来是内阁。
 
 @breitscheid_kpd
 choose-if: negotiating_power >= 10
@@ -1203,14 +1203,14 @@ on-arrival: negotiating_power -= 10; chancellor_party = "SPD"; chancellor = "Bre
 
 我们提名自己的候选人鲁道夫·布赖特沙伊德,共产党接受了。我党因此安心,但这削弱了我们反对共产党其他动作的力量。
 
-- @cabinet_thalmann: Interesting.
+- @cabinet_thalmann: 有意思。
 
 @ossietzky
 on-arrival: chancellor_party = "I"; chancellor = "Ossietzky"
 
 作为折中,我们提名了独立社会主义者卡尔·冯·奥西茨基。共产党感到意外,但谨慎地接受了。但愿奥西茨基没有自己的算盘,乐于做个名义领袖。
 
-- @cabinet_thalmann: Let's hope...
+- @cabinet_thalmann: 但愿……
 
 @go_back
 on-arrival: chancellorship_decided = 0
@@ -1223,16 +1223,16 @@ on-arrival: cabinet_stubborn = 50; cabinet_stubborn += 10 if kpd_party_leader ==
 
 他们要求掌控劳工部、经济部、外交部、内政部与财政部。[? if chancellor_party == "KPD" : 所幸,让出总理之位会让他们更容易在这些要求上被谈下来。 ?]
 
-- @unconditional_accept: We will accept the KPD's ministry demands, and take the rest for ourselves.
-- @negotiate: We will convince the KPD to drop some of their demands.
-- @sole_spd: We will convince the KPD to allow an all-SPD cabinet.
+- @unconditional_accept: 我们接受共产党的部会要求,其余部会归我们自己。
+- @negotiate: 我们将说服共产党放弃部分要求。
+- @sole_spd: 我们将说服共产党容许一个清一色社民党的内阁。
 
 @unconditional_accept
 on-arrival: kpd_relation += 10; negotiating_power += 10; negotiating_power += 10 if chancellor_party = "KPD"; labor_minister_party = "KPD"; economic_minister_party = "KPD"; interior_minister_party = "KPD"; foreign_minister_party = "KPD"; finance_minister_party = "KPD"; justice_minister_party = "SPD"; agriculture_minister_party = "SPD"; reichswehr_minister_party = "SPD"
 
 令共产党意外的是,我们让了步,答应了他们对部委的要求。这将使其他事项的谈判更容易些。
 
-- @menu: Now, onwards...
+- @menu: 那么,继续……
 
 @negotiate
 choose-if: (negotiating_power >= (cabinet_stubborn/3)) or chancellor_party == "KPD"
@@ -1247,11 +1247,11 @@ go-to: begin_ministries
 我们要说服他们放弃哪些部委?
 
 - @sway_labor: 说服他们放弃劳工部。
-- @sway_interior: Persuade them to drop the Interior Ministry.
-- @sway_finance: Persuade them to drop the Finance Ministry.
-- @sway_economic: Persuade them to drop the Economic Ministry.
-- @sway_foreign: Persuade them to drop the Foreign Ministry.
-- @let_it_be: This is an acceptable cabinet arrangement.
+- @sway_interior: 说服他们放弃内政部。
+- @sway_finance: 说服他们放弃财政部。
+- @sway_economic: 说服他们放弃经济部。
+- @sway_foreign: 说服他们放弃外交部。
+- @let_it_be: 这个内阁安排可以接受。
 
 @sway_labor
 view-if: labor_minister_party == "KPD"
@@ -1261,7 +1261,7 @@ on-arrival: labor_minister_party = "SPD"; negotiating_power -= individual_cabine
 
 我们成功说服共产党把劳工部让给我们。
 
-- @begin_ministries: Excellent.
+- @begin_ministries: 好极了。
 
 @sway_interior
 view-if: interior_minister_party == "KPD"
@@ -1271,7 +1271,7 @@ on-arrival: interior_minister_party = "SPD"; negotiating_power -= individual_cab
 
 我们成功说服共产党把内政部让给我们。
 
-- @begin_ministries: Excellent.
+- @begin_ministries: 好极了。
 
 @sway_finance
 view-if: finance_minister_party == "KPD"
@@ -1281,7 +1281,7 @@ on-arrival: finance_minister_party = "SPD"; negotiating_power -= individual_cabi
 
 我们成功说服共产党把财政部让给我们。
 
-- @begin_ministries: Excellent.
+- @begin_ministries: 好极了。
 
 @sway_economic
 view-if: economic_minister_party == "KPD"
@@ -1291,7 +1291,7 @@ on-arrival: economic_minister_party = "SPD"; negotiating_power -= individual_cab
 
 我们成功说服共产党把经济部让给我们。
 
-- @begin_ministries: Excellent.
+- @begin_ministries: 好极了。
 
 @sway_foreign
 view-if: foreign_minister_party == "KPD"
@@ -1301,7 +1301,7 @@ on-arrival: foreign_minister_party = "SPD"; negotiating_power -= individual_cabi
 
 我们成功说服共产党把外交部让给我们。
 
-- @begin_ministries: Excellent.
+- @begin_ministries: 好极了。
 
 @let_it_be
 view-if: cabinet_spot >= 1
@@ -1315,7 +1315,7 @@ on-arrival: negotiating_power -= (cabinet_stubborn*2); labor_minister_party = "S
 
 我们设法说服共产党让我们掌控内阁。但愿这值得。
 
-- @menu: Onwards...
+- @menu: 继续……
 
 @party_legality
 view-if: party_decided != 1
@@ -1323,15 +1323,15 @@ on-arrival: party_decided = 1; party_stubborn = 50 if kpd_party_leader != "Conci
 
 共产党坚决要取缔各反动政党,而且极可能推动对资产阶级政党施以同样严厉的打击。 [? if peoples_party : 我们自己作为「全民党」的身份,甚至让共产党中一些人呼吁把我们一并取缔。 ?]
 
-- @defend_joos: Stand up for the Center Party.
-- @defend_kaas: Stand up for the Center Party.
-- @defend_ddp: Stand up for the DDP/DStP.
-- @finalize_party: We're finished in this department.
-- @go_back_2: Back.
+- @defend_joos: 为中央党说话。
+- @defend_kaas: 为中央党说话。
+- @defend_ddp: 为民主党/国家党说话。
+- @finalize_party: 这一块我们处理完了。
+- @go_back_2: 返回。
 
 @defend_joos
 view-if: z_party_leader == "Joos" and not z_safe
-subtitle: The dominance of trade unions in the party makes this easier.
+subtitle: 工会在党内的主导地位让此事更容易些。
 unavailable-subtitle: 我们缺乏成功抗议此事的谈判筹码。
 choose-if: negotiating_power >= party_stubborn
 on-arrival: negotiating_power -= party_stubborn; z_relation += 5; z_safe = 1
@@ -1372,18 +1372,18 @@ on-arrival: kpd_constitution_decided = 1; constitution_stubborn = 80; constituti
 
 共产党对德国宪法的剧烈变革有许多设想,主要是向委员会共和国过渡。既然反动派已被粉碎,要说服共产党不向委员会共和国过渡将非常困难。
 
-- @accept_soviet: Accept the KPD's wishes for a council republic.
-- @conditional: We will agree if the KPD passes other constitutional amendments that we want.
-- @refuse_soviet: We will not compromise the foundations of our republic.
-- @go_back_3: Back.
+- @accept_soviet: 接受共产党建立委员会共和国的意愿。
+- @conditional: 若共产党愿意通过我们想要的其它宪法修正案,我们就同意。
+- @refuse_soviet: 我们不会拿共和国的根基做交易。
+- @go_back_3: 返回。
 
 @accept_soviet
 on-arrival: amendment_cost = 30; reformist_dissent += 15; left_strength += 10; supreme_soviet = 1; z_relation -= 10; ddp_relation -= 10; dvp_relation -= 10; workers_kpd += 10
 
 我们接受了共产党向委员会共和国迈进的要求,令他们满意。若愿意,我们还可以推动其他宪法修正案。
 
-- @other_amendments: Push for other constitutional amendments.
-- @menu: The constitution is good as is.
+- @other_amendments: 推动其它宪法修正案。
+- @menu: 宪法维持现状就好。
 
 @conditional
 choose-if: negotiating_power >= constitution_stubborn
@@ -1392,7 +1392,7 @@ on-arrival: kpd_relation -= 10; negotiating_power -= constitution_stubborn; amen
 
 共产党对我们拒绝给他们一张空白支票去搞他们的苏维埃图谋极为愤怒,但还是同意先「考虑」我们的其他提案。
 
-- @other_amendments: So, first off...
+- @other_amendments: 那么,首先……
 
 @refuse_soviet
 choose-if: negotiating_power >= (constitution_stubborn*2.5)
@@ -1401,7 +1401,7 @@ on-arrival: kpd_relation -= 15; negotiating_power -= (constitution_stubborn*2.5)
 
 共产党对我们的断然拒绝怒不可遏,但不知怎的还是极不情愿地接受了 —— 或许是因为我们相对强势的地位。他们毫不迟延地公布我们的拒绝并开展反对我们的宣传;总的来说,这对合作不是好兆头。
 
-- @menu: And so the constitution will remain unchanged...
+- @menu: 于是宪法将保持不变……
 
 @go_back_3
 on-arrival: kpd_constitution_decided = 0
@@ -1411,21 +1411,21 @@ go-to: menu
 
 共产党愿意听我们把提案说完。
 
-- @vote_threshold_kpd: Change the vote threshold.
-- @constructive_vonc_kpd: Ban non-constructive votes of no confidence.
-- @presidential_powers_kpd: Reduce presidential powers.
-- @menu: We have done enough in this department. Next.
+- @vote_threshold_kpd: 修改得票门槛。
+- @constructive_vonc_kpd: 禁止非建设性的不信任案。
+- @presidential_powers_kpd: 削减总统权力。
+- @menu: 这一块我们已经做得够多了。下一项。
 #- @constitutional_bans: Allow the banning of anti-constitutional parties.
 #- @constitutional_convention: Hold a constitutional convention to draft a wholly new constitution for the country.
 
 @vote_threshold_kpd
-subtitle: Change the vote threshold to 5% for parties to be represented in the Reichstag.
+subtitle: 把政党进入国会所需的得票门槛改为 5%。
 view-if: electoral_threshold = 0
 
 共产党对选举门槛的设想总体态度模棱两可,却非常乐于接受 —— 或许出于与我们不同的理由。不过,左翼已说服他们反对这项修正案,哪怕只是做做样子。
 
-- @vote_threshold_3: We will convince the KPD.
-- @other_amendments: See other reform options.
+- @vote_threshold_3: 我们将说服共产党。
+- @other_amendments: 查看其他改革选项。
 
 
 @vote_threshold_3
@@ -1440,13 +1440,13 @@ go-to: other_amendments
 
 
 @constructive_vonc_kpd
-subtitle: Votes of no confidence can only be called if an alternative plan for government formation can be passed, greatly reducing their incidence.
+subtitle: 只有当存在一份可行的替代组阁方案时,才能提出不信任案 —— 这将大幅减少此类提案的发生。
 view-if: constructive_vonc = 0
 
 [? if chancellor_party == "KPD" : 鉴于最近已同意由共产党出任此职,共产党再乐意不过地接受了这一安排。 ?][? if chancellor_party != "KPD" : 共产党对此设想没有强硬立场,但总体上反对,因为担心这会削弱他们的影响。 ?]
 
-- @constructive_vonc_3: We will convince the KPD.
-- @other_amendments: See other reform options.
+- @constructive_vonc_3: 我们将说服共产党。
+- @other_amendments: 查看其他改革选项。
 
 @constructive_vonc_3
 choose-if: (negotiating_power >= amendment_cost) or chancellor_party == "KPD"
@@ -1457,14 +1457,14 @@ go-to: other_amendments
 我们成功通过了一项宪法修正案,禁止在无法组建新政府时提出不信任案。但愿这能提升我们政府的稳定性。
 
 @presidential_powers_kpd
-subtitle: The president can no longer dissolve the Reichstag at will, or call a *Reichsexekution* on state governments.
+subtitle: 总统不再能随意解散国会,或对州政府实施*国家执行*。
 view-if: presidential_powers = 0
 on-arrival: multiplier = 3.5 if kpd_party_leader != "Conciliators"; multiplier = 2 if kpd_party_leader = "Conciliators"; multiplier += 0.5 if no_enabling
 
 共产党强烈反对削弱总统权力,视之为对他们的直接攻击,并把这一推动视为不信任的信号。 [? if kpd_party_leader == "Conciliators" : 不过,由调和派领导的共产党更为通情达理,也更容易被说服。 ?]
 
-- @presidential_powers_3: We will convince the KPD.
-- @other_amendments: See other reform options.
+- @presidential_powers_3: 我们将说服共产党。
+- @other_amendments: 查看其他改革选项。
 
 @presidential_powers_3
 choose-if: negotiating_power >= (amendment_cost*multiplier)
@@ -1480,12 +1480,12 @@ view-if: not decree_kpd_decided
 
 台尔曼总统计划了许多拟通过宪法第 48 条颁布的法令。其中许多对共产党来说恐怕没有商量余地,但我们可以尽力说服他不要推行其中一些。
 
-- @land_social_kpd: Mass socialization and collectivization of land.
-- @wealth_seizure_kpd: Mass seizure of wealth.
-- @mass_nationalize: Mass nationalizations of industry.
-- @enable_kpd: An "Enabling Act" to help eliminate the reactionaries.
-- @done: We have decided on everything.
-- @go_back_4: Back.
+- @land_social_kpd: 对土地实行大规模社会化与集体化。
+- @wealth_seizure_kpd: 大规模没收财富。
+- @mass_nationalize: 对工业实行大规模国有化。
+- @enable_kpd: 一项「授权法案」,以助清除反动派。
+- @done: 一切均已议定。
+- @go_back_4: 返回。
 
 @land_social_kpd
 view-if: land_decided != 1
@@ -1495,37 +1495,37 @@ on-arrival: land_social_cost = (6 - land_reform); land_seizure_cost = (4 - land_
 
 不过,我党许多人担心,土地所有权如此剧烈的变动可能危及我们的粮食安全。我们该怎么办?
 
-- @accept_social: Allow the decree.
-- @negotiate_social: Negotiate the Communists down to a simple land reform program.
-- @refuse_social: Convince the KPD to drop the decree altogether.
+- @accept_social: 允许该法令。
+- @negotiate_social: 与共产党谈,把它压到一份简单的土地改革方案。
+- @refuse_social: 说服共产党完全放弃该法令。
 
 @accept_social
-subtitle: -[+ land_social_cost +] budget.
+subtitle: -[+ land_social_cost +] 财政预算。
 on-arrival: budget -= land_social_cost; land_decided = 1; socialized_land = 1; reformist_dissent += 5; negotiating_power += 10 if chancellor_party == "KPD"; land_reform += land_social_cost; pro_republic -= (4*land_social_cost); rural_kpd += land_social_cost; rural_nsdap -= (land_social_cost*2); unemployed -= land_social_cost if unemployed >= land_social_cost; dvp_relation -= (7*land_social_cost); z_relation -= (6*land_social_cost); ddp_relation -= (4*land_social_cost); left_strength += (10*land_social_cost); left_dissent -= (8*land_social_cost); rural_sol += land_social_cost; sa_strength += 50; sh_strength += 25; sa_militancy += 0.05
 
 法令得以签署,乡间一场大规模的社会化与集体化运动随之展开。目前,它大体上进展顺利,但社民党中许多人仍心怀警惕。
 
-- @decrees_kpd: Next on the agenda...
+- @decrees_kpd: 下一项议程……
 
 @negotiate_social
-subtitle: -[+ land_seizure_cost +] budget.
+subtitle: -[+ land_seizure_cost +] 财政预算。
 unavailable-subtitle: 共产党不愿在这个问题上让步。
 choose-if: negotiating_power >= (land_stubborn/2)
 on-arrival: negotiating_power -= (land_stubborn/2); budget -= land_seizure_cost; land_decided = 1; land_reform += land_seizure_cost; pro_republic -= (4*land_seizure_cost); rural_kpd += (land_seizure_cost*3); rural_spd += ((land_seizure_cost*2)*(1-dissent)); rural_nsdap -= land_seizure_cost*(4*(1-dissent)); unemployed -= land_seizure_cost if unemployed >= 5; dvp_relation -= (5*land_seizure_cost); z_relation -= (4*land_seizure_cost); left_strength += (8*land_seizure_cost); left_dissent -= (5*land_seizure_cost); rural_sol += (3*land_seizure_cost); rural_policy += land_seizure_cost; sa_strength += 25; sh_strength += 10; sa_militancy += 0.05
 
 共产党让步了,同意一项更为温和的征地方案 —— 它仍会拆解乡间的反动权力基础,却不会那么剧烈地打破那里的权力平衡。
 
-- @decrees_kpd: Next on the agenda...
+- @decrees_kpd: 下一项议程……
 
 @refuse_social
-subtitle: This may offend the KPD.
+subtitle: 这可能触怒共产党。
 choose-if: negotiating_power >= land_stubborn
 unavailable-subtitle: 共产党不愿在这个问题上让步。
 on-arrival: negotiating_power -= land_stubborn; kpd_relation -= 5; kpd_coalition_dissent += 1 if chancellor_party != "KPD"; rural_spd -= 3; land_decided = 1
 
 共产党对我们眼下不愿推行任何农业改革感到震惊,但还是让了步。不过,若不要这一项,他们肯定会索要其他让步。
 
-- @decrees_kpd: Next on the agenda...
+- @decrees_kpd: 下一项议程……
 
 @wealth_seizure_kpd
 view-if: wealth_decided != 1
@@ -1533,21 +1533,21 @@ on-arrival: wealth_stubborn = 60; wealth_stubborn -= 20 if kpd_party_leader == "
 
 为了给其他计划筹资,共产党拟定了没收富人资产、将国家银行国有化及其他类似措施的计划。然而,这样的行动必定会引发与资本家的正面对抗。
 
-- @accept_seizure: Allow the decree.
-- @refuse_seizure: Convince the KPD to drop the decree.
+- @accept_seizure: 允许该法令。
+- @refuse_seizure: 说服共产党放弃该法令。
 
 @accept_seizure
 on-arrival: wealth_decided = 1; wealth_seized = 1; upper_tax_rates += 3; workers_spd += 6*(1-dissent); unemployed_spd += 6*(1-dissent); z_relation -= 10; ddp_relation -= 12; dvp_relation -= 16; pro_republic -= 8; budget += 6; capital_strike_progress += 15; old_middle_spd *= 0.25; new_middle_spd *= 0.6
 
 我们允许共产党推行这项法令,这大大增加了政府可用于其他指令的预算。
 
-- @decrees_kpd: Next on the agenda...
+- @decrees_kpd: 下一项议程……
 
 @refuse_seizure
 choose-if: negotiating_power >= wealth_stubborn
 on-arrival: kpd_relation -= 5; kpd_coalition_dissent += 1 if chancellor_party != "KPD"; negotiating_power -= wealth_stubborn; left_dissent += 10; wealth_decided = 1
 
-- @decrees_kpd: Next on the agenda...
+- @decrees_kpd: 下一项议程……
 
 @mass_nationalize
 view-if: left_decided != 1
@@ -1555,8 +1555,8 @@ on-arrival: left_stubborn = 100; left_stubborn -= 10 if chancellor_party == "KPD
 
 共产党希望把经济置于国家控制之下,已拟定一份大规模产业国有化的法令,声称它将终结大萧条,并通过拆解资本主义确保它永不重演。
 
-- @allow_nationalization: Allow the decree.
-- @refuse_nationalization: Convince the KPD to drop the decree.
+- @allow_nationalization: 允许该法令。
+- @refuse_nationalization: 说服共产党放弃该法令。
 
 @allow_nationalization
 on-arrival: left_decided = 1; nationalization_progress += 1; pro_republic -= 6; capital_strike_progress += 2; unemployed -= 3.5 if unemployed >= 6; new_middle_kpd += 5 if economic_minister_party == "KPD"; unemployed -= 1.2 if works_councils >= 3; workers += 2.5; budget -= nationalize_budget; works_program += 1; workers_kpd += 6; unemployed_kpd += 4; coalition_dissent += 1; dvp_relation -= 4; left_dissent -= 5; old_middle_spd -= 2; economy_goal_completed += 1; inflation += 2
@@ -1565,7 +1565,7 @@ on-arrival: left_decided = 1; nationalization_progress += 1; pro_republic -= 6; 
 
 # TODO: distinction between deficit or no deficit
 
-- @decrees_kpd: Next on the agenda...
+- @decrees_kpd: 下一项议程……
 
 @refuse_nationalization
 choose-if: negotiating_power >= left_stubborn
@@ -1574,7 +1574,7 @@ on-arrival: kpd_relation -= 10; left_dissent += 5; workers_spd -= 5; workers_kpd
 
 我们说服共产党不要推行大规模国有化 —— 尽管他们绝没有放弃这一想法,很可能只是因为相比之下我们的地位更为有利才退让。他们开展反对我们的宣传;总的来说,这场争执对长远的合作不是好兆头。
 
-- @decrees_kpd: Next on the agenda...
+- @decrees_kpd: 下一项议程……
 
 @enable_kpd
 view-if: enable_decided != 1
@@ -1582,15 +1582,15 @@ on-arrival: enable_stubborn = 100; enable_stubborn -= 50 if kpd_party_leader == 
 
 共产党以彻底清除反动派的需要为理由,起草了一部「授权法案」,赋予总统与内阁更为广泛的权力。 [? if kpd_party_leader != "Conciliators" : 共产党对此提案颇为坚持,使许多人认为它不过是他们集权于己的借口。 ?]
 
-- @accept_enabling: Allow the decree.
-- @refuse_enabling: Convince the KPD to drop the decree.
+- @accept_enabling: 允许该法令。
+- @refuse_enabling: 说服共产党放弃该法令。
 
 @accept_enabling
 on-arrival: negotiating_power += 10 if chancellor_party == "KPD"; negotiating_power += 10 if presidential_powers != 1; enable_decided = 1; workers_kpd += 10; rfb_strength += 100; rfb_militancy += 0.05; reichswehr_militancy -= 0.05; unemployed_kpd += 10; unemployed_nsdap -= 10; new_middle_kpd += 10 if chancellor_party == "KPD"; old_middle_nsdap -= 10; new_middle_nsdap -= 10; rural_nsdap -= 10; strife += 1; pro_republic -= 10; z_relation -= 6; z_relation -= 6 if z_party_leader == "Kaas"; ddp_relation -= 5; dvp_relation -= 12; enabling_act = 1; reformist_dissent += 10; neorevisonist_dissent += 15
 
 我们允许共产党推行他们的授权法案。立即,针对残余纳粹党据点的打击大规模展开,而针对其他被取缔的右翼政党的类似行动也在筹备。改良派与新修正主义派抗议我们的顺从 —— 在他们看来,那不过是苏维埃赤裸裸的集权。
 
-- @decrees_kpd: Next on the agenda...
+- @decrees_kpd: 下一项议程……
 
 @refuse_enabling
 choose-if: negotiating_power >= enable_stubborn
@@ -1599,7 +1599,7 @@ unavailable-subtitle: 共产党不愿在这个要求上让步。
 
 我们说服共产党不要推行这项法令,理由是它只会坚定反共和势力的信念,并让我们显得并不比他们更好。 [? if kpd_party_leader != "Conciliators" : 共产党把我们称作意志软弱的宪政派,说我们的不作为将纵容反动势力卷土重来;尽管如此,他们还是退让了。 ?]
 
-- @decrees_kpd: Next on the agenda...
+- @decrees_kpd: 下一项议程……
 
 @done
 view-if: land_decided == 1 and wealth_decided == 1 and left_decided == 1 and enable_decided == 1
@@ -1616,7 +1616,7 @@ view-if: month == 13
 
 我讨厌诺斯克,抱歉,下次再试吧。
 
-- @menu: Aw man.
+- @menu: 哎呀。
 
 @the_agenda_spd
 view-if: president != "Thälmann"

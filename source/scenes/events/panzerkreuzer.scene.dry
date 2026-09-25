@@ -1,5 +1,5 @@
-title: Panzerkreuzer A
-subtitle: A political question
+title: 装甲巡洋舰 A
+subtitle: 一个政治问题
 tags: event, govt_affairs
 is-card: true
 on-arrival: panzerkreuzer_seen = 1
@@ -11,9 +11,9 @@ new-page: true
 The Reichswehr Ministry is demanding the construction of a new battlecruiser, as part of Germany's rearmament. Our coalition partners are united in support. While many of our members are vehemently against new military spending, this vote may be necessary to preserve the coalition. 
 We campaigned on food for children instead of battlecruisers. Will we really betray our campaign promises?
 
-- @vote_yes: Vote yes, for constructing the battlecruiser.
-- @vote_no: Vote no, against constructing the battlecruiser.
-- @abstain: Abstain from the vote.
+- @vote_yes: 投赞成票,建造这艘战列巡洋舰。
+- @vote_no: 投反对票,反对建造这艘战列巡洋舰。
+- @abstain: 弃权。
 
 @vote_yes
 on-arrival: bill_support = bourgeois_coalition+far_right_coalition; bill_support += spd_r*(0.75-dissent); bill_support = 100*(bill_support/(100-(spd_r*dissent))); left_dissent += 10; labor_dissent += 5; center_dissent += 5; reformist_dissent += 5; neorevisionist_dissent += 5; panzerkreuzer_funded = 1; kpd_coalition_dissent += 1; kpd_relation -= 6; workers_spd -= 3; socialism -= 3; {!

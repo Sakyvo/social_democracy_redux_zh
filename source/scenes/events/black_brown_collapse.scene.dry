@@ -1,4 +1,4 @@
-title: Brüning's government falls
+title: 布吕宁政府垮台
 subtitle: The NSDAP has withdrawn from his cabinet
 view-if: in_right_coalition and nsdap_toleration and (month >= collapse_month and year == collapse_year) or (year > collapse_year)
 max-visits: 1

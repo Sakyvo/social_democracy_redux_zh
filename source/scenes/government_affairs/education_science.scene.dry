@@ -32,7 +32,7 @@ view-if: not last_advisor_action
 - @increase_science
 - @structure
 - @curriculum
-- @return: Do not enact any policies for now.
+- @return: 暂时不推行任何政策。
 - @easy_discard
 - @cancel_advisor_action
 
@@ -94,7 +94,7 @@ on-arrival: budget -= 1; science += 1; medical_research += 1; economic_growth +=
 
 @cut_funding
 title: Cut science funding.
-subtitle: +1 budget
+subtitle: +1 财政预算
 choose-if: science_funding >= 1
 unavailable-subtitle: 我们尚未资助科学。
 on-arrival: cut_science_vote = 1
@@ -194,24 +194,24 @@ unavailable-subtitle: [? if curriculum_timer > 0 : 现在就再次修改课程�
 # note: education_science is a variable that affects how much education affects economic growth.
 
 @dem_major
-title: Democratic curriculum
-subtitle: Critical thinking, democratic citizenship, and collaboration
+title: 民主课程
+subtitle: 批判性思维、民主公民意识与合作
 on-arrival: curriculum_timer = 50; major_curriculum = "democratic"; pro_republic += 5*(1-dissent); workers_spd += 3*(1-dissent); democratization += 1; z_relation -= 3; dvp_relation -= 5; coalition_dissent += 1 if in_grand_coalition; pacifism += 1; education_science += 0.3
 go-to: curriculum_minor
 
 我们应当教学生如何成为民主共和国的公民 —— 教他们批判性地评判政治与当下时事,行使自己的权利,并尊重其他公民的权利。形形色色的传统主义者都批评这一课程。
 
 @science_major
-title: Scientific curriculum
-subtitle: Modern science, mathematics, and technical skills
+title: 科学课程
+subtitle: 现代科学、数学与技术技能
 on-arrival: curriculum_timer = 50; major_curriculum = "scientific"; education_science += 1; coalition_dissent += 1 if in_weimar_coalition; z_relation -= 5; ddp_relation += 4*(1-dissent); kpd_relation += 3*(1-dissent); new_middle_spd += 3*(1-dissent); workers_spd += 2*(1-dissent)
 go-to: curriculum_minor
 
 我们的教育体系应当反映现代,我们应当教授科学与理性思维。宗教保守派往往对此反应负面。
 
 @human_major
-title: Humanist curriculum
-subtitle: Arts, literature, history, and philosophy
+title: 人文课程
+subtitle: 艺术、文学、历史与哲学
 on-arrival: curriculum_timer = 50; major_curriculum = "humanist"; ddp_relation += 3*(1-dissent); new_middle_spd += 4*(1-dissent); education_science += 0.2
 go-to: curriculum_minor
 
@@ -219,8 +219,8 @@ go-to: curriculum_minor
 
 
 @vocational_major
-title: Vocational curriculum
-subtitle: Useful technical skills for future careers
+title: 职业课程
+subtitle: 面向未来职业的实用技术技能
 on-arrival: curriculum_timer = 50; major_curriculum = "vocational"; dvp_relation += 3*(1-dissent); ddp_relation += 3*(1-dissent); workers_spd += 4*(1-dissent); rural_spd += 2*(1-dissent); unemployed_spd += 3*(1-dissent); new_middle_spd -= 1; unemployed -= 0.1; education_science += 0.5
 go-to: curriculum_minor
 
@@ -228,8 +228,8 @@ go-to: curriculum_minor
 
 
 @trad_major
-title: Traditional curriculum
-subtitle: Classics, discipline, and nationalism
+title: 传统课程
+subtitle: 古典学、纪律与民族主义
 on-arrival: curriculum_timer = 50; major_curriculum = "traditional"; dvp_relation += 5*(1-dissent); z_relation += 4*(1-dissent); old_middle_spd += 3*(1-dissent); rural_spd += 3*(1-dissent); pacifism -= 1 if pacifism > 0; pro_republic -= 5; education_science += 0.2
 go-to: curriculum_minor
 
@@ -247,32 +247,32 @@ go-to: curriculum_minor
 - @trad_minor
 
 @dem_minor
-title: Democratic curriculum
-subtitle: Critical thinking, democratic citizenship, and collaboration
+title: 民主课程
+subtitle: 批判性思维、民主公民意识与合作
 view-if: major_curriculum != "democratic"
 on-arrival: minor_curriculum = "democratic"; pro_republic += 3*(1-dissent); workers_spd += 2*(1-dissent); democratization += 1; z_relation -= 2; dvp_relation -= 3;
 
 我们应当教学生如何成为民主共和国的公民 —— 教他们批判性地评判政治与当下时事,行使自己的权利,并尊重其他公民的权利。形形色色的传统主义者都批评这一课程。
 
 @science_minor
-title: Scientific curriculum
-subtitle: Modern science, mathematics, and technical skills
+title: 科学课程
+subtitle: 现代科学、数学与技术技能
 view-if: major_curriculum != "scientific"
 on-arrival: minor_curriculum = "scientific"; education_science += 0.5; z_relation -= 3; ddp_relation += 3*(1-dissent); kpd_relation += 2*(1-dissent); new_middle_spd += 2*(1-dissent); workers_spd += 2*(1-dissent)
 
 我们的教育体系应当反映现代,我们应当教授科学与理性思维。宗教保守派往往对此反应负面。
 
 @human_minor
-title: Humanist curriculum
-subtitle: Arts, literature, history, and philosophy
+title: 人文课程
+subtitle: 艺术、文学、历史与哲学
 view-if: major_curriculum != "humanist"
 on-arrival: minor_curriculum = "humanist"; new_middle_spd += 3*(1-dissent); ddp_relation += 3*(1-dissent);
 
 我们的教育课程应当侧重于人文学科,包括艺术、文学、历史与哲学。有人批评这一课程过于关注「无用」的科目,也有人担心艺术界建制与浪漫民族主义绑得太紧。
 
 @vocational_minor
-title: Vocational curriculum
-subtitle: Useful technical skills for future careers
+title: 职业课程
+subtitle: 面向未来职业的实用技术技能
 view-if: major_curriculum != "vocational"
 on-arrival: minor_curriculum = "vocational"; education_science += 0.3; workers_spd += 3*(1-dissent); unemployed_spd += 2*(1-dissent);
 
@@ -280,8 +280,8 @@ on-arrival: minor_curriculum = "vocational"; education_science += 0.3; workers_s
 
 
 @trad_minor
-title: Traditional curriculum
-subtitle: Classics, discipline, and nationalism
+title: 传统课程
+subtitle: 古典学、纪律与民族主义
 view-if: major_curriculum != "traditional"
 on-arrival: minor_curriculum = "traditional"; dvp_relation += 2*(1-dissent); z_relation += 2*(1-dissent); old_middle_spd += 2*(1-dissent); rural_spd += 2*(1-dissent); pro_republic -= 3
 

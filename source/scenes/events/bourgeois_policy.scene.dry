@@ -241,8 +241,8 @@ on-arrival: gov_tension += 1 if z_party_leader == "Joos"; bourgeois_power += 0.0
 
 - @break_toleration
 - @tolerate
-- @support_strikes: Support the ADGB in striking against this government.
-- @rally_: Rally against the government!
+- @support_strikes: 支持德国工会总联合会罢工,反抗这个政府。
+- @rally_: 集会反对政府!
 
 @support_strikes
 view-if: not unions_independent and not spd_toleration
@@ -352,7 +352,7 @@ subtitle: The bourgeoisie reassert their economic primacy
 
 - @break_toleration
 - @tolerate
-- @fight: Defend the occupied factories by force!
+- @fight: 以武力保卫被占领的工厂!
 
 @fight
 view-if: factory_takeovers
@@ -362,7 +362,7 @@ on-arrival: reformist_dissent += 5
 
 你确定吗?这至少按资产阶级及其法院的看法,意味着妨碍司法。单是考虑这个选项,就已激怒了我们的改良派。
 
-- @fight_2: Yes, fight.
+- @fight_2: 对,战斗。
 - @no: [? if fun_value != 42 : No. ?][? if fun_value == 42 : *Peace-lovin' man, I'm a peace-lovin' man and I'll do what I can yes I do, and I've got my eye on the sly little man who is putting the finger on you, and when things ain't right, I don't wanna fight, I'd rather go and sit in the ra-ain, peace-lovin' man I'm a peace-lovin' man and I won't - tell - you - a-gain!* ?]
 
 @no
@@ -498,7 +498,7 @@ on-arrival: family_law -= 1; womens_rights -= 1; new_middle_ddp -= 2 if not in_r
 - @tolerate
 
 @welfare
-subtitle: +1 budget
+subtitle: +1 财政预算
 view-if: womens_welfare
 on-arrival: welfare -= 1; womens_welfare -= 1; workers_dvp -= 3; workers_ddp -= 3 if not in_right_coalition; unemployed_spd += 4*(1-dissent); budget += 1; womens_rights -= 1; unemployed += 0.4; inflation -= 0.2; economic_growth -= 0.3;
 

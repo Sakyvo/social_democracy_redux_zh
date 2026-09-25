@@ -13,7 +13,7 @@ max-visits: 1
 
 The SPD is holding its biannual conference in the city of Magdeburg, where it is expected that the Armed Forces Commission of the SPD will present its report and guidelines on military policy for vote. [? if spd_in_government and in_grand_coalition : Furthermore, the Grand Coalition with the DVP has come under increasing scrutiny as the left wing agitates against the pragmatic leadership of the party. ?]
 
-- @faction_algorithm: The delegates enter...
+- @faction_algorithm: 代表们入场……
 
 @faction_algorithm
 on-arrival: {!

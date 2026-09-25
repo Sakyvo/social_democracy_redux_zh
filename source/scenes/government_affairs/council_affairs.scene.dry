@@ -116,14 +116,14 @@ achievement: wirtschaftspolitik
 法西斯分子在占领的工厂周围采取越来越暴力的行动,把我们称作盗贼与掠夺者。不过,法西斯分子中的一些工人阶级支持者已被拉走 —— 至少那些尚有阶级团结意识的人如此。
 
 @mutual_aid
-subtitle: -1 council resource
+subtitle: -1 委员会资源
 choose-if: council_resources >= 1
 on-arrival: unemployed_spd += 8*(1-dissent); unemployed_kpd += 3*(1-dissent) if kpd_included; unemployed_sapd += 3*(1-dissent) if sapd_included; unemployed_nsdap -= (socialism/10); workers += council_resources/10; unemployed -= council_resources/10; council_resources -= 1
 
 以这些委员会为框架,我们分发互助物资。这有助于缓解许多失业者所经受的痛苦,甚至帮他们找到工作,从而在这些人心目中极大地提升社会主义的声誉 —— 即便脱离传统的改良渠道,它也是一种真正切实的政治。
 
 @militia
-subtitle: -1 council resource
+subtitle: -1 委员会资源
 choose-if: council_resources >= 1
 on-arrival: rb_militancy += (council_resources/50)*(left_strength/100); rfb_militancy += (council_resources/100); rfb_militancy += (council_resources/100) if kpd_included; reformist_dissent += 5; z_relation -= 5; ddp_relation -= 5; dvp_relation -= 5; coup_progress += 2; council_resources -= 1; sa_militancy += 0.05*bourgeois_power; sh_militancy += 0.025*bourgeois_power;
 

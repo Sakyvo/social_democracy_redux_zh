@@ -16,16 +16,16 @@ Hitler has promised a campaign of revenge against the socialists, and the Nazis 
 
 @choose
 
-- @fight: We will fight on the streets to prevent Hitler from taking power.
-- @give_up_now: We will vote against the nazis in the Reichstag.
+- @fight: 我们要在街头战斗,阻止希特勒掌权。
+- @give_up_now: 我们将在国会投票反对纳粹。
 
 @fight
 on-arrival: spd_rebel = 1
 
 我们明白这意味着什么吗?这意味着要对抗国家的全部武力,打一场内战。
 
-- @civil_war: Yes.
-- @give_up_now: We are not ready for war. Instead, we will vote against the nazis in the Reichstag.
+- @civil_war: 是。
+- @give_up_now: 我们还没准备好开战。改为在国会投票反对纳粹。
 
 @give_up_now
 on-arrival: {!
@@ -70,14 +70,14 @@ Snap elections are called, for [+ next_election_month : month +] [+ next_electio
 
 
 @defend
-title: Fight against the overthrow attempt!
+title: 反击这场颠覆企图!
 subtitle: 工会将发动总罢工。国旗团与普鲁士警察中的忠诚力量将抵抗这场政变。
 unavailable-subtitle: 我们没有抵抗的力量。
 choose-if: rb_strength*rb_militancy >= 200
 
 国防军与钢盔团已包围柏林,冲锋队则在支援他们。这可能演变成内战。我们明白这一点,对吧? 
 
-- @defend_2: We will fight, even if it leads to a civil war.
+- @defend_2: 我们要战斗,哪怕这会导致内战。
 - @surrender
 
 @defend_2
@@ -108,7 +108,7 @@ Our forces confront the government troops and their supporters on the streets of
 
 
 @surrender
-title: Give up on the Prussian government.
+title: 放弃普鲁士政府。
 on-arrival: spd_prussia = 0; workers_spd -= 5; left_dissent += 10; labor_dissent += 10; rb_militancy = rb_militancy/1.25; rb_strength -= 200; bourgeois_power += 0.05 if bourgeois_power < 1
 go-to: give_up_now
 

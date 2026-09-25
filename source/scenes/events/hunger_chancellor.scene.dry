@@ -24,7 +24,7 @@ Our policy of toleration continues.
 
 
 @break_toleration
-subtitle: This is likely to result in new elections.
+subtitle: 这可能会导致新的选举。
 view-if: spd_toleration == 1
 on-arrival: next_election_time = time+3 if next_election_time >= time+3; next_election_month = month + 3 if next_election_time >= time+3; next_election_year = year if next_election_time >= time+3; next_election_year += 1 if next_election_month > 12; next_election_month -= 12 if next_election_month > 12; spd_in_government = 0; in_grand_coalition = 0; spd_toleration = 0; weimar_dissent += 1 if weimar_plan_adopted
 

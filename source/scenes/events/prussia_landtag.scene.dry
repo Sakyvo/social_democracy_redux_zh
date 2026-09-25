@@ -333,16 +333,16 @@ We have enough votes to form a Weimar Coalition. [? if dvp_prussia : The DVP's e
 
 @braun_weimar
 choose-if: p_weimar_coalition >= 50 or spd_prussia
-unavailable-subtitle: We do not have the votes.
-subtitle: This will retain our control over Prussia.
+unavailable-subtitle: 我们没有足够的票数。
+subtitle: 这将保住我们对普鲁士的掌控。
 on-arrival: spd_prussia = 1; z_prussia = 0
 
 Otto Braun has been confirmed as Minister-President of Prussia.
 
 @stegerwald_weimar
 choose-if: p_weimar_coalition >= 50 or z_prussia
-subtitle: The bourgeois will control Prussia.
-unavailable-subtitle: We do not have the votes.
+subtitle: 资产阶级将掌控普鲁士。
+unavailable-subtitle: 我们没有足够的票数。
 on-arrival: z_prussia = 1; spd_prussia = 0; left_dissent += 10; center_dissent += 5; labor_dissent += 5
 
 Adam Stegerwald has been confirmed as Minister-President of Prussia, to the protest of our party's left.
@@ -363,8 +363,8 @@ The DVP has been included in government to foster goodwill. The left is upset by
 
 @braun_groko
 choose-if: p_grand_coalition >= 50 or spd_prussia
-unavailable-subtitle: We do not have the votes.
-subtitle: This will retain our control over Prussia.
+unavailable-subtitle: 我们没有足够的票数。
+subtitle: 这将保住我们对普鲁士的掌控。
 on-arrival: spd_prussia = 1; z_prussia = 0
 
 Otto Braun has been confirmed as Minister-President of Prussia.
@@ -372,8 +372,8 @@ Otto Braun has been confirmed as Minister-President of Prussia.
 @stegerwald_groko
 choose-if: p_grand_coalition >= 50 or z_prussia
 on-arrival: z_prussia = 1; spd_prussia = 0; left_dissent += 10; center_dissent += 5; labor_dissent += 5
-subtitle: The bourgeois will control Prussia.
-unavailable-subtitle: We do not have the votes.
+subtitle: 资产阶级将掌控普鲁士。
+unavailable-subtitle: 我们没有足够的票数。
 
 Adam Stegerwald has been confirmed as Minister-President of Prussia, to the protest of our party's left.
 

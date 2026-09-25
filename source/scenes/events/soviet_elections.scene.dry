@@ -1,4 +1,4 @@
-title: Council Elections
+title: 委员会选举
 new-page: true
 tags: event
 priority: -1
@@ -605,7 +605,7 @@ unavailable-subtitle: 他们认为我们应当支持他们。
 
 - @bribe_kpd: Use our resources.
 - @beg_kpd: Use our good relations.
-- @nvm: Let's try something else.
+- @nvm: 我们试试别的办法。
 
 @bribe_kpd
 subtitle: -1 资源
@@ -659,7 +659,7 @@ unavailable-subtitle: 他们不信任我们。
 
 - @bribe_z: Use our resources.
 - @beg_z: Use our relations.
-- @nvm: Let's try something else.
+- @nvm: 我们试试别的办法。
 
 @bribe_z
 subtitle: -1 资源
@@ -703,7 +703,7 @@ subtitle: Tune in, turn on...
 - @back_sapd: Back the SAPD.
 - @back_independent: Back the independents.
 - @back_bourgeois: Back the bourgeois.
-- @nvm: Let's try something else.
+- @nvm: 我们试试别的办法。
 
 @back_kpd
 view-if: communist_candidate and left_strength > reformist_strength

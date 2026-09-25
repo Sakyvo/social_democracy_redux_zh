@@ -1,4 +1,4 @@
-title: Brüning's government falls
+title: 布吕宁政府垮台
 subtitle: The "Economic Party" has turned on Brüning
 new-page: true
 view-if: what_the_hell = 1 and in_bourgeois_coalition = 1 and ((year = 1930 and month >= 12) or (year >= 1931)) and not constructive_vonc and president == "Hindenburg"

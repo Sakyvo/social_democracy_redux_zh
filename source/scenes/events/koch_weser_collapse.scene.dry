@@ -15,7 +15,7 @@ on-arrival: chancellor = "Marx"; chancellor_party = "Z"
 
 Hindenburg has asked to form a government Wilhelm Marx, who has formed a minority government of the bourgeois parties, to act as a stepping stone either towards a reformed Grand Coalition or a right-wing one.
 
-- @dnvp_tolerates: Regardless of how we vote, the cabinet wins the Reichstag's confidence.
+- @dnvp_tolerates: 无论我们怎么投票,内阁都能赢得国会的信任。
 
 @dnvp_tolerates
 subtitle: The DNVP would vote against any vote of no confidence that we propose.
@@ -30,4 +30,4 @@ on-arrival: chancellor = "Brüning"; chancellor_party = "Z"; marx_relation -= 5
 
 Marx has asked to form a government Heinrich Brüning, who has formed a minority government of the bourgeois parties, to act as a stepping stone either towards a reformed Grand Coalition or a right-wing one.
 
-- @dnvp_tolerates: Regardless of how we vote, the cabinet wins the Reichstag's confidence.
+- @dnvp_tolerates: 无论我们怎么投票,内阁都能赢得国会的信任。

@@ -13,7 +13,7 @@ max-visits: 1
 
 The SPD is holding its biannual conference in the city of Kiel, where Baade is expected to present his agricultural programme for adoption by the SPD, and the left expected to demand, even more clearly than in the last conference, the SPD reject entrance into government.
 
-- @faction_algorithm: The delegates enter...
+- @faction_algorithm: 代表们入场……
 
 @faction_algorithm
 on-arrival: {!

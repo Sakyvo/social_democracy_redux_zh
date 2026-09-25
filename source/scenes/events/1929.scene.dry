@@ -1,5 +1,5 @@
 title: 1929
-subtitle: A new year
+subtitle: 新的一年
 on-arrival: old_republic = pro_republic; {!
 // see post_event.scene.dry for changes.
 Q.economic_growth -= 4;

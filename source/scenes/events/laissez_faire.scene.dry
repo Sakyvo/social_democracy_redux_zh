@@ -18,8 +18,8 @@ on-arrival: old_middle_dvp += 5; workers_kpd += 3; unemployed_kpd += 5; new_midd
 
 - @bring_down: Bring down this government!
 - @no_choice: We have no choice but to continue toleration.
-- @support_strikes: Support the ADGB in striking against this government.
-- @rally_: Rally against the government!
+- @support_strikes: 支持德国工会总联合会罢工,反抗这个政府。
+- @rally_: 集会反对政府!
 
 @bring_down
 view-if: spd_toleration

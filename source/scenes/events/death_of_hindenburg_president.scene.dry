@@ -1,4 +1,4 @@
-title: The Death of Hindenburg
+title: 兴登堡之死
 subtitle: The President has died...
 new-page: true
 view-if: year = 1934 and month >= 7 and president = "Hindenburg"
@@ -104,7 +104,7 @@ go-to: r1_menu
 
 
 @munzenberg_r1
-subtitle: Supporting Münzenberg is unpopular among the reformists, but less so than Thälmann would've been.
+subtitle: 支持明岑贝格在改良派中不受欢迎,但总好过支持台尔曼。
 view-if: kpd_candidate = "Münzenberg" 
 choose-if: kpd_relation >= 40 and reformist_strength < left_strength
 unavailable-subtitle: [? if kpd_relation < 40 : 我们与共产党的关系还不够好,他们甚至不愿接受我们的支持。 ?] [? if reformist_strength >= left_strength : 改良派能够劝住全党,不支持这一安排。 ?]
@@ -206,7 +206,7 @@ view-if: round = 0
 
 # convincing Z to support a unity candidate
 @convince_z_unity
-title: Convince the Center Party to support [+ spd_candidate +].
+title: 说服中央党支持 [+ spd_candidate +]。
 view-if: (spd_candidate = "Eckener" or spd_candidate = "Gessler") and z_candidate != spd_candidate
 on-arrival: {!
 Q.z_support_braun = 0;
@@ -227,7 +227,7 @@ go-to: z_failed if z_support_braun = 0 or (z_support_braun == 2 and historical_m
 
 # convincing Z to support an SPD candidate
 @convince_z_spd
-title: Convince the Center Party to support [+ spd_candidate +].
+title: 说服中央党支持 [+ spd_candidate +]。
 choose-if: spd_votes >= z_votes
 unavailable-subtitle: [? if spd_votes < z_votes: 中央党知道自己比我们更受欢迎;他们看不出有任何理由支持我们的候选人。 ?]
 view-if: (spd_candidate = "Braun" or spd_candidate = "Schumacher" or spd_candidate = "Juchacz" or is_cultural_candidate) and z_candidate != spd_candidate
@@ -273,7 +273,7 @@ go-to: r1_menu if round = 0; r2_campaigning if round > 0
 
 中央党对我们的理由并不满意,但愿意被说服。如果我们先垫付资源,他们愿意与我们联合竞选。
 
-- @pay_z: Give them the resources they need.
+- @pay_z: 给他们所需的资源。
 - @r1_menu: Forget about the Center.
 - @r2_campaigning: Forget about the Center.
 
@@ -289,7 +289,7 @@ go-to: r1_menu if round = 0; r2_campaigning if round > 0
 
 
 @convince_ddp_unity
-title: Convince the [+ ddp_name +] to support [+ spd_candidate +].
+title: 说服 [+ ddp_name +] 支持 [+ spd_candidate +]。
 view-if: (spd_candidate = "Eckener" or spd_candidate = "Adenauer") and ddp_candidate != spd_candidate
 on-arrival: ddp_candidate = spd_candidate if ddp_relation >= 30
 go-to: r1_menu if round = 0; r2_campaigning if round > 0
@@ -300,7 +300,7 @@ max-visits: 1
 
 
 @convince_ddp_spd
-title: Convince the [+ ddp_name +] to support [+ spd_candidate +].
+title: 说服 [+ ddp_name +] 支持 [+ spd_candidate +]。
 view-if: (spd_candidate = "Braun" or spd_candidate = "Schumacher" or spd_candidate = "Juchacz"or is_cultural_candidate) and ddp_candidate != spd_candidate
 on-arrival: ddp_candidate = spd_candidate if ddp_relation >= 40
 go-to: r1_menu if round = 0; r2_campaigning if round > 0
@@ -318,8 +318,8 @@ max-visits: 1
 
 共产党支持他们自己的候选人 [+ kpd_candidate +]。 [? if kpd_relation >= 50 : 不过,他们愿意被说服放弃竞选、转支持 [+ spd_candidate +];我们该如何说服他们? ?][? if kpd_relation < 50 or kpd_party_leader != "Conciliators" : 他们似乎不愿被说服。 ?]
 
-- @kpd_resources: Use our resources.
-- @kpd_relations: Use our good relations.
+- @kpd_resources: 动用我们的资源。
+- @kpd_relations: 动用我们的良好关系。
 - @r1_menu: Forget about the KPD.
 - @r2_campaigning: Forget about the KPD.
 
@@ -343,7 +343,7 @@ go-to: r1_menu if round = 0; r2_campaigning if round > 0
 
 
 @convince_dvp_spd
-title: Convince the DVP to support [+ spd_candidate +].
+title: 说服人民党支持 [+ spd_candidate +]。
 unavailable-subtitle: 人民党不愿支持我们的候选人。
 view-if: spd_candidate = "Braun" or spd_candidate = "Schumacher" or spd_candidate = "Juchacz" or is_cultural_candidate
 choose-if: (dvp_relation >= 50 and candidate != "Juchacz") or (dvp_relation >= 60 and candidate = "Juchacz")
@@ -354,7 +354,7 @@ max-visits: 1
 [? if dvp_candidate = spd_candidate: 得益于我们良好的关系,人民党被说服支持 [+ spd_candidate +]! ?]
 
 @convince_dvp_unity
-title: Convince the DVP to support [+ spd_candidate +].
+title: 说服人民党支持 [+ spd_candidate +]。
 unavailable-subtitle: 人民党不愿支持我们的候选人。
 view-if: (spd_candidate = "Adenauer" or spd_candidate = "Gessler" or spd_candidate = "Eckener") and dvp_candidate != spd_candidate
 choose-if: dvp_relation >= 40
@@ -650,11 +650,11 @@ go-to: r2_menu
 - @r2_endorse_gessler
 - @r2_endorse_eckener
 - @r2_campaigning: Can we convince any of the parties to change their endorsements?
-- @r2_vote: Let the voting begin.
+- @r2_vote: 开始投票吧。
 
 @r2_endorse_thalmann
 title: Switch our support to Thälmann of the KPD.
-subtitle: This will hurt our party's support.
+subtitle: 这会损害我党的支持度。
 view-if: spd_candidate != "Thälmann" and kpd_candidate = "Thälmann"
 choose-if: kpd_relation >= 50 and left_strength > reformist_strength
 unavailable-subtitle: [? if kpd_relation < 50 : 我们与共产党的关系还不够好,他们甚至不愿接受我们的支持。 ?] [? if reformist_strength >= left_strength : 改良派能够劝住全党,不支持这一离奇的安排。 ?]
@@ -664,11 +664,11 @@ max-visits: 1
 
 我们改而表态支持共产党的恩斯特·台尔曼。 [? if z_candidate = spd_candidate : 我们昔日在中央党的盟友把这视为背叛。 ?][? if z_candidate = "Braun" or z_candidate = "Schumacher" or z_candidate = "Juchacz": 如今,他们将再次支持康拉德·阿登纳。 ?][? if ddp_candidate = "Braun" or ddp_candidate = "Schumacher" or ddp_candidate = "Juchacz": [+ ddp_name +] 将把支持转向中央党候选人。 ?][? if dvp_candidate = "Braun" or dvp_candidate = "Schumacher" or dvp_candidate = "Juchacz": 人民党也将支持中央党候选人。 ?]
 
-- @r2_vote: Let the voting begin.
+- @r2_vote: 开始投票吧。
 
 @r2_endorse_munzenberg
 title: Switch our support to Münzenberg of the KPD.
-subtitle: This will hurt our party's support.
+subtitle: 这会损害我党的支持度。
 view-if: spd_candidate != "Münzenberg" and kpd_candidate = "Münzenberg"
 choose-if: kpd_relation >= 50 and left_strength > reformist_strength
 unavailable-subtitle: [? if kpd_relation < 50 : 我们与共产党的关系还不够好,他们甚至不愿接受我们的支持。 ?] [? if reformist_strength >= left_strength : 改良派能够劝住全党,不支持这一离奇的安排。 ?]
@@ -678,7 +678,7 @@ max-visits: 1
 
 我们改而表态支持共产党的维利·明岑贝格。 [? if z_candidate = spd_candidate : 我们昔日在中央党的盟友把这视为背叛。 ?][? if z_candidate = "Braun" or z_candidate = "Schumacher" or z_candidate = "Juchacz": 如今,他们将再次支持康拉德·阿登纳。 ?][? if ddp_candidate = "Braun" or ddp_candidate = "Schumacher" or ddp_candidate = "Juchacz": [+ ddp_name +] 将把支持转向中央党候选人。 ?][? if dvp_candidate = "Braun" or dvp_candidate = "Schumacher" or dvp_candidate = "Juchacz": 人民党也将支持中央党候选人。 ?]
 
-- @r2_vote: Let the voting begin.
+- @r2_vote: 开始投票吧。
 
 
 @r2_endorse_adenauer
@@ -731,7 +731,7 @@ view-if: round = 1
 - @convince_dvp_spd
 - @convince_dvp_unity
 - @convince_kpd_spd
-- @r2_vote: Let the voting begin.
+- @r2_vote: 开始投票吧。
 
 
 
@@ -752,7 +752,7 @@ on-arrival: chancellor = "Hitler"; chancellor_party = "NSDAP"; hitler_seen = 0; 
 
 随着 [+ nsdap_candidate +] 获胜,纳粹毫不浪费时间地开始集权。 [? if president = "Göring": 他的第一个动作就是罢免现任总理,任命希特勒为总理,并先撤销对希特勒的驱逐。 ?][? if president = "Hitler": 他的第一个动作就是罢免现任总理,任命自己为总理,并动用冲锋队攻击任何反对者。 ?]
 
-- @hitler_takes_power: What next?
+- @hitler_takes_power: 接下来呢?
 - @hitler_constitutional: This is unconstitutional!
 
 @seldte_victory
@@ -760,7 +760,7 @@ on-arrival: chancellor = "Hitler"; chancellor_party = "NSDAP"; hitler_seen = 0
 
 随着泽尔特胜出,力量的天平转向了纳粹。 [? if hitler_deported and not hitler_dead: 他的第一个动作就是罢免现任总理,任命阿道夫·希特勒为总理,并先撤销对希特勒的驱逐。 ?][? if not hitler_deported: 他的第一个动作就是罢免现任总理,任命阿道夫·希特勒为总理。 ?][? if hitler_dead : 他的第一个动作就是罢免现任总理,并用撒旦仪式让希特勒复活,为他打开一条通往权力的路。 ?]
 
-- @hitler_takes_power: What next?
+- @hitler_takes_power: 接下来呢?
 - @hitler_constitutional: This is blatantly unconstitutional!
 
 @hitler_constitutional
@@ -775,7 +775,7 @@ view-if: presidential_powers
 
 我们明白这意味着什么吗?这意味着要对抗国家的全部武力,打一场内战。
 
-- @civil_war: Yes.
+- @civil_war: 是。
 - @defeat_democratic: It is not too late to fight constitutionally.
 
 @defeat_democratic
@@ -797,7 +797,7 @@ on-arrival: constitutional_crisis = 1
 
 @ref_lose
 
-- @hitler_takes_power: What next?
+- @hitler_takes_power: 接下来呢?
 
 
 @election_end
@@ -816,7 +816,7 @@ on-arrival: kpd_relation = 80
 
 台尔曼毫不浪费时间地集权,动用一切可用的手段重塑政府。作为回应,极右翼立即发动了一场政变企图。我们别无选择,只能与共产党联合对抗法西斯分子……
 
-- @civil_war: This is civil war.
+- @civil_war: 这就是内战。
 
 @thalmann_democrat
 

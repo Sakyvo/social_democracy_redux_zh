@@ -1,6 +1,6 @@
-title: May Day, 1929
+title: 1929 年五一节
 new-page: true
-subtitle: A Communist demonstration
+subtitle: 一场共产党人的示威
 tags: event
 view-if: year = 1929 and month = 5 and in_right_coalition == 1
 max-visits: 1

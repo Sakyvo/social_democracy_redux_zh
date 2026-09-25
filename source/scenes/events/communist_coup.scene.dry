@@ -16,13 +16,13 @@ One morning, when [+ chancellor +] is meeting with his ministers, a warrant is p
 
 Yeah, it's crazy, right? Thankfully we have the police forces to protect us from coups like this. It's a good thing the communists reformed them to be loyal to the republic!
 
-- @rigged_election: New emergency elections have been scheduled.
+- @rigged_election: 新的紧急选举已排定日程。
 
 @streetsmart
 
 It is plain to see that this is a communist coup. Having secured so much influence over state institutions, and then deprived the management of those institutions, they seek to wrestle back power.
 
-- @rigged_election: New emergency elections have been scheduled.
+- @rigged_election: 新的紧急选举已排定日程。
 - @soviet_germany.resist: Together, we can stop the [? if president != "Thälmann" and president != "Münzenberg" and chancellor_party != "KPD" : [+ kpd_leader +] ?][? if president == "Thälmann" or president == "Münzenberg" : [+ president +] ?][? if chancellor_party == "KPD" and president != "Thälmann" and president != "Münzenberg" : [+ chancellor +] ?] putsch!
 
 @rigged_election

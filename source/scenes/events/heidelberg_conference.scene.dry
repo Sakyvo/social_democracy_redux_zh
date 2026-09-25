@@ -15,7 +15,7 @@ The SPD is holding its biannual conference in the city of Heidelberg, the burial
 
 Another issue is that of Saxony, where the regional party organization has split nearly in half over Max Heldt's decision to govern with the DVP.
 
-- @faction_algorithm: The delegates enter...
+- @faction_algorithm: 代表们入场……
 
 @faction_algorithm
 on-arrival: {!

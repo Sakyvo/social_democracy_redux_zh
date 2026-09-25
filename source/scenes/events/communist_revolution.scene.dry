@@ -82,7 +82,7 @@ The answer seems to be yes, as, somehow, the Red Army drive the Reichswehr force
 
 - @long_war: The war settles into fixed battle lines.
 - @true_kpd_victory: The communists emerge victorious!
-- @civil_war_if_spd: It is a civil war.
+- @civil_war_if_spd: 这是一场内战。
 
 @long_war
 view-if: not spd_revolution and (communist_strength*0.6) < harzburg_strength
@@ -112,7 +112,7 @@ The answer seems to be no, as, predictably, the Reichswehr drive the Red Army fo
 
 - @long_war2: The war settles into fixed battle lines.
 - @kpd_crushed: The communists are crushed.
-- @civil_war_if_spd: It is a civil war.
+- @civil_war_if_spd: 这是一场内战。
 
 @long_war2
 view-if: not spd_revolution and (harzburg_strength*0.6) < communist_strength

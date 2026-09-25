@@ -23,8 +23,8 @@ Q.saar_anti = Math.round((Q.saar_anti/saar)*100);
 
 Of course, we campaign in favor of reincorporation. [? if z_relation >= 25 : The Center Party does as well, helping swing the Catholics. ?]
 
-- @victory: [+ saar_pro +]% vote in favor of rejoining Germany.
-- @defeat: [+ saar_pro +]% vote in favor of rejoining Germany.
+- @victory: [+ saar_pro +]% 的票数赞成重新并入德国。
+- @defeat: [+ saar_pro +]% 的票数赞成重新并入德国。
 
 @campaign_anti
 view-if: chancellor_party == "I" or chancellor_party == "NSDAP" or chancellor_party == "DNVP"
@@ -41,8 +41,8 @@ Q.unemployed_spd -= 3;
 
 Due to the threat of the Republic soon falling, we make the heavy handed decision to campaign for a continuation of the mandate. The Nazis gleefully label us traitors to Germany, and our support amongst more nationalistic demographics is hurt.
 
-- @victory: [+ saar_pro +]% vote in favor of rejoining Germany.
-- @defeat: [+ saar_pro +]% vote in favor of rejoining Germany.
+- @victory: [+ saar_pro +]% 的票数赞成重新并入德国。
+- @defeat: [+ saar_pro +]% 的票数赞成重新并入德国。
 
 @victory
 view-if: saar_pro >= 50

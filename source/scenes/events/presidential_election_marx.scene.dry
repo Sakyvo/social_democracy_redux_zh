@@ -1,4 +1,4 @@
-title: Presidential Election
+title: 总统选举
 subtitle: President Marx considers re-election...
 view-if: year = 1932 and (month = 4 or month = 5) and presidential_election_seen = 0 and presidency_abolished != 1 and president == "Marx"
 frequency: 1000
@@ -22,17 +22,17 @@ on-arrival: reactionary_consolidate = 0; reactionary_consolidate = 1 if nsdap_vo
 [? if kpd_relation >= 50 : 另一个奇怪的可能是与共产党结成统一战线 —— 或者支持台尔曼,或者支持我们自己的候选人。 ?]
 
 - @support_marx: Support Marx.
-- @support_braun: Run Otto Braun of the SPD.
+- @support_braun: 推举社民党的奥托·布劳恩参选。
 - @support_thalmann: 支持共产党的恩斯特·台尔曼。
 
 @support_marx
-subtitle: This is the default option.
+subtitle: 这是默认选项。
 on-arrival: spd_support_marx = 1
 
 威廉·马克思于 1925 年作为各共和派政党的候选人当选,他这次将再次以同样的身份当选。
 
 - @dvp_marx: Can we convince the DVP to back Marx?
-- @final_election: The final vote...
+- @final_election: 最后的表决……
 
 @dvp_marx
 view-if: not zca_formed
@@ -42,10 +42,10 @@ on-arrival: dvp_support_marx = 1
 
 人民党已同意支持威廉·马克思。
 
-- @final_election: The final vote...
+- @final_election: 最后的表决……
 
 @support_braun
-subtitle: This will cost us 2 resources.
+subtitle: 这将耗费我们 2 点资源。
 choose-if: resources >= 2
 unavailable-subtitle: 资源不足。
 on-arrival: resources -= 2; braun_campaign = 1; marx_campaign = 0; adenauer_campaign = 1
@@ -63,7 +63,7 @@ unavailable-subtitle: [? if kpd_relation < 50 : 我们与共产党的关系还�
 即便共产党人接受我们的支持,支持台尔曼在我党中也颇不受欢迎。你确定吗?
 
 - @support_thalmann_2: 是的,尽管改良派恳求不要这样做,我们仍将支持台尔曼。
-- @support_braun: Support Braun instead.
+- @support_braun: 改为支持布劳恩。
 - @support_marx: Support Marx instead.
 
 @support_thalmann_2
@@ -71,14 +71,14 @@ on-arrival: spd_support_thalmann = 1; reformist_dissent += 15; center_dissent +=
 
 好。我们把支持投给了共产党的主席台尔曼。
 
-- @final_election: The final vote...
+- @final_election: 最后的表决……
 
 @braun_campaign
 
-- @convince_z: Convince the Center Party.
-- @convince_kpd: Convince the Communists.
-- @convince_liberals: Convince the remaining liberals, wherever they are.
-- @final_election: The final vote...
+- @convince_z: 说服中央党。
+- @convince_kpd: 说服共产党人。
+- @convince_liberals: 说服残余的自由派 —— 不管他们在哪儿。
+- @final_election: 最后的表决……
 
 @convince_z
 view-if: not zca_formed
@@ -109,7 +109,7 @@ on-arrival: adenauer_campaign = 0
 
 中央党对我们的理由并不满意,但愿意被说服。如果我们先垫付资源,他们愿意与我们联合竞选。
 
-- @pay_z: Give them the resources they need.
+- @pay_z: 给他们所需的资源。
 - @z_failed: Forget about the Center.
 
 @pay_z
@@ -134,9 +134,9 @@ max-visits: 1
 
 共产党支持他们自己的候选人恩斯特·台尔曼。 [? if kpd_relation >= 50 and kpd_party_leader != "Conciliators" : 不过,他们愿意被说服放弃竞选、转支持布劳恩;我们该如何说服他们? ?][? if kpd_relation < 50 or kpd_party_leader != "Conciliators" : 他们似乎不愿被说服。 ?]
 
-- @kpd_resources: Use our resources.
-- @kpd_relations: Use our good relations.
-- @braun_campaign: Forget about the KPD.
+- @kpd_resources: 动用我们的资源。
+- @kpd_relations: 动用我们的良好关系。
+- @braun_campaign: 别管共产党了。
 
 @kpd_resources
 view-if: kpd_relation >= 50 and not historical_mode
@@ -365,7 +365,7 @@ if (Q.reactionary_consolidate && Q.hitler_votes_disp >= Q.nsdap_votes) {
 
 威廉·马克思成功连任总统 —— 尽管反动派一再试图把他赶下台。共和国暂时延续了下去。
 
-- @far_right_coup: The Harzburg Front immediately initiates a coup...
+- @far_right_coup: 哈茨堡阵线立刻发动政变……
 
 @braun_wins
 on-arrival: president = "Braun"; coup_progress += 3; coup_progress += 1 if sa_force + sh_force >= 50; reformist_dissent -= 15; center_dissent -= 15; labor_dissent -= 15; left_dissent -= 5; workers_spd += 8*(1-dissent); old_middle_spd += 5*(1-dissent); new_middle_spd += 5*(1-dissent); rural_spd += 5*(1-dissent); unemployed_spd += 5*(1-dissent); {!
@@ -384,7 +384,7 @@ if (Q.reactionary_consolidate && Q.hitler_votes_disp >= Q.nsdap_votes) {
 
 社民党的奥托·布劳恩赢得了总统之位!这是我党值得庆祝的时刻,他的胜利也提振了我们的支持度。
 
-- @far_right_coup: The Harzburg Front immediately initiates a coup...
+- @far_right_coup: 哈茨堡阵线立刻发动政变……
 
 @far_right_coup
 view-if: coup_progress >= 10
@@ -392,14 +392,14 @@ on-arrival: nazi_rebel = 1; reichswehr_loyalty -= 0.1 if reichswehr_loyalty <= 0
 
 选举刚一结束,在全国各地由哈茨堡阵线组织起来的钢盔团与冲锋队力量便冲击政府机关、通讯、铁路及其他重要基础设施;反动军官也开始把部队带出营房,加入这场政变。
 
-- @civil_war: This is civil war.
+- @civil_war: 这就是内战。
 
 @thalmann_wins
 on-arrival: president = "Thälmann"; kpd_relation = 80;
 
 共产党的恩斯特·台尔曼赢得了总统之位。极右翼立即对政府发动了一场政变企图。我们别无选择,只能与共产党联合对抗法西斯分子……
 
-- @civil_war: This is civil war.
+- @civil_war: 这就是内战。
 
 @hitler_wins
 on-arrival: president = nsdap_candidate; chancellor = "Hitler" if presidential_powers != 1; chancellor_party = "NSDAP" if presidential_powers != 1
@@ -408,8 +408,8 @@ on-arrival: president = nsdap_candidate; chancellor = "Hitler" if presidential_p
 [? if nsdap_candidate != "Hitler" : 纳粹党候选人 [+ president +] 获胜。总统 [+ president +] 采取的第一个行动,就是邀请希特勒重返德国,并任命他为总理。纳粹毫不浪费时间地开始集权。 ?]
 
 - @hitler_victory: What do we do now?
-- @hitler_referendum: What do we do now?
-- @hitler_stall: What do we do now?
+- @hitler_referendum: 我们现在该怎么办?
+- @hitler_stall: 我们现在该怎么办?
 
 @hitler_victory
 view-if: presidential_powers != 1

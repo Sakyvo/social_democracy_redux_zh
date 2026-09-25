@@ -1,5 +1,5 @@
 title: The Nazis Split!
-subtitle: Finally, the internal contradictions of the NSDAP have caught up to it.
+subtitle: 纳粹党的内部矛盾终于让它自食其果。
 view-if: schleichers_scheme_success and year >= 1933 and (nazi_peak or nazi_peaked) and strasser_percent >= 0.25
 on-arrival: {! 
 Q.parties.push('dne');
@@ -41,7 +41,7 @@ Following the defection of the Strasserists in the NSDAP to support Schleicher, 
 
 @and
 view-if: labor_dissent >= 60 and not unions_independent
-subtitle: The ADGB reconsiders its allegiances
+subtitle: 德国工会总联合会重新考虑其立场
 on-arrival: unions_independent = 1; workers_spd -= 20; unemployed_spd -= 10; workers_dne += 10; unemployed_dne += 5
 
 德国工会总联合会宣布与社民党分离,转而投靠施莱谢尔那新生的独裁政权。 

@@ -1,4 +1,4 @@
-title: Expropriation of the Princes
+title: 没收诸侯财产
 subtitle: The referendum has been held
 view-if: time = princes_time+3 and year < 1928
 tags: event
@@ -43,7 +43,7 @@ Q.petition_support = Q.petition_support.toFixed(1);
 new-page: true
 go-to: defeated if princes_support < 50; success if princes_support >= 50
 
-= Expropriation of the Princes
+= 没收诸侯财产
 
 The referendum on the expropriation of the princes has been held, and the results are in.
 

@@ -11,8 +11,8 @@ The Reichstag has been burned to the ground, ostensibly by a foreign communist. 
 
 This decree gives [+ chancellor +] wide-ranging powers with which to suppress us and arrest our leaders in the leadup to the [+ next_election_month : month +] election. Despite its blatantly dictatorial nature, there is not much we can do about it.
 
-- @fight: Except fight, before it is too late.
-- @lib: We will have to hope for the best.
+- @fight: 只能战斗了,趁还来得及。
+- @lib: 我们只能往好处想。
 
 @fight
 on-arrival: spd_rebel = 1; kpd_relation += 20

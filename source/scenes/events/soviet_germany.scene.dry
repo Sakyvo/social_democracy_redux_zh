@@ -141,7 +141,7 @@ Putschism cannot be forgiven. The communists at our mercy, we put an end to thei
 @unban_bourgeois
 view-if: ddp_banned and z_banned
 on-arrival: ddp_banned = 0; z_banned = 0
-subtitle: We must begin to undo the damage that the KPD has done.
+subtitle: 我们必须着手消除共产党所造成的破坏。
 
 Of course, we re-legalize the moderate liberal parties. The KPD fought hard to stifle democracy, and now we shall let it flourish again.
 
@@ -154,14 +154,14 @@ go-to: root
 @unban_ddp
 view-if: ddp_banned and not z_banned
 on-arrival: ddp_banned = 0
-subtitle: We must begin to undo the damage that the KPD has done.
+subtitle: 我们必须着手消除共产党所造成的破坏。
 
 Of course, we re-legalize the [+ ddp_name +]. The KPD fought hard to stifle democracy, and now we shall let it flourish again.
 
 @unban_z
 view-if: z_banned and not ddp_banned
 on-arrival: z_banned = 0
-subtitle: We must begin to undo the damage that the KPD has done.
+subtitle: 我们必须着手消除共产党所造成的破坏。
 
 Of course, we re-legalize the Center Party. The KPD fought hard to stifle democracy, and now we shall let it flourish again.
 

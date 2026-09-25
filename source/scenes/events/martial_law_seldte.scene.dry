@@ -1,4 +1,4 @@
-title: Martial Law!
+title: 戒严!
 subtitle: The Harzburg Cabinet has declared martial law
 view-if: seldte_times >= 1 and harzburg_r >= 50 and chancellor == "Seldte" and papen_chancellor_timer <= 0
 new-page: true
@@ -9,15 +9,15 @@ tags: event
 
 Seeing the continuing collapse of order in Germany, and convinced that they would be able to quell any resistance, President [+ president +] and Chancellor Seldte have come together to declare a state of martial law in Germany. Though this is unconstitutional, the courts have little sway over the enthusiastic army.
 
-- @seldte_takes_power: What now?
+- @seldte_takes_power: 现在怎么办?
 
 @seldte_takes_power
 subtitle: 终结的开端。
 
 The destruction of German democracy has begun, not at the hands of the Nazis but at the hands of the reactionaries who wish to see a return to the days of the German Empire. If we do not fight back now, then we may never get another chance, and all we as a party have stood for will be gone in an instant.
 
-- @fight_harzburg: Mobilize our forces and declare a general strike!
-- @reactionary_victory: We have lost.
+- @fight_harzburg: 动员我们的力量,宣布总罢工!
+- @reactionary_victory: 我们输了。
 
 @reactionary_victory
 

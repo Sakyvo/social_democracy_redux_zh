@@ -1,5 +1,5 @@
 title: Nazis in Crisis
-subtitle: Finally, the internal contradictions of the NSDAP have caught up to it.
+subtitle: 纳粹党的内部矛盾终于让它自食其果。
 view-if: year = 1933 and month >= 9 and nsdap_r >= 8 and (nsdap_normalized + dnvp_normalized + (unemployed/150)) < 0.5 and chancellor_party != "NSDAP"
 on-arrival: workers_nsdap -= 12; new_middle_nsdap -= 12; old_middle_nsdap -= 12; rural_nsdap -= 12; unemployed_nsdap -= 10; sa_strength *= 0.7; coup_progress -= 4 if coup_progress > 4; new_middle_ddp += 6; new_middle_dvp += 6; old_middle_ddp += 5; old_middle_dvp += 5; old_middle_dnvp += 3; rural_dnvp += 6; rural_ddp += 2; rural_dvp += 2; unemployed_kpd += 4; unemployed_spd += 4; nazis_in_crisis_seen = 1
 max-visits: 1
@@ -11,7 +11,7 @@ new-page: true
 Finally, the internal contradictions of the NSDAP have caught up to it. With the improving economic conditions, many business leaders are less interested in supporting them. Tensions between their remaining big capitalist funders and their lower middle class frontliners have come to a head, leading to desertions and public spats. This all saps Hitler's aura of strength, weakening Nazi support across a variety of demographics.
 
 - @celebrate: 这是个值得庆祝的时刻。
-- @complacency: The Nazis are still a threat. We must not be too complacent.
+- @complacency: 纳粹仍是威胁。我们不能过于自满。
 
 @celebrate
 

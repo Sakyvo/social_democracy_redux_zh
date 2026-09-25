@@ -56,7 +56,7 @@ go-to: election_1928.ministries
 Surprisingly, negotiations are successful! A "Grand Coalition" has been formed around Konrad Adenauer, and tensions eased over for now.
 
 @failed
-subtitle: The disagreements between the parties are too great.
+subtitle: 各党之间的分歧过大。
 on-arrival: z_relation -= 5 if z_relation >= 50 and dvp_relation >= 50; dvp_relation -= 5 if z_relation >= 45 and dvp_relation >= 50
 
 As expected, Adenauer is unable to form a government, either, due to his insistence on including us and disagreements with Stresemann, whom Adenauer views as too Prussian.
@@ -71,7 +71,7 @@ In the end, another minority government is formed, with Wilhelm Marx at its head
 
 Which it shall end up being remains to be seen. For the time being, this is the government that shall rule Germany.
 
-- @root: Tolerable. For now.
+- @root: 尚可接受。眼下如此。
 #- @intolerable: Intolerable. We shall call a motion of no confidence.
 
 # voncing marx: +10 reformist dissent, +10 left strength, +5 kpd, -10 z, -10 dvp, -5 ddp, DNVP shoots it down and is eventually added to gov
@@ -103,7 +103,7 @@ go-to: election_1928.ministries
 Surprisingly, negotiations are successful! A "Grand Coalition" has been formed around Konrad Adenauer, and tensions eased over for now. This may not have been possible without the efforts of Marx to ease over tensions.
 
 @failed2
-subtitle: The disagreements between the parties are too great.
+subtitle: 各党之间的分歧过大。
 on-arrival: z_relation -= 5 if z_relation >= 45 and dvp_relation >= 50; dvp_relation -= 5 if z_relation >= 40 and dvp_relation >= 50; marx_relation -= 5 if z_relation >= 40 and dvp_relation >= 45
 
 As expected, Adenauer is unable to form a government, either, due to his insistence on including us and disagreements with Stresemann, whom Adenauer views as too Prussian.
@@ -118,5 +118,5 @@ In the end, another minority government is formed, with Heinrich Brüning at its
 
 Which it shall end up being remains to be seen. For the time being, this is the government that shall rule Germany.
 
-- @root: Tolerable. For now.
+- @root: 尚可接受。眼下如此。
 #- @intolerable: Intolerable. We shall call a motion of no confidence.

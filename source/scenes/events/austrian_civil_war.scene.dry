@@ -47,7 +47,7 @@ Neither side is backing down, and the SDAPÖ have formed an alternative governme
 - @long_war_2
 
 @support_sdapo_party
-title: As a party, the SPD will provide the SDAPÖ with support.
+title: 社民党将以政党身份向奥地利社会民主党提供支持。
 subtitle: -2 资源
 choose-if: resources >= 2
 on-arrival: resources -= 2; sdapo_strength += 1
@@ -56,7 +56,7 @@ go-to: sdapo_victory if sdapo_strength+nsdapo_force >= 6; long_war_2 if sdapo_st
 The SPD raises its resources to provide arms and volunteers for the SDAPÖ.
 
 @support_sdapo_govt
-title: The Foreign Ministry will support the democratic Austrian forces.
+title: 外交部将支持奥地利的民主力量。
 view-if: spd_in_government and foreign_minister_party = "SPD"
 on-arrival: sdapo_strength += 1
 go-to: sdapo_victory if sdapo_strength+nsdapo_force >= 6; long_war_2 if sdapo_strength+nsdapo_force < 6
@@ -74,7 +74,7 @@ The Austrian government obviously sees us as biased, so there is no way they wil
 Given the SDAPÖ's starting position, this is treated as a victory. Now begins the long work of reconstruction...
 
 @long_war_2
-title: There is nothing we can do.
+title: 我们无能为力。
 on-arrival: austrian_long_war = 1; z_relation -= 6; dvp_relation -= 6; coalition_dissent += 1; workers_spd -= 3; new_middle_spd -= 5; rural_spd -= 6; old_middle_spd -= 6; unemployed_spd -= 4
 
 No matter our efforts, the war continues. Too many lives are extinguished. Refugees begin to flow into Germany, and trade suffers. Many are calling our Austrian interference a mistake.
@@ -111,7 +111,7 @@ Rejecting the capitulation and calling on a general uprising of all German natio
 - @nsdapo_victory
 
 @support_sdapo_party2
-title: As a party, the SPD will provide the SDAPÖ with support.
+title: 社民党将以政党身份向奥地利社会民主党提供支持。
 subtitle: -2 资源
 choose-if: resources >= 2
 on-arrival: resources -= 2; sdapo_strength += 1
@@ -120,7 +120,7 @@ go-to: sdapo_victory if sdapo_strength >= nsdapo_force and sdapo_strength/nsdapo
 The SPD raises its resources to provide arms and volunteers for the SDAPÖ.
 
 @support_sdapo_govt2
-title: The Foreign Ministry will support the democratic Austrian forces.
+title: 外交部将支持奥地利的民主力量。
 view-if: spd_in_government and foreign_minister_party = "SPD"
 on-arrival: sdapo_strength += 1
 go-to: sdapo_victory if sdapo_strength >= nsdapo_force and sdapo_strength/nsdapo_force > 1.1; long_war_3 if sdapo_strength/nsdapo_force >= 0.9 and sdapo_strength/nsdapo_force <= 1.1; nsdapo_victory if nsdapo_force >= sdapo_strength and sdapo_strength/nsdapo_force < 0.9
@@ -128,14 +128,14 @@ go-to: sdapo_victory if sdapo_strength >= nsdapo_force and sdapo_strength/nsdapo
 We provide diplomatic and some financial and material support to the SDAPÖ forces.
 
 @long_war_3
-title: There is nothing we can do.
+title: 我们无能为力。
 view-if: sdapo_strength/nsdapo_force >= 0.9
 on-arrival: austrian_long_war = 2; z_relation -= 6; dvp_relation -= 6; coalition_dissent += 1; workers_spd -= 3; new_middle_spd -= 5; rural_spd -= 6; old_middle_spd -= 6; unemployed_spd -= 4
 
 No matter our efforts, the war continues. Too many lives are extinguished. Refugees begin to flow into Germany, and trade suffers. Many are calling our Austrian interference a mistake.
 
 @nsdapo_victory
-title: There is nothing we can do.
+title: 我们无能为力。
 view-if: sdapo_strength/nsdapo_force < 0.9
 on-arrival: nazi_austria = 1; old_middle_nsdap += 15*(nationalism/100); rural_nsdap += 15*(nationalism/100); new_middle_nsdap += 10*(nationalism/100); workers_nsdap += 5*(nationalism/100); unemployed_nsdap += 5*(nationalism/100); nationalism += 10
 

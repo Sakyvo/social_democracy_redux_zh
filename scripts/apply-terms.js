@@ -34,7 +34,8 @@ const applyTo = (file, pairs, label) => {
   }
   fs.writeFileSync(file, s);
   const rel = path.relative(root, file).replace(/\\/g, '/');
-  console.log('  ' + rel.padEnd(48) + n + '/' + pairs.length + (miss.length ? '  MISS: ' + miss.join(' | ') : ''));
+  if (n !== pairs.length || process.env.VERBOSE)
+    console.log('  ' + rel.padEnd(48) + n + '/' + pairs.length + (miss.length ? '  MISS(' + miss.length + '): ' + miss.slice(0, 3).join(' | ') : ''));
   return { n, miss: miss.length };
 };
 

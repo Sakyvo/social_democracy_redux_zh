@@ -1,5 +1,5 @@
-title: High Inflation
-subtitle: Workers are seeing their purchasing power decline.
+title: 高通胀
+subtitle: 工人的购买力正在下降。
 view-if: inflation >= 7 and high_inflation_timer = 0 and not spd_in_government
 new-page: true
 on-arrival: capital_strike_progress -= 1; hyperinflation += 0.2; old_middle_dvp -= 6; new_middle_dvp -= 6; rural_dvp -= 5; high_inflation_timer = 4 if inflation > 8; high_inflation_timer = 2 if inflation >= 10; pro_republic -= 5; old_middle_nsdap += 2; new_middle_nsdap += 2; rural_nsdap += 2; welfare -= 1; lower_tax_rates += 1; budget += 2; unemployed += 1; inflation -= 2; economic_growth -= 1
@@ -13,7 +13,7 @@ The people and the press are clamoring for action to reduce inflation. Since we 
 
 - @campaign: Campaign against the government!
 - @toleration: We are in toleration.
-- @do_nothing: We will wait it out.
+- @do_nothing: 我们就等着熬过去。
 
 @campaign
 view-if: not spd_toleration
@@ -30,7 +30,7 @@ on-arrival: workers_spd -= 4; unemployed_spd -= 4;
 An astute observation, sir. What should we do about it?
 
 - @break_toleration: End the toleration agreement!
-- @do_nothing: We will wait it out.
+- @do_nothing: 我们就等着熬过去。
 
 @do_nothing
 on-arrival: new_middle_nsdap += inflation; old_middle_nsdap += inflation; rural_nsdap += (inflation-land_reform);

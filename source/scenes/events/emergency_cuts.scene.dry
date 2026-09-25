@@ -12,7 +12,7 @@ Due to the crisis of the Great Depression, government budgets have fallen and we
 
 [? if spd_toleration : If we reject this, it would mean the end of the toleration agreement, and [+ chancellor +] would likely dissolve the Reichstag and call new elections. Of course, the workers are opposed to this policy, although it might be necessary for economic and political stability. ?]
 
-- @nothing_to_do: There is nothing we can do.
+- @nothing_to_do: 我们无能为力。
 - @vote_no
 - @vote_yes
 

@@ -38,7 +38,7 @@ card-image: img/portraits/SchmidtRobert.jpg
 - @easy_discard
 
 @wtb_2
-title: Continue the implementation of the WTB-Plan.
+title: 继续实施 WTB 计划。
 subtitle: -3 budget
 unavailable-subtitle: [? if unemployed <= 8 : 失业率已经够低,推行 WTB 计划的时机已过。 ?][? if economic_minister_party == "DVP" : 由人民党掌控的经济部正在阻挠我们的计划。 ?]
 view-if: wtb_implemented > 2 and budget >= 3 
@@ -49,7 +49,7 @@ on-arrival: works_program += 1; budget -= 3; workers_spd += 7*(1-dissent); worke
 
 
 @wtb_2_deficit
-title: Continue the implementation of the WTB-Plan.
+title: 继续实施 WTB 计划。
 subtitle: -3 budget - we will enter a deficit.
 unavailable-subtitle: [? if unemployed <= 10 : 失业率已经够低,我们不应再搞赤字开支。 ?][? if economic_minister_party == "DVP" : 由人民党掌控的经济部正在阻挠我们的计划。 ?][? if finance_minister_party != "SPD" : 不掌握财政,我们就无法进行这样的赤字开支。 ?]
 view-if: wtb_implemented > 2 and budget < 3 and budget >= -3
@@ -71,7 +71,7 @@ on-arrival: budget += 1 if works_program <= 2; unemployed -= 5 if (works_program
 [? if in_popular_front or in_left_front: 然而,共产党仍然反对我们「拯救」资本主义的政策。 ?]
 
 @implement_wtb_no_deficit
-title: Implement the WTB plan.
+title: 实施 WTB 计划。
 subtitle: -[+ wtb_budget +] budget. [? if wtb_budget == 3 : Our pro-labor policies have reduced the cost of the plan. ?]
 unavailable-subtitle: [? if unemployed <= 8 : 失业率已经够低,推行 WTB 计划的时机已过。 ?][? if economic_minister_party == "DVP" : 由人民党掌控的经济部正在阻挠我们的计划。 ?]
 view-if: budget >= wtb_budget and wtb_implemented == 0 and wtb_adopted == 1
@@ -90,7 +90,7 @@ achievement: wirtschaftspolitik
 [? if in_popular_front or in_left_front: 共产党反对 WTB 计划,视之为拯救资本主义,而非迈向真正社会主义的一步。 ?]
 
 @implement_wtb_deficit
-title: Implement the WTB plan.
+title: 实施 WTB 计划。
 subtitle: -[+ wtb_budget +] budget - we will enter deficit spending. [? if wtb_budget == 3 : Our pro-labor policies have reduced the cost of the plan. ?]
 unavailable-subtitle: [? if unemployed <= 8 : 失业率已经够低,推行 WTB 计划的时机已过。 ?][? if economic_minister_party == "DVP" : 由人民党掌控的经济部正在阻挠我们的计划。 ?][? if finance_minister_party != "SPD" : 不掌握财政,我们就无法进行这样的赤字开支。 ?]
 view-if: budget < wtb_budget and wtb_implemented == 0 and wtb_adopted == 1
@@ -113,7 +113,7 @@ achievement: wirtschaftspolitik
 
 @nationalize_1
 title: Implement the Left plan for the transformation of the economy.
-subtitle: -[+ nationalize_budget +] budget. [? if works_councils >= 3 : Our works councils have reduced the budget necessary for this program. ?] [? if socializations >= 2: Our existing socialization policies have reduced the budget necessary for this program. ?]
+subtitle: -[+ nationalize_budget +] 财政预算。[? if works_councils >= 3 : 我们的工厂委员会降低了该计划所需的预算。 ?] [? if socializations >= 2: 我们既有的社会化政策降低了该计划所需的预算。 ?]
 view-if: nationalization_adopted == 1 and nationalization_progress == 0
 choose-if: economic_minister_party != "DVP" and not capital_spd
 unavailable-subtitle: [? if not capital_spd : The DVP-controlled Economic Ministry could never allow such an action. ?][? if capital_spd : <span style="color:rgb(170,150,60);font-family:'Times New Roman',serif;font-weight:700;letter-spacing:0.5px;">What are you, a communist? That's my property, sicko.</span> ?]
@@ -145,13 +145,13 @@ on-arrival: socialism -= 2
 - @nationalize_deficit_1
 - @nationalize_without_compensation
 - @empower_workers
-- @return: No, we should not do this.
+- @return: 不,我们不该这么做。
 
 
 @nationalize_deficit_1
-title: Take a budget deficit to fund the nationalization program.
+title: 以预算赤字为该国有化计划提供资金。
 choose-if: (left_strength > reformist_strength + center_strength or woytinsky_advisor == 1) and (finance_minister_party == "SPD" or finance_minister_party == "KPD")
-subtitle: [? if woytinsky_advisor: Woytinsky can bring us around to supporting a budget deficit. ?]
+subtitle: [? if woytinsky_advisor: 沃伊京斯基能说服我们接受预算赤字。 ?]
 unavailable-subtitle: [? if left_strength <= reformist_strength + center_strength: 党内尚不支持为此目的而搞预算赤字。 ?] [? if not woytinsky_advisor : 或许引入一位顾问有助于让这一行动变得可以接受? ?][? if finance_minister_party != "SPD" and finance_minister_party != "KPD" : 不掌握财政,我们就无法进行这样的赤字开支。 ?]
 on-arrival: nationalization_progress += 1; bourgeois_power -= 0.05; capital_strike_progress += 3; unemployed -= 3 if unemployed >= 6; unemployed -= 1.2 if works_councils >= 3; budget -= nationalize_budget; works_program += 1; workers_spd += 8*(1-dissent); unemployed_spd += 5*(1-dissent); coalition_dissent += 2; coalition_dissent += 1 if in_grand_coalition; dvp_relation -= 7; z_relation -= 4; new_middle_spd -= 3; new_middle_spd += 1 if new_middle_conscious; old_middle_spd -= 3; economy_goal_completed += 1; inflation += 3; economic_growth += 2 if economic_growth < 5;
 achievement: wirtschaftspolitik
@@ -165,8 +165,8 @@ achievement: wirtschaftspolitik
 [? if nationalization_progress > 1 : 我们又收购了更多未被充分利用的企业,与工厂委员会以协调的社会主义方式经营,并重新雇用先前被裁的工人。如今,经济的相当一部分已处于公共控制之下。 ?]
 
 @nationalize_without_compensation
-title: Nationalize without compensation.
-subtitle: There is no reason why we should not simply take over idle factories. This is likely to provoke a confrontation with the capitalists.
+title: 无偿国有化。
+subtitle: 我们没理由不干脆接管那些闲置工厂。这很可能会引发与资本家的对抗。
 unavailable-subtitle: [? if left_strength <= reformist_strength + center_strength: 党内多数并不支持这一半合法的举措。 ?] [? if judicial_reform < 3 : 司法界会反对这一举措。 ?] [? if left_coalition < 50 : 我们在国会中没有多数。 ?]
 choose-if: left_strength > reformist_strength + center_strength and judicial_reform >= 3 and left_coalition >= 50
 on-arrival: nationalization_progress += 1; bourgeois_power -= 0.1; capital_strike_progress += 7; coup_progress += 3; unemployed -= 2.5 if unemployed >= 6; unemployed -= 1.2 if works_councils >= 3 and unemployed >= 3; works_program += 1; workers_spd += 8*(1-dissent); unemployed_spd += 6*(1-dissent); coalition_dissent += 2; coalition_dissent += 1 if in_grand_coalition; coalition_dissent += 1 if capital_strike_progress >= 10; dvp_relation -= 12; z_relation -= 8; ddp_relation -= 8; left_strength += 15; reformist_dissent += 10; left_dissent -= 10; new_middle_spd -= 5; new_middle_spd += 3 if new_middle_conscious; old_middle_spd -= 8; economy_goal_completed += 1; kpd_relation += 5*(1-dissent); inflation += 4; economic_growth += 1 if economic_growth < 4; socialism -= 1
@@ -179,8 +179,8 @@ achievement: wirtschaftspolitik
 [? if nationalization_progress > 1 : 我们又取得了更多未被充分利用的企业,与工厂委员会以协调的社会主义方式经营,并重新雇用先前被裁的工人。如今,经济的相当一部分已处于公共控制之下。 ?]
 
 @empower_workers
-title: Empower workers to take over factories.
-subtitle: We can promise to legalize factory occupations, giving the factories over to worker unions. This is highly confrontational, and would likely provoke a reaction from right-wing militants as well as capitalists.
+title: 赋权工人接管工厂。
+subtitle: 我们可以承诺使占领工厂合法化,把工厂交给工人工会。此举极具对抗性,很可能招致右翼武装分子乃至资本家的反扑。
 unavailable-subtitle: [? if left_strength <= reformist_strength + neorevisionist_strength : 党内多数并不支持这一激进举措。 ?] [? if judicial_reform < 3 : 司法界会反对这一举措。 ?] [? if rb_militancy < 0.25 : 若能增强我们准军事组织的力量,或许可以这么做。 ?] [? if works_councils < 1 : 我们需要先获得工厂委员会的支持。 ?][? if left_coalition < 50 : 我们在国会中没有多数。 ?]
 choose-if: left_strength > reformist_strength + neorevisionist_strength and (judicial_reform >= 3 or rb_militancy >= 0.25) and works_councils >= 1 and left_coalition >= 50
 on-arrival: nationalization_progress += 1; bourgeois_power -= 0.1; capital_strike_progress += 6; coup_progress += 5; unemployed -= 3 if unemployed >= 6; unemployed -= 1.5 if works_councils >= 3 and unemployed > 4; works_program += 1; workers_spd += 10*(1-dissent); unemployed_spd += 10*(1-dissent); coalition_dissent += 2; coalition_dissent += 1 if in_grand_coalition; coalition_dissent += 1 if capital_strike_progress >= 10; coalition_dissent += 1 if coup_progress >= 8; dvp_relation -= 12; z_relation -= 8; ddp_relation -= 8; workers_nsdap -= 5*(1-dissent); unemployed_nsdap -= 5*(1-dissent); left_strength += 15; reformist_dissent += 10; left_dissent -= 10; new_middle_spd -= 5; new_middle_spd += 2 if new_middle_conscious; old_middle_spd -= 10; factory_takeovers += 1; economy_goal_completed += 1; kpd_relation += 5*(1-dissent); inflation += 3; economic_growth += 1 if economic_growth < 3; socialism += 1
@@ -295,7 +295,7 @@ go-to: reformist_done_2 if not legislature_enabled; legislative_menu if legislat
 title: Implement a comprehensive economic plan using our control over the economy.
 view-if: capital_flight and not five_year_plan
 choose-if: budget > 0
-subtitle: [? if budget <= 5 : -[+ budget +] budget. ?][? if budget > 5 : -5 budget. ?]
+subtitle: [? if budget <= 5 : -[+ budget +] 财政预算。 ?][? if budget > 5 : -5 财政预算。 ?]
 on-arrival: invested = budget if budget <= 5; invested = 5 if budget > 5; budget = 0 if budget <= 5; budget -= 5 if budget > 5; economic_growth += 0.8*invested; unemployed -= 1.4*invested; inflation += 1*invested; inflation += 0.5*invested if inflation < 3; economic_growth += 0.4 if invested >= 3; economic_growth += 0.2 if invested == 5; unemployed -= 0.6 if invested >= 3; unemployed -= 1 if invested == 5; five_year_plan = 1
 
 我们已利用对经济的掌控,开始实施一项全面的经济计划,希望借此把失业率降至微不足道的水平、恢复经济。从某种意义上说,这项计划将成为社会主义的试炼;我们的任务是证明这一经济制度的优越性。
@@ -321,7 +321,7 @@ on-arrival: budget -= 1; economic_growth += 0.6; unemployed -= 1.1; inflation +=
 @reconcile_town_and_country1
 view-if: five_year_plan and reconcile_town_and_country == 1
 title: Continue to undertake the development of urban agriculture.
-subtitle: We will reconcile town & country!
+subtitle: 我们将调和城乡!
 on-arrival: reconcile_town_and_country += 1; inflation -= nationalization_progress/10; rural -= (invested/10); workers += (invested/10); unemployed -= (nationalization_progress+invested)/12
 
 我们继续组织城市农业的发展,以提升每一座城市的自给能力、缩小城乡之间的鸿沟。这只是迈向永久解决方案的第一步。
@@ -331,7 +331,7 @@ on-arrival: reconcile_town_and_country += 1; inflation -= nationalization_progre
 @reconcile_town_and_country2
 view-if: reconcile_town_and_country == 2 or reconcile_town_and_country == 3
 title: Enlist urban planners to conceptualize new settlements, based on a blend between the town and country.
-subtitle: We will reconcile town & country!
+subtitle: 我们将调和城乡!
 on-arrival: reconcile_town_and_country += 1; labor_dissent += 5
 max-visits: 1
 
@@ -342,7 +342,7 @@ max-visits: 1
 @reconcile_town_and_country3
 view-if: reconcile_town_and_country == 2 or reconcile_town_and_country == 3
 title: Launch an education initiative to teach workers basic agricultural skills.
-subtitle: We will reconcile town & country!
+subtitle: 我们将调和城乡!
 on-arrival: reconcile_town_and_country += 1; inflation -= 0.2; rural_spd -= 2; rural -= 1; workers += 1
 max-visits: 1
 
@@ -368,7 +368,7 @@ on-arrival: budget -= 1; inflation += 0.6 if budget < 0; rural_spd += 3*(1-disse
 @reconcile_town_and_country6
 view-if: reconcile_town_and_country == 6
 title: Reconcile town & country!
-subtitle: We will reconcile town & country!
+subtitle: 我们将调和城乡!
 on-arrival: reconcile_town_and_country += 1; inflation -= 3 if inflation >= 3; economic_growth += 2; rural -= invested; workers += invested; workers += rural if rural < 0; rural = 0 if rural < 0
 
 我们已经调和了城乡 —— 或至少已朝此方向取得重大进展。虽然仍有很长的路要走,但我们已围绕这一原则建造了许多新聚居地,并通过季节性劳动轮换与在现有城市中发展城市农业,也在其他方面帮助缓解了冲突。

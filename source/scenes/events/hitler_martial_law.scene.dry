@@ -1,4 +1,4 @@
-title: Martial Law!
+title: 戒严!
 subtitle: Hitler has called the army in to restore order
 view-if: (president == "Hitler" or president == "Göring") and resisted_hitler and time >= panic_time
 tags: event

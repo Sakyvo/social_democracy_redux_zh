@@ -1,4 +1,4 @@
-title: Expropriation of the Princes
+title: 没收诸侯财产
 subtitle: Disputes arise over the status of princely lands
 view-if: (year == 1925 and month >= 12) or year == 1926
 on-arrival: workers_kpd += 5; unemployed_kpd += 2
@@ -6,7 +6,7 @@ tags: event
 max-visits: 1
 new-page: true
 
-= Expropriation of the Princes
+= 没收诸侯财产
 
 As the economy worsens and the Communists search for ways to revitalize their movement after the embarassing result of [+ thalmann_votes_disp +]% in March, they attempt to capitalize on the current debate over the status of princely lands, and have submitted a bill for the expropriation without compensation.
 

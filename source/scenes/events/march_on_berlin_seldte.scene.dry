@@ -1,5 +1,5 @@
-title: March on Berlin
-subtitle: Right-wing militants are taking action...
+title: 进军柏林
+subtitle: 右翼武装分子正在行动……
 view-if: ((((spd_in_government = 1 and coup_progress >= 10) or (coup_progress >= 15)) and year >= 1929 and (year >= 1930 or month >= 6) and ((sa_banned=0 or sh_banned=0) or (sa_force + sh_force + army_force*(1-reichswehr_loyalty) >= 50))) or (year >= 1933 and month >= 2 and chancellor != "Papen" and chancellor != "Schleicher" and coup_progress >= 6 and president == "Braun" and nsdap_votes + dnvp_votes + (sa_force+sh_force)/4 >= 50)) and march_on_berlin_timer = 0 and (nsdap_votes + sa_force + vienna_influence < dnvp_votes + other_votes + dvp_votes + sh_force) and chancellor_party != "DNVP"
 new-page: true
 max-visits: 4
@@ -24,7 +24,7 @@ It appears that President [+ president +] is looking favorably upon the fascist 
 - @accept
 
 @accept
-title: There is nothing we can do.
+title: 我们无能为力。
 go-to: accept_seldte
 
 @accept_seldte
@@ -65,7 +65,7 @@ President [+ president +] has asked our government to resign.
 - @new_elections
 
 @fight
-title: Deploy the Reichsbanner and call a general strike to resist the fascists!
+title: 部署国旗团并发动总罢工,抵抗法西斯分子!
 on-arrival: defense_strength = rb_strength*rb_militancy*(1-dissent/2); defense_strength += prussian_police_strength*prussian_police_militancy*prussian_police_loyalty if spd_prussia; enemy_strength = sa_strength*sa_militancy + sh_strength*sh_militancy; enemy_strength += reichswehr_strength*reichswehr_militancy*(0.1-reichswehr_loyalty) if reichswehr_loyalty < 0.1; defense_strength += workers_spd_normalized*(2 - dissent)*(2 - unemployed/100); defense_strength += reichswehr_strength*reichswehr_loyalty*reichswehr_militancy if president=="Braun" and spd_in_government
 go-to: fight_2_win if defense_strength >= enemy_strength and march_on_berlin_seen <= 1; fight_2_win_2 if defense_strength >= enemy_strength and march_on_berlin_seen > 1; fight_2_pre_civil_war if defense_strength < enemy_strength
 
@@ -102,9 +102,9 @@ Our forces confront the fascists on the streets of Berlin, and armed fighting er
 
 
 @fight_constitution
-title: This is unconstitutional! We will keep our positions in government, and ask the courts to keep us in power.
+title: 这是违宪的!我们将留在政府职位上,并请法院让我们继续掌权。
 choose-if: judicial_reform >= 3
-unavailable-subtitle: The judiciary would never agree with us.
+unavailable-subtitle: 司法系统绝不会同意我们这样做。
 
 The courts agree that President [+ president +] is wrong to dismiss us, and that we should remain in the government. The President might respect the court's decision for now, but the fascists in the streets do not. They are still demanding snap elections or the resignation of the government, and will remain in the streets until we either meet their demands, or they are forced out.
 
@@ -113,8 +113,8 @@ The courts agree that President [+ president +] is wrong to dismiss us, and that
 
 
 @new_elections
-title: Call for new snap elections.
-subtitle: We will not resign at gunpoint, and we will attempt to maintain the integrity of the elections.
+title: 要求提前举行新的选举。
+subtitle: 我们不会在枪口下辞职,并将尽力维护选举的公正。
 go-to: new_elections_braun if president == "Braun" or president == "Schumacher" or president == "Juchacz" or president == "Adenauer" or president == "Gessler" or president == "Thälmann" or president == "Münzenberg"; new_elections_hindenburg if (president != "Braun" and president != "Schumacher" and president != "Juchacz" and president != "Adenaeur" and president != "Thälmann" and president != "Münzenberg" and president != "Gessler") and (z_relation >= 40 or president == "Eckener"); new_elections_hindenburg_reject if (president != "Braun" and president != "Schumacher" and president != "Juchacz" and president != "Adenaeur" and president != "Eckener" and president != "Gessler" and president != "Thälmann" and president != "Münzenberg") and z_relation < 40
 
 
@@ -155,9 +155,9 @@ Influenced by his inner circle and by the fascists in the streets, President [+ 
 
 
 @resign
-title: Resign our positions in the government.
+title: 辞去我们在政府中的职位。
 choose-if: president != "Braun"
-unavailable-subtitle: President Braun cannot resign.
+unavailable-subtitle: 布劳恩总统不能辞职。
 on-arrival: chancellor = "Papen"; chancellor_party = "I"; spd_in_government = 0;
 go-to: accept
 
@@ -169,7 +169,7 @@ We have resigned our positions in the government.
 title: We cannot do anything but appoint Seldte chancellor.
 view-if: president == "Braun" or president == "Schumacher" or president == "Juchacz"
 choose-if: dnvp_votes + sh_force >= 50 or largest_party == "DNVP"
-unavailable-subtitle: There is no way President [+ president +] could do such a blatantly undemocratic act.
+unavailable-subtitle: [+ president +] 总统绝不可能做出如此露骨的反民主之举。
 on-arrival: chancellor = "Seldte"; chancellor_party = "DNVP"; spd_in_government = 0; reichswehr_loyalty -= 0.05; sh_militancy += 0.05; sh_strength += 25; workers_spd -= 6
 go-to: enabling_act
 

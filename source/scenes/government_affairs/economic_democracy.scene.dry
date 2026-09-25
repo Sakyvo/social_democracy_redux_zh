@@ -19,7 +19,7 @@ tags: govt_affairs
 - @expand_councils_3
 - @nationalize_1
 - @cooperatives_1
-- @return: Do not enact any policies for now.
+- @return: 暂时不推行任何政策。
 - @easy_discard
 - @cancel_advisor_action
 

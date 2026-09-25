@@ -13,7 +13,7 @@ Of course, this criticism is unfounded, but the bourgeois establishment does not
 
 - @expose_him: Expose his reactionary dealings!
 - @work_with: Work with him to shape the budget.
-- @hilferding_resign: Hilferding must resign.
+- @hilferding_resign: 希法亭必须辞职。
 
 @expose_him
 view-if: investigate_far_right >= 1
@@ -25,7 +25,7 @@ We expose to the public Schacht's dealings with the Nazis. For better or worse, 
 
 After a second budget proposal, Schacht still considers Hilferding's budget to be unacceptable, despite more regressive taxes and expenditure cuts.
 
-- @hilferding_resign: Hilferding must resign.
+- @hilferding_resign: 希法亭必须辞职。
 
 
 @hilferding_resign

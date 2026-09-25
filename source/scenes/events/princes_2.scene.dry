@@ -1,11 +1,11 @@
-title: Expropriation of the Princes
+title: 没收诸侯财产
 subtitle: [? if princes_initiated: Campaigning for the referendum begins. ?] The Luther cabinet attempts to propose to us a compromise
 view-if: time = compromise_time and year == 1926 and not spd_in_government
 tags: event
 max-visits: 1
 new-page: true
 
-= Expropriation of the Princes
+= 没收诸侯财产
 
 As the date for the petition on the expropriation of the princes draws nearer, the Luther cabinet has proposed a compromise bill of its own, through which it hopes to resolve the issue without the need for such a direct confrontation in the form of a referendum.
 
@@ -13,19 +13,19 @@ This law would create a special court, which would settle the disputes between p
 
 - @ddp_proposal: Pressure the Luther cabinet into backing the DDP's proposal.
 - @accept_luther: Accept the compromise, lackluster though it may be.
-- @referendum_ftw: We will vote against the compromise, and go ahead with the referendum.
-- @whoops: We will vote against the compromise.
+- @referendum_ftw: 我们将投票反对该妥协方案,继续推进公投。
+- @whoops: 我们将投票反对该妥协方案。
 
 @ddp_proposal
 choose-if: ((dvp_relation+spd_votes+kpd_votes+socialism) >= 150) or (marx_relation >= 50 and president == "Marx" and (dvp_relation+marx_relation+spd_votes+kpd_votes+socialism) >= 180)
-unavailable-subtitle: The parties of the center-right view it as too radical
+unavailable-subtitle: 中右翼政党认为它过于激进
 on-arrival: dvp_relation -= 5; rural_spd += 4*(1-dissent); workers_kpd -= 2*(1-dissent); workers_spd += 2*(1-dissent); princes_initiated = 0; kpd_relation -= 5
 
 We have managed to pressure the bourgeois parties into backing the DDP's proposal from last year. With this, we are able to justify non-participation in the referendum, though the KPD attack us anyway. 
 
 @accept_luther
 choose-if: reformist_strength > left_strength+labor_strength+center_strength or (reformist_strength > left_strength+labor_strength and not princes_initiated)
-unavailable-subtitle: The party is by far opposed to the bill in question
+unavailable-subtitle: 本党绝大多数人反对这项法案
 on-arrival: left_dissent += 5; kpd_relation -= 10; workers_kpd += 4; workers_spd -= 4; unemployed_kpd += 4; unemployed_spd -= 4; princes_initiated = 0; dvp_relation += 5; z_relation += 5; marx_relation += 5
 
 We have managed to convince our own party into backing the compromise proposed by Luther's cabinet. The left is furious, and many will be voting alongside the KPD anyway.
@@ -36,16 +36,16 @@ view-if: princes_initiated
 
 This compromise is utterly unacceptable. Instead, we will go ahead with the referendum for the expropriation of the princes. On that matter, a decision must be made on how the campaign should be conducted.
 
-- @spd_only: The SPD will campaign for the referendum on its own.
-- @united_front: The SPD and KPD must campaign together as a united front.
+- @spd_only: 社民党将独自为这场公投奔走。
+- @united_front: 社民党与共产党必须组成统一战线共同行动。
 
 @whoops
 view-if: not princes_initiated
 
 None of these compromises are acceptable. With no possibility of resolving the matter within the Reichstag, many call for us to still join in the referendum, late though we may be.
 
-- @join_referendum: The SPD will join in the communist initiative.
-- @delulu: The KPD stands alone in this referendum.
+- @join_referendum: 社民党将加入共产党发起的倡议。
+- @delulu: 在这场公投中,共产党将孤军奋战。
 
 @spd_only
 on-arrival: workers_spd += 3*(1-dissent); workers_kpd -= 1; unemployed_spd += 2*(1-dissent); unemployed_kpd -= 1; rural_spd += 2*(1-dissent); z_relation += 3; ddp_relation += 3; dvp_relation += 1

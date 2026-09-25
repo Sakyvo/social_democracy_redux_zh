@@ -1,4 +1,4 @@
-title: Unemployment Insurance Crisis
+title: 失业保险危机
 subtitle: Our unemployment insurance programs need additional funding...
 new-page: true
 view-if: spd_in_government = 1 and (year = 1930 or year = 1931 or year = 1932) and month == 3 and (spd_in_government and (in_grand_coalition = 0 or constructive_vonc or president == "Braun")) and unemployment_insurance_timer = 0 and unemployed >= unemployment_insurance_threshold + 4
@@ -17,7 +17,7 @@ In the midst of all this, our unemployment insurance program is underfunded; the
 - @balance: Increase both employer and employee contributions.
 
 @cut_benefits
-subtitle: +1 budget. The workers will regard this as a betrayal.
+subtitle: +1 财政预算. The workers will regard this as a betrayal.
 on-arrival: cut_benefits_vote = 1
 go-to: cut_benefits_done if not legislature_enabled; legislative_menu if legislature_enabled
 

@@ -1,5 +1,5 @@
 title: Panzerkreuzer B
-subtitle: A political question
+subtitle: 一个政治问题
 tags: event
 on-arrival: panzerkreuzer_b_seen = 1
 new-page: true
@@ -11,9 +11,9 @@ The Navy is demanding the construction of another new battlecruiser. [? if panze
 
 Much of our party is deeply opposed to rearmament, while the center and right parties are united in support. What will we do?
 
-- @vote_yes: Vote yes, for constructing the battlecruiser.
-- @vote_no: Vote no, against constructing the battlecruiser.
-- @abstain: Abstain from the vote.
+- @vote_yes: 投赞成票,建造这艘战列巡洋舰。
+- @vote_no: 投反对票,反对建造这艘战列巡洋舰。
+- @abstain: 弃权。
 - @ministry: Use the Reichswehr Ministry to prevent the construction.
 
 @vote_yes

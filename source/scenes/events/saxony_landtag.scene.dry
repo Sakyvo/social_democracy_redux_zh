@@ -375,13 +375,13 @@ title: A "United Front" with the KPD.
 subtitle: KPD + SPD ([+ s_left_coalition +]%)
 view-if: s_left_coalition >= 50
 choose-if: kpd_relation >= 40 and communist_coalition >= 2
-unavailable-subtitle: The KPD doesn't trust us enough.
+unavailable-subtitle: 共产党对我们不够信任。
 on-arrival: saxony_kpd += 0.2 if saxony_kpd < 1.5; coup_progress += 2; capital_strike_progress += 2; red_saxony = 1; saxony_nsdap -= 0.1 if saxony_nsdap >= 0.7; workers_spd += 4*(1-dissent); unemployed_spd += 3*(1-dissent)
 
 Together with the KPD, we have won a majority. The bourgeois parties are up in arms at the prospect of a return to socialist Saxony, and scramble to oppose the government.
 
 @spd_majority
-title: The SPD may govern alone.
+title: 社民党或可单独执政。
 subtitle: SPD ([+ spd_sl +]%)
 view-if: spd_sl >= 50
 on-arrival: saxony_spd -= 0.1; workers_spd += 3*(1-dissent); unemployed_spd += 3*(1-dissent)
@@ -390,11 +390,11 @@ We have won a majority in Saxony alone.
 
 @no_majority_saxony
 view-if: (nsdap_sl < 50) and (s_left_coalition < 50 or kpd_relation < 40 or communist_coalition <2) and (s_anticommunist_coalition < 50 or s_center_right_coalition >= 50 or (year >= 1930 and not nazi_reform and not dnvp_reform)) and (s_center_right_coalition < 50 or (year >= 1930 and not dnvp_reform)) and (spd_sl < 50) and (s_progressive_coalition < 50)
-title: There is no clear majority.
+title: 没有明确的多数。
 
 There is no clear majority in the Landtag. As Saxony allows new elections to be called by simple majority vote in the Landtag, something must be done to prevent new elections.
 
-- @out_of_our_hands: This is out of our hands.
+- @out_of_our_hands: 此事已不由我们掌控。
 
 @out_of_our_hands
 
@@ -458,7 +458,7 @@ on-arrival: saxon_dispute = 1; saxolation_timer = 10-(left_strength/10); saxony_
 The Saxon SPD, following the direction of the party away from the left, has decided to tolerate the bourgeois parties in order to prevent the entry of Nazis into government.
 
 @brown_saxony
-title: NSDAP majority
+title: 纳粹党多数
 subtitle: NSDAP ([+ nsdap_sl +]%)
 view-if: nsdap_sl >= 50
 on-arrival: saxony_nsdap += 0.25; workers_nsdap += 4; old_middle_nsdap += 5; rural_nsdap += 2

@@ -17,14 +17,14 @@ The legality of the action is questionable. Many of our members are ready to res
 
 
 @defend
-title: Fight against the overthrow attempt!
+title: 反击这场颠覆企图!
 subtitle: 工会将发动总罢工。国旗团与普鲁士警察中的忠诚力量将抵抗这场政变。
 unavailable-subtitle: 我们没有抵抗的力量。
 choose-if: rb_strength*rb_militancy >= 200
 
 国防军与钢盔团已包围柏林,冲锋队则在支援他们。这可能演变成内战。我们明白这一点,对吧? 
 
-- @defend_2: We will fight, even if it leads to a civil war.
+- @defend_2: 我们要战斗,哪怕这会导致内战。
 - @surrender
 
 @defend_2
@@ -62,7 +62,7 @@ Our forces confront the government troops and their supporters on the streets of
 
 
 @surrender
-title: Give up on the Prussian government.
+title: 放弃普鲁士政府。
 on-arrival: spd_disarray = 1; disarray_timer = 6; spd_prussia = 0; workers_spd -= 5; left_dissent += 10; labor_dissent += 10; rb_militancy = rb_militancy/1.25; rb_strength -= 200; bourgeois_power += 0.05 if bourgeois_power < 1
 
 一片绝望的阴云笼罩着社会民主。我们失败了。国旗团中许多人干脆退出,被领袖们不肯发出行动号召的态度打击得心灰意冷。

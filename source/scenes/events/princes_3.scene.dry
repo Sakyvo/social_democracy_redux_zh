@@ -1,4 +1,4 @@
-title: Expropriation of the Princes
+title: 没收诸侯财产
 subtitle: The petition has reached the necessary quorum
 view-if: time = princes_time and year == 1926
 tags: event
@@ -30,9 +30,9 @@ new-page: true
 
 - @vote_for: We will vote for the law in the Reichstag.
 - @vote_against: We will vote against the law in the Reichstag.
-- @luther_and_hindenburg_suck: President Hindenburg and the [+ chancellor +] cabinet throw us a new hurdle.
-- @zmarx_reference: The reactionary judiciary throws us a new hurdle.
-- @zmarx_wholesome: The DVP throws us a new hurdle.
+- @luther_and_hindenburg_suck: 兴登堡总统与 [+ chancellor +] 内阁给我们抛来一道新的障碍。
+- @zmarx_reference: 反动的司法系统给我们抛来一道新的障碍。
+- @zmarx_wholesome: 人民党给我们抛来一道新的障碍。
 
 @vote_for
 view-if: not princes_initiated
@@ -48,9 +48,9 @@ on-arrival: reformist_dissent += 5; dvp_relation -= 5; z_relation -= 5; marx_rel
 
 尽管此前反对,我们最终还是选择为这场公投助选。我们当然会独自开展竞选,避免与共产党人有任何关联;不过,让共产党独占这场显然意义重大的投票,代价对我们来说太高了。
 
-- @luther_and_hindenburg_suck: President Hindenburg and the [+ chancellor +] cabinet throw us a new hurdle.
-- @zmarx_reference: The reactionary judiciary throws us a new hurdle.
-- @zmarx_wholesome: The DVP throws us a new hurdle.
+- @luther_and_hindenburg_suck: 兴登堡总统与 [+ chancellor +] 内阁给我们抛来一道新的障碍。
+- @zmarx_reference: 反动的司法系统给我们抛来一道新的障碍。
+- @zmarx_wholesome: 人民党给我们抛来一道新的障碍。
 
 @neutral
 
@@ -64,7 +64,7 @@ on-arrival: workers_spd -= 3; unemployed_spd -= 3; left_dissent += 10; marx_rela
 
 @luther_and_hindenburg_suck
 view-if: princes_initiated and president == "Hindenburg"
-subtitle: They allege the bill to be unconstitutional, which would make the referendum one of constitutional revision.
+subtitle: 他们声称该法案违宪 —— 若果真如此,这次公投便属于宪法修订性质的公投。
 
 贵族出身的兴登堡总统认为,这项针对贵族的法案违宪 —— 它并非服务于公共利益,而完全是出于政治动机。
 
@@ -86,7 +86,7 @@ on-arrival: princes_constitutional = 1; coalition_dissent += 1; coup_progress +=
 
 - @radbruch_resigns: Justice Minister Radbruch must resign.
 - @dvp_withdraws_gov: The DVP withdraws from government.
-- @menu_for_no_real_reason: But, for now, the government survives.
+- @menu_for_no_real_reason: 不过眼下,政府暂时保住了。
 
 @radbruch_resigns
 view-if: coalition_dissent >= 3 or (coalition_dissent >= 2 and dvp_relation < 40)
@@ -146,7 +146,7 @@ go-to: menu_for_no_real_reason
 三个月后我们便会知道:这些准备是否足够。
 
 @zmarx_reference
-subtitle: They allege the bill to be unconstitutional, which would make the referendum one of constitutional revision.
+subtitle: 他们声称该法案违宪 —— 若果真如此,这次公投便属于宪法修订性质的公投。
 view-if: princes_initiated and president == "Marx" and judicial_reform < 2
 
 *国家法院*(最高法院)已向由 [+ justice_minister_party +] 掌握的司法部提交意见,认为拟议的这场公投违宪,因此不仅需要投票者的多数,还需要全体德国合格选民的非常多数。
@@ -162,9 +162,9 @@ on-arrival: coalition_dissent += 1; reichswehr_loyalty -= 0.05; coup_progress +=
 
 这引发与人民党的严重摩擦 —— 该党正被其右翼推着转而反对大联合政府。
 
-- @radbruch_resigns2: Justice Minister Radbruch must resign.
-- @dvp_withdraws_gov2: The DVP withdraws from government.
-- @menu_for_no_real_reason: But, for now, the government survives.
+- @radbruch_resigns2: 司法部长拉德布鲁赫必须辞职。
+- @dvp_withdraws_gov2: 人民党退出政府。
+- @menu_for_no_real_reason: 不过眼下,政府暂时保住了。
 
 @radbruch_resigns2
 view-if: coalition_dissent >= 3 or (coalition_dissent >= 2 and dvp_relation < 30)
@@ -190,7 +190,7 @@ go-to: menu_for_no_real_reason
 
 @zmarx_wholesome
 view-if: princes_initiated and president == "Marx" and judicial_reform >= 2
-subtitle: They allege the bill to be unconstitutional, which would make the referendum one of constitutional revision.
+subtitle: 他们声称该法案违宪 —— 若果真如此,这次公投便属于宪法修订性质的公投。
 
 人民党的法律专家得出结论,认为这场公投违宪;在右翼施压要求不计手段否决该法案的背景下,人民党已把这些异议递交给司法部。
 
@@ -206,9 +206,9 @@ Justice Minister Gustav Radbruch has reviewed the DVP's opinion and found his ow
 
 这引发与人民党的严重摩擦 —— 该党正被其右翼推着转而反对大联合政府。
 
-- @radbruch_resigns2: Justice Minister Radbruch must resign.
-- @dvp_withdraws_gov2: The DVP withdraws from government.
-- @menu_for_no_real_reason: But, for now, the government survives.
+- @radbruch_resigns2: 司法部长拉德布鲁赫必须辞职。
+- @dvp_withdraws_gov2: 人民党退出政府。
+- @menu_for_no_real_reason: 不过眼下,政府暂时保住了。
 
 @coalition_dispute
 view-if: justice_minister_party != "SPD" and spd_in_government

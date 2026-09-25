@@ -292,7 +292,7 @@ Right-wing Coalition (Z + DVP + Others + DNVP): [+ sch_right_coalition +]%
 - @nazis
 
 @spd_majority
-title: The SPD has won a majority.
+title: 社民党赢得了多数。
 subtitle: SPD ([+ spd_schl +]%)
 view-if: spd_schl >= 50
 choose-if: never
@@ -326,7 +326,7 @@ We may never know.
 They surely must have. 
 
 @nazis
-title: NSDAP majority.
+title: 纳粹党多数.
 subtitle: NSDAP ([+ nsdap_schl +]%)
 view-if: nsdap_schl >= 50
 on-arrival: nazi_schaumburg_lippe = 1; workers_nsdap += 1; new_middle_nsdap += 1; schaumburg_lippe_nsdap += 1; schaumburg_lippe_ddp -= 0.4

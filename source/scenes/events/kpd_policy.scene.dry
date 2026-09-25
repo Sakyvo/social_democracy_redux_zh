@@ -72,7 +72,7 @@ on-arrival: kpd_coalition_dissent += 1; workers_spd -= 5; workers_kpd += 5; kpd_
 After opposing the nationalization policy, the KPD has commenced a propaganda campaign against us, accusing the SPD of yet another perfidy.
 
 @finance
-title: Finance Ministry
+title: 财政部
 subtitle: The Finance Ministry is increasing taxes on the rich.
 view-if: finance_minister_party = "KPD" and upper_tax_rates < 5
 
@@ -92,14 +92,14 @@ on-arrival: kpd_coalition_dissent += 1; workers_spd -= 3; workers_kpd += 3; kpd_
 We oppose the KPD's planned tax hikes on the rich, prompting them to launch a propaganda campaign against us. [? if budget < 0 : This propaganda campaign is bolstered by the fact that we are currently running a deficit. ?]
 
 @foreign
-title: Foreign Ministry
+title: 外交部
 subtitle: The Foreign Ministry is aiding the Soviet Union.
 view-if: foreign_minister_party = "KPD" and soviet_relation < 10
 
 The KPD-controlled Foreign Ministry is planning to send economic aid to the Soviet Union.
 
 - @foreign_support: Yes, we support aiding the Soviet Union.
-- @foreign_oppose: No, this must be stopped.
+- @foreign_oppose: 不,这必须制止。
 
 @foreign_support
 on-arrival: budget -= 1; soviet_relation += 2; coalition_dissent += 1; foreign_goal_completed += 1; kpd_influence += 2; rfb_militancy += 0.04; rfb_strength += 40; reformist_dissent += 5
@@ -112,7 +112,7 @@ on-arrival: kpd_coalition_dissent += 1; kpd_relation -= 3; kpd_relation -= 2 if 
 We block the planned sending of aid to the Soviet Union, disappointing the Communists, as well as the Soviets themselves who had looked forward to the aid.
 
 @interior
-title: Interior Ministry
+title: 内政部
 subtitle: The Interior Ministry is engaged in a purge of the security services.
 view-if: interior_minister_party = "KPD"
 
@@ -132,7 +132,7 @@ on-arrival: kpd_coalition_dissent += 1; kpd_relation -= 5; workers_spd -= 2; wor
 The purges are ended at our opposition, disappointing the Communists, who are quick to campaign on our refusal. Meanwhile, anticommunist sentiment in the police is strengthened by the attempted but blocked purge, and grows.
 
 @judicial
-title: Justice Ministry
+title: 司法部
 subtitle: The Justice Ministry has launched a sweeping reform of the judiciary.
 view-if: justice_minister_party = "KPD" and judicial_reform < 5
 

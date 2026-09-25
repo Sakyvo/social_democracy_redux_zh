@@ -27,7 +27,7 @@ view-if: in_emergency_government == 1 and president == "Braun" and not president
 
 由于我们目前是以紧急政府的一部分执政,我们或许能玩弄半宪法的手段,大幅推迟这次选举,并继续依第 48 条施政。这很可能在我们的基本盘与其他政党中都极不受欢迎。然而,为了阻止极端分子掌权,这或许是必要的。
 
-- @cancel_elections_2: Yes, do it.
+- @cancel_elections_2: 是,就这么办。
 - @election_algorithm: 不,还是举行选举吧。
 
 @cancel_elections_2
@@ -488,7 +488,7 @@ subtitle: [+ ddp_name +] ([+ ddp_r +]%)
 
 好吧,就此收场。
 
-The [+ ddp_name +], upon winning a majority, immediately forms an all-liberal government. Revealing themselves to have been the puppet of an international Illuminati all along, the [+ ddp_name +] swears in Einstein as president. This turns out to be for the better, though. Using advanced psionic technologies, the entire reactionary movement is pacified, becoming content with life in the new Germany, as regular people. The all-liberal agenda is implemented; states are abolished, the Moon is colonized, dinosaurs are brought back to life, and the police force is replaced with an all-new Liberal Crime Squad. Otto Braun and Thälmann kiss, while Hitler undergoes reconstruction following an experience with LSD and becomes a Bavarian gardener noted for his kind and friendly demeanor. Paul Levi returns from the dead, joining a polycule with Braun and Thälmann, who move to Fukuoka and establish a socialist republic. On the Moon, a large monastery is built, commemorating the efforts of we social democrats in allowing the all-liberal government to form. The bourgeoisie peacefully dissolves as a class, convinced by the socialist arguments in a final refutation of Karl Marx's belief that socialism would not be built by the power of ideas but rather of matter. The utopian socialists, victorious, celebrate by moving to the Moon, drinking champagne as they do so on a voyage funded by the new self-dissolved bourgeoisie, while the Beatles (John Lennon, Paul McCartney, George Harrison and Ringo Starr) follow, opening up a resort on Mars. The world unites under one flag, never again to raise up arms against each other. Earth is free and whole, and all problems are eradicated. Finally, as its last act before dissolving the state in the transition to a high-communist society, the all-liberal government unveils a platform of acid, amnesty, and abortion, upon which a new constitution is enshrined for the liberal world republic. Thereby, class, state and money is abolished; in its place, liberalism, now and forever, shall rule the stars.
+[+ ddp_name +] 一赢得多数,便立刻组建了一个清一色自由派政府。他们显露出自己自始至终都是某个国际光明会的傀儡,并让爱因斯坦宣誓就任总统。不过,结果反倒更好。他们动用了先进的灵能技术,把整场反动运动尽数安抚下来,让那些人在新德国作为普通百姓安于生活。全自由派议程得以推行:各州被废除,月球被殖民,恐龙被复活,警察队伍被一支全新的「自由派犯罪小队」取代。奥托·布劳恩与台尔曼亲吻,而希特勒在经历一次 LSD 体验后接受了身心重建,成了一名巴伐利亚园丁,以善良友善的性情著称。保罗·列维从死里复活,加入了布劳恩与台尔曼的多角恋关系;后两人迁居福冈,建立了一个社会主义共和国。在月球上,人们建起一座宏大的修道院,以纪念我们社会民主党人为促成一个全自由派政府得以成立所做的努力。资产阶级作为阶级和平地消解了 —— 他们被社会主义的论点说服,这最终驳倒了卡尔·马克思关于社会主义不会靠思想的力量、而只会靠物质的力量建成的信念。乌托邦社会主义者得胜,庆祝的方式是迁往月球:他们乘坐由新近自我消解的资产阶级出资的飞船,一边喝着香槟一边远航;披头士(约翰·列侬、保罗·麦卡特尼、乔治·哈里森与林戈·斯塔尔)也随之前往,在火星上开了一家度假村。世界在一面旗帜下团结起来,再不会兵戎相见。地球自由而完整,所有问题都被根除。最后,在为了向高级共产主义社会过渡而解散国家之前的最后一次行动中,全自由派政府公布了一份「迷幻药、大赦与堕胎」的政纲,一部新宪法以此为基础被奉为自由世界共和国的根本大法。于是,阶级、国家与货币皆被废除;取而代之的,是自由主义 —— 从今往后,永永远远 —— 将统治群星。
 
 - @skeptic: 我觉得事情不是这样的。
 
@@ -633,7 +633,7 @@ on-arrival: chancellor = nsdap_leader; chancellor_party = "NSDAP"
 
 [? if president == "Hindenburg" : 兴登堡总统的幕僚小圈子 ?][? if president == "Braun" : 布劳恩总统不知怎的 ?] 已决定必须由 [+ nsdap_leader +] 出任总理[? if president == "Hindenburg": ,年迈的总统接受了他们的建议。 ?][? if president == "Braun" : ,因为这是宪法所规定的。 ?]
 
-- @hitler_takes_power: What do we do now?
+- @hitler_takes_power: 我们现在该怎么办?
 
 
 @far_right_fail
@@ -869,7 +869,7 @@ set-bg: img/Dark.png
 
 @postal_sprite
 view-if: achievement_postal_sylvan and not postal_sprite_seen
-subtitle: Miracles.
+subtitle: 奇迹。
 on-arrival: postal_sprite_seen = 1
 go-to: sprites
 
@@ -877,14 +877,14 @@ go-to: sprites
 
 @capital_sprite
 view-if: achievement_capital_sylvan and not capital_sprite_seen
-subtitle: Miracles.
+subtitle: 奇迹。
 on-arrival: capital_sprite_seen = 1
 go-to: sprites
 
 一道闪光过后,一个来自我们那些没骨气的、与大企业私下交易的林间精灵在我们眼前一闪而现。观众的惊呼充耳不闻,巫术之歌在他们身上与心间回荡。
 
 @antifa_sprite
-subtitle: Miracles.
+subtitle: 奇迹。
 view-if: achievement_antifa_sylvan and not antifa_sprite_seen
 on-arrival: antifa_sprite_seen = 1
 go-to: sprites
@@ -987,7 +987,7 @@ choose-if: we_are_awesome
 那么,看来我们现在是在等纳粹出现了。
 
 - @wait: 等等。
-- @leave2: Okaylet'sjustgo
+- @leave2: 好吧我们走吧
 
 @wait
 on-arrival: times_waited += 1
@@ -1038,7 +1038,7 @@ subtitle: [? if times_waited >= 6 : 他们怎么这么久? ?]
 [? if times_waited >= 1001 : Not really. ?]
 
 - @wait: 等等。
-- @leave2: Okaylet'sjustgo
+- @leave2: 好吧我们走吧
 
 @leave2
 view-if: times_waited >= 15
@@ -1216,7 +1216,7 @@ go-to: postwar_left
 社民党的鲁道夫·维塞尔被任命为劳工部长。
 
 @interior_left
-title: Interior Ministry
+title: 内政部
 subtitle: 拿下内政部是人们对我们期望所在。内政部掌控国内治安。
 unavailable-subtitle: 我们的筹码不够。
 tags: mins_left
@@ -1228,7 +1228,7 @@ go-to: postwar_left
 社民党的卡尔·泽韦林被任命为内政部长。
 
 @finance_left
-title: Finance Ministry
+title: 财政部
 subtitle: 财政部掌控政府预算与税收。
 unavailable-subtitle: 我们的筹码不够。
 tags: mins_left
@@ -1240,7 +1240,7 @@ go-to: postwar_left
 社民党的鲁道夫·希法亭被任命为财政部长。
 
 @economic_left
-title: Economic Ministry
+title: 经济部
 subtitle: 经济部掌管更广泛的经济政策。
 unavailable-subtitle: 我们的筹码不够。
 tags: mins_left
@@ -1252,7 +1252,7 @@ go-to: postwar_left
 社民党的罗伯特·施密特被任命为经济部长。
 
 @justice_left
-title: Justice Ministry
+title: 司法部
 subtitle: 司法部掌管法院。
 unavailable-subtitle: 我们的筹码不够。
 tags: mins_left
@@ -1264,7 +1264,7 @@ go-to: postwar_left
 社民党的古斯塔夫·拉德布鲁赫被任命为司法部长。
 
 @foreign_left
-title: Foreign Ministry
+title: 外交部
 subtitle: 这通常是人民党的古斯塔夫·施特雷泽曼的地盘。
 unavailable-subtitle: 我们的筹码不够。
 tags: mins_left
@@ -1277,7 +1277,7 @@ go-to: postwar_left
 
 
 @agriculture_left
-title: Agricultural Ministry
+title: 农业部
 subtitle: 这并非我们惯常的领域。
 unavailable-subtitle: 我们的筹码不够。
 choose-if: leverage >= 5 
@@ -1289,7 +1289,7 @@ tags: mins_left
 社民党的弗里茨·巴德被任命为农业部长。
 
 @reichswehr_left
-title: Reichswehr Ministry
+title: 国防部
 subtitle: 若把这一部交给共产党,可能导致政变。
 unavailable-subtitle: 我们的筹码不够。
 tags: mins_left
@@ -1303,7 +1303,7 @@ go-to: postwar_left
 
 
 @no_more_left
-title: No more ministries.
+title: 不再要部会了。
 on-arrival: labor_dissent += 10 if historical_mode and labor_minister_party != "SPD"
 subtitle: [? if leverage >= 10 : 我们还有一些筹码,可再争取几个部会。 ?][? if leverage < 10 : 我们剩下的筹码不多了。 ?]
 tags: mins_left
@@ -1527,7 +1527,7 @@ on-arrival: spd_in_government = 0; spd_toleration = 1; z_relation += 5; foreign_
 @bruning_lead
 on-arrival: chancellor = "Brüning"; chancellor_party = "Z"
 
-There is no path to an obviously workable majority. President [+ president +] has given Heinrich Brüning of the Center Party the task of forming a government. As the bourgeois parties lack a majority on their own, the task falls on us to decide the fate of Brüning's government.
+看不到任何明显可行的多数路径。[+ president +] 总统把组阁任务交给了中央党的海因里希·布吕宁。由于资产阶级政党自身不占多数,决定布吕宁政府命运的任务便落到了我们肩上。
 
 - @toleration_bruning: 我们将容忍布吕宁。
 - @new_elections: 我们将举行新的选举。
@@ -1535,18 +1535,18 @@ There is no path to an obviously workable majority. President [+ president +] ha
 
 @wirth_lead
 choose-if: neo_weimar_coalition >= 50
-unavailable-subtitle: The parties supporting Wirth do not have a majority.
+unavailable-subtitle: 支持维尔特的各党未占多数。
 on-arrival: chancellor = "Wirth"; chancellor_party = "Z"; wirth_lead = 1
 
-There is no path to an obviously workable majority. President Adenauer has given Joseph Wirth of the Center Party the task of forming a government, tired of Brüning's repeated failures to govern and hoping that Wirth would be able to win over our support. Now the question remains, can he?
+看不到任何明显可行的多数路径。阿登纳总统把组阁任务交给了中央党的约瑟夫·维尔特 —— 他厌倦了布吕宁屡屡组阁失败,希望维尔特能争取到我们的支持。现在的问题仍然是:他能做到吗?
 
 - @toleration_wirth: 我们将容忍维尔特。
 - @new_elections: 我们将举行新的选举。
 - @new_elections_2: 我们将举行新的选举。
 
 @black_brown
-title: Brüning turns to his right for coalition support.
-subtitle: With we on the left firmly refusing to support his government, Brüning considers a deal with the devil.
+title: 布吕宁转向右侧寻求联盟支持。
+subtitle: 眼看我们左翼坚决拒绝支持他的政府,布吕宁开始考虑与魔鬼做交易。
 view-if: hitler_right_coalition >= 50 and left_strength >= 50 and political_crisis_progress >= 1 and (president == "Hindenburg" or president == "Seeckt" or (president == "Marx" and marx_relation < 40)) and chancellor == "Brüning"
 on-arrival: black_brown_seen = 1; nazi_chance = nsdap_r; nazi_chance += socialism; nazi_chance += nationalism; nazi_chance -= pro_republic; nazi_chance += left_coalition if communist_coalition >= 3 and kpd_relation >= 50; nazi_chance += rb_force+rfb_force; nazi_chance -= sa_force; nazi_chance += (radicalization+capital_strike_progress+coup_progress)*political_crisis_progress;
 go-to: black_brown_success if nazi_chance >= 200 and not hitler_deported; black_brown_failure if nazi_chance < 150 or (nazi_chance < 200 and not hitler_deported); black_brown_goring if hitler_deported and nazi_chance >= 150
@@ -1554,9 +1554,9 @@ go-to: black_brown_success if nazi_chance >= 200 and not hitler_deported; black_
 @black_brown_success
 on-arrival: chancellor = "Hitler"; chancellor_party = "NSDAP"; sa_militancy -= 0.1 if rb_force < 15; sa_strength *= 0.9 if rb_force < 15; z_relation -= 25; dvp_relation -= 25; ddp_relation -= 15
 
-Negotiations are long and tense, with Hitler refusing to concede the position of chancellor. Eventually, somehow, to prevent more elections in which we socialists may gain, the Center Party agrees to allow Hitler as chancellor in return for the majority of cabinet positions, the gradual disarmament of the SA, and assurances of safety for Catholics. Brüning reluctantly steps aside, and Hitler is sworn in as chancellor with [+ hitler_right_coalition +]% behind him.
+谈判漫长而紧张,希特勒拒绝让出总理之位。最终,为了阻止可能让我们社会主义者得利的又一次选举,中央党不知怎的竟同意让希特勒出任总理,以换取多数内阁席位、冲锋队的逐步解除武装,以及对天主教徒安全的保证。布吕宁勉强退让,希特勒以 [+ hitler_right_coalition +]% 的支持宣誓就任总理。
 
-- @hitler_takes_power: What do we do now?
+- @hitler_takes_power: 我们现在该怎么办?
 - @secret_path: What do we do now?
 
 @secret_path
@@ -1564,34 +1564,34 @@ view-if: hitler_seen or presidential_powers
 on-arrival: rb_militancy -= 0.1 if rb_militancy >= 0.1; reichswehr_loyalty = 0 if reichswehr_loyalty > 0
 go-to: slow_consolidation if hitler_seen
 
-[? if hitler_seen : This being Hitler's second tenure as chancellor, he is much more cautious, instead opting to slowly consolidate power. ?][? if presidential_powers : The limitations on presidential powers prevent Hitler from immediately consolidating power. ?]
+[? if hitler_seen : 由于这是希特勒第二次出任总理,他谨慎得多,改为缓慢地巩固权力。 ?][? if presidential_powers : 对总统权力的限制使希特勒无法立刻巩固权力。 ?]
 
 @slow_consolidation
 on-arrival: sneaky_hitler = 1; impending_fire = 1; time_to_election = 3; z_relation += 10 if not uf_formed; nazi_peak = 0; nazi_decline = 0; labor_dissent += 10 if labor_strength < center_strength; rb_strength -= 200*(dissent); new_middle_nsdap += 4; old_middle_nsdap += 3; catholics_nsdap += 3; rural_nsdap += 4; workers_nsdap += 6; unemployed_nsdap += 10; budget -= 3; economic_growth += 1; economic_growth += 1.5 if economic_growth < 0; inflation += 2; inflation += 1.5 if inflation < 0; unemployed -= 2; unemployed -= 4 if unemployed >= 30
 call: set_next_election_time
 
-A public works program is initiated by the Nazis, alongside subsidies for struggling businesses. Meanwhile, the Nazis contact the ADGB, attempting to turn them against us. Pre-empting a potential betrayal by the Center Party, Hitler dissolves the Reichstag, calling new elections for [+ next_election_month : month +] [+ next_election_year +].
+纳粹党启动了公共工程计划,并为陷入困境的企业提供补贴。与此同时,纳粹党接触德国工会总联合会,试图让工会转而反对我们。为防中央党可能背叛,希特勒解散国会,宣布新的选举定于 [+ next_election_month : month +] [+ next_election_year +]。
 
-Hitler is sure to have ideas once the Reichstag next convenes...
+国会下次开会时,希特勒肯定会有他的打算……
 
 @black_brown_failure
 on-arrival: bb_failed = 1; rural_nsdap += 3; old_middle_nsdap += 3; new_middle_nsdap += 3; workers_spd += 4*(1-dissent); workers_z -= 3; unemployed_nsdap -= 3*(1-dissent); workers_nsdap -= 3*(1-dissent);
 
-As expected, the negotiations go nowhere. The Nazis are too intransingent and uncompromising for the bürgerblock to stomach, and inversely the bürgerblock are too demanding and picky for the Nazis. 
+果不其然,谈判毫无进展。纳粹党过于顽固、毫不妥协,让市民联盟难以咽下;反过来,市民联盟要求太多、过于挑剔,纳粹党也难以接受。
 
 - @no_majority: 于是,没有明确的多数。
-- @no_majority_seeckt: Thus, there is no clear majority.
-- @no_majority_marx: Thus, there is no clear majority.
+- @no_majority_seeckt: 于是,没有明确的多数。
+- @no_majority_marx: 于是,没有明确的多数。
 
 @black_brown_goring
 on-arrival: in_right_coalition = 1; nsdap_toleration = 1; judicial_reform -= 2; reichswehr_loyalty -= 0.1; pro_republic -= 5; sa_militancy -= 0.05; new_middle_nsdap += 3; old_middle_nsdap += 6; rural_nsdap += 6; new_middle_spd += 4*(1-dissent); workers_nsdap -= 4*(1-dissent); unemployed_nsdap -= 6*(1-dissent); coup_progress += political_crisis_progress; coup_progress += 2; collapse_month = month+5; collapse_year = year; collapse_year += 1 if collapse_month > 12; collapse_month -= 12 if collapse_month > 12
 
-Somehow, the NSDAP has agreed to join Brüning's government, giving it [+ hitler_right_coalition +]% of the Reichstag. The breaking of the de-facto cordon sanitaire against them significantly helps to legitimize them as a constructive political party in the country, though their association with Brüning's austerity measures simultaneously helps us to break their support amongst the working class.
+不知怎的,纳粹党竟同意加入布吕宁政府,使该政府在国会中拥有 [+ hitler_right_coalition +]% 的支持。那道针对他们的、事实上的「防疫隔离线」由此被打破,大大有助于把他们合法化为国内一个建设性的政党 —— 尽管他们与布吕宁紧缩措施的牵连,同时也帮我们瓦解了他们在工人阶级中的支持。
 
-Immediately, democratic reforms are undone as the cabinet sets to work sending Germany back into the dark ages. For now, democracy is being preserved, but the Nazis are sure to take their first opportunity to fully destroy it.
+民主改革随即被撤销,内阁开始把德国重新推回黑暗时代。眼下民主尚存,但纳粹党一旦有机会,定会将其彻底摧毁。
 
 @schleicher_coalition
-title: Schleicher attempts to hold on to power.
+title: 施莱谢尔试图保住权力。
 view-if: dne_formed and chancellor == "Schleicher"
 subtitle: DNE ([+ dne_r +]%)
 go-to: schleicher_majority if dne_r >= 50 or constructive_vonc; schleicher_negotiate if dne_r < 50 and not constructive_vonc
@@ -1748,10 +1748,10 @@ if (braun_points >= hitler_points && braun_points >= bruning_points) {
 
 即便在戒严之后,也没有明确的执政多数。威廉·马克思对这乱局愈发厌倦。
 
-- @marx_hitler: Adolf Hitler?
-- @marx_braun: Otto Braun?
-- @marx_bruning: Heinrich Brüning?
-- @marx_wirth: Joseph Wirth?
+- @marx_hitler: 阿道夫·希特勒?
+- @marx_braun: 奥托·布劳恩?
+- @marx_bruning: 海因里希·布吕宁?
+- @marx_wirth: 约瑟夫·维尔特?
 
 @no_majority_bruning2
 go-to: no_majority_bruning_toleration if ((no_majority_elections <= 3 and anti_democratic_coalition <= 50 and marx_relation >= 0) or marx_relation >= 40); marx_appoints_bracht if ((no_majority_elections > 3 or anti_democratic_coalition > 50 or marx_relation < 0) and marx_relation < 40)
@@ -1823,10 +1823,10 @@ if (braun_points >= hitler_points && braun_points >= bruning_points) {
 
 由于布拉赫特仍无法凑出多数,威廉·马克思解除了他的职务,转而物色其他候选人。
 
-- @marx_hitler: Adolf Hitler?
-- @marx_braun: Otto Braun?
-- @marx_bruning: Heinrich Brüning?
-- @marx_wirth: Joseph Wirth?
+- @marx_hitler: 阿道夫·希特勒?
+- @marx_braun: 奥托·布劳恩?
+- @marx_bruning: 海因里希·布吕宁?
+- @marx_wirth: 约瑟夫·维尔特?
 
 @marx_hitler
 subtitle: 也许纳粹党能够被驯服、被祛魅?
@@ -1966,19 +1966,19 @@ on-arrival: rb_militancy -= 0.05; rb_strength -= 100; left_dissent += 5; unemplo
 
 眼见德国的秩序持续崩坏,又确信自己能镇压任何抵抗,[+ president +] 总统与泽尔特总理联手宣布在德国全境实施戒严。尽管此举违宪,法院对这支跃跃欲试的军队却没什么约束力。
 
-- @seldte_takes_power: What now?
+- @seldte_takes_power: 现在怎么办?
 
 @seldte_takes_power
 subtitle: 终结的开端。
 
-The destruction of German democracy has begun, not at the hands of the Nazis but at the hands of the reactionaries who wish to see a return to the days of the German Empire. If we do not fight back now, then we may never get another chance, and all we as a party have stood for will be gone in an instant.
+德国民主的毁灭已经开始 —— 不是毁于纳粹之手,而是毁于那些盼着回到德意志帝国时代的反动派之手。若我们此刻不反击,或许就再也等不到下一次机会,而我们作为一个政党所主张的一切,将在顷刻间荡然无存。
 
-- @fight_harzburg: Mobilize our forces and declare a general strike!
-- @reactionary_victory: We have lost.
+- @fight_harzburg: 动员我们的力量,宣布总罢工!
+- @reactionary_victory: 我们输了。
 
 @reactionary_victory
 
-Party offices are raided by army and police forces. Our leaders are rounded up and arrested. Any and all of our reforms are undone, and a police state under the army's control is cemented. The Nazis have failed to take power, but we cannot take much comfort in the fact when a dictatorial fascist government rules all the same. Perhaps in the far future, we may have our moment in the sun once more. We will have a duty to do better then than we have now.
+党的办公处被军队与警察查抄。我们的领袖被围捕、逮捕。我们的所有改革一概被撤销,一个由军队掌控的警察国家就此坐实。纳粹党未能掌权,可当一个独裁的法西斯政府照样统治一切时,我们也无法从中得到多少慰藉。或许在遥远的未来,我们还能再迎来属于自己的高光时刻。到那时,我们有责任做得比现在更好。
 
 - @game_over: 游戏结束。
 
@@ -1986,7 +1986,7 @@ Party offices are raided by army and police forces. Our leaders are rounded up a
 @no_majority_spd
 on-arrival: chancellor = "Brüning"; chancellor_party = "Z"
 
-There is no path to an obviously workable majority. Since President Hindenburg is unwilling to work with a minority or caretaker SPD government, his preferred chancellor is Heinrich Brüning of the Center Party, who could lead a "presidential" government.
+看不到任何明显可行的多数路径。由于兴登堡总统不愿与一个社民党的少数派或看守政府合作,他中意的总理人选是中央党的海因里希·布吕宁 —— 后者可以领衔一个「总统内阁」。
 
 - @toleration_bruning: 我们将容忍布吕宁。
 - @new_grand_coalition: 我们将尝试组建新的大联盟。
@@ -1994,18 +1994,18 @@ There is no path to an obviously workable majority. Since President Hindenburg i
 - @new_elections_2: 我们将举行新的选举。
 
 @no_majority_hitler
-title: Hitler appoints himself chancellor.
+title: 希特勒任命自己为总理。
 on-arrival: chancellor = "Hitler"; chancellor_party = "NSDAP"; foreign_minister_party = "NSDAP"; interior_minister_party = "NSDAP"; justice_minister_party = "NSDAP"; labor_minister_party = "NSDAP"; reichswehr_minister_party = "NSDAP"; economic_minister_party = "NSDAP"; finance_minister_party = "NSDAP"; agriculture_minister_party = "NSDAP"; spd_in_government = 0; spd_toleration = 0
 view-if: president == "Hitler" and presidential_powers and far_right_coalition < 50
 
-Despite the weakened powers of the presidency, appointing a chancellor has remained the duty of the president and Hitler wastes no time in appointing himself chancellor in an unprecedented move.
+尽管总统权力已被削弱,任命总理仍是总统的职权;而希特勒毫不迟疑地以史无前例之举任命了自己为总理。
 
-He has promised a campaign of revenge against the socialists, and the Nazis have already spilled blood. In his published manifesto, he promises a campaign of unspeakable horror against Jews, and endless wars of violent expansion that will ruin all of Europe.
+他许诺要对社会主义者展开一场复仇之战,而纳粹党已经见血。在他公开发表的宣言中,他承诺要对犹太人发动一场难以言喻的恐怖运动,并发动无休无止的暴力扩张战争,那将毁掉整个欧洲。
 
 我们现在该怎么办?
 
-- @fight: We will fight on the streets to prevent Hitler from taking power.
-- @vote_against: We will vote against the nazis in the Reichstag.
+- @fight: 我们要在街头战斗,阻止希特勒掌权。
+- @vote_against: 我们将在国会投票反对纳粹。
 #- @judicial_protest: We will file a complaint to the judiciary that this goes against the spirit of the constitution.
 
 
@@ -2014,18 +2014,18 @@ on-arrival: spd_rebel = 1
 
 我们明白这意味着什么吗?这意味着要对抗国家的全部武力,打一场内战。
 
-- @civil_war: Yes.
-- @vote_against: We are not ready for war. Instead, we will vote against the nazis in the Reichstag.
+- @civil_war: 是。
+- @vote_against: 我们还没准备好开战。改为在国会投票反对纳粹。
 
 @vote_against
 on-arrival: z_no_confidence = 1 if z_relation > 60 or z_party_leader == "Joos" and z_relation > 40; other_no_confidence = 1 if (z_relation + dvp_relation)/2 > 70; no_confidence_votes = spd_r + kpd_r + sapd_r + ddp_r; no_confidence_votes += z_r if z_no_confidence; no_confidence_votes += other_r + dvp_r if other_no_confidence; no_confidence_succeeds = 1 if no_confidence_votes > 50
 
-A motion of no confidence is called against Hitler's government. 
+针对希特勒政府的不信任案被提出。
 
-In total, [+ no_confidence_votes +]% of the Reichstag is against Hitler. [? if no_confidence_succeeds : We have won the vote of no confidence. ?]
+总计有 [+ no_confidence_votes +]% 的国会议员反对希特勒。[? if no_confidence_succeeds : 我们赢下了这场不信任投票。 ?]
 
-- @no_confidence_elections_new_hitler: There will be new elections.
-- @no_confidence_win_hitler: Hitler has won, for now.
+- @no_confidence_elections_new_hitler: 将举行新的选举。
+- @no_confidence_win_hitler: 希特勒赢了,眼下如此。
 
 @no_confidence_elections_new_hitler
 on-arrival: {!
@@ -2063,7 +2063,7 @@ view-if: no_confidence_votes > 50
 view-if: no_confidence_votes <= 50
 on-arrival: judicial_reform -= 3 if judicial_reform >= 3; judicial_reform -= 2 if judicial_reform = 2; judicial_reform -= 1 if judicial_reform = 1; interior_police_loyalty -= 0.2; workers_nsdap += 2; unemployed_nsdap += 5; new_middle_nsdap += 3; old_middle_nsdap += 3; rural_nsdap += 3; pro_republic -= 5; nazi_rage_progress -= 2
 
-Hitler has won the vote of no confidence. He will continue to govern democratically until he is able to seize total control.
+希特勒赢下了不信任投票。他将继续以民主的方式执政 —— 直到他有能力夺取绝对控制。
 
 
 # - if NSDAP is the largest party and the 
@@ -2075,20 +2075,20 @@ go-to: no_majority_bruning_toleration if (no_majority_elections <= 3 and anti_de
 @hindenburg_appoints_papen
 on-arrival: chancellor = "Papen"; chancellor_party = "I"; next_election_time = time+3; next_election_month = month + 3; next_election_year = year; next_election_year += 1 if next_election_month > 12; next_election_month -= 12 if next_election_month > 12; sa_banned = 0; pro_republic -= 8; finance_minister_party = "I"; interior_minister_party = "I"; economic_minister_party = "I"; labor_minister_party = "I"; foreign_minister_party = "I"; agriculture_minister_party = "I"; reichswehr_minister = "I"; papen_two_term = 1;
 
-There is no path to a majority government. President Hindenburg is tired of the chaos, and appoints Franz von Papen as chancellor instead of Brüning. Papen is a indenpendent formerly from the Center Party, and is significantly to the right of the majority of the Center Party.
+看不到通往多数派政府的道路。兴登堡总统厌倦了这乱局,改而任命弗朗茨·冯·帕彭为总理(而非布吕宁)。帕彭是一名出身中央党的无党籍人士,比中央党多数派要右得多。
 
-Papen is immediately faced with a vote of no confidence, given his unpopularity. However the SPD votes, he is guaranteed to fall, due to the unanimous hatred against him from all other parties.
+鉴于其不受欢迎,帕彭随即面临一场不信任案。无论社民党怎么投票,他注定倒台 —— 因为其他所有政党都一致憎恶他。
 
 新的选举已定于 [+ next_election_month : month +] [+ next_election_year +]。
 
 @no_majority_bruning_toleration
 on-arrival: no_majority_bruning_elections += 1
 
-There is no path to a majority government. One option would be to have a continuation of the current Brüning government; if we tolerate it, then it would retain a majority vote against no-confidence.
+看不到通往多数派政府的道路。一个选择是让现任布吕宁政府延续下去;若我们容忍它,它便能在不信任投票中保住多数。
 
-Alternatively, we could try to form a "new grand coalition" of all constitutional parties except the NSDAP, KPD, and DNVP. The stumbling block are the minor conservative parties such as the "Economic Party of the Middle Class", who detest any hint of socialism and would ruin the country before working with Marxists.
+另一种选择是尝试组成一个「新大联盟」,囊括除纳粹党、共产党与国家人民党之外的所有拥护宪法的政党。绊脚石是那些小保守党,比如「中产阶层经济党」—— 他们憎恶任何社会主义的影子,宁可毁掉这个国家也不愿与马克思主义者合作。
 
-The third option is to have new elections.
+第三种选择是举行新的选举。
 
 - @toleration_bruning: 我们将容忍布吕宁。
 - @new_grand_coalition: 我们将尝试组建新的大联盟。
@@ -2954,7 +2954,7 @@ on-arrival: reformist_dissent += 5; center_dissent += 5; labor_dissent += 5; neo
 
 @no_govt
 title: 我们不组阁。
-subtitle: This will cause significant internal dissent, and will lead to increased distrust from the bourgeois parties.
+subtitle: 这会引发严重的党内异议,并导致资产阶级政党对我们更加不信任。
 on-arrival: reformist_dissent += 5; center_dissent += 5; labor_dissent += 5; neorevisionist_dissent += 5
 
 我们确定不参与政府吗?这会引发严重的党内异议,并导致资产阶级政党对我们更加不信任。光是讨论这个选项本身就已引起党内反弹。此外,资产阶级与右翼政党也可能同样无法组成联合政府,最终导致一个由 [+ president +] 总统任命的内阁掌权。
@@ -3028,7 +3028,7 @@ go-to: ministries
 社民党的鲁道夫·维塞尔被任命为劳工部长。
 
 @interior
-title: Interior Ministry
+title: 内政部
 subtitle: 拿下内政部是人们对我们期望所在。内政部掌控国内治安。
 unavailable-subtitle: 我们的筹码不够。
 tags: mins_1928
@@ -3040,7 +3040,7 @@ go-to: ministries
 社民党的卡尔·泽韦林被任命为内政部长。
 
 @finance
-title: Finance Ministry
+title: 财政部
 subtitle: 财政部掌控政府预算与税收。
 unavailable-subtitle: 我们的筹码不够。
 tags: mins_1928
@@ -3052,7 +3052,7 @@ go-to: ministries
 社民党的鲁道夫·希法亭被任命为财政部长。
 
 @economic
-title: Economic Ministry
+title: 经济部
 subtitle: 经济部掌管更广泛的经济政策。
 unavailable-subtitle: 我们的筹码不够。
 tags: mins_1928
@@ -3064,7 +3064,7 @@ go-to: ministries
 社民党的罗伯特·施密特被任命为经济部长。
 
 @justice
-title: Justice Ministry
+title: 司法部
 subtitle: 司法部掌管法院。
 unavailable-subtitle: 我们的筹码不够。
 tags: mins_1928
@@ -3076,7 +3076,7 @@ go-to: ministries
 社民党的古斯塔夫·拉德布鲁赫被任命为司法部长。
 
 @foreign
-title: Foreign Ministry
+title: 外交部
 subtitle: 这通常是人民党的古斯塔夫·施特雷泽曼的地盘。
 unavailable-subtitle: 我们的筹码不够。
 tags: mins_1928
@@ -3111,7 +3111,7 @@ go-to: ministries
 作为让恩斯特·朔尔茨出任总理的交换,我们拿到了外交部。这一让步让我党陷入动荡。
 
 @agriculture
-title: Agricultural Ministry
+title: 农业部
 subtitle: 这并非我们惯常的领域。
 unavailable-subtitle: 我们的筹码不够。
 choose-if: leverage >= 10 
@@ -3123,7 +3123,7 @@ tags: mins_1928
 社民党的弗里茨·巴德被任命为农业部长。
 
 @reichswehr
-title: Reichswehr Ministry
+title: 国防部
 subtitle: 掌管武装力量的这个部通常不是我们的地盘;格勒纳将军与资产阶级保守派会不高兴。
 unavailable-subtitle: 我们的筹码不够。
 tags: mins_1928
@@ -3149,7 +3149,7 @@ go-to: ministries
 
 
 @no_more
-title: No more ministries.
+title: 不再要部会了。
 on-arrival: labor_dissent += 10 if historical_mode and labor_minister_party != "SPD"
 subtitle: [? if leverage >= 10 : 我们还有一些筹码,可再争取几个部会。 ?][? if leverage < 10 : 我们剩下的筹码不多了。 ?]
 tags: mins_1928

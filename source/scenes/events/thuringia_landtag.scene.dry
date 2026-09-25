@@ -328,17 +328,17 @@ The bourgeois parties of Thuringia deeply distrust us, as the regional SPD branc
 [? if thuringia_nazi_times <= 1 : Immediately, with control over the interior, the Nazis begin to consolidate power within the state as socialists and democrats are persecuted. ?]
 
 @left_coalition
-title: Is a "United Front" possible?
+title: 有可能组成「统一战线」吗?
 subtitle: KPD + SPD ([+ t_left_coalition +]%)
 view-if: t_left_coalition >= 50
 choose-if: kpd_relation >= 45 and communist_coalition >= 2
-unavailable-subtitle: The KPD doesn't trust us enough.
+unavailable-subtitle: 共产党对我们不够信任。
 on-arrival: thuringia_kpd += 0.2 if thuringia_kpd < 1.5; coup_progress += 2; capital_strike_progress += 2; red_thuringia = 1; thuringia_nsdap -= 0.1 if thuringia_nsdap >= 0.7; workers_spd += 4*(1-dissent); unemployed_spd += 3*(1-dissent)
 
 Together with the KPD, we have won a majority. The bourgeois parties are up in arms at the prospect of a return to socialist Thuringia, and scramble to oppose the government.
 
 @spd_majority
-title: The SPD may govern alone.
+title: 社民党或可单独执政。
 subtitle: SPD ([+ spd_tl +]%)
 view-if: spd_tl >= 50
 on-arrival: thuringia_spd -= 0.1; workers_spd += 3*(1-dissent); unemployed_spd += 3*(1-dissent)
@@ -347,11 +347,11 @@ We have won a majority in Thuringia alone.
 
 @no_majority_thuringia
 view-if: (nsdap_tl < 50) and (t_left_coalition < 50 or kpd_relation < 45 or communist_coalition < 2) and (frick_coalition < 50 or dvp_relation >= 60) and (t_bourgeois_coalition < 50 and (t_elections > 0 or t_bourgeois_coalition+ddp_tl+nsdap_tl < 50))
-title: There is no clear majority.
+title: 没有明确的多数。
 
 州议会中没有明确多数。由于图林根并不实行建设性不信任案,必须设法阻止新的选举。
 
-- @out_of_our_hands: This is out of our hands.
+- @out_of_our_hands: 此事已不由我们掌控。
 
 @out_of_our_hands
 
@@ -391,8 +391,8 @@ New elections are called.
 
 @thingamajig
 
-- @based: The Thuringian SPD did the right thing.
-- @cringe: The Thuringian SPD made a mistake.
+- @based: 图林根社民党做得对。
+- @cringe: 图林根社民党犯了个错误。
 
 @based
 on-arrival: left_strength += 5; left_dissent -= 10; reformist_dissent += 5; center_dissent += 5
@@ -413,7 +413,7 @@ on-arrival: thuringeration_timer = 10-(left_strength/10); thuringia_kpd += 0.05 
 The Thuringian SPD, following the direction of the party away from the left, has decided to tolerate the bourgeois parties in order to prevent the entry of Nazis into government.
 
 @nsdap_majority
-title: NSDAP majority
+title: 纳粹党多数
 subtitle: NSDAP ([+ nsdap_tl +]%)
 view-if: nsdap_tl >= 50
 on-arrival: workers_nsdap += 2; old_middle_nsdap += 6; unemployed_nsdap += 4; new_middle_nsdap += 3; rural_nsdap += 2; thuringia_nsdap += 0.25; nazi_thuringia = 1

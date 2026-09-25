@@ -1,5 +1,5 @@
 title: 1933
-subtitle: A new year 
+subtitle: 新的一年 
 on-arrival: nazi_decline = 1 if (nsdap_votes+unemployed < pro__republic+spd_votes); older_republic = old_republic; old_republic = pro_republic; strife += 1; {!
 if (Q.pro_republic > 75 && Q.pro_republic > Q.older_republic) {
     Q.new_middle_ddp += (Q.pro_republic - Q.older_republic)

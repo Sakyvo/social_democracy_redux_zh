@@ -8,7 +8,7 @@ tags: event
 
 The Nazi government has decided to ban the Reichsbanner to assist in their ongoing consolidation of power. This has outraged many of the SPD members who are fully ready to resist, many wondering why we haven't already risen up against the Nazi regime. If we do not rise up, this will destroy our capability to ever fight back again.
 
-- @fight: We will fight on the streets to prevent Hitler from taking power.
+- @fight: 我们要在街头战斗,阻止希特勒掌权。
 - @give_up: We cannot fight back in our current position.
 
 
@@ -17,7 +17,7 @@ on-arrival: spd_rebel = 1
 
 我们明白这意味着什么吗?这意味着要对抗国家的全部武力,打一场内战。
 
-- @civil_war: Yes.
+- @civil_war: 是。
 - @give_up: We are not ready for war.
 
 @give_up

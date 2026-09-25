@@ -1,5 +1,5 @@
-title: Panzerkreuzer A
-subtitle: A political question
+title: 装甲巡洋舰 A
+subtitle: 一个政治问题
 tags: event, govt_affairs
 is-card: true
 on-arrival: panzerkreuzer_seen = 1

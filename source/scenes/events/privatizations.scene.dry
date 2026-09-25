@@ -9,10 +9,10 @@ on-arrival: papenomics_timer += 5
 
 In government, we have worked towards the socialization of the economy through the Left Plan in order to advance our agenda. Recently, the new bourgeois cabinet of [+ chancellor +] has announced its intentions to work towards the reversal of this policy.
 
-- @break_toleration: We will vote against, and bring down the government.
-- @nothing_to_be_done: There is nothing we can do.
-- @no_choice: We have no choice but to maintain toleration.
-- @fight: Defend the occupied factories by force!
+- @break_toleration: 我们将投反对票,搞垮这个政府。
+- @nothing_to_be_done: 我们无能为力。
+- @no_choice: 我们别无选择,只能继续容忍。
+- @fight: 以武力保卫被占领的工厂!
 
 @break_toleration
 view-if: spd_toleration
@@ -51,10 +51,10 @@ on-arrival: reformist_dissent += 5
 
 Are we sure? This would mean obstruction of justice, at least in the eyes of the bourgeoisie and their courts. Even considering this option infuriates our reformist wing.
 
-- @fight_2: Yes, fight.
-- @break_toleration: We will vote against, and bring down the government.
-- @nothing_to_be_done: There is nothing we can do.
-- @no_choice: We have no choice but to maintain toleration.
+- @fight_2: 对,战斗。
+- @break_toleration: 我们将投反对票,搞垮这个政府。
+- @nothing_to_be_done: 我们无能为力。
+- @no_choice: 我们别无选择,只能继续容忍。
 
 @fight_2
 on-arrival: z_relation -= 20; reichswehr_loyalty = 0; ddp_relation -= 20; dvp_relation -= 20; old_middle_spd -= 5*bourgeois_power; new_middle_spd -= 3*bourgeois_power; rural_spd -= 3*bourgeois_power; old_middle_nsdap += 6; new_middle_nsdap += (5 - new_middle_conscious); rural_nsdap += (8 - land_reform); workers_nsdap += 4*(1-(socialism/100))*bourgeois_power; workers_spd -= workers_nsdap*(1-(socialism/100))*bourgeois_power; scab_power = sh_strength*sh_militancy; scab_power += sa_strength*sa_militancy; scab_power += reichswehr_strength*reichswehr_militancy*0.25; striker_power = rb_strength*rb_militancy*(1-dissent/2); striker_power += workers_spd_normalized*(2 - dissent)*(2 - unemployed/100)
