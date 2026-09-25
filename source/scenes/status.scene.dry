@@ -188,7 +188,7 @@ Q.socialism_disp = Math.round(Q.socialism);
 
 共产党: [+ kpd_votes +]%
 
-[? if not ddp_name: DDP?][? if ddp_name != 0 : [+ ddp_display +]?]: [+ ddp_votes +]%
+[? if not ddp_name: 民主党?][? if ddp_name != 0 : [+ ddp_display +]?]: [+ ddp_votes +]%
 
 人民党: [+ dvp_votes +]%
 

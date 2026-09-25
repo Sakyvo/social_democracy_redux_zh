@@ -2550,7 +2550,7 @@ go-to: weimar_normal if z_relation >= 40 and bourgeois_coalition < 50; weimar_z 
 
 @weimar_normal
 
-我们已有足够票数[? if weimar_coalition < 50 : (把社会主义工人党的容忍也计入) ?],可以组成一个由社民党、中央党(中央党)与民主党([+ ddp_display +])构成的「魏玛联盟」政府!这一直是我们偏好的执政联盟。[? if weimar_coalition < 50 : 不过,我们得留意别得罪社会主义工人党。 ?]
+我们已有足够票数[? if weimar_coalition < 50 : (把社会主义工人党的容忍也计入) ?],可以组成一个由社民党、中央党与民主党构成的「魏玛联盟」政府!这一直是我们偏好的执政联盟。[? if weimar_coalition < 50 : 不过,我们得留意别得罪社会主义工人党。 ?]
 
 谁该出任总理?
 
@@ -2573,7 +2573,7 @@ go-to: ministries
 
 @weimar_z
 
-我们已有足够票数组成一个由社民党、中央党(中央党)与民主党([+ ddp_display +])构成的「魏玛联盟」政府!这一直是我们偏好的执政联盟。然而,我们不知怎么得罪了中央党,他们要求总理之位
+我们已有足够票数组成一个由社民党、中央党与民主党构成的「魏玛联盟」政府!这一直是我们偏好的执政联盟。然而,我们不知怎么得罪了中央党,他们要求总理之位
 
 - @let_bruning: 让布吕宁来领导。
 - @let_wirth: 让维尔特来领导。
@@ -2610,7 +2610,7 @@ go-to: grand_coalition_spd_lead if ((n_elections <= 1 and largest_party == "SPD"
 @grand_coalition_z_lead
 go-to: grand_coalition_z_lead_2 if dvp_relation >= 30; grand_coalition_fail if dvp_relation < 30
 
-社民党、中央党(中央党)、巴伐利亚人民党([+ bvp_display +])、民主党([+ ddp_display +])与人民党(DVP)的票数已足以组成一个多数派联盟。鉴于我们的选举表现相当疲弱[? if spd_no_confidence = 1 : ,加上我们此前对政府提出过不信任案, ?][? if no_confidence_against_spd = 1 : ,加上针对我们的那场不信任案, ?],[+ president +] 总统已请中央党主导组阁。
+社民党、中央党、巴伐利亚人民党、民主党与人民党的票数已足以组成一个多数派联盟。鉴于我们的选举表现相当疲弱[? if spd_no_confidence = 1 : ,加上我们此前对政府提出过不信任案, ?][? if no_confidence_against_spd = 1 : ,加上针对我们的那场不信任案, ?],[+ president +] 总统已请中央党主导组阁。
 
 # TODO: if the SPD participated in bringing down the previous government via a vote-of-no-confidence, or if we were essentially removed from government by our coalition partners, we should be more reluctant to participate in a new government.
 
@@ -2803,7 +2803,7 @@ go-to: no_majority
 
 @budget_dispute
 
-不出所料,社民党是第一大党,而这一次,预期将由我们主导组建下一届政府,包括挑选总理。[+ president +] 总统已请我们与中央党(中央党)、巴伐利亚人民党([+ bvp_display +])、民主党([+ ddp_display +])及人民党(DVP)组成一个多数派联盟。
+不出所料,社民党是第一大党,而这一次,预期将由我们主导组建下一届政府,包括挑选总理。[+ president +] 总统已请我们与中央党、巴伐利亚人民党、民主党及人民党组成一个多数派联盟。
 
 然而,人民党与社民党在预算问题上分歧严重。人民党想拆掉福利国家以挽救德国的财政,这对我们显然无法接受;而我们乐于向富人加税,他们又不肯。在政府组成之前,这场争端须先行解决。
 
@@ -2842,7 +2842,7 @@ go-to: grand_coalition_spd_lead
 on-arrival: leverage -= 15 if dvp_relation < 20
 go-to: budget_dispute if not budget_resolved and historical_mode
 
-[? if n_elections <= 1 : 不出所料,社民党是第一大党,而这一次,预期将由我们主导组建下一届政府,包括挑选总理。[+ president +] 总统已请我们与中央党(中央党)、巴伐利亚人民党([+ bvp_display +])、民主党([+ ddp_display +])及人民党(DVP)组成一个多数派联盟。 ?]
+[? if n_elections <= 1 : 不出所料,社民党是第一大党,而这一次,预期将由我们主导组建下一届政府,包括挑选总理。[+ president +] 总统已请我们与中央党、巴伐利亚人民党、民主党及人民党组成一个多数派联盟。 ?]
 
 [? if dvp_relation < 20 : 由于我们与人民党的关系不佳,他们要求获得更多部长席位,才肯留在联盟内。 ?]
 

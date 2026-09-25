@@ -200,32 +200,32 @@ go-to: menu
 @parties
 go-to: menu
 
-**SPD** - *Sozialdemokratische Partei Deutschlands*(德国社会民主党)—— 这就是我们。我们是一个属于工人阶级的社会主义民主政党。我们继承着马克思与恩格斯、拉萨尔与倍倍尔的遗产。我们是共和国最坚定的捍卫者。现代社民党由支持大战的「多数派」社民党与反对大战的「独立派」社民党(即独立社会民主党)合并而成。
+**社会民主党** - *Sozialdemokratische Partei Deutschlands*—— 这就是我们。我们是一个属于工人阶级的社会主义民主政党。我们继承着马克思与恩格斯、拉萨尔与倍倍尔的遗产。我们是共和国最坚定的捍卫者。现代社民党由支持大战的「多数派」社民党与反对大战的「独立派」社民党(即独立社会民主党)合并而成。
 
-[? if sapd_formed == 1 : **SAPD** - *Sozialistische Arbeiterpartei Deutschlands*(德国社会主义工人党)—— 由我党左翼的异见者组成的一个小党。 ?]
+[? if sapd_formed == 1 : **社会主义工人党** - *Sozialistische Arbeiterpartei Deutschlands*—— 由我党左翼的异见者组成的一个小党。 ?]
 
-**Z** - *Zentrumspartei*(中央党)—— 一个中间派至中右的天主教政党,支持共和国,历史上曾支持我们许多关于劳工、福利与反军国主义的诉求。它常与我们联合执政。它常与**BVP**(巴伐利亚人民党)相联系,后者代表巴伐利亚的天主教徒。[? if year >= 1930 or chancellor = "Brüning" and z_party_leader == "Kaas" : 随着布吕宁的崛起以及党魁路德维希·卡斯的掌权,该党近来似乎转向了更为保守的方向。 ?]
+**中央党** - *Zentrumspartei*—— 一个中间派至中右的天主教政党,支持共和国,历史上曾支持我们许多关于劳工、福利与反军国主义的诉求。它常与我们联合执政。它常与巴伐利亚人民党相联系,后者代表巴伐利亚的天主教徒。[? if year >= 1930 or chancellor = "Brüning" and z_party_leader == "Kaas" : 随着布吕宁的崛起以及党魁路德维希·卡斯的掌权,该党近来似乎转向了更为保守的方向。 ?]
 
 当前关系: [+ z_relation : relationships +]
 
 # TODO: replace this with the german state party after 1930
-**[+ ddp_display +]** - *Deutsche Demokratische Partei*(德国民主党)—— 一个中左翼自由主义政党,在知识界与受过教育的中产阶层中颇受欢迎。它常与我们联合执政。[? if year >= 1930 : 该党近来已更名为德国国家党。 ?]
+**[+ ddp_display +]** - *Deutsche Demokratische Partei*—— 一个中左翼自由主义政党,在知识界与受过教育的中产阶层中颇受欢迎。它常与我们联合执政。[? if year >= 1930 : 该党近来已更名为德国国家党。 ?]
 
 当前关系: [+ ddp_relation : relationships +]
 
-**DVP** - *Deutsche Volkspartei*(人民党)—— 一个保守自由主义政党,受到中产阶层与资产阶级的支持。我们偶尔与之联合执政。
+**人民党** - *Deutsche Volkspartei*—— 一个保守自由主义政党,受到中产阶层与资产阶级的支持。我们偶尔与之联合执政。
 
 当前关系: [+ dvp_relation : relationships +]
 
-**DNVP** - *Deutschnationale Volkspartei*(国家人民党)—— 一个右翼民族保守主义政党,带有威权主义、君主主义与种族主义色彩。其支持者包括旧贵族、乡村地主与保守的路德宗信徒。
+**国家人民党** - *Deutschnationale Volkspartei*—— 一个右翼民族保守主义政党,带有威权主义、君主主义与种族主义色彩。其支持者包括旧贵族、乡村地主与保守的路德宗信徒。
 
 当前关系: [+ dnvp_relation : relationships +]
 
-**KPD** - *Kommunistische Partei Deutschlands*(德国共产党)—— 从社民党分裂出来的激进左翼支脉,形成于 1918 年德国革命之后。他们追随莫斯科的道路,反对议会民主,主张苏维埃式的革命。
+**共产党** - *Kommunistische Partei Deutschlands*—— 从社民党分裂出来的激进左翼支脉,形成于 1918 年德国革命之后。他们追随莫斯科的道路,反对议会民主,主张苏维埃式的革命。
 
 当前关系: [+ kpd_relation : relationships +]
 
-**NSDAP** - *Nationalsozialistische Deutsche Arbeiterpartei*(民族社会主义德意志工人党,即纳粹党)—— 一个极右翼民族主义与反犹主义政党。在阿道夫·希特勒的领导下,它于 1923 年发动政变,并因此被取缔,但此后已被解禁。
+**纳粹党** - *Nationalsozialistische Deutsche Arbeiterpartei*—— 一个极右翼民族主义与反犹主义政党。在阿道夫·希特勒的领导下,它于 1923 年发动政变,并因此被取缔,但此后已被解禁。
 
 当前关系: [+ nsdap_relation : relationships +]
 
