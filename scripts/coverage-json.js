@@ -47,12 +47,17 @@ if (dumpIdx >= 0) {
   process.exit(0);
 }
 
-/* 统一取出场景的 section 数组(兼容 content 为数组或 {content:[...]} 两种形态) */
-function sectionsOf(sc) {
-  const c = sc.content;
-  if (Array.isArray(c)) return c;
-  if (c && typeof c === 'object' && Array.isArray(c.content)) return c.content;
-  return [];
+/* 递归收集场景中所有 section 节点(兼容 content 为数组、单节点、{content:[...]} 等形态)。 */
+function sectionsOf(sc, out = []) {
+  const walk = node => {
+    if (node == null) return;
+    if (Array.isArray(node)) { for (const n of node) walk(n); return; }
+    if (typeof node !== 'object') return;
+    if (node.type === 'paragraph' || node.type === 'heading') { out.push(node); return; }
+    if (node.content !== undefined) walk(node.content);
+  };
+  walk(sc.content);
+  return out;
 }
 
 for (const [id, sc] of Object.entries(j.scenes || {})) {

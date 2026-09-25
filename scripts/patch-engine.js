@@ -51,6 +51,31 @@ ed('lib/ui/browser.js', [
   ["window.alert('No save available.')", "window.alert('没有可用的存档。')"],
   ["window.alert('Saving and loading is currently disabled.')",
    "window.alert('当前已禁用存读档。')"],
+  ["subtitle += 'Check: ' + choice.checkQuality + '<br>';",
+   "subtitle += '检定:' + choice.checkQuality + '<br>';"],
+  ["subtitle += 'Difficulty: ' + choice.difficulty + ' (' + Math.floor(choice.successProb*100) + '%)';",
+   "subtitle += '难度:' + choice.difficulty + ' (' + Math.floor(choice.successProb*100) + '%)';"],
+  ["return 'Game Over (reload to read again)';",
+   "return '游戏结束(重新载入以重读)';"],
+  ["save_button.textContent = \"Load\";", "save_button.textContent = \"读取\";"],
+  ["save_button.textContent = \"Save\";", "save_button.textContent = \"保存\";"],
+  ["save_element.textContent = \"Empty\";", "save_element.textContent = \"空\";"],
+]);
+
+// 3) 引擎层字面量汉化(牌库提示 / 继续 / 检定难度档)
+ed('lib/engine.js', [
+  ['c.unavailableSubtitle || "No cards available from deck."',
+   'c.unavailableSubtitle || "牌库中已无可用卡牌。"'],
+  ["title:'Continue...'", "title:'继续……'"],
+  ['return "almost impossible";', 'return "几乎不可能";'],
+  ['return "high-risk";', 'return "高风险";'],
+  ['return "tough";', 'return "艰难";'],
+  ['return "very chancy";', 'return "非常冒险";'],
+  ['return "chancy";', 'return "冒险";'],
+  ['return "modest";', 'return "稳妥";'],
+  ['return "very modest";', 'return "非常稳妥";'],
+  ['return "low risk";', 'return "低风险";'],
+  ['return "straightforward";', 'return "十拿九稳";'],
 ]);
 
 console.log('\n引擎补丁完成。');

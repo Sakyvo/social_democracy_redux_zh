@@ -26,7 +26,7 @@ choose-if: (kpd_party_leader == "Conciliators" or (communist_coalition*soviet_re
 unavailable-subtitle: 对人民阵线的支持不足。
 on-arrival: third_period = 0; kpd_relation += 10; communist_coalition += 3; socialism += 1
 
-受德国共产党与社民党合作遏制法西斯蔓延的相对成功所启发,加之苏联希望采取更灵活的外交方针以打破孤立,共产国际第七次代表大会最终放弃了第三时期论断,转而采纳一套新理论 —— 「人民阵线」,即左翼与社会主义团体结成联盟,以遏制法西斯蔓延、捍卫工人阶级的成果。
+受共产党与社民党合作遏制法西斯蔓延的相对成功所启发,加之苏联希望采取更灵活的外交方针以打破孤立,共产国际第七次代表大会最终放弃了第三时期论断,转而采纳一套新理论 —— 「人民阵线」,即左翼与社会主义团体结成联盟,以遏制法西斯蔓延、捍卫工人阶级的成果。
 
 @influence_popular_front
 subtitle: -1 资源
@@ -35,4 +35,4 @@ choose-if: resources >= 1
 unavailable-subtitle: -1 资源。我们缺乏所需的资源。
 on-arrival: resources -= 1; third_period = 0; kpd_relation += 10; communist_coalition += 3; socialism += 1
 
-借我们在共产国际中的间谍网络稍加推动,并受德国共产党与社民党合作遏制法西斯蔓延的相对成功所启发,共产国际第七次代表大会最终放弃了第三时期论断,转而采纳一套新理论 —— 「人民阵线」,即左翼与社会主义团体结成联盟,以遏制法西斯蔓延、捍卫工人阶级的成果。
+借我们在共产国际中的间谍网络稍加推动,并受共产党与社民党合作遏制法西斯蔓延的相对成功所启发,共产国际第七次代表大会最终放弃了第三时期论断,转而采纳一套新理论 —— 「人民阵线」,即左翼与社会主义团体结成联盟,以遏制法西斯蔓延、捍卫工人阶级的成果。

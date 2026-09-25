@@ -35,5 +35,10 @@ if (scenes < 100) {
   console.error('构建异常:game.json 仅 ' + scenes + ' 个场景');
   process.exit(1);
 }
+
+/* 5. 哨兵一致性:引擎默认选项标题必须与 post_event 中的比较字符串一致,
+      否则事件判定 has_event 会恒为 0(汉化引擎字符串时的隐藏回归)。 */
+execSync('node scripts/check-continue-sentinel.js', { cwd: root, stdio: 'inherit' });
+
 console.log('\n构建完成:' + scenes + ' 个场景,' +
   (fs.statSync(gameJson).size / 1048576).toFixed(2) + ' MB');
