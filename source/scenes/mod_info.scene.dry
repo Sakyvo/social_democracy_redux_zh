@@ -1,41 +1,41 @@
 title: Mod Info
 go-to: flavors
 
-Note: the base game's github is currently mid-update. I have updated the mod to match the github meaning some things might be slightly broken until the main game has finished updating.
+注意:原版游戏的 GitHub 仓库目前正在更新中。我已按照该仓库调整本 mod,因此在原版更新完成之前,某些地方可能略显故障。
 
 @flavors
 new-page: true
 
 = Mod Info
 
-This mod adds a variety of changes to the base game, mostly in the form of flavor and minor improvements.
+本 mod 为原版游戏增添了各式改动,大多属于风味内容与细微改进。
 
-- @left: Left Plan + Council flavor
-- @centrist: Center flavor
-- @moderate: Reformist Plan flavor
-- @economics: Economic changes
-- @sapd: SAPD flavor
-- @extension: Content to 1936
-- @start_dates: 1930 start date, 1925 start date
-- @landtags: Landtags
-- @legislification: "Legislification" of government cards
-- @civil_war_flavor: Civil War flavor
-- @weakened_presidency_hitler: Weakened Presidency + Hitler takeover flavor
-- @hitler_deportation_flavor: Hitler deportation & Austrian politics flavor
-- @coalition_flavor: Coalition flavor
-- @minor_changes: Other minor changes
-- @plans: Plans for the mod
-- @ideas: Ideas and feedback
-- @changelog: Changelog
-- @root: Back
+- @left: 左翼计划与委员会风味
+- @centrist: 中间派风味
+- @moderate: 改良派计划风味
+- @economics: 经济改动
+- @sapd: 社会主义工人党风味
+- @extension: 延展至 1936 年的内容
+- @start_dates: 1930 年开局、1925 年开局
+- @landtags: 各州议会
+- @legislification: 政府卡片的「法案化」
+- @civil_war_flavor: 内战风味
+- @weakened_presidency_hitler: 削弱的总统制与希特勒夺权风味
+- @hitler_deportation_flavor: 希特勒被驱逐出境与奥地利政局风味
+- @coalition_flavor: 执政联盟风味
+- @minor_changes: 其他细微改动
+- @plans: 本 mod 的未来计划
+- @ideas: 意见与反馈
+- @changelog: 更新日志
+- @root: 返回
 
 @moderate
 
 = Reformist Plan flavor
 
-When you adopt the Reformist Plan now, you have an option to try and convince Zentrum and the DDP to adopt the Reformist Plan as a shared programme, as a sort of republican compromise. The Left will oppose this, as will the Center, so you can only do it if the Left is weak enough (tip: Otto Braun's negotiating helps). 
+采纳改良派计划后,你现在可以选择设法说服中央党与民主党,把它作为一份共同的纲领 —— 一种共和派式的妥协。左翼会反对,中间派也会反对,因此只有当左翼足够弱小之时你才能做到这一点(提示:奥托·布劳恩的谈判本领对此有帮助)。
                                                                                                                                                                                                                                                                                           
-Once you've managed, you can now rally for the Weimar Plan together with Zentrum and the DDP (Julius Leber has an advisor action for this now) which will increase support for the republic, hurt extremist parties and also increase the support of all three of your parties. You can also enact the Weimar Plan through your allies if they are in government and you aren't, or if you lack the Finance/Economic ministry.
+一旦成功,你便可以与中央党及民主党一道为魏玛计划奔走(尤利乌斯·勒贝尔如今有一项顾问行动可做此事)。这会提高对共和国的支持、打击极端政党,并同时提升你们三党的支持度。若盟友在朝而你不在朝,或你不掌握财政部/经济部,你也可通过盟友来推行魏玛计划。
   
 - @flavors: Back
 
@@ -43,15 +43,15 @@ Once you've managed, you can now rally for the Weimar Plan together with Zentrum
 
 = Economic Changes
 
-I have added hyperinflation if you have a big budget deficit and high inflation, and plan to add a way to end hyperinflation through the replacement of the Reichsmark with the Volksmark. Also, you can do tax cuts even if you don't have enough budget if you've adopted the WTB plan.
+若预算赤字庞大且通胀高企,我已加入恶性通货膨胀;并计划加入以「人民马克」取代「国家马克」来终结恶性通胀的途径。此外,若你已采纳 WTB 计划,即便预算不足也可推行减税。
 
-Update: hyperinflation cut out, but other economic changes are planned
+更新:恶性通货膨胀已被砍掉,但其他经济改动仍在计划中
 
 @left
 
 = Left Plan flavor
 
-You can rally alongside the KPD for the Left Plan on May Day, leading to confrontations with the fascists and bourgeois outrage. Additionally, you can transition into a full Soviet Republic through a constitutional amendment that comes after the Left Plan.
+五一节时,你可以与共产党一道为左翼计划奔走,从而招致与法西斯分子的对抗以及资产阶级的震怒。此外,你还可以通过左翼计划之后的一项宪法修正案,过渡为一个完整的苏维埃共和国。
 
 - @flavors: Back
 
@@ -59,15 +59,15 @@ You can rally alongside the KPD for the Left Plan on May Day, leading to confron
 
 = Centrist flavor
 
-The Centrists now fill their historical niche of being acceptable to both sides of the party and controlling dissent, and you might find the party a lot less stable without them. Furthermore, if the crisis gets too bad, Hilferding may eventually concede to the necessity of an economic plan.
+中间派如今填补了他们在历史上的位置:既能被党内左右两方接受,又能控制异议。若少了他们,你会发现党要动荡得多。此外,倘若危机恶化过甚,希法亭最终可能会承认经济计划的必要性。
 
 - @flavors: Back
 
 @start_dates
 
-= 1930 and 1925 start dates
+= 1930 与 1925 年开局
 
-You can now start the game in January 1930 for a real challenge. The depression has already hit and your coalition is on the verge of collapse. Or, if you want a less desperate position, then 1925 might be for you. Maybe you can even elect Wilhelm Marx!
+你现在可以从 1930 年 1 月开局,迎接真正的挑战:大萧条已然袭来,你的执政联盟濒临崩溃。或者,若你想要一个不那么绝望的处境,1925 年或许更适合你 —— 说不定你还能把威廉·马克思选上台呢!
 
 - @flavors: Back
 
@@ -75,7 +75,7 @@ You can now start the game in January 1930 for a real challenge. The depression 
 
 = Landtags
 
-Though WIP, regional landtags are being added, with the end goal of adding all landtags
+各州议会虽仍在开发中,但正在陆续加入,最终目标是补全所有州议会
 
 - @flavors: Back
 
@@ -83,7 +83,7 @@ Though WIP, regional landtags are being added, with the end goal of adding all l
 
 = Legislification
 
-"Legislification" refers to the new feature of gov card decisions being voted on by the Reichstag, rather than automatic approval so long as the ministry is held.
+「法案化」指的是这样一项新机制:政府卡片的决议须经国会表决通过,而非只要掌握相应部会就能自动获批。
 
 - @flavors: Back
 
@@ -91,23 +91,23 @@ Though WIP, regional landtags are being added, with the end goal of adding all l
 
 = SAPD flavor
 
-The SAPD is now a distinct party rather than being lumped in with the right-wing "Others"! It also has its own event allowing it to consolidate into an actually formidable force amongst workers if you lean too hard into Volkspartei rhetoric or if Labor, Left and Center all defect, and can then use its position to try and organize an Einheitsfront, with penalties for the SPD and KPD if they refuse.
+社会主义工人党如今已是独立政党,不再与右翼的「其他」混为一谈!它还有自己的事件:若你过度倚重全民党的修辞,或工会派、左翼与中间派集体倒戈,它便能整合成为工人中一股真正可畏的力量;此后它还可利用自身地位试图组织一场统一战线 —— 若社民党与共产党拒绝,便会遭受惩罚。
 
 - @flavors: Back
 
 @civil_war_flavor
 
-= Civil War Flavor
+= 内战风味
 
-You can play even after a Victory for the Republic outcome in a civil war. This includes cases where your civil war is fought alongside the Communists, where it isn't, where it erupts due to Thalmann taking over, etc. The routes where the Communists fight alongside you have a multitude of content as well.
+即便内战中达成了「共和国胜利」的结局,你仍可继续游玩。这包括与共产党并肩作战、未与共产党并肩、因台尔曼掌权而爆发内战等各种情形。共产党与你并肩作战的路线也有大量内容。
 
 - @flavors: Back
 
 @weakened_presidency_hitler
 
-= Weakened Presidency Hitler
+= 削弱的总统制与希特勒夺权
 
-A very rare scenario in terms of actually occuring in a game, I have added unique scenarios (though quite WIP) for if Hitler is elected President after you weaken the Presidency so that it no longer has unrestrained power. I am thinking of maybe eventually extending this flavor to encompass all Nazi takeovers so that you can play them out a bit even if the result always amounts to the same.
+这在实战中极为罕见。我已为你削弱总统制(使其不再拥有不受约束的权力)之后希特勒当选总统的情形,加入了专属剧本(虽然仍相当不完整)。我在考虑日后或许把这类风味扩展到所有纳粹夺权情形,好让你多少能体验一番,即便结局总是殊途同归。
 
 - @flavors: Back
 
@@ -115,7 +115,7 @@ A very rare scenario in terms of actually occuring in a game, I have added uniqu
 
 = Coalition Flavor
 
-I have made it so that a right-wing coalition from Zentrum to the DNVP can form in 1928 if the SPD refuses to form a government. This will ban Blutmai regardless of what the SPD does, giving an alternate event, and collapse following the Young Plan referendum due to the DNVP's opposition to the Young Plan. Tied into this, the SPD can agitate for referendums while in opposition or toleration using the new Direct Democracy card. I plan to add more similar flavor to coalitions in future though this is the main one, likely for a while.
+我已设定:若社民党拒绝组阁,1928 年便可组成一个从中央党到国家人民党的右翼联盟。无论社民党如何动作,该联盟都会查禁血腥五月,从而给出一个替代事件;而由于国家人民党反对杨格计划,该联盟将在杨格计划公投后垮台。与此相关,社民党在野或处于容忍执政地位时,可用新加入的「直接民主」卡片发起公投。我计划日后为各类联盟增添更多类似风味,不过这一项是主打的,大概会维持一段时间。
 
 - @flavors: Back
 
@@ -123,7 +123,7 @@ I have made it so that a right-wing coalition from Zentrum to the DNVP can form 
 
 = Content to 1936
 
-Content to 1936 has been added in the form of events, including the Abysinnia Crisis and the Spanish Civil War
+以事件形式加入了延展至 1936 年的内容,包括阿比西尼亚危机与西班牙内战
 
 - @flavors: Back
 
@@ -131,105 +131,105 @@ Content to 1936 has been added in the form of events, including the Abysinnia Cr
 
 = Minor Changes
 
-The mod also contains many small changes that I felt would be good additions to the game. These include the DNVP and KPD benefitting rather than the NSDAP from a capital strike if the NSDAP has suffered a crisis, new police option for investigating coups (though WIP and potentially redundant), Unity Government won't be offered if there isn't a substantial threat to Germany, the DDP and DVP gaining support from increases in support for the republic, military policy changes, more proactive reactionaries (Hindenburg included), presidential election changes, DVP reducing capital strike progress if in government & friendly, and made it so that Nazis in Crisis won't fire if the economy is still doing very badly. More similar minor tweaks will occur and when they do will be added here.
+本 mod 还包含许多我认为值得加入游戏的小改动。其中包括:若纳粹党遭遇危机,资本外逃的受益者将是国家人民党与共产党而非纳粹党;新增用于调查政变的警察选项(虽仍在开发中,且可能冗余);若德国未面临重大威胁,便不会提出「团结政府」;民主党与人民党会因共和国支持度上升而获益;军事政策改动;更主动的反动派(含兴登堡);总统选举改动;人民党若在朝且关系友好,会减缓资本外逃;以及在经济仍极为糟糕时,「纳粹陷入危机」事件不会触发。类似的细微调整还会继续出现,届时会一并记入此处。
 
 - @flavors: Back
 
 @hitler_deportation_flavor
 
-= Hitler Deportation Flavor
+= 希特勒被驱逐出境风味
 
-Hitler does not drop out of politics after being deported to Austria. He can even manage to take over the country, and, if he does, turn his eyes back to Germany. 
+希特勒在被驱逐到奥地利后并未退出政坛。他甚至可能设法夺取该国政权;一旦得手,便会把目光重新投向德国。
 
 @changelog
 
 = Changelog
 
-**19/09/2024**: Added right-wing coalition as a possibility in 1928 if the SPD refuses to form a government, plus some bug fixes.
+**19/09/2024**:新增「社民党拒绝组阁时,1928 年可能出现右翼联盟」,并修复若干 bug。
 
-**06/10/2024**: Updated the mod to fit base game's additions with 0.17 and 0.17.1 though mostly preserving the mod form of the features for now. Also added an alternate Blutmai event for if the right-wing coalition has formed, SAPD flavor, changes to defunding the Reichswehr, new coup investigation option for domestic enemies, and another Weimar Plan option (convincing them through the UIC)
+**06/10/2024**:为适配原版 0.17 与 0.17.1 的新增内容更新了本 mod,但目前基本保留本 mod 对这些功能的原有形态。另新增:右翼联盟成立情形下的替代版血腥五月事件、社会主义工人党风味、削减国防军经费的改动、对国内敌人的新调查政变选项,以及又一条魏玛计划路径(通过 UIC 说服他们)
 
-**12/10/2024**: Added more SAPD content (WIP and non-functional) as well as hyperinflation and deficit tax cuts.
+**12/10/2024**:新增更多社会主义工人党内容(仍在开发、尚不可用),以及恶性通货膨胀与赤字减税。
 
-**13/10/2024**: Iron Front may now defect as part of a new neorevisionist split, may incorporate this into a reformist split either as a DDP/DStP boost or a right-wing SAPD equivalent.
+**13/10/2024**:铁前线如今可能作为新修正派分裂的一部分而倒戈;或会把这一点纳入改良派分裂,其形式或为对民主党/国家党的提振,或为右翼版的社会主义工人党。
 
-**14/10/2024**: New government card for when in toleration/opposition: Direct Democracy, allowing you to agitate directly for reforms. SAPD conference mechanic finished (I think)
+**14/10/2024**:新增用于容忍执政/在野时期的政府卡片:直接民主,让你能直接鼓动改革。社会主义工人党会议机制完工(我想是吧)
 
-**15/10/2024**: Balancing and changes to Direct Democracy.
+**15/10/2024**:直接民主的平衡性与改动。
 
-**17/10/2024**: More balancing and changes to Direct Democracy; cooldown on certain topics for petitions, higher resource investment, but also higher support increases. Other bug fixes and tweaks.
+**17/10/2024**:直接民主的更多平衡与改动;部分请愿议题设有冷却时间、所需资源投入更高,但支持度增幅也更高。另含其他 bug 修复与微调。
 
-**19/10/2024**: WIP experimental changes to NSDAP popularity changes
+**19/10/2024**:针对纳粹党支持度变动的实验性改动(开发中)
 
-**10/12/2024**: Victory for the Republic made playable, including scenarios for where it results from a KPD presidency.
+**10/12/2024**:「共和国胜利」已可游玩,包括由共产党人当选总统而导向该结局的剧本。
 
-**15/12/2024**: Endless mode (no content post-end, but still an option)
+**15/12/2024**:无尽模式(结局之后无内容,但仍可作为一个选项)
 
-**17/12/2024**: Updated mod to Death of Hindenburg
+**17/12/2024**:本 mod 已更新至「兴登堡之死」版本
 
-**22/12/2024**: Weimar dissent (Weimar Plan can now fall apart)
+**22/12/2024**:魏玛异议(魏玛计划如今可能瓦解)
 
-**25/12/2024**: Greatly expanded KPD content (KPD can now take ministries post war, crisis in the army if they take the Reichswehr, etc.). Playable Victory for the Republic mostly finished, with a few features still WIP.
+**25/12/2024**:大幅扩充共产党内容(战后共产党如今可接管各部;若其接管国防军,军队将出现危机等)。可游玩的「共和国胜利」大体完工,尚有少数功能仍在开发中。
 
-**3/1/2025**: Gustav Stresemann is no longer willing to concede his position as Foreign Minister (except in some cases)
+**3/1/2025**:古斯塔夫·施特雷泽曼不再愿让出外交部长之位(个别情形除外)
 
-**4/1/2025**: Presidential elections 1932 added to track differences between the candidates themselves and not just the parties, as well as small RNG factor added,
+**4/1/2025**:新增 1932 年总统选举,以追踪候选人本人而不仅是政党之间的差异;另加入小幅随机因素,
 
-**5/1/2025**: Monopoly on violence tracker & political violence updates
+**5/1/2025**:暴力垄断度追踪器与政治暴力更新
 
-**6/1/2025**: Military policy updated, Hindenburg can now sack SPD chancellors too
+**6/1/2025**:军事政策更新;兴登堡如今也能罢免社民党总理
 
-**10/1/2025**: March on Berlin updated for cases where Nazis are not strongest far-right movement
+**10/1/2025**:进军柏林更新,以涵盖纳粹并非最强右翼运动的情形
 
 **12/1/2025**: Blutmai tweaks
 
-**16/1/2025**: Support changes changed and Nazi peak implemented
+**16/1/2025**:支持度变动机制改动,并实装纳粹支持度的峰值
 
-**18/1/2025**: Work in progress timeline extension to around 1937
+**18/1/2025**:时间线向 1937 年前后延展(开发中)
 
-**20/1/2025**: Some changes to over the time support, including a soft cap on SPD support post return to normalcy
+**20/1/2025**:对随时间推移的支持度作出若干改动,包括在回归常态之后对社民党支持度设下软性上限
 
-**21/1/2025**: Eviler DVP (sorry guys)
+**21/1/2025**:更邪恶的人民党(抱歉了各位)
 
-**24/1/2025**: Reichsexekuting Thuringia if SPD president added
+**24/1/2025**:新增「若社民党人任总统,则对图林根实施国家执行」
 
-**27/1/2025**: Seldte martial law added and generally just more of the March on Berlin seldte variation content
+**27/1/2025**:新增泽尔特戒严,并整体上扩充了进军柏林的泽尔特变体内容
 
-**30/1/2025**: Economic factors feed into each other, effect support. Also modified post-34 bourgeois economic plan to include tariff hikes if budget deficit
+**30/1/2025**:各经济因素相互影响,并作用于支持度。另修改了 34 年后的资产阶级经济计划,使其在预算赤字时包含加征关税
 
-**11/2/2025**: Post civil war elections added & new mechanic to radicalize the new middle class, increasing support and making them less offended by leftist actions
+**11/2/2025**:新增内战后的选举,以及一项使新中间阶层激进化(提高其支持度,并使其对左翼举措不那么反感)的新机制
 
-**13/2/2025**: Minor faction rework, changing dissent to emphasize the historical Centrist niche of keeping the party together
+**13/2/2025**:派系小幅重做,改写异议机制,以凸显中间派在历史上「维系全党」的独特位置
 
-**14/2/2025**: Hilferding eventually concedes to the necessity of an economic plan...
+**14/2/2025**:希法亭最终承认了经济计划的必要性……
 
-**16/2/2025**: Political crisis event if multiple elections without majority.
+**16/2/2025**:多次选举均未产生多数时触发政治危机事件。
 
-**17/2/2025**: 1930 start date for those who want a challenge!
+**17/2/2025**:为想要挑战的玩家加入 1930 年开局!
 
-**2/5/2025**: And a lot more since then, but I forgot to update the changelog: post-hitler content, landtags, legislification, 1925...
+**2/5/2025**:此后还有一大堆改动,但我忘了更新日志:希特勒之后的内容、各州议会、法案化、1925……
 
-**15/5/2025**: Capital strike changes, businesses lose confidence changes, Hamburg tweak
+**15/5/2025**:资本外逃改动、企业信心流失改动、汉堡微调
 
-**24/5/2026**: Dark mode. Happy new year! 
+**24/5/2026**:深色模式。新年快乐!
 
-**26/5/2026**: Hitler can now take over Austria
+**26/5/2026**:希特勒如今可夺取奥地利
 
 - @flavors: Back
 
 @plans
 
-= Plans for the mod
+= 本 mod 的未来计划
 
-Legislification, 1925 and landtags.
+法案化、1925 年开局与各州议会。
 
 - @flavors: Back
 
 @ideas
 
-= Ideas and Feedback
+= 意见与反馈
 
-If you have any ideas or feedback on my mod you can ask me on the game's discord server (I'm oracle372) or on Reddit (I'm u/CuttleCraft). Please also mention any bugs you may find.
+若你对本 mod 有任何想法或反馈,可在游戏的 Discord 服务器(我是 oracle372)或 Reddit(我是 u/CuttleCraft)上找我。也请一并告知你发现的任何 bug。
 
 - @flavors: Back
 
