@@ -10,7 +10,7 @@ const ROOT = process.argv[2] || 'source/scenes';
 function walk(d, o = []) { for (const e of fs.readdirSync(d, { withFileTypes: true })) { const p = path.join(d, e.name); e.isDirectory() ? walk(p, o) : o.push(p); } return o; }
 
 const CODE_START = /^\s*(\{!|\/\/|#)/;
-const DIRECTIVE = /^\s*(view-if|choose-if|go-to|on-arrival|on-departure|new-page|tags|max-visits|frequency|audio|image|set|available-if|card-image|is-card|call|achievement|max-choices|priority|is-pinned-card|set-jump|set-bg|min-visits|section|vary|on-display|insert|delete|append|move|publish|unpublish|title-disable|title-class|subtitle-class|class|js|eval|view_if|face-image|face_image|view-ifs|choose-ifs|go-tos):\s*/;
+const DIRECTIVE = /^\s*(view-if|choose-if|go-to|on-arrival|on-departure|new-page|tags|max-visits|frequency|audio|image|set|available-if|card-image|card_image|is-card|is-hand|is-deck|is-pinned-card|is-special|game-over|call|achievement|max-choices|priority|set-jump|set-bg|min-visits|section|vary|on-display|insert|delete|append|move|publish|unpublish|title-disable|title-class|subtitle-class|class|js|eval|view_if|face-image|face_image|view-ifs|choose-ifs|go-tos):\s*/;
 
 function stripTags(s) {
   return s
