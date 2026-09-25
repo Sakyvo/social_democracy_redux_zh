@@ -9,7 +9,7 @@ new-page: true
 = Panzerkreuzer
 
 The Reichswehr Ministry is demanding the construction of a new battlecruiser, as part of Germany's rearmament. Our coalition partners are united in support. While many of our members are vehemently against new military spending, this vote may be necessary to preserve the coalition. 
-We campaigned on food for children instead of battlecruisers. Will we really betray our campaign promises?
+我们当初是以「给孩子面包,而不是战列巡洋舰」为口号竞选的。我们真的背弃竞选承诺吗?
 
 - @vote_yes: 投赞成票,建造这艘战列巡洋舰。
 - @vote_no: 投反对票,反对建造这艘战列巡洋舰。
@@ -22,29 +22,29 @@ Q.bill_support = Math.round(Q.bill_support);
 
 Our grassroots party members are shocked by our intransigence! Many party branches have begun agitating against the cabinet, and our Reichstag members even plan a full vote on the proposal, contravening the government's decision.
 
-KPD: Against
+共产党:反对
 
 [? if sapd_formed : SAPD: 反对 ?]
 
-SPD: Mixed
+社民党:意见不一
 
 [+ ddp_name +]: For
 
 Z: For
 
-BVP: For
+巴伐利亚人民党:赞成
 
-DVP: For
+人民党:赞成
 
-Others: For
+其他:赞成
 
-DNVP: For
+国家人民党:赞成
 
-NSDAP: For
+纳粹党:赞成
 
 以 [+ bill_support +]% 赞成,议案获得通过。
 
-The campaign against the battlecruiser fails, with only the dissident SPD and KPD members voting against. The ship will be built.
+反对战列巡洋舰的运动失败了,只有持异议的社民党与共产党议员投了反对票。这艘军舰将被建造。
 
 @vote_no
 on-arrival: dvp_relation -= 8; z_relation -= 5; pacifism += 1; nationalism -= 5*(1-dissent); coalition_dissent += 1
@@ -56,7 +56,7 @@ go-to: braun if chancellor = "Braun"; muller if chancellor = "Müller"
 @braun
 on-arrival: panzerkreuzer_funded = 0; nationalism -= 3*(1-dissent); panzerkreuzer_failed = 1; workers_spd += 5*(1-dissent); coup_progress += 1
 
-Our coalition partners are shocked by our intransigence! However, Chancellor Braun manages to persuade our cabinet ministers to drop the plan to vote on the battlecruiser. The ship will not be built!
+我们执政伙伴对我们的强硬态度感到震惊!不过,布劳恩总理成功说服了我们的内阁部长们,放弃就战列巡洋舰进行表决的计划。 The ship will not be built!
 
 @muller
 go-to: muller_passed if left_coalition < 50; muller_beaten if left_coalition >= 50
@@ -66,7 +66,7 @@ on-arrival: panzerkreuzer_funded = 0; nationalism -= 3*(1-dissent); panzerkreuze
 
 Our coalition partners are shocked by our intransigence! Despite Chancellor Müller's rejection of the proposal, the other parties bring the matter to a Reichstag vote, which too fails, even with only the SPD and KPD voting against. The ship will not be built!
 
-KPD: Against
+共产党:反对
 
 [? if sapd_formed : SAPD: 反对 ?]
 
@@ -76,24 +76,24 @@ SPD: Against
 
 Z: For
 
-BVP: For
+巴伐利亚人民党:赞成
 
-DVP: For
+人民党:赞成
 
-Others: For
+其他:赞成
 
-DNVP: For
+国家人民党:赞成
 
-NSDAP: For
+纳粹党:赞成
 
-With but [+ bill_support +]% in favor, the motion fails and is withdrawn.
+赞成票仅有 [+ bill_support +]%,该动议未获通过并被撤回。
 
 @muller_passed
 on-arrival: panzerkreuzer_funded = 1; bill_support = bourgeois_coalition+far_right_coalition
 
 Our coalition partners are shocked by our intransigence! Despite Chancellor Müller's rejection of the proposal, the other parties bring the matter to a Reichstag vote, which easily passes, with only the SPD and KPD voting against. The ship will be built.
 
-KPD: Against
+共产党:反对
 
 [? if sapd_formed : SAPD: 反对 ?]
 
@@ -103,24 +103,24 @@ SPD: Against
 
 Z: For
 
-BVP: For
+巴伐利亚人民党:赞成
 
-DVP: For
+人民党:赞成
 
-Others: For
+其他:赞成
 
-DNVP: For
+国家人民党:赞成
 
-NSDAP: For
+纳粹党:赞成
 
 以 [+ bill_support +]% 赞成,议案获得通过。
 
 @vote_no_success
 on-arrival: panzerkreuzer_funded = 0; nationalism -= 3*(1-dissent); panzerkreuzer_failed = 1; workers_spd += 5*(1-dissent); coup_progress += 1; bill_support = bourgeois_coalition+far_right_coalition
 
-Our coalition partners are shocked by our intransigence! Chancellor [+ chancellor +] brings the matter to a Reichstag vote, which fails even with all parties in favor except the SPD and KPD. The ship will not be built!
+我们执政伙伴对我们的强硬态度感到震惊![+ chancellor +] 总理将此事项提交国会表决 —— 即便除社民党与共产党之外的各党都赞成,表决仍未通过。 The ship will not be built!
 
-KPD: Against
+共产党:反对
 
 [? if sapd_formed : SAPD: 反对 ?]
 
@@ -130,24 +130,24 @@ SPD: Against
 
 Z: For
 
-BVP: For
+巴伐利亚人民党:赞成
 
-DVP: For
+人民党:赞成
 
-Others: For
+其他:赞成
 
-DNVP: For
+国家人民党:赞成
 
-NSDAP: For
+纳粹党:赞成
 
-With but [+ bill_support +]% in favor, the motion fails and is withdrawn.
+赞成票仅有 [+ bill_support +]%,该动议未获通过并被撤回。
 
 @vote_no_pass
 on-arrival: panzerkreuzer_funded = 1; bill_support = bourgeois_coalition+far_right_coalition
 
-Our coalition partners are shocked by our intransigence! Chancellor [+ chancellor +] brings the matter to a Reichstag vote, which passes with all parties in favor except the SPD and KPD. The ship will be built.
+我们执政伙伴对我们的强硬态度感到震惊![+ chancellor +] 总理将此事项提交国会表决,结果除社民党与共产党之外,各党均投赞成票,表决通过。这艘军舰将被建造。
 
-KPD: Against
+共产党:反对
 
 [? if sapd_formed : SAPD: 反对 ?]
 
@@ -157,15 +157,15 @@ SPD: Against
 
 Z: For
 
-BVP: For
+巴伐利亚人民党:赞成
 
-DVP: For
+人民党:赞成
 
-Others: For
+其他:赞成
 
-DNVP: For
+国家人民党:赞成
 
-NSDAP: For
+纳粹党:赞成
 
 以 [+ bill_support +]% 赞成,议案获得通过。
 
@@ -174,9 +174,9 @@ on-arrival: bill_support = 100*((bourgeois_coalition+far_right_coalition)/(100-(
 Q.bill_support = Math.round(Q.bill_support);
 !}
 
-Our coalition partners are shocked by our intransigence! Despite our abstention, the vote in the Reichstag goes through, with all parties in favor except the SPD and KPD. The ship will be built.
+我们执政伙伴对我们的强硬态度感到震惊!尽管我们弃权,国会表决仍然通过 —— 除社民党与共产党之外,各党均投赞成票。这艘军舰将被建造。
 
-KPD: Against
+共产党:反对
 
 [? if sapd_formed : SAPD: 反对 ?]
 
@@ -186,14 +186,14 @@ SPD: Abstain
 
 Z: For
 
-BVP: For
+巴伐利亚人民党:赞成
 
-DVP: For
+人民党:赞成
 
-Others: For
+其他:赞成
 
-DNVP: For
+国家人民党:赞成
 
-NSDAP: For
+纳粹党:赞成
 
 以 [+ bill_support +]% 赞成,议案获得通过。

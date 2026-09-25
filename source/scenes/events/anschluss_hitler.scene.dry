@@ -7,7 +7,7 @@ max-visits: 1
 on-arrival: vienna_influence += 1
 go-to: spd_foreign if foreign_minister_party == "SPD"; kpd_foreign if foreign_minister_party == "KPD"; bourgeois_foreign if foreign_minister_party != "SPD" and foreign_minister_party != "KPD"
 
-= The New Austrian State
+= 新的奥地利国家
 
 Since taking over Austria in the power vacuum left by the February Fights, Hitler has consolidated his position in the country as best as he can. Now, seeking to begin drastic progress towards his aims, he unveils his plans for the new Austrian state, even as embargoes from the Entente powers impoverish his nation.
 
@@ -17,7 +17,7 @@ Alongside comprehensive domestic reforms, he has turned his eyes abroad. [? if e
 
 Given our control over the Foreign Ministry, negotiations are sure to be awkward. The bourgeois parties would want us to separate our antifascist principles from foreign policy here in the interests of German national interests, but, while many in our party are also enthusiastic about unification, they would not take kindly to collaboration with the man we deported precisely to get out of the picture.
 
-The first issue is the matter of recognizing his government. If we do not do this, then there will be no basis for negotiations at all.
+首要问题在于是否承认他的政府。若不这样做,谈判便完全无从谈起。
 
 - @recognize: 我们别无选择,只能承认希特勒的政府。
 - @withhold_recognition: 我们绝不与法西斯合作。
@@ -39,7 +39,7 @@ on-arrival: recognition_withheld = 1; coup_progress += 1; coup_progress += 1 if 
 
 We as principled antifascists can never sanction (except economically) a hostile takeover of a neighboring German state by the same fascists we fought tooth and nail to keep at bay here. We will not compromise on our principles and abandon our Austrian friends to Nazism. We must withhold recognition of this government indefinitely until it collapses as the isolated entity it is.
 
-This decision is, however, largely unpopular amongst the nationalist & bourgeois right, who have attacked us for turning Austria away and sabotaging German unity. It seems they are too single-minded to realize that it is not German unity we are opposing but Hitler, the same man who would have done the same here as he is doing now in Austria if not for our efforts. When will they ever learn?
+然而,这一决定在民族主义与资产阶级右翼中大体上不受欢迎,他们攻击我们冷落奥地利、破坏德意志统一。 It seems they are too single-minded to realize that it is not German unity we are opposing but Hitler, the same man who would have done the same here as he is doing now in Austria if not for our efforts. When will they ever learn?
 
 - @sanction: 对奥地利实施经济制裁[? if customs_union : ,以实质上废除关税同盟?]。
 - @enough: 这就够了。
@@ -63,7 +63,7 @@ view-if: not customs_union
 
 Hitler has revived the idea of a German-Austrian customs union as a step towards eventual unification. While a popular proposal, it is also plain to see it would be overwhelmingly to his benefit, given the total isolation of Austria right now. Some worry it might even singlehandedly allow it to consolidate where it might otherwise collapse shortly.
 
-Regretfully, many in the bourgeois parties are keen, having pushed for this in the past, anyway.
+遗憾的是,资产阶级政党中许多人对此热衷 —— 毕竟他们过去就一直在推动此事。
 
 - @form_the_union: 我们结这个盟。
 - @no_we_wont: 不,我们不结。
@@ -107,7 +107,7 @@ The first issue is the matter of recognizing his government, as, without such, t
 
 @toleration
 
-With the government relying upon our toleration, we can still interject to put an end to these discussions with Hitler; indeed, many in our party see it as an imperative.
+由于政府依赖我们的容忍,我们仍能插手终结这些与希特勒的讨论;事实上,我党许多人视之为当务之急。
 
 - @end_toleration: 投票否决这些谈判!
 - @allow_the_talks: 随它去吧。
@@ -121,14 +121,14 @@ on-arrival: z_relation -= 6; dvp_relation -= 12
 on-arrival: time_to_election = 3; spd_in_government = 0; in_grand_coalition = 0; spd_toleration = 0;
 call: set_next_election_time
 
-With the support of the KPD and [+ ddp_name +], we have successfully stopped the negotiations from taking place. This results in the fall of the [+ chancellor +] government.
+在共产党与 [+ ddp_name +] 的支持下,我们成功阻止了谈判的举行。这导致 [+ chancellor +] 政府的垮台。
 
 新的选举已定于 [+ next_election_month : month +] [+ next_election_year +]。
 
 @end_toleration_fail
 go-to: what_do_they_do
 
-Unfortunately, the far-right parties united with the government to outvote us. The talks will proceed.
+遗憾的是,极右翼政党与政府联手,在表决中压过了我们。谈判将继续进行。
 
 @customs_union_bourgeois
 on-arrival: hitler_accepted = 1; banking_crisis_timer = 2; west_relation -= 2; east_relation -= 2; customs_union = 1; nationalism += 5; pro_republic -= 5
@@ -138,7 +138,7 @@ In the following talks, a customs union is formed between Germany and Austria. T
 @nothing_to_do
 go-to: what_do_they_do
 
-With no influence on the government, there is nothing we can do to stop these talks.
+由于对政府毫无影响力,我们无力阻止这场谈判。
 
 @what_do_they_do
 go-to: customs_union_bourgeois if not customs_union; negotiations_proceed if customs_union

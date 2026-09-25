@@ -1,4 +1,4 @@
-title: Education & Science
+title: 教育与科学
 new-page: true
 is-card: true
 view-if: spd_in_government and spd_prussia and chancellor_party = "SPD" and education_science_timer = 0 and (black_thursday_seen = 0 or return_to_normalcy = 1)
@@ -37,7 +37,7 @@ view-if: not last_advisor_action
 - @cancel_advisor_action
 
 @increase_science
-title: Increase funding for scientific research.
+title: 增加科研经费。
 choose-if: economic_minister_party = "SPD"
 unavailable-subtitle: 这需要掌握经济部。
 
@@ -47,11 +47,11 @@ unavailable-subtitle: 这需要掌握经济部。
 - @applied
 - @medical
 - @cut_funding
-- @ed_menu: Do not increase research funding.
+- @ed_menu: 不增加科研经费。
 - @cancel_advisor_action
 
 @kwg
-title: Fund the Kaiser Wilhelm Society for basic scientific research.
+title: 资助威廉皇帝学会从事基础科学研究。
 subtitle: -1 财政预算
 choose-if: budget >= 1
 on-arrival: kwg_vote = 1
@@ -65,7 +65,7 @@ on-arrival: budget -= 1; science += 1; kwg_research += 1; economic_growth += 0.3
 威廉皇帝学会是世界上最受尊崇的科研机构之一,物理学家阿尔伯特·爱因斯坦是其最著名的成员。我们的研究计划是向该学会提供额外资源,用于聘用与培养科学家、并依据科学家自身的兴趣开展基础研究。
 
 @applied
-title: Fund applied research in economically useful technologies.
+title: 资助具有经济价值的应用技术研究。
 subtitle: -1 财政预算
 choose-if: budget >= 1
 on-arrival: applied_vote = 1
@@ -79,7 +79,7 @@ on-arrival: budget -= 1; science += 1; applied_research += 1; economic_growth +=
 我们的研究计划侧重于与工业界合作开发实用技术,并设立新的应用科学研究机构。这种合作聚焦于经济增长与发展。
 
 @medical
-title: Fund biomedical research at the hospitals and medical schools.
+title: 资助医院与医学院的生物医学研究。
 subtitle: -1 财政预算
 choose-if: budget >= 1
 on-arrival: medical_vote = 1
@@ -93,7 +93,7 @@ on-arrival: budget -= 1; science += 1; medical_research += 1; economic_growth +=
 我们的研究计划侧重于医学研究,以改善疾病治疗与公共卫生。 [? if change_sex: 我们的部分医学进展包括变性手术的新方法,以及针对跨性别者的激素疗法。 ?]
 
 @cut_funding
-title: Cut science funding.
+title: 削减科学经费。
 subtitle: +1 财政预算
 choose-if: science_funding >= 1
 unavailable-subtitle: 我们尚未资助科学。
@@ -109,18 +109,18 @@ on-arrival: budget += 1; science -= 1; science_funding -= 1; applied_research -=
 
 
 @structure
-title: Change the structure and funding of education.
+title: 改革教育的结构与经费。
 
 德国的教育历来按宗教与阶级划分。学校往往要么是新教的、要么是天主教的(偶尔是犹太教的),而且在大多数混合教派的学校里,宗教课是必修的。此外,工人阶级最多只能接受八年小学与中学的公共教育,而中上层阶级则能进入私立学校与文理中学 —— 它们为学生升入大学做准备。因此,大学往往为保守派与反动派所主导,这给官僚招募带来负面后果。
 
 - @secularize
 - @public_hs
 - @school_boards
-- @ed_menu: Do not change school funding or organization.
+- @ed_menu: 不改变学校的经费或组织。
 - @cancel_advisor_action
 
 @secularize
-title: Support secular schools to end the religious dominance in education.
+title: 支持世俗学校,以终结宗教对教育的支配。
 subtitle: -1 财政预算
 unavailable-subtitle: -1 财政预算 —— 需要多数政党支持世俗学校。
 choose-if: budget >= 1 and (progressive_coalition + dvp_r >= 50)
@@ -128,8 +128,8 @@ view-if: secularized = 0
 
 你确定吗?魏玛联盟曾有不动宗教学校的约定;天主教中央党必将造反。
 
-- @secularize_2: Yes, do it.
-- @ed_menu: No, do not touch religious education.
+- @secularize_2: 是,就这么办。
+- @ed_menu: 不,别动宗教教育。
 - @cancel_advisor_action
 
 @secularize_2
@@ -145,7 +145,7 @@ go-to: vote_of_no_confidence.vonc_menu if in_weimar_coalition or in_grand_coalit
 
 
 @public_hs
-title: Increase educational opportunities for the working class by funding public high schools.
+title: 通过资助公立高中,增加工人阶级的受教育机会。
 subtitle: -1 财政预算
 choose-if: budget >= 1
 on-arrival: public_hs_vote = 1
@@ -161,7 +161,7 @@ on-arrival: budget -= 1; public_hs += 1; workers_spd += 6*(1-dissent); unemploye
 我们出资兴办了更多公立中学,使无产阶级子弟也能接受与中上层阶级子弟相同的教育,并为升入大学做好准备。
 
 @school_boards
-title: Create elected school boards to give local areas more control over education.
+title: 设立经选举产生的学校董事会,让地方对教育有更多掌控。
 view-if: school_boards = 0
 on-arrival: school_board_vote = 1
 go-to: school_board_done if not legislature_enabled; legislative_menu if legislature_enabled
@@ -175,7 +175,7 @@ on-arrival: school_boards += 1; workers_spd += 3*(1-dissent); new_middle_spd += 
 
 
 @curriculum
-title: Change the educational curriculum.
+title: 改革教育课程。
 choose-if: curriculum_timer = 0
 unavailable-subtitle: [? if curriculum_timer > 0 : 现在就再次修改课程还为时过早。 ?][? if not spd_prussia: 我们并未掌控普鲁士州政府。 ?]
 
@@ -188,7 +188,7 @@ unavailable-subtitle: [? if curriculum_timer > 0 : 现在就再次修改课程�
 - @human_major
 - @vocational_major
 - @trad_major
-- @ed_menu: Do not change the curriculum now.
+- @ed_menu: 现在不改课程。
 - @cancel_advisor_action
 
 # note: education_science is a variable that affects how much education affects economic growth.

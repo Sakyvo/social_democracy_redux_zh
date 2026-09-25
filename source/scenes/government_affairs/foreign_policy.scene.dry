@@ -1,4 +1,4 @@
-title: Foreign Policy
+title: 外交政策
 new-page: true
 is-card: true
 tags: govt_affairs
@@ -30,33 +30,33 @@ go-to: fp_menu
 - @support_austria
 - @support_austria_2
 - @mingi_taw
-- @root: Do not enact any policies for now.
+- @root: 暂时不推行任何政策。
 - @easy_discard
 - @cancel_advisor_action
 
 @improve_west
-title: Improve our relations with the Western Allies.
+title: 改善我们与西方协约国的关系。
 on-arrival: west_relation += 2; reparations_negotiation += 1
 
 欧洲和平的关键在于法德之间的和解。我们正朝着这一和解迈出步伐。 [? if young_plan_seen == 0 : 在法国占领着德国大片领土之时,这很难做到,但我们正在处理这一环节。 ?]
 
 @improve_east
-title: Improve our relations with our eastern neighbors.
+title: 改善我们与东方邻国的关系。
 on-arrival: east_relation += 2;
 
 我们还力求改善与东部邻邦波兰、捷克斯洛伐克的关系 —— 它们对德国的侵略心怀恐惧,这种恐惧是有道理的。但愿我们能让他们相信我们的和平意图。
 
 @improve_soviet
-title: Improve our relations with the Soviet Union.
-subtitle: We could also broach the question of the KPD...
+title: 改善我们与苏联的关系。
+subtitle: 我们也可以提出共产党的问题……
 
 苏联同样深受《凡尔赛条约》所创国际秩序之害;他们一直参与我们的秘密重整军备计划。1922 年的《拉巴洛条约》确认了我们的友好关系。
 
 苏联方面请求经济与发展援助。总的来说,他们仍是个贫穷的国家,正拼命力图赶上西方列强。我们的反共执政盟友可能会不满,但我们可以请苏联秘密协助训练、装备国防军,以此安抚他们。
 
-- @soviet_economic_aid_yes_mil: Provide aid, in exchange for Reichswehr assistance.
-- @soviet_economic_aid_yes: Provide aid, in exchange for only good relations.
-- @soviet_economic_aid_no: Don't provide aid.
+- @soviet_economic_aid_yes_mil: 提供援助,以换取国防军的协助。
+- @soviet_economic_aid_yes: 提供援助,只换取良好关系。
+- @soviet_economic_aid_no: 不提供援助。
 
 @soviet_economic_aid_yes_mil
 choose-if: budget >= 1
@@ -72,9 +72,9 @@ on-arrival: budget -= 1; soviet_relation += 2; coalition_dissent += 1; foreign_g
 
 苏联对我们送去援助感到满意,而我们没有要求任何具体的回报。我们的执政盟友对此就不那么高兴了。
 
-- @kpd: Ask if Moscow could help repair our relations with the KPD.
-- @wittorf: Do the Soviets know about the Wittorf Affair? Do they know that we know?
-- @root: Do not mention the KPD.
+- @kpd: 问莫斯科能否帮助修复我们与共产党的关系。
+- @wittorf: 苏联人知道维托夫事件吗?他们知道我们知道吗?
+- @root: 别提共产党。
 
 @soviet_economic_aid_no
 
@@ -96,8 +96,8 @@ max-visits: 1
 
 
 @customs_union
-title: Form a customs union with Austria?
-subtitle: This will likely incur the wrath of France.
+title: 与奥地利结成关税同盟?
+subtitle: 这很可能招致法国的怒火。
 unavailable-subtitle: 此事已被欧洲联盟取代。
 choose-if: eu = 0
 view-if: black_thursday_seen = 1 and customs_union = 0
@@ -106,8 +106,8 @@ view-if: black_thursday_seen = 1 and customs_union = 0
 
 然而,协约国 —— 尤其是法国 —— 很可能会反对。这项协定会破坏《凡尔赛条约》的条款,并可能导致经济制裁,进一步伤害我们的经济。
 
-- @customs_union_2: Yes, do it!
-- @fp_menu: No, we should do something else.
+- @customs_union_2: 好,就这么办!
+- @fp_menu: 不,我们该做点别的。
 
 @customs_union_2
 on-arrival: banking_crisis_timer = 2; customs_union = 1; west_relation -= 2; east_relation -= 2; z_relation += 6; dvp_relation += 6; coalition_dissent -= 1  if coalition_dissent > 0; coup_progress -= 1
@@ -119,8 +119,8 @@ max-visits: 1
 
 
 @negotiate
-title: Negotiate regarding our remaining obligations from the Treaty of Versailles.
-subtitle: [? if young_plan_seen == 1 : After passing the Young Plan, France has committed to withdrawing from the Rhineland. Now, we must see if they can reduce our reparations further, given the economic depression. ?]
+title: 就我们依《凡尔赛条约》所负的剩余义务展开谈判。
+subtitle: [? if young_plan_seen == 1 : 在通过杨格计划之后,法国已承诺撤出莱茵兰。如今,鉴于经济萧条,我们得看看他们能否进一步减少我们的赔款。 ?]
 view-if: reparations > -2 and reparations_negotiation < 3
 on-arrival: west_relation += 1; reparations_negotiation += 1; reparations_negotiation += 1 if pacifism >= 3; reparations_negotiations += 1 if nationalism <= 50; reparations_negotiation += 1 if west_relation >= 3
 
@@ -128,8 +128,8 @@ on-arrival: west_relation += 1; reparations_negotiation += 1; reparations_negoti
 
 
 @reduce_reparations
-title: The Western Allies are finally willing to pause our reparations payments!
-subtitle: Our negotiations have been successful.
+title: 西方协约国终于愿意暂停我们的赔款支付了!
+subtitle: 我们的谈判取得了成功。
 view-if: reparations_negotiation >= 3 and black_thursday_seen == 1 and reparations > -2
 on-arrival: west_relation += 1; reparations = -2; budget += 2 if hoover_memorandum_seen == 0; budget += 1 if hoover_memorandum_seen == 1; coalition_dissent -= 1 if coalition_dissent > 0; workers_spd += 8*(1-dissent); old_middle_spd += 5*(1-dissent); new_middle_spd += 5*(1-dissent); rural_spd += 5*(1-dissent); coup_progress -= 2 if coup_progress > 2; economic_growth += 0.7; economic_growth += 0.5 if economic_growth < 0
 max-visits: 1
@@ -139,7 +139,7 @@ max-visits: 1
 这缓和了我们政府内部的紧张,而我党也因这一成就赢得声望。
 
 @expose
-title: Expose the secret rearmament plans of the previous foreign ministry!
+title: 揭露前任外交部的秘密重整军备计划!
 view-if: rearmament_exposed == 0
 on-arrival: west_relation += 2; east_relation += 1; nationalism -= 5*(1-dissent); pro_republic += 5*(1-dissent); coalition_dissent += 1; rearmament_exposed += 1; reparations_negotiation += 3; coup_progress += 2
 
@@ -148,21 +148,21 @@ on-arrival: west_relation += 2; east_relation += 1; nationalism -= 5*(1-dissent)
 协约国感激我们揭露并批判军国主义。我们在执政联盟中的伙伴则不那么支持。
 
 @withdraw_nonintervention
-title: Withdraw from the French non-intervention pact.
-subtitle: This will displease them greatly, and may upset our bourgeois partners.
+title: 退出法国推动的不干涉协定。
+subtitle: 这会引起他们的极大不满,也可能让我们的资产阶级伙伴不快。
 on-arrival: west_relation -= 2; coalition_dissent += 1; coalition_dissent += 1 if in_grand_coalition; coalition_dissent += 1 if z_party_leader == "Kaas"; z_relation -= 5; dvp_relation -= 5; coup_progress += 1; nonintervention = 0
 view-if: nonintervention and spd_intervention
 
 我们退出了不干涉协定。遗憾的是,这引来怀疑,认为我们打算向共和派提供援助。毕竟,除此之外我们还能图什么?
 
 @spanish_aid
-title: Begin sending aid to the Spanish Republicans.
+title: 开始向西班牙共和派提供援助。
 subtitle: -1 财政预算。这违反《凡尔赛条约》[? if nonintervention : ,也违反不干涉协定 ?]。
 view-if: spanish_civil_war and (not nonintervention or spd_intervention) and not spain_involved
 go-to: spanish_civil_war.aid
 
 @concordat_negotiate
-title: Negotiate a Concordat between the Germany and the Vatican.
+title: 就德国与梵蒂冈之间的政教协定展开谈判。
 view-if: prussian_concordat = 1 and reichskonkordat = 0 and reichskonkordat_progress < 4
 on-arrival: reichskonkordat_progress += 2; reichskonkordat_progress -= 1 if abortion_rights; reichskonkordat_progress -= 1 if family_law; z_relation += 3*(1-dissent)
 
@@ -171,7 +171,7 @@ on-arrival: reichskonkordat_progress += 2; reichskonkordat_progress -= 1 if abor
 [? if family_law : 我们放宽的离婚政策使得与梵蒂冈建立关系变得困难。 ?] [? if abortion : 我们将堕胎合法化,使得与教会沟通变得困难。 ?]
 
 @concordat
-title: We can sign a Concordat with the Vatican!
+title: 我们可以与梵蒂冈签署政教协定!
 view-if: reichskonkordat_progress >= 4 and reichskonkordat = 0
 on-arrival: concordat_vote = 1
 go-to: concordat_done if not legislature_enabled; legislative_menu if legislature_enabled
@@ -185,14 +185,14 @@ achievement: reichskonkordat
 我们成功签署了德国与罗马天主教会之间的政教协定!这一条约界定了教会与德国国家之间的正式关系,保障天主教徒的信仰自由,以及教会自行任命神职人员的权利。德国的天主教徒感到满意,他们在中央党中的代表亦然。
 
 @support_austria
-title: Diplomatically support Austrian democracy against the Dollfuß dictatorship.
+title: 在外交上支持奥地利民主,对抗陶尔斐斯独裁。
 view-if: austrian_parliament_seen = 1 and austrian_civil_war_seen = 0
 on-arrival: sdapo_strength += 1; left_dissent -= 3; center_dissent -= 3
 
 我们对奥地利民主给予口头支持,对奥地利法西斯主义展开言辞交锋,并颁布更多贸易制裁。是否足够,时间会给出答案。
 
 @support_austria_2
-title: Provide material support to Austrian democracy against the Dollfuß dictatorship.
+title: 向奥地利民主提供物质支持,对抗陶尔斐斯独裁。
 subtitle: -1 财政预算
 choose-if: budget >= 1
 view-if: austrian_parliament_seen = 1 and austrian_civil_war_seen = 0
@@ -201,8 +201,8 @@ on-arrival: budget -= 1; sdapo_strength += 3; left_dissent -= 6; center_dissent 
 公开地,我们对奥地利民主给予口头支持,对奥地利法西斯主义展开言辞交锋,并颁布更多贸易制裁。私下里,我们向奥地利的同志们提供财政及各种形式的「支持」,助他们对抗独裁。
 
 @european_union
-title: Take steps to form a "European Union".
-subtitle: Is a "United States of Europe" possible?
+title: 采取措施筹建一个「欧洲联盟」。
+subtitle: 「欧洲合众国」有可能吗?
 unavailable-subtitle: [? if west_relation < 5 : 我们与西方国家的关系还不够好。 ?] [? if east_relation < 4 : 我们与东方国家的关系还不够好。 ?]
 view-if: reparations <= -2 and eu_progress < 2
 choose-if: west_relation >= 5 and east_relation >= 4
@@ -212,7 +212,7 @@ on-arrival: eu_progress += 1; west_relation += 1
 
 
 @european_union_2
-title: We can sign a treaty to form a European Union!
+title: 我们可以签署一份条约,组建欧洲联盟!
 view-if: west_relation >= 5 and east_relation >= 4 and eu_progress >= 2 and not eu
 on-arrival: eu_vote = 1
 go-to: eu_done if not legislature_enabled; legislative_menu if legislature_enabled
@@ -230,8 +230,8 @@ achievement: eu
 法西斯意大利仍是个问题,苏联也处在这一体系之外。但就目前而言,整个大陆的和平与繁荣有了新的希望。
 
 @mingi_taw
-title: Send the Scythian on her woeful errand to the Kingdom of Mingi Taw.
-subtitle: We have heard of a haunted darkness gathering beyond the perilous precipice beneath Mingi Taw...
+title: 派斯基泰人踏上她那趟悲催的差事,前往明基塔乌王国。
+subtitle: 我们听说,在明基塔乌之下那道险峻的悬崖之外,有一片闹鬼的黑暗正在聚集……
 view-if: decay and time_travelled_to_be_here
 on-arrival: scythian_deployed = 1
 max-visits: 1

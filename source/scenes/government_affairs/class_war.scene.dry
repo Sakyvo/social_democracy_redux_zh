@@ -116,7 +116,7 @@ on-arrival: capital_strike_timer += 4; financing_banned = 1; class_war += 1; eco
 我们取缔了私人对政党的融资 —— 这是所有依赖工业家资助其反动活动的资产阶级政党的支柱。他们如今憎恨我们,这可以理解。
 
 @socialize_media
-title: Socialize mass media, wrestling it from private ownership.
+title: 将大众媒体社会化,从私有制手中夺回。
 view-if: class_war >= 5
 max-visits: 1
 choose-if: ((left_coalition+sapd_r >= 50) or (popular_front+sapd_r >= 50 and z_relation >= 100 or (z_party_leader == "Joos" and z_relation >= 80))) and (judicial_reform >= 5)
@@ -125,8 +125,8 @@ on-arrival: capital_strike_timer += 3; socialized_media = 1; class_war += 1; eco
 
 我们选择把大众媒体社会化 —— 这是资本主义控制大众信息、维持民众支持的众多途径之一。通过拆解资产阶级对叙事的控制,我们攻击了他们权力的支柱之一。这场社会化应当如何进行?
 
-- @state_run: The news will be state-run, at least for now.
-- @union_run: The news will be run by existing democratic workers' organizations.
+- @state_run: 新闻将由国家经营 —— 至少眼下如此。
+- @union_run: 新闻将由现有的民主工人组织来经营。
 
 @state_run
 subtitle: -1 财政预算
@@ -137,7 +137,7 @@ on-arrival: state_media = 1; socialism += 5; workers_spd += 4; unemployed_spd +=
 ## todo: unlock whole-new ministry for press!
 
 @union_run
-subtitle: [? if not radio : -1 resource ?]
+subtitle: [? if not radio : -1 资源 ?]
 choose-if: resources >= 1 or radio
 unavailable-subtitle: 我们负担不起接管这些印刷厂。
 on-arrival: resources -= 1 if not radio; labor_strength += 10; labor_dissent -= 10; workers_spd += (labor_strength/10)
@@ -145,7 +145,7 @@ on-arrival: resources -= 1 if not radio; labor_strength += 10; labor_dissent -= 
 我们已把印刷厂移交给现有的民主工人组织,其中最主要的是工会。我们将在另一个时候考虑更持久的方案。
 
 @idling
-title: Nationalize the idling factories.
+title: 国有化那些闲置的工厂。
 max-visits: 1
 view-if: class_war >= 3
 subtitle: -[+ nationalize_budget +] 财政预算。[? if works_councils >= 3 : 我们的工厂委员会降低了该计划所需的预算。 ?] [? if socializations >= 2: 我们既有的社会化政策降低了该计划所需的预算。 ?]
@@ -217,17 +217,17 @@ achievement: wirtschaftspolitik
 法西斯分子在占领的工厂周围采取越来越暴力的行动,把我们称作盗贼与掠夺者。不过,法西斯分子中的一些工人阶级支持者已被拉走 —— 至少那些尚有阶级团结意识的人如此。
 
 @establish_councils
-title: Establish workers' councils in occupied factories, to coordinate industrial action.
+title: 在被占领的工厂中建立工人委员会,以协调工业行动。
 view-if: factory_takeovers >= 1 and class_war >= 5 and not supreme_soviet and not soviets_exist
 max-visits: 1
 choose-if: resources >= 2 or (resources >= 1 and works_councils >= 3)
-subtitle: [? if works_councils < 3 : -2 resources ?][? if works_councils >= 3 : -1 resource ?]
+subtitle: [? if works_councils < 3 : -2 资源 ?][? if works_councils >= 3 : -1 资源 ?]
 on-arrival: capital_strike_timer += 3; soviet_election_time = time+6; soviets_exist = 1; resources -= 1; resources -= 1 if works_councils < 3; bourgeois_power -= (0.02*factory_takeovers); rb_militancy += (0.01*factory_takeovers); workers_spd += (factory_takeovers*2); unemployed_spd += factory_takeovers; socialism += factory_takeovers
 
 我们在所占的工厂中建立了工人委员会,帮助这些被占领的工厂彼此组织起来,并通过现有的工厂委员会相互联系。这些苏维埃也为一个平行的国家机器奠定了基础。
 
 @dvp_reach
-title: Reach out to the DVP.
+title: 接触人民党。
 view-if: reconcile_business >= 3 and dvp_relation < 50
 choose-if: resources >= 1
 subtitle: -1 资源。[? if dvp_relation < 35 : 我们恐怕难以取得多少成效。 ?]

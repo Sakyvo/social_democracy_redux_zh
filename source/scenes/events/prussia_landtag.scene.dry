@@ -310,7 +310,7 @@ Right-wing Coalition (Z + DVP + Others + DNVP): [+ p_right_coalition +]%
 
 @spd_prussia
 title: 社会民主党在普鲁士赢得了多数。
-subtitle: SPD ([ + spd_pl +]%)
+subtitle: 社民党 ([+ spd_pl +]%)
 view-if: spd_pl >= 50 or (spd_prussia and in_spd_prussia)
 on-arrival: in_spd_prussia = 1
 
@@ -380,7 +380,7 @@ Adam Stegerwald has been confirmed as Minister-President of Prussia, to the prot
 @right_prussia
 title: 一个由施特格瓦尔德领导的右翼政府。
 subtitle: 中央党 + 人民党 + 其他 + 国家人民党 ([+ p_right_coalition +]%)
-unavailable-subtitle:  Z + DVP + Others + DNVP ([+ p_right_coalition +]%) - The DNVP is unwilling.
+unavailable-subtitle: 中央党 + 人民党 + 其他 + 国家人民党 ([+ p_right_coalition +]%)—— 国家人民党不愿。
 view-if: p_right_coalition >= 50 or z_prussia
 choose-if: (p_right_coalition >= 50 or (z_prussia and not (p_left_coalition >= 50 and kpd_relation >= 55 and communist_coalition >= 3))) and (z_relation < 35 or (z_relation < 45 and (p_left_coalition >= 50 and kpd_relation >= 55 and communist_coalition >= 3))) and (dnvp_reform or year < 1930)
 on-departure: z_prussia = 1; spd_prussia = 0; prussia_spd -= 0.1 if prussia_spd >= 0.8; prussia_dnvp += 0.1 if prussia_dnvp < 1.2; prussian_police_loyalty -= 0.25; prussia_other += 0.05 if prussia_other < 1.2; prussia_z -= 0.05 if prussia_z >= 0.8; prussia_dvp -= 0.1 if prussia_dvp >= 0.8; prussia_ddp += 0.05 if prussia_ddp < 1.1; prussia_kpd += 0.05 if prussia_kpd < 1.1; prussia_nsdap -= 0.1 if prussia_nsdap >= 0.7

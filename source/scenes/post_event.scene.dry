@@ -1,4 +1,4 @@
-title: Post Event
+title: 选举后事件
 new-page: true
 on-arrival: {!
 Q.last_advisor_action = 0;

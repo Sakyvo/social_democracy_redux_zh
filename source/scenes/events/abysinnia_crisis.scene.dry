@@ -7,11 +7,11 @@ new-page: true
 on-arrival: abysinnia_timer = 8; unresolved_abysinnia = 1 if ((soviet_relation + kpd_influence + nationalization_progress > west_relation) and (soviet_relation + kpd_influence + nationalization_progress > 2))
 go-to: non_govt if foreign_minister_party != "SPD"; control_foreign if foreign_minister_party == "SPD"
 
-= Abysinnia Crisis
+= 阿比西尼亚危机
 
-What started as an Anglo-Ethiopian border survey near Somalia has spiralled into an international incident after a skirmish broke out in Walwal between an Ethiopian encampment and an Italian garrison. 
+起初不过是英埃两国在索马里附近的边界勘测,却因瓦尔瓦尔一处埃塞俄比亚营地与意大利驻军爆发冲突,升级为一起国际事件。
 
-Ethiopia has requested League of Nations arbitration, with both sides demanding compensation for the other's aggression. If not handled correctly, the crisis could escalate.
+埃塞俄比亚已请求国际联盟仲裁,双方都要求对方为侵略行为作出赔偿。若处理不当,这场危机可能升级。
 
 @non_govt
 
@@ -21,19 +21,19 @@ Ethiopia has requested League of Nations arbitration, with both sides demanding 
 @no_foreign
 view-if: foreign_minister_party != "KPD"
 
-Influenced by France and Britain, and backed by Germany, the League of Nations absolves both sides of responsibility[? if not unresolved_abysinnia :, though Italy has been warned to halt its military buildup in the region. ?][? if unresolved_abysinnia :. ?][? if west_relation >= 3 and not unresolved_abysinnia : A general consensus has been reached between Germany and France to halt Italian expansion should they not relent in their ambitions on the region. ?]
+在法国与英国的影响下,并有德国支持,国际联盟免除了双方的责任[? if not unresolved_abysinnia : ,不过已警告意大利停止在该地区的军事集结。 ?][? if unresolved_abysinnia :。 ?][? if west_relation >= 3 and not unresolved_abysinnia : 德国与法国已达成普遍共识:若意大利不肯收敛其在该地区的野心,便联手制止其扩张。 ?]
 
 @kpd_foreign
 view-if: foreign_minister_party == "KPD"
 on-arrival: west_relation -= 2; workers_kpd += 3; new_middle_kpd += 2; dvp_relation -= 3; soviet_relation += 1; unresolved_abysinnia = 1
 
-The Communist foreign ministry condemns Italian aggression and colonialism, though the League of Nations absolves both sides of responsibility anyway, with France and Britain unwilling to take a firm course of action against Italy.
+共产党的外交部谴责意大利的侵略与殖民主义,但国际联盟最终还是免除了双方的责任 —— 法国与英国不愿对意大利采取坚决行动。
 
 # todo: france and britain will also do the same if KPD-influenced germany, even if SPD foreign ministry
 
 @control_foreign
 
-With our control of the Foreign Ministry, it is up to us to control Germany's position through the Abysinnia Crisis. [? if west_relation >= 2 : Luckily, France does not see us as much of a threat, so they are likely to focus more on Italy. ?]
+既然外交部掌握在我们手中,德国在阿比西尼亚危机中的立场就由我们来定。[? if west_relation >= 2 : 所幸法国并不太把我们当作威胁,所以他们大概会把更多注意力放在意大利身上。 ?]
 
 - @hardline: 要求意大利停止军事集结,并站在埃塞俄比亚一边。
 - @mediate: 同意共识,免除双方的责任。
@@ -44,14 +44,14 @@ unavailable-subtitle: [? if west_relation < 7 : 法国与英国绝不会支持�
 choose-if: ((eu and west_relation >= 5) or (not eu and west_relation >= 7)) and not unresolved_abysinnia
 on-arrival: unemployed += 1; west_relation -= 1; unemployed += 0.8 if not eu; inflation += 0.2; inflation += 0.6 if not eu; workers_spd += 6*(1-dissent); new_middle_spd += 3*(1-dissent); pacifism += 2; soviet_relation += 1; left_dissent -= 5; kpd_relation += 3; z_relation += 3; abysinnia = 1
 
-We act firmly and decisively to end Italian expansionism, and thanks to our good relations with France and Britain our plan is agreed upon. Sanctions are placed [? if eu : through the European Union ?] and the dispute is arbitrated firmly in Ethiopia's favor. Italy eventually backs down, thoroughly humbled and with its own fascist regime embarassed.
+我们坚定果断地出手,终结意大利的扩张主义;多亏我们与法国和英国的友好关系,方案获得了各方认同。制裁付诸实施[? if eu : (通过欧洲联盟) ?],争端也以明显有利于埃塞俄比亚的方式仲裁解决。意大利最终退让,颜面尽失,其法西斯政权也随之难堪。
 
-This has been a victory for peace in the world, and a defeat for fascists and militarists. 
+这是世界和平的胜利,也是法西斯分子与军国主义者的失败。
 
 @mediate
 subtitle: 我们将在此事上支持法国与英国的立场。
 
-Influenced by France and Britain, and backed by Germany, the League of Nations absolves both sides of responsibility[? if not unresolved_abysinnia :, though Italy has been warned to halt its military buildup in the region. ?][? if unresolved_abysinnia :. ?][? if west_relation >= 3 and not unresolved_abysinnia : A general consensus has been reached between Germany and France to halt Italian expansion should they not relent in their ambitions on the region. ?]
+在法国与英国的影响下,并有德国支持,国际联盟免除了双方的责任[? if not unresolved_abysinnia : ,不过已警告意大利停止在该地区的军事集结。 ?][? if unresolved_abysinnia :。 ?][? if west_relation >= 3 and not unresolved_abysinnia : 德国与法国已达成普遍共识:若意大利不肯收敛其在该地区的野心,便联手制止其扩张。 ?]
 
 
 # todo: followup event in 8 months: italy continues gradual escalation, and tries to convince britain and france to allow them some concessions. or, if firm hand, none at all.

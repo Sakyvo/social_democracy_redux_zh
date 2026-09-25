@@ -1,4 +1,4 @@
-title: Legislative menu
+title: 立法菜单
 on-arrival: {!
 
 if (Q.corporatism_vote) {
@@ -1633,12 +1633,12 @@ Q.bill_support = Math.round(Q.bill_support);
 
 Currently, [+ bill_support +]% is in favor of our bill.
 
-- @sway_kpd: Convince the KPD.
-- @sway_sapd: Convince the SAPD.
-- @sway_ddp: Convince the [+ ddp_name +].
-- @sway_z: Convince the Z.
-- @sway_dvp: Convince the DVP.
-- @motion_fails: The motion fails.
+- @sway_kpd: 说服共产党。
+- @sway_sapd: 说服社会主义工人党。
+- @sway_ddp: 说服 [+ ddp_name +]。
+- @sway_z: 说服中央党。
+- @sway_dvp: 说服人民党。
+- @motion_fails: 该动议未能通过。
 
 @success
 go-to: council_affairs.corporatism_done if corporatism_vote; social_welfare.welfare_cut if welfare_cut_vote; social_welfare.welfare_funded_pre_depression if welfare_fund_pre_depression_vote; social_welfare.welfare_funded_post_depression if welfare_fund_post_depression_vote; womens_rights.women_funded if women_vote; economic_democracy.council_expanded_1 if council_vote_1; economic_democracy.council_expanded_2 if council_vote_2; economic_democracy.council_expanded_3 if council_vote_3; economic_democracy.socialization_done if socialization_vote; economic_democracy.cooperative_done if cooperative_vote; judiciary.judiciary_done if judicial_vote; foreign_policy.concordat_done if concordat_vote; foreign_policy.eu_done if eu_vote; fiscal_policy.progressive_tax_done if progressive_tax_vote; fiscal_policy.raise_rich_done if raise_rich_vote; fiscal_policy.cut_done if cut_vote and budget >= 2; fiscal_policy.cut_done_wtb if cut_vote and budget < 2; fiscal_policy.raise_done if raise_vote; fiscal_policy.regressive_done if regressive_vote; fiscal_policy.tariff_cut_done if tariff_cut_vote; fiscal_policy.tariff_hike_done if tariff_hike_vote; womens_rights.women_labor if women_labor_vote; womens_rights.women_family if women_family_vote; labor_rights.cut_benefits_done if cut_benefits_vote; labor_rights.increase_employers_done if increase_employers_vote; labor_rights.balance_done if balance_vote; economic_policy.wtb_no_deficit_done if wtb_no_deficit_vote; economic_policy.wtb_deficit_done if wtb_deficit_vote; economic_policy.nationalize_done if nationalize_vote; economic_policy.reformist_done_1 if reformist_vote and reformist_budget == 2; economic_policy.reformist_done_2 if reformist_vote and reformist_budget == 1; economic_policy.synthesis_done if synthesis_vote; military_policy.rearmament_done if rearmament_vote; military_policy.disarmament_done if disarmament_vote; military_policy.military_reform_done if military_reform_vote; education_science.school_board_done if school_board_vote; education_science.public_hs_done if public_hs_vote; education_science.kwg_done if kwg_vote; education_science.applied_done if applied_vote; education_science.medical_done if medical_vote; education_science.cut_science_done if cut_science_vote; war_guilt.war_guilt_done if war_guilt_vote; labor_rights.shorten_hours_done if shorten_hours_vote; agricultural_policy.land_reform_done if land_reform_vote; agricultural_policy.state_buyer_done if state_buyer_vote and not from_food_shortages; food_shortages.state_buyer_done2 if state_buyer_vote and from_food_shortages
@@ -1686,7 +1686,7 @@ We give concessions to the SAPD enough that they agree to vote in favor of our b
 @sway_ddp
 view-if: in_popular_front or in_weimar_coalition or in_grand_coalition and not ddp_vote
 choose-if: ddp_relation > 50
-unavailable-subtitle: The DDP is unwilling to be swayed.
+unavailable-subtitle: 民主党不愿被说动。
 on-arrival: bill_support += ddp_r; ddp_vote = 1; left_dissent += 5; new_middle_spd -= 1; new_middle_ddp += 1
 go-to: success if bill_support >= 50; swaying_menu if bill_support < 50
 
@@ -1695,7 +1695,7 @@ WWe give concessions to the [+ ddp_name +] enough that they agree to vote in fav
 @sway_z
 view-if: in_popular_front or in_weimar_coalition or in_grand_coalition and not z_vote and not women_family_vote and (not nationalize_vote or budget > nationalize_budget)
 choose-if: z_relation > 40
-unavailable-subtitle: The Z is unwilling to be swayed.
+unavailable-subtitle: 中央党不愿被说动。
 on-arrival: bill_support += z_minus_bvp_r; coalition_dissent += 1; z_vote = 1; left_dissent += 5; catholics_spd -= 1; catholics_z += 1
 go-to: success if bill_support >= 50; swaying_menu if bill_support < 50
 
@@ -1704,7 +1704,7 @@ We give concessions to the Z enough that they agree to vote in favor of our bill
 @sway_dvp
 view-if: in_grand_coalition and not dvp_vote and not state_buyer_vote and not shorten_hours_vote and not disarmament_vote and not socialization_vote and not synthesis_vote and not progressive_tax_vote and not increase_employers_vote and not wtb_deficit_vote and not nationalize_vote
 choose-if: dvp_relation > 30
-unavailable-subtitle: The DVP is unwilling to be swayed.
+unavailable-subtitle: 人民党不愿被说动。
 on-arrival: bill_support += dvp_r; coalition_dissent += 1; dvp_vote = 1; bill_support += 3 if not bvp_vote and not women_family_vote; bvp_vote = 1 if not women_family_vote; left_dissent += 10; old_middle_spd -= 2; old_middle_dvp += 2; workers_spd -= 1
 go-to: success if bill_support >= 50; swaying_menu if bill_support < 50
 

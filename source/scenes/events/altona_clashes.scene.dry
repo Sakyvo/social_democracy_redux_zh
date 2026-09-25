@@ -5,9 +5,9 @@ tags: event
 view-if: year == 1932 and month == 6 and sa_banned == 0 and spd_prussia == 1
 max-visits: 1
 
-= Nazi March in Altona
+= 纳粹在阿尔托纳的游行
 
-The Nazi SA is planning a march through Altona, a working-class neighborhood of Hamburg known for its high working-class population. Altona is a Communist stronghold, and the planned march will almost certainly lead to violent conflict.
+纳粹冲锋队正筹划穿过阿尔托纳举行游行。阿尔托纳是汉堡的一个工人聚居区,以其工人阶级人口比例之高著称,也是共产党的堡垒;这场计划中的游行几乎必然引发暴力冲突。
 
 - @ban_march: 在游行开始前予以禁止。
 - @allow_police: 允许游行,但布置重兵警戒。
@@ -18,7 +18,7 @@ choose-if: judicial_reform >= 2
 unavailable-subtitle: 出于言论自由的考虑,司法系统不会允许我们查禁这场抗议。
 on-arrival: sa_strength -= 10
 
-We have banned the planned protest. The Nazis appeal the ban in the courts in the name of freedom of speech. Thankfully, the judiciary agrees with us that the Nazis' argument is specious.
+我们查禁了这场计划中的抗议。纳粹党以言论自由为名,向法院上诉要求撤销禁令。所幸司法系统同意我们的看法:纳粹的论调似是而非。
 
 
 @allow_police
@@ -27,17 +27,17 @@ go-to: allow_police_violence if prussian_police_loyalty <= 0.75; allow_police_no
 @allow_police_violence
 on-arrival: strife += 1; sa_strength += 50; kpd_relation -= 8; communist_coalition -= 1
 
-When the march arrives in Altona, they are immediately confronted by an angry crowd of communists and socialists, who throw objects at the Nazis. The police attempt to separate the two groups, to no avail. Gunshots are heard, reportedly from rooftop snipers (whom the police believe are communists). In response, the police fire into the surrounding buildings. Dozens are killed. All turn out to be civilians, and the reported snipers are never found.
+游行队伍抵达阿尔托纳时,立刻遭到一群愤怒的共产党人与社会主义者的迎头痛击,他们向纳粹投掷物件。警察试图把两拨人分开,却无济于事。有人开枪 —— 据称来自屋顶的狙击手(警察认为那些人是共产党)。警察随即向周围的建筑开火。数十人丧生,事后证明全是平民,而那些据报的狙击手始终未被找到。
 
-This incident has been called "Altona Bloody Sunday" in the media. The Communists assail the incompetence of the police, who are supposedly under our command.
+媒体将这一事件称为「阿尔托纳流血星期日」。共产党人痛斥警察的无能 —— 而这支警察按理说归我们指挥。
 
 @allow_police_no_violence
 on-arrival: sa_strength += 10
 
-When the march arrives in Altona, they are immediately confronted by an angry crowd of communists and socialists, who throw objects at the Nazis. The police attempt to separate the two groups, to no avail. Gunshots are heard, reportedly from rooftop snipers. The police manage to keep their cool, the shots stop, and the march disperses without further violence.
+游行队伍抵达阿尔托纳时,立刻遭到一群愤怒的共产党人与社会主义者的迎头痛击,他们向纳粹投掷物件。警察试图把两拨人分开,却无济于事。有人开枪 —— 据称来自屋顶的狙击手。警察设法保持冷静,枪声停止,游行队伍也未经更多暴力便散去。
 
 
 @allow_no_police
 on-arrival: sa_strength += 80; rfb_strength += 50; strife += 1; kpd_relation -= 8; communist_coalition -= 1
 
-When the march arrives in Altona, they are immediately confronted by an angry crowd of communists and socialists, who throw objects at the Nazis. Gunshots are heard, reportedly from rooftop snipers. In response, the SA engage the surrounding crowd and fire at the surrounding buildings. Dozens are killed, mostly civilians. The Nazis recruit off their dead martyrs.
+游行队伍抵达阿尔托纳时,立刻遭到一群愤怒的共产党人与社会主义者的迎头痛击,他们向纳粹投掷物件。有人开枪 —— 据称来自屋顶的狙击手。冲锋队随即向周围的群众开火,并朝周围建筑射击。数十人丧生,多为平民。纳粹党则拿死去的「殉道者」招兵买马。

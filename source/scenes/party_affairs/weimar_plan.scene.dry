@@ -1,4 +1,4 @@
-title: The Weimar Plan
+title: 魏玛计划
 new-page: true
 is-card: true
 view-if: weimar_plan_timer <= 0 and moderate_plan_adopted == 1 and weimar_rejected != 1 and weimar_plan_adopted != 1 and weimar_willingness == 1
@@ -6,24 +6,24 @@ on-arrival: weimar_plan_timer = 3; month_actions += 1
 card-image: img/iron_front.png
 tags: party_affairs; antifascism
 
-= The Weimar Plan
+= 魏玛计划
 
 Following our decision to adopt the Reformist economic plan, some have called for us to canvas the plan through the "Weimar" parties of Zentrum and the DDP so as to create a common economic plan for the republican parties to rally around together and combat extremism. [? if neorevisionism == 1 : The neorevisionists have joined in these calls and see it as a great way to create a mass movement to defend the republic. ?] [? if in_weimar_coalition == 1 : This will be made easier by the fact that we are already governing as part of a coalition with the parties in question. ?] [? if in_grand_coalition == 1 : This will be made harder by opposition to the idea from the DVP in our government, who will influence Zentrum and DDP against the idea. ?]
 
-- @canvas_1: We will attempt to get Zentrum and the DDP behind this idea.
-- @canvas_2: We will attempt to get Zentrum and the DDP behind this idea.
-- @canvas_3: We will attempt to get Zentrum and the DDP behind this idea.
-- @canvas_4: We will attempt to get Zentrum and the DDP behind this idea.
-- @canvas_5: We will attempt to get Zentrum and the DDP behind this idea.
-- @canvas_6: We will attempt to get Zentrum and the DDP behind this idea.
-- @canvas_7: We will attempt to get Zentrum and the DDP behind this idea.
-- @canvas_8: We will attempt to get Zentrum and the DDP behind this idea.
-- @canvas_9: We will attempt to get Zentrum and the DDP behind this idea.
-- @adopt_1: We will convince Zentrum and the DDP to adopt our plan!
-- @adopt_2: We will convince Zentrum and the DDP to adopt our plan!
-- @sovereignty: The SPD will not compromise its status as a worker's party by entering such alliances with the bourgeois parties.
-- @delay_decision: We will delay making a decision for the time being.
-- @delay_continuation: We are not currently in a position to continue pursuing this plan.
+- @canvas_1: 我们将设法争取中央党与民主党支持这一构想。
+- @canvas_2: 我们将设法争取中央党与民主党支持这一构想。
+- @canvas_3: 我们将设法争取中央党与民主党支持这一构想。
+- @canvas_4: 我们将设法争取中央党与民主党支持这一构想。
+- @canvas_5: 我们将设法争取中央党与民主党支持这一构想。
+- @canvas_6: 我们将设法争取中央党与民主党支持这一构想。
+- @canvas_7: 我们将设法争取中央党与民主党支持这一构想。
+- @canvas_8: 我们将设法争取中央党与民主党支持这一构想。
+- @canvas_9: 我们将设法争取中央党与民主党支持这一构想。
+- @adopt_1: 我们将说服中央党与民主党采纳我们的计划!
+- @adopt_2: 我们将说服中央党与民主党采纳我们的计划!
+- @sovereignty: 社民党不会通过与资产阶级政党结成此类联盟,来损害自己作为工人政党的地位。
+- @delay_decision: 我们暂时推迟作出决定。
+- @delay_continuation: 我们目前无力继续推进这一计划。
 
 @canvas_1
 view-if: spd_in_government == 0 and dvp_in_government == 0 and spd_toleration == 0 and president != "Braun" and weimar_support < 100
@@ -31,7 +31,7 @@ choose-if: (neorevisionist_strength + (reformist_strength/2))-left_strength > 0
 unavailable-subtitle: 左翼绝不会允许这种事发生。
 on-arrival: weimar_support += (10+unemployed+nsdap_r+kpd_r)*(1-dissent)+((neorevisionist_strength+(reformist_strength/2))/10)-(left_strength/10)+((z_relation+ddp_relation)/10); left_strength -= 2; left_dissent += 2; kpd_relation -= 3; z_relation -= 1; dvp_relation -= 3
 
-We are attempting to convince Zentrum and the DDP to adopt our economic plan. This will be made easier by increasing our relations. 
+我们正设法说服中央党与民主党采纳我们的经济计划。提高与他们的关系会让此事更容易。 
 
 [? if weimar_support >= 25 and weimar_support <= 50 : The DDP has been convinced to adopt the plan should Zentrum do the same, while Zentrum still debates the suggestion internally, unable to reach a conclusion. ?] [? if weimar_support >= 50 and weimar_support <= 75 : So far, the DDP has been convinced to adopt our plan, and great progress has been made in doing the same for Zentrum, though the right-wing of their party continues to resist the idea. ?] [? if weimar_support >= 75 and weimar_support <= 100 : So far, the DDP and a large portion of Zentrum have agreed to adopt our plan, and under influence from our allies the right-wing of Zentrum has become willing to consider the plan. ?] [? if weimar_support >= 100 : So far, the DDP and a majority in Zentrum have agreed to support our economic plan, and a shared programme has been drafted pending approval from the right-wing of Zentrum who rumors say have agreed to support it conditionally. ?]
 
@@ -51,7 +51,7 @@ choose-if: (neorevisionist_strength + (reformist_strength/2))-left_strength > 0
 unavailable-subtitle: 左翼绝不会允许这种事发生。
 on-arrival: weimar_support += ((10+unemployed+nsdap_r+kpd_r)*1.5)*(1-dissent)+((neorevisionist_strength+(reformist_strength/2))/10)-(left_strength/10)+((z_relation+ddp_relation)/5)/coalition_dissent; left_strength -= 2; left_dissent += 2; kpd_relation -= 3; dvp_relation -= 3
 
-We are attempting to convince our coalition partners to adopt our economic plan. This is made significantly easier by our pre-existing coalition arrangements. 
+我们正设法说服执政伙伴采纳我们的经济计划。既有的执政联盟安排使此事容易得多。 
 
 [? if weimar_support >= 25 and weimar_support <= 50 : The DDP has been convinced to adopt the plan should Zentrum do the same, while Zentrum still debates the suggestion internally, unable to reach a conclusion. ?] [? if weimar_support >= 50 and weimar_support <= 75 : So far, the DDP has been convinced to adopt our plan, and great progress has been made in doing the same for Zentrum, though the right-wing of their party continues to resist the idea. ?] [? if weimar_support >= 75 and weimar_support <= 100 : So far, the DDP and a large portion of Zentrum have agreed to adopt our plan, and under influence from our allies the right-wing of Zentrum has become willing to consider the plan. ?] [? if weimar_support >= 100 : So far, the DDP and a majority in Zentrum have agreed to support our economic plan, and a shared programme has been drafted pending approval from the right-wing of Zentrum who rumors say have agreed to support it conditionally. ?]
 
@@ -71,7 +71,7 @@ choose-if: (neorevisionist_strength + (reformist_strength/2))-left_strength > 0
 unavailable-subtitle: 左翼绝不会允许这种事发生。
 on-arrival: weimar_support += ((10+unemployed+nsdap_r+kpd_r)*1.25)*(1-dissent)+((neorevisionist_strength+(reformist_strength/2))/5)-(left_strength/10)+((z_relation+ddp_relation)/5); left_strength -= 2; left_dissent += 4; kpd_relation -= 3; dvp_relation -= 3
 
-We are attempting to convince Zentrum and the DDP to adopt our economic plan. This will be made easier by increasing our relations. Pressure from President Braun has helped in our efforts to convince Zentrum and the DDP to adopt this plan. 
+我们正设法说服中央党与民主党采纳我们的经济计划。提高与他们的关系会让此事更容易。 Pressure from President Braun has helped in our efforts to convince Zentrum and the DDP to adopt this plan. 
 
 [? if weimar_support >= 25 and weimar_support <= 50 : The DDP has been convinced to adopt the plan should Zentrum do the same, while Zentrum still debates the suggestion internally, unable to reach a conclusion. ?] [? if weimar_support >= 50 and weimar_support <= 75 : So far, the DDP has been convinced to adopt our plan, and great progress has been made in doing the same for Zentrum, though the right-wing of their party continues to resist the idea. ?] [? if weimar_support >= 75 and weimar_support <= 100 : So far, the DDP and a large portion of Zentrum have agreed to adopt our plan, and under influence from our allies the right-wing of Zentrum has become willing to consider the plan. ?] [? if weimar_support >= 100 : So far, the DDP and a majority in Zentrum have agreed to support our economic plan, and a shared programme has been drafted pending approval from the right-wing of Zentrum who rumors say have agreed to support it conditionally. ?]
 
@@ -91,7 +91,7 @@ choose-if: (neorevisionist_strength + (reformist_strength/2))-left_strength > 0
 unavailable-subtitle: 左翼绝不会允许这种事发生。
 on-arrival: weimar_support += ((10+unemployed+nsdap_r+kpd_r)*2)*(1-dissent)+((neorevisionist_strength+(reformist_strength/2))/5)-(left_strength/10)+((z_relation+ddp_relation)/2)/coalition_dissent; left_strength -= 2; left_dissent += 4; kpd_relation -= 3; dvp_relation -= 3
 
-We are attempting to convince our coalition partners to adopt our economic plan. This is made significantly easier by our pre-existing coalition arrangements. Pressure from President Braun has helped in our efforts to convince Zentrum and the DDP to adopt this plan. 
+我们正设法说服执政伙伴采纳我们的经济计划。既有的执政联盟安排使此事容易得多。 Pressure from President Braun has helped in our efforts to convince Zentrum and the DDP to adopt this plan. 
 
 [? if weimar_support >= 25 and weimar_support <= 50 : The DDP has been convinced to adopt the plan should Zentrum do the same, while Zentrum still debates the suggestion internally, unable to reach a conclusion. ?] [? if weimar_support >= 50 and weimar_support <= 75 : So far, the DDP has been convinced to adopt our plan, and great progress has been made in doing the same for Zentrum, though the right-wing of their party continues to resist the idea. ?] [? if weimar_support >= 75 and weimar_support <= 100 : So far, the DDP and a large portion of Zentrum have agreed to adopt our plan, and under influence from our allies the right-wing of Zentrum has become willing to consider the plan. ?] [? if weimar_support >= 100 : So far, the DDP and a majority in Zentrum have agreed to support our economic plan, and a shared programme has been drafted pending approval from the right-wing of Zentrum who rumors say have agreed to support it conditionally. ?]
 
@@ -126,51 +126,51 @@ view-if: weimar_support >= 100 and z_party_leader != "Joos"
 
 We have made great progress in convincing Zentrum and the DDP to adopt our economic plan, and the right-wing of Zentrum is finally willing to agree, but desire concessions first.
 
-- @promise_them_cuts: Agree to the bourgeois plans to cut welfare.
-- @use_our_relationship: Use our relations to sway them.
-- @resource_gift: Use our party resources to convince them.
-- @presidential_pressure_braun: Use pressure from President Braun to force the issue.
-- @drop_the_matter: This isn't working out. We'll bide our time and maybe they'll adopt it later.
+- @promise_them_cuts: 同意资产阶级削减福利的计划。
+- @use_our_relationship: 动用我们的关系来说动他们。
+- @resource_gift: 动用我党的资源来说服他们。
+- @presidential_pressure_braun: 借布劳恩总统的施压来强行推进此事。
+- @drop_the_matter: 这事办不成。我们先等一等,或许他们日后会采纳。
 
 @promise_them_cuts
 view-if: spd_in_government == 1
 on-arrival: workers_spd -= 5; unemployed_spd -= 6; workers_kpd += 5; unemployed_kpd += 3; unemployed_nsdap += 3; left_dissent += 10; labor_dissent += 5; welfare -= 1; budget += 1; coalition_dissent = 0
 go-to: adopt_1
 
-Fine. By cutting welfare, we have appeased the right-wing of Zentrum.
+好。通过削减福利,我们安抚了中央党的右翼。
 
 @use_our_relationship
 choose-if: z_relation >= 60
-unavailable-subtitle: We do not have good enough relations.
+unavailable-subtitle: 我们的关系还不够好。
 on-arrival: z_relation -= 10
 go-to: adopt_1
 
 @resource_gift
 choose-if: resources >= 2
 subtitle: -2 资源.
-unavailable-subtitle: We do not have sufficient resources.
+unavailable-subtitle: 我们没有足够的资源。
 on-arrival: resources -= 2
 go-to: adopt_1
 
-Fine. By using our party resources we have appeased the right-wing of Zentrum.
+好。通过动用我党的资源,我们安抚了中央党的右翼。
 
 @presidential_pressure_braun
 view-if: president == "Braun"
 on-arrival: z_relation -= 5; pro_republic -= 2
 go-to: adopt_1
 
-By applying pressure with President Braun we have managed to cow the right-wing of Zentrum.
+借布劳恩总统施压,我们成功镇住了中央党的右翼。
 
 @drop_the_matter
 on-arrival: weimar_support -= 50; labor_dissent += 5; center_dissent += 5; left_dissent += 5; reformist_dissent += 5; neorevisionist_dissent += 5; workers_spd -= 1
 
-Whether it be due to a change in strategy or lacking the means to convince our allies, we have decided to drop the idea for now.
+无论是出于策略转变,还是缺乏说服盟友的手段,我们已决定暂时放弃这一构想。
 
 @sovereignty
 view-if: weimar_support <= 0
 on-arrival: weimar_rejected = 1; neorevisionist_strength -= 5; neorevisionist_dissent += 10; left_dissent -= 10; center_dissent -= 5; labor_dissent -= 5; workers_spd += 2; unemployed_spd += 2
 
-We will keep the SPD party program as the SPD's party program solely, and we will not enter into any unnecessary alliances with the bourgeois parties.
+我们将把社民党党纲仅限于社民党自身,不会与资产阶级政党结成任何不必要的联盟。
 
 @delay_decision
 view-if: weimar_support == 0

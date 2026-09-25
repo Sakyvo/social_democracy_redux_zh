@@ -1,4 +1,4 @@
-title: Council Policy
+title: 委员会政策
 new-page: true
 is-card: true
 on-arrival: council_policy_timer += 3; month_actions += 1; council_resources = 0 if not council_resources
@@ -12,11 +12,11 @@ tags: govt_affairs
 
 德国存在着以工人委员会(即苏维埃)形式出现的平行国家机构,它们目前遍布全德。
 
-- @kpd_administration: The KPD administration makes its moves.
-- @bourgeois_administration: The bourgeois administration makes its moves.
-- @spd_administration: We can make moves.
-- @independent_administration: The councils do nothing.
-- @nothing: We will do nothing.
+- @kpd_administration: 共产党的行政当局采取动作。
+- @bourgeois_administration: 资产阶级的行政当局采取动作。
+- @spd_administration: 我们可以采取动作。
+- @independent_administration: 各委员会什么也不做。
+- @nothing: 我们将什么也不做。
 
 @kpd_administration
 view-if: kpd_soviets
@@ -24,10 +24,10 @@ max-choices: 1
 
 既然共产党掌控着这些委员会,他们必然会加以利用。
 
-- @support_kpd_electoral: The councils support the KPD's campaigning efforts.
-- @distribute_mutual_aid: The councils distribute mutual aid.
-- @kpd_militia: The councils expand the capacity of the RFB.
-- @pre_communist_revolution: The councils attempt to seize state power.
+- @support_kpd_electoral: 各委员会支持共产党的竞选工作。
+- @distribute_mutual_aid: 各委员会分发互助物资。
+- @kpd_militia: 各委员会扩充红色前线战士同盟的实力。
+- @pre_communist_revolution: 各委员会试图夺取国家政权。
 
 @support_kpd_electoral
 on-arrival: workers_kpd += 6; workers_spd -= 3 if not spd_included; unemployed_kpd += 3; socialism += 1; rfb_militancy -= 0.01
@@ -55,8 +55,8 @@ max-choices: 1
 
 既然资产阶级掌控着这些委员会,他们必然会加以利用。
 
-- @do_nothing: The councils make a point of doing nothing.
-- @self_dissolve: The councils self-dissolve.
+- @do_nothing: 各委员会刻意什么也不做。
+- @self_dissolve: 各委员会自行解散。
 
 @do_nothing
 on-arrival: socialism -= 1; nothings += 1
@@ -81,14 +81,14 @@ view-if: spd_soviets
 
 委员会能力: [+ council_resources +]
 
-- @expand_reichstag: Expand cooperation with the Reichstag and avoid conflict.
-- @integrate_works_councils: Integrate the councils into the existing works councils as purely economic entities.
-- @self_dissolve_spd: Dissolve the councils from within, to end dual power.
-- @factory_takeovers: Utilize the councils to seize factories.
-- @mutual_aid: Use the councils to distribute mutual aid.
-- @militia: Utilize the councils to expand the military capacities of the workers.
-- @fund_councils: Divert government funds to prop up the councils.
-- @donate_councils: Donate SPD resources to the councils.
+- @expand_reichstag: 扩大与国会的合作,避免冲突。
+- @integrate_works_councils: 把各委员会并入现有的工厂委员会,使其成为纯经济实体。
+- @self_dissolve_spd: 从内部解散各委员会,以终结双重政权。
+- @factory_takeovers: 利用各委员会夺取工厂。
+- @mutual_aid: 利用各委员会分发互助物资。
+- @militia: 利用各委员会扩充工人的军事能力。
+- @fund_councils: 挪用政府资金支撑各委员会。
+- @donate_councils: 把社民党的资源捐给各委员会。
 
 @expand_reichstag
 choose-if: (not left_soviets and not kpd_included) or (spd_r+sapd_r+kpd_r >= 50)

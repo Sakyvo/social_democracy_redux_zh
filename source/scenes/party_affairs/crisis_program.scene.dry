@@ -89,7 +89,7 @@ on-arrival: left_strength += 15; left_dissent -= 10; reformist_dissent += 10; ne
 经过我们的努力,我们说服党内多数采纳了社会主义经济计划! [? if spd_in_government == 1 : 只要掌握经济部或财政部,我们就能尽快开始实施该计划。 ?] 资产阶级的反对很可能会很激烈。 [? if spd_in_government == 0 : 鉴于目前的条件,推行该计划或许会有困难。 ?]
 
 @support_moderate
-subtitle: Call for a limited program of job creation without deficit spending.
+subtitle: 呼吁推行一项不搞赤字开支的有限创造就业计划。
 unavailable-subtitle: 改良派的力量还不够强大。
 choose-if: historical_mode == 0 or (reformist_strength >= left_strength and reformist_strength >= center_strength and reformist_strength >= labor_strength)
 on-arrival: moderate_plan_support += 1; reformist_strength += 8; reformist_dissent -= 5; left_dissent += 6; labor_dissent += 5; moderate_plan_support += 1 if reformist_strength >= 50

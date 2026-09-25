@@ -29,8 +29,11 @@ const applyTo = (file, pairs, label) => {
   let n = 0; const miss = [];
   for (const [a, b] of pairs) {
     if (a === b) continue;
-    if (!s.includes(a)) { miss.push(a.slice(0, 40)); continue; }
-    s = s.split(a).join(b); n++;
+    if (s.includes(a)) { s = s.split(a).join(b); n++; continue; }
+    // 容错:原文里可能存在连续空格的差异
+    const re = new RegExp(a.replace(/[.*+?^${}()|[\]\\]/g, '\\$&').replace(/\s+/g, '\\s+'), 'g');
+    if (re.test(s)) { s = s.replace(re, () => b); n++; continue; }
+    miss.push(a.slice(0, 40));
   }
   fs.writeFileSync(file, s);
   const rel = path.relative(root, file).replace(/\\/g, '/');

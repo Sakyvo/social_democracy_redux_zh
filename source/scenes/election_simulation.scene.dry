@@ -300,7 +300,7 @@ Q.anti_democratic_coalition = Q.kpd_r + Q.nsdap_r;
 Q.neo_weimar_coalition = Q.spd_r + Q.ddp_r + Q.z_r + Q.dvp_r + Q.other_r;
 !}
 
-The electoral system is essentially proportional, with the proportion of Reichstag seats roughly equal to the proportion of votes.
+选举制度基本上是比例代表制,国会席位的比例大致等于得票比例。
  
 **Election results:**
 
@@ -332,11 +332,11 @@ Other: [+ other_r +]
 
 **潜在执政联盟:**
 
-Weimar Coalition (SPD + Z + DDP): [+ weimar_coalition +]
+魏玛联盟(社民党 + 中央党 + 民主党):[+ weimar_coalition +]
 
-Grand Coalition (SPD + Z + BVP + DDP + DVP): [+ grand_coalition +]
+大联盟(社民党 + 中央党 + 巴伐利亚人民党 + 民主党 + 人民党):[+ grand_coalition +]
 
-Bourgeois Coalition (Z + BVP + DDP + DVP + Others): [+ bourgeois_coalition +]
+资产阶级联盟(中央党 + 巴伐利亚人民党 + 民主党 + 人民党 + 其他):[+ bourgeois_coalition +]
 
-Right-wing Coalition (Z + BVP + DVP + Others + DNVP): [+ right_coalition +]
+右翼联盟(中央党 + 巴伐利亚人民党 + 人民党 + 其他 + 国家人民党):[+ right_coalition +]
 

@@ -327,7 +327,7 @@ They surely must have.
 
 @nazis
 title: 纳粹党多数.
-subtitle: NSDAP ([+ nsdap_schl +]%)
+subtitle: 纳粹党 ([+ nsdap_schl +]%)
 view-if: nsdap_schl >= 50
 on-arrival: nazi_schaumburg_lippe = 1; workers_nsdap += 1; new_middle_nsdap += 1; schaumburg_lippe_nsdap += 1; schaumburg_lippe_ddp -= 0.4
 

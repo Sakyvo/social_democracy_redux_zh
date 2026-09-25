@@ -1,5 +1,5 @@
 title: 萨尔公投
-subtitle: A referendum is to be held on the fate of the Saarland…
+subtitle: 将就萨尔兰的命运举行一次公投……
 view-if: year >= 1935
 max-visits: 1
 tags: event

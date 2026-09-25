@@ -1058,10 +1058,10 @@ go-to: start_menu_2
 
 @menu
 
-- @1925_easy: Begin (easy difficulty)
-- @1925_main: Begin (normal difficulty)
-- @1925_hard: Begin (hard difficulty)
-- @1925_historical: Begin (historical mode)
+- @1925_easy: 开始(简单难度)
+- @1925_main: 开始(普通难度)
+- @1925_hard: 开始(困难难度)
+- @1925_historical: 开始(历史模式)
 - @1928_easy: 开始(简单难度)
 - @1928_main: 开始(普通难度)
 - @1928_hard: 开始(困难难度)
