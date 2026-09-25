@@ -40,7 +40,7 @@ new-page: true
 tags: event
 go-to: goals_success if kpd_goals_completed; goals_failed if not kpd_goals_completed
 
-= KPD Goals
+= 共产党的目标
 
 At the start of this government, the KPD presented a list of goals for the coalition:
 

@@ -7,7 +7,7 @@ go-to: hindenburg_menu if president == "Hindenburg"; marx_menu if president == "
 on-arrival: marx_iv_seen = 1
 tags: event
 
-= A New Government Forms
+= 新政府成立
 
 Following the fall of the previous government over secret rearmament plans by the Reichswehr, negotiations for a new one were begun. Due to our role in bringing down the government, we have been excluded from talks.
 

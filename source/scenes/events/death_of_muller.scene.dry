@@ -22,20 +22,20 @@ Chancellor Hermann Müller has died while in office. He will be greatly missed. 
 on-arrival: chancellor = "Braun"; chancellor_party = "SPD"; z_relation -= 5; dvp_relation -= 5
 subtitle: 中央党担心如此大的权力集于一人之手。
 
-Our coalition partners are reluctant to accept the new Chancellor, but they do not make loud objections.
+我们的执政伙伴不愿接受这位新总理,但并未大声反对。
 
 
 @wels_chancellor
 on-arrival: chancellor = "Wels"; chancellor_party = "SPD"; z_relation -= 3; dvp_relation -= 3
 subtitle: 他是位出色的组织者,但他也是位出色的总理吗?
 
-Our coalition partners are reluctant to accept the new Chancellor, but they do not make loud objections.
+我们的执政伙伴不愿接受这位新总理,但并未大声反对。
 
 @breitscheid_chancellor
 on-arrival: chancellor = "Breitscheid"; chancellor_party = "SPD"; z_relation -= 5; dvp_relation -= 5; kpd_relation += 1
 subtitle: 中央党担心他的左倾倾向。
 
-Our coalition partners are reluctant to accept the new Chancellor, but they do not make loud objections.
+我们的执政伙伴不愿接受这位新总理,但并未大声反对。
 
 @bruning_chancellor
 on-arrival: chancellor = "Brüning"; chancellor_party = "Z"; z_relation += 5; dvp_relation += 5

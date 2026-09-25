@@ -6,7 +6,7 @@ max-visits: 2
 new-page: true
 on-arrival: capital_strike_timer -= 1; inflation += 2; inflation += 0.4 if not state_buyer; coalition_dissent += 1; coalition_dissent += 1 if in_grand_coalition; workers_spd -= 5; unemployed_spd -= 5; new_middle_spd -= 3; workers_zca += 5*bourgeois_power; new_middle_zca += 3
 
-= Food Shortages
+= 粮食短缺
 
 As we attempt to transition to socialism in our ongoing rupture with the bourgeoisie, we have encountered an obstacle in the form of the rural petty-bourgeoisie, upon whom we largely rely upon for food. Long a bastion of reaction, [? if land_reform : albeit limited in this by our land reform programs, ?] they have begun hoarding food out of hostility to our socialist project, causing prices to rise sharply-
 

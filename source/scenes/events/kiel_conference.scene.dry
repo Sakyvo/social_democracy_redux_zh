@@ -9,7 +9,7 @@ max-visits: 1
 # the low priority means that this event is only seen after all other events are resolved for the month.
 # note: z_coalition = z_celation + (pro_cepublic/2); z_coalition *= 1.25 if z_faction_leader == "Joos";
 
-= Heidelberg Conference
+= 海德堡代表大会
 
 The SPD is holding its biannual conference in the city of Kiel, where Baade is expected to present his agricultural programme for adoption by the SPD, and the left expected to demand, even more clearly than in the last conference, the SPD reject entrance into government.
 

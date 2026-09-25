@@ -8,9 +8,9 @@ go-to: ask_resign if spd_in_government and (president != "Braun" and president !
 tags: event
 call: will_anschluss
 
-= March on Berlin
+= 进军柏林
 
-The far right is mobilizing. Paramilitary forces of the Stahlhelm and SA, organized under the Harzburg Front, have marched on Berlin, threatening to violently overthrow the government.
+极右翼正在动员。钢盔团与冲锋队的准军事力量在哈茨堡阵线的组织下向柏林进军,威胁要以暴力推翻政府。
 
 They demand either immediate elections under the "supervision" of the nationalist paramilitaries, or else the immediate resignation of the government and appointment of a Harzburg Front cabinet headed by Franz Seldte of the Stalhelm. It is obvious that they are threatening a civil war if their demands are not met.
 
@@ -18,7 +18,7 @@ They demand either immediate elections under the "supervision" of the nationalis
 
 @non_govt_menu
 
-It appears that President [+ president +] is looking favorably upon the fascist proposals. Chancellor [+ chancellor +] has announced plans to resign.
+看来 [+ president +] 总统正对法西斯分子的提议持赞许态度。[+ chancellor +] 总理已宣布打算辞职。
 
 - @fight
 - @accept
@@ -49,7 +49,7 @@ Somehow, the Harzburg Cabinet has cobbled together a majority in the Reichstag o
 
 @ask_resign
 
-President [+ president +] has asked our government to resign.
+[+ president +] 总统已要求我们的政府辞职。
 
 - @fight
 - @fight_constitution
@@ -69,9 +69,9 @@ title: 部署国旗团并发动总罢工,抵抗法西斯分子!
 on-arrival: defense_strength = rb_strength*rb_militancy*(1-dissent/2); defense_strength += prussian_police_strength*prussian_police_militancy*prussian_police_loyalty if spd_prussia; enemy_strength = sa_strength*sa_militancy + sh_strength*sh_militancy; enemy_strength += reichswehr_strength*reichswehr_militancy*(0.1-reichswehr_loyalty) if reichswehr_loyalty < 0.1; defense_strength += workers_spd_normalized*(2 - dissent)*(2 - unemployed/100); defense_strength += reichswehr_strength*reichswehr_loyalty*reichswehr_militancy if president=="Braun" and spd_in_government
 go-to: fight_2_win if defense_strength >= enemy_strength and march_on_berlin_seen <= 1; fight_2_win_2 if defense_strength >= enemy_strength and march_on_berlin_seen > 1; fight_2_pre_civil_war if defense_strength < enemy_strength
 
-The Reichsbanner number at [+ rb_strength +] thousand; many are in Berlin to counter the fascist demonstration.
+国旗团有 [+ rb_strength +] 千人;许多人在柏林,以对抗这场法西斯示威。
 
-[? if spd_prussia: The Prussian police has been deployed against the fascists. ?] [? if spd_in_government and president == "Braun" : The portions of the Reichswehr that are loyal are also deployed. ?]
+[? if spd_prussia: 普鲁士警察已被部署前去对付法西斯分子。 ?] [? if spd_in_government and president == "Braun" : 国防军中忠诚的那部分也被调出。 ?]
 
 
 @fight_2_win
@@ -79,7 +79,7 @@ on-arrival: coup_progress = 0; sa_strength *= 0.8; sh_strength *= 0.6; rb_streng
 achievement: drei_pfeile
 go-to: austrian_issue if anschluss_attempt
 
-Our forces confront the fascists, and somehow, the fascists retreat! They were overwhelmed by our display of strength, and have chosen to slink away. The attempted coup is over, at least for now.
+我们的力量与法西斯分子对峙,不知怎的,法西斯分子竟退却了!他们被我们展现出的实力所震慑,选择悄悄溜走。这场未遂政变结束了 —— 至少眼下如此。
 
 这次力量展示重新激发了人们对共和国与社民党的支持,也削弱了法西斯分子。
 
@@ -89,14 +89,14 @@ go-to: austrian_issue if anschluss_attempt
 
 # if march on Berlin has already been seen
 
-Our forces confront the fascists, and somehow, the fascists retreat! They were overwhelmed by our display of strength, and have chosen to slink away. The attempted coup is over, at least for now.
+我们的力量与法西斯分子对峙,不知怎的,法西斯分子竟退却了!他们被我们展现出的实力所震慑,选择悄悄溜走。这场未遂政变结束了 —— 至少眼下如此。
 
 这次力量展示重新激发了人们对共和国与社民党的支持,也削弱了法西斯分子。
 
 @fight_2_pre_civil_war
 on-arrival: nazi_rebel = 1 if spd_in_government = 1; spd_rebel = 1 if spd_in_government = 0
 
-Our forces confront the fascists on the streets of Berlin, and armed fighting erupts. Neither side is dislodged from their positions.
+我们的力量与法西斯分子在柏林街头对峙,随即爆发武装冲突。双方都未能把对方从阵地赶走。
 
 - @civil_war: 这就是内战。
 
@@ -106,7 +106,7 @@ title: 这是违宪的!我们将留在政府职位上,并请法院让我们继�
 choose-if: judicial_reform >= 3
 unavailable-subtitle: 司法系统绝不会同意我们这样做。
 
-The courts agree that President [+ president +] is wrong to dismiss us, and that we should remain in the government. The President might respect the court's decision for now, but the fascists in the streets do not. They are still demanding snap elections or the resignation of the government, and will remain in the streets until we either meet their demands, or they are forced out.
+法院同意 [+ president +] 总统罢免我们是错的,我们应当留在政府之中。总统眼下或许会尊重法院的裁决,但街头的法西斯分子不会。他们仍在要求提前选举或政府辞职,并将一直留在街头,直到我们满足其要求,或他们被赶走。
 
 - @new_elections
 - @fight
@@ -132,13 +132,13 @@ The fascists reject our offer of free and fair elections. They are demanding tha
 @new_elections_braun_2
 go-to: new_elections_2
 
-The fascists seem to believe that they would win an election if one were to be held now, so they agree to our holding an election for next month.
+法西斯分子似乎相信,若现在举行选举他们会获胜,因此同意让我们在下个月举行选举。
 
 
 @new_elections_hindenburg
 go-to: new_elections_2
 
-With the mediation of various establishment figures, new elections are called for next month, without the use of fascist "electoral monitors".
+在各方体制内人士的调停下,新的选举被定在下个月举行,且不允许法西斯「选举监督员」登场。
 
 
 @new_elections_2
@@ -161,7 +161,7 @@ unavailable-subtitle: 布劳恩总统不能辞职。
 on-arrival: chancellor = "Papen"; chancellor_party = "I"; spd_in_government = 0;
 go-to: accept
 
-We have resigned our positions in the government.
+我们已辞去在政府中的职位。
 
 
 

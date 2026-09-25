@@ -6,9 +6,9 @@ tags: event
 view-if: (((year = 1931 and month >= 10) or (year >= 1932)) and chancellor != "Schleicher" and chancellor != "Papen") or (coup_progress >= 6)
 max-visits: 1
 
-= The Harzburg Front
+= 哈茨堡阵线
 
-The far-right parties and paramilitaries - the NSDAP (and its paramilitary the SA), the Stahlhelm paramilitary group, and the DNVP - have united to form the Harzburg Front, as a force dedicated to the overthrow of the current government.
+极右翼政党与准军事组织 —— 纳粹党(及其准军事组织冲锋队)、钢盔团准军事组织,以及国家人民党 —— 已联合组成哈茨堡阵线,作为一支致力于推翻现任政府的力量。
 
 - @strategy: 我们必须制定一套连贯的战略来对抗右翼。
 - @confronting_nazis.iron_front: 我们必须组建铁前线!
@@ -18,4 +18,4 @@ The far-right parties and paramilitaries - the NSDAP (and its paramilitary the S
 view-if: nazi_urgency < 3
 on-arrival: nazi_urgency += 1
 
-We do not yet have a coherent strategy for combatting the fascists. We must develop one as soon as possible.
+我们还没有一套连贯的对抗法西斯分子的战略。我们必须尽快制定出来。

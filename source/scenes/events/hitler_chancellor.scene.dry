@@ -6,13 +6,13 @@ tags: event
 new-page: true
 go-to: choose if not spd_prussia and not z_prussia; prussian_overthrow if spd_prussia or z_prussia
 
-= Hitler Appointed Chancellor!
+= 希特勒被任命为总理!
 
 Internal scheming by the camarilla surrounding the president has caused President Hindenburg to appoint Hitler as chancellor, replacing the unpopular [+ chancellor +]. [? if hitler_deported and not hitler_dead : Despite his earlier deportation, the Nazi leaders and their reactionary allies have connived for the president to give him German citizenship after all. ?][? if hitler_dead : Despite his earlier deportation and later death, the Nazi leaders and their reactionary allies have connived for the president to employ high-level psionic technologies in order to resuscitate Hitler and give him German citizenship after all. ?] Some of the reactionaries surrounding Hindenburg believe that he will restore Germany to its supposed former glory, while others believe that they can control him and his movement.
 
-He has promised a campaign of revenge against the socialists, and the Nazis have already spilled blood. In his published manifesto, he promises a campaign of unspeakable horror against Jews, and endless wars of violent expansion that will ruin all of Europe.
+他许诺要对社会主义者展开一场复仇之战,而纳粹党已经见血。在他公开发表的宣言中,他承诺要对犹太人发动一场难以言喻的恐怖运动,并发动无休无止的暴力扩张战争,那将毁掉整个欧洲。
 
-[? if spd_prussia or z_prussia : As his first move towards consolidating total power, Hitler has ordered the dismissal of the Prussian state government in a procedyre known as the *Reichsexekution*. Many of our members are ready to resist, as caving would surely mean the end. ?]
+[? if spd_prussia or z_prussia : 作为巩固绝对权力的第一步,希特勒下令以所谓*国家执行*的方式罢免普鲁士州政府。我党许多成员已准备好抵抗,因为屈服必定意味着终结。 ?]
 
 我们现在该怎么办?
 
@@ -58,7 +58,7 @@ Q.unemployed_spd -= 4;
 
 演说在发表。表决在进行。子弹在街头飞舞。一些社会主义者被杀或入狱。另一些人逃亡国外。在这样一个关口,选票还能有什么用呢?
 
-Snap elections are called, for [+ next_election_month : month +] [+ next_election_year +]. The SA and Stalhelm begin a campaign of violent intimidation in the streets, determined to win the next elections by whatever means it takes. 
+提前选举被定于 [+ next_election_month : month +] [+ next_election_year +]。冲锋队与钢盔团开始在街头展开暴力恐吓,不惜一切手段也要赢下下次选举。
 
 @prussian_overthrow
 
@@ -86,7 +86,7 @@ on-arrival: sa_strength *= 0.8; sh_strength *= 0.8; pro_republic += 10; workers_
 achievement: bollwerk_der_demokratie
 go-to: defend_2_victory_2
 
-Our forces confront the government troops and their reactionary auxiliaries, and somehow, our enemies retreat without a fight! They were overwhelmed by our display of strength, and have chosen to slink away. Chancellor [+ chancellor +] withdraws the dismissal of the Prussian government, at least for now.
+我们的力量与政府军及其反动辅助部队对峙,不知怎的,敌方竟然不战而退!他们被我们展现出的实力所震慑,选择悄悄溜走。[+ chancellor +] 总理撤销了对普鲁士政府的罢免 —— 至少眼下如此。
 
 这次力量展示重新激发了人们对共和国与社民党的支持,也削弱了法西斯分子。
 
@@ -97,7 +97,7 @@ achievement: drei_pfeile
 @defend_2_civil_war
 on-arrival: spd_rebel = 1
 
-Our forces confront the government troops and their supporters on the streets of Berlin, and armed fighting erupts. The reactionaries do not budge from their positions. We are caught at a disadvantage.
+我们的力量与政府军及其支持者在柏林街头对峙,随即爆发武装冲突。反动派坚守阵地不肯退让。我们处于不利地位。
 
 - @civil_war: 这就是内战。
 

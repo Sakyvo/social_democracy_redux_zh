@@ -6,7 +6,7 @@ view-if: national_front_progress >= 150 and dvp_relation < 30
 on-arrival: z_national = 1 if z_relation < 20 and z_party_leader != "Joos"
 max-visits: 1
 
-= The National Front
+= 国家阵线
 
 With the Nazis embracing their new tactic of subverting democracy truly from within, many doors have been opened. The "National Opposition" has fallen apart and given way to the "National Front", a new alliance of the BVP, DVP, DNVP and NSDAP as well as many other smaller right-wing parties into a firmly reactionary bloc. [? if z_national : Even the Center Party has joined, despite initial reluctance, thanks to our great hostility. ?]
 

@@ -5,7 +5,7 @@ new-page: true
 max-visits: 1
 tags: event
 
-= Constitutional Referendum
+= 宪法公投
 
 With Hitler's election as president he has wasted no time in attempting to consolidate power. His efforts are impeded however thanks to our own changes to the constitution in weakening the powers of the presidency. To bypass this he has called a constitutional referendum on undoing our changes and restoring the presidency's power, and the SA has already mobilized to intimidate voters and attempt to force the referendum through. If this referendum passes, it will mean the end of Germany democracy.
 
@@ -39,7 +39,7 @@ if (Q.dvp_relation < 30) {
 }
 !}
 
-Our forces clash with Hitler's in the streets as the referendum is held, and, shockingly,[? if spd_prussia == 1 : with the help of the Prussian police force, ?] the SA is eventually beaten back allowing the referendum to be held unimpeded. 
+公投举行之际,我们的力量与希特勒的力量在街头冲突;令人震惊的是,[? if spd_prussia == 1 : 在普鲁士警察的协助下, ?]冲锋队最终被击退,使公投得以不受干扰地举行。
 
 - @results_unimpeded: 现在看结果……
 
@@ -52,7 +52,7 @@ if (Q.dvp_relation < 30) {
 Q.nazi_reform *= ((Q.enemy_strength*4)/Q.defense_strength)
 !}
 
-Our forces clash with Hitler's and, despite our best efforts, the SA is triumphant. Emboldened by the defeat of the Reichsbanner, the SA ramps up their terror on the streets, making it unlikely that this referendum will be a fair one. 
+我们的力量与希特勒的力量冲突,尽管我们竭尽全力,冲锋队还是占了上风。受击败国旗团的鼓舞,冲锋队加剧了街头的恐怖统治,这场公投恐怕难以公正。
 
 - @results_rigged: 现在看结果……
 
@@ -105,7 +105,7 @@ choose-if: judicial_reform >= 3
 on-arrival: nazi_rage_progress += 5
 unavailable-subtitle: 司法系统绝不会同意我们这样做。
 
-We complain to the judiciary that due to the violent interference of the SA the referendum is illegitimate and should be declared such. The judiciary reviews our case and agrees! This has enraged Hitler who begins to consider more radical actions to secure his power.
+我们向司法系统申诉:由于冲锋队的暴力干预,这次公投不具合法性,应被宣告无效。司法系统审议了我们的申诉并予以认同!这让希特勒大为震怒,他开始考虑采取更激进的手段来巩固权力。
 
 @hitler_victorious
 view-if: judicial_reform < 3 and nazi_reform >= 0.5

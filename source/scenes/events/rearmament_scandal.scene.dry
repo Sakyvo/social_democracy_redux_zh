@@ -31,7 +31,7 @@ Despite the protests of our party's left and pacifist wings, we have entered gov
 on-arrival: spd_toleration = 0; dvp_relation -= 5; ddp_relation -= 2; z_relation -= 2; marx_relation -= 5; marx_rearmament = 1
 subtitle: 若他们拒绝,我们将提出不信任案。
 
-As expected, the cabinet refuses to resign. We attack the government for its complacency in allowing the Reichswehr to rearm and call a motion of no confidence. Though the far-right brand us traitors, they vote alongside us against the government anyway.
+果不其然,cabinet refuses to resign. We attack the government for its complacency in allowing the Reichswehr to rearm and call a motion of no confidence. Though the far-right brand us traitors, they vote alongside us against the government anyway.
 
 @no_bribe
 

@@ -6,7 +6,7 @@ tags: event
 max-visits: 1
 go-to: hindie if president == "Hindenburg"; marx if president == "Marx"
 
-= Koch-Weser Resigns
+= 科赫-韦泽辞职
 
 Unable to hold the Grand Coalition together, Koch-Weser has resigned as chancellor.
 

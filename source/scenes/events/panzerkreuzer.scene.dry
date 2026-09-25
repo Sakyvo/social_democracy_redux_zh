@@ -28,9 +28,9 @@ Our grassroots party members are shocked by our intransigence! Many party branch
 
 社民党:意见不一
 
-[+ ddp_name +]: For
+[+ ddp_name +]:赞成
 
-Z: For
+中央党:赞成
 
 巴伐利亚人民党:赞成
 
@@ -70,11 +70,11 @@ Our coalition partners are shocked by our intransigence! Despite Chancellor Mül
 
 [? if sapd_formed : SAPD: 反对 ?]
 
-SPD: Against
+社民党:反对
 
-[+ ddp_name +]: For
+[+ ddp_name +]:赞成
 
-Z: For
+中央党:赞成
 
 巴伐利亚人民党:赞成
 
@@ -97,11 +97,11 @@ Our coalition partners are shocked by our intransigence! Despite Chancellor Mül
 
 [? if sapd_formed : SAPD: 反对 ?]
 
-SPD: Against
+社民党:反对
 
-[+ ddp_name +]: For
+[+ ddp_name +]:赞成
 
-Z: For
+中央党:赞成
 
 巴伐利亚人民党:赞成
 
@@ -124,11 +124,11 @@ on-arrival: panzerkreuzer_funded = 0; nationalism -= 3*(1-dissent); panzerkreuze
 
 [? if sapd_formed : SAPD: 反对 ?]
 
-SPD: Against
+社民党:反对
 
-[+ ddp_name +]: For
+[+ ddp_name +]:赞成
 
-Z: For
+中央党:赞成
 
 巴伐利亚人民党:赞成
 
@@ -151,11 +151,11 @@ on-arrival: panzerkreuzer_funded = 1; bill_support = bourgeois_coalition+far_rig
 
 [? if sapd_formed : SAPD: 反对 ?]
 
-SPD: Against
+社民党:反对
 
-[+ ddp_name +]: For
+[+ ddp_name +]:赞成
 
-Z: For
+中央党:赞成
 
 巴伐利亚人民党:赞成
 
@@ -180,11 +180,11 @@ Q.bill_support = Math.round(Q.bill_support);
 
 [? if sapd_formed : SAPD: 反对 ?]
 
-SPD: Abstain
+社民党:弃权
 
-[+ ddp_name +]: For
+[+ ddp_name +]:赞成
 
-Z: For
+中央党:赞成
 
 巴伐利亚人民党:赞成
 

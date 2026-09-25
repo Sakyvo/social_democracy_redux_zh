@@ -10,9 +10,9 @@ set-jump: prussia_election_1928
 # the low priority means that this event is only seen after all other events are resolved for the month.
 # note: z_coalition = z_plelation + (pro_republic/2); z_coalition *= 1.25 if z_party_leader == "Joos";
 
-= Prussian Elections, [+ month : month +] [+ year +]
+= 普鲁士选举,[+ month : month +] [+ year +]
 
-The Prussian elections are to be held now.
+普鲁士选举即将举行。
 
 - @election_algorithm: 愿我们尽力而为……
 
@@ -252,7 +252,7 @@ if (window && d3) {
 !}
 go-to: coalition_menu
 
-= Election results
+= 选举结果
 
 {!<svg id="reichstag" style="width: 500px; height: 250px;"> </svg>!}
 
@@ -279,21 +279,21 @@ go-to: coalition_menu
 
 **潜在执政联盟:**
 
-Weimar Coalition (SPD + Z + [+ ddp_name +]): [+ p_weimar_coalition +]%
+魏玛联盟(社民党 + 中央党 + [+ ddp_name +]):[+ p_weimar_coalition +]%
 
-Grand Coalition (SPD + Z + [+ ddp_name +] + DVP): [+ p_grand_coalition +]%
+大联盟(社民党 + 中央党 + [+ ddp_name +] + 人民党):[+ p_grand_coalition +]%
 
-Bourgeois Coalition (Z + [+ ddp_name +] + DVP + Others): [+ p_bourgeois_coalition +]%
+资产阶级联盟(中央党 + [+ ddp_name +] + 人民党 + 其他):[+ p_bourgeois_coalition +]%
 
-Right-wing Coalition (Z + DVP + Others + DNVP): [+ p_right_coalition +]%
+右翼联盟(中央党 + 人民党 + 其他 + 国家人民党):[+ p_right_coalition +]%
 
-[? if nazi_urgency <= 1 and nsdap_pl >= 15 : The rapid rise in NSDAP votes is extremely worrying. Many had believed that the party was moribound; now, some of us consider it to be the greatest threat to democracy in Germany. ?]
+[? if nazi_urgency <= 1 and nsdap_pl >= 15 : 纳粹党得票的飞速攀升令人极为担忧。许多人曾以为该党已奄奄一息;如今,我们中的一些人已视其为德国民主最大的威胁。 ?]
 
-[? if p_anti_democratic_coalition >= 50 : Together, the anti-democratic KPD, DNVP, and NSDAP have a majority in the Landtag. A stable governing majority will be almost impossible. ?]
+[? if p_anti_democratic_coalition >= 50 : 反民主的共产党、国家人民党与纳粹党加在一起,已在州议会占据多数。要组成稳定的执政多数几乎不可能。 ?]
 
-[? if spd_prussia : Prussia as a state is currently governed by Minister-President Otto Braun, giving him control over the cabinet, control which cannot be revoked unless a majority for an alternative government is found. This grants the SPD significant power in the state, power the bourgeoisie are keen on stripping. ?]
+[? if spd_prussia : 普鲁士州目前由州总理奥托·布劳恩治理,他因此掌控着内阁 —— 除非能找到替代政府的多数,这一掌控便无法被撤销。这赋予社民党在该州相当大的权力,而资产阶级正急于剥夺它。 ?]
 
-[? if z_prussia : Prussia as a state is currently governed by Minister-President Adam Stegerwald, giving him control over the cabinet, which cannot be revoked unless a majority for an alternative government is found. This grants the bourgeois significant power in the state, including the power to at will exclude us from government and leave us incapable of fighting back unless we and the KPD can both win a majority and agree on a common candidate. ?]
+[? if z_prussia : 普鲁士州目前由州总理亚当·施特格瓦尔德治理,他因此掌控着内阁 —— 除非能找到替代政府的多数,这一掌控便无法被撤销。这赋予资产阶级在该州相当大的权力,包括随意把我们排除在政府之外、使我们无力反击的权力 —— 除非我们与共产党都能赢得多数并同意推举同一位候选人。 ?]
 
 存在若干可能的组阁方案。
 
@@ -314,7 +314,7 @@ subtitle: 社民党 ([+ spd_pl +]%)
 view-if: spd_pl >= 50 or (spd_prussia and in_spd_prussia)
 on-arrival: in_spd_prussia = 1
 
-We have won a majority in Prussia!
+我们在普鲁士赢得了多数!
 
 @weimar_prussia
 title: 魏玛联盟 —— 在普鲁士一向占据主导。
@@ -324,7 +324,7 @@ unavailable-subtitle: 社民党 + 中央党 + [+ ddp_name +] ([+ p_weimar_coalit
 on-arrival: dvp_relation -= 5 if dvp_prussia
 on-departure: dvp_prussia = 0; kpd_prussia = 0;
 
-We have enough votes to form a Weimar Coalition. [? if dvp_prussia : The DVP's exclusion from government has upset them. ?]
+我们已有足够票数组成魏玛联盟。[? if dvp_prussia : 人民党被排除在政府之外,令其不满。 ?]
 
 [? if p_weimar_coalition < 50 : 多亏了建设性不信任案,我们才保住了这一位置。 ?]
 
@@ -337,7 +337,7 @@ unavailable-subtitle: 我们没有足够的票数。
 subtitle: 这将保住我们对普鲁士的掌控。
 on-arrival: spd_prussia = 1; z_prussia = 0
 
-Otto Braun has been confirmed as Minister-President of Prussia.
+奥托·布劳恩已获确认为普鲁士州总理。
 
 @stegerwald_weimar
 choose-if: p_weimar_coalition >= 50 or z_prussia
@@ -345,7 +345,7 @@ subtitle: 资产阶级将掌控普鲁士。
 unavailable-subtitle: 我们没有足够的票数。
 on-arrival: z_prussia = 1; spd_prussia = 0; left_dissent += 10; center_dissent += 5; labor_dissent += 5
 
-Adam Stegerwald has been confirmed as Minister-President of Prussia, to the protest of our party's left.
+亚当·施特格瓦尔德已获确认为普鲁士州总理,我党左翼对此表示抗议。
 
 @groko_prussia
 title: 一个「大联盟」,人民党也参与执政。
@@ -354,7 +354,7 @@ choose-if: (spd_prussia or (z_prussia and z_relation >= 45)) or p_grand_coalitio
 unavailable-subtitle: 社民党 + 中央党 + [+ ddp_name +] + 人民党 ([+ p_grand_coalition +]%) - [? if p_grand_coalition < 50 : We lack the votes. ?][? if dvp_relation < 40 : The DVP is unwilling. ?][? if z_relation < 40 : The Center Party is unwilling. ?]
 on-arrival: kpd_prussia = 0; dvp_relation += 5; left_dissent += 5; kpd_relation -= 5; dvp_prussia = 1; democratization -= 1; stalhelm_militancy += 0.05; prussian_police_loyalty -= 0.1; prussia_dvp += 0.05 if prussia_dvp < 1.25; prussia_dnvp -= 0.1 if prussia_dnvp >= 0.7; prussia_nsdap += 0.05 if prussia_nsdap < 1.25
 
-The DVP has been included in government to foster goodwill. The left is upset by this.
+人民党已被纳入政府以促进善意。左翼对此不满。
 
 [? if p_grand_coalition < 50 : 多亏了建设性不信任案,我们才保住了这一位置。 ?]
 
@@ -367,7 +367,7 @@ unavailable-subtitle: 我们没有足够的票数。
 subtitle: 这将保住我们对普鲁士的掌控。
 on-arrival: spd_prussia = 1; z_prussia = 0
 
-Otto Braun has been confirmed as Minister-President of Prussia.
+奥托·布劳恩已获确认为普鲁士州总理。
 
 @stegerwald_groko
 choose-if: p_grand_coalition >= 50 or z_prussia
@@ -375,7 +375,7 @@ on-arrival: z_prussia = 1; spd_prussia = 0; left_dissent += 10; center_dissent +
 subtitle: 资产阶级将掌控普鲁士。
 unavailable-subtitle: 我们没有足够的票数。
 
-Adam Stegerwald has been confirmed as Minister-President of Prussia, to the protest of our party's left.
+亚当·施特格瓦尔德已获确认为普鲁士州总理,我党左翼对此表示抗议。
 
 @right_prussia
 title: 一个由施特格瓦尔德领导的右翼政府。
@@ -385,7 +385,7 @@ view-if: p_right_coalition >= 50 or z_prussia
 choose-if: (p_right_coalition >= 50 or (z_prussia and not (p_left_coalition >= 50 and kpd_relation >= 55 and communist_coalition >= 3))) and (z_relation < 35 or (z_relation < 45 and (p_left_coalition >= 50 and kpd_relation >= 55 and communist_coalition >= 3))) and (dnvp_reform or year < 1930)
 on-departure: z_prussia = 1; spd_prussia = 0; prussia_spd -= 0.1 if prussia_spd >= 0.8; prussia_dnvp += 0.1 if prussia_dnvp < 1.2; prussian_police_loyalty -= 0.25; prussia_other += 0.05 if prussia_other < 1.2; prussia_z -= 0.05 if prussia_z >= 0.8; prussia_dvp -= 0.1 if prussia_dvp >= 0.8; prussia_ddp += 0.05 if prussia_ddp < 1.1; prussia_kpd += 0.05 if prussia_kpd < 1.1; prussia_nsdap -= 0.1 if prussia_nsdap >= 0.7
 
-[? if spd_prussia : Otto Braun has been de-seated and replaced by Adam Stegerwald. ?][? if z_prussia : Adam Stegerwald has been re-elected M-P of Prussia. ?]
+[? if spd_prussia : 奥托·布劳恩已被赶下台,由亚当·施特格瓦尔德取代。 ?][? if z_prussia : 亚当·施特格瓦尔德已再次当选普鲁士州总理。 ?]
 
 [? if p_right_coalition < 50 : 多亏了建设性不信任案,右翼政府才得以留任。 ?]
 
@@ -398,7 +398,7 @@ unavailable-subtitle: 共产党 + 社民党 ([+ p_left_coalition +]%) - [? if p_
 on-arrival: dvp_relation -= 10; z_relation -= 5; dvp_relation -= 5 if dvp_prussia; z_relation -= 5 if z_prussia;
 on-departure: dvp_prussia = 0; kpd_prussia = 1; spd_prussia = 1; z_prussia = 0; prussia_kpd += 0.1 if prussia_kpd < 1.3; prussia_spd += 0.05 if prussia_spd < 1.1; coup_progress += 4; capital_strike_progress += 1
 
-We have enough votes to form a United Front with the KPD. [? if dvp_prussia : The DVP's exclusion from government has upset them. ?]
+我们已有足够票数组成与共产党的统一战线。[? if dvp_prussia : 人民党被排除在政府之外,令其不满。 ?]
 
 [? if p_left_coalition < 50 : 多亏了建设性不信任案,我们才保住了这一位置。 ?]
 
@@ -411,7 +411,7 @@ unavailable-subtitle: 共产党 + 社民党 + [+ ddp_name +] + 中央党 ([+ p_p
 on-arrival: dvp_relation -= 5; dvp_relation -= 5 if dvp_prussia
 on-departure: dvp_prussia = 0; kpd_prussia = 1; spd_prussia = 1; z_prussia = 0; prussia_kpd += 0.05 if prussia_kpd < 1.2; prussia_spd -= 0.05 if prussia_spd >= 0.9; coup_progress += 3; capital_strike_progress += 1
 
-We have enough votes to form a Popular Front with the KPD and Z. [? if dvp_prussia : The DVP's exclusion from government has upset them. ?]
+我们已有足够票数组成与共产党及中央党的人民阵线。[? if dvp_prussia : 人民党被排除在政府之外,令其不满。 ?]
 
 [? if p_popular_front_coalition < 50 : 多亏了建设性不信任案,我们才保住了这一位置。 ?]
 
@@ -439,12 +439,12 @@ subtitle: 中央党 + 纳粹党 + 国家人民党 + 人民党 + 其他 ([+ p_hit
 view-if: black_brown_seen and p_hitler_right_coalition >= 50
 on-arrival: prussia_nsdap += 0.4; prussia_kpd -= 0.25; prussia_spd -= 0.2; sa_militancy += 0.05; prussian_police_loyalty -= 0.4; new_middle_nsdap += 4; old_middle_nsdap += 4; rural_nsdap += 4
 
-Stegerwald has announced a reorganization of the Prussian cabinet to include multiple Nazi ministers, in order to present a majority. Immediately, the Nazis abuse their positions to suppress the left-wing, and secure power for themselves.
+施特格瓦尔德已宣布改组普鲁士内阁,纳入多名纳粹部长,以凑出一个多数。纳粹随即滥用职务压制左翼,为自己夺取权力。
 
 @pfft
 view-if: not black_brown_seen or p_hitler_right_coalition < 50
 
-As if Stegerwald would do such a thing. He may be bourgeois, but he is republican.
+施特格瓦尔德才不会做这种事。他或许是资产阶级,但他是共和派。
 
 @far_right_prussia
 title: 一个极右翼联盟。
@@ -452,6 +452,6 @@ view-if: p_far_right_coalition >= 50
 subtitle: 纳粹党 + 国家人民党 ([+ p_far_right_coalition +]%)
 on-arrival: coup_progress += 5; sa_militancy += 0.2; rb_militancy -= 0.1; rfb_militancy -= 0.1; prussia_nsdap += 0.2; spd_prussia = 0; z_prussia = 0; kpd_prussia = 0; dvp_prussia = 0; pro_republic -= 6; socialism -= 3; nationalism += 5; workers_spd -= 4; workers_kpd -= 4; workers -= 2; new_middle_nsdap += 8; old_middle_nsdap += 6; rural_nsdap += 5; workers_nsdap += 3; unemployed_nsdap += 3; prussia_kpd -= 0.25; prussian_police_loyalty -= 1; 
 
-Disaster has struck - the reactionaries have won a majority, taking away from us the bulwark of democracy we have for so long held dear. Now it is converted into a bulwark of reaction.
+灾难降临 —— 反动派赢得了多数,夺走了我们长久以来珍视的民主堡垒。如今它已被转化为反动的堡垒。
 
-Mass persecution of the SPD and even moreso the KPD is commenced within the state. It may never be democratic again.
+对该州内社民党乃至更甚于共产党的迫害大规模展开。它或许再也无法恢复民主了。

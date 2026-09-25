@@ -8,7 +8,7 @@ max-visits: 1
 
 # TODO: this should happen regardless of the current state of the government...
 
-= Austrian Customs Union
+= 奥地利关税同盟
 
 [? if spd_in_government: The [+ foreign_minister_party +] foreign minister has a proposal for a customs union with Austria. We can either accept or reject this agreement. ?]
 [? if not spd_in_government: The government of Chancellor [+ chancellor +] has a proposal for a customs union with Austria. Most likely, this will happen whatever we decide. ?]

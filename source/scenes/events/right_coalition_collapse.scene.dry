@@ -8,7 +8,7 @@ max-visits: 1
 
 = Government Collapses
 
-As expected, the ruling government has collapsed as a result of the DNVP's staunch nationalism and opposition to the Young Plan. They have prepared a motion of no confidence which they are expected to call at the next session of the Reichstag. We must decide what we should do.
+果不其然,ruling government has collapsed as a result of the DNVP's staunch nationalism and opposition to the Young Plan. They have prepared a motion of no confidence which they are expected to call at the next session of the Reichstag. We must decide what we should do.
 
 - @enter_government: 我们应取代国家人民党进入政府,组成大联盟。
 - @toleration: 我们将投票反对那项不信任案,让一个少数派政府继续下去。

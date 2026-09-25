@@ -31,7 +31,7 @@ on-arrival: welfare -= 2; budget += 2; capital_strike_progress -= 3; unemployed 
 @price_controls
 on-arrival: capital_strike_progress += 6; inflation *= 0.75; hyperinflation = 0; coalition_dissent += 2; unemployed += 2; old_middle_spd -= 8; new_middle_spd -= 6; rural_spd -= 12; workers_spd -= 4; unemployed_spd += 5; labor_dissent += 12; dvp_relation -= 15; z_relation -= 8; ddp_relation -= 6
 
-Price controls are very unpopular with the bourgeoisie and their representatives, as well as rural producers, while wage controls hurt organized workers. However, the policies do stem the tide of inflation, at least somewhat.
+价格管制在资产阶级及其代表以及农村生产者中极不受欢迎,而工资管制则伤害有组织的工人。不过,这些政策至少多少遏制了通胀的势头。
 
 @volksmark
 choose-if: year = 1935

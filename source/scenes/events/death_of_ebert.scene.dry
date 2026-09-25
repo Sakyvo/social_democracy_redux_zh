@@ -298,7 +298,7 @@ go-to: hindenburg_wins if hindenburg_majority == 1; marx_wins if marx_majority =
 
 结果:
 
-[? if thalmann_campaign : Thälmann - [+ thalmann_votes_disp +]% ?]
+[? if thalmann_campaign : 台尔曼 - [+ thalmann_votes_disp +]% ?]
 
 [? if braun_campaign : Braun - [+ braun_votes_disp +]% ?]
 

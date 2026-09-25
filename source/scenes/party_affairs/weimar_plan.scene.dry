@@ -8,7 +8,7 @@ tags: party_affairs; antifascism
 
 = 魏玛计划
 
-Following our decision to adopt the Reformist economic plan, some have called for us to canvas the plan through the "Weimar" parties of Zentrum and the DDP so as to create a common economic plan for the republican parties to rally around together and combat extremism. [? if neorevisionism == 1 : The neorevisionists have joined in these calls and see it as a great way to create a mass movement to defend the republic. ?] [? if in_weimar_coalition == 1 : This will be made easier by the fact that we are already governing as part of a coalition with the parties in question. ?] [? if in_grand_coalition == 1 : This will be made harder by opposition to the idea from the DVP in our government, who will influence Zentrum and DDP against the idea. ?]
+在我们决定采纳改良派的经济计划之后,有人呼吁我们通过中央党与民主党这两个「魏玛」政党来宣传该计划,以便为各共和派政党打造一份共同的经济计划,让它们团结起来共同对抗极端主义。[? if neorevisionism == 1 : 新修正派也加入了这些呼吁,视之为打造一场保卫共和国的大众运动的绝佳途径。 ?] [? if in_weimar_coalition == 1 : 由于我们本就与这两个党联合执政,此事会更容易。 ?] [? if in_grand_coalition == 1 : 由于我们政府中的人民党反对这一构想,并会影响中央党与民主党反对它,此事会更加困难。 ?]
 
 - @canvas_1: 我们将设法争取中央党与民主党支持这一构想。
 - @canvas_2: 我们将设法争取中央党与民主党支持这一构想。
@@ -33,7 +33,7 @@ on-arrival: weimar_support += (10+unemployed+nsdap_r+kpd_r)*(1-dissent)+((neorev
 
 我们正设法说服中央党与民主党采纳我们的经济计划。提高与他们的关系会让此事更容易。 
 
-[? if weimar_support >= 25 and weimar_support <= 50 : The DDP has been convinced to adopt the plan should Zentrum do the same, while Zentrum still debates the suggestion internally, unable to reach a conclusion. ?] [? if weimar_support >= 50 and weimar_support <= 75 : So far, the DDP has been convinced to adopt our plan, and great progress has been made in doing the same for Zentrum, though the right-wing of their party continues to resist the idea. ?] [? if weimar_support >= 75 and weimar_support <= 100 : So far, the DDP and a large portion of Zentrum have agreed to adopt our plan, and under influence from our allies the right-wing of Zentrum has become willing to consider the plan. ?] [? if weimar_support >= 100 : So far, the DDP and a majority in Zentrum have agreed to support our economic plan, and a shared programme has been drafted pending approval from the right-wing of Zentrum who rumors say have agreed to support it conditionally. ?]
+[? if weimar_support >= 25 and weimar_support <= 50 : 民主党已被说服:只要中央党采纳该计划,它也随之采纳;而中央党内部仍在辩论,无法得出结论。 ?] [? if weimar_support >= 50 and weimar_support <= 75 : 到目前为止,民主党已被说服采纳我们的计划,中央党方面也取得了重大进展,不过该党右翼仍在抵制这一构想。 ?] [? if weimar_support >= 75 and weimar_support <= 100 : 到目前为止,民主党与中央党的很大一部分已同意采纳我们的计划;在我们的盟友影响下,中央党右翼也变得愿意考虑该计划了。 ?] [? if weimar_support >= 100 : 到目前为止,民主党与中央党多数已同意支持我们的经济计划,一份共同纲领也已起草完毕,只待中央党右翼批准 —— 据传他们已同意有条件地支持它。 ?]
 
 @canvas_2
 view-if: in_grand_coalition == 1 and spd_in_government == 1 and president != "Braun" and weimar_support < 100
@@ -41,9 +41,9 @@ choose-if: (neorevisionist_strength + (reformist_strength/2))-left_strength > 0
 unavailable-subtitle: 左翼绝不会允许这种事发生。
 on-arrival: weimar_support += ((10+unemployed+nsdap_r+kpd_r)/2)*(1-dissent)+((neorevisionist_strength+(reformist_strength/2))/10)-(left_strength/10)+((z_relation+ddp_relation)/15)/coalition_dissent; left_strength -= 2; left_dissent += 2; kpd_relation -= 3; z_relation -= 2; coalition_dissent += 1; dvp_relation -= 3
 
-We are attempting to convince our coalition partners to adopt our economic plan. The DVP is opposing our efforts and influencing Zentrum against the idea, making it significantly harder and threatening the integrity of our coalition. 
+我们正设法说服执政伙伴采纳我们的经济计划。人民党在阻挠我们的努力,并影响中央党反对这一构想,使此事难上加难,并威胁到我们联盟的完整性。
 
-[? if weimar_support >= 25 and weimar_support <= 50 : The DDP has been convinced to adopt the plan should Zentrum do the same, while Zentrum still debates the suggestion internally, unable to reach a conclusion. ?] [? if weimar_support >= 50 and weimar_support <= 75 : So far, the DDP has been convinced to adopt our plan, and great progress has been made in doing the same for Zentrum, though the right-wing of their party continues to resist the idea. ?] [? if weimar_support >= 75 and weimar_support <= 100 : So far, the DDP and a large portion of Zentrum have agreed to adopt our plan, and under influence from our allies the right-wing of Zentrum has become willing to consider the plan. ?] [? if weimar_support >= 100 : So far, the DDP and a majority in Zentrum have agreed to support our economic plan, and a shared programme has been drafted pending approval from the right-wing of Zentrum who rumors say have agreed to support it conditionally. ?]
+[? if weimar_support >= 25 and weimar_support <= 50 : 民主党已被说服:只要中央党采纳该计划,它也随之采纳;而中央党内部仍在辩论,无法得出结论。 ?] [? if weimar_support >= 50 and weimar_support <= 75 : 到目前为止,民主党已被说服采纳我们的计划,中央党方面也取得了重大进展,不过该党右翼仍在抵制这一构想。 ?] [? if weimar_support >= 75 and weimar_support <= 100 : 到目前为止,民主党与中央党的很大一部分已同意采纳我们的计划;在我们的盟友影响下,中央党右翼也变得愿意考虑该计划了。 ?] [? if weimar_support >= 100 : 到目前为止,民主党与中央党多数已同意支持我们的经济计划,一份共同纲领也已起草完毕,只待中央党右翼批准 —— 据传他们已同意有条件地支持它。 ?]
                                
 @canvas_3
 view-if: in_weimar_coalition == 1 and president != "Braun" and weimar_support < 100
@@ -53,7 +53,7 @@ on-arrival: weimar_support += ((10+unemployed+nsdap_r+kpd_r)*1.5)*(1-dissent)+((
 
 我们正设法说服执政伙伴采纳我们的经济计划。既有的执政联盟安排使此事容易得多。 
 
-[? if weimar_support >= 25 and weimar_support <= 50 : The DDP has been convinced to adopt the plan should Zentrum do the same, while Zentrum still debates the suggestion internally, unable to reach a conclusion. ?] [? if weimar_support >= 50 and weimar_support <= 75 : So far, the DDP has been convinced to adopt our plan, and great progress has been made in doing the same for Zentrum, though the right-wing of their party continues to resist the idea. ?] [? if weimar_support >= 75 and weimar_support <= 100 : So far, the DDP and a large portion of Zentrum have agreed to adopt our plan, and under influence from our allies the right-wing of Zentrum has become willing to consider the plan. ?] [? if weimar_support >= 100 : So far, the DDP and a majority in Zentrum have agreed to support our economic plan, and a shared programme has been drafted pending approval from the right-wing of Zentrum who rumors say have agreed to support it conditionally. ?]
+[? if weimar_support >= 25 and weimar_support <= 50 : 民主党已被说服:只要中央党采纳该计划,它也随之采纳;而中央党内部仍在辩论,无法得出结论。 ?] [? if weimar_support >= 50 and weimar_support <= 75 : 到目前为止,民主党已被说服采纳我们的计划,中央党方面也取得了重大进展,不过该党右翼仍在抵制这一构想。 ?] [? if weimar_support >= 75 and weimar_support <= 100 : 到目前为止,民主党与中央党的很大一部分已同意采纳我们的计划;在我们的盟友影响下,中央党右翼也变得愿意考虑该计划了。 ?] [? if weimar_support >= 100 : 到目前为止,民主党与中央党多数已同意支持我们的经济计划,一份共同纲领也已起草完毕,只待中央党右翼批准 —— 据传他们已同意有条件地支持它。 ?]
 
 @canvas_4
 view-if: spd_in_government == 0 and z_in_government == 1 and dvp_in_government == 1 and president != "Braun" and weimar_support < 100
@@ -61,9 +61,9 @@ choose-if: (neorevisionist_strength + (reformist_strength/2))-left_strength > 0
 unavailable-subtitle: 左翼绝不会允许这种事发生。
 on-arrival: weimar_support += ((10+unemployed+nsdap_r+kpd_r)/4)*(1-dissent)+((neorevisionist_strength+(reformist_strength/2))/10)-(left_strength/10)+((z_relation+ddp_relation)/20); left_strength -= 2; left_dissent += 2; kpd_relation -= 3; z_relation -= 2; dvp_relation -= 4
 
-We are attempting to convince Zentrum and the DDP to adopt our economic plan. The DVP is opposing our efforts and influencing Zentrum against the idea, making it significantly harder especially due to our position relative to the DVP. 
+我们正设法说服中央党与民主党采纳我们的经济计划。人民党在阻挠我们的努力,并影响中央党反对这一构想,使此事难上加难 —— 尤其考虑到我们相对于人民党的处境。
 
-[? if weimar_support >= 25 and weimar_support <= 50 : The DDP has been convinced to adopt the plan should Zentrum do the same, while Zentrum still debates the suggestion internally, unable to reach a conclusion. ?] [? if weimar_support >= 50 and weimar_support <= 75 : So far, the DDP has been convinced to adopt our plan, and great progress has been made in doing the same for Zentrum, though the right-wing of their party continues to resist the idea. ?] [? if weimar_support >= 75 and weimar_support <= 100 : So far, the DDP and a large portion of Zentrum have agreed to adopt our plan, and under influence from our allies the right-wing of Zentrum has become willing to consider the plan. ?] [? if weimar_support >= 100 : So far, the DDP and a majority in Zentrum have agreed to support our economic plan, and a shared programme has been drafted pending approval from the right-wing of Zentrum who rumors say have agreed to support it conditionally. ?]
+[? if weimar_support >= 25 and weimar_support <= 50 : 民主党已被说服:只要中央党采纳该计划,它也随之采纳;而中央党内部仍在辩论,无法得出结论。 ?] [? if weimar_support >= 50 and weimar_support <= 75 : 到目前为止,民主党已被说服采纳我们的计划,中央党方面也取得了重大进展,不过该党右翼仍在抵制这一构想。 ?] [? if weimar_support >= 75 and weimar_support <= 100 : 到目前为止,民主党与中央党的很大一部分已同意采纳我们的计划;在我们的盟友影响下,中央党右翼也变得愿意考虑该计划了。 ?] [? if weimar_support >= 100 : 到目前为止,民主党与中央党多数已同意支持我们的经济计划,一份共同纲领也已起草完毕,只待中央党右翼批准 —— 据传他们已同意有条件地支持它。 ?]
 
 @canvas_5
 view-if: spd_in_government == 0 and dvp_in_government == 0 and president == "Braun" and weimar_support < 100
@@ -73,7 +73,7 @@ on-arrival: weimar_support += ((10+unemployed+nsdap_r+kpd_r)*1.25)*(1-dissent)+(
 
 我们正设法说服中央党与民主党采纳我们的经济计划。提高与他们的关系会让此事更容易。 Pressure from President Braun has helped in our efforts to convince Zentrum and the DDP to adopt this plan. 
 
-[? if weimar_support >= 25 and weimar_support <= 50 : The DDP has been convinced to adopt the plan should Zentrum do the same, while Zentrum still debates the suggestion internally, unable to reach a conclusion. ?] [? if weimar_support >= 50 and weimar_support <= 75 : So far, the DDP has been convinced to adopt our plan, and great progress has been made in doing the same for Zentrum, though the right-wing of their party continues to resist the idea. ?] [? if weimar_support >= 75 and weimar_support <= 100 : So far, the DDP and a large portion of Zentrum have agreed to adopt our plan, and under influence from our allies the right-wing of Zentrum has become willing to consider the plan. ?] [? if weimar_support >= 100 : So far, the DDP and a majority in Zentrum have agreed to support our economic plan, and a shared programme has been drafted pending approval from the right-wing of Zentrum who rumors say have agreed to support it conditionally. ?]
+[? if weimar_support >= 25 and weimar_support <= 50 : 民主党已被说服:只要中央党采纳该计划,它也随之采纳;而中央党内部仍在辩论,无法得出结论。 ?] [? if weimar_support >= 50 and weimar_support <= 75 : 到目前为止,民主党已被说服采纳我们的计划,中央党方面也取得了重大进展,不过该党右翼仍在抵制这一构想。 ?] [? if weimar_support >= 75 and weimar_support <= 100 : 到目前为止,民主党与中央党的很大一部分已同意采纳我们的计划;在我们的盟友影响下,中央党右翼也变得愿意考虑该计划了。 ?] [? if weimar_support >= 100 : 到目前为止,民主党与中央党多数已同意支持我们的经济计划,一份共同纲领也已起草完毕,只待中央党右翼批准 —— 据传他们已同意有条件地支持它。 ?]
 
 @canvas_6
 view-if: in_grand_coalition == 1 and president == "Braun" and weimar_support < 100
@@ -81,9 +81,9 @@ choose-if: (neorevisionist_strength + (reformist_strength/2))-left_strength > 0
 unavailable-subtitle: 左翼绝不会允许这种事发生。
 on-arrival: weimar_support += ((10+unemployed+nsdap_r+kpd_r)/1.5)*(1-dissent)+((neorevisionist_strength+(reformist_strength/2))/5)-(left_strength/10)+((z_relation+ddp_relation)/10)/coalition_dissent; left_strength -= 2; left_dissent += 4; kpd_relation -= 3; z_relation -= 1; coalition_dissent += 1; dvp_relation -= 3
 
-We are attempting to convince our coalition partners to adopt our economic plan. The DVP is opposing our efforts and influencing Zentrum against the idea, making it significantly harder and threatening the integrity of our coalition. Pressure from President Braun has helped in our efforts to convince Zentrum and the DDP to adopt this plan. 
+我们正设法说服执政伙伴采纳我们的经济计划。人民党在阻挠我们的努力,并影响中央党反对这一构想,使此事难上加难,并威胁到我们联盟的完整性。Pressure from President Braun has helped in our efforts to convince Zentrum and the DDP to adopt this plan. 
 
-[? if weimar_support >= 25 and weimar_support <= 50 : The DDP has been convinced to adopt the plan should Zentrum do the same, while Zentrum still debates the suggestion internally, unable to reach a conclusion. ?] [? if weimar_support >= 50 and weimar_support <= 75 : So far, the DDP has been convinced to adopt our plan, and great progress has been made in doing the same for Zentrum, though the right-wing of their party continues to resist the idea. ?] [? if weimar_support >= 75 and weimar_support <= 100 : So far, the DDP and a large portion of Zentrum have agreed to adopt our plan, and under influence from our allies the right-wing of Zentrum has become willing to consider the plan. ?] [? if weimar_support >= 100 : So far, the DDP and a majority in Zentrum have agreed to support our economic plan, and a shared programme has been drafted pending approval from the right-wing of Zentrum who rumors say have agreed to support it conditionally. ?]
+[? if weimar_support >= 25 and weimar_support <= 50 : 民主党已被说服:只要中央党采纳该计划,它也随之采纳;而中央党内部仍在辩论,无法得出结论。 ?] [? if weimar_support >= 50 and weimar_support <= 75 : 到目前为止,民主党已被说服采纳我们的计划,中央党方面也取得了重大进展,不过该党右翼仍在抵制这一构想。 ?] [? if weimar_support >= 75 and weimar_support <= 100 : 到目前为止,民主党与中央党的很大一部分已同意采纳我们的计划;在我们的盟友影响下,中央党右翼也变得愿意考虑该计划了。 ?] [? if weimar_support >= 100 : 到目前为止,民主党与中央党多数已同意支持我们的经济计划,一份共同纲领也已起草完毕,只待中央党右翼批准 —— 据传他们已同意有条件地支持它。 ?]
 
 @canvas_7
 view-if: in_weimar_coalition == 1 and president == "Braun" and weimar_support < 100
@@ -93,7 +93,7 @@ on-arrival: weimar_support += ((10+unemployed+nsdap_r+kpd_r)*2)*(1-dissent)+((ne
 
 我们正设法说服执政伙伴采纳我们的经济计划。既有的执政联盟安排使此事容易得多。 Pressure from President Braun has helped in our efforts to convince Zentrum and the DDP to adopt this plan. 
 
-[? if weimar_support >= 25 and weimar_support <= 50 : The DDP has been convinced to adopt the plan should Zentrum do the same, while Zentrum still debates the suggestion internally, unable to reach a conclusion. ?] [? if weimar_support >= 50 and weimar_support <= 75 : So far, the DDP has been convinced to adopt our plan, and great progress has been made in doing the same for Zentrum, though the right-wing of their party continues to resist the idea. ?] [? if weimar_support >= 75 and weimar_support <= 100 : So far, the DDP and a large portion of Zentrum have agreed to adopt our plan, and under influence from our allies the right-wing of Zentrum has become willing to consider the plan. ?] [? if weimar_support >= 100 : So far, the DDP and a majority in Zentrum have agreed to support our economic plan, and a shared programme has been drafted pending approval from the right-wing of Zentrum who rumors say have agreed to support it conditionally. ?]
+[? if weimar_support >= 25 and weimar_support <= 50 : 民主党已被说服:只要中央党采纳该计划,它也随之采纳;而中央党内部仍在辩论,无法得出结论。 ?] [? if weimar_support >= 50 and weimar_support <= 75 : 到目前为止,民主党已被说服采纳我们的计划,中央党方面也取得了重大进展,不过该党右翼仍在抵制这一构想。 ?] [? if weimar_support >= 75 and weimar_support <= 100 : 到目前为止,民主党与中央党的很大一部分已同意采纳我们的计划;在我们的盟友影响下,中央党右翼也变得愿意考虑该计划了。 ?] [? if weimar_support >= 100 : 到目前为止,民主党与中央党多数已同意支持我们的经济计划,一份共同纲领也已起草完毕,只待中央党右翼批准 —— 据传他们已同意有条件地支持它。 ?]
 
 @canvas_8
 view-if: spd_in_government == 0 and z_in_government == 1 and dvp_in_government == 1 and president == "Braun" and weimar_support < 100
@@ -101,9 +101,9 @@ choose-if: (neorevisionist_strength + (reformist_strength/2))-left_strength > 0
 unavailable-subtitle: 左翼绝不会允许这种事发生。
 on-arrival: weimar_support += ((10+unemployed+nsdap_r+kpd_r)/2)*(1-dissent)+((neorevisionist_strength+(reformist_strength/2))/5)-(left_strength/10)+((z_relation+ddp_relation)/15); left_strength -= 2; left_dissent += 4; kpd_relation -= 3; z_relation -= 2; dvp_relation -= 4
 
-We are attempting to convince Zentrum and the DDP to adopt our economic plan. The DVP is opposing our efforts and influencing Zentrum against the idea, making it significantly harder especially due to our position relative to the DVP. Pressure from President Braun has helped in our efforts to convince Zentrum and the DDP to adopt this plan. 
+我们正设法说服中央党与民主党采纳我们的经济计划。人民党在阻挠我们的努力,并影响中央党反对这一构想,使此事难上加难 —— 尤其考虑到我们相对于人民党的处境。Pressure from President Braun has helped in our efforts to convince Zentrum and the DDP to adopt this plan. 
 
-[? if weimar_support >= 25 and weimar_support <= 50 : The DDP has been convinced to adopt the plan should Zentrum do the same, while Zentrum still debates the suggestion internally, unable to reach a conclusion. ?] [? if weimar_support >= 50 and weimar_support <= 75 : So far, the DDP has been convinced to adopt our plan, and great progress has been made in doing the same for Zentrum, though the right-wing of their party continues to resist the idea. ?] [? if weimar_support >= 75 and weimar_support <= 100 : So far, the DDP and a large portion of Zentrum have agreed to adopt our plan, and under influence from our allies the right-wing of Zentrum has become willing to consider the plan. ?] [? if weimar_support >= 100 : So far, the DDP and a majority in Zentrum have agreed to support our economic plan, and a shared programme has been drafted pending approval from the right-wing of Zentrum who rumors say have agreed to support it conditionally. ?]
+[? if weimar_support >= 25 and weimar_support <= 50 : 民主党已被说服:只要中央党采纳该计划,它也随之采纳;而中央党内部仍在辩论,无法得出结论。 ?] [? if weimar_support >= 50 and weimar_support <= 75 : 到目前为止,民主党已被说服采纳我们的计划,中央党方面也取得了重大进展,不过该党右翼仍在抵制这一构想。 ?] [? if weimar_support >= 75 and weimar_support <= 100 : 到目前为止,民主党与中央党的很大一部分已同意采纳我们的计划;在我们的盟友影响下,中央党右翼也变得愿意考虑该计划了。 ?] [? if weimar_support >= 100 : 到目前为止,民主党与中央党多数已同意支持我们的经济计划,一份共同纲领也已起草完毕,只待中央党右翼批准 —— 据传他们已同意有条件地支持它。 ?]
 
 @canvas_9
 view-if: in_emergency_government == 1 and president == "Braun" and weimar_support < 100
@@ -111,20 +111,20 @@ choose-if: (neorevisionist_strength + (reformist_strength/2))-left_strength > 0
 unavailable-subtitle: 左翼绝不会允许这种事发生。
 on-arrival: weimar_support += (10+unemployed+nsdap_r+kpd_r)*(1-dissent)+((neorevisionist_strength+(reformist_strength/2))/5)-(left_strength/10)+((z_relation+ddp_relation)/4); left_strength -= 2; left_dissent += 4; kpd_relation -= 3; dvp_relation -= 3
 
-We are attempting to convince Zentrum and the DDP to adopt our economic plan. Pressure from President Braun has helped in our efforts to convince Zentrum and the DDP to adopt this plan. 
+我们正设法说服中央党与民主党采纳我们的经济计划。布劳恩总统的施压有助于我们说服中央党与民主党采纳这一计划。
 
-[? if weimar_support >= 25 and weimar_support <= 50 : The DDP has been convinced to adopt the plan should Zentrum do the same, while Zentrum still debates the suggestion internally, unable to reach a conclusion. ?] [? if weimar_support >= 50 and weimar_support <= 75 : So far, the DDP has been convinced to adopt our plan, and great progress has been made in doing the same for Zentrum, though the right-wing of their party continues to resist the idea. ?] [? if weimar_support >= 75 and weimar_support <= 100 : So far, the DDP and a large portion of Zentrum have agreed to adopt our plan, and under influence from our allies the right-wing of Zentrum has become willing to consider the plan. ?] [? if weimar_support >= 100 : So far, the DDP and a majority in Zentrum have agreed to support our economic plan, and a shared programme has been drafted pending approval from the right-wing of Zentrum who rumors say have agreed to support it conditionally. ?]
+[? if weimar_support >= 25 and weimar_support <= 50 : 民主党已被说服:只要中央党采纳该计划,它也随之采纳;而中央党内部仍在辩论,无法得出结论。 ?] [? if weimar_support >= 50 and weimar_support <= 75 : 到目前为止,民主党已被说服采纳我们的计划,中央党方面也取得了重大进展,不过该党右翼仍在抵制这一构想。 ?] [? if weimar_support >= 75 and weimar_support <= 100 : 到目前为止,民主党与中央党的很大一部分已同意采纳我们的计划;在我们的盟友影响下,中央党右翼也变得愿意考虑该计划了。 ?] [? if weimar_support >= 100 : 到目前为止,民主党与中央党多数已同意支持我们的经济计划,一份共同纲领也已起草完毕,只待中央党右翼批准 —— 据传他们已同意有条件地支持它。 ?]
 
 @adopt_1
 view-if: weimar_support >= 100 and z_party_leader == "Joos"
 on-arrival: weimar_plan_adopted = 1; moderate_plan_support += 1; workers_spd += ((4*(1-dissent))*(pro_republic/100)); unemployed_spd += ((3*(1-dissent))*(pro_republic/100)); rural_spd += ((3*(1-dissent))*(pro_republic/100)); new_middle_spd += ((3*(1-dissent))*(pro_republic/100)); old_middle_spd += ((3*(1-dissent))*(pro_republic/100)); workers_ddp += 2*(pro_republic/100); unemployed_nsdap -= 2*(pro_republic/100); unemployed_kpd -= 2*(pro_republic/100); rural_z += 3*(pro_republic/100); new_middle_ddp += 3*(pro_republic/100); old_middle_ddp += 2*(pro_republic/100); old_middle_z += 2*(pro_republic/100); peoples_party_support += 1; neorevisionist_strength += 5; left_strength -= 5; left_dissent += 5; kpd_relation -= 10; pro_republic += 10*(((z_relation + ddp_relation)/2)/100)
 
-We have finally convinced Zentrum and the DDP to adopt our economic plan and hold a rally between our parties on its behalf. [? if pro_republic < 40 : Such a show of democratic solidarity bolsters republican forces, but as extremist and anti-democratic rhetoric has recently entered the mainstream, many who hear our message remain unconvinced, and many on the Left of the party even criticize the rally and our alignment with the bourgeois parties. ?] [? if pro_republic < 60 and pro_republic > 40 : Such a show of democratic solidarity bolsters republican forces, helping match the now prevalent anti-democratic rhetoric from the far-left and far-right, though many on the Left oppose our decision to align with the bourgeois parties. ?] [? if pro_republic > 60 : Such a show of democratic solidarity has greatly bolstered republican forces, helping combat the increasingly prevalent anti-democratic rhetoric from the far-left and far-right. Nevertheless, some on the Left of the party still oppose our alignment with the bourgeois parties. ?]
+我们终于说服中央党与民主党采纳我们的经济计划,并为此在我们两党之间举行一场集会。[? if pro_republic < 40 : 这样一场民主团结的展示壮大了共和派的力量;但由于极端主义与反民主的言论近来已进入主流,许多听到我们讯息的人仍不为所动,党内左翼的许多人甚至批评这场集会以及我们与资产阶级政党的结盟。 ?] [? if pro_republic < 60 and pro_republic > 40 : 这样一场民主团结的展示壮大了共和派的力量,有助于与极左和极右如今盛行的反民主言论相抗衡,不过左翼许多人反对我们与资产阶级政党结盟的决定。 ?] [? if pro_republic > 60 : 这样一场民主团结的展示极大地壮大了共和派的力量,有助于对抗极左与极右日益盛行的反民主言论。尽管如此,党内左翼的一些人仍反对我们与资产阶级政党的结盟。 ?]
 
 @adopt_2 
 view-if: weimar_support >= 100 and z_party_leader != "Joos"
 
-We have made great progress in convincing Zentrum and the DDP to adopt our economic plan, and the right-wing of Zentrum is finally willing to agree, but desire concessions first.
+我们在说服中央党与民主党采纳经济计划方面已取得重大进展,中央党的右翼终于愿意同意,但希望先得到一些让步。
 
 - @promise_them_cuts: 同意资产阶级削减福利的计划。
 - @use_our_relationship: 动用我们的关系来说动他们。
@@ -175,10 +175,10 @@ on-arrival: weimar_rejected = 1; neorevisionist_strength -= 5; neorevisionist_di
 @delay_decision
 view-if: weimar_support == 0
 
-It is too soon to decide whether or not to attempt this so-called Weimar Plan or not. By delaying a decision we avoid offending any factions and can wait for more information that would help in deciding.
+现在就决定是否尝试这个所谓的魏玛计划还为时过早。推迟决定可以让我们不得罪任何派系,并能等待更多有助于决策的信息。
 
 @delay_continuation
 view-if: weimar_support > 0
 on-arrival: neorevisionist_dissent += 2; neorevisionist_strength -= 1; weimar_support -= left_strength 
 
-We have chosen to postpone our canvassing efforts for the time being[? if left_strength > neorevisionist_strength + (reformist_strength/2) : , due to invigorated opposition from the Left ?]. Only time will tell if this is a temporary change in policy or a permanent abandonment of the Weimar Plan. 
+我们选择暂时推迟宣传努力[? if left_strength > neorevisionist_strength + (reformist_strength/2) : ,因为左翼的反对势头增强 ?]。这究竟是政策的暂时转变,还是永久放弃魏玛计划,只有时间能给出答案。

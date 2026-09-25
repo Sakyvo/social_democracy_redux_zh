@@ -9,13 +9,13 @@ go-to: spd_foreign if foreign_minister_party == "SPD"; kpd_foreign if foreign_mi
 
 = 新的奥地利国家
 
-Since taking over Austria in the power vacuum left by the February Fights, Hitler has consolidated his position in the country as best as he can. Now, seeking to begin drastic progress towards his aims, he unveils his plans for the new Austrian state, even as embargoes from the Entente powers impoverish his nation.
+自二月斗争留下的权力真空中接管奥地利以来,希特勒已尽其所能巩固了自己在该国的地位。如今,为着手大踏步迈向他的目标,他公布了关于这个新奥地利国家的计划 —— 即便协约国列强的禁运正让他的国家日益贫困。
 
-Alongside comprehensive domestic reforms, he has turned his eyes abroad. [? if eu : After first withdrawing his country from the European Union, he ?][? if not eu : He ?]has turned his sights to Germany, seeking closer ties towards the eventual goal of unification, something that the Entente powers remain staunchly opposed to.
+除了全面的国内改革,他还把目光投向国外。[? if eu : 他先让本国退出了欧洲联盟,然后 ?][? if not eu : 他 ?]把目光投向德国,寻求更紧密的关系,以迈向最终统一的目标 —— 而协约国列强对此坚决反对。
 
 @spd_foreign
 
-Given our control over the Foreign Ministry, negotiations are sure to be awkward. The bourgeois parties would want us to separate our antifascist principles from foreign policy here in the interests of German national interests, but, while many in our party are also enthusiastic about unification, they would not take kindly to collaboration with the man we deported precisely to get out of the picture.
+鉴于我们掌控着外交部,谈判必然尴尬。资产阶级政党希望我们在此以德意志民族利益为重,把反法西斯原则与外交政策分开;然而,尽管我党许多人也对统一满怀热情,他们却不会乐意与我们当初特意驱逐出境、以让其出局的那个人合作。
 
 首要问题在于是否承认他的政府。若不这样做,谈判便完全无从谈起。
 
@@ -26,9 +26,9 @@ Given our control over the Foreign Ministry, negotiations are sure to be awkward
 subtitle: 这会让我们的奥地利同志以及国内无数人不满。
 on-arrival: hitler_recognized = 1; left_dissent += 15; center_dissent += 10; reformist_dissent += 5; neorevisionist_dissent += 15; workers_spd -= 5; workers_kpd += 2; workers_sapd += 2 if sapd_consolidated; west_relation -= 1; east_relation -= 1; soviet_relation -= 1; workers_nsdap += 2; new_middle_nsdap += 3; old_middle_nsdap += 4; rural_nsdap += 4; unemployed_nsdap += 3; nationalism += 5; pro_republic -= 3
 
-There is no point in continuing to fight the fact of the matter, which, albeit regretful, is that Hitler now rules Austria. We will have to conduct business with this state eventually, especially if we wish to represent all Germans, even those in Austria.
+继续与事实抗争毫无意义 —— 尽管令人遗憾,但事实就是希特勒如今统治着奥地利。我们终究不得不与这个国家打交道,尤其若我们想代表全体德意志人,包括奥地利境内的那些。
 
-This development is, however, a great victory for the new Austrian ruler. We have legitimized his rule by being the first government to recognize it. In the end, it would have likely happened eventually, anyway, but we can't discount our contributions. Hopefully, the sacrifice will be worth it.
+然而,这一事态对新任奥地利统治者而言是一场大胜。我们作为第一个承认其统治的政府,使他的统治获得了合法性。到头来,这大概早晚都会发生,但我们不能否认自己的「功劳」。但愿这番牺牲是值得的。
 
 - @customs_union: 希特勒提议建立关税同盟。
 - @alliance: 希特勒提议结盟。
@@ -37,7 +37,7 @@ This development is, however, a great victory for the new Austrian ruler. We hav
 subtitle: 这会让德国民族主义者与资产阶级政党不满。
 on-arrival: recognition_withheld = 1; coup_progress += 1; coup_progress += 1 if nationalism >= 60; vienna_influence += 2; z_relation -= 5*(nationalism/100); ddp_relation -= 5*(nationalism/100); hindenburg_angry += 25 if president == "Hindenburg"; coalition_dissent += 1; dvp_relation -= 10*(nationalism/100); coalition_dissent += 1 if nationalism >= 75; coalition_dissent += 1 if in_grand_coalition
 
-We as principled antifascists can never sanction (except economically) a hostile takeover of a neighboring German state by the same fascists we fought tooth and nail to keep at bay here. We will not compromise on our principles and abandon our Austrian friends to Nazism. We must withhold recognition of this government indefinitely until it collapses as the isolated entity it is.
+作为有原则的反法西斯主义者,我们绝不能为那些我们曾竭力在本国抵御的法西斯分子对邻邦德意志国家的敌意接管背书(经济上的制裁除外)。我们不会拿原则做交易,把奥地利的友人弃于纳粹主义之下。我们必须无限期地拒绝承认这个政府,直到它作为一个孤立实体自行崩溃。
 
 然而,这一决定在民族主义与资产阶级右翼中大体上不受欢迎,他们攻击我们冷落奥地利、破坏德意志统一。 It seems they are too single-minded to realize that it is not German unity we are opposing but Hitler, the same man who would have done the same here as he is doing now in Austria if not for our efforts. When will they ever learn?
 
@@ -48,11 +48,11 @@ We as principled antifascists can never sanction (except economically) a hostile
 subtitle: 虽然有效,但这*真的*会疏远民族主义与资产阶级右翼。
 on-arrival: austria_sanctioned = 1; coup_progress += 2; coup_progress += 1 if nationalism >= 50; vienna_influence += 4; west_relation += 1; east_relation += 1; reichswehr_loyalty -= 0.1*(nationalism/100); coup_progress += 1 if nationalism >= 65; unemployed += 0.3; inflation += 0.5; economic_growth -= 0.2; workers_spd -= 2*(nationalism/100); new_middle_spd -= 4*(nationalism/100); old_middle_spd -= 6*(nationalism/100); rural_spd -= 6*(nationalism/100); unemployed_spd -= 3*(nationalism/100); coalition_dissent += 1; new_middle_nsdap += 3*(nationalism/100); old_middle_nsdap += 3*(nationalism/100); rural_nsdap += 3*(nationalism/100); z_relation -= 6*(nationalism/100); ddp_relation -= 6*(nationalism/100); dvp_relation -= 15*(nationalism/100); coalition_dissent += 1 if in_grand_coalition
 
-We have decided to place economic sanctions on Austria. This decision is sure to hurt Hitler hard, though it is also doing well to mobilize the nationalist right against us in one big tide of solidarity for Hitler and Austria.
+我们决定对奥地利实施经济制裁。这一决定必然会给希特勒以重创,但也很好地动员了民族主义右翼来反对我们,形成一股支持希特勒与奥地利的团结大潮。
 
 @enough
 
-We have done enough now.
+我们现在做得够多了。
 
 @kpd_foreign
 
@@ -61,7 +61,7 @@ WIP.
 @customs_union
 view-if: not customs_union
 
-Hitler has revived the idea of a German-Austrian customs union as a step towards eventual unification. While a popular proposal, it is also plain to see it would be overwhelmingly to his benefit, given the total isolation of Austria right now. Some worry it might even singlehandedly allow it to consolidate where it might otherwise collapse shortly.
+希特勒重提奥德关税同盟的构想,作为迈向最终统一的步骤。这一提议虽受欢迎,但也显而易见:鉴于奥地利目前完全孤立,它将压倒性地有利于希特勒。有人担心,它甚至可能仅凭一己之力让那个本可能很快崩溃的政权站稳脚跟。
 
 遗憾的是,资产阶级政党中许多人对此热衷 —— 毕竟他们过去就一直在推动此事。
 
@@ -73,17 +73,17 @@ choose-if: left_strength+neorevisionist_strength < reformist_strength
 unavailable-subtitle: 我党就是不愿意。
 on-arrival: hitler_accepted = 1; banking_crisis_timer = 2; west_relation -= 2; east_relation -= 2; customs_union = 1; left_dissent += 10; neorevisionist_dissent += 10; center_dissent += 5; nationalism += 5; pro_republic -= 5
 
-We have formed the customs union. The Entente powers are rapid to lodge their diplomatic protests, as are entire flanks of our party. Still, the Austrian people are brought closer to the German ones. Is the promise of national unity worth it?
+我们已结成关税同盟。协约国列强迅速提出外交抗议,我党的整个侧翼亦然。不过,奥地利人民与德意志人民确实更近了。民族统一的许诺,值得吗?
 
 @no_we_wont
 on-arrival: dvp_relation -= 5; coalition_dissent += 1 if in_grand_coalition; new_middle_nsdap += 3*(nationalism/100); old_middle_nsdap += 3*(nationalism/100); rural_nsdap += 3*(nationalism/100); hitler_declined = 1
 
-The idea is, frankly, a step far too far. Just because we are willing to recognize the unchangeable fact that Hitler controls Austria now does not mean we will deal with him. 
+坦白说,这个想法太过分了。我们愿意承认希特勒如今控制着奥地利这一不可改变的事实,并不意味着我们会与他打交道。
 
 @alliance
 view-if: customs_union
 
-Hitler, building off of the existing customs union, has gone one step further to propose an alliance. Despite our past enmity within the German political sphere, he is willing to put aside petty political differences for the sake of German unity, or so he claims. In truth, he is more than likely just desparate for any opportunity to escape diplomatic isolation and maintain relevancy.
+希特勒在既有关税同盟的基础上更进一步,提议结盟。尽管我们过去在德国政坛上相互敌对,他却愿意为了德意志统一而搁置琐碎的政治分歧 —— 至少他如此宣称。事实上,他多半只是拼命想抓住任何机会摆脱外交孤立、维持自身的存在感。
 
 - @accept_alliance: 我们结这个盟。
 - @decline_alliance: 不,我们不结。
@@ -95,15 +95,15 @@ unavailable-subtitle: 多么荒唐的提议。
 @decline_alliance
 on-arrival: pro_republic += 2; alliance_declined = 1
 
-Yeah, that's never gonna happen. 
+是啊,那绝不可能。
 
 @bourgeois_foreign
 on-arrival: hitler_recognized = 1; west_relation -= 1; east_relation -= 1; workers_nsdap += 2; new_middle_nsdap += 3; old_middle_nsdap += 4; rural_nsdap += 4; unemployed_nsdap += 3; nationalism += 5; pro_republic -= 3
 go-to: toleration if spd_toleration; nothing_to_do if not spd_toleration
 
-The bourgeois parties conduct negotiations earnestly, naively championing that bygones be bygones in the name of pragmatic diplomacy and German unity. While many in our party are enthusiastic at the prospect, few would take that enthusiasm to the extent of collaborating with Hitler and defying the Entente.
+资产阶级政党一本正经地进行谈判,天真地以务实外交与德意志统一之名主张既往不咎。尽管我党许多人对这一前景满怀热情,却很少有人会把这份热情发展到与希特勒合作、公然违抗协约国的地步。
 
-The first issue is the matter of recognizing his government, as, without such, there would be no basis for negotiations at all. Unfortunately, the bourgeois parties do not hesitate to do so.
+首要问题在于承认他的政府 —— 若不如此,谈判便完全无从谈起。遗憾的是,资产阶级政党毫不迟疑地这样做了。
 
 @toleration
 
@@ -133,7 +133,7 @@ go-to: what_do_they_do
 @customs_union_bourgeois
 on-arrival: hitler_accepted = 1; banking_crisis_timer = 2; west_relation -= 2; east_relation -= 2; customs_union = 1; nationalism += 5; pro_republic -= 5
 
-In the following talks, a customs union is formed between Germany and Austria. The Entente powers are rapid to lodge their complaints, and Germany joins Austria in splendid diplomatic isolation while Austria is given the entire German market to sustain itself off of, directly enabling Hitler to continue ruling.
+在随后的谈判中,德国与奥地利结成了关税同盟。协约国列强迅速提出抗议,德国与奥地利一同陷入彻底的「光荣孤立」;而奥地利获得了整个德国市场以维持自身,这直接使希特勒得以继续统治下去。
 
 @nothing_to_do
 go-to: what_do_they_do
@@ -147,8 +147,8 @@ go-to: customs_union_bourgeois if not customs_union; negotiations_proceed if cus
 go-to: what_do_they_do
 on-arrival: left_dissent += 5; neorevisionist_dissent += 5; pro_republic -= 2
 
-By allowing the talks, many in our party fear we are enabling collaboration with Hitler. Nevertheless, what more can we do? We have very little influence on government policy.
+允许这场谈判,让我党许多人担心我们是在促成与希特勒的合作。然而,我们还能做些什么呢?我们对政府政策的影响微乎其微。
 
 @negotiations_proceed
 
-In the talks, no immediate conclusion is reached. From what we've heard, Hitler is pushing to escalate the existing customs union into a general alliance. We can only hope he is turned down.
+谈判中并未立即得出结论。据我们所闻,希特勒正力图把既有的关税同盟升级为全面结盟。我们只能希望他遭到回绝。

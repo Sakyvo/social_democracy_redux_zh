@@ -7,7 +7,7 @@ max-visits: 1
 go-to: economic_recovery if unemployed < 15; no_recovery if unemployed >= 15
 tags: event
 
-= London Economic Conference
+= 伦敦经济会议
 
 # TODO: if you've recovered, you get economic recovery
 # if you haven't recovered, you can either support Roosevelt or support the UK/France
@@ -41,10 +41,10 @@ title: 德国代表与英国、法国一同呼吁稳定货币。
 view-if: not spd_in_government
 on-arrival: west_relation += 1
 
-As expected, the conservative German bankers support Britain and France's plan to stabilize currency exchange rates. In response to the continued support for fixed currency exchange rates and the impasse on debts, the Americans pull out of the conference, leaving it with no agreements whatsoever.
+果不其然,conservative German bankers support Britain and France's plan to stabilize currency exchange rates. In response to the continued support for fixed currency exchange rates and the impasse on debts, the Americans pull out of the conference, leaving it with no agreements whatsoever.
 
 [? if unemployed >= 15 : 尽管如此,受益于罗斯福政府的经济刺激与更自由的贸易政策,世界经济正在缓慢好转。 ?]
-[? if unemployed < 15 : Nevertheless, the world economy is slowly improving due in part to the economic stimulus and more liberal trade policies of the Roosevelt administration as well as our own economic plan. ?]
+[? if unemployed < 15 : 不过,由于罗斯福政府的经济刺激与更自由的贸易政策,也由于我们自己的经济计划,世界经济正在缓慢好转。 ?]
 
 
 @support_roosevelt
@@ -93,4 +93,4 @@ view-if: spd_in_government
 The conference collapses, as expected. In response to the continued support for fixed currency exchange rates and the impasse on debts, the Americans pull out of the conference, leaving it with no agreements whatsoever.
 
 [? if unemployed >= 15 : 尽管如此,受益于罗斯福政府的经济刺激与更自由的贸易政策,世界经济正在缓慢好转。 ?]
-[? if unemployed < 15 : Nevertheless, the world economy is slowly improving due in part to the economic stimulus and more liberal trade policies of the Roosevelt administration as well as our own economic plan. ?]
+[? if unemployed < 15 : 不过,由于罗斯福政府的经济刺激与更自由的贸易政策,也由于我们自己的经济计划,世界经济正在缓慢好转。 ?]

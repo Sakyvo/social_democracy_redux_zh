@@ -6,7 +6,7 @@ max-visits: 1
 on-arrival: hitler_dead = 1; nazi_austria = 0; austria_civil_war = 1; pro_republic += 3; nationalism -= 2
 new-page: true
 
-= July Putsch in Austria
+= 奥地利七月政变
 
 Following the failure of Hitler's Austria to achieve diplomatic recognition, and its economic collapse under sanction from every Entente power and even Germany, Austrofascist rebels have attempted to seize back control. In a chaotic coup attempt, Hitler has been killed, while the rest of the country has been plunged into civil war.
 

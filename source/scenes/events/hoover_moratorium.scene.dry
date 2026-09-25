@@ -6,7 +6,7 @@ on-arrival: budget += 1; reparations_negotiation += 2; hoover_moratorium_seen = 
 tags: event
 max-visits: 1
 
-= Hoover Moratorium
+= 胡佛延期偿付
 
 In light of the current economic situation, and the German banking crisis, President Herbert Hoover of the United States has issued a moratorium on war debt payments from the Great War, including Germany's. Our budget situation should improve somewhat.
 

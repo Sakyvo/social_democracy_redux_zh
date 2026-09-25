@@ -5,7 +5,7 @@ tags: event
 new-page: true
 on-arrival: hitler_been_sacked = 1; chancellor = "Papen"; chancellor_party = "I"; next_election_month = month+2; next_election_year = year; next_election_year += 1 if next_election_month > 12; next_election_month -= 12 if next_election_month > 12; workers_nsdap *= 0.8; new_middle_nsdap *= 0.8; old_middle_nsdap *= 0.95; rural_nsdap *= 0.95; unemployed_nsdap *= 0.9; catholics_nsdap *= 0; sa_militancy -= 0.1; sa_strength -= 100; nazi_peak = 1; nazi_peak_timer = 2; nazi_peak_timer += (nsdap_votes/5); nazi_decline = 1; pro_republic += 5
 
-= Hitler Sacked
+= 希特勒被罢免
 
 A miracle; Hindenburg has sacked Hitler! The failure of his initial attempts to consolidate power thanks to our steadfast defense of Prussia has caused Hindenburg to turn on him, replacing him with former vice-chancellor, Papen. We aren't out of the woods yet, but the Nazi movement has tried and failed to capture power once now. This can only be good news.
 

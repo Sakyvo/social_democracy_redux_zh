@@ -4,22 +4,22 @@ on-arrival: kpd_goals_seen = 1; agriculture_goal = 1 if agriculture_minister_par
 new-page: true
 tags: event
 
-= KPD Goals
+= 共产党的目标
 
 The KPD presents us with a new list of goals for the coalition:
 
-[? if welfare_goal = 1 : - Expand social welfare programs. ?]
+[? if welfare_goal = 1 : - 扩大社会福利计划。 ?]
 
-[? if agriculture_goal = 1 : - Continue the land reform program. ?]
+[? if agriculture_goal = 1 : - 继续推进土地改革计划。 ?]
 
-[? if economy_goal = 1 : - Further nationalization of the economy. ?]
+[? if economy_goal = 1 : - 进一步推进经济国有化。 ?]
 
-[? if finance_goal = 1 : - Make taxes more progressive. ?]
+[? if finance_goal = 1 : - 让税制更具累进性。 ?]
 
-[? if labor_goal = 1 : - Continue to support workers in labor disputes. ?]
+[? if labor_goal = 1 : - 继续在劳资纠纷中支持工人。 ?]
 
-[? if foreign_goal = 1 : - Improve our relations with the Soviet Union. ?]
+[? if foreign_goal = 1 : - 改善我们与苏联的关系。 ?]
 
 #[? if interior_goal = 1 : - Ban the SA and Stahlhelm. ?]
 
-They say that they expect to see these goals fulfilled in [+ kpd_ultimatum_timer +] months. Otherwise, they will vote to dissolve the coalition.
+他们说,期望在 [+ kpd_ultimatum_timer +] 个月内看到这些目标实现。否则,他们将投票解散联盟。

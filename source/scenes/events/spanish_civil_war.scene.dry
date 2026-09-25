@@ -7,13 +7,13 @@ new-page: true
 go-to: govt_menu if foreign_minister_party != "SPD" and spd_in_government and foreign_minister_party != "KPD"; foreign_menu if foreign_minister_party = "SPD"; non_govt_menu if not spd_in_government; kpd_menu if foreign_minister_party = "KPD"
 on-arrival: spanish_civil_war = 1; republic_strength = 6; national_strength = 5; republic_strength -= 1 if third_period; republic_strength += 1 if z_relation >= 60; republic_strength += 1 if west_relation >= 5; national_strength += 1 if victory_republic; national_strength += 1 if not abysinnia; national_strength += 1 if reichswehr_loyalty <= 0.1; national_strength += 1 if nsdap_votes + dnvp_votes >= 35
 
-= Spanish Civil War
+= 西班牙内战
 
-A civil war has broken out in Spain after a failed coup attempt against the newly elected [? if third_period : left-leaning government. ?][? if not third_period : Popular Front government. ?] Workers' militias clash with rebellious armies across the nation as both sides attempt an increasingly unlikely quick victory over the other.
+西班牙在针对新当选的[? if third_period : 左倾政府 ?][? if not third_period : 人民阵线政府 ?]的一场未遂政变之后爆发了内战。工人民兵与叛军在各地交战,双方都试图迅速取胜,而这已愈发显得不可能。
 
 @govt_menu
 
-There is a broad consensus in our party in favor of sending aid to the Republicans, though this is complicated by the [+ foreign_minister_party +] Foreign Ministry, which plans to declare and commit to neutrality, as well as the fact that sending aid would be in violation of the Treaty of Versailles. We can try and persuade or pressure them to at the very least not commit to the French-proposed non-intervention pact, or allow them to go ahead with their plans.
+我党内就援助共和派存在广泛共识,但此事因 [+ foreign_minister_party +] 的外交部而变得复杂 —— 该部打算宣布并坚持中立;此外,提供援助还会违反《凡尔赛条约》。我们可以设法说服或施压外交部,至少让它不要承诺加入法国推动的不干涉协定,或者干脆任其按计划行事。
 
 - @pressure_foreign: 施压 [+ foreign_minister_party +],迫其改弦更张。
 - @allow_foreign: 容许缔结该协定。
@@ -24,7 +24,7 @@ go-to: dvp_foreign if foreign_minister_party == "DVP"; z_foreign if foreign_mini
 @dvp_foreign
 on-arrival: coalition_dissent += 1; dvp_relation -= 5
 
-The DVP is very reluctant to change their stance. The most they are willing to accept is to postpone the issue without signing onto the non-intervention pact.
+人民党极不愿改变立场。他们最多只肯接受推迟此议题,而不签署不干涉协定。
 
 - @persuade_dvp: 说服人民党推迟这一议题。
 - @collapse_govt: 无法接受。我们要搞垮这个政府,并要求举行新的选举。
@@ -35,17 +35,17 @@ choose-if: dvp_relation >= 45
 unavailable-subtitle: 人民党丝毫也不愿妥协。
 on-arrival: left_dissent += 3; new_middle_spd -= 1; republic_strength += 1 if not third_period
 
-We persuade a very reluctant DVP to accept the compromise of postponing, though this is unlikely to work as a long term solution. Let's hope the Republicans can survive in the meantime even without our help.
+我们说服了极其勉强的人民党接受推迟的妥协,尽管这作为长期方案恐怕行不通。但愿共和派在没有我们援助的情况下也能撑过这段时间。
 
 @collapse_govt
 on-arrival: spd_in_government = 0; in_grand_coalition = 0; in_weimar_coalition = 0; chancellor = "Brüning"; chancellor_party = "Z"; next_election_time = time + 3 if next_election_time > time+3; next_election_month = month + 3 if next_election_time >= time+3; next_election_year = year if next_election_time >= time+3; next_election_year += 1 if next_election_month > 12; next_election_month -= 12 if next_election_month > 12; spd_toleration = 0; left_strength += 6; pro_republic -= 4; reformist_dissent += 4
 
-Rather than accept anything less than full aid to the Republicans, we bring down the government. Perhaps by the next election we will be able to find a majority in favor.
+与其接受任何少于全面援助共和派的方案,我们宁可搞垮这个政府。或许到下次选举时,我们能找到赞成援助的多数。
 
 @z_foreign
 on-arrival: coalition_dissent += 1; z_relation -= 4; dvp_relation -= 2
 
-The Center Party is reluctant to change their stance, but we may be able to negotiate them into very reluctantly accepting aid to the Republicans, or a compromise of postponing the issue.
+中央党不愿改变立场,但我们或许能通过谈判,让他们极不情愿地接受援助共和派,或接受推迟此议题的妥协。
 
 - @demand_z: 施压中央党,迫其接受援助。
 - @persuade_z: 说服中央党推迟这一议题。
@@ -57,25 +57,25 @@ choose-if: z_party_leader == "Joos" and chancellor_party == "SPD" and z_relation
 unavailable-subtitle: 中间派 Party is unwilling to cave to our demands.
 on-arrival: coalition_dissent += 1; weimar_dissent += 3 if weimar_plan_adopted; budget -= 1; reichswehr_loyalty -= 0.05; spain_involved = 1; aid_level = 3; dvp_relation -= 5; z_relation -= 3; coup_progress += 1 if coup_progress >= 6; coup_progress += 1; left_dissent -= 4; west_relation -= 1; west_relation -= 1 if third_period; nationalism -= democratization; democratization += 1; pro_republic += 5; workers_spd += 2*(1-dissent); new_middle_spd += 2*(1-dissent); republic_strength += 1; republic_strength += 1 if not third_period
 
-We manage to persuade a very reluctant Center Party into allowing aid to the Republicans, though at great damage to our coalition. Let's hope this is enough to guarantee them a victory.
+我们成功说服了极为勉强的中央党,容许向共和派提供援助 —— 尽管这给我们的执政联盟造成了巨大损害。但愿这足以保证他们取得胜利。
 
 @persuade_z
 choose-if: z_relation >= 35
 unavailable-subtitle: 中间派 Party is unwilling to compromise in the slightest.
 on-arrival: left_dissent += 3; weimar_dissent += 1 if weimar_plan_adopted; new_middle_spd -= 1; republic_strength += 1 if not third_period; kpd_coalition_dissent += 1
 
-We persuade the Center Party into accepting the compromise of postponing the issue of aid. Let's hope the Republicans can survive in the meantime even without our help.
+我们说服中央党接受了推迟援助议题的妥协。但愿共和派在没有我们援助的情况下也能撑过这段时间。
 
 @allow_foreign
 on-arrival: non_intervention = 1; capital_strike_progress -= 0.5; coup_progress -= 0.5; west_relation += 1; left_dissent += 5; kpd_coalition_dissent += 2; kpd_relation -= 3; workers_spd -= 2; new_middle_spd -= 2; republic_strength -= 1; republic_strength += 1 if not third_period; national_strength -= 1 if abysinnia
 
-We allow the Foreign Ministry to go ahead with its plans to agree to the French-proposed non-intervention pact, angering the left flank of our party[? if in_popular_front : and the communists ?]. Let's just hope that Germany's refusal to support the Republicans does not win the Nationalists the war.
+我们任凭外交部按计划同意那项法国推动的不干涉协定,这激怒了我党左翼[? if in_popular_front : 与共产党人 ?]。但愿德国对共和派的不支持,不会把这场战争送给国民派。
 
 @foreign_menu
 
-Many in our party are calling for us to send military aid to the Republicans. However, such an action would be a direct violation of the Treaty of Versailles and may strain our relations with France.
+我党许多人呼吁向共和派提供军事援助。然而,此举将直接违反《凡尔赛条约》,并可能使我们与法国的关系紧张。
 
-[? if in_popular_front or in_left_front : The KPD supports sending aid to the communists [? if in_popular_front : though the Center Party is opposed. ?] ?][? if in_weimar_coalition: The Center Party is opposed to sending aid. ?][? if in_grand_coalition : The Center Party and the DVP are opposed to sending aid. ?]
+[? if in_popular_front or in_left_front : 共产党支持向西班牙共产党人提供援助[? if in_popular_front : ,尽管中央党反对。 ?] ?][? if in_weimar_coalition: 中央党反对提供援助。 ?][? if in_grand_coalition : 中央党与人民党反对提供援助。 ?]
 
 - @aid: 向共和派提供援助。
 - @neutrality: 我们将保持中立,至少眼下如此。
@@ -87,24 +87,24 @@ choose-if: budget >= 1
 unavailable-subtitle: -1 财政预算。我们没有可腾挪的预算,但此事随时可以日后再议。
 on-arrival: budget -= 1; reichswehr_loyalty -= 0.05; spain_involved = 1; aid_level = 3; weimar_dissent += 3 if weimar_plan_adopted; coalition_dissent += 1; coalition_dissent += 1 if z_party_leader == "Kaas"; coalition_dissent += 1 if in_grand_coalition; dvp_relation -= 5; z_relation -= 3; coup_progress += 1 if coup_progress >= 5; coup_progress += 1; left_dissent -= 5; west_relation -= 1; west_relation -= 1 if third_period; nationalism -= democratization; democratization += 1; pro_republic += 5; workers_spd += 3*(1-dissent); new_middle_spd += 2*(1-dissent); republic_strength += 1; republic_strength += 1 if not third_period
 
-We go ahead with our plans to send aid to the Spanish Republicans, upsetting our bourgeois coalition partners and France but pleasing the left flank of our party. Let's hope its enough to win their war and stop the further spread of fascism.
+我们推行了向西班牙共和派提供援助的计划,这惹恼了我们的资产阶级执政伙伴与法国,却取悦了我党左翼。但愿这足以让他们赢得战争,阻止法西斯主义的进一步蔓延。
 
 @neutrality
 subtitle: 我们不会介入 —— 至少现在还不会。
 on-arrival: left_dissent += 3; new_middle_spd -= 1; kpd_coalition_dissent += 1; z_relation += 2; republic_strength += 1 if not third_period
 
-Whether it be by choice or being unable, we do not send aid to the Republicans. This decision is well received by our bourgeois partners, but criticized by [? if in_popular_front or in_left_front : our communist coalition partners as well as ?] the Left of our party.
+无论是出于自主选择还是无能为力,我们都没有向共和派提供援助。这一决定受到资产阶级伙伴的欢迎,却遭到[? if in_popular_front or in_left_front : 我们的共产党执政伙伴以及 ?]我党左翼的批评。
 
 @nonintervention
 subtitle: 我们将完全保持中立。
 on-arrival: nonintervention = 1; capital_strike_progress -= 1; coup_progress -= 1; west_relation += 1; left_dissent += 7; z_relation += 5; dvp_relation += 4; coalition_dissent -= 1; kpd_coalition_dissent += 2; kpd_relation -= 4; workers_spd -= 2; new_middle_spd -= 2; republic_strength -= 1; republic_strength += 1 if not third_period; national_strength -= 1 if abysinnia
 
-Rather than involve ourselves, we sign the French proposed non-intervention pact, pledging neutrality in the Spanish Civil War. This move is highly criticized by the Left of our party and the communists, but is met with approval abroad and from our bourgeois allies. Let's just hope that our refusal to support the Republicans does not win the Nationalists the war.
+我们没有介入,而是签署了法国推动的不干涉协定,承诺在西班牙内战中保持中立。此举受到我党左翼与共产党人的强烈批评,却得到国外及我们资产阶级盟友的赞同。但愿我们对共和派的不支持,不会把这场战争送给国民派。
 
 @non_govt_menu
 on-arrival: nonintervention = 1; spd_intervention = 1; west_relation += 1; republic_strength -= 1; republic_strength += 1 if not third_period; national_strength -= 1 if abysinnia
 
-There is a broad consensus in our party in favor of sending aid to the Republicans despite the restrictions on sending military aid in the treaty of Versailles. The government however has pulled Germany into the French non-intervention pact.
+尽管《凡尔赛条约》对提供军事援助有所限制,我党内仍就援助共和派存在广泛共识。然而政府已把德国拉入了法国的不干涉协定。
 
 - @nothing_to_do: 我们无能为力。
 - @break_toleration: 我们将结束容忍,搞垮这个政府。
@@ -112,20 +112,20 @@ There is a broad consensus in our party in favor of sending aid to the Republica
 @nothing_to_do
 on-arrival: left_dissent += 5 if spd_toleration; new_middle_spd -= 1 if spd_toleration;
 
-As we are not in government, there is nothing we can really do to prevent this. Let's hope that the Republicans can hold their own.
+由于我们不在政府之中,实在无力阻止此事。但愿共和派能自己顶住。
 
 @break_toleration
 subtitle: 这可能会导致新的选举。
 view-if: spd_toleration == 1
 on-arrival: next_election_time = time+3 if next_election_time >= time+3; next_election_month = month + 3 if next_election_time >= time+3; next_election_year = year if next_election_time >= time+3; next_election_year += 1 if next_election_month > 12; next_election_month -= 12 if next_election_month > 12; spd_in_government = 0; in_grand_coalition = 0; spd_toleration = 0; weimar_dissent += 1 if weimar_plan_adopted
 
-We have definitively broken with the [+ chancellor +] government, and have voted against them in a vote of no confidence.
+我们已与 [+ chancellor +] 政府彻底决裂,并在不信任投票中投了他们的反对票。
 
 新的选举已定于 [+ next_election_month : month +] [+ next_election_year +]。
 
 @kpd_menu
 
-Many in our party are calling for us to send military aid to the Republicans. The Communists, whom we govern with and whom control the Foreign Ministry, plan to send military aid to Spain, as do the Soviets.
+我党许多人呼吁向共和派提供军事援助。与我们联合执政、并掌控外交部的共产党人计划向西班牙提供军事援助,苏联亦如此。
 
 - @foreign_support: 好,我们支持向共和派提供援助。
 - @foreign_oppose: 不,这必须制止。
@@ -133,12 +133,12 @@ Many in our party are calling for us to send military aid to the Republicans. Th
 @foreign_support
 on-arrival: budget -= 1; reichswehr_loyalty -= 0.05; spain_involved = 1; aid_level = 3; left_dissent -= 4; dvp_relation -= 4; z_relation -= 2; coup_progress += 1 if coup_progress >= 4; coup_progress += 1; west_relation -= 1; soviet_relation += 1; nationalism -= democratization; democratization += 1; pro_republic += 3; socialism += 2; workers_spd += 2*(1-dissent); new_middle_spd += 1*(1-dissent); workers_kpd += 2; republic_strength += 2
 
-We support the KPD's sending of military aid to the Republicans, and allow it to take place. Republican forces are bolstered, though the aid disproportionately goes to the socialists, and most of all the PCE.
+我们支持共产党向共和派提供军事援助,并容许其付诸实施。共和派的力量得到增强,不过这些援助不成比例地流向了社会主义者,其中又以西班牙共产党为最。
 
 @foreign_oppose
 on-arrival: kpd_coalition_dissent += 1; kpd_relation -= 5; left_dissent += 5; new_middle_spd -= 1; z_relation += 2; republic_strength += 1
 
-We block the planned sending of aid to the Republicans, disappointing the Communists, as well as the Left flank of our party. 
+我们阻止了计划中对共和派的援助,令共产党人以及我党左翼失望。
 
 # todo: may days in barcelona event
 

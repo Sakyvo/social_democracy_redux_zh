@@ -6,6 +6,6 @@ on-arrival: time_to_election = 3; ddp_toleration = 0; new_middle_spd -= 5; new_m
 new-page: true
 call: set_next_election_time
 
-= The [+ ddp_name +] loses confidence
+= [+ ddp_name +] 失去了信任
 
 自上次选举以来,我们一直以社民党单独政府的形式执政。然而,我们一直依靠 [+ ddp_name +] 提供信任与供给支持。今天,我们失去了它。 新的选举已定于 [+ next_election_month : month +] [+ next_election_year +]。

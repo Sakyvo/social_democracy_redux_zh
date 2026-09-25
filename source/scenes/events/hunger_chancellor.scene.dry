@@ -6,7 +6,7 @@ on-arrival: workers_spd *= 0.9 if chancellor_party == "SPD"; workers_spd *= 0.9 
 tags: event
 max-visits: 1
 
-= The Hunger Chancellor
+= 饥饿总理
 
 People are calling Chancellor [+ chancellor +] the Hunger Chancellor because of his perceived callousness in the face of the depression. [? if chancellor_party == "SPD" : This is obviously a very bad sign for us. ?]
 
@@ -28,6 +28,6 @@ subtitle: 这可能会导致新的选举。
 view-if: spd_toleration == 1
 on-arrival: next_election_time = time+3 if next_election_time >= time+3; next_election_month = month + 3 if next_election_time >= time+3; next_election_year = year if next_election_time >= time+3; next_election_year += 1 if next_election_month > 12; next_election_month -= 12 if next_election_month > 12; spd_in_government = 0; in_grand_coalition = 0; spd_toleration = 0; weimar_dissent += 1 if weimar_plan_adopted
 
-We have definitively broken with the [+ chancellor +] government, and have voted against them in a vote of no confidence.
+我们已与 [+ chancellor +] 政府彻底决裂,并在不信任投票中投了他们的反对票。
 
 新的选举已定于 [+ next_election_month : month +] [+ next_election_year +]。

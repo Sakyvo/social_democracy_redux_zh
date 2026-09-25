@@ -6,6 +6,6 @@ new-page: true
 max-visits: 1
 #tags: event
 
-= Global Economic Recovery
+= 全球经济复苏
 
 Finally, countries across the world seem to be recovering from the worst effects of the Great Depression. It is an uneven recovery, but we seem to be exiting the worst period of crisis. [? if unemployed >= 10: Our unemployment has fallen. ?]

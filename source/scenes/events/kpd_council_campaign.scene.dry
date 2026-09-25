@@ -6,7 +6,7 @@ max-visits: 1
 tags: event
 on-arrival: red_banner = 1; workers_kpd += 4; unemployed_kpd += 8; rfb_strength += 50; socialism += 5
 
-= Red Banners Across Germany
+= 红旗遍德国
 
 With our transition into a Soviet Republic, the Communists have surged in popularity, organizing through the councils to propel themselves into the spotlight. Where the ADGB does not have an assured majority, it is increasingly common for the Communists to win. 
 

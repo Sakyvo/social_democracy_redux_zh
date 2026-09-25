@@ -277,7 +277,7 @@ if (window && d3) {
 !}
 go-to: coalition_menu
 
-= Election results
+= 选举结果
 
 {!<svg id="reichstag" style="width: 500px; height: 250px;"> </svg>!}
 

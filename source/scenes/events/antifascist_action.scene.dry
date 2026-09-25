@@ -5,7 +5,7 @@ tags: event
 view-if: communist_coalition >= 3 and kpd_relation >= 50 and nazi_urgency >= 2 and left_strength >= 50 and black_brown_seen = 1 and not spd_toleration
 max-visits: 1
 
-= A United Front Against Fascism
+= 反法西斯统一战线
 
 As the bourgeois voters and industrialists flock to the Nazis following the recent instability and the republic, with Brüning and the Center Party even considering turning to the Nazis for support before negotiations fell apart, the KPD, with whom we have made mends with, proposes the formation of a "united front". [? if iron_front_formed : This would include the already existing Iron Front, but expanded to include KPD-affiliate organizations as well as a joint plan of action. ?]
 

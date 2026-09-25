@@ -26,12 +26,12 @@ The regional SPD branch refuses to provide toleration to a bourgeois government,
 @based
 on-arrival: left_strength += 5; left_dissent -= 10; reformist_dissent += 5; center_dissent += 5
 
-We take the Thuringian SPD's side, upsetting the reformists and centrists.
+我们站在图林根社民党一边,这惹恼了改良派与中间派。
 
 @cringe
 on-arrival: left_dissent += 10; left_strength -= 5; reformist_dissent -= 10; center_dissent -= 5
 
-We oppose this anti-toleration stance the Thuringian SPD has taken, assuaging the concerns of our reformists but upsetting the left.
+我们反对图林根社民党采取的这种反容忍立场,这安抚了改良派的担忧,却惹恼了左翼。
 
 @toleration
 on-arrival: thuringeration_timer = 10-(left_strength/10); thuringia_spd -= 0.05; thuringia_toleration = 1; thuringia_kpd += 0.05; left_dissent += 3

@@ -7,7 +7,7 @@ tags: event
 on-arrival: time_to_election = 3; dnvp_in_government = 0; in_right_coalition = 0
 call: set_next_election_time
 
-= Fall of the [? if chancellor == "Marx" : Marx IV ?][? if chancellor == "Brüning" : Brüning II ?] Government
+= [? if chancellor == "Marx" : 马克思第四届 ?][? if chancellor == "Brüning" : 布吕宁第二届 ?] 政府的倒台
 
 The cabinet of [? if chancellor == "Marx" : Wilhelm Marx ?][? if chancellor == "Brüning" : Heinrich Brüning ?] has finally collapsed in a dispute over school law, with the coalition unable to agree on one due to the concerns of the DVP's more secular wing.
 

@@ -333,7 +333,7 @@ if (window && d3) {
 !}
 go-to: coalition_menu if not vonc_formed; coalition_vonc if vonc_formed
 
-= Election results
+= 选举结果
 
 {!<svg id="reichstag" style="width: 500px; height: 250px;"> </svg>!}
 
@@ -389,7 +389,7 @@ go-to: coalition_menu if not vonc_formed; coalition_vonc if vonc_formed
 @vonc_coalition
 on-arrival: in_vonc_coalition = 1; spd_in_government = 1; in_spd_majority = 1; 
 
-As expected, the 
+果不其然,
 
 - @braun_majority_chancellor: 由奥托·布劳恩出任总理。
 - @breitscheid_majority_chancellor: 由鲁道夫·布赖特沙伊德出任总理。
@@ -802,7 +802,7 @@ go-to: enabling_act_passed2 if fun_value < 100; time_travel if fun_value == 100
 
 尽管我们竭尽全力……授权法案仍以 [+ enabling_r +]% 的得票获得通过。[+ chancellor +] 拥有了近乎无限的权力,并将着手清除一切残存的障碍。
 
-Germany is lost.
+德国沦陷了。
 
 - @time_traveller: 游戏结……?
 
@@ -998,7 +998,7 @@ subtitle: [? if times_waited >= 6 : 他们怎么这么久? ?]
 [? if times_waited == 2 : 他们大概在照料希特勒的伤势。 ?]
 [? if times_waited == 3 : 等他们忙完就会过来。 ?]
 [? if times_waited == 4 : Probably. ?]
-[? if times_waited == 5 : I think so, anyway. ?]
+[? if times_waited == 5 : 反正我是这么想的。 ?]
 [? if times_waited == 6 : 我的意思是「我们」这么以为。抱歉。 ?]
 [? if times_waited == 7 : 这段本来该用第二人称写的。 ?]
 [? if times_waited == 8 : 大概随时就要破门而入了。 ?]
@@ -1013,8 +1013,8 @@ subtitle: [? if times_waited >= 6 : 他们怎么这么久? ?]
 [? if times_waited == 17 : ... ?]
 [? if times_waited == 18 : ... ?]
 [? if times_waited == 19 : 哈,吓到你了。你肯定以为专属台词已经结束了。 ?]
-[? if times_waited == 20 : Well, it didn't. ?]
-[? if times_waited == 21 : Never will. ?]
+[? if times_waited == 20 : 嗯,并没有。 ?]
+[? if times_waited == 21 : 永遠也不会。 ?]
 [? if times_waited == 22 : 好吧,大概真的快结束了。 ?]
 [? if times_waited == 23 : 是啊,一直敲这些挺累的。 ?]
 [? if times_waited == 24 : 我会弹吉他。 ?]
@@ -1035,7 +1035,7 @@ subtitle: [? if times_waited >= 6 : 他们怎么这么久? ?]
 [? if times_waited == 212 : Bye. ?]
 [? if times_waited > 213 and times_waited < 1000 : 这次真的再见了。 ?]
 [? if times_waited == 1000 : Psyche! ?]
-[? if times_waited >= 1001 : Not really. ?]
+[? if times_waited >= 1001 : 其实没有。 ?]
 
 - @wait: 等等。
 - @leave2: 好吧我们走吧
@@ -1075,7 +1075,7 @@ subtitle: 希特勒死了吗?
 
 尽管我们竭尽全力……授权法案仍以 [+ enabling_r +]% 的得票获得通过。[+ chancellor +] 拥有了近乎无限的权力,并将着手清除一切残存的障碍。
 
-Germany is lost.
+德国沦陷了。
 
 - @game_over: 游戏结束。
 - @fight_enabling: 我们仍能阻止希特勒!动员国旗团。

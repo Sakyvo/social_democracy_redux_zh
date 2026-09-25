@@ -1651,7 +1651,7 @@ KPD: [+ kpd_vote : vote_display +]
 
 [? if sapd_formed : SAPD: [+ sapd_vote : vote_display +] ?]
 
-SPD: [? if not spd_split : For ?][? if spd_split : Mixed ?]
+SPD: [? if not spd_split : 赞成 ?][? if spd_split : 意见不一 ?]
 
 [+ ddp_name +]: [+ ddp_vote : vote_display +]
 
@@ -1661,7 +1661,7 @@ BVP: [+ bvp_vote : vote_display +]
 
 DVP: [+ dvp_vote : vote_display +]
 
-Others: [? if not other_split : [+ other_vote : vote_display +] ?][? if other_split : Mixed ?]
+Others: [? if not other_split : [+ other_vote : vote_display +] ?][? if other_split : 意见不一 ?]
 
 DNVP: [+ dnvp_vote : vote_display +]
 
@@ -1718,7 +1718,7 @@ KPD: [+ kpd_vote : vote_display +]
 
 [? if sapd_formed : SAPD: [+ sapd_vote : vote_display +] ?]
 
-SPD: [? if not spd_split : For ?][? if spd_split : Mixed ?]
+SPD: [? if not spd_split : 赞成 ?][? if spd_split : 意见不一 ?]
 
 [+ ddp_name +]: [+ ddp_vote : vote_display +]
 
@@ -1728,10 +1728,10 @@ BVP: [+ bvp_vote : vote_display +]
 
 DVP: [+ dvp_vote : vote_display +]
 
-Others: [? if not other_split : [+ other_vote : vote_display +] ?][? if other_split : Mixed ?]
+Others: [? if not other_split : [+ other_vote : vote_display +] ?][? if other_split : 意见不一 ?]
 
 DNVP: [+ dnvp_vote : vote_display +]
 
 NSDAP: [+ nsdap_vote : vote_display +]
 
-With but [+ bill_support +]% in favor, the motion fails and is withdrawn.
+赞成票仅有 [+ bill_support +]%,该动议未获通过并被撤回。

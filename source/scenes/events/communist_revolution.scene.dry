@@ -22,11 +22,11 @@ if (Q.chancellor == "Groener") {
 }
 !}
 
-= [+ month : month +] Revolution
+= [+ month : month +] 革命
 
-Sick and tired of the [+ chancellor +] government and viewing it as the greatest obstacle to the victory of the working class, and further viewing the conditions favorable for the abolition of capitalism by a communist revolution, the KPD has seemingly commenced the revolutionary process. Out of nowhere one [+ month : month +] morning, a call to general strike is published while the RFB storms key infrastructure points across the country, attempting especially to secure control over arms with which to distribute to local workers. Streetfighting erupts as militias and police forces opposed to the communists attempt to put down their uprisings while further more expansive ones are launched across the country.
+共产党人厌倦了 [+ chancellor +] 政府,视其为工人阶级取得胜利的最大障碍,又认为当前条件有利于以共产主义革命废除资本主义,于是似乎已启动了革命进程。某个 [+ month : month +] 的早晨,一封总罢工的号召突然发表,同时红色前线战士同盟突袭全国的关键基础设施,尤其设法夺取武器的控制权,以便分发给本地工人。反对共产党的民兵与警察部队试图镇压他们的起事,而更大规模的起事又在各地展开,街头战斗随之爆发。
 
-Factories are occupied through an initiative of the communist trade unions, and RFB-backed worker councils formed within them. Local government offices are seized and occupied, leaving the inprompteau worker councils as the only form of governance, while within those councils KPD and RFB officials are elected to direct the ongoing revolution. 
+在共产党工会的倡议下,工厂被占领,红色前线战士同盟支持的工人委员会在其中成立。地方政府机关被夺取占领,临时成立的工人委员会成了唯一的治理形式;而在这些委员会内部,共产党与红色前线战士同盟的干部被选出来指挥正在进行的革命。
 
 - @spd_supports: 社民党站在革命一边!
 - @what: 这是疯狂!
@@ -37,18 +37,18 @@ unavailable-subtitle: 这是疯狂。
 on-arrival: spd_revolution = 1; kpd_relation += 100; z_relation -= 100; ddp_relation -= 100; dvp_relation -= 100; rb_strength *= (left_strength/100); communist_strength += (rb_force*(1-(left_strength/100)))/2; communist_strength += ((1-(labor_dissent/100))*normalized_workers_spd*(2 - unemployed/100)*2.5); reformist_dissent += 100; center_dissent += 50
 go-to: kpd_survival if communist_strength >= harzburg_strength; kpd_crushed if communist_strength < harzburg_strength
 
-We mobilize the Reichsbanner against the reactionary militias to defend the worker councils, and join the call to general strike. What's left of our party's right-wing leave, including the Reichsbanner. 
+我们动员国旗团对抗反动民兵,以保卫工人委员会,并响应总罢工的号召。我党右翼的残部就此退出,国旗团也不例外。
 
 @what
 go-to: kpd_survival if communist_strength >= harzburg_strength; kpd_crushed if communist_strength < harzburg_strength
 
 @kpd_survival
 
-The streetfighting in the streets reaches levels one would expect in a civil war before eventually, the communists seem to remain standing. Police stations are stormed across the country, red flags raised above while forces of the SA and Stalhelm driven out of the cities and into the countryside. Arms are distributed from seized armories to local radical workers, organized into a new fledgling Red Army with one task: the smashing of the German bourgeois state apparatus, and the defense of the councils.
+街头战斗的激烈程度达到了内战应有的水平;最终,共产党人似乎依然屹立。全国各地的警察局被攻占,红旗在其上高高升起,冲锋队与钢盔团的力量被逐出城市、赶入乡间。缴获的军械库中的武器被分发给本地的激进工人,编成一支新生的赤军,只有一个任务:砸碎德国资产阶级的国家机器,保卫各委员会。
 
-Reichswehr forces across the country are taken out of their barracks to quell the uprisings and restore order, only pre-empted in communist strongholds where barracks were stormed by local Red Army contingents. The failure of the bourgeois' first line of defense to suppress this revolutionary attempt has reinvigorated the communists' efforts.
+国防军在全国各地被调出营房,以镇压起事、恢复秩序 —— 只在共产党据点被抢先一步:那里的营房已被本地的赤军队伍突袭。资产阶级的第一道防线未能压下这场革命的尝试,这反倒让共产党人干劲更足。
 
-Now, the question on everyone's minds will be answered - can the communists defend against the full force of the state?
+如今,萦绕在每个人心头的问题即将得到回答 —— 共产党人能否抵挡国家机器的全力一击?
 
 - @defend_republic: 社民党站在共和国一边,反对这场「革命」!
 - @neutrality: 最好静待这场混乱过去。
@@ -61,7 +61,7 @@ unavailable-subtitle: 还有什么共和国可供保卫?
 on-arrival: left_dissent += 100; rb_strength *= (1-(left_strength/100)); harzburg_strength += (rb_force*(1-(left_strength/100)))/2; harzburg_strength += ((1-(labor_dissent/100))*normalized_workers_spd*(2 - unemployed/100)*2.5);
 go-to: kpd_vs_army
 
-The SPD stands with the republic and with democracy against this Moscow-sponsored anti-democratic criminal uprising. We shall mobilize every force at our disposal to defeat the communists.
+社民党站在共和国与民主一边,反对这场由莫斯科资助的、反民主的犯罪性起事。我们将动员一切可用的力量击败共产党人。
 
 @neutrality
 view-if: not spd_revolution
@@ -69,7 +69,7 @@ go-to: kpd_vs_army
 choose-if: not spd_in_government
 unavailable-subtitle: 共产党人正起来反对我们。我们别无选择,只能反击。
 
-By firmly taking a side we would split, as the communists want us to. We will wait the chaos out.
+若我们明确站队,就会如共产党人所愿那样造成分裂。我们将静待这场混乱过去。
 
 @kpd_vs_army
 view-if: spd_revolution
@@ -78,7 +78,7 @@ go-to: kpd_victory if communist_strength > harzburg_strength; kpd_beaten if harz
 
 @kpd_victory
 
-The answer seems to be yes, as, somehow, the Red Army drive the Reichswehr forces back into their barracks which are then besieged and occupied one by one. The flames of civil war have been ignited and the communists are prepared to fight this uphill battle to bring about the dictatorship of the proletariat they so desire.
+答案似乎是肯定的:不知怎的,赤军竟把国防军逼回了营房,随后将其逐一围困、占领。内战的火焰已被点燃,而共产党人已准备好打这场艰苦的逆风仗,去实现他们渴望的无产阶级专政。
 
 - @long_war: 战争陷入固定的战线对峙。
 - @true_kpd_victory: 共产党人取得胜利!
@@ -88,9 +88,9 @@ The answer seems to be yes, as, somehow, the Red Army drive the Reichswehr force
 view-if: not spd_revolution and (communist_strength*0.6) < harzburg_strength
 on-arrival: long_war = 1
 
-The initial phase of the action ends, and somehow, both sides remain standing.
+行动的第一阶段结束,不知怎的,双方都还撑着。
 
-This will not be a quick coup, but a long civil war. The nation will destroy itself before it can be rebuilt again.
+这不会是一场速决战式的政变,而是一场漫长的内战。这个国家将在能够重建之前先自我毁灭。
 
 - @game_over: 游戏结束。
 
@@ -99,7 +99,7 @@ view-if: not spd_revolution and (communist_strength*0.6) >= harzburg_strength
 on-arrival: capital_strike_progress += 50; works_councils += 3; economic_democracy += 3; time_to_election = 3; red_banner = 1; supreme_soviet = 1; workers_kpd += 25; new_middle_kpd += 10; unemployed_kpd += 25; president = "Thälmann"; nsdap_banned = 1; dne_banned = 1 if dne_formed; dne_reorganized = 0 if dne_reorganized; party_bans = 1; dnvp_banned = 1; dvp_banned = 1; other_banned = 1; ddp_banned = 1; z_banned = 1 if z_party_leader != "Joos"; sa_banned = 1; sh_banned = 1; constitutional_reform += 1; rfb_banned = 0; socialism += 25; chancellor = "Ulbricht"; chancellor_party = "KPD"; victory_republic = 1; unemployed_nsdap *= 0.2; new_middle_nsdap *= 0.3; old_middle_nsdap *= 0.4; workers_nsdap *= 0.2; rural_nsdap *= 0.5; old_middle_dnvp *= 0.4; rural_dnvp *= 0.5; new_middle_dnvp *= 0.2; sa_strength *= 0.2; sh_strength *= 0.2; sa_militancy *= 0.5; sh_militancy *= 0.5; rb_strength *= 0.8; rfb_strength *= 0.8; reichswehr_strength = 0
 call: set_next_election_time
 
-The Red Army descends upon Germany, picking off reactionary holdout after reactionary holdout in its crusade against capital. Eventually, it emerges unmistakeably victorious, most of Germany under its control. Elections to a supreme soviet are scheduled for [+ next_election_month : month +].
+赤军席卷德国,在讨伐资本的圣战中逐个清除反动的据点。最终,它明确无误地取得了胜利,德国大部分地区已在其掌控之下。最高苏维埃的选举定于 [+ next_election_month : month +]。
 
 @civil_war_if_spd
 view-if: spd_revolution
@@ -108,7 +108,7 @@ go-to: civil_war
 
 @kpd_beaten
 
-The answer seems to be no, as, predictably, the Reichswehr drive the Red Army forces back into their councils which are then besieged and occupied one by one. The flames of civil war have been ignited but the communists seem after all to not be ready for what is to come.
+答案似乎是否定的:不出所料,国防军把赤军逼回了他们的委员会,随后将其逐一围困、占领。内战的火焰已被点燃,但共产党人终究似乎尚未准备好面对即将到来的一切。
 
 - @long_war2: 战争陷入固定的战线对峙。
 - @kpd_crushed: 共产党人被击溃。
@@ -118,9 +118,9 @@ The answer seems to be no, as, predictably, the Reichswehr drive the Red Army fo
 view-if: not spd_revolution and (harzburg_strength*0.6) < communist_strength
 on-arrival: long_war = 1
 
-The initial phase of the action ends, and somehow, both sides remain standing.
+行动的第一阶段结束,不知怎的,双方都还撑着。
 
-This will not be a quick coup, but a long civil war. The nation will destroy itself before it can be rebuilt again.
+这不会是一场速决战式的政变,而是一场漫长的内战。这个国家将在能够重建之前先自我毁灭。
 
 - @game_over: 游戏结束。
 
@@ -128,5 +128,5 @@ This will not be a quick coup, but a long civil war. The nation will destroy its
 view-if: not spd_revolution and (harzburg_strength*0.6) >= communist_strength
 on-arrival: rfb_banned = 1; rfb_strength *= 0.1; rfb_militancy *= 0.4; workers_kpd *= 0.4; unemployed_kpd *= 0.6; workers_spd *= 0.9; workers_spd *= 0.7 if spd_revolution; workers_nsdap += 10; unemployed_nsdap += 10; workers_dnvp += 10
 
-The communists are predictably crushed. Worker councils are shuttered and leading conspirators executed. The RFB is banned, and so are most communist publications. The KPD's leaders are arrested - those that are not summarily executed, anyway.
+共产党人不出所料地被击溃。工人委员会被关闭,主谋被处决。红色前线战士同盟被查禁,大多数共产主义出版物亦然。共产党的领袖被逮捕 —— 那些没有当即处决的,便是如此。
 

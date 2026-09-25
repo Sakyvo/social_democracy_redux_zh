@@ -7,13 +7,13 @@ tags: event
 max-visits: 2
 go-to: what_do if unemployment_insurance_crisis = 2
 
-= Unemployment Insurance Crisis
+= 失业保险危机
 
-The economic crisis has caused mass layoffs all throughout Germany, affecting the industrial working class the hardest. Our welfare spending is increasing due to the greater need.
+经济危机在德国各地造成大规模裁员,工业工人阶级受到的打击最为严重。由于需求增加,我们的福利开支也在上升。
 
-In the midst of all this, our right-wing coalition partners in the DVP and Center parties have a plan to cut benefits for the unemployed, lower taxes on the rich, and raise taxes on the working class, as part of a plan to balance the budget and discipline labor. They do not see a possibility for compromise. If we do not accept, they could blow up the coalition.
+在这一切之中,我们执政联盟中的右翼伙伴 —— 人民党与中央党 —— 有一项计划:削减失业者给付、降低富人税收、提高工人阶级税收,以此作为平衡预算、整肃劳工的方案。他们不认为有妥协的可能。若我们不接受,他们可能炸掉这个联盟。
 
-[? if unemployment_insurance_crisis = 2 : This is the second such ultimatum thrown by the Right. Obviously, the bourgeoisie are trying to remove us from the government. ?]
+[? if unemployment_insurance_crisis = 2 : 这是右翼抛出的第二份这类最后通牒。显然,资产阶级正试图把我们逐出政府。 ?]
 
 - @tax_rich: 我们为什么不干脆向富人征税?
 - @gift: 这是送给共产党的一份大礼。
@@ -22,17 +22,17 @@ In the midst of all this, our right-wing coalition partners in the DVP and Cente
 max-visits: 1
 go-to: what_do
 
-The bourgeois parties, as representatives of the rich industrialists, would not have that.
+资产阶级政党作为富有工业家的代表,绝不会答应。
 
 @gift
 go-to: what_do
 
-This is a gift to the Communists, a boost to their theory that parliamentary democracy will never benefit the working class.
+这是送给共产党的一份大礼,也印证了他们那套「议会民主绝不会惠及工人阶级」的理论。
 
 @what_do
 on-arrival: dvp_relation += 5 if chancellor = "Braun"
 
-But the crux of the matter is, what can we do?
+但问题的关键仍是:我们能怎么办?
 
 - @destroy: 好吧。我们将终结这个联盟。
 - @destroy_scholz: 好吧。我们将终结这个联盟。
@@ -44,38 +44,38 @@ But the crux of the matter is, what can we do?
 view-if: chancellor == "Scholz"
 on-arrival: scholz_dnvp = 1 if year < 1931; next_election_month=month+3 if year >= 1931; next_election_year=year if year >= 1931; next_election_year += 1 if next_election_month > 12 and year >= 1931; next_election_month -= 12 if next_election_month > 12 and year >= 1931; spd_in_government = 0; in_grand_coalition = 0; spd_toleration = 0; chancellor = "Brüning"; chancellor_party = "Z "; welfare -= 2; budget += 1; inflation -= 2; foreign_minister_party = "DVP"; interior_minister_party = "Z"; justice_minister_party = "I"; labor_minister_party = "Z"; reichswehr_minister_party = "I"; economic_minister_party = ddp_name; finance_minister_party = "DVP"; agriculture_minister_party = "Z"; spd_no_confidence = 1; pro_republic -= 4; old_middle_spd -= 3; new_middle_spd -= 2; rural_spd -= 2; catholics_spd -= 2; economic_growth -= 0.6
 
-Fine. If the bourgeoisie wish to blow up the government, let them do so. Socialists will not be complicit in the destruction of the working class.
+好。既然资产阶级想炸掉这个政府,就让他们去做吧。社会主义者不会参与对工人阶级的摧毁。
 
-Scholz now leads an all-bourgeois cabinet. Using the emergency powers of Article 48, Scholz and President Hindenburg have passed the welfare cuts over the objections of the Reichstag.
+朔尔茨如今领导着一个清一色资产阶级的内阁。朔尔茨与兴登堡总统动用第 48 条的紧急权力,不顾国会的反对强行通过了福利削减。
 
 [? if year >= 1931 : 新的选举已定于 [+ next_election_month : month +] [+ next_election_year +]。 ?]
 
-[? if year < 1931 : The DNVP is split, as what remains of its moderate wing refuses to vote against Scholz following Schiele (a high-ranking member of the DNVP) being included in cabinet. ?]
+[? if year < 1931 : 国家人民党出现分裂:在席勒(该党高层成员)被纳入内阁之后,其中间派残部拒绝投朔尔茨的反对票。 ?]
 
 @destroy
 view-if: chancellor != "Scholz"
 on-arrival: dnvp_toleration = 1 if year < 1931 and not confrontation_seen and president == "Hindenburg"; next_election_month=month+3 if year >= 1931 or confontation_seen or president != "Hindenburg"; next_election_year=year if year >= 1931 or confrontation_seen or president != "Hindenburg"; next_election_year += 1 if next_election_month > 12 and (year >= 1931 or confrontation_seen or president != "Hindenburg"); next_election_month -= 12 if next_election_month > 12 and (year >= 1931 or confrontation_seen or president != "Hindenburg"); spd_in_government = 0; in_grand_coalition = 0; spd_toleration = 0; z_relation -= 8; dvp_relation -= 10; chancellor = "Brüning"; chancellor_party = "Z "; welfare -= 2; budget += 1; inflation -= 2; foreign_minister_party = "DVP"; interior_minister_party = "Z"; justice_minister_party = "I"; labor_minister_party = "Z"; reichswehr_minister_party = "I"; economic_minister_party = ddp_name; finance_minister_party = "DVP"; agriculture_minister_party = "Z"; spd_no_confidence = 1; pro_republic -= 4; old_middle_spd -= 3; new_middle_spd -= 2; rural_spd -= 2; catholics_spd -= 2; economic_growth -= 0.6
 
-Fine. If the bourgeoisie wish to blow up the government, let them do so. Socialists will not be complicit in the destruction of the working class.
+好。既然资产阶级想炸掉这个政府,就让他们去做吧。社会主义者不会参与对工人阶级的摧毁。
 
-[? if chancellor_party = "SPD" : Heinrich Brüning of the Center Party has been appointed Chancellor. ?] Brüning now leads an all-bourgeois cabinet. Using the emergency powers of Article 48, Brüning and President Hindenburg have passed the welfare cuts over the objections of the Reichstag.
+[? if chancellor_party = "SPD" : 中央党的海因里希·布吕宁已被任命为总理。 ?] 布吕宁如今领导着一个清一色资产阶级的内阁。布吕宁与兴登堡总统动用第 48 条的紧急权力,不顾国会的反对强行通过了福利削减。
 
 [? if year >= 1931 or confrontation_seen : 新的选举已定于 [+ next_election_month : month +] [+ next_election_year +]。 ?]
 
-[? if year < 1931 and not confrontation_seen : The DNVP is split, as what remains of its moderate wing refuses to vote against Brüning following Schiele (a high-ranking member of the DNVP) being included in cabinet. ?]
+[? if year < 1931 and not confrontation_seen : 国家人民党出现分裂:在席勒(该党高层成员)被纳入内阁之后,其中间派残部拒绝投布吕宁的反对票。 ?]
 
 @accept
 on-arrival: workers_spd -= 0.15*workers_spd; unemployed_spd -= 0.3*unemployed_spd; workers_kpd += 5; workers_kpd += 2 if sapd_consolidated == 0; workers_sapd += 2 if sapd_consolidated == 1; workers_nsdap += 7; unemployed_kpd += 4; unemployed_kpd += 1 if sapd_consolidated == 0; unemployed_sapd += 1 if sapd_consolidated == 1; unemployed_nsdap += 5; left_dissent += 15; center_dissent += 10; labor_dissent += 15; reformist_dissent += 5; welfare -= 2; budget += 1; unemployed += 3; month += 1; pro_republic -= 4; kpd_relation -= 8; inflation -= 2; economic_growth -= 0.6; socialism -= 2
 
-Unfortunately, we must accept this ultimatum if we are to maintain this coalition. The Nazis and Communists are waiting in the wings for us to fail, ready to pounce upon the instability that would result from a breakup of the governing coalition.
+遗憾的是,若要维持这个联盟,我们就必须接受这份最后通牒。纳粹党与共产党正伺机待我们失手,准备扑向执政联盟破裂所带来的动荡。
 
-The workers are furious at our betrayal, as are a good portion of our membership throughout the factions. Our loss is the KPD's gain, and even the NSDAP, those lapdogs of the bourgeoisie, have joined in criticizing us for our austerity.
+工人们为我们的背叛而愤怒,党内各派系中也有相当一部分成员如此。我们的损失就是共产党的收获 —— 就连纳粹党那帮资产阶级的走狗,也加入了批评我们紧缩政策的行列。
 
 @compromise
 unavailable-subtitle: 我们与右翼政党的关系还不够好。[? if chancellor == "Scholz" : 朔尔茨总理拒绝妥协。 ?]
 choose-if: dvp_relation >= 35 and chancellor != "Scholz"
 
-Thanks to our good relations, the DVP have offered a compromise that raises some taxes on the wealthy, along with lesser welfare cuts. Our members have mixed opinions on accepting this compromise. Reformists and Centrists support maintaining our government to keep the fascists and communists out, while Labor generally opposes any cuts, and the Left is opposed to compromises with the bourgeoisie.
+多亏关系良好,人民党提出了一项妥协:对富人加征部分税收,并作较小幅度的福利削减。我党成员对是否接受这一妥协意见不一。改良派与中间派支持维持我们的政府,以把法西斯分子与共产党人挡在外面;工会派普遍反对任何削减;左翼则反对与资产阶级妥协。
 
 - @accept_compromise: 接受这项妥协。
 - @destroy: 拒绝这项妥协,让这个政府垮台。
@@ -83,7 +83,7 @@ Thanks to our good relations, the DVP have offered a compromise that raises some
 @accept_compromise
 on-arrival: workers_spd -= 5; unemployed_spd -= 6; workers_kpd += 4; workers_kpd += 1 if sapd_consolidated == 0; workers_sapd += 1 if sapd_consolidated == 1; unemployed_kpd += 3; unemployed_nsdap += 3; left_dissent += 10; labor_dissent += 8; center_dissent += 5; welfare -= 1; budget += 1; month += 1; kpd_relation -= 4; inflation -= 1; economic_growth -= 0.3; socialism -= 1
 
-We have accepted the compromise offered by the bourgeoisie. Many of the workers and unemployed see this as a betrayal, although we present it as the successful aversion of a much worse alternative.
+我们接受了资产阶级提出的妥协。许多工人与失业者视之为背叛,尽管我们把它说成是成功避免了更糟的结果。
 
 @accept_weimar
 view-if: moderate_plan_adopted == 1 and weimar_rejected != 1 and weimar_plan_adopted != 1 and weimar_willingness == 1

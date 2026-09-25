@@ -6,7 +6,7 @@ tags: event
 view-if: customs_union = 1 and banking_crisis_timer = 0
 max-visits: 1
 
-= Banking Crisis
+= 银行业危机
 
 The Darmstädter und Nationalbank, or Danat Bank, has collapsed! Along with it goes much of the German banking system. The cause seemed to be due to the government's pursuit of a customs union with Austria, which led to de facto international sanctions.
 

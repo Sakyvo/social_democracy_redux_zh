@@ -49,7 +49,7 @@ if (Q.kpd_leader == "Conciliators") {
 }
 !}
 
-The SAPD, enjoying in its recent growth, has launched a manifesto and program calling for the SPD and KPD to put aside their differences and convene in an SAPD arbitrated conference for the formation of an "Einheitsfront" of the workers. If we refuse, it may reflect badly, especially on our working class base, and give the SAPD more ammunition.
+社会主义工人党借着近来发展的势头,发表了一份宣言与纲领,呼吁社民党与共产党放下分歧,在社会主义工人党主持的会议上集会,以组建工人的「统一战线」。我们若拒绝,可能会造成不良影响,尤其是在我們的工人阶级基本盘中,并给社会主义工人党更多攻击的口实。
 
 - @participate_good_faith_1: 我们将出席这次会议,以此作为与共产党和解的途径。
 - @participate_good_faith_2: 我们将出席这次会议,以此作为与共产党和解的途径。
@@ -64,15 +64,15 @@ The SAPD, enjoying in its recent growth, has launched a manifesto and program ca
 view-if: kpd_good_faith and not (kpd_bad_faith or kpd_refuse)
 on-arrival: kpd_relation += 15; workers_sapd += 5; communist_coalition += 2; reformist_dissent += 10; neorevisionist_dissent += 15; left_strength += 10; left_dissent -= 5; z_relation -= 5; z_relation -= 5 if z_party_leader != "Joos"; dvp_relation -= 10; coalition_dissent += 1 if spd_in_government
 
-We agree to the idea and participate in the conference that the SAPD calls. To our surprise, the KPD not only participates but seems to do so in good faith with genuine interest in reconciliation [? if kpd_leader == "Conciliators" : , undoubtedly under the influence of their Conciliator leadership ?]. Multiple agreements are reached, with the SAPD mediating many of the disputes, and the conference ends as a propaganda victory for the SAPD as well as what remains of our party's left-wing, and a noticeable increase in our relations with the KPD. Our party's right, as well as the country's, accuse us of collaboration with the Communists, and our relations with them have worsened.
+我们同意这一构想,并参加了社会主义工人党召集的会议。出乎我们意料,共产党不仅与会,而且似乎是真心实意、对和解确有诚意[? if kpd_leader == "Conciliators" : ,无疑是在他们调和派领导层的影响下 ?]。多项协议得以达成,社会主义工人党调解了其中许多争执;会议结束时,它既是社会主义工人党及我党左翼残部的宣传胜利,也明显改善了我们与共产党的关系。我党右翼以及全国的右翼都指责我们与共产党勾结,我们与他们的关系因此恶化。
 
-Whether this will be the start of a new course or not remains to be seen.
+这究竟会是一条新路线的开端,还是别的什么,尚待分晓。
 
 @participate_good_faith_2
 view-if: kpd_bad_faith and not (kpd_good_faith or kpd_refuse)
 on-arrival: reformist_dissent += 5; neorevisionist_dissent += 10; z_relation -= 5 if z_party_leader != "Joos"; dvp_relation -= 5; coalition_dissent += 1 if spd_in_government
 
-We agree to the idea and participate in the conference that the SAPD calls. The KPD too participates, but seems to do so out of obligation rather than genuine goodwill. They, intransingent as always, set forth unreasonable demands, including [? if kpd_rectified_history = 0 : the expulsion of Noske from the party, ?][? if spd_toleration : the breaking of our toleration agreement, ?] the adoption of a more radically and revolutionary socialist agenda, and the breaking of ties with the Right.
+我们同意这一构想,并参加了社会主义工人党召集的会议。共产党也与会,但似乎是出于义务而非真正的善意。他们一如既往地顽固,提出了不合理的要求,包括[? if kpd_rectified_history = 0 : 把诺斯克开除出党, ?][? if spd_toleration : 撕毁我们的容忍协议, ?]采纳更激进、更具革命性的社会主义纲领,以及与右翼断绝关系。
 
 - @accept_kpd: 我们将接受这些要求。
 - @refuse_kpd: 我们将拒绝这些荒唐的要求。
@@ -128,12 +128,12 @@ Q.workers_sapd *= 0.85
 !}
 go-to: set_next_election_time if spd_toleration
 
-Despite the opposition of the right-wing, we have agreed to the KPD's demands. This has shaken the party to its core, and caused a shift back towards the left. The KPD themselves are shocked, but quickly adapt to the new reality, ready to collaborate with the SPD though still viewing us with suspicion. The SAPD has meanwhile lost steam, with many rejoining the SPD.
+尽管右翼反对,我们还是同意了共产党的要求。这动摇了党的根基,并促使党内重新向左转。共产党自己也大为震惊,但很快适应了新的现实,准备与社民党合作 —— 尽管仍以怀疑的目光看待我们。与此同时,社会主义工人党势头消退,许多人重新加入了社民党。
 
 @refuse_kpd
 on-arrival: kpd_relation -= 10; workers_kpd -= 3; workers_spd += 1; workers_sapd += 2
 
-Of course, we could never agree to such outrageous demands. The conference is a failure, and we blame the KPD for it. The SAPD continues to agitate for a united front, pointing to the failure of the SPD and KPD to cooperate as a reason to vote for the SAPD instead, but this thankfully doesn't effect us too much.
+我们当然绝不会同意这些荒唐的要求。会议以失败告终,我们将责任归咎于共产党。社会主义工人党继续为统一战线奔走,以社民党与共产党未能合作为由,劝人改投社会主义工人党 —— 所幸这对我们的影响不算太大。
 
 @participate_good_faith_3
 view-if: kpd_refuse and not (kpd_good_faith or kpd_bad_faith)
@@ -145,7 +145,7 @@ We attend the SAPD conference, but are alone in doing so, with the KPD refusing.
 view-if: kpd_good_faith and not (kpd_bad_faith or kpd_refuse)
 on-arrival: reformist_dissent += 5; neorevisionist_dissent += 10; z_relation -= 5 if z_party_leader != "Joos"; dvp_relation -= 5; coalition_dissent += 1 if spd_in_government; workers_spd -= 2; workers_sapd += 2
 
-We attend the SAPD conference, though not out of genuine will to reconcile but to try and weaken the SAPD's propaganda and prove reconciliation impossible. Frustratingly, the KPD has not done the same, and appear more reasonable than us. We put forward demands that we know the KPD can never accept, such as a full acceptance of the Weimar constitution, disbanding of the RFB into the Reichsbanner, and the leaving of the Comintern in favor of the Second International.
+我们出席社会主义工人党的会议,并非出于真心和解,而是想削弱社会主义工人党的宣传、证明和解不可能。令人恼火的是,共产党没有这么做,反而显得比我们更讲道理。我们提出了明知共产党绝不可能接受的要求,例如完全接受魏玛宪法、把红色前线战士同盟解散并入国旗团,以及退出共产国际、改投第二国际。
 
 - @kpd_accept: 共产党竟出人意料地接受了我们的大部分要求。
 - @kpd_refuse_offer: 不出所料,共产党拒绝了。
@@ -154,7 +154,7 @@ We attend the SAPD conference, though not out of genuine will to reconcile but t
 choose-if: kpd_leader == "Conciliators" and kpd_relation >= 65 and communist_coalition >= 2 and pro_republic >= 80 and (rb_strength*rb_militancy >= rfb_strength*rfb_militancy)
 unavailable-subtitle: 共产党绝不会接受这些荒唐要求中的任何一条。
 
-To our surprise, the Conciliator KPD leadership has shown willingness to accept most of these demands. They have proposed a counteroffer, to integrate the RFB under the Reichsbanner while still maintaining its operational independence, and to promise to operate by the methods outlined in the constitution, rather than endorsing the constitution itself. Of course, though, the demand they leave the Comintern is unacceptable so long as Moscow retains its iron grip over worldwide communist parties.
+出乎我们意料,共产党的调和派领导层表示愿意接受其中大部分要求。他们提出了一个还价:把红色前线战士同盟并入国旗团,但保留其行动独立性;并承诺按宪法所规定的方式行事,而非为宪法本身背书。当然,只要莫斯科仍牢牢掌控着全世界的共产党,退出共产国际这一要求就是不可接受的。
 
 - @accept_counteroffer: 我们将接受这份公道的还价。
 - @reject_counteroffer: 尽管我们意外取得了进展,我们仍将拒绝这份还价。
@@ -162,24 +162,24 @@ To our surprise, the Conciliator KPD leadership has shown willingness to accept 
 @accept_counteroffer
 on-arrival: kpd_relation = 50 if kpd_relation < 40; kpd_relation += 10 if kpd_relation >= 40; neorevisionist_dissent += 5; dvp_relation -= 5; workers_sapd += 3; workers_kpd -= 5; unemployed_kpd -= 8; rfb_strength *= 0.6; rfb_militancy -= 0.25; rb_strength += (rfb_strength*0.8); rb_militancy += 0.05; communist_coalition += 5; pro_republic += kpd_votes
 
-We may not have originally intended for reconciliation but this deal is too good to pass up. If the KPD is truly willing to abide by these, we will accept. This is a great day for German democracy.
+我们起初或许并无和解之意,但这笔交易好得不容错过。若共产党真愿遵守这些条款,我们就接受。这是德国民主的大好日子。
 
 @reject_counteroffer
 subtitle: 这会让我们显得不讲道理。
 on-arrival: kpd_relation -= 25; communist_coalition = 0; workers_spd -= 10; unemployed_spd -= 15; workers_sapd += 7; workers_kpd += 3; unemployed_sapd += 9; unemployed_kpd += 6; left_dissent += 15
 
-We had no intention of reconciliation and that we got this far is a miracle, but that changes nothing. We refuse, and the SAPD and KPD label us as traitors.
+我们本无和解之意,能谈到这一步已是奇迹,但这改变不了什么。我们拒绝,社会主义工人党与共产党便把我们称作叛徒。
 
 @kpd_refuse_offer
 on-arrival: kpd_relation -= 5; workers_spd -= 3; workers_kpd += 1; workers_sapd += 2; left_dissent += 5; reformist_strength += 5
 
-As expected, the KPD refuses our outrageous demands. The conference is a failure, and the KPD and SAPD both blame us. The SAPD continues to agitate for a united front, pointing to the failure of the SPD and KPD to cooperate as a reason to vote for the SAPD instead, to some success.
+果不其然,KPD refuses our outrageous demands. The conference is a failure, and the KPD and SAPD both blame us. The SAPD continues to agitate for a united front, pointing to the failure of the SPD and KPD to cooperate as a reason to vote for the SAPD instead, to some success.
 
 @participate_bad_faith_2
 view-if: kpd_bad_faith and not (kpd_good_faith or kpd_refuse)
 on-arrival: reformist_dissent += 5; neorevisionist_dissent += 10; z_relation -= 5 if z_party_leader != "Joos"; dvp_relation -= 5; coalition_dissent += 1 if spd_in_government; unemployed_spd -= 3; unemployed_kpd -= 3; unemployed_sapd += 5; workers_sapd -= 3; kpd_relation -= 10
 
-We attend the SAPD conference, though not out of genuine will to reconcile but to try and weaken the SAPD's propaganda and prove reconciliation impossible. The KPD does the same, and the conference is a disaster as the SAPD struggles to control heated arguments. Any hope of leftist unity that remained has died with this conference, which, although their attempts to paint both us and the KPD as unreasonable and them as an alternative, has taken much steam out of the SAPD's campaign as their goal of an Einheitsfront is seen as increasingly impossible.
+我们出席社会主义工人党的会议,并非出于真心和解,而是想削弱社会主义工人党的宣传、证明和解不可能。共产党也是如此,于是会议成了一场灾难 —— 社会主义工人党竭力控制激烈的争吵。左翼团结残存的任何希望都随这场会议一同破灭;尽管该党努力把我們和共产党都描绘成不讲道理、把自己描绘成替代选项,它自己的竞选势头却大为受挫,因为其统一战线的目标已日益被视为不可能。
 
 @participate_bad_faith_3
 view-if: kpd_refuse and not (kpd_good_faith or kpd_bad_faith)
@@ -191,11 +191,11 @@ We attend the SAPD conference, but are alone in doing so, with the KPD refusing.
 view-if: (kpd_good_faith or kpd_bad_faith) and not kpd_refuse
 on-arrival: workers_spd -= 5; unemployed_spd -= 10; workers_sapd += 4; workers_kpd += 1; unemployed_sapd += 6; unemployed_kpd += 4; kpd_relation -= 10; communist_coalition = 0; left_dissent += 10; old_middle_nsdap += 3; new_middle_nsdap += 3; sa_strength += 50; strife += 1
 
-We refuse to attend, but, unfortunately for us, the KPD agrees and participates. Our support is weakened as we are the only ones absent, and the SAPD grows ever closer to the KPD. This has been a propaganda victory for the far-left, which leads to further far-right mobilization.
+我们拒绝出席,但对我们不幸的是,共产党同意并参加了。由于只有我们缺席,我们的支持被削弱,而社会主义工人党与共产党越走越近。这是极左翼的一场宣传胜利,并进而促成极右翼进一步动员。
 
 @refuse_2
 view-if: kpd_refuse and not (kpd_good_faith or kpd_bad_faith)
 on-arrival: workers_sapd += 15; unemployed_sapd += 15; workers_spd -= 5; workers_kpd -= 10; unemployed_spd -= 10; unemployed_kpd -= 5; kpd_relation -= 5; left_dissent += 10
 
-We refuse to attend, as does the SAPD. They dedicate the conference to themselves, accompanied by many of our most leftwing members who attend anyway, as well as the KPD's rightmost. With both of our parties failing to entertain negotiations, the SAPD pushes itself as the only party able to forge an Einheitsfront of the workers, and this seems to work as they grow yet further.
+我们拒绝出席。社会主义工人党也一样 —— 不过他们把我们许多最左的成员(他们无论如何都去了)以及共产党最右的人拉来陪衬,把这场会议办成了自己的场子。由于我们两党都未能坐下来谈判,社会主义工人党便把自己包装成唯一能缔造工人统一战线的政党 —— 这似乎奏效了,他们的力量又壮大了几分。
 

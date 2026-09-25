@@ -6,7 +6,7 @@ max-visits: 1
 on-arrival: ddp_name = "DStP"; ddp_dstp_seen = 1; new_middle_ddp -= 5; old_middle_ddp -= 3; rural_ddp -= 3; ddp_relation -= 5; socialism -= 4
 tags: event
 
-= DDP Reformation
+= 民主党改组
 
 Leaders of the German Democratic Party, seeing the party's vote share fall over time, has decided that now is the time to completely reform the party. The party leader, Erich Koch-Weser, has engineered a merger with the political arm of the Young German Order, a nationalist paramilitary group. Now, the party will be called the German State Party, or DStP.
 

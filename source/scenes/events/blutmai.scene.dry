@@ -5,7 +5,7 @@ tags: event
 view-if: year = 1929 and month = 5 and in_right_coalition == 0
 max-visits: 1
 
-= May Day, 1929
+= 1929 年五一节
 
 Tensions run high in Berlin. The Communists are planning a demonstration to commemorate the 10th anniversary of the Spartacist Uprising. No one has forgotten that it was our party members who ordered the uprising's suppression, and the Communists still blame us for the deaths of Rosa Luxemburg and Karl Liebknecht.
 
@@ -22,7 +22,7 @@ face-image: img/blutmai.jpg
 
 We issued the order to ban the demonstrations, and sent police to enforce the ban. There was a confrontation between the police and Communists, and violence erupted. Reports say that the Berlin police killed dozens of demonstrators and innocent bystanders. The Communists are already calling this incident *Blutmai*, "Bloody May".
 
-This may end any attempt at reconciliation with the KPD, but the Center and People's parties approve of our action.
+这或许会终结与共产党和解的任何可能,但中央党与人民党赞同我们的举措。
 
 - @corrupt_police: 这要怪警察内部腐败与反动的分子。清洗相关责任人。
 - @communist_fault: 这要怪共产党拒绝遵守法治。

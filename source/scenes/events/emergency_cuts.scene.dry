@@ -6,7 +6,7 @@ on-arrival: emergency_cuts_seen = 1; emergency_cuts_timer = 12
 tags: event
 max-visits: 4
 
-= Emergency budget cuts
+= 紧急预算削减
 
 Due to the crisis of the Great Depression, government budgets have fallen and welfare spending has risen substantially. Chancellor [+ chancellor +] has used Article 48 of the constitution in order to pass an emergency bill cutting welfare spending.
 

@@ -6,9 +6,9 @@ on-arrival: unemployment_insurance_crisis += 1; budget -= 1 if budget >= 1; unem
 tags: event
 max-visits: 2
 
-= Unemployment Insurance Crisis
+= 失业保险危机
 
-The economic crisis has caused mass layoffs all throughout Germany, affecting the industrial working class the hardest. Our welfare spending is increasing due to the greater need.
+经济危机在德国各地造成大规模裁员,工业工人阶级受到的打击最为严重。由于需求增加,我们的福利开支也在上升。
 
 In the midst of all this, our unemployment insurance program is underfunded; the program was never budgeted for this much unemployment. We have to either increase funding or cut benefits.
 

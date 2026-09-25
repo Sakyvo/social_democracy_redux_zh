@@ -6,7 +6,7 @@ max-visits: 1
 on-arrival: hitler_powers_seen = 1; sa_strength += 150; sh_strength += 60
 tags: event
 
-= March on Berlin
+= 进军柏林
 
 The far right is mobilizing. Paramilitary forces of the Stahlhelm and SA, organized under the Harzburg Front, have marched on Berlin, threatening to violently seize power. Forces of the Interior and Reichswehr ministries have been deployed in the streets under orders from their respective Nazi-controlled ministries and have begun securing key points across the country. Clearly, [+ president +] has tired of our attempts to constitutionally obstruct his plans and has decided to ignore the constitution.
 
@@ -26,6 +26,6 @@ on-arrival: spd_rebel = 1
 
 Speeches are made. Votes are held. Bullets fly in the streets. Some socialists are killed or jailed. Others flee the country. The Nazis with total control over the streets unilaterally suspend the constitution.
 
-Germany is lost.
+德国沦陷了。
 
 - @game_over

@@ -9,7 +9,7 @@ max-visits: 1
 # the low priority means that this event is only seen after all other events are resolved for the month.
 # note: z_coalition = z_celation + (pro_cepublic/2); z_coalition *= 1.25 if z_faction_leader == "Joos";
 
-= Heidelberg Conference
+= 海德堡代表大会
 
 The SPD is holding its biannual conference in the city of Heidelberg, the burial place of the recently deceased Friedrich Ebert. Among the priorities on the agenda is the drafting of a new party program to replace the Görlitz program, which is seen by many as deviating too far from Marxism and as a result costing the SPD amongst the working class.
 
@@ -338,7 +338,7 @@ subtitle: 中间派与右翼 ([+ pragmatic_unity +]%)
 on-arrival: reformist_dissent -= 5; left_dissent += 5
 #go-to: saxon_struggle
 
-As expected, the motion is defeated. The party remains too attached to the Weimar Coalition for such a move to be feasible.
+果不其然,motion is defeated. The party remains too attached to the Weimar Coalition for such a move to be feasible.
 
 @saxon_struggle
 

@@ -29,9 +29,9 @@ Q.bill_support = Math.round(Q.bill_support);
 
 社民党: [? if panzerkreuzer_funded : 赞成 ?][? if not panzerkreuzer_funded : 意见不一 ?]
 
-[+ ddp_name +]: For
+[+ ddp_name +]:赞成
 
-Z: For
+中央党:赞成
 
 巴伐利亚人民党:赞成
 
@@ -68,9 +68,9 @@ The center-right parties are critical of our decision to abstain, and the pressu
 
 社民党:弃权
 
-[+ ddp_name +]: For
+[+ ddp_name +]:赞成
 
-Z: For
+中央党:赞成
 
 巴伐利亚人民党:赞成
 
@@ -95,9 +95,9 @@ on-arrival: panzerkreuzer_b_funded = 1
 
 社民党:反对
 
-[+ ddp_name +]: For
+[+ ddp_name +]:赞成
 
-Z: For
+中央党:赞成
 
 巴伐利亚人民党:赞成
 
@@ -122,9 +122,9 @@ on-arrival: panzerkreuzer_b_funded = 0; budget += 1 if panzerkreuzer_funded = 0;
 
 社民党:反对
 
-[+ ddp_name +]: For
+[+ ddp_name +]:赞成
 
-Z: For
+中央党:赞成
 
 巴伐利亚人民党:赞成
 
@@ -136,7 +136,7 @@ Z: For
 
 纳粹党:赞成
 
-With but [+ bill_support +]% in favor, the motion fails and is withdrawn.
+赞成票仅有 [+ bill_support +]%,该动议未获通过并被撤回。
 
 @ministry
 on-arrival: panzerkreuzer_b_funded = 0; budget += 1 if panzerkreuzer_funded = 0; coup_progress += 1; coup_progress += 1 if reichswehr_strength < 100; coup_progress += 1 if panzerkreuzer_funded == 0

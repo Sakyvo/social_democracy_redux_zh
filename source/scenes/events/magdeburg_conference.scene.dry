@@ -9,7 +9,7 @@ max-visits: 1
 # the low priority means that this event is only seen after all other events are resolved for the month.
 # note: z_coalition = z_celation + (pro_cepublic/2); z_coalition *= 1.25 if z_faction_leader == "Joos";
 
-= Magdeburg Conference
+= 马格德堡代表大会
 
 The SPD is holding its biannual conference in the city of Magdeburg, where it is expected that the Armed Forces Commission of the SPD will present its report and guidelines on military policy for vote. [? if spd_in_government and in_grand_coalition : Furthermore, the Grand Coalition with the DVP has come under increasing scrutiny as the left wing agitates against the pragmatic leadership of the party. ?]
 

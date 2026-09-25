@@ -6,6 +6,6 @@ new-page: true
 on-arrival: west_relation += 1; east_relation += 1
 tags: event
 
-= Germany Joins The League of Nations
+= 德国加入国际联盟
 
 Following the outline created by the Locarno Pact, Germany has finally been allowed to join the League of Nations after years of being treated as a pariah by the Western powers. This is a significant step towards peace in the world, and certainly one towards Germany being seen as an equal by the world again.

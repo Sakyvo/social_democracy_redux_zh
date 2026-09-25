@@ -9,7 +9,7 @@ Q.strife = Math.round(Q.strife);
 !}
 go-to: marx_crisis if president == "Marx"; hindenburg_crisis if president == "Hindenburg" and not presidential_powers; gessler_crisis if president == "Gessler" and not presidential_powers; adenauer_crisis if president == "Adenauer" and not presidential_powers; eckener_crisis if president == "Eckener" and not presidential_powers; nothing_to_do if presidential_powers
 
-= Political Crisis
+= 政治危机
 
 For multiple elections in a row now, no government has been able to be formed. This has been destroying the trust of the German people in their democracy, and all eyes turn to the president to see what he will do.
 
@@ -19,12 +19,12 @@ go-to: fascist_uprising if coup_progress >= 10 and sa_force+sh_force >= 50 and n
 
 Wilhelm Marx has become increasingly influenced by an inner cadre of military men and seeing the total inability of the Reichstag to form a government has caved to their increasing calls for martial law. 
 
-He has asked Wilhelm Groener to lead a temporary military government and, wielding the powers of Article 48 of the German constitution, declared martial law and cancelled the next elections. 
+他已请威廉·格勒纳领衔一个临时军事政府,并动用德国宪法第 48 条的权力,宣布戒严并取消下一次选举。
 
 @hindenburg_crisis
 on-arrival: chancellor = "Seldte"; chancellor_party = "DNVP"
 
-Seeing the continuing collapse of order in Germany, and convinced that they would be able to quell any resistance, President [+ president +] and Chancellor Seldte have come together to declare a state of martial law in Germany. Though this is unconstitutional, the courts have little sway over the enthusiastic army.
+眼见德国的秩序持续崩坏,又确信自己能镇压任何抵抗,[+ president +] 总统与泽尔特总理联手宣布在德国全境实施戒严。尽管此举违宪,法院对这支跃跃欲试的军队却没什么约束力。
 
 - @seldte_takes_power: 现在怎么办?
 
@@ -32,14 +32,14 @@ Seeing the continuing collapse of order in Germany, and convinced that they woul
 subtitle: 终结的开端。
 on-arrival: reichswehr_loyalty -= 0.1; stalhelm_militancy += 1.5
 
-The destruction of German democracy has begun, not at the hands of the Nazis but at the hands of the reactionaries who wish to see a return to the days of the German Empire. If we do not fight back now, then we may never get another chance, and all we as a party have stood for will be gone in an instant.
+德国民主的毁灭已经开始 —— 不是毁于纳粹之手,而是毁于那些盼着回到德意志帝国时代的反动派之手。若我们此刻不反击,或许就再也等不到下一次机会,而我们作为一个政党所主张的一切,将在顷刻间荡然无存。
 
 - @fight_harzburg: 动员我们的力量,宣布总罢工!
 - @reactionary_victory: 我们输了。
 
 @reactionary_victory
 
-Party offices are raided by army and police forces. Our leaders are rounded up and arrested. Any and all of our reforms are undone, and a police state under the army's control is cemented. The Nazis have failed to take power, but we cannot take much comfort in the fact when a dictatorial fascist government rules all the same. Perhaps in the far future, we may have our moment in the sun once more. We will have a duty to do better then than we have now.
+党的办公处被军队与警察查抄。我们的领袖被围捕、逮捕。我们的所有改革一概被撤销,一个由军队掌控的警察国家就此坐实。纳粹党未能掌权,可当一个独裁的法西斯政府照样统治一切时,我们也无法从中得到多少慰藉。或许在遥远的未来,我们还能再迎来属于自己的高光时刻。到那时,我们有责任做得比现在更好。
 
 - @game_over: 游戏结束。
 
@@ -53,7 +53,7 @@ go-to: fascist_uprising if coup_progress >= 10 and sa_force+sh_force >= 50 and n
 
 Otto Gessler has become increasingly influenced by his inner cadre of military men and seeing the total inability of the Reichstag to form a government has caved to their increasing calls for martial law. 
 
-He has asked Wilhelm Groener to lead a temporary military government and, wielding the powers of Article 48 of the German constitution, declared martial law and cancelled the next elections. 
+他已请威廉·格勒纳领衔一个临时军事政府,并动用德国宪法第 48 条的权力,宣布戒严并取消下一次选举。
 
 @adenauer_crisis
 on-arrival: chancellor = "Stegerwald"; adenauer_emergency = 1; spd_toleration = 0; chancellor_party = "Z"; time_to_election = 3; sa_militancy -= 0.05; sh_militancy -= 0.05; rfb_militancy -= 0.05; reichswehr_loyalty += 0.05; old_middle_z += 5; new_middle_z += 5; rural_z += 5; catholics_z += 8; workers_z += 3; unemployed_z += 2; old_middle_nsdap -= 4; new_middle_nsdap -= 4; rural_nsdap -= 4; workers_nsdap -= 4; unemployed_nsdap -= 3; pro_republic += 10

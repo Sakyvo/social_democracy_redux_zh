@@ -7,7 +7,7 @@ view-if: in_hamburg_groko and not in_grand_coalition and dvp_relation < 40 and y
 on-arrival: dissolve_hl += dvp_hl; dissolve_hl += nsdap_hl; dissolve_hl += dnvp_hl; dissolve_hl += other_hl; dissolve_hl += z_hl if z_relation < 40; dissolve_hl += kpd_hl if ((kpd_relation < 70 and kpd_party_leader != "Conciliators") or (kpd_relation < 50 and kpd_party_leader == "Conciliators")); hamburg_ddp += 10
 go-to: landtag_dissolved if dissolve_hl >= 50; landtag_not_dissolved if dissolve_hl < 50
 
-= Dissolution of the Hamburg Landtag
+= 汉堡州议会解散
 
 Following the collapse of our national cooperation and further declining relations, the Hamburg DVP has turned on our regional Grand Coalition. Though they cannot remove the state government from power, due to the constructive VONC mechanism, they can dissolve the Landtag by a simple majority vote.
 

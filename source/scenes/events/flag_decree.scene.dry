@@ -5,7 +5,7 @@ new-page: true
 max-visits: 1
 tags: event
 
-= The Flag Dispute
+= 国旗之争
 
 It has come to Chancellor Luther's attention that German expatriate groups abroad only accept the black-white-red colors of the Imperial flag, in conflict with the official black-red-gold colors of the foreign service. 
 
@@ -33,7 +33,7 @@ go-to: hindenburg_vonc if president == "Hindenburg"; marx_vonc if president == "
 @hindenburg_vonc
 on-arrival: chancellor = "Gessler"; chancellor_party = "DDP"
 
-The DNVP sides with Luther in the vote of no confidence, and it fails. However, the DDP's proposal for a motion of censure against Luther is successful; he responds by announcing his resignation, effectively meaning the same effect as a vote of no confidence.
+在不信任投票中,国家人民党站在路德一边,投票未能通过。然而民主党提出的针对路德的不信任动议获得成功;路德随即宣布辞职,实际效果等同于不信任投票。
 
 Otto Gessler of the DDP has been appointed as chancellor while a new government is negotiated, with Hindenburg hoping that Gessler may successfully form a government.
 
@@ -59,7 +59,7 @@ Surprisingly, negotiations are successful! A "Grand Coalition" has been formed a
 subtitle: 各党之间的分歧过大。
 on-arrival: z_relation -= 5 if z_relation >= 50 and dvp_relation >= 50; dvp_relation -= 5 if z_relation >= 45 and dvp_relation >= 50
 
-As expected, Adenauer is unable to form a government, either, due to his insistence on including us and disagreements with Stresemann, whom Adenauer views as too Prussian.
+果不其然,阿登纳也未能组阁 —— 因为他坚持要拉我们入阁,又与施特雷泽曼意见不合,阿登纳认为后者过于普鲁士化。
 
 - @what_now: 那接下来是谁?
 
@@ -69,7 +69,7 @@ on-arrival: chancellor = "Marx"; chancellor_party = "Z"
 
 In the end, another minority government is formed, with Wilhelm Marx at its head. While the DVP[? if z_relation < 40 : and Center Party?] view this minority government as a stepping stone towards a majority one with the DNVP, the DDP[? if z_relation > 50 : and Center Party?] view it as a stepping stone towards a majority one with us.
 
-Which it shall end up being remains to be seen. For the time being, this is the government that shall rule Germany.
+最终会是哪一种,尚待分晓。眼下,这就是将要统治德国的政府。
 
 - @root: 尚可接受。眼下如此。
 #- @intolerable: Intolerable. We shall call a motion of no confidence.
@@ -79,7 +79,7 @@ Which it shall end up being remains to be seen. For the time being, this is the 
 @marx_vonc
 on-arrival: chancellor = "Gessler"; chancellor_party = "DDP"
 
-The DNVP sides with Luther in the vote of no confidence, and it fails. However, the DDP's proposal for a motion of censure against Luther is successful; he responds by announcing his resignation, effectively meaning the same effect as a vote of no confidence.
+在不信任投票中,国家人民党站在路德一边,投票未能通过。然而民主党提出的针对路德的不信任动议获得成功;路德随即宣布辞职,实际效果等同于不信任投票。
 
 With Luther refusing to serve as interim, Otto Gessler succeeds him as Vice Chancellor. However, he and President Marx are under no illusion that he would win our support for a minority government.
 
@@ -106,7 +106,7 @@ Surprisingly, negotiations are successful! A "Grand Coalition" has been formed a
 subtitle: 各党之间的分歧过大。
 on-arrival: z_relation -= 5 if z_relation >= 45 and dvp_relation >= 50; dvp_relation -= 5 if z_relation >= 40 and dvp_relation >= 50; marx_relation -= 5 if z_relation >= 40 and dvp_relation >= 45
 
-As expected, Adenauer is unable to form a government, either, due to his insistence on including us and disagreements with Stresemann, whom Adenauer views as too Prussian.
+果不其然,阿登纳也未能组阁 —— 因为他坚持要拉我们入阁,又与施特雷泽曼意见不合,阿登纳认为后者过于普鲁士化。
 
 - @what_now2: 布吕宁被任命为总理。
 
@@ -116,7 +116,7 @@ on-arrival: chancellor = "Brüning"; chancellor_party = "Z"
 
 In the end, another minority government is formed, with Heinrich Brüning at its head. While the DVP[? if z_relation < 40 : and Center Party?] view this minority government as a stepping stone towards a majority one with the DNVP, the DDP[? if z_relation > 50 : and Center Party?] view it as a stepping stone towards a majority one with us.
 
-Which it shall end up being remains to be seen. For the time being, this is the government that shall rule Germany.
+最终会是哪一种,尚待分晓。眼下,这就是将要统治德国的政府。
 
 - @root: 尚可接受。眼下如此。
 #- @intolerable: Intolerable. We shall call a motion of no confidence.

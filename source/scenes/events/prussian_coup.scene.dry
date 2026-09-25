@@ -36,7 +36,7 @@ on-arrival: sa_strength *= 0.8; sh_strength *= 0.8; pro_republic += 10; workers_
 achievement: bollwerk_der_demokratie
 go-to: defend_2_victory_2
 
-Our forces confront the government troops and their reactionary auxiliaries, and somehow, our enemies retreat without a fight! They were overwhelmed by our display of strength, and have chosen to slink away. Chancellor [+ chancellor +] withdraws the dismissal of the Prussian government, at least for now.
+我们的力量与政府军及其反动辅助部队对峙,不知怎的,敌方竟然不战而退!他们被我们展现出的实力所震慑,选择悄悄溜走。[+ chancellor +] 总理撤销了对普鲁士政府的罢免 —— 至少眼下如此。
 
 这次力量展示重新激发了人们对共和国与社民党的支持,也削弱了法西斯分子。
 
@@ -54,7 +54,7 @@ Our forces confront the government troops and their reactionary auxiliaries, and
 @defend_2_civil_war
 on-arrival: spd_rebel = 1
 
-Our forces confront the government troops and their supporters on the streets of Berlin, and armed fighting erupts. The reactionaries do not budge from their positions. We are caught at a disadvantage.
+我们的力量与政府军及其支持者在柏林街头对峙,随即爆发武装冲突。反动派坚守阵地不肯退让。我们处于不利地位。
 
 - @civil_war: 这就是内战。
 

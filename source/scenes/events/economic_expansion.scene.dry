@@ -5,7 +5,7 @@ view-if: economic_expansion >= 85 and unemployed <= 6 and inflation <= 6 and spd
 on-arrival: economic_expansion = 0; expansion_seen += 1; capital_strike_progress -= 2 if capital_strike_progress >= 2 and not class_war; capital_strike_progress -= 1 if peoples_party and sapd_consolidated and not capital_rejected and (labor_strength < reformist_strength or capital_spd) and not capital_flight; budget += 1; workers_spd += 4*(1-dissent) if spd_in_government; new_middle_spd += 2*(1-dissent) if spd_in_government; old_middle_spd += 2*(1-dissent) if spd_in_government; rural_spd += 2*(1-dissent) if spd_in_government; new_middle_ddp += 5 if in_weimar_coalition or in_grand_coalition or in_popular_front; workers_kpd += 3 if in_popular_front or in_left_front; old_middle_dvp += 4 if in_grand_coalition; new_middle_dvp += 3 if in_grand_coalition; inflation += 0.4; socialism += class_war if class_war; socialism -= ((reformist_strength/10)*bourgeois_power) if not in_popular_front or in_left_front
 tags: event
 
-= Economic Expansion
+= 经济扩张
 
 The German economy has been growing steadily for an extended period of time, and has low inflation and unemployment. The government is rewarded by additional tax revenue from the same tax rates. [? if not class_war : Even the capitalists find that they have little to complain about when it comes to government policies. ?][? if class_war : The success of our economy is attributed to socialism, which is finding widespread support. ?] One downside of this economic growth, however, is the rising risk of inflation.
 

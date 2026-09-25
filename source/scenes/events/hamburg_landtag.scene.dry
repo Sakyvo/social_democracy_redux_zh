@@ -10,7 +10,7 @@ set-jump: hamburg_election_1928
 # the low priority means that this event is only seen after all other events are resolved for the month.
 # note: z_coalition = z_hlelation + (pro_republic/2); z_coalition *= 1.25 if z_party_leader == "Joos";
 
-= Hamburger Elections, [+ month : month +] [+ year +]
+= 汉堡选举,[+ month : month +] [+ year +]
 
 The Hamburger elections are to be held now.
 
@@ -253,7 +253,7 @@ if (window && d3) {
 !}
 go-to: coalition_menu
 
-= Election results
+= 选举结果
 
 {!<svg id="reichstag" style="width: 500px; height: 250px;"> </svg>!}
 
@@ -310,7 +310,7 @@ view-if: h_grand_coalition >= 50 or h_elections < 1 or in_hamburg_groko
 choose-if: h_grand_coalition >= 50 or ((h_elections < 1 or in_hamburg_groko) and not nsdap_hl >= 50)
 on-arrival: in_hamburg_groko = 1; in_hamburg_soclib = 0; in_hamburg_left = 0; in_spd_hamburg = 0; in_nazi_hamburg = 0;
 
-The SPD enters a coalition with the [+ ddp_name +] and DVP. [? if h_grand_coalition < 50 : This is despite it lacking a majority. ?]
+社民党与 [+ ddp_name +] 及人民党组成联盟。[? if h_grand_coalition < 50 : 尽管该联盟并不占多数。 ?]
 
 @social_liberal
 title: 一个「社会自由主义」联盟。
@@ -319,7 +319,7 @@ view-if: h_social_liberal_coalition >= 50 or in_hamburg_soclib
 choose-if: h_social_liberal_coalition >= 50 or (in_hamburg_soclib and not nsdap_hl >= 50)
 on-arrival: in_hamburg_soclib = 1; in_hamburg_groko = 0; in_hamburg_left = 0; in_spd_hamburg = 0; in_nazi_hamburg = 0; workers_spd += 2*(1-dissent)
 
-The SPD enters a coalition with the [+ ddp_name +]. [? if h_social_liberal_coalition < 50 : This is despite it lacking a majority. ?]
+社民党与 [+ ddp_name +] 组成联盟。[? if h_social_liberal_coalition < 50 : 尽管该联盟并不占多数。 ?]
 
 @left_front
 title: 有可能组成「统一战线」吗?
@@ -337,7 +337,7 @@ unavailable-subtitle: [? if reformist_strength >= 25 : 汉堡社民党不愿。 
 choose-if: reformist_strength < 25 and kpd_relation >= 55 and communist_coalition >= 2
 on-arrival: in_hamburg_left = 1; in_hamburg_soclib = 0; in_hamburg_groko = 0; in_spd_hamburg = 0; in_nazi_hamburg = 0; workers_spd += 5*(1-dissent); workers_kpd += 2
 
-The SPD enters a coalition with the KPD. [? if h_left_coalition < 50 : This is despite it lacking a majority. ?]
+社民党与共产党组成联盟。[? if h_left_coalition < 50 : 尽管该联盟并不占多数。 ?]
 
 @spd_majority
 title: 社民党赢得了多数。
@@ -353,11 +353,11 @@ title: 纳粹党赢得了多数。
 view-if: nsdap_hl >= 50 or in_nazi_hamburg
 on-arrival: in_nazi_hamburg = 1; in_hamburg_soclib = 0; in_hamburg_left = 0; in_spd_hamburg = 0; in_hamburg_groko = 0; hamburg_nsdap += 0.25; hamburg_kpd -= 0.25; hamburg_spd -= 0.1; workers_nsdap += 3; new_middle_nsdap += 3; old_middle_nsdap += 4; rural_nsdap += 3; unemployed_nsdap += 3
 
-The NSDAP governs Hamburg alone. Suppression of the left-wing parties is intense, and the Nazis consolidate power within the state.
+纳粹党单独统治汉堡。对左翼政党的镇压十分严酷,纳粹党在该州内巩固权力。
 
 @no_majority
 view-if: not (nsdap_hl >= 50 or in_nazi_hamburg) and not (spd_hl >= 50 or in_spd_hamburg) and not ((h_left_coalition >= 50 or in_hamburg_left) or (reformist_strength < 25 and kpd_relation >= 55 and communist_coalition >= 2)) and not (h_social_liberal_coalition >= 50 or in_hamburg_soclib) and not (h_grand_coalition >= 50 or h_elections < 1 or in_hamburg_groko)
 title: 没有明确的多数。
 on-arrival: kpd_relation += 5 if h_left_coalition >= 50 and kpd_relation < 50; hamburg_kpd -= 0.2 if h_left_coalition >= 50 and kpd_relation < 50; hamburg_spd += 0.2 if h_left_coalition >= 50 and kpd_relation < 50; hamburg_dvp -= 0.1; hamburg_other -= 0.1; hamburg_dnvp -= 0.1; hamburg_ddp += 0.1; hamburg_nsdap += 0.05; hamburg_election_month = month+3; hamburg_election_year += 1 if hamburg_election_month > 12; hamburg_election_month -= 12 if hamburg_election_month > 12
 
-There is no clear majority, new elections have been set.
+没有明确的多数,新的选举已排定日程。
