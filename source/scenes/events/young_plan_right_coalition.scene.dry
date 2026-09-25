@@ -6,13 +6,13 @@ view-if: year = 1929 and month >= 7 and young_plan_seen = 0 and (in_right_coalit
 on-arrival: young_plan_seen = 1; right_coalition_failed = 1; prussia_dnvp -= 0.1; prussia_nsdap += 0.1; dnvp_toleration = 0
 max-visits: 1
 
-= The Young Plan and the fall of the coalition
+= 杨格计划与联盟的垮台
 
-The Foreign Ministry under Gustav Streseman has agreed to the Young Plan, an agreement with the Western powers to reduce Germany's reparation payments and give us more fiscal autonomy. Simultaneously, France will agree to withdraw its military occupation from the Rhineland.
+古斯塔夫·施特雷泽曼领导的外交部已同意杨格计划 —— 一项与西方列强达成的协议,将减少德国的赔款支付并赋予我们更大的财政自主权。同时,法国将同意从莱茵兰撤出其军事占领。
 
-While this seems to be a positive development for the country, the DNVP (and especially its leader, Alfred Hugenberg) opposes the plan, claiming that any reparations are a form of national slavery. They have called for a vote of no confidence against the government, supported by the NSDAP and the KPD, and for a referendum on the Young Plan.
+虽然这对国家似乎是件好事,但国家人民党(尤其是其领袖阿尔弗雷德·胡根贝格)反对该计划,声称任何赔款都是一种民族奴役。他们已提出针对政府的不信任案(得到纳粹党与共产党的支持),并要求就杨格计划举行公投。
 
-We can either vote to bring down the government and hold new elections, or "tolerate" a government led by the remaining bourgeois parties.
+我们要么投票搞垮政府、举行新的选举,要么「容忍」一个由其余资产阶级政党领导的政府。
 
 - @vonc_yes
 - @vonc_no
@@ -39,14 +39,14 @@ on-arrival: leverage = spd_r
 unavailable-subtitle: 社民党 + 中央党 + 巴伐利亚人民党 + 民主党 + 人民党 ([+ grand_coalition +]%) - [? if grand_coalition < 50 : We do not have the votes. ?][? if (z_relation < 45 and z_party_leader != Joos) or (dvp_relation < 30 and stresemann_dead == 1) : The right would rather see their government fall than let us into government. ?]
 go-to: election_1928.grand_coalition_z_lead
 
-We have entered government and taken the DNVP's place.
+我们已进入政府,接替了国家人民党的位置。
 
 @new_elections
 subtitle: 由于国会陷入僵局,[+ president +] 将解散它
 on-arrival: time_to_election = 3; pro_republic -= 3; z_relation -= 2; dvp_relation -= 3; marx_relation -= 5
 call: set_next_election_time
 
-The Reichstag has been dissolved, as there is no clear governing majority.
+由于没有明确的执政多数,国会已被解散。
 
 @vonc_no
 title: 支持这个由中央党领衔的残余政府,投票赞成该政府。
@@ -55,7 +55,7 @@ view-if: neo_weimar_coalition >= 50
 on-arrival: spd_toleration = 1; in_right_coalition = 0; left_dissent += 8; 
 go-to: marx if president == "Marx"
 
-By supporting the government, we have essentially entered into a "toleration" arrangement with the [+ chancellor +] government. We do not have a voice in the government, but we are responsible for its continued stability. The left of our party opposes this plan, and would rather that we force new elections.
+通过支持政府,我们实质上已与 [+ chancellor +] 政府达成了一项「容忍」安排。我们在政府中没有发言权,却要为其持续稳定负责。我党左翼反对这一方案,更希望我们强行举行新的选举。
 
 @no_matter
 title: 我们怎么做都无关紧要。
@@ -71,4 +71,4 @@ go-to: marx if president == "Marx"
 on-arrival: workers_nsdap += 5; new_middle_nsdap += 10; old_middle_nsdap += 10; rural_nsdap += 10; unemployed_nsdap += 5; new_middle_dnvp += 5; old_middle_dnvp += 5; rural_dnvp += 5; new_middle_dvp -= 5; new_middle_other -= 5; old_middle_dvp -= 5; old_middle_other -= 5; rural_dvp -= 5; rural_other -= 5
 go-to: thing_did if do_the_thing_after_this
 
-Regardless, the Young Plan has successfully acted as a wedge issue against the moderate bourgeois parties, and the pendelum has swung significantly to the right in this crisis.
+无论如何,杨格计划成功地充当了一个分裂温和资产阶级政党的楔子,在这场危机中,钟摆已明显摆向右翼。

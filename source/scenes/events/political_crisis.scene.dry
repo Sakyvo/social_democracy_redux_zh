@@ -11,13 +11,13 @@ go-to: marx_crisis if president == "Marx"; hindenburg_crisis if president == "Hi
 
 = 政治危机
 
-For multiple elections in a row now, no government has been able to be formed. This has been destroying the trust of the German people in their democracy, and all eyes turn to the president to see what he will do.
+连续多次选举都未能组成政府。这正在摧毁德国人对其民主的信任,所有人的目光都转向总统,看他将如何行事。
 
 @marx_crisis
 on-arrival: chancellor = "Groener"; spd_toleration = 0; chancellor_party = "I"; time_to_election = 12+strife; strife -= 3; sa_militancy -= 0.1; rb_militancy -= 0.1 if rb_militancy >= 0.1; rfb_militancy -= 0.1; sh_militancy -= 0.05; reichswehr_loyalty += 0.1;
 go-to: fascist_uprising if coup_progress >= 10 and sa_force+sh_force >= 50 and nsdap_r+dnvp_r >= 40; next_election_time if coup_progress < 10 or sa_force+sh_force < 45 or nsdap_r+dnvp_r < 35
 
-Wilhelm Marx has become increasingly influenced by an inner cadre of military men and seeing the total inability of the Reichstag to form a government has caved to their increasing calls for martial law. 
+威廉·马克思日益受到一个军人核心小圈子的影响;眼看国会完全无力组阁,他终于屈服于他们日益高涨的戒严呼声。
 
 他已请威廉·格勒纳领衔一个临时军事政府,并动用德国宪法第 48 条的权力,宣布戒严并取消下一次选举。
 
@@ -51,7 +51,7 @@ go-to: civil_war
 on-arrival: chancellor = "Groener"; spd_toleration = 0; chancellor_party = "I"; time_to_election = 12+strife; strife -= 3; sa_militancy -= 0.1; rb_militancy -= 0.1 if rb_militancy >= 0.1; rfb_militancy -= 0.1; sh_militancy -= 0.05; reichswehr_loyalty += 0.1;
 go-to: fascist_uprising if coup_progress >= 10 and sa_force+sh_force >= 50 and nsdap_r+dnvp_r >= 40; next_election_time if coup_progress < 10 or sa_force+sh_force < 45 or nsdap_r+dnvp_r < 35
 
-Otto Gessler has become increasingly influenced by his inner cadre of military men and seeing the total inability of the Reichstag to form a government has caved to their increasing calls for martial law. 
+奥托·格斯勒日益受到其军人核心小圈子的影响;眼看国会完全无力组阁,他终于屈服于他们日益高涨的戒严呼声。
 
 他已请威廉·格勒纳领衔一个临时军事政府,并动用德国宪法第 48 条的权力,宣布戒严并取消下一次选举。
 
@@ -59,18 +59,18 @@ Otto Gessler has become increasingly influenced by his inner cadre of military m
 on-arrival: chancellor = "Stegerwald"; adenauer_emergency = 1; spd_toleration = 0; chancellor_party = "Z"; time_to_election = 3; sa_militancy -= 0.05; sh_militancy -= 0.05; rfb_militancy -= 0.05; reichswehr_loyalty += 0.05; old_middle_z += 5; new_middle_z += 5; rural_z += 5; catholics_z += 8; workers_z += 3; unemployed_z += 2; old_middle_nsdap -= 4; new_middle_nsdap -= 4; rural_nsdap -= 4; workers_nsdap -= 4; unemployed_nsdap -= 3; pro_republic += 10
 go-to: next_election_time
 
-Adenauer, tired of the chaos, sacks the current chancellor and replaces him with Adam Stegerwald, who has launched a sweeping campaign for the Center Party, calling for law and order and harshly attacking the Nazis as being, in a sense, 'posers', for throwing Germany into disarray while claiming to desire nothing but its greatness.
+阿登纳厌倦了这乱局,罢免现任总理,改以亚当·施特格瓦尔德接替。后者为中央党发动了一场声势浩大的运动,呼吁法律与秩序,并猛烈攻击纳粹党在某种意义上是「装样子的人」—— 他们声称只盼德国伟大,却把德国推入混乱。
 
 @eckener_crisis
 on-arrival: chancellor = "Groener"; spd_toleration = 0; chancellor_party = "I"; time_to_election = 6+strife; strife -= 3; sa_militancy -= 0.1; rb_militancy -= 0.1 if rb_militancy >= 0.1; rfb_militancy -= 0.1; sh_militancy -= 0.05; reichswehr_loyalty += 0.05;
 go-to: fascist_uprising if coup_progress >= 10 and sa_force+sh_force >= 45 and nsdap_r+dnvp_r >= 35; next_election_time if coup_progress < 10 or sa_force+sh_force < 45 or nsdap_r+dnvp_r < 35
 
-Hugo Eckener, seeing the devolving situation in Germany and convinced that a strong hand is needed, appoints Wilhelm Groener chancellor of a temporary military cabinet and declared martial law, swearing this as a temporary measure to secure Germany's future.
+胡戈·埃克纳目睹德国局势的恶化,确信需要一只强有力的手,于是任命威廉·格勒纳领衔一个临时军人内阁,并宣布戒严,发誓这只是为保障德国未来的临时措施。
 
 @fascist_uprising
 on-arrival: sh_strength *= 0.8; sh_strength *= 0.9 if president == "Eckener"; reichswehr_loyalty += 0.1; reichswehr_loyalty += 0.1 if president == "Gessler"; nazi_rebel = 1
 
-Infuriated by this action, the Nazi SA launches an armed insurrection, attempting to seize and take over key infrastructure across the country as the army is deployed against them. Due to the circumstances of the uprising, the Harzburg Front is split, and many in the Stalhelm hesitate.
+纳粹冲锋队为此举动震怒,发动武装暴动,在全国抢夺并接管关键基础设施,而军队则被调来对付他们。由于暴动的情势,哈茨堡阵线出现分裂,钢盔团中许多人犹豫不决。
 
 - @civil_war: 无论如何,这就是一场内战。
 
@@ -79,7 +79,7 @@ Infuriated by this action, the Nazi SA launches an armed insurrection, attemptin
 @nothing_to_do
 on-arrival: reichswehr_loyalty -= 0.1; sh_strength += 100; sa_strength += 100; pro_republic -= 5; coup_progress += no_majority_elections/2
 
-With presidential powers weakened, there is nothing that can be done. The republic may not last much longer.
+由于总统权力已被削弱,我们无能为力。这个共和国或许维持不了多久了。
 
 @next_election_time
 on-arrival: next_election_time = time+time_to_election; next_election_month = month + time_to_election; next_election_year = year; next_election_year += 1 if next_election_month > 12; next_election_month -= 12 if next_election_month > 12; next_election_year += 1 if next_election_month > 12; next_election_month -= 12 if next_election_month > 12; 

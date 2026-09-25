@@ -11,9 +11,9 @@ max-visits: 1
 
 = 海德堡代表大会
 
-The SPD is holding its biannual conference in the city of Heidelberg, the burial place of the recently deceased Friedrich Ebert. Among the priorities on the agenda is the drafting of a new party program to replace the Görlitz program, which is seen by many as deviating too far from Marxism and as a result costing the SPD amongst the working class.
+社民党正在海德堡市召开两年一度的大会 —— 这里是刚去世不久的弗里德里希·艾伯特的安葬之地。议程上的优先事项之一,是起草一份新的党纲以取代格尔利茨纲领;许多人认为后者偏离马克思主义过远,因而使社民党在工人阶级中失分。
 
-Another issue is that of Saxony, where the regional party organization has split nearly in half over Max Heldt's decision to govern with the DVP.
+另一个议题是萨克森:由于马克斯·黑尔特决定与人民党联合执政,该州党组织几乎分裂成两半。
 
 - @faction_algorithm: 代表们入场……
 
@@ -294,9 +294,9 @@ go-to: coalition_menu
 
 @coalition_menu
 
-The first matter in the conference is what is to be done regarding the party program. The Center has drafted a new program, a significant shift to the left, though the Left gathered around Levi remains skeptical.
+大会的第一项议题是党纲该如何处理。中间派起草了一份新纲领,向左转了一大步,不过围绕列维聚集的左翼仍持怀疑态度。
 
-Alternatively, the Görlitz program could be maintained, with revisions to match the changing times. With Heidelberg not even entirely satisfying the party left, this would certainly provoke quite the rebellion.
+另一种选择是保留格尔利茨纲领,只作顺应时代变化的修订。既然海德堡纲领连党内左翼都不能完全满意,这么做必定会激起相当大的反叛。
 
 - @heidelberg: 通过一份由中间派起草的新党纲。
 - @gorlitz: 保留格尔利茨纲领,但作适度修订。
@@ -307,7 +307,7 @@ choose-if: reformist_c < 50
 on-arrival: heidelberg_program = 1; center_strength += 5; reformist_strength -= 5; left_dissent -= 5; center_dissent -= 10; reformist_dissent += 5; dvp_relation -= 5; kpd_relation += 5
 go-to: coalition_issue
 
-The party has adopted the Heidelberg program, written by Karl Kautsky of the party center and representing a return towards the party's Marxist roots. 
+本党已通过海德堡纲领 —— 由中间派的卡尔·考茨基撰写,代表着向本党马克思主义根基的回归。
 
 @gorlitz
 subtitle: 右翼 ([+ reformist_c +]%)[? if reformist_c < 50 : —— 尽管改良派未占多数,工会或许可以被说服。 ?]
@@ -315,11 +315,11 @@ choose-if: (reformist_c+labor_c) >= 50
 on-arrival: gorlitz_program = 1; center_strength -= 5; marx_relation += 5; left_strength -= 5; reformist_strength += 10; left_dissent += 20; center_dissent += 15; reformist_dissent -= 5; peoples_party_support += 1; dvp_relation += 5; kpd_relation -= 5; labor_strength += 10 if reformist_c < 50; center_dissent += 5 if reformist_c < 50
 go-to: coalition_issue
 
-The party has, surprisingly, chosen to retain the bulk of the Görlitz program. The left and center wings of the party are incensed by this decision. [? if reformist_c < 50 : The trade unions have been given significant concessions to be convinced of this, further angering the centrists. ?]
+出乎意料,本党选择保留格尔利茨纲领的主体。党内左翼与中间派对此决定大为愤慨。[? if reformist_c < 50 : 为说服工会,已向它们作出重大让步,这进一步激怒了中间派。 ?]
 
 @coalition_issue
 
-Max Seydewitz of the left meanwhile has proposed before the conference what would amount to a rejection of coalitions with the bourgeois parties in order to represent the interests of the proletariat in all future struggles without regard to their opinions.
+与此同时,左翼的马克斯·赛德维茨在大会前提出了一项动议,实质上是拒绝与资产阶级政党结盟,以便在今后所有斗争中不顾它们的意见、径直代表无产阶级的利益。
 
 - @seydewitz: 该动议在代表大会上获得通过。
 - @silly: 该动议在代表大会上被否决。
@@ -330,7 +330,7 @@ subtitle: 左翼 ([+ left_c +]%)[? if left_c < 50 : —— 尽管左翼未占多
 on-arrival: left_strength += 20; reformist_strength -= 10; reformist_dissent += 25; center_dissent += 10; labor_dissent += ((z_relation+dvp_relation)/10); marx_relation -= 10; z_relation -= 15; dvp_relation -= 15; ddp_relation -= 15; kpd_relation += 10; communist_coalition += 1
 #go-to: saxon_struggle
 
-Surprisingly, the motion to reject cooperation with the bourgeoisie is passed through the conference. The party's right wing is incensed by this decision, with some even threatening revolt.
+出人意料,拒绝与资产阶级合作的动议获得大会通过。本党右翼对此大为愤慨,有人甚至威胁要反叛。
 
 @silly
 choose-if: left_c < 50
@@ -342,4 +342,4 @@ on-arrival: reformist_dissent -= 5; left_dissent += 5
 
 @saxon_struggle
 
-Finally, the last main issue for the conference is what should be done about Saxony, where the SPD has essentially split in half following the decision of Max Heldt to govern with the DVP despite the local party chapter's express refusal.
+最后,大会的最后一个主要议题是萨克森该如何处理:尽管当地党组织明确反对,马克斯·黑尔特仍决定与人民党联合执政,社民党因此在事实上分裂成两半。

@@ -6,18 +6,18 @@ view-if: year = 1929 and month >= 7 and in_right_coalition = 0 and young_plan_se
 on-arrival: young_plan_seen = 1; prussia_dnvp -= 0.1; prussia_nsdap += 0.1
 max-visits: 1
 
-= Young Plan
+= 杨格计划
 
-The Young Plan is an agreement with the Western powers to reduce Germany's reparation payments and give us more fiscal autonomy. Simultaneously, France will agree to withdraw its military occupation from the Rhineland.
+杨格计划是与西方列强达成的一项协议:减少德国的赔款支付,并赋予我们更大的财政自主权。同时,法国将同意从莱茵兰撤出其军事占领。
 
-While this seems to be a positive development for the country, the Right is campaigning hard against this plan, as are the Communists for whatever reason. They claim that any reparations are a form of national slavery, and have organized a referendum against it.
+虽然这对国家似乎是件好事,但右翼正大力开展反对该计划的运动 —— 共产党也不知出于什么缘故同样如此。他们声称任何赔款都是一种民族奴役,并组织了一场反对它的公投。
 
 - @pro_plan: 开展竞选,支持杨格计划,反对公投。
 - @no_plan: 不就杨格计划开展任何一方的竞选。
 
 @pro_plan
 
-How should we campaign in favor of the Plan?
+我们该如何为该计划展开支持性的竞选?
 
 - @internationalism: 作为一场支持国际主义与和平主义的更广泛竞选的一部分。
 - @rational: 杨格计划就是对德国而言最理性的选择,仅此而已。
@@ -26,23 +26,23 @@ How should we campaign in favor of the Plan?
 go-to: marx if president == "Marx"
 on-arrival: nationalism -= 5*(1-dissent) if pacifism >= 2 else nationalism += 3; pacifism += 1; workers_spd += 5*(1-dissent) if pacifism >= 3 and nationalism <= 50; workers_nsdap += 4 if pacifism <= 3; rural_nsdap += 5; catholics_spd -= 4 if pacifism <= 3; rural_dvp -= 4
 
-We rail hard against nationalism and in favor of pacifism and belonging to the international community of nations. The referendum easily fails, with only around 15% of voters supporting it. It seems that nationalism is not omnipotent in Germany, despite everything. [? if pacifism >= 3 and nationalism <= 50 : We have rallied the workers to the cause of internationalism. ?]
+我们猛烈抨击民族主义,拥护和平主义以及作为国际社会一员的归属。公投轻易失败,仅有约 15% 的选民支持。看来,尽管一切如此,民族主义在德国并非无所不能。[? if pacifism >= 3 and nationalism <= 50 : 我们已把工人动员到国际主义的事业之下。 ?]
 
 
 @rational
 go-to: marx if president == "Marx"
 on-arrival: nationalism += 5; workers_nsdap += 4; rural_nsdap += 5; catholics_spd -= 4; workers_spd -= 3; rural_dvp -= 5
 
-The referendum easily fails, with only around 15% of voters supporting it. It seems that the German people have a sense of rationality, after all.
+公投轻易失败,仅有约 15% 的选民支持。看来德国人终究还是有几分理性的。
 
 
 @no_plan
 go-to: marx if president == "Marx"
 on-arrival: nationalism += 5; workers_spd -= 3; old_middle_spd -= 3; new_middle_spd -= 3; pacifism -= 1; workers_nsdap += 5; rural_nsdap += 5; rural_dnvp -= 5; catholics_spd -= 5; rural_dvp -= 5;
 
-The referendum easily fails with or without our presence in the campaign, with only around 15% of voters supporting it. However, nationalist sentiment is inflammed, and the right-wing parties are using our silence around the Plan as a tacit admission of its faults. Our silence has only emboldened the Right, especially the NSDAP.
+无论我们是否参与这场运动,公投都轻易失败,仅有约 15% 的选民支持。然而,民族主义情绪被点燃,右翼政党把我们对该计划的沉默当作对其缺陷的默认。我们的沉默只是壮大了右翼,尤其是纳粹党。
 
 @marx
 on-arrival: workers_nsdap += 5; new_middle_nsdap += 10; old_middle_nsdap += 10; rural_nsdap += 10; unemployed_nsdap += 5; new_middle_dnvp += 5; old_middle_dnvp += 5; rural_dnvp += 5; new_middle_dvp -= 5; new_middle_other -= 5; old_middle_dvp -= 5; old_middle_other -= 5; rural_dvp -= 5; rural_other -= 5
 
-However, the referendum has succeeded in acting as a wedge issue against the moderate bourgeois parties, and the pendelum has swung significantly to the right.
+然而,这场公投成功充当了一个分裂温和资产阶级政党的楔子,钟摆已明显摆向右翼。

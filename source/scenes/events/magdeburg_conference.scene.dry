@@ -11,7 +11,7 @@ max-visits: 1
 
 = 马格德堡代表大会
 
-The SPD is holding its biannual conference in the city of Magdeburg, where it is expected that the Armed Forces Commission of the SPD will present its report and guidelines on military policy for vote. [? if spd_in_government and in_grand_coalition : Furthermore, the Grand Coalition with the DVP has come under increasing scrutiny as the left wing agitates against the pragmatic leadership of the party. ?]
+社民党正在马格德堡市召开两年一度的大会。会上,社民党的武装力量委员会预计将提交其关于军事政策的报告与指导方针,付诸表决。[? if spd_in_government and in_grand_coalition : 此外,随着左翼鼓动反对党内务实派的领导,与人民党组成的大联盟正受到越来越多的审视。 ?]
 
 - @faction_algorithm: 代表们入场……
 
@@ -292,9 +292,9 @@ go-to: coalition_menu if spd_in_government and in_grand_coalition; spd_military_
 
 @coalition_menu
 
-[? if panzerkreuzer_funded : The construction of a battlecruiser by a government that the SPD participates in has caused significant backlash, backlash the left hopes to exploit to take down the Grand Coalition. ?][? if not panzerkreuzer_funded : Though the SPD has prevented the construction of a battlecruise, the Grand Coalition remains controversial, and the left hopes to bring it down. ?]
+[? if panzerkreuzer_funded : 由社民党参与的一个政府建造战列巡洋舰,已引发强烈反弹;左翼希望利用这波反弹搞垮大联盟。 ?][? if not panzerkreuzer_funded : 尽管社民党阻止了战列巡洋舰的建造,大联盟仍备受争议,左翼希望把它搞垮。 ?]
 
-Thus, to pre-empt the left, a motion is submitted by the centrists to pass the matter on to the agenda, while the left around Aufhäuser and Sender attempt to pass a motion to criticize the behavior of the SPD's ministers and press the parliamentary group to advocate a variety of the demands of labor, something the trade unions are naturally sympathetic towards.
+于是,为抢在左翼之前,中间派提出一项动议,把此事列入议程;而围绕奥夫霍伊泽与森德尔的左翼则试图通过一项动议,批评社民党部长们的作为,并迫使议会党团主张劳工的种种诉求 —— 工会对这种主张自然抱有好感。
 
 - @destroy_groko: 奥夫霍伊泽与森德尔反对大联盟的动议获得通过。
 - @preserve_groko: 为保住政府而将该事项移交议程的动议获得通过。
@@ -305,7 +305,7 @@ choose-if: pragmatic_unity < 65
 on-arrival: reformist_dissent += 15; dvp_relation -= 10; z_relation -= 5; ddp_relation -= 5; left_strength += 10; center_dissent += 5; coalition_dissent += 2
 go-to: spd_military_policy
 
-The motion by the left is passed, tying the SPD's ministers and parliamentary group to party discipline for advocacy of the demands of labor irregardless of the concerns of the coalition. Naturally, the bourgeois parties are upset, and the government as a whole less stable.
+左翼的动议获得通过,从而以党纪约束社民党的部长与议会党团去主张劳工的诉求,而不顾联盟的顾虑。资产阶级政党自然大为不满,整个政府也更不稳定。
 
 @preserve_groko
 subtitle: 中间派与右翼 ([+ pragmatic_unity +]%)[? if pragmatic_unity < 50 : —— 部分工会人士或许会被说动。 ?]
@@ -313,11 +313,11 @@ choose-if: antitoleration_unity < 65
 on-arrival: left_dissent += 5; reformist_dissent -= 5; center_strength += 5
 go-to: spd_military_policy
 
-The motion by the center is passed, effectively delaying any firm committment by the SPD either way in the interests of preserving the unity of both party and government. The left is disappointed, but the motion is passed regardless.
+中间派的动议获得通过,实则是为维护党与政府的团结而推迟社民党在任何一方的明确表态。左翼感到失望,但动议还是通过了。
 
 @spd_military_policy
 
-Meanwhile, the Armed Forces Commission of the SPD has presented before the conference its report, outlining the guidelines for future military policy by the SPD.
+与此同时,社民党的武装力量委员会已向大会提交其报告,概述了社民党未来军事政策的指导方针。
 
 - @wip: 开发中
 

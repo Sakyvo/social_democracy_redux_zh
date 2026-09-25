@@ -5,11 +5,11 @@ max-visits: 1
 tags: event
 new-page: true
 
-= Saar Referendum
+= 萨尔公投
 
-Following Germany’s defeat in the Great War, the Saarland was made into a League of Nations mandate under de-facto French control. Now, however, a referendum is scheduled to take place to decide the future of the territory.
+德国在世界大战中战败后,萨尔兰被划为国际联盟的托管地,处于法国事实上的控制之下。然而如今,一场决定该地区前途的公投已排定日程。
 
-The vote to rejoin Germany is widely expected to succeed, though ultimately the highly Catholic population of the region will be the deciding factor. 
+重新并入德国的投票被普遍预期会通过,不过最终起决定作用的,是该地区以天主教徒为主的人口。
 
 - @campaign_pro: 开展竞选,支持重新并入德国。
 - @campaign_anti: 开展竞选,反对重新并入德国。
@@ -21,7 +21,7 @@ Q.saar_pro = Math.round((Q.saar_pro/saar)*100);
 Q.saar_anti = Math.round((Q.saar_anti/saar)*100);
 !}
 
-Of course, we campaign in favor of reincorporation. [? if z_relation >= 25 : The Center Party does as well, helping swing the Catholics. ?]
+我们当然为重新并入而竞选。[? if z_relation >= 25 : 中央党亦然,这有助于争取天主教徒。 ?]
 
 - @victory: [+ saar_pro +]% 的票数赞成重新并入德国。
 - @defeat: [+ saar_pro +]% 的票数赞成重新并入德国。
@@ -39,7 +39,7 @@ Q.rural_spd -= 6;
 Q.unemployed_spd -= 3;
 !}
 
-Due to the threat of the Republic soon falling, we make the heavy handed decision to campaign for a continuation of the mandate. The Nazis gleefully label us traitors to Germany, and our support amongst more nationalistic demographics is hurt.
+由于共和国可能很快就会倾覆,我们作出了一个强硬的决定:为延续托管地位而竞选。纳粹党兴高采烈地把我们称作德国的叛徒,我们在民族主义色彩较浓的群体中的支持也受到损害。
 
 - @victory: [+ saar_pro +]% 的票数赞成重新并入德国。
 - @defeat: [+ saar_pro +]% 的票数赞成重新并入德国。
@@ -50,10 +50,10 @@ on-arrival: saarland = 1; catholics += 1; workers_nsdap += 5 if ((saar_pro-sa_fo
 
 果不其然,vote to rejoin Germany wins with [+ saar_pro +]%. [? if ((saar_pro-sa_force) < 50) : The Nazis were very active in the campaign, intimidating voters with their SA, and have claimed the victory as theirs. ?]
 
-[? if saar_pro < 70 : The margin of victory was surprisingly close for comfort, and our credibility is hurt as a result. ?]
+[? if saar_pro < 70 : 获胜的差距近得令人不安,我们的公信力也因此受损。 ?]
 
 @defeat
 view-if: saar_pro < 50
 on-arrival: workers_spd -= 4 if spd_saar == 1; new_middle_spd -= 4 if spd_saar == 1; old_middle_spd -= 5 if spd_saar == 1; unemployed_spd -= 4 if spd_saar == 1; rural_spd -= 5 if spd_saar == 1; workers_nsdap -= 5 if spd_saar != 1; new_middle_nsdap -= 8 if spd_saar != 1; old_middle_nsdap -= 8 if spd_saar != 1; unemployed_nsdap -= 5 if nsdap_saar != 1; rural_nsdap -= 7 if nsdap_saar == 1; 
 
-Somehow, a majority of [+ saar_anti +]% have voted to stay as a League of Nations mandate. This is a great embarrassment to [? if spd_saar : us ?][? if not spd_saar : the NSDAP ?] as it was widely expected that the vast majority would favor Germany. 
+不知怎的,竟有多达 [+ saar_anti +]% 的多数投票支持继续作为国际联盟的托管地。这对[? if spd_saar : 我们 ?][? if not spd_saar : 纳粹党 ?]是极大的难堪,因为人们普遍预期绝大多数人会支持归属德国。

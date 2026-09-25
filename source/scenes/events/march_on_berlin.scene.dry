@@ -12,9 +12,9 @@ call: will_anschluss
 
 极右翼正在动员。钢盔团与冲锋队的准军事力量在哈茨堡阵线的组织下向柏林进军,威胁要以暴力推翻政府。
 
-They demand either immediate elections under the "supervision" of the nationalist paramilitaries, or else the immediate resignation of the government and the appointment of Adolf Hitler as chancellor[? if hitler_deported :, and the revocation of his deportation[? if hitler_dead :, following his revival back to life by the Nazi Party's top necromancers?]?]. It is obvious that they are threatening a civil war if their demands are not met.
+他们要求:要么立即在民族主义准军事组织的「监督」下举行选举,要么现任政府立即辞职并任命阿道夫·希特勒为总理[? if hitler_deported :,并撤销对他的驱逐出境[? if hitler_dead :,—— 此前纳粹党的顶级死灵法师已把他复活?]?]。很明显,如果要求得不到满足,他们就是在威胁发动内战。
 
-[? if anschluss_attempt : In coordination with this coup, meanwhile, forces of the Austrian army and SA have crossed the border into Bavaria, clashing with government forces there. Democracy is under a grand assault. ?]
+[? if anschluss_attempt : 与此同时,作为这场政变的配合,奥地利军队与冲锋队的力量已越过边境进入巴伐利亚,与当地政府军发生冲突。民主正遭受一场大规模的进攻。 ?]
 
 @non_govt_menu
 
@@ -31,12 +31,12 @@ go-to: accept_election if nsdap_normalized + dnvp_normalized >= 0.45 and far_rig
 on-arrival: next_election_time = time + 1 if next_election_time > time+1; next_election_month = month + 1 if next_election_time >= time+1; next_election_year = year if next_election_time >= time+1; next_election_year += 1 if next_election_month > 12; next_election_month -= 12 if next_election_month > 12; old_middle_nsdap += 10; new_middle_nsdap += 10; workers_nsdap += 10; rural_nsdap += 10; unemployed_nsdap += 8; workers_spd -= 10; workers_kpd -= 10; sa_strength += 100;
 go-to: austrian_issue if anschluss_attempt
 
-President [+ president +] has called for emergency elections, to be held next month, under a caretaker government. The SA is permitted to act with impunity, intimidating voters into supporting the fascists.
+[+ president +] 总统已宣布在一个看守政府下于下月举行紧急选举。冲锋队获准肆意妄为,恐吓选民支持法西斯分子。
 
 @accept_hitler
 on-arrival: chancellor = "Hitler"; chancellor_party = "NSDAP"; spd_in_government = 0
 
-After the resignation of the chancellor, Hitler has been appointed chancellor[? if hitler_deported:, after being made a citizen again?].
+在总理辞职之后,希特勒已被任命为总理[? if hitler_deported:,此前他重新获得了公民身份?]。
 
 - @hitler_takes_power
 
@@ -117,7 +117,7 @@ go-to: new_elections_braun_2 if nsdap_normalized + dnvp_normalized >= 0.5 and fa
 
 @new_elections_braun_reject
 
-The fascists reject our offer of free and fair elections. They are demanding that President [+ president +] dismisses the current government and appoints Hitler chancellor. [? if far_right_coalition >= 50 : They claim that since the far-right coalition has the majority in the Reichstag, they are constitutionally justified in appointing the chanellor. Unfortunately, their argument is not exactly wrong. ?]
+法西斯分子拒绝了我们自由公正选举的提议。他们要求 [+ president +] 总统解散现任政府、任命希特勒为总理。[? if far_right_coalition >= 50 : 他们声称,既然极右翼联盟在国会中占多数,那么他们任命总理在宪法上是正当的。遗憾的是,他们的论点并非全然错误。 ?]
 
 - @braun_appoints_hitler
 - @fight
@@ -165,14 +165,14 @@ choose-if: nsdap_normalized >= 0.5 or largest_party == "NSDAP"
 unavailable-subtitle: [+ president +] 总统绝不可能做出如此露骨的反民主之举。
 on-arrival: chancellor = "Hitler"; chancellor_party = "NSDAP"; spd_in_government = 0
 
-Threatened with a civil war, and unwilling to fight anymore, President [+ president +] dismisses the current government and appoints Hitler of the NSDAP as chancellor.
+在内战的威胁之下,又不愿再战,[+ president +] 总统解散了现任政府,任命纳粹党的希特勒为总理。
 
 - @hitler_takes_power
 
 @presidential_support
 on-arrival: reichswehr_loyalty += 0.1 if president == "Gessler"; reichswehr_loyalty += 0.2 if chancellor == "Groener";
 
-Luckily, President [+ president +] is on our side in this crisis. He has recognized the coup for what it is, and is prepared to stand by the government if we resist.
+幸运的是,在这场危机中 [+ president +] 总统站在我们这边。他已认清这场政变的本质,并准备在我们抵抗时站在政府一边。
 
 - @fight
 - @new_elections

@@ -5,11 +5,11 @@ tags: event
 max-visits: 1
 card-image: img/portraits/SchachtHjalmar.jpg
 
-= Schacht against Hilferding
+= 沙赫特对希法亭
 
-Reichsbank president Hjalmar Schacht has criticized Finance Minister Hilferding of the SPD for his budget, which he claims is unbalanced and contains too much social welfare and not enough tax cuts for top earners and businesses. More importantly, he is refusing to release loans necessary for the functioning of the government unless Hilferding either massively changes his budget or resigns.
+国家银行总裁亚尔马·沙赫特批评社民党的财政部长希法亭的预算,称其失衡,社会福利过多,而对高收入者与企业的减税不足。更重要的是,他拒绝发放政府运作所必需的贷款,除非希法亭大幅修改预算,或是辞职。
 
-Of course, this criticism is unfounded, but the bourgeois establishment does not care.
+这种批评当然毫无根据,但资产阶级当权集团并不在乎。
 
 - @expose_him: 揭发他的反动勾当!
 - @work_with: 与他合作来安排预算。
@@ -18,12 +18,12 @@ Of course, this criticism is unfounded, but the bourgeois establishment does not
 @expose_him
 view-if: investigate_far_right >= 1
 
-We expose to the public Schacht's dealings with the Nazis. For better or worse, he is cowed, and refrains from taking further actions against us.
+我们向公众揭露沙赫特与纳粹党的往来。无论好坏,他被镇住了,不再采取针对我们的进一步行动。
 
 
 @work_with
 
-After a second budget proposal, Schacht still considers Hilferding's budget to be unacceptable, despite more regressive taxes and expenditure cuts.
+在第二份预算方案之后,沙赫特仍认为希法亭的预算无法接受 —— 尽管其中增加了累退性税收并削减了开支。
 
 - @hilferding_resign: 希法亭必须辞职。
 
@@ -31,4 +31,4 @@ After a second budget proposal, Schacht still considers Hilferding's budget to b
 @hilferding_resign
 on-arrival: finance_minister_party = "DVP" if in_grand_coalition; finance_minister_party = "I" if in_weimar_coalition or in_popular_front or in_left_front; finance_minister = "Moldenhauer"; bourgeois_power += 0.01
 
-With no other choice, Hilferding has resigned as Finance Minister, to be replaced by a [? if in_grand_coalition: center-right ?][? if not in_grand_coalition: technocratic ?] candidate.
+别无选择之下,希法亭辞去财政部长之职,由一位[? if in_grand_coalition: 中右翼 ?][? if not in_grand_coalition: 技术官僚 ?]人选接任。
