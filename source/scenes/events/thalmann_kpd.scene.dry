@@ -1,5 +1,5 @@
-title: The KPD's New Leader
-subtitle: The Comintern has turned on Fischer
+title: 共产党的新领袖
+subtitle: 共产国际已与菲舍尔反目
 view-if: year == 1925 and month >= 9
 max-visits: 1
 tags: event

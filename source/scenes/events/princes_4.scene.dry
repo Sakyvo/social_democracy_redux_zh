@@ -1,5 +1,5 @@
 title: 没收诸侯财产
-subtitle: The referendum has been held
+subtitle: 公投已经举行
 view-if: time = princes_time+3 and year < 1928
 tags: event
 max-visits: 1

@@ -1,5 +1,5 @@
-title: Capital Returns!
-subtitle: The capital strike has largely ended
+title: 资本回归!
+subtitle: 资本罢工大体上已结束
 view-if: capital_strike_seen and capital_strike_timer < 6 and not capital_flight and ((capital_strike_progress < (10-class_war)) or (not spd_in_government and capital_strike_progress < (15*bourgeois_power)))
 new-page: true
 #tags: event

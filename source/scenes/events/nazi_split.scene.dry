@@ -1,4 +1,4 @@
-title: The Nazis Split!
+title: 纳粹分裂了!
 subtitle: 纳粹党的内部矛盾终于让它自食其果。
 view-if: schleichers_scheme_success and year >= 1933 and (nazi_peak or nazi_peaked) and strasser_percent >= 0.25
 on-arrival: {! 

@@ -1,4 +1,4 @@
-title: Hjalmar Schacht against Hilferding
+title: 亚尔马·沙赫特对希法亭
 new-page: true
 view-if: year = 1929 and month >= 11 and spd_in_government = 1 and finance_minister = "Hilferding" and finance_minister_party = "SPD" and not wealth_seized
 tags: event
@@ -11,8 +11,8 @@ Reichsbank president Hjalmar Schacht has criticized Finance Minister Hilferding 
 
 Of course, this criticism is unfounded, but the bourgeois establishment does not care.
 
-- @expose_him: Expose his reactionary dealings!
-- @work_with: Work with him to shape the budget.
+- @expose_him: 揭发他的反动勾当!
+- @work_with: 与他合作来安排预算。
 - @hilferding_resign: 希法亭必须辞职。
 
 @expose_him

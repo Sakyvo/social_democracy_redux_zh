@@ -1,5 +1,5 @@
-title: Kiel Conference
-subtitle: The SPD holds a party conference in Kiel
+title: 基尔代表大会
+subtitle: 社民党在基尔召开党的代表大会
 new-page: true
 tags: event
 view-if: year == 1927 and month >= 5
@@ -294,12 +294,12 @@ go-to: coalition_menu
 
 The prominent issue in the conference becomes clear as the left around Toni Sender and Siegfried Aufhäuser propose a resolution that would explicitly state that the class struggle can only be waged from opposition. In opposition are the reformists on the party right, as well as the bulk of the center and the trade unions, though with Aufhäuser joining in the push an understanding between the unions and the left against the [? if center_c+reformist_c >= left_c : dominating ?] pragmatists may be possible.
 
-- @oppositionist: The resolution is adopted, rejecting the notion of government participation.
-- @participationist: The resolution is defeated, and instead one in support is adopted.
+- @oppositionist: 该决议获得通过,否定了参与政府的想法。
+- @participationist: 该决议被否决,转而通过了一份支持参与政府的决议。
 
 @oppositionist
 choose-if: left_c >= 50 or (pragmatic_unity < 50 and dvp_relation < 40 and z_relation < 50)
-subtitle: The Left ([+ left_c +]%) [? if left_c < 50 : - though the Left lacks a majority, the trade unions could be won over. ?]
+subtitle: 左翼 ([+ left_c +]%)[? if left_c < 50 : —— 尽管左翼未占多数,工会或许可以被争取过来。 ?]
 on-arrival: coalition_dissent += 5; left_strength += 20; reformist_strength -= 10; reformist_dissent += 30; center_dissent += 15; labor_dissent += ((z_relation+dvp_relation)/10); marx_relation -= 10; z_relation -= 15; dvp_relation -= 15; ddp_relation -= 15; kpd_relation += 10; communist_coalition += 1
 go-to: unions
 
@@ -307,7 +307,7 @@ The resolution expressly rejecting government participation as a means of class 
 
 @participationist
 choose-if: left_c < 50
-subtitle: The Center and the Right ([+ pragmatic_unity +]%) [? if pragmatic_unity < 50 : - though they lack a majority, the trade unions could be won over. ?]
+subtitle: 中间派与右翼 ([+ pragmatic_unity +]%)[? if pragmatic_unity < 50 : —— 尽管他们未占多数,工会或许可以被争取过来。 ?]
 on-arrival: left_dissent += 5; dvp_relation += 10; z_relation += 10; ddp_relation += 10; reformist_dissent -= 5; left_strength -= 5; labor_dissent += 5 if dvp_relation < 40 and z_relation < 50
 go-to: unions
 
@@ -317,8 +317,8 @@ The resolution is, as expected, rejected by the conference, to the disappointmen
 
 With the major polarizing issue out of the way, the next proposal to be voted on is a resolution of support for the trade unions and expression of solidarity with the new middle class, perhaps engineered to satisfy those unions upset by the adoption of the previous resolution.
 
-- @union_support: The resolution is adopted.
-- @nah: The resolution is rejected.
+- @union_support: 该决议获得通过。
+- @nah: 该决议被否决。
 
 @union_support
 subtitle: -1 资源 —— 工会派 ([+ labor_c +]%)
@@ -329,7 +329,7 @@ go-to: agriculture_program
 The resolution is adopted, expressing and providing support to the trade unions as the defenders of working class prosperity, including that of the new middle class.
 
 @nah
-subtitle: There are greater priorities.
+subtitle: 还有更重要的优先事项。
 choose-if: labor_strength < 50 or resources < 1
 on-arrival: labor_dissent += 5; labor_strength -= 5
 go-to: agriculture_program
@@ -340,18 +340,18 @@ The resolution is ultimately rejected, with the conference considering support f
 
 Finally to be voted on is the agricultural programme proposed by Fritz Baade, published in January. The program is a step towards the SPD expanding its voteshare beyond simply the urban working class, but into other working class groups too. Some on the left worry, however, that this opens the door to revisionist "Volkspartei" rhetoric or that it would result in the SPD supporting petty bourgeois producers.
 
-- @program_adopted: The agricultural programme is adopted.
-- @program_refused: The agricultural programme is rejected.
+- @program_adopted: 农业纲领获得通过。
+- @program_refused: 农业纲领被否决。
 
 @program_adopted
-subtitle: The Right ([+ reformist_c +]%) [? if reformist_c < 50 : - though the reformists lack a majority, much of the center and trade unions are sympathetic. ?]
+subtitle: 右翼 ([+ reformist_c +]%)[? if reformist_c < 50 : —— 尽管改良派未占多数,中间派中的许多人以及工会都持同情态度。 ?]
 choose-if: left_c < 50
 on-arrival: peoples_party_support += 1
 
 The programme is adopted. Perhaps this will enable the SPD to breach into the rural regions that the DNVP currently dominates.
 
 @program_refused
-subtitle: The Left ([+ left_c +]%) [? if left_c < 50 : - though the left lacks a majority, much of the center and trade unions are sympathetic. ?]
+subtitle: 左翼 ([+ left_c +]%)[? if left_c < 50 : —— 尽管左翼未占多数,中间派中的许多人以及工会都持同情态度。 ?]
 choose-if: reformist_c < 50
 
 The programme is rejected. It seems the SPD shall continue to remain a strictly urban working class party.

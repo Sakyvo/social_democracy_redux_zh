@@ -1,5 +1,5 @@
-title: Communists Gaining Influence...
-subtitle: The KPD is becoming increasingly powerful.
+title: 共产党人的影响力上升……
+subtitle: 共产党正变得日益强大。
 new-page: true
 on-arrival: communist_influence_seen = 1
 view-if: kpd_influence >= 6

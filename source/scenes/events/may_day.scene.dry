@@ -89,8 +89,8 @@ view-if: fascist_disruption == 1
 
 The SA and Stalhelm have attacked our rally! What started as a show of proletarian unity and action devolves into a bloody violent clash between forces of the communist RFB and the attacking SA and Stalhelm.
 
-- @rb: Deploy the Reichsbanner to stand by the RFB. This rally is happening whether the right wants it to or not.
-- @give_up: Call the rally off. We don't want violence.
+- @rb: 部署国旗团支援红色前线战士同盟。不管右翼愿不愿意,这场集会都要举行。
+- @give_up: 取消集会。我们不想要暴力。
 
 @give_up
 on-arrival: workers_nsdap += 4; rfb_strength -= 25; sa_strength += 25; sh_strength += 25; unemployed_nsdap += 3; kpd_relation -= 10; left_dissent += 5; pacifism += 1; workers_spd -= 7; workers_kpd += 5; workers_sapd += 2; socialism -= 2

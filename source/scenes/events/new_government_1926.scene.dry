@@ -15,7 +15,7 @@ go-to: marx_chancellor if president == "Marx"; hindenburg_chancellor if presiden
 - @grand_coalition_real: 一个「大联合政府」?
 
 @grand_coalition_real
-subtitle: SPD + Z + BVP + DDP + DVP(61%)
+subtitle: 社民党 + 中央党 + 巴伐利亚人民党 + 民主党 + 人民党(61%)
 
 资产阶级政党主动接触我们,希望组建大联合政府 —— 甚至连兴登堡也表示,若能确立一个清晰的工作基础,他愿意接受这一设想。为此,民主党人科赫-韦泽受命主持内阁谈判,并试图争取我们的支持。
 
@@ -42,7 +42,7 @@ on-arrival: dvp_relation -= 3; z_relation -= 2; ddp_relation -= 2
 - @luther_second: 第二届路德内阁。
 
 @luther_second
-subtitle: Z + BVP + DDP + DVP(35%)
+subtitle: 中央党 + 巴伐利亚人民党 + 民主党 + 人民党(35%)
 on-arrival: budget -= 2; upper_tax_rates -= 1; lower_tax_rates -= 1; unemployed -= 1 if unemployed >= 5; inflation += 0.4; economic_growth += 0.4; socialism -= 1
 
 路德再度被任命为总理,这次领导的是一个由中央党、民主党、人民党与巴伐利亚人民党组成的少数派政府。作为少数派政府,它不太可能长久,实际上还要依靠我们 —— 因为我们随时可以让它垮台。但若无正当理由就这样做,可能损害我们自己的支持度,并把资产阶级推回国家人民党的怀抱。
@@ -87,7 +87,7 @@ on-arrival: marx_relation -= 10; workers_spd -= 2; new_middle_spd -= 4; old_midd
 - @grand_coalition_real2: 一个「大联合政府」?
 
 @grand_coalition_real2
-subtitle: SPD + Z + BVP + DDP + DVP(61%)
+subtitle: 社民党 + 中央党 + 巴伐利亚人民党 + 民主党 + 人民党(61%)
 
 在威廉·马克思的鼓励下,资产阶级政党主动接触我们,希望组建大联合政府;马克思提名民主党人科赫-韦泽担任该职。他如今转向我们,寻求对这一内阁的支持。
 
@@ -114,7 +114,7 @@ on-arrival: dvp_relation -= 3; z_relation -= 2; ddp_relation -= 2; marx_relation
 - @luther_second2: 第二届路德内阁。
 
 @luther_second2
-subtitle: Z + BVP + DDP + DVP(35%)
+subtitle: 中央党 + 巴伐利亚人民党 + 民主党 + 人民党(35%)
 on-arrival: budget -= 2; upper_tax_rates -= 1; lower_tax_rates -= 1; unemployed -= 1 if unemployed >= 5; inflation += 0.4; economic_growth += 0.4; socialism -= 1
 
 路德再度被任命为总理,这次领导的是一个由中央党、民主党、人民党与巴伐利亚人民党组成的少数派政府。作为少数派政府,它不太可能长久,实际上还要依靠我们 —— 因为我们随时可以让它垮台。但若无正当理由就这样做,可能损害我们自己的支持度,并把资产阶级推回国家人民党的怀抱。
@@ -131,7 +131,7 @@ on-arrival: budget -= 2; upper_tax_rates -= 1; lower_tax_rates -= 1; unemployed 
 - @grand_coalition_real3: 一个「大联合政府」?
 
 @grand_coalition_real3
-subtitle: SPD + Z + BVP + DDP + DVP(61%)
+subtitle: 社民党 + 中央党 + 巴伐利亚人民党 + 民主党 + 人民党(61%)
 
 资产阶级政党主动接触我们,希望组建大联合政府,并得到布劳恩的支持;在人民党拒绝让一名社会民主党人担任该职后,布劳恩提名民主党人科赫-韦泽。他如今向我们和人民党寻求对这一内阁的支持。
 
@@ -158,7 +158,7 @@ on-arrival: dvp_relation -= 1; z_relation -= 1; ddp_relation -= 1
 - @luther_second3: 第二届路德内阁。
 
 @luther_second3
-subtitle: Z + BVP + DDP + DVP(35%)
+subtitle: 中央党 + 巴伐利亚人民党 + 民主党 + 人民党(35%)
 on-arrival: budget -= 2; upper_tax_rates -= 1; lower_tax_rates -= 1; unemployed -= 1 if unemployed >= 5; inflation += 0.4; economic_growth += 0.4; socialism -= 1
 
 路德再度被任命为总理,这次领导的是一个由中央党、民主党、人民党与巴伐利亚人民党组成的少数派政府。作为少数派政府,它不太可能长久,实际上还要依靠我们 —— 因为我们随时可以让它垮台。但若无正当理由就这样做,可能损害我们自己的支持度,并把资产阶级推回国家人民党的怀抱。

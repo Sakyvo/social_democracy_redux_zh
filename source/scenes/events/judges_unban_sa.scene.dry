@@ -1,5 +1,5 @@
-title: SA unbanned
-subtitle: The judges have re-legalized the SA.
+title: 冲锋队解禁
+subtitle: 法官们已重新承认冲锋队的合法地位。
 view-if: sa_banned == 1 and sa_ban_timer == 0 and judicial_reform < 2
 on-arrival: sa_banned = 0; sa_strength += 100; sa_militancy += 0.04
 tags: event

@@ -1,5 +1,5 @@
-title: The conclusion of the Weltbühne case
-subtitle: Carl von Ossietzky and collaborators are finally sentenced.
+title: 《世界舞台》案的结论
+subtitle: 卡尔·冯·奥西茨基及其合作者最终被宣判。
 new-page: true
 view-if: year = 1931 and month >= 11 and weltbuhne_seen = 1 and not weltbuhne_dropped
 max-visits: 1
@@ -15,13 +15,13 @@ on-arrival: west_relation -= 1; east_relation -= 1; reparations_negotiation -= 1
 
 Finally, a court has made a decision in the Weltbühne case, sentencing the editor Carl von Ossietzky and journalist Walter Kreiser to prison for 18 months for revealing military secrets. There is outrage in the international community, who see this as yet another example of Germany's slide into militarism.
 
-- @drop_case: Wait! Maybe we can pardon the journalists?
-- @root: Accept the court's decision.
+- @drop_case: 等等!或许我们可以赦免这些记者?
+- @root: 接受法院的判决。
 
 @drop_case
 choose-if: justice_minister_party = "SPD"
 view-if: spd_in_government
-unavailable-subtitle: We do not control the Justice Ministry.
+unavailable-subtitle: 我们不掌控司法部。
 on-arrival: west_relation += 1; east_relation += 1; reparations_negotiation += 1; pacifism += 1
 
 With our control of the Justice Ministry, we are able to pardon von Ossietzky and Kreiser. This restores some of our reputation with pacifists and the international community.

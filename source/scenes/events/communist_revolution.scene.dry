@@ -1,5 +1,5 @@
-title: [+ month : month +] Revolution
-subtitle: The Communists are launching a revolution!
+title: [+ month : month +] 革命
+subtitle: 共产党人正在发动一场革命!
 view-if: ((kpd_votes+sapd_votes+rfb_force >= 40) or (kpd_votes+sapd_votes+spd_votes+rfb_force+rb_force >= 80 and kpd_relation >= 70 and left_strength >= 50 and not spd_in_government)) and (chancellor == "Schleicher" or chancellor == "Papen" or chancellor == "Groener" or chancellor_party == "NSDAP" or chancellor_party == "DNVP" or (in_emergency_government and kpd_relation < 30 and kpd_no_confidence) or (kpd_votes+sapd_votes+rfb_force >= 50)) and (not supreme_soviet or kpd_relation < 25 and kpd_influence < 2) and not in_left_front and not in_popular_front
 new-page: true
 tags: event
@@ -28,12 +28,12 @@ Sick and tired of the [+ chancellor +] government and viewing it as the greatest
 
 Factories are occupied through an initiative of the communist trade unions, and RFB-backed worker councils formed within them. Local government offices are seized and occupied, leaving the inprompteau worker councils as the only form of governance, while within those councils KPD and RFB officials are elected to direct the ongoing revolution. 
 
-- @spd_supports: The SPD stands with the revolution!
-- @what: This is madness!
+- @spd_supports: 社民党站在革命一边!
+- @what: 这是疯狂!
 
 @spd_supports
 choose-if: left_strength >= reformist_strength+center_strength and not spd_in_government and rb_militancy >= 0.2
-unavailable-subtitle: This is madness.
+unavailable-subtitle: 这是疯狂。
 on-arrival: spd_revolution = 1; kpd_relation += 100; z_relation -= 100; ddp_relation -= 100; dvp_relation -= 100; rb_strength *= (left_strength/100); communist_strength += (rb_force*(1-(left_strength/100)))/2; communist_strength += ((1-(labor_dissent/100))*normalized_workers_spd*(2 - unemployed/100)*2.5); reformist_dissent += 100; center_dissent += 50
 go-to: kpd_survival if communist_strength >= harzburg_strength; kpd_crushed if communist_strength < harzburg_strength
 
@@ -50,14 +50,14 @@ Reichswehr forces across the country are taken out of their barracks to quell th
 
 Now, the question on everyone's minds will be answered - can the communists defend against the full force of the state?
 
-- @defend_republic: The SPD stands with the republic against this "revolution"!
-- @neutrality: It would be best to wait the chaos out.
-- @kpd_vs_army: The state is nothing without the support of the workers!
+- @defend_republic: 社民党站在共和国一边,反对这场「革命」!
+- @neutrality: 最好静待这场混乱过去。
+- @kpd_vs_army: 没有工人的支持,国家什么都不是!
 
 @defend_republic
 view-if: not spd_revolution
 choose-if: chancellor != "Papen" and chancellor_party != "NSDAP" and chancellor_party != "DNVP"
-unavailable-subtitle: What republic is there left to defend?
+unavailable-subtitle: 还有什么共和国可供保卫?
 on-arrival: left_dissent += 100; rb_strength *= (1-(left_strength/100)); harzburg_strength += (rb_force*(1-(left_strength/100)))/2; harzburg_strength += ((1-(labor_dissent/100))*normalized_workers_spd*(2 - unemployed/100)*2.5);
 go-to: kpd_vs_army
 
@@ -67,7 +67,7 @@ The SPD stands with the republic and with democracy against this Moscow-sponsore
 view-if: not spd_revolution
 go-to: kpd_vs_army
 choose-if: not spd_in_government
-unavailable-subtitle: The communists are rising against us. We have no choice but to fight back.
+unavailable-subtitle: 共产党人正起来反对我们。我们别无选择,只能反击。
 
 By firmly taking a side we would split, as the communists want us to. We will wait the chaos out.
 
@@ -80,8 +80,8 @@ go-to: kpd_victory if communist_strength > harzburg_strength; kpd_beaten if harz
 
 The answer seems to be yes, as, somehow, the Red Army drive the Reichswehr forces back into their barracks which are then besieged and occupied one by one. The flames of civil war have been ignited and the communists are prepared to fight this uphill battle to bring about the dictatorship of the proletariat they so desire.
 
-- @long_war: The war settles into fixed battle lines.
-- @true_kpd_victory: The communists emerge victorious!
+- @long_war: 战争陷入固定的战线对峙。
+- @true_kpd_victory: 共产党人取得胜利!
 - @civil_war_if_spd: 这是一场内战。
 
 @long_war
@@ -110,8 +110,8 @@ go-to: civil_war
 
 The answer seems to be no, as, predictably, the Reichswehr drive the Red Army forces back into their councils which are then besieged and occupied one by one. The flames of civil war have been ignited but the communists seem after all to not be ready for what is to come.
 
-- @long_war2: The war settles into fixed battle lines.
-- @kpd_crushed: The communists are crushed.
+- @long_war2: 战争陷入固定的战线对峙。
+- @kpd_crushed: 共产党人被击溃。
 - @civil_war_if_spd: 这是一场内战。
 
 @long_war2

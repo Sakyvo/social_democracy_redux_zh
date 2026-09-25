@@ -1,5 +1,5 @@
-title: Desertions from the Reichsbanner
-subtitle: Many republicans are leaving the Reichsbanner, seeing it as a front for revolutionary socialism
+title: 国旗团的逃散
+subtitle: 许多共和派正离开国旗团,因为他们把它看作革命社会主义的幌子
 view-if: rb_force and left_strength >= socialism
 tags: event
 max-visits: 1
@@ -9,9 +9,9 @@ new-page: true
 
 With the SPD an increasingly far-left party, and public support for socialism not nearly as great as the SPD's fervor for it, less enthusiastic members of the Reichsbanner have begun departing from the organization, fearing they will be expected to fight not for the republic but for an insurrectionary socialism that they do not subscribe to.
 
-- @socialism: We must increase support for socialism, then.
-- @denounce_left: We are not so revolutionary as they think.
-- @rfb: Perhaps the RFB is a more reliable workers' force.
+- @socialism: 那我们就必须加强对社会主义的支持。
+- @denounce_left: 我们并没有他们想的那么革命。
+- @rfb: 或许红色前线战士同盟是更可靠的工人力量。
 
 @socialism
 on-arrival: commissars = 1; socialism += 2*(1-dissent); socialism += 2*(1-dissent) if new_middle_conscious; socialism += (left_strength/10)*(1-dissent); socialism -= 2*bourgeois_power

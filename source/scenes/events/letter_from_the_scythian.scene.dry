@@ -1,4 +1,4 @@
-title: Letter from the Scythian
+title: 斯基泰人的来信
 view-if: scythian_deployed and year <= 1764
 on-arrival: letter_received = 1
 tags: event

@@ -1,5 +1,5 @@
-title: The New Austrian State
-subtitle: Hitler attempts to play at national leadership
+title: 新的奥地利国家
+subtitle: 希特勒试图扮演国家领袖
 new-page: true
 tags: event
 view-if: nazi_austria and year == 1934 and month >= 4
@@ -19,33 +19,33 @@ Given our control over the Foreign Ministry, negotiations are sure to be awkward
 
 The first issue is the matter of recognizing his government. If we do not do this, then there will be no basis for negotiations at all.
 
-- @recognize: We have no choice but to recognize Hitler's government.
-- @withhold_recognition: We will never work with fascists.
+- @recognize: 我们别无选择,只能承认希特勒的政府。
+- @withhold_recognition: 我们绝不与法西斯合作。
 
 @recognize
-subtitle: This will upset our Austrian comrades, and countless here at home.
+subtitle: 这会让我们的奥地利同志以及国内无数人不满。
 on-arrival: hitler_recognized = 1; left_dissent += 15; center_dissent += 10; reformist_dissent += 5; neorevisionist_dissent += 15; workers_spd -= 5; workers_kpd += 2; workers_sapd += 2 if sapd_consolidated; west_relation -= 1; east_relation -= 1; soviet_relation -= 1; workers_nsdap += 2; new_middle_nsdap += 3; old_middle_nsdap += 4; rural_nsdap += 4; unemployed_nsdap += 3; nationalism += 5; pro_republic -= 3
 
 There is no point in continuing to fight the fact of the matter, which, albeit regretful, is that Hitler now rules Austria. We will have to conduct business with this state eventually, especially if we wish to represent all Germans, even those in Austria.
 
 This development is, however, a great victory for the new Austrian ruler. We have legitimized his rule by being the first government to recognize it. In the end, it would have likely happened eventually, anyway, but we can't discount our contributions. Hopefully, the sacrifice will be worth it.
 
-- @customs_union: Hitler proposes a customs union.
-- @alliance: Hitler proposes an alliance.
+- @customs_union: 希特勒提议建立关税同盟。
+- @alliance: 希特勒提议结盟。
 
 @withhold_recognition
-subtitle: This will upset German nationalists, and the bourgeois parties.
+subtitle: 这会让德国民族主义者与资产阶级政党不满。
 on-arrival: recognition_withheld = 1; coup_progress += 1; coup_progress += 1 if nationalism >= 60; vienna_influence += 2; z_relation -= 5*(nationalism/100); ddp_relation -= 5*(nationalism/100); hindenburg_angry += 25 if president == "Hindenburg"; coalition_dissent += 1; dvp_relation -= 10*(nationalism/100); coalition_dissent += 1 if nationalism >= 75; coalition_dissent += 1 if in_grand_coalition
 
 We as principled antifascists can never sanction (except economically) a hostile takeover of a neighboring German state by the same fascists we fought tooth and nail to keep at bay here. We will not compromise on our principles and abandon our Austrian friends to Nazism. We must withhold recognition of this government indefinitely until it collapses as the isolated entity it is.
 
 This decision is, however, largely unpopular amongst the nationalist & bourgeois right, who have attacked us for turning Austria away and sabotaging German unity. It seems they are too single-minded to realize that it is not German unity we are opposing but Hitler, the same man who would have done the same here as he is doing now in Austria if not for our efforts. When will they ever learn?
 
-- @sanction: Place economic sanctions on Austria[? if customs_union : to effectively revoke the customs union?].
-- @enough: That's enough.
+- @sanction: 对奥地利实施经济制裁[? if customs_union : ,以实质上废除关税同盟?]。
+- @enough: 这就够了。
 
 @sanction
-subtitle: While effective, this would *really* alienate the nationalist & bourgeois right.
+subtitle: 虽然有效,但这*真的*会疏远民族主义与资产阶级右翼。
 on-arrival: austria_sanctioned = 1; coup_progress += 2; coup_progress += 1 if nationalism >= 50; vienna_influence += 4; west_relation += 1; east_relation += 1; reichswehr_loyalty -= 0.1*(nationalism/100); coup_progress += 1 if nationalism >= 65; unemployed += 0.3; inflation += 0.5; economic_growth -= 0.2; workers_spd -= 2*(nationalism/100); new_middle_spd -= 4*(nationalism/100); old_middle_spd -= 6*(nationalism/100); rural_spd -= 6*(nationalism/100); unemployed_spd -= 3*(nationalism/100); coalition_dissent += 1; new_middle_nsdap += 3*(nationalism/100); old_middle_nsdap += 3*(nationalism/100); rural_nsdap += 3*(nationalism/100); z_relation -= 6*(nationalism/100); ddp_relation -= 6*(nationalism/100); dvp_relation -= 15*(nationalism/100); coalition_dissent += 1 if in_grand_coalition
 
 We have decided to place economic sanctions on Austria. This decision is sure to hurt Hitler hard, though it is also doing well to mobilize the nationalist right against us in one big tide of solidarity for Hitler and Austria.
@@ -65,12 +65,12 @@ Hitler has revived the idea of a German-Austrian customs union as a step towards
 
 Regretfully, many in the bourgeois parties are keen, having pushed for this in the past, anyway.
 
-- @form_the_union: We'll form it.
-- @no_we_wont: No we won't.
+- @form_the_union: 我们结这个盟。
+- @no_we_wont: 不,我们不结。
 
 @form_the_union
 choose-if: left_strength+neorevisionist_strength < reformist_strength
-unavailable-subtitle: Our party is simply unwilling.
+unavailable-subtitle: 我党就是不愿意。
 on-arrival: hitler_accepted = 1; banking_crisis_timer = 2; west_relation -= 2; east_relation -= 2; customs_union = 1; left_dissent += 10; neorevisionist_dissent += 10; center_dissent += 5; nationalism += 5; pro_republic -= 5
 
 We have formed the customs union. The Entente powers are rapid to lodge their diplomatic protests, as are entire flanks of our party. Still, the Austrian people are brought closer to the German ones. Is the promise of national unity worth it?
@@ -85,12 +85,12 @@ view-if: customs_union
 
 Hitler, building off of the existing customs union, has gone one step further to propose an alliance. Despite our past enmity within the German political sphere, he is willing to put aside petty political differences for the sake of German unity, or so he claims. In truth, he is more than likely just desparate for any opportunity to escape diplomatic isolation and maintain relevancy.
 
-- @accept_alliance: We'll form it.
-- @decline_alliance: No we won't.
+- @accept_alliance: 我们结这个盟。
+- @decline_alliance: 不,我们不结。
 
 @accept_alliance
 choose-if: this_path_has_been_coded
-unavailable-subtitle: What a ridiculous proposition.
+unavailable-subtitle: 多么荒唐的提议。
 
 @decline_alliance
 on-arrival: pro_republic += 2; alliance_declined = 1
@@ -109,11 +109,11 @@ The first issue is the matter of recognizing his government, as, without such, t
 
 With the government relying upon our toleration, we can still interject to put an end to these discussions with Hitler; indeed, many in our party see it as an imperative.
 
-- @end_toleration: Vote down these talks!
-- @allow_the_talks: Let it happen.
+- @end_toleration: 投票否决这些谈判!
+- @allow_the_talks: 随它去吧。
 
 @end_toleration
-subtitle: This is difficult; all of the right-of-center parties support these talks.
+subtitle: 这很难办;所有中右翼政党都支持这些谈判。
 go-to: end_toleration_success if spd_r + kpd_r + ddp_r >= 50; end_toleration_fail if spd_r + kpd_r + ddp_r < 50
 on-arrival: z_relation -= 6; dvp_relation -= 12
 

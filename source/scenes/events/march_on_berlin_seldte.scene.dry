@@ -166,7 +166,7 @@ We have resigned our positions in the government.
 
 
 @braun_appoints_seldte
-title: We cannot do anything but appoint Seldte chancellor.
+title: 我们别无选择,只能任命泽尔特为总理。
 view-if: president == "Braun" or president == "Schumacher" or president == "Juchacz"
 choose-if: dnvp_votes + sh_force >= 50 or largest_party == "DNVP"
 unavailable-subtitle: [+ president +] 总统绝不可能做出如此露骨的反民主之举。
@@ -181,8 +181,8 @@ Threatened with a civil war, and unwilling to fight anymore, President [+ presid
 
 Chancellor Seldte's first action is to put forward many decrees for [+ president +] to sign and force through via Article 48 of the Weimar Constitution. One of the most major ones, if signed, would suspend Articles 114, 115, 117, 118, 123, 124 and 153 of the German constitution, effectively turning Germany into a police state at the whims of the Harzburg Front and paving the way for rampant suppression of the political left. It is clear that he is threatening a civil war if his demands are not met.
 
-- @sign: We have no choice but to sign this decree.
-- @civil_war: Sack Seldte! This is unacceptable!
+- @sign: 我们别无选择,只能签署这项法令。
+- @civil_war: 罢免泽尔特!这无法接受!
 
 @presidential_support
 

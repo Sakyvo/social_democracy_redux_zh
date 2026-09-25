@@ -1,5 +1,5 @@
 title: 戒严!
-subtitle: Hitler has called the army in to restore order
+subtitle: 希特勒召来军队以恢复秩序
 view-if: (president == "Hitler" or president == "Göring") and resisted_hitler and time >= panic_time
 tags: event
 new-page: true
@@ -9,11 +9,11 @@ on-arrival: reichswehr_loyalty -= 0.05 if reichswehr_loyalty >= 0.05; reichswehr
 
 在接管普鲁士以巩固权力的图谋失败后,希特勒惊慌失措,竟在德国全境宣布了非法的戒严状态。
 
-- @nah: Yeah as if.
+- @nah: 呵,才怪。
 
 @nah
 on-arrival: spd_rebel = 1
-subtitle: It's time for a civil war showdown.
+subtitle: 到了内战摊牌的时候了。
 
 We mobilize the Reichsbanner to meet the SA in the streets as the Reichswehr is called out of its barracks to fight us. [? if judicial_reform >= 2 : The courts strike down the martial law, handing us legitimacy. ?][? if judicial_reform < 2 : The courts certify the martial law, but we know they're illegitimate. ?]
 

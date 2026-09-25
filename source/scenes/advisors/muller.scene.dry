@@ -16,7 +16,7 @@ view-if: muller_advisor = 1
 - @root: 返回主界面
 
 @coalition
-title: Negotiating with the Coalition
+title: 与执政联盟谈判
 subtitle: 米勒可以改善我们与执政盟友的关系。
 choose-if: advisor_action_timer <= 0 and spd_in_government = 1
 unavailable-subtitle: [? if advisor_action_timer > 0 : 距下次顾问行动还有 [+ advisor_action_timer +] 个月。 ?][? if not spd_in_government: 社民党不在政府之中。 ?]

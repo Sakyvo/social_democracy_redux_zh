@@ -1,5 +1,5 @@
-title: Hugenberg Ousted!
-subtitle: The DNVP emerges from crisis
+title: 胡根贝格被赶下台!
+subtitle: 国家人民党走出危机
 view-if: dnvp_banned != 1 and hindenburg_dead and coup_progress < 6 and dnvp_votes >= 10 and nationalism < pro_republic and sa_force+sh_force < 50 and right_coalition < 50 and nsdap_votes < spd_votes
 on-arrival: dnvp_reform = 1; dnvp_reform_timer = (nationalism/5); z_relation -= 5; dvp_relation -= 5; old_middle_dnvp -= 2; rural_dnvp += 5; new_middle_dnvp -= 1; sh_militancy -= 0.1; sa_strength -= 50; sh_strength += 50; nationalism += 5; 
 max-visits: 1

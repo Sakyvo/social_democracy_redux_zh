@@ -1,5 +1,5 @@
-title: Civil War in Spain!
-subtitle: A civil war has erupted in the Spanish Republic...
+title: 西班牙内战!
+subtitle: 西班牙共和国爆发了内战……
 view-if: year == 1936 and month >= 7
 max-visits: 1
 tags: event
@@ -15,8 +15,8 @@ A civil war has broken out in Spain after a failed coup attempt against the newl
 
 There is a broad consensus in our party in favor of sending aid to the Republicans, though this is complicated by the [+ foreign_minister_party +] Foreign Ministry, which plans to declare and commit to neutrality, as well as the fact that sending aid would be in violation of the Treaty of Versailles. We can try and persuade or pressure them to at the very least not commit to the French-proposed non-intervention pact, or allow them to go ahead with their plans.
 
-- @pressure_foreign: Pressure [+ foreign_minister_party +] into taking a different course of action.
-- @allow_foreign: Allow the pact to be made.
+- @pressure_foreign: 施压 [+ foreign_minister_party +],迫其改弦更张。
+- @allow_foreign: 容许缔结该协定。
 
 @pressure_foreign
 go-to: dvp_foreign if foreign_minister_party == "DVP"; z_foreign if foreign_minister_party == "Z"
@@ -26,13 +26,13 @@ on-arrival: coalition_dissent += 1; dvp_relation -= 5
 
 The DVP is very reluctant to change their stance. The most they are willing to accept is to postpone the issue without signing onto the non-intervention pact.
 
-- @persuade_dvp: Persuade the DVP to postpone the issue.
+- @persuade_dvp: 说服人民党推迟这一议题。
 - @collapse_govt: 无法接受。我们要搞垮这个政府,并要求举行新的选举。
 - @allow_foreign: 再想想,我们还是让步吧。
 
 @persuade_dvp
 choose-if: dvp_relation >= 45
-unavailable-subtitle: The DVP is unwilling to compromise in the slightest.
+unavailable-subtitle: 人民党丝毫也不愿妥协。
 on-arrival: left_dissent += 3; new_middle_spd -= 1; republic_strength += 1 if not third_period
 
 We persuade a very reluctant DVP to accept the compromise of postponing, though this is unlikely to work as a long term solution. Let's hope the Republicans can survive in the meantime even without our help.
@@ -47,21 +47,21 @@ on-arrival: coalition_dissent += 1; z_relation -= 4; dvp_relation -= 2
 
 The Center Party is reluctant to change their stance, but we may be able to negotiate them into very reluctantly accepting aid to the Republicans, or a compromise of postponing the issue.
 
-- @demand_z: Pressure Zentrum into accepting aid.
-- @persuade_z: Persuade Zentrum into postponing the issue.
+- @demand_z: 施压中央党,迫其接受援助。
+- @persuade_z: 说服中央党推迟这一议题。
 - @collapse_govt: 无法接受。我们要搞垮这个政府,并要求举行新的选举。
 - @allow_foreign: 再想想,我们还是让步吧。
 
 @demand_z
 choose-if: z_party_leader == "Joos" and chancellor_party == "SPD" and z_relation >= 60
-unavailable-subtitle: The Center Party is unwilling to cave to our demands.
+unavailable-subtitle: 中间派 Party is unwilling to cave to our demands.
 on-arrival: coalition_dissent += 1; weimar_dissent += 3 if weimar_plan_adopted; budget -= 1; reichswehr_loyalty -= 0.05; spain_involved = 1; aid_level = 3; dvp_relation -= 5; z_relation -= 3; coup_progress += 1 if coup_progress >= 6; coup_progress += 1; left_dissent -= 4; west_relation -= 1; west_relation -= 1 if third_period; nationalism -= democratization; democratization += 1; pro_republic += 5; workers_spd += 2*(1-dissent); new_middle_spd += 2*(1-dissent); republic_strength += 1; republic_strength += 1 if not third_period
 
 We manage to persuade a very reluctant Center Party into allowing aid to the Republicans, though at great damage to our coalition. Let's hope this is enough to guarantee them a victory.
 
 @persuade_z
 choose-if: z_relation >= 35
-unavailable-subtitle: The Center Party is unwilling to compromise in the slightest.
+unavailable-subtitle: 中间派 Party is unwilling to compromise in the slightest.
 on-arrival: left_dissent += 3; weimar_dissent += 1 if weimar_plan_adopted; new_middle_spd -= 1; republic_strength += 1 if not third_period; kpd_coalition_dissent += 1
 
 We persuade the Center Party into accepting the compromise of postponing the issue of aid. Let's hope the Republicans can survive in the meantime even without our help.
@@ -77,9 +77,9 @@ Many in our party are calling for us to send military aid to the Republicans. Ho
 
 [? if in_popular_front or in_left_front : The KPD supports sending aid to the communists [? if in_popular_front : though the Center Party is opposed. ?] ?][? if in_weimar_coalition: The Center Party is opposed to sending aid. ?][? if in_grand_coalition : The Center Party and the DVP are opposed to sending aid. ?]
 
-- @aid: Send aid to the Republicans.
-- @neutrality: We will remain neutral, at least for now.
-- @nonintervention: Sign the French-sponsored non-intervention pact.
+- @aid: 向共和派提供援助。
+- @neutrality: 我们将保持中立,至少眼下如此。
+- @nonintervention: 签署法国推动的不干涉协定。
 
 @aid
 subtitle: -1 财政预算
@@ -90,13 +90,13 @@ on-arrival: budget -= 1; reichswehr_loyalty -= 0.05; spain_involved = 1; aid_lev
 We go ahead with our plans to send aid to the Spanish Republicans, upsetting our bourgeois coalition partners and France but pleasing the left flank of our party. Let's hope its enough to win their war and stop the further spread of fascism.
 
 @neutrality
-subtitle: We will not involve ourselves, not yet at least.
+subtitle: 我们不会介入 —— 至少现在还不会。
 on-arrival: left_dissent += 3; new_middle_spd -= 1; kpd_coalition_dissent += 1; z_relation += 2; republic_strength += 1 if not third_period
 
 Whether it be by choice or being unable, we do not send aid to the Republicans. This decision is well received by our bourgeois partners, but criticized by [? if in_popular_front or in_left_front : our communist coalition partners as well as ?] the Left of our party.
 
 @nonintervention
-subtitle: We will commit fully to neutrality.
+subtitle: 我们将完全保持中立。
 on-arrival: nonintervention = 1; capital_strike_progress -= 1; coup_progress -= 1; west_relation += 1; left_dissent += 7; z_relation += 5; dvp_relation += 4; coalition_dissent -= 1; kpd_coalition_dissent += 2; kpd_relation -= 4; workers_spd -= 2; new_middle_spd -= 2; republic_strength -= 1; republic_strength += 1 if not third_period; national_strength -= 1 if abysinnia
 
 Rather than involve ourselves, we sign the French proposed non-intervention pact, pledging neutrality in the Spanish Civil War. This move is highly criticized by the Left of our party and the communists, but is met with approval abroad and from our bourgeois allies. Let's just hope that our refusal to support the Republicans does not win the Nationalists the war.
@@ -107,7 +107,7 @@ on-arrival: nonintervention = 1; spd_intervention = 1; west_relation += 1; repub
 There is a broad consensus in our party in favor of sending aid to the Republicans despite the restrictions on sending military aid in the treaty of Versailles. The government however has pulled Germany into the French non-intervention pact.
 
 - @nothing_to_do: 我们无能为力。
-- @break_toleration: We will break toleration and bring down the government.
+- @break_toleration: 我们将结束容忍,搞垮这个政府。
 
 @nothing_to_do
 on-arrival: left_dissent += 5 if spd_toleration; new_middle_spd -= 1 if spd_toleration;
@@ -127,7 +127,7 @@ We have definitively broken with the [+ chancellor +] government, and have voted
 
 Many in our party are calling for us to send military aid to the Republicans. The Communists, whom we govern with and whom control the Foreign Ministry, plan to send military aid to Spain, as do the Soviets.
 
-- @foreign_support: Yes, we support sending aid to the Republicans.
+- @foreign_support: 好,我们支持向共和派提供援助。
 - @foreign_oppose: 不,这必须制止。
 
 @foreign_support

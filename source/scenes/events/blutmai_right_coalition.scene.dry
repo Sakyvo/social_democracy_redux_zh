@@ -11,12 +11,12 @@ Tensions run high in Berlin. The Communists are planning a demonstration to comm
 
 Many on our party's left-wing have called on us to join in the demonstration, but this would only increase the risk of violence and could make reconciliation with the right-wing parties impossible. What should we do?
 
-- @join: We will join in the demonstration.
-- @not: We will stay out of this.
+- @join: 我们将加入示威。
+- @not: 我们置身事外。
 
 @join
 choose-if: kpd_relation >= 30
-unavailable-subtitle: The KPD does not trust us enough.
+unavailable-subtitle: 共产党对我们不够信任。
 on-arrival: kpd_relation += 20; volksmai = 1; z_relation -= 10; z_relation -= 5 if z_party_leader != "Joos"; dvp_relation -= 25; workers_spd += 3*(1-dissent); new_middle_spd -= 5; new_middle_spd += 3 if new_middle_conscious; old_middle_spd -= 5; unemployed_spd += 3*(1-dissent); workers_kpd += 3; unemployed_kpd += 3; workers_z -= 3; workers_dnvp -= 3; communist_coalition += 2; reformist_strength -= 10; reformist_dissent += 10; neorevisionist_dissent += 10; left_strength += 10; rfb_banned = 1; rfb_strength -= 100; strife += 2; socialism += 4
 achievement: die_rote_fahne
 face-image: img/blutmai.jpg
@@ -33,10 +33,10 @@ We do not participate in the demonstration, and it is a good thing that we didn'
 
 What is our party's position?
 
-- @dont: The party will not adopt a position on this tragedy.
-- @pacifism: We condemn political violence on all sides, and this is another case of that.
-- @pro_kpd: It is the fault of corrupt and reactionary elements within the police, which we will purge, and the government that directed them. 
-- @pro_z: It is the fault of the Communists for refusing to follow the rule of law.
+- @dont: 本党不会就这场悲剧表态。
+- @pacifism: 我们谴责各方的政治暴力,这一次也不例外。
+- @pro_kpd: 这要怪警察内部腐败与反动的分子 —— 我们将予以清洗 —— 以及指使他们的人。" 
+- @pro_z: 这要怪共产党拒绝遵守法治。
 
 @dont
 

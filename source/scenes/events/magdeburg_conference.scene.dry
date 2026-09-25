@@ -1,5 +1,5 @@
-title: Magdeburg Conference
-subtitle: The SPD holds a party conference in Magdeburg
+title: 马格德堡代表大会
+subtitle: 社民党在马格德堡召开党的代表大会
 new-page: true
 tags: event
 view-if: year == 1929 and month >= 5
@@ -296,8 +296,8 @@ go-to: coalition_menu if spd_in_government and in_grand_coalition; spd_military_
 
 Thus, to pre-empt the left, a motion is submitted by the centrists to pass the matter on to the agenda, while the left around Aufhäuser and Sender attempt to pass a motion to criticize the behavior of the SPD's ministers and press the parliamentary group to advocate a variety of the demands of labor, something the trade unions are naturally sympathetic towards.
 
-- @destroy_groko: The motion by Aufhäuser and Sender against the grand coalition is passed.
-- @preserve_groko: The motion to pass the matter on to the agenda so as to preserve the government is passed.
+- @destroy_groko: 奥夫霍伊泽与森德尔反对大联盟的动议获得通过。
+- @preserve_groko: 为保住政府而将该事项移交议程的动议获得通过。
 
 @destroy_groko
 subtitle: 左翼与工会派 ([+ antitoleration_unity +]%) [? if antitoleration_unity < 50 : —— 部分中间派或许会被说动。 ?]
@@ -308,7 +308,7 @@ go-to: spd_military_policy
 The motion by the left is passed, tying the SPD's ministers and parliamentary group to party discipline for advocacy of the demands of labor irregardless of the concerns of the coalition. Naturally, the bourgeois parties are upset, and the government as a whole less stable.
 
 @preserve_groko
-subtitle: The Center and the Right ([+ pragmatic_unity +]%) [? if pragmatic_unity < 50 : - some trade unionists may be swayed. ?]
+subtitle: 中间派与右翼 ([+ pragmatic_unity +]%)[? if pragmatic_unity < 50 : —— 部分工会人士或许会被说动。 ?]
 choose-if: antitoleration_unity < 65
 on-arrival: left_dissent += 5; reformist_dissent -= 5; center_strength += 5
 go-to: spd_military_policy
@@ -319,8 +319,8 @@ The motion by the center is passed, effectively delaying any firm committment by
 
 Meanwhile, the Armed Forces Commission of the SPD has presented before the conference its report, outlining the guidelines for future military policy by the SPD.
 
-- @wip: WIP
+- @wip: 开发中
 
 @wip
-subtitle: There should be two options here, but I need to find a good source on the military policy in question before I can add two options for a vote result. But don't worry, you aren't missing out on much, probably. It'd just be like "the left doesn't like this because imperialism but the center and right like it because government" and then you pick which one and trade off some dissent in return. So yeah, it's not so important, don't worry about missing out. The much cooler thing here is the fun graphs of your internal factions. One day I'm gonna tie it to economic plans, just you wait. 
+subtitle: 这里本该有两个选项,但在我找到关于所涉军事政策的可靠资料之前,没法为表决结果加上两个选项。不过别担心,你大概也不会错过多少。无非就是「左翼因为帝国主义而不喜欢,中间派与右翼出于执政考虑而喜欢」这样,然后你挑一个,用一些异议作交换。所以,是的,这并不重要,不必担心错过。这里真正酷得多的是你党内各派系的有趣图表。总有一天我会把它跟经济计划挂上钩,你就等着瞧吧。 
 go-to: root

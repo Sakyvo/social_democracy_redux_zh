@@ -1,5 +1,5 @@
 title: 兴登堡之死
-subtitle: The Great War hero and one-time president has died...
+subtitle: 这位大战英雄、曾经的总统逝世了……
 new-page: true
 view-if: year = 1934 and month >= 7 and president != "Hindenburg"
 on-arrival: hindenburg_dead = 1; nazi_peak = 1; nazi_peak_timer = (nsdap_votes/2); nazi_decline = 1; pro_republic += 10

@@ -1,5 +1,5 @@
-title: Global Economic Recovery
-subtitle: Finally, the world economy is leaving the worst throes of the depression.
+title: 全球经济复苏
+subtitle: 世界经济终于摆脱了大萧条最痛苦的挣扎。
 view-if: year = 1933 and month >= 6
 on-arrival: unemployed -= 3 if unemployed > 25; unemployed -= 2 if unemployed > 15; unemployed -= 1 if unemployed > 8; workers_nsdap -= 5; unemployed_nsdap -= 5; inflation += 1.5 if inflation < 0; socialism += 4 if nationalization_progress >= 1; socialism -= 6 if wtb_implemented >= 1
 new-page: true

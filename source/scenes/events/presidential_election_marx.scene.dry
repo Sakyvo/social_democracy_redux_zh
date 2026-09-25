@@ -1,5 +1,5 @@
 title: 总统选举
-subtitle: President Marx considers re-election...
+subtitle: 马克思总统考虑竞选连任……
 view-if: year = 1932 and (month = 4 or month = 5) and presidential_election_seen = 0 and presidency_abolished != 1 and president == "Marx"
 frequency: 1000
 max-visits: 1
@@ -21,7 +21,7 @@ on-arrival: reactionary_consolidate = 0; reactionary_consolidate = 1 if nsdap_vo
 
 [? if kpd_relation >= 50 : 另一个奇怪的可能是与共产党结成统一战线 —— 或者支持台尔曼,或者支持我们自己的候选人。 ?]
 
-- @support_marx: Support Marx.
+- @support_marx: 支持马克思。
 - @support_braun: 推举社民党的奥托·布劳恩参选。
 - @support_thalmann: 支持共产党的恩斯特·台尔曼。
 
@@ -31,7 +31,7 @@ on-arrival: spd_support_marx = 1
 
 威廉·马克思于 1925 年作为各共和派政党的候选人当选,他这次将再次以同样的身份当选。
 
-- @dvp_marx: Can we convince the DVP to back Marx?
+- @dvp_marx: 我们能否说服人民党支持马克思?
 - @final_election: 最后的表决……
 
 @dvp_marx
@@ -64,7 +64,7 @@ unavailable-subtitle: [? if kpd_relation < 50 : 我们与共产党的关系还�
 
 - @support_thalmann_2: 是的,尽管改良派恳求不要这样做,我们仍将支持台尔曼。
 - @support_braun: 改为支持布劳恩。
-- @support_marx: Support Marx instead.
+- @support_marx: 改为支持马克思。
 
 @support_thalmann_2
 on-arrival: spd_support_thalmann = 1; reformist_dissent += 15; center_dissent += 10; labor_dissent += 5; neorevisionist_dissent += 10; catholics_spd -= 5; workers_spd -= 3; kpd_relation += 10; communist_coalition += 2; z_relation -= 15; dvp_relation -= 15; ddp_relation -= 10
@@ -110,7 +110,7 @@ on-arrival: adenauer_campaign = 0
 中央党对我们的理由并不满意,但愿意被说服。如果我们先垫付资源,他们愿意与我们联合竞选。
 
 - @pay_z: 给他们所需的资源。
-- @z_failed: Forget about the Center.
+- @z_failed: 别管中央党了。
 
 @pay_z
 choose-if: resources >= 3
@@ -407,7 +407,7 @@ on-arrival: president = nsdap_candidate; chancellor = "Hitler" if presidential_p
 [? if nsdap_candidate == "Hitler" : 纳粹党的阿道夫·希特勒赢得了总统之位。他毫不浪费时间地开始集权。 ?]
 [? if nsdap_candidate != "Hitler" : 纳粹党候选人 [+ president +] 获胜。总统 [+ president +] 采取的第一个行动,就是邀请希特勒重返德国,并任命他为总理。纳粹毫不浪费时间地开始集权。 ?]
 
-- @hitler_victory: What do we do now?
+- @hitler_victory: 我们现在该怎么办?
 - @hitler_referendum: 我们现在该怎么办?
 - @hitler_stall: 我们现在该怎么办?
 
@@ -451,11 +451,11 @@ go-to: z_support_braun_auto if (((hitler_plurality or (duesterberg_votes+hitler_
 
 在第二轮中,任何获得相对多数的候选人即可总体获胜。我们该怎么办?
 
-- @r2_z_braun: Convince the Center Party to back Otto Braun.
-- @r2_dvp_braun: Convince the DVP to back Otto Braun.
-- @r2_dvp_marx: Convince the DVP to back Wilhelm Marx.
-- @r2_kpd_braun: Convince the KPD to back Otto Braun.
-- @round2_voting: Let the voting begin...
+- @r2_z_braun: 说服中央党支持奥托·布劳恩。
+- @r2_dvp_braun: 说服人民党支持奥托·布劳恩。
+- @r2_dvp_marx: 说服人民党支持威廉·马克思。
+- @r2_kpd_braun: 说服共产党支持奥托·布劳恩。
+- @round2_voting: 开始投票……
 
 @round2_voting
 go-to: post_election

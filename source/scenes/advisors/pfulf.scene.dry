@@ -39,7 +39,7 @@ title: 以全民党的身份开展宣传
 subtitle: 在我们以往并不传统的部分群体中开展宣传。
 view-if: peoples_party = 1
 choose-if: advisor_action_timer = 0
-unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
+unavailable-subtitle: [? if advisor_action_timer > 0 : 距下次顾问行动还有 [+ advisor_action_timer +] 个月。 ?]
 on-arrival: advisor_action_timer = 6; last_advisor_action = 1
 go-to: peoples_party_campaigning
 

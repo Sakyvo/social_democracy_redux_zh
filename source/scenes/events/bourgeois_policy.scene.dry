@@ -1,5 +1,5 @@
-title: The Governance of Germany
-subtitle: [+ chancellor +] is busy at work
+title: 德国的治理
+subtitle: [+ chancellor +] 正忙于政务
 view-if: not spd_in_government and (spd_toleration or in_bourgeois_coalition or in_right_coalition) and ((year >= 1935 or (year >= 1934 and month >= 4)) or return_to_normalcy) and (time >= next_policy_time)
 tags: event
 new-page: true
@@ -63,11 +63,11 @@ max-choices: 1
 - @anti_state_buyer: 取消国家对粮食的垄断
 - @chud_agenda: 回撤妇女与同性恋权利
 - @agricultural_subsidies: 农业补贴
-- @collapse: The government collapses!
+- @collapse: 政府垮台!
 
 @tax_cuts
 view-if: (budget > 2 or (budget >= 2 and upper_tax_rates >= 3)) and (inflation < 4 or unemployed >= 8)
-subtitle: The bourgeoisie cut taxes
+subtitle: 资产阶级减税
 frequency: 200
 on-arrival: budget -= 2; workers_z += 2; workers_dvp += 2*(1-(socialism/100)); new_middle_dvp += 5; old_middle_dvp += 3; rural_dvp += 3; old_middle_dnvp += 3 if in_right_coalition; rural_dnvp += 3 if in_right_coalition; rural_dvp += 3 if not in_right_coalition; old_middle_dvp += 3 if not in_right_coalition; upper_tax_rates -= 1; lower_tax_rates -= 1; unemployed -= 1 if unemployed >= 5; capital_strike_progress -= 1 if upper_tax_rates < 0; inflation += 0.4; economic_growth += 0.4; socialism -= 1
 
@@ -75,7 +75,7 @@ on-arrival: budget -= 2; workers_z += 2; workers_dvp += 2*(1-(socialism/100)); n
 
 @tax_hikes
 view-if: (budget <= 0 or (budget <= 1 and inflation >= 7)) and inflation >= 4
-subtitle: The bourgeoisie raise taxes
+subtitle: 资产阶级加税
 frequency: 200
 on-arrival: budget += 3; new_middle_dvp -= 2; new_middle_ddp -= 2 if not in_right_coalition; old_middle_dvp -= 2; old_middle_dvp -= 2 if not in_right_coalition; old_middle_dnvp -= 2 if in_right_coalition; workers_dvp -= 3; workers_ddp -= 2 if not in_right_coalition; rural_dvp -= 2; rural_dvp -= 2 if not in_right_coalition; rural_dnvp -= 2 if in_right_coalition; unemployed += 2; lower_tax_rates += 1; upper_tax_rates += 1; capital_strike_progress += 1 if upper_tax_rates > 1; capital_strike_progress += 1 if upper_tax_rates > 2; workers_z -= 5 if lower_tax_rates > 1; inflation -= 1.1; economic_growth -= 0.6;
 
@@ -87,7 +87,7 @@ on-arrival: budget += 3; new_middle_dvp -= 2; new_middle_ddp -= 2 if not in_righ
 @regressive_tax
 frequency: 200
 view-if: (upper_tax_rates >= 2 or ((upper_tax_rates > 0 and capital_strike_progress >= 5) or (upper_tax_rates >= (3-capital_strike_progress) and upper_tax_rates > -5))) or (upper_tax_rates >= -3 and bourgeois_power < 0.8)
-subtitle: The bourgeoisie make taxation more regressive
+subtitle: 资产阶级让税制更加累退
 on-arrival: workers_z -= 5; workers_dvp -= 5; workers_dnvp -= 5 if in_right_coalition; workers_dvp -= 5 if not in_right_coalition; bourgeois_power += 0.02; new_middle_dvp += 5*bourgeois_power; old_middle_dvp += 6*bourgeois_power; upper_tax_rates -= 1; lower_tax_rates += 1; workers_dvp -= 5 if lower_tax_rates >= 2; capital_strike_progress -= 1 if upper_tax_rates < 0; socialism += 2
 
 政府的累退税政策有利于富人,却伤害穷人与工人阶级。
@@ -98,7 +98,7 @@ on-arrival: workers_z -= 5; workers_dvp -= 5; workers_dnvp -= 5 if in_right_coal
 @welfare_cuts
 frequency: 200
 view-if: (welfare+2) >= budget
-subtitle: The bourgeoisie cut welfare spending
+subtitle: 资产阶级削减福利开支
 on-arrival: budget += 1; workers_dvp -= 3; workers_z -= 3; workers_ddp -= 3 if not in_right_coalition; workers_dnvp -= 3 if in_right_coalition; unemployed_kpd += 5; workers_kpd += 2; workers_kpd += 1 if sapd_consolidated != 1; workers_sapd += 1 if sapd_consolidated == 1; welfare -= 1; pro_republic -= 3; inflation -= 0.3; unemployed += 0.4; economic_growth -= 0.2;
 
 政府削减了社会福利开支水平。这意味着工人阶级要承受更多贫困与苦难。
@@ -109,7 +109,7 @@ on-arrival: budget += 1; workers_dvp -= 3; workers_z -= 3; workers_ddp -= 3 if n
 @welfare_hikes
 frequency: 100
 view-if: ((welfare+2) < budget) and (in_recession or unemployed >= 10) and inflation < 3.5 and budget > 0
-subtitle: The bourgeoisie increase welfare spending
+subtitle: 资产阶级增加福利开支
 go-to: pre_depression if unemployed < 15; post_depression if unemployed >= 15
 
 @pre_depression
@@ -126,7 +126,7 @@ on-arrival: budget -= 1; workers_dvp += bourgeois_power; workers_z += bourgeois_
 frequency: 100
 view-if: budget > 2 and tariffs > -5 and not in_right_coalition and (rural_spd_normalized < (rural_dvp_normalized+rural_other_normalized+rural_z_normalized+rural_ddp_normalized)) and (rural_dnvp_normalized > (rural_dvp_normalized+rural_z_normalized+rural_other_normalized+rural_ddp_normalized))
 on-arrival: tariffs -= 1; budget -= 2; inflation -= 0.5; workers_ddp += 2*bourgeois_power; workers_dvp += 2*bourgeois_power; rural_dvp -= 5; old_middle_dvp -= 3; west_relation += 1; east_relation += 1; eu_progress += 1 if eu_progress > 0; economic_growth += 0.4; socialism -= 2
-subtitle: The bourgeoisie cut tariffs 
+subtitle: 资产阶级削减关税 
 
 政府降低关税,通过增加供给压低消费者价格。这有利于工业与城市贫民,却伤害了面向国内市场生产商品的小生产者。
 
@@ -134,7 +134,7 @@ subtitle: The bourgeoisie cut tariffs
 frequency: 50
 view-if: inflation < 3 and (budget < 2 or in_right_coalition or rural_spd_normalized >= (rural_dnvp_normalized+rural_dvp_normalized)) and not eu_progress and tariffs < 3
 on-arrival: gov_tension += 1 if budget >= 2; tariffs += 1; inflation += 1 if inflation > 0; inflation += 0.5 if inflation <= 0; unemployed += 1.5; budget += 2; workers_dvp -= 3; workers_ddp -= 2 if not in_right_coalition; workers_dnvp -= 2 if in_right_coalition; workers_z -= 2; unemployed_z -= 2; rural_dvp += 4*bourgeois_power; old_middle_dvp += 3*bourgeois_power; rural_ddp += 2*bourgeois_power if not in_right_coalition; rural_dnvp += 4*bourgeois_power if in_right_coalition; rural_spd -= 4*bourgeois_power if rural_spd_normalized >= 20; west_relation -= 1; east_relation -= 1; reparations_negotiation -= 2; eu_progress -= 1 if eu_progress > 0; economic_growth -= 0.4; socialism += 2
-subtitle: The bourgeoisie hike tariffs 
+subtitle: 资产阶级提高关税 
 
 政府提高关税税率,推高通货膨胀,损害工人阶级的消费。报复性关税削弱德国出口的竞争力,推高工人失业。它们还会造成国际猜忌的气氛,削弱我们与他国谈判的能力。
 
@@ -147,7 +147,7 @@ subtitle: The bourgeoisie hike tariffs
 frequency: 200
 view-if: not in_right_coalition and (west_relation < 5 or east_relation < 4)
 on-arrival: west_relation += 1; east_relation += 1
-subtitle: The bourgeoisie engage with their international counterparts
+subtitle: 资产阶级与其国际同侪往来
 
 政府已与德国的邻邦展开谈判,寻求改善关系,以促进欧洲和平。
 
@@ -155,7 +155,7 @@ subtitle: The bourgeoisie engage with their international counterparts
 frequency: 200
 view-if: in_right_coalition
 on-arrival: soviet_relation += 1; reichswehr_militancy += 0.05; gov_tension += 1 if soviet_relation > west_relation
-subtitle: The bourgeoisie engage in dialogue with the Soviets
+subtitle: 资产阶级与苏联展开对话
 
 政府已与苏联展开谈判,旨在推进重整军备的目标,并促成更广泛的反凡尔赛阵营 —— 尽管双方存在意识形态分歧。
 
@@ -164,7 +164,7 @@ frequency: 200
 view-if: west_relation >= 5 and east_relation >= 4 and not in_right_coalition and not eu
 on-arrival: eu_progress += 1; west_relation += 1
 go-to: success if west_relation >= 5 and east_relation >= 4 and eu_progress >= 2
-subtitle: The bourgeoisie discuss a combined continental market
+subtitle: 资产阶级讨论建立一个联合的欧洲大陆市场
 
 政府正推动会谈,探讨建立欧洲联盟。
 
@@ -172,9 +172,9 @@ subtitle: The bourgeoisie discuss a combined continental market
 
 出人意料,会谈成功了!已签署一项条约,与法国、英国以及东西欧众多其他国家共同组建欧洲联盟。该条约如今有待批准。
 
-- @vote_eu: We support the EU, of course.
+- @vote_eu: 我们当然支持欧盟。
 - @oppose_eu: 我们反对欧盟!
-- @ratified: The treaty is ratified.
+- @ratified: 条约获得批准。
 
 @vote_eu
 view-if: spd_toleration
@@ -201,7 +201,7 @@ frequency: 100
 view-if: not in_right_coalition and chancellor_party == "Z" and gov_tension < 2 and not reichskonkordat
 on-arrival: reichskonkordat_progress += 2; gov_tension += 1;
 go-to: concordat_signed if reichskonkordat_progress >= 4 and gov_tension < 2
-subtitle: The Center seeks a Concordat
+subtitle: 中央党寻求缔结政教协定
 
 政府正谈判与梵蒂冈签署一份政教协定。自由派与新教政党不愿支持此举,使政府关系紧张。
 
@@ -209,9 +209,9 @@ subtitle: The Center seeks a Concordat
 
 政府已与梵蒂冈签署政教协定!余下的就看它能否获得批准。
 
-- @vote_concordat: We support the Reichskonkordat.
+- @vote_concordat: 我们支持国家政教协定。
 - @oppose_concordat: 我们反对国家政教协定。
-- @ratified_concordat: The treaty is ratified.
+- @ratified_concordat: 条约获得批准。
 
 @vote_concordat
 view-if: spd_toleration
@@ -234,7 +234,7 @@ go-to: break_toleration
 @employers
 frequency: 100
 view-if: bourgeois_power < 0.9 or capital_strike_progress >= 3
-subtitle: The bourgeoisie suppress labor in favor of capital
+subtitle: 资产阶级为资本而压制劳工
 on-arrival: gov_tension += 1 if z_party_leader == "Joos"; bourgeois_power += 0.02; workers_z -= 3; workers_ddp -= 3 if not in_right_coalition; workers_dnvp -= 3 if in_right_coalition; workers_dvp -= 3; workers_kpd += 2; workers_kpd += 1 if sapd_consolidated != 1; workers_sapd += 1 if sapd_consolidated == 1; capital_strike_progress -= 1 if capital_strike_progress > 1; capital_strike_progress -= 1 if capital_strike_progress > 8; socialism += 2
 
 对罢工的镇压削弱了资产阶级在工人中的号召力,却很好地增强并服务于他们的金主。我们必须针对这一点展开鼓动。
@@ -260,7 +260,7 @@ go-to: rally.main_rally
 @compromise
 frequency: 100
 view-if: (((workers_spd_normalized+workers_kpd_normalized+workers_sapd_normalized) >= 85) or (workers_kpd_normalized+workers_sapd_normalized >= 50)) and bourgeois_power >= 0.9 and capital_strike_progress < 3
-subtitle: The bourgeoisie attempt to foster a class peace
+subtitle: 资产阶级试图促成阶级和平
 on-arrival: workers_spd -= workers_spd*(0.1-(0.1*(socialism/100)))*bourgeois_power; workers_ddp += 3*bourgeois_power if not in_right_coalition; workers_dnvp += 3*bourgeois_power if in_right_coalition; workers_z += 2*bourgeois_power; workers_dvp += 2*bourgeois_power; gov_tension += 1 if (bourgeois_power < 1 or capital_strike_progress > 0)
 
 政府通过试图在阶级之间折中来应对罢工,这在一定程度上疏远了他们的工业家支持者。然而,尽管这些折中在回应有组织劳工的关切上远远不够,它们仍代表着明确的示好姿态,在一定程度上增强了他们打破社会主义对工人阶级掌控的企图。
@@ -268,7 +268,7 @@ on-arrival: workers_spd -= workers_spd*(0.1-(0.1*(socialism/100)))*bourgeois_pow
 @rearmament
 frequency: 100
 view-if: (in_right_coalition and budget > 1) or (budget > 2 and (reichswehr_strength*reichswehr_militancy < 500))
-subtitle: The bourgeoisie seek to rearm Germany
+subtitle: 资产阶级谋求重整德国军备
 on-arrival: budget -= 1; reichswehr_strength += 10 if reichswehr_strength <= 90; reichswehr_militancy += 1; economic_growth += 0.1; west_relation -= 1; east_relation -= 1; gov_tension += 1 if eu_progress; eu_progress -= 1
 
 政府已启动一项重整军备的计划,试图增强国防军的实力。这项计划将带来什么后果尚不清楚,但我们的邻邦正忧心忡忡地注视着。
@@ -280,7 +280,7 @@ on-arrival: budget -= 1; reichswehr_strength += 10 if reichswehr_strength <= 90;
 frequency: 100
 view-if: (in_right_coalition and judicial_reform > 0) or (judicial_reform > 3)
 on-arrival: gov_tension += 1 if judicial_reform < 3; judicial_reform -= 1; nationalism += 3 if judicial_reform < 2; pro_republic -= 3 if judicial_reform < 3
-subtitle: The bourgeoisie seek to undo our judicial reforms
+subtitle: 资产阶级图谋撤销我们的司法改革
 
 政府已启动一项小幅司法改革,推翻、逆转了我们的做法。他们声称我们的尝试意在把司法政治化,还说我们清除的许多法官,比他们那些年轻而莽撞的共和派接任者更有经验。
 
@@ -291,7 +291,7 @@ subtitle: The bourgeoisie seek to undo our judicial reforms
 view-if: in_right_coalition and interior_police_loyalty > 0.4 or (z_relation < nationalism and interior_police_loyalty > 0.25)
 frequency: 100
 on-arrival: interior_police_loyalty -= 0.05; interior_police_loyalty -= (nationalism/1000); gov_tension += 1 if interior_police_loyalty < 0.55; gov_tension += 1 if interior_police_loyalty < 0.35
-subtitle: The reactionaries strike at the police force
+subtitle: 反动派向警察队伍发难
 
 政府已启动一项逆转性的内政改革,国家人民党试图使警察部队去共和化,并向其中注入对德国民族主义、而非社会主义的忠诚。我们掌权后必须扭转这些政策。
 
@@ -299,7 +299,7 @@ subtitle: The reactionaries strike at the police force
 view-if: (in_right_coalition and reichswehr_loyalty > 0.25) or military_reforms
 frequency: 150
 on-arrival: military_reforms -= 1 if military_reforms; reichswehr_loyalty -= 0.05; coup_progress -= 1; reichswehr_militancy += 0.25 if military_reforms and reichswehr_militancy < 5; sh_militancy -= 0.025
-subtitle: The government undoes our military reforms
+subtitle: 政府撤销了我们的军事改革
 
 政府已启动一项计划:[? if military_reforms : 让被清除的反动军官复职,并 ?]以资历为由清除共和派军官;他们声称旧一代的反动分子不过是更优秀的指挥官,更适合领军。
 
@@ -309,7 +309,7 @@ subtitle: The government undoes our military reforms
 @disempower_councils
 view-if: works_councils > 0 and (bourgeois_power < 0.9 or capital_strike_progress >= 3 or (works_councils >= 2 and ((workers_spd_normalized+workers_kpd_normalized+workers_sapd_normalized) < 85)))
 frequency: 250
-subtitle: The bourgeoisie attack economic democracy
+subtitle: 资产阶级攻击经济民主
 on-arrival: works_councils -= 1; capital_strike_progress -= 1; economic_democracy -= 1; workers_dvp -= 5; workers_ddp -= 3 if not in_right_coalition; workers_dnvp -= 3 if in_right_coalition; workers_z -= 2
 go-to: works_councils_0 if works_councils == 0; works_councils_1 if works_councils == 1; works_councils_2 if works_councils == 2; works_councils_3 if works_councils == 3
 
@@ -346,7 +346,7 @@ on-arrival: bourgeois_power += 0.05; economic_growth -= 0.3; unemployed += 1; in
 view-if: nationalization_progress > 0 and ((not (president == "Braun" or president == "Schumacher" or president == "Juchacz" or president == "Thälmann" or president == "Münzenberg")) or (in_bourgeois_coalition or in_right_coalition))
 on-arrival: socialism -= 1; nationalization_progress -= 1; capital_strike_progress -= 2; bourgeois_power += 0.05; unemployed += 3.5 if unemployed < 6; unemployed += 1.2 if works_councils < 3; workers -= 2 if nationalization_progress >= 2; budget += 3; works_program -= 1; workers_spd += 2*(1-dissent); unemployed_spd += 3*(1-dissent); new_middle_spd -= 2; new_middle_spd += 1 if new_middle_conscious; old_middle_spd -= 3; inflation -= 2; economic_growth -= 1.7 if economic_growth >= 5
 frequency: 500
-subtitle: The bourgeoisie reassert their economic primacy
+subtitle: 资产阶级重申其经济上的主导地位
 
 政府推行了一项私有化计划,以自由市场之名逆转了我们自己的国有化计划。
 
@@ -363,7 +363,7 @@ on-arrival: reformist_dissent += 5
 你确定吗?这至少按资产阶级及其法院的看法,意味着妨碍司法。单是考虑这个选项,就已激怒了我们的改良派。
 
 - @fight_2: 对,战斗。
-- @no: [? if fun_value != 42 : No. ?][? if fun_value == 42 : *Peace-lovin' man, I'm a peace-lovin' man and I'll do what I can yes I do, and I've got my eye on the sly little man who is putting the finger on you, and when things ain't right, I don't wanna fight, I'd rather go and sit in the ra-ain, peace-lovin' man I'm a peace-lovin' man and I won't - tell - you - a-gain!* ?]
+- @no: [? if fun_value != 42 : 不。 ?][? if fun_value == 42 : *爱好和平的人,我是个爱好和平的人,我会尽我所能,是的我会,我盯着那个暗中对你指指点点的狡猾小人,当事情不对劲时,我不想打斗,我宁愿去坐进雨——雨里,爱好和平的人我是个爱好和平的人,我不会——再——告——诉——你一遍!* ?]
 
 @no
 
@@ -398,7 +398,7 @@ on-arrival: socialism -= 3; rb_militancy -= 0.05; workers_kpd += 5; unemployed_k
 view-if: price_controls and inflation < 5
 frequency: 10000
 on-arrival: price_controls = 0; black_market = 0; capital_strike_progress -= 3; inflation += 3; unemployed -= 1; old_middle_dvp += 4; new_middle_dvp += 3; rural_dvp += 5; workers_dvp += 2; rural_ddp += 2 if not in_right_coalition; rural_dnvp += 4 if in_right_coalition; unemployed_spd += 3; economic_growth += 0.4
-subtitle: The bourgeoisie lift price and wage controls
+subtitle: 资产阶级取消价格与工资管制
 
 政府取消了我们所实施的物价与工资管制,随着经济重新调整,通货膨胀急剧上升 —— 尽管至少脱离其潜在后果来看,这一决定目前在民众中相对受欢迎。
 
@@ -408,7 +408,7 @@ subtitle: The bourgeoisie lift price and wage controls
 @privatizing_media
 view-if: socialized_media
 frequency: 1000000
-subtitle: The bourgeoisie restores its control over the narrative
+subtitle: 资产阶级重新掌控话语权
 on-arrival: socialized_media = 0; economic_growth += 3*bourgeois_power; unemployed -= 2*bourgeois_power; inflation -= 1*bourgeois_power; bourgeois_power += 0.1; coup_progress -= 5; socialism -= 5; socialism -= 8 if state_media; workers_spd -= 6 if state_media; unemployed_spd -= 6 if state_media; new_middle_spd -= 6 if state_media; old_middle_spd -= 6 if state_media; rural_spd -= 5 if state_media; state_media = 0
 
 政府恢复了私人对媒体的控制,在把印刷厂与报纸交还给私人掌控的同时,高唱新闻自由。
@@ -419,7 +419,7 @@ on-arrival: socialized_media = 0; economic_growth += 3*bourgeois_power; unemploy
 @unbanning_financing
 view-if: financing_banned
 frequency: 10000000
-subtitle: The bourgeoisie restores its influence on politics
+subtitle: 资产阶级恢复其对政治的影响力
 on-arrival: financing_banned = 0; economic_growth += 1*bourgeois_power; unemployed += 0.7*bourgeois_power; inflation += 0.5*bourgeois_power; bourgeois_power += 0.05; coup_progress -= 3; socialism -= 5
 
 政府取消了对私人政党融资的禁令,将其彻底重新合法化。与此相伴的,是各党为挽回支持、攻击社会主义而开展的全面宣传。
@@ -430,7 +430,7 @@ on-arrival: financing_banned = 0; economic_growth += 1*bourgeois_power; unemploy
 @suppressing_reichsbanner
 view-if: (rb_exit and rb_force >= 20) or (in_right_coalition and rb_force >= 5)
 frequency: 100
-subtitle: The bourgeoisie suppress the Reichsbanner
+subtitle: 资产阶级镇压国旗团
 on-arrival: rb_militancy -= 0.05*(1-interior_police_loyalty); rb_militancy -= 0.05*(1-interior_police_loyalty) if in_right_coalition; gov_tension += 1 if not rb_exit; left_strength += 5; neorevisionist_strength -= 5
 
 政府对国旗团实施了广泛的镇压,没收枪支与军事装备。左翼宣称自己此前的担忧得到了印证。
@@ -442,7 +442,7 @@ on-arrival: rb_militancy -= 0.05*(1-interior_police_loyalty); rb_militancy -= 0.
 view-if: kpd_votes+rfb_force >= dnvp_votes
 on-arrival: kpd_relation += 3 if not spd_toleration; workers_kpd -= 4*(1-interior_police_loyalty); unemployed_kpd -= 4*(1-interior_police_loyalty); rfb_militancy -= 0.05*(1-interior_police_loyalty) if rfb_militancy >= 0.05; workers_sapd -= 3*(1-interior_police_loyalty) if in_right_coalition or sapd_votes >= 5; workers_spd -= 5*(1-interior_police_loyalty)*(left_strength/100) if in_right_coalition or left_strength >= 50; gov_tension += 1 if in_right_coalition and left_strength < 50 and sapd_votes < 5
 frequency: 200
-subtitle: The bourgeoisie suppresses the communists [? if in_right_coalition : and Marxists in a broader sense ?]
+subtitle: 资产阶级镇压共产党人[? if in_right_coalition : ,以及更广泛意义上的马克思主义者 ?]
 
 政府对共产党人及其附属组织实施了广泛的镇压,其影响也波及更广泛的马克思主义团体。
 
@@ -453,7 +453,7 @@ subtitle: The bourgeoisie suppresses the communists [? if in_right_coalition : a
 view-if: state_buyer
 frequency: 1000
 on-arrival: bourgeois_power += 0.05; budget += 2; state_buyer = 0; rural_spd -= 2*dissent; inflation += 0.5 if inflation < 3; rural_nsdap += 3*dissent; rural_dvp -= 3; rural_dnvp -= 6 if in_right_coalition; rural_dvp -= 6 if not in_right_coalition; capital_strike_progress -= 1; economic_growth -= 0.4; socialism += 2; old_middle_dvp += 5*bourgeois_power; new_middle_dvp += 5*bourgeois_power
-subtitle: The bourgeoisie remove the state monopoly on grain purchases
+subtitle: 资产阶级取消国家对粮食收购的垄断
 
 国家收购计划的废除恢复了自由市场在粮食分配中的主导地位,推高了消费者价格,也以动荡威胁着农民。尽管如此,资本主义的报界仍把这描绘成对一项可怕政策的里程碑式废除,城市的中间阶层也被鼓动着产生同样的感觉。
 
@@ -464,7 +464,7 @@ subtitle: The bourgeoisie remove the state monopoly on grain purchases
 view-if: progressive_coalition < 50 and (womens_rights or homosexual_rights)
 frequency: 100
 on-arrival: gov_tension += 1 if not in_right_coalition
-subtitle: Traditionalists pursue a return to "traditional" German values
+subtitle: 传统主义者谋求回归「传统的」德国价值观
 max-choices: 1
 
 政府决定通过废除我们所推行的标志性进步改革,来复归传统的德国价值观。
@@ -478,7 +478,7 @@ max-choices: 1
 - @liberalize: 收紧堕胎法律。
 
 @labor
-subtitle: Paid maternal leave policies, equal pay policies, and so on.
+subtitle: 带薪产假、同工同酬等政策。
 view-if: womens_work
 on-arrival: womens_work -= 1; womens_rights -= 1; new_middle_ddp -= 4 if not in_right_coalition; economic_growth -= 0.1;
 
@@ -488,7 +488,7 @@ on-arrival: womens_work -= 1; womens_rights -= 1; new_middle_ddp -= 4 if not in_
 - @tolerate
 
 @family
-subtitle: Change family and inheritance law to treat women more unfairly.
+subtitle: 修改家庭与继承法,使女性受到更不公平的对待。
 view-if: family_law
 on-arrival: family_law -= 1; womens_rights -= 1; new_middle_ddp -= 2 if not in_right_coalition; workers_ddp -= 3 if not in_right_coalition; old_middle_dvp += 4; rural_dvp += 4; rural_dnvp += 4 if in_right_coalition; catholics_z += 6
 
@@ -518,7 +518,7 @@ on-arrival: abortion_rights -= 1; womens_rights -= 1; catholics_z += 10; workers
 - @tolerate
 
 @repeal_175
-subtitle: Paragraph 175 once criminalized homosexual acts. Though we repealed it, the government will reinstate it.
+subtitle: 第 175 条曾将同性性行为入罪。尽管我们已将其废除,政府将予以恢复。
 view-if: repealed_175
 on-arrival: repealed_175 = 0; homosexual_rights -= 1; catholics_z += 4; economic_growth -= 0.1;
 
@@ -528,7 +528,7 @@ on-arrival: repealed_175 = 0; homosexual_rights -= 1; catholics_z += 4; economic
 - @tolerate
 
 @reform_183
-subtitle: Paragraph 183 once criminalized public homosexual displays and cross-dressing. Though we reformed it, the government will reinstate it.
+subtitle: 第 183 条曾将公开的同性表现与异装行为入罪。尽管我们已将其改革,政府将予以恢复。
 view-if: reformed_183
 on-arrival: reformed_183 = 0; homosexual_rights -= 1; catholics_z += 4; economic_growth -= 0.1;
 
@@ -538,7 +538,7 @@ on-arrival: reformed_183 = 0; homosexual_rights -= 1; catholics_z += 4; economic
 - @tolerate
 
 @change_sex
-subtitle: We created a legal process for individuals to change their sex, making their lives easier. The government will now remove it.
+subtitle: 我们创设了一套让个人更改法定性别的法律程序,使他们的生活更为便利。政府现在将把它取消。
 view-if: trans_rights
 on-arrival: trans_rights = 0; homosexual_rights -= 1; catholics_z += 4; economic_growth -= 0.1;
 frequency: 1000
@@ -551,7 +551,7 @@ frequency: 1000
 - @tolerate
 
 @agricultural_subsidies
-subtitle: The bourgeoisie gives hand outs to farmers
+subtitle: 资产阶级向农民发放补贴
 frequency: 150
 view-if: budget > 2 and (rural_spd_normalized >= (rural_dvp_normalized+rural_other_normalized+rural_z_normalized+rural_ddp_normalized)) or (in_right_coalition and (rural_dnvp_normalized < (rural_spd_normalized+rural_other_normalized+rural_nsdap_normalized)))
 on-arrival: budget -= 1; agricultural_finance += 1; rural_spd -= 5*bourgeois_power; rural_nsdap -= 3*bourgeois_power; rural_dvp += 5*bourgeois_power; rural_dvp += 3*bourgeois_power if not in_right_coalition; rural_dnvp += 6*bourgeois_power if in_right_coalition; rural_sol += 4; economic_growth += 0.2;
@@ -559,8 +559,8 @@ on-arrival: budget -= 1; agricultural_finance += 1; rural_spd -= 5*bourgeois_pow
 政府增加了对小农的财政支持,为他们提供信贷与保险,使他们免于贫困。
 
 @break_toleration
-title: We will end our toleration agreement.
-subtitle: This will likely mean new elections.
+title: 我们将终止容忍协议。
+subtitle: 这很可能意味着新的选举。
 on-arrival: spd_toleration = 0; time_to_election = 3; z_relation -= 3; ddp_relation -= 2; dvp_relation -= 2; left_dissent -= 2
 call: set_next_election_time
 view-if: spd_toleration
@@ -568,8 +568,8 @@ view-if: spd_toleration
 我们中止了容忍协议,迫使新的选举定于 [+ next_election_month : month +] [+ next_election_year +] 举行。
 
 @tolerate
-title: We have no choice but to tolerate these actions.
-subtitle: This will upset our base.
+title: 我们别无选择,只能容忍这些举措。
+subtitle: 这会让我们的基本盘不满。
 on-arrival: left_dissent += 10; labor_dissent += 5; workers_spd -= 5; unemployed_spd -= 5; new_middle_spd -= 3; socialism -= 2
 view-if: spd_toleration
 
@@ -580,7 +580,7 @@ view-if: gov_tension >= 3
 frequency: 150
 on-arrival: time_to_election = 4; ddp_relation += 5 if not in_right_coalition; z_relation += 5 if in_right_coalition
 call: set_next_election_time
-subtitle: The government has fallen to its internal disagreements
+subtitle: 政府因内部分歧而倒台
 
 政府垮台导致了提前选举,定于 [+ next_election_month : month +] [+ next_election_year +]。
 

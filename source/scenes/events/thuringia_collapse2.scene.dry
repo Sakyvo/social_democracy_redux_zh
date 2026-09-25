@@ -1,5 +1,5 @@
-title: Toleration ends in Thuringia
-subtitle: The Thuringian SPD has turned on the bourgeois parties of the state
+title: 图林根的容忍终结
+subtitle: 图林根社民党与该州的资产阶级政党反目了
 new-page: true
 tags: event
 view-if: landtags_enabled and thuringia_toleration and thuringeration_timer <= 0 and (reformist_strength < left_strength+labor_strength or reformist_strength < center_strength)

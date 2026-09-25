@@ -1,5 +1,5 @@
 title: 总统选举
-subtitle: President Hindenburg considers re-election...
+subtitle: 兴登堡总统考虑竞选连任……
 view-if: year = 1932 and (month = 4 or month = 5) and presidential_election_seen = 0 and presidency_abolished != 1 and president == "Hindenburg"
 frequency: 1000
 max-visits: 1
@@ -28,7 +28,7 @@ go-to: hindenburg_runs if hindenburg_running or zca_formed; hindenburg_reluctant
 
 [? if kpd_relation >= 50 : 另一个奇怪的可能是与共产党结成统一战线 —— 或者支持台尔曼,或者支持我们自己的候选人。 ?]
 
-- @support_hindenburg: Support Hindenburg.
+- @support_hindenburg: 支持兴登堡。
 - @support_braun: 推举社民党的奥托·布劳恩参选。
 - @support_thalmann: 支持共产党的恩斯特·台尔曼。
 
@@ -61,7 +61,7 @@ unavailable-subtitle: [? if kpd_relation < 50 : 我们与共产党的关系还�
 
 - @support_thalmann_2: 是的,尽管改良派恳求不要这样做,我们仍将支持台尔曼。
 - @support_braun: 改为支持布劳恩。
-- @support_hindenburg: Support Hindenburg instead.
+- @support_hindenburg: 改为支持兴登堡。
 
 @support_thalmann_2
 on-arrival: spd_support_thalmann = 1; reformist_dissent += 15; center_dissent += 10; labor_dissent += 5; neorevisionist_dissent += 10; catholics_spd -= 5; workers_spd -= 3; kpd_relation += 10; communist_coalition += 2; z_relation -= 15; dvp_relation -= 15; ddp_relation -= 10; weimar_dissent += 3; hindenburg_motivated = 1 if not hindenburg_running; hindenburg_running = 1 if not hindenburg_running; hitler_support_hindenburg = 1 if hindenburg_running and largest_party != "NSDAP" and nsdap_votes < dnvp_votes + other_votes + dvp_votes + z_votes 
@@ -81,8 +81,8 @@ on-arrival: spd_support_thalmann = 1; reformist_dissent += 15; center_dissent +=
 
 重要的一点是,兴登堡总统似乎极有可能不会竞选连任。他尚未宣布参选;除非我们自己推出一位社会主义、进步的候选人角逐此职,或者支持台尔曼,否则他似乎已经打消了这个念头。
 
-- @support_eckener: Support Hugo Eckener as a joint Weimar Coalition candidate.
-- @support_gessler: Support the presumptive Bürgerblock candidate, Otto Gessler.
+- @support_eckener: 支持胡戈·埃克纳作为魏玛联盟的联合候选人。
+- @support_gessler: 支持市民联盟的推定候选人奥托·格斯勒。
 - @support_braun: 推举社民党的奥托·布劳恩参选。
 - @support_thalmann: 支持共产党的恩斯特·台尔曼。
 
@@ -105,7 +105,7 @@ on-arrival: dvp_support_eckener = 1 if dvp_relation > 40; burgerblock_campaign =
 - @final_election: 最后的表决……
 
 @support_gessler
-subtitle: Barring Eckener, the Bürgerblock may run Gessler.
+subtitle: 若无埃克纳,市民联盟可能推举格斯勒。
 on-arrival: spd_support_gessler = 1; burgerblock_campaign = 1
 
 我们选择与市民联盟其余成员一道为奥托·格斯勒助选。尽管他有军国主义倾向,但愿他能保住民主。
@@ -140,7 +140,7 @@ go-to: braun_campaign
 中央党对我们的理由并不满意,但愿意被说服。如果我们先垫付资源,他们愿意与我们联合竞选。
 
 - @pay_z: 给他们所需的资源。
-- @braun_campaign: Forget about the Center.
+- @braun_campaign: 别管中央党了。
 
 @pay_z
 choose-if: resources >= 3
@@ -464,9 +464,9 @@ There is no majority in this round. In the second round, any candidate who wins 
 
 - @round2_convince_z: 说服中央党把支持转给我们。
 - @round2_convince_kpd: 说服共产党把支持转给我们。 
-- @round2_hindenburg: Switch our support to Hindenburg.
-- @round2_thalmann: Switch our support to Thälmann of the KPD.
-- @hold_the_phone: Let the second round voting begin.
+- @round2_hindenburg: 把我们的支持转向兴登堡。
+- @round2_thalmann: 把我们的支持转向共产党的台尔曼。
+- @hold_the_phone: 开始第二轮投票吧。
 - @round2_vote: 开始第二轮投票吧。
 
 @hold_the_phone
@@ -474,14 +474,14 @@ view-if: spa_ties
 
 就在我们即将进入与兴登堡的决选之际,我们通过国际联系收到一条消息。
 
-- @yay: We have finally received a reply from the Americans!
+- @yay: 我们终于收到了美国人的答复!
 
 @yay
 on-arrival: spa_ties = 0
 
 美国社会党祝愿我党在即将到来的、与兴登堡的总统决选中好运。
 
-- @round2_vote: Now, the second round...
+- @round2_vote: 现在,第二轮……
 
 @round2_convince_z
 view-if: braun_campaign > 0 and z_support_braun != 1 
@@ -520,8 +520,8 @@ on-departure: hitler_support_hindenburg = 1 if braun_votes + z_votes > hitler_vo
 
 中央党对我们的理由并不满意,但愿意被说服[? if hitler_support_hindenburg: ,尤其是在纳粹支持兴登堡的情况下。 ?]。如果我们先垫付资源,他们愿意与我们联合竞选。
 
-- @r2_pay_z: Give them the resources they need.
-- @round2_menu: Forget about the Center.
+- @r2_pay_z: 给他们所需的资源。
+- @round2_menu: 别管中央党了。
 
 @r2_pay_z
 choose-if: resources >= 2
@@ -551,9 +551,9 @@ max-visits: 1
 
 共产党决心支持恩斯特·台尔曼。 [? if kpd_relation >= 45 : 不过,纳粹与兴登堡的联盟让他们足够担忧,因此愿意被说服放弃竞选、转支持布劳恩。 ?][? if kpd_relation < 45 : 他们似乎不愿被说服。 ?]
 
-- @r2_kpd_resources: Use our resources.
-- @r2_kpd_relations: Use our good relations.
-- @round2_menu: Forget about the KPD.
+- @r2_kpd_resources: 动用我们的资源。
+- @r2_kpd_relations: 动用我们的良好关系。
+- @round2_menu: 别管共产党了。
 
 @r2_kpd_resources
 view-if: kpd_relation >= 45 and not historical_mode
@@ -576,14 +576,14 @@ go-to: round2_menu
 @round2_thalmann
 view-if: spd_support_thalmann == 0 and kpd_support_braun == 0
 choose-if: kpd_relation >= 50 and left_strength > reformist_strength 
-unavailable-subtitle: [? if kpd_relation < 50 : We do not have good enough relations with the Communists, so they are not even willing to accept our support. ?] [? if reformist_strength >= left_strength : The reformist faction is able to dissuade the party from supporting this bizarre arrangement. ?]
+unavailable-subtitle: [? if kpd_relation < 50 : 我们与共产党人的关系还不够好,他们连我们的支持都不愿接受。 ?] [? if reformist_strength >= left_strength : 改良派能够劝住本党,不去支持这一古怪的安排。 ?]
 max-visits: 1
 
 即便共产党人接受我们的支持,支持台尔曼在我党中也颇不受欢迎。你确定吗?
 
-- @round2_thalmann_2: Yes, we will support Thälmann, despite the reformists' pleas against it.
-- @round2_thalmann_2_no_hindenburg: Yes, we will support Thälmann, despite the reformists' pleas against it.
-- @round2_menu: Never mind.
+- @round2_thalmann_2: 好,尽管改良派苦苦反对,我们仍将支持台尔曼。
+- @round2_thalmann_2_no_hindenburg: 好,尽管改良派苦苦反对,我们仍将支持台尔曼。
+- @round2_menu: 算了。
 
 @round2_thalmann_2
 view-if: hindenburg_running
@@ -663,7 +663,7 @@ on-arrival: president = nsdap_candidate; chancellor = "Hitler" if presidential_p
 [? if nsdap_candidate == "Hitler" : 纳粹党的阿道夫·希特勒赢得了总统之位。他毫不浪费时间地开始集权。 ?]
 [? if nsdap_candidate != "Hitler" : 纳粹党候选人 [+ president +] 获胜。总统 [+ president +] 采取的第一个行动,就是邀请希特勒重返德国,并任命他为总理。纳粹毫不浪费时间地开始集权。 ?]
 
-- @hitler_victory: What do we do now?
+- @hitler_victory: 我们现在该怎么办?
 - @hitler_referendum: 我们现在该怎么办?
 - @hitler_stall: 我们现在该怎么办?
 
@@ -713,7 +713,7 @@ on-arrival: president = "Seldte"; chancellor = "Hitler" if presidential_powers !
 
 钢盔团的弗朗茨·泽尔特竟不知怎的赢得了总统之位。 [? if presidential_powers != 1 : 他的第一个动作就是罢免现任总理,任命阿道夫·希特勒。 ?][? if presidential_powers : 所幸,对其权力的限制使他无法做出任何过于激进的举动。 ?]
 
-- @hitler_victory: What do we do now?
+- @hitler_victory: 我们现在该怎么办?
 
 @duesterburg_wins
 on-arrival: president = "Hindenburg"; pro_republic -= 10

@@ -1,5 +1,5 @@
-title: The Flag Dispute
-subtitle: A dispute over the colors of the German flag abroad arises
+title: 国旗之争
+subtitle: 一场关于海外德国国旗颜色的争执兴起
 view-if: year == 1926 and month >= 5 and chancellor == "Luther"
 new-page: true
 max-visits: 1
@@ -11,14 +11,14 @@ It has come to Chancellor Luther's attention that German expatriate groups abroa
 
 To ease over tensions with these expatriates, Luther is pushing for a revision of the flag law to make the black-white-red trade flag a secondary flag.
 
-- @unacceptable: This is unacceptable.
+- @unacceptable: 这无法接受。
 
 @unacceptable
 
 And so echo the Center and Democratic parties. Luther has caved, modifying the proposal so that it should only apply in consular institutions abroad. This, still, is too great of a concession to German nationalism, and the DDP is in agreement on this manner.
 
-- @in_government: Defeat Luther in a vote of the cabinet.
-- @vonc_luther: Call a motion of no confidence against Luther.
+- @in_government: 在内阁表决中击败路德。
+- @vonc_luther: 对路德提出不信任案。
 
 @in_government
 view-if: spd_in_government and not spd_toleration
@@ -37,19 +37,19 @@ The DNVP sides with Luther in the vote of no confidence, and it fails. However, 
 
 Otto Gessler of the DDP has been appointed as chancellor while a new government is negotiated, with Hindenburg hoping that Gessler may successfully form a government.
 
-- @vonc_gessler: We cannot support a government in the pockets of the Reichswehr.
+- @vonc_gessler: 我们不能支持一个受国防军操纵的政府。
 
 @vonc_gessler
 
 Of course, there is no way that we could support Gessler's assumption of chancellorship. Another alternative is Konrad Adenauer of the Center Party; he is unwilling to preside over a minority government, and seeks to include us.
 
-- @grand_coalition_adenauer: A Grand Coalition is formed!
-- @failed: Adenauer fails to form a government.
+- @grand_coalition_adenauer: 大联盟组成了!
+- @failed: 阿登纳组阁失败。
 
 @grand_coalition_adenauer
-subtitle: SPD + Z + BVP + DDP + DVP (61%)
+subtitle: 社民党 + 中央党 + 巴伐利亚人民党 + 民主党 + 人民党 (61%)
 choose-if: z_relation >= 50 and dvp_relation >= 50
-unavailable-subtitle: SPD + Z + BVP + DDP + DVP (61%) - [? if z_relation < 50 : The Center Party is unwilling. ?][? if dvp_relation < 50 : The DVP is unwilling. ?]
+unavailable-subtitle: 社民党 + 中央党 + 巴伐利亚人民党 + 民主党 + 人民党 (61%) - [? if z_relation < 50 : The Center Party is unwilling. ?][? if dvp_relation < 50 : The DVP is unwilling. ?]
 on-arrival: left_dissent += 5; coalition_dissent += 1; spd_toleration = 0; in_grand_coalition = 1; spd_in_government = 1; leverage = spd_r; leverage -= 5; chancellor = "Adenauer"; chancellor_party = "Z"; workers_spd -= 2; unemployed_spd -= 3; old_middle_dvp -= 2; new_middle_dvp -= 2
 go-to: election_1928.ministries
 
@@ -61,10 +61,10 @@ on-arrival: z_relation -= 5 if z_relation >= 50 and dvp_relation >= 50; dvp_rela
 
 As expected, Adenauer is unable to form a government, either, due to his insistence on including us and disagreements with Stresemann, whom Adenauer views as too Prussian.
 
-- @what_now: So who next?
+- @what_now: 那接下来是谁?
 
 @what_now
-subtitle: Wilhelm Marx assumes the task of government formation.
+subtitle: 威廉·马克思接下组阁任务。
 on-arrival: chancellor = "Marx"; chancellor_party = "Z"
 
 In the end, another minority government is formed, with Wilhelm Marx at its head. While the DVP[? if z_relation < 40 : and Center Party?] view this minority government as a stepping stone towards a majority one with the DNVP, the DDP[? if z_relation > 50 : and Center Party?] view it as a stepping stone towards a majority one with us.
@@ -83,20 +83,20 @@ The DNVP sides with Luther in the vote of no confidence, and it fails. However, 
 
 With Luther refusing to serve as interim, Otto Gessler succeeds him as Vice Chancellor. However, he and President Marx are under no illusion that he would win our support for a minority government.
 
-- @so_who: So who next?
+- @so_who: 那接下来是谁?
 
 @so_who
-subtitle: Marx asks Adenauer to form a government
+subtitle: 马克思请阿登纳组阁
 
 President Marx asks Konrad Adenauer to take on the task of government formation. Unwilling to preside over a temporary minority government as a stepping stone towards a majority one, he has immediately made overtures towards us, hoping to form a Grand Coalition.
 
-- @grand_coalition_adenauer2: A Grand Coalition is formed!
-- @failed2: Adenauer fails to form a government.
+- @grand_coalition_adenauer2: 大联盟组成了!
+- @failed2: 阿登纳组阁失败。
 
 @grand_coalition_adenauer2
-subtitle: SPD + Z + BVP + DDP + DVP (61%)
+subtitle: 社民党 + 中央党 + 巴伐利亚人民党 + 民主党 + 人民党 (61%)
 choose-if: z_relation >= 45 and dvp_relation >= 50 or (dvp_relation >= 45 and marx_relation >= 55)
-unavailable-subtitle: SPD + Z + BVP + DDP + DVP (61%) - [? if z_relation < 45 : The Center Party is unwilling. ?][? if dvp_relation < 50 : The DVP is unwilling. ?]
+unavailable-subtitle: 社民党 + 中央党 + 巴伐利亚人民党 + 民主党 + 人民党 (61%) - [? if z_relation < 45 : The Center Party is unwilling. ?][? if dvp_relation < 50 : The DVP is unwilling. ?]
 on-arrival: left_dissent += 5; in_grand_coalition = 1; spd_toleration = 0; spd_in_government = 1; leverage = spd_r; leverage -= 5; chancellor = "Adenauer"; chancellor_party = "Z"; workers_spd -= 1; unemployed_spd -= 2; old_middle_dvp -= 2; new_middle_dvp -= 2
 go-to: election_1928.ministries
 
@@ -108,10 +108,10 @@ on-arrival: z_relation -= 5 if z_relation >= 45 and dvp_relation >= 50; dvp_rela
 
 As expected, Adenauer is unable to form a government, either, due to his insistence on including us and disagreements with Stresemann, whom Adenauer views as too Prussian.
 
-- @what_now2: Brüning is appointed chancellor.
+- @what_now2: 布吕宁被任命为总理。
 
 @what_now2
-subtitle: Z + BVP + DDP + DVP (35%)
+subtitle: 中央党 + 巴伐利亚人民党 + 民主党 + 人民党 (35%)
 on-arrival: chancellor = "Brüning"; chancellor_party = "Z"
 
 In the end, another minority government is formed, with Heinrich Brüning at its head. While the DVP[? if z_relation < 40 : and Center Party?] view this minority government as a stepping stone towards a majority one with the DNVP, the DDP[? if z_relation > 50 : and Center Party?] view it as a stepping stone towards a majority one with us.

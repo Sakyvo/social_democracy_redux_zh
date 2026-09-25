@@ -1,5 +1,5 @@
-title: Wittorf Affair
-subtitle: A crisis in the KPD?
+title: 维托夫事件
+subtitle: 共产党的一场危机?
 new-page: true
 view-if: kpd_relation >= 30 and comintern_seen and year = 1928 and month >= 8 and month <= 10
 max-visits: 1
@@ -19,7 +19,7 @@ What should we do with this information?
 - @secret
 
 @publicize
-title: We will publicize the scandal to damage the KPD and Thälmann.
+title: 我们将公开这一丑闻,以打击共产党与台尔曼。
 on-arrival: kpd_relation -= 10; workers_kpd -= 4; unemployed_kpd -= 4; socialism -= 2
 
 Our newspapers are among the first to publicize the affair, bringing a torment of criticism to the hypocrisy of the communists. We have damaged the KPD's standing among the workers, but also perhaps closed the door on further cooperation.
@@ -27,14 +27,14 @@ Our newspapers are among the first to publicize the affair, bringing a torment o
 In the end, Stalin's pressure helps to keep Thälmann from facing much in the way of consequences.
 
 @nothing
-title: Do nothing with the information.
+title: 对这则消息不作任何处置。
 on-arrival: workers_kpd -= 2; unemployed_kpd -= 2
 
 The information spreads without our help, leading to some loss of KPD support among the workers.
 
 
 @secret
-title: It is best to keep this information secret. Prevent the Leninbund and dissident KPD members from spreading this.
+title: 最好把这则消息保密。阻止列宁同盟与持异议的共产党成员传播它。
 choose-if: levi_advisor or rosenfeld_advisor
 unavailable-subtitle: 我们在共产党的异见者中没有联系人。
 on-arrival: wittorf_secret = 1; reformist_dissent += 5; left_dissent += 5

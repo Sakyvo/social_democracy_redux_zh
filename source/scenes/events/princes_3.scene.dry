@@ -1,5 +1,5 @@
 title: 没收诸侯财产
-subtitle: The petition has reached the necessary quorum
+subtitle: 请愿已达到所需的法定人数
 view-if: time = princes_time and year == 1926
 tags: event
 max-visits: 1
@@ -28,8 +28,8 @@ new-page: true
 
 无论如何,这份请愿如今将交由国会表决。它被否决是不可避免的,这意味着正如预料的那样,将就此举行一场公投。 [? if princes_initiated : 或许我们真能设法获胜? ?]
 
-- @vote_for: We will vote for the law in the Reichstag.
-- @vote_against: We will vote against the law in the Reichstag.
+- @vote_for: 我们将在国会投票赞成这项法律。
+- @vote_against: 我们将在国会投票反对这项法律。
 - @luther_and_hindenburg_suck: 兴登堡总统与 [+ chancellor +] 内阁给我们抛来一道新的障碍。
 - @zmarx_reference: 反动的司法系统给我们抛来一道新的障碍。
 - @zmarx_wholesome: 人民党给我们抛来一道新的障碍。
@@ -40,8 +40,8 @@ on-arrival: reformist_dissent += 5; dvp_relation -= 5
 
 眼见请愿的超预期表现已昭示大势,我们改弦易辙,在国会中投票支持该法案。不出所料,它未能通过,这意味着就此举行公投。
 
-- @back_referendum: A referendum which we will support.
-- @neutral: A referendum we will continue to have no part in.
+- @back_referendum: 一场我们将予以支持的公投。
+- @neutral: 一场我们将继续置身事外的公投。
 
 @back_referendum
 on-arrival: reformist_dissent += 5; dvp_relation -= 5; z_relation -= 5; marx_relation -= 2; princes_initiated = 1; new_middle_spd -= 2; old_middle_spd -= 3
@@ -68,24 +68,24 @@ subtitle: 他们声称该法案违宪 —— 若果真如此,这次公投便属�
 
 贵族出身的兴登堡总统认为,这项针对贵族的法案违宪 —— 它并非服务于公共利益,而完全是出于政治动机。
 
-- @justice_minister_marx: Justice Minister Wilhelm Marx confirms this fact.
-- @justice_minister_radbruch: Justice Minister Gustav Radbruch must make a decision.
+- @justice_minister_marx: 司法部长威廉·马克思证实了这一事实。
+- @justice_minister_radbruch: 司法部长古斯塔夫·拉德布鲁赫必须作出决定。
 
 @justice_minister_radbruch
 view-if: justice_minister_party == "SPD"
 
 由于我们在 [+ chancellor +] 内阁中掌握司法部,我们可以决定这场公投是否合宪。
 
-- @constitutional: It is, of course, entirely constitutional.
-- @unconstitutional: The referendum is indeed unconstitutional.
+- @constitutional: 这当然完全合宪。
+- @unconstitutional: 这次公投确实违宪。
 
 @constitutional
 on-arrival: princes_constitutional = 1; coalition_dissent += 1; coup_progress += 1
 
 我们推翻兴登堡的意见,宣布这场公投合宪 —— 因为该法案的条款意味着它确实会服务于公共利益。这在内阁中引起重大争议。
 
-- @radbruch_resigns: Justice Minister Radbruch must resign.
-- @dvp_withdraws_gov: The DVP withdraws from government.
+- @radbruch_resigns: 司法部长拉德布鲁赫必须辞职。
+- @dvp_withdraws_gov: 人民党退出政府。
 - @menu_for_no_real_reason: 不过眼下,政府暂时保住了。
 
 @radbruch_resigns
@@ -119,9 +119,9 @@ go-to: menu_for_no_real_reason
 @menu_for_no_real_reason
 view-if: coalition_dissent < 2 or (coalition_dissent < 3 and (dvp_relation >= 40 or (dvp_relation >= 30 and president == "Marx")))
 
-- @campaign_big: Launch a massive campaign in support of the referendum!
-- @campaign_small: Launch a campaign in support of the referendum.
-- @filler: The referendum is in three months.
+- @campaign_big: 发动一场大规模的竞选,支持这次公投!
+- @campaign_small: 发动一场竞选,支持这次公投。
+- @filler: 公投在三个月后举行。
 
 @campaign_big
 view-if: not prince_campaigned
@@ -151,8 +151,8 @@ view-if: princes_initiated and president == "Marx" and judicial_reform < 2
 
 *国家法院*(最高法院)已向由 [+ justice_minister_party +] 掌握的司法部提交意见,认为拟议的这场公投违宪,因此不仅需要投票者的多数,还需要全体德国合格选民的非常多数。
 
-- @wrong_and_lame: The Justice Ministry finds the referendum entirely constitutional.
-- @true_true: The Justice Ministry agrees with the Supreme Court's opinion.
+- @wrong_and_lame: 司法部认定这次公投完全合宪。
+- @true_true: 司法部同意最高法院的意见。
 
 @wrong_and_lame
 view-if: justice_minister_party == "SPD"
@@ -194,9 +194,9 @@ subtitle: 他们声称该法案违宪 —— 若果真如此,这次公投便属�
 
 人民党的法律专家得出结论,认为这场公投违宪;在右翼施压要求不计手段否决该法案的背景下,人民党已把这些异议递交给司法部。
 
-- @wrong_and_lame2: The Justice Ministry finds the referendum entirely constitutional.
-- @coalition_dispute: The coalition is divided.
-- @true_true2: The Justice Ministry agrees with the DVP's opinion.
+- @wrong_and_lame2: 司法部认定这次公投完全合宪。
+- @coalition_dispute: 联盟内部出现分裂。
+- @true_true2: 司法部同意人民党的意见。
 
 @wrong_and_lame2
 view-if: justice_minister_party == "SPD"
@@ -215,9 +215,9 @@ view-if: justice_minister_party != "SPD" and spd_in_government
 
 执政联盟已然分裂;相比两党在国会中立场坚定的党团,司法部长的意见几乎无足轻重。
 
-- @pressure: The DVP must accept that it is constitutional.
-- @concede: The SPD must accept that it is unconstitutional.
-- @collapse: The government collapses.
+- @pressure: 人民党必须接受它合宪这一事实。
+- @concede: 社民党必须接受它违宪这一事实。
+- @collapse: 政府垮台。
 
 @pressure
 choose-if: coalition_dissent < 2

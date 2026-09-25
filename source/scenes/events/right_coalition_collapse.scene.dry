@@ -1,6 +1,6 @@
-title: Government Collapses
+title: 政府垮台
 new-page: true
-subtitle: The DNVP has entered an irreconcilable conflict with its coalition partners.
+subtitle: 国家人民党与其执政伙伴陷入了不可调和的冲突。
 tags: event
 on-arrival: right_coalition_failed = 1; dnvp_in_government = 0
 view-if: year = 1940 and month >= 8 and young_plan_seen == 1 and dnvp_in_government == 1
@@ -10,27 +10,27 @@ max-visits: 1
 
 As expected, the ruling government has collapsed as a result of the DNVP's staunch nationalism and opposition to the Young Plan. They have prepared a motion of no confidence which they are expected to call at the next session of the Reichstag. We must decide what we should do.
 
-- @enter_government: We should take the DNVP's place in government and form a Grand Coalition.
-- @toleration: We will vote against the motion of no confidence, allowing a minority government to continue.
-- @let_election: Let the election happen.
+- @enter_government: 我们应取代国家人民党进入政府,组成大联盟。
+- @toleration: 我们将投票反对那项不信任案,让一个少数派政府继续下去。
+- @let_election: 让选举进行吧。
 
 @enter_government
 choose-if: grand_coalition >= 50 and (z_relation >= 45 or z_party_leader == "Joos") and (dvp_relation >= 30 or stresemann_dead == 0)
-subtitle: SPD + Z + BVP + DDP + DVP
+subtitle: 社民党 + 中央党 + 巴伐利亚人民党 + 民主党 + 人民党
 on-arrival: leverage = spd_r
-unavailable-subtitle: SPD + Z + BVP + DDP + DVP - [? if grand_coalition < 50 : We do not have the votes. ?][? if (z_relation < 45 and z_party_leader != Joos) or (dvp_relation < 30 and stresemann_dead == 1) : The right would rather see their government fall than let us into government. ?]
+unavailable-subtitle: 社民党 + 中央党 + 巴伐利亚人民党 + 民主党 + 人民党 - [? if grand_coalition < 50 : We do not have the votes. ?][? if (z_relation < 45 and z_party_leader != Joos) or (dvp_relation < 30 and stresemann_dead == 1) : The right would rather see their government fall than let us into government. ?]
 go-to: election_1928.grand_coalition_z_lead
 
 @toleration
 choose-if: (spd_r + z_r + dvp_r + ddp_r + bvp_r + other_r) > 50
-subtitle: The current government will continue as long as we vote against the DNVP's motion of no confidence.
-unavailable-subtitle: We do not have the votes to defeat the motion of no confidence.
+subtitle: 只要我们投票反对国家人民党的不信任案,现任政府就能继续下去。
+unavailable-subtitle: 我们没有足够的票数否决这项不信任案。
 on-arrival: spd_toleration = 1; left_dissent += 5
 
 We have entered into a toleration agreement, allowing a center-right minority government to persist as any motion of no confidence attempted will be defeated. 
 
 @let_election
-subtitle: The government will fall and new elections will be scheduled.
+subtitle: 政府将垮台,新的选举将排上日程。
 on-arrival: next_election_time = time+3; next_election_month = month + 3; next_election_year = year; next_election_year = year + 1 if next_election_month > 12; next_election_month = next_election_month - 12 if next_election_month > 12
 
 We will not save the bourgeois government. It is time for new elections!

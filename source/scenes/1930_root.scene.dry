@@ -1,4 +1,4 @@
-title: 1930 root
+title: 1930 年开局
 on-arrival: {!
 Q.started = 1;
 Q.year_seen = 1;

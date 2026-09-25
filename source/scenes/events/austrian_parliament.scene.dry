@@ -1,6 +1,6 @@
-title: Suspension of the Austrian parliament
+title: 奥地利议会被中止
 new-page: true
-subtitle: Our southern neighbor is sliding into dictatorship.
+subtitle: 我们的南方邻国正滑向独裁。
 view-if: year = 1933 and (month = 3 or month = 4) and ((spd_in_government and foreign_minister_party = "SPD") or (austria_relation >= 1)or (hitler_deported))
 max-visits: 1
 on-arrival: austrian_parliament_seen = 1
@@ -20,8 +20,8 @@ Is there anything we could do?
 # - fund the Schutzbund
 # after this, supporting Austrians will raise sdapo_strength; if sdapo_strength >= 2, they'll enter a long civil war; if sdapo_strength >= 5, they'll win.
 
-- @eu_sanctions: Call upon the European Union to sanction Austria, unless the National Council is restored.
-- @diplomatic_pressure: Apply diplomatic pressure to Austria to restore the National Council.
+- @eu_sanctions: 呼吁欧洲联盟制裁奥地利 —— 除非其国民议会得以恢复。
+- @diplomatic_pressure: 对奥地利施加外交压力,促其恢复国民议会。
 - @fund_schutzbund: 支持奥地利社会民主党地下组织。
 - @nothing: 无能为力。
 

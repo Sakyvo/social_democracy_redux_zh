@@ -1,5 +1,5 @@
-title: A New Government Forms
-subtitle: [+ president +] is to appoint a new government
+title: 新政府成立
+subtitle: [+ president +] 将任命一个新政府
 view-if: year == 1927 and marx_rearmament
 new-page: true
 max-visits: 1
@@ -15,10 +15,10 @@ Following the fall of the previous government over secret rearmament plans by th
 
 Now, President Hindenburg has announced the formation of a new government.
 
-- @marx_iv: A fourth Marx cabinet.
+- @marx_iv: 马克思第四届内阁。
 
 @marx_iv
-subtitle: Z + BVP + DVP + DNVP ([+ right_coalition +]%)
+subtitle: 中央党 + 巴伐利亚人民党 + 人民党 + 国家人民党 ([+ right_coalition +]%)
 on-arrival: in_right_coalition = 1; dnvp_in_government = 1; old_middle_dnvp -= 3; old_middle_other += 3; new_middle_dnvp -= 3; new_middle_other += 3; rural_dnvp -= 3; rural_other += 3
 
 The DNVP has managed to make its way back into the government, as the cabinet is reshuffled to accomodate them. The DDP stays outside of this framework for now, finding Marx's planned policy on schools too favorable towards the denominational schools. 
@@ -27,10 +27,10 @@ The DNVP has managed to make its way back into the government, as the cabinet is
 
 Now, President Marx has announced the formation of a new government.
 
-- @bruning_ii: A second Brüning cabinet.
+- @bruning_ii: 布吕宁第二届内阁。
 
 @bruning_ii
-subtitle: Z + BVP + DVP + DNVP ([+ right_coalition +]%)
+subtitle: 中央党 + 巴伐利亚人民党 + 人民党 + 国家人民党 ([+ right_coalition +]%)
 on-arrival: in_right_coalition = 1; dnvp_in_government = 1; old_middle_dnvp -= 3; old_middle_other += 3; new_middle_dnvp -= 3; new_middle_other += 3; rural_dnvp -= 3; rural_other += 3
 
 The DNVP has managed to make its way back into the government, as the cabinet is reshuffled to accomodate them. The DDP stays outside of this framework for now, finding Brüning's planned policy on schools too favorable towards the denominational schools. 

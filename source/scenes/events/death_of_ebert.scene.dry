@@ -523,7 +523,7 @@ max-visits: 1
 - @new_middle: 由公职人员与白领构成的「新中间阶层」。
 - @old_middle: 由独立小商人与手工业者构成的「旧中间阶层」。
 - @rural: 乡村劳动者与小农 —— 他们过去觉得被我们忽视了。
-- @unemployed: The unemployed.
+- @unemployed: 失业者。
 
 @workers
 on-arrival: workers_spd += 6*(1-dissent); workers_spd -= 2 if unemployed >= 15; workers_spd -= 2 if unemployed >= 25; workers_spd += 6*(1-dissent) if wtb_adopted = 1; workers_spd += 3*(1-dissent) if nationalization_progress >= 1;

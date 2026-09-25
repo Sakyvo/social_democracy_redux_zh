@@ -1,5 +1,5 @@
-title: Hitler Sacked!
-subtitle: Hindenburg has turned on Hitler!
+title: 希特勒被罢免!
+subtitle: 兴登堡与希特勒反目了!
 view-if: president == "Hindenburg" and chancellor == "Hitler" and resisted_hitler and not hitler_been_sacked
 tags: event
 new-page: true

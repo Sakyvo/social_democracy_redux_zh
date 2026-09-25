@@ -1,5 +1,5 @@
-title: Red Banners Across Germany
-subtitle: The Communists surge through the new councils...
+title: 红旗遍德国
+subtitle: 共产党人在新的委员会中势头猛进……
 new-page: true
 view-if: supreme_soviet = 1 and ((rfb_strength*rfb_militancy)*(1+(kpd_influence/10))) >= ((rb_strength*rb_militancy)*(1-dissent)) and not rfb_banned
 max-visits: 1
@@ -12,8 +12,8 @@ With our transition into a Soviet Republic, the Communists have surged in popula
 
 Meanwhile, on the streets, their paramilitary RFB swells, parading from city to city, helping in the Communist campaign. Some on the right of our party alledge electoral fraud, but the Communists deny these claims, swearing a legitimate campaign. The unemployed are just happy to have a job, and the growing Communist army proves a gateway for many into radical ideology.
 
-- @reichsbanner.militant: Fund the Reichsbanner to compete with the Communists.
-- @observe: Observe the situation.
+- @reichsbanner.militant: 资助国旗团,以与共产党竞争。
+- @observe: 静观其变。
 
 @observe
 

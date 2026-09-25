@@ -1,6 +1,6 @@
-title: Uprising in Austria
+title: 奥地利起义
 new-page: true
-subtitle: In response to police attacks, the Austrian socialists are rising up...
+subtitle: 为回应警察的袭击,奥地利社会主义者正在起义……
 view-if: year = 1934 and (month = 2 or month = 3) and austrian_parliament_seen
 max-visits: 1
 on-arrival: austrian_civil_war_seen = 1
@@ -28,14 +28,14 @@ Eventually...
 - @sdapo_victory
 
 @crushed
-title: The rebellious Schutzbund has been crushed.
+title: 造反的护国团已被镇压。
 on-arrival: austria_defeat = 1
 view-if: sdapo_strength+nsdapo_force < 4
 
 The uprising lasted for no more than a few days before it was crushed. The Schutzbund and SDAPÖ were too weak and too divided to stand against the forces of the state. [? if hitler_deported : Hitler, for his participation in agitating against Dollfuß, has been arrested. There is at least one silver lining to the fascist consolidation, perhaps. ?]
 
 @long_war
-title: It is a civil war.
+title: 这就是一场内战。
 view-if: sdapo_strength+nsdapo_force < 6 and sdapo_strength+nsdapo_force >= 4
 on-arrival: austria_civil_war = 1
 
@@ -64,7 +64,7 @@ go-to: sdapo_victory if sdapo_strength+nsdapo_force >= 6; long_war_2 if sdapo_st
 We provide diplomatic and some financial and material support to the SDAPÖ forces.
 
 @force_peace
-title: Can we bring the sides together for a peace?
+title: 我们能促成双方议和吗?
 view-if: spd_in_government and foreign_minister_party = "SPD" and sdapo_strength = 5
 on-arrival: austria_peace = 1; pro_republic += 3; coup_progress -= 1; socialism += 1
 achievement: arbeiter_von_wien
@@ -81,7 +81,7 @@ No matter our efforts, the war continues. Too many lives are extinguished. Refug
 
 
 @sdapo_victory
-title: The Austrofascists are backing down!
+title: 奥地利法西斯分子正在退让!
 view-if: sdapo_strength+nsdapo_force >= 6
 go-to: true_victory if nsdapo_force < sdapo_strength; contested if sdapo_strength <= nsdapo_force
 
@@ -97,10 +97,10 @@ The result is that the Austrofascists have backed down! Caught in an untenable p
 
 The result is that the Austrofascists have backed down! Caught in an untenable position domestically and abroad, they have agreed to restore the National Council and resign from government, holding new elections. However...
 
-- @nsdapo: The Austrian Nazis are forming their own government!
+- @nsdapo: 奥地利纳粹正在组建自己的政府!
 
 @nsdapo
-subtitle: The civil war continues...
+subtitle: 内战仍在继续……
 on-arrival: z_relation -= 2; dvp_relation -= 2; workers_spd -= 2; new_middle_spd -= 3; rural_spd -= 3; old_middle_spd -= 4; unemployed_spd -= 2
 
 Rejecting the capitulation and calling on a general uprising of all German nationalists to fight for a national-socialist Austria, Hitler has turned against the SDAPÖ and directed the violence of the SA against it. He is pushing for total power, taking advantage of the power vacuum the civil war created to do so.

@@ -1,5 +1,5 @@
-title: KPD policy
-subtitle: The KPD ministers are carrying out their policy portfolios.
+title: 共产党的政策
+subtitle: 共产党的部长们正在推行各自的政策。
 new-page: true
 view-if: (in_popular_front or in_left_front) and (labor_minister_party = "KPD" or economic_minister_party = "KPD" or finance_minister_party = "KPD" or interior_minister_party = "KPD" or foreign_minister_party = "KPD") and (kpd_policy_timer = 0)
 on-arrival: kpd_policy_timer = 5
@@ -36,8 +36,8 @@ view-if: labor_minister_party = "KPD"
 
 Do we support their radical labor policy?
 
-- @labor_support: Of course we support labor.
-- @labor_oppose: No, this is too radical.
+- @labor_support: 我们当然支持劳工。
+- @labor_oppose: 不,这太激进了。
 
 @labor_support
 on-arrival: capital_strike_progress += 2; workers_kpd += 5; workers_spd += 3*(1-dissent); kpd_labor_support += 1; coalition_dissent += 1; z_relation -= 6; unemployment += 2; kpd_influence += 2
@@ -50,16 +50,16 @@ on-arrival: kpd_coalition_dissent += 1; workers_spd -= 5; workers_kpd += 5; kpd_
 We oppose the KPD's policy, and prevent it from being enacted. The KPD is displeased, as are the workers who would have stood to benefit.
 
 @economy
-title: Economy Ministry
-subtitle: The Economy Ministry is pursuing a policy of nationalizations.
+title: 经济部
+subtitle: 经济部正在推行国有化政策。
 view-if: economic_minister_party = "KPD" and nationalization_progress < 5
 
 The KPD-controlled Economy Ministry is planning a policy of mass nationalizations. [? if budget < 3 : They plan to use deficit spending to finance state takeovers of underutilized industrial enterprises, and run them for the benefit of the workers. ?] [? if budget >= 3 : They plan to buy out closed and underutilized industrial enterprises, and run them at full capacity for the benefit of the workers. ?] 
 
 Do we support this policy?
 
-- @economy_support: Yes, support the nationalization policy.
-- @economy_oppose: No, this must be stopped.
+- @economy_support: 好,支持国有化政策。
+- @economy_oppose: 不,这必须制止。
 
 @economy_support
 on-arrival: nationalization_progress += 1; capital_strike_progress += 4; unemployed -= 2.5 if unemployed >= 6; unemployed -= 1.2 if works_councils >= 3; budget -= 3; works_program += 1; workers_spd += 4*(1-dissent); workers_kpd += 8*(1-dissent); unemployed_kpd += 4*(1-dissent); coalition_dissent += 2; dvp_relation -= 6; z_relation -= 4; new_middle_spd -= 3; old_middle_spd -= 3; economy_goal_completed += 1; economic_growth += 1.7 if economic_growth < 5; economic_growth += 0.3 if budget < 0; kpd_influence += 2
@@ -73,13 +73,13 @@ After opposing the nationalization policy, the KPD has commenced a propaganda ca
 
 @finance
 title: 财政部
-subtitle: The Finance Ministry is increasing taxes on the rich.
+subtitle: 财政部正在提高对富人的税收。
 view-if: finance_minister_party = "KPD" and upper_tax_rates < 5
 
 The KPD-controlled Finance Ministry is planning a policy of heavy tax hikes on the rich to fund their other programs and plans. [? if capital_strike_progress >= 6 and not capital_strike_seen : Supporting this policy could lead to a confrontation with the already upset capitalists. ?]
 
-- @finance_support: Yes, we support increasing taxes on the rich.
-- @finance_oppose: No, now is not the right time.
+- @finance_support: 好,我们支持提高对富人的税收。
+- @finance_oppose: 不,现在时机不对。
 
 @finance_support
 on-arrival: upper_tax_rates += 1; capital_strike_progress += 1; capital_strike_progress += 1 if upper_tax_rates > 1; capital_strike_progress += 1 if upper_tax_rates > 3; workers_spd += 2*(1-dissent); workers_kpd += 3*(1-dissent); old_middle_spd -= 4; new_middle_spd -= 3; coalition_dissent += 1; coalition_dissent += 1 if capital_strike_progress >= 5; budget += 2; dvp_relation -= 3; unemployed += 1; finance_goal_completed += 1; inflation -= 0.6; economic_growth -= 0.4; kpd_influence += 2
@@ -93,12 +93,12 @@ We oppose the KPD's planned tax hikes on the rich, prompting them to launch a pr
 
 @foreign
 title: 外交部
-subtitle: The Foreign Ministry is aiding the Soviet Union.
+subtitle: 外交部正在援助苏联。
 view-if: foreign_minister_party = "KPD" and soviet_relation < 10
 
 The KPD-controlled Foreign Ministry is planning to send economic aid to the Soviet Union.
 
-- @foreign_support: Yes, we support aiding the Soviet Union.
+- @foreign_support: 好,我们支持援助苏联。
 - @foreign_oppose: 不,这必须制止。
 
 @foreign_support
@@ -113,13 +113,13 @@ We block the planned sending of aid to the Soviet Union, disappointing the Commu
 
 @interior
 title: 内政部
-subtitle: The Interior Ministry is engaged in a purge of the security services.
+subtitle: 内政部正在清洗安全机构。
 view-if: interior_minister_party = "KPD"
 
 The KPD-controlled Interior Ministry has recently begun a purge of its security services, removing suspected fascists from servive and replacing them with communists and, less frequently, social democrats. They justify this as necessary to combat the reactionary threat to the republic.
 
-- @interior_support: Yes, we support purging the security services.
-- @interior_oppose: No, this seems to be a pretext for a KPD power grab.
+- @interior_support: 好,我们支持清洗安全机构。
+- @interior_oppose: 不,这看来是共产党夺权的借口。
 
 @interior_support
 on-arrival: interior_police_loyalty += 0.1; kpd_influence += 2; new_middle_kpd += 3; new_middle_nsdap -= 2; new_middle_dnvp -= 2; pro_republic += 3; reformist_dissent += 5; unemployed += 0.3; rfb_strength += 20; sa_strength -= 10; sh_strength -= 10; interior_kpd_seen += 1
@@ -133,13 +133,13 @@ The purges are ended at our opposition, disappointing the Communists, who are qu
 
 @judicial
 title: 司法部
-subtitle: The Justice Ministry has launched a sweeping reform of the judiciary.
+subtitle: 司法部已启动对司法系统的全面改革。
 view-if: justice_minister_party = "KPD" and judicial_reform < 5
 
 The KPD-controlled Justice Ministry has begun sacking reactionary judges and replacing them with socialist or even outright communist ones as part of a scheme to end the reactionary bias in the country. Some in our party fear that the reactionary bias is just being replaced by a communist one, however.
 
-- @judicial_support: Yes, we support purging the security services.
-- @judicial_oppose: No, this seems to be a pretext for a KPD power grab.
+- @judicial_support: 好,我们支持清洗安全机构。
+- @judicial_oppose: 不,这看来是共产党夺权的借口。
 
 @judicial_support
 on-arrival: budget -= 1; kpd_influence += 2; judicial_reform += 2; new_middle_kpd += 2; coalition_dissent += 1; coup_progress += 1

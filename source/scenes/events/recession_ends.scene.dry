@@ -1,5 +1,5 @@
-title: Recession Ends
-subtitle: The economy has recovered!
+title: 衰退结束
+subtitle: 经济已经复苏!
 view-if: in_recession and recession_severity < 1 and year >= 1937
 on-arrival: {! 
 
@@ -42,7 +42,7 @@ new-page: true
 
 The global economy, including the German one, has recovered from the recession.
 
-- @hurray: Hurray.
+- @hurray: 万岁。
 
 @hurray
 on-arrival: socialism -= 5*bourgeois_power

@@ -1,5 +1,5 @@
-title: Center Party Conference
-subtitle: The Center Party chooses their new leader...
+title: 中央党代表大会
+subtitle: 中央党正在选出新的党魁……
 view-if: year = 1928 and month = 12 and z_party_leader = "Marx"
 max-visits: 1
 tags: event
@@ -21,13 +21,13 @@ The consensus candidate on the right is Ludwig Kaas, a Catholic priest who repre
 @kaas
 on-arrival: z_party_leader = "Kaas"; z_relation -= 5
 choose-if: not (((z_relation < 35 and pro_republic < 55) or (in_right_coalition and not spd_prussia)) and (in_right_coalition or not spd_prussia))
-unavailable-subtitle: Stegerwald has commanded a majority.
+unavailable-subtitle: 施特格瓦尔德已掌握多数。
 
 Ludwig Kaas has been selected as the chairman of the Center Party. He seems to represent a rightward turn from Marx, and will preside over a Center Party less inclined to compromise with the left.
 
 @joos
-unavailable-subtitle: Our relations are not good enough.
-subtitle: Joos is likely to be friendlier to us than Kaas.
+unavailable-subtitle: 我们的关系还不够好。
+subtitle: 约斯很可能比卡斯对我们更友好。
 choose-if: z_relation >= 70
 on-arrival: z_party_leader = "Joos"; catholics_spd += 5; workers_z += 3
 
@@ -36,7 +36,7 @@ With our grassroots connections, we have been able to influence the Center deleg
 @joos_campaign
 choose-if: z_relation >= 62 and resources >= 1 
 view-if: z_relation < 70
-unavailable-subtitle: [? if z_relation < 62 : Our relations are not good enough. ?] [? if resources < 1 : We do not have enough resources. ?]
+unavailable-subtitle: [? if z_relation < 62 : 我们的关系还不够好。 ?] [? if resources < 1 : 我们没有足够的资源。 ?]
 subtitle: -1 资源。约斯很可能比卡斯对我们更友好。
 on-arrival: resources -= 1; z_party_leader = "Joos"; catholics_spd += 5; workers_z += 3
 
@@ -45,7 +45,7 @@ With our grassroots connections as well as a professional campaign, we have been
 @stegerwald
 view-if: z_relation < 45 or pro_republic < 50 or in_right_coalition or not spd_prussia
 choose-if: ((z_relation < 35 and pro_republic < 55) or (in_right_coalition and not spd_prussia)) and (in_right_coalition or not spd_prussia)
-unavailable-subtitle: Stegerwald lacks the clout necessary to win.
+unavailable-subtitle: 施特格瓦尔德缺乏取胜所需的影响力。
 on-arrival: z_party_leader = "Stegerwald"; z_relation -= 10; nationalism += 4; socialism -= 3; left_strength += 5; catholics_z -= 10; catholics -= 5; stegerwald_timer = 1
 
 Adam Stegerwald has been elected as chairman of the Center Party. He represents a significant rightward turn from Marx, and will preside over a Center Party inclined to work with the right-wing over us. 

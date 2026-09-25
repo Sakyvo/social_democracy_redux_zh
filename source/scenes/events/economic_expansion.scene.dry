@@ -11,12 +11,12 @@ The German economy has been growing steadily for an extended period of time, and
 
 [? if capital_strike_progress < 0 and expansion_seen >= 2 and not in_grand_coalition and peoples_party : The economic growth under our governance has reached such a point that some industrialists are coming around to social democracy, at least under the form we have taken. ?]
 
-- @welcome_industry: [? if not capital_spd : Well, a people's party is a people's party... ?][? if capital_spd : <span style="color:rgb(170,150,60);font-family:'Times New Roman',serif;font-weight:700;letter-spacing:0.5px;">Pleasure doing business as usual.</span> ?]
-- @ew: It's nice that they don't want open conflict, but we still oppose their interests.
+- @welcome_industry: [? if not capital_spd : 嗯,全民党就是全民党嘛…… ?][? if capital_spd : <span style="color:rgb(170,150,60);font-family:'Times New Roman',serif;font-weight:700;letter-spacing:0.5px;">照常做生意,很愉快。</span> ?]
+- @ew: 他们不想公开冲突,这挺好,但我们仍然反对他们的利益。
 
 @welcome_industry
 view-if: capital_strike_progress < 0 and expansion_seen >= 2 and not in_grand_coalition and peoples_party and not capital_flight
-subtitle: +3 resources
+subtitle: +3 资源
 on-arrival: resources += 3; bourgeois_power += 0.02; left_dissent += 10; center_dissent += 10; labor_dissent += 5; bourgeoisie_spd += (2*economic_growth)*(1-dissent); bourgeoisie_dvp -= economic_growth; socialism -= (spd_votes*bourgeois_power)/10; capital_spd += 2; old_middle_spd += 5*bourgeois_power; new_middle_spd += 5*bourgeois_power; rural_spd += (5-land_reform)*bourgeois_power; kpd_relation -= 20
 
 We are not a party to turn away supports just because of their economic class; we abandoned that practice when we become a people's party. Corporations are people, too. It's only a natural progression of our policy.
@@ -34,7 +34,7 @@ max-visits: 1
 
 @ew
 view-if: capital_strike_progress < 0 and expansion_seen >= 2 and not in_grand_coalition and peoples_party and not capital_flight
-unavailable-subtitle: <span style="color:rgb(170,150,60);font-family:'Times New Roman',serif;font-weight:700;letter-spacing:0.5px;">Who's we? I don't!</span>
+unavailable-subtitle: <span style="color:rgb(170,150,60);font-family:'Times New Roman',serif;font-weight:700;letter-spacing:0.5px;">「我们」是谁?我可不!</span>
 choose-if: not capital_spd
 on-arrival: capital_rejected = 1; capital_strike_progress = 2
 

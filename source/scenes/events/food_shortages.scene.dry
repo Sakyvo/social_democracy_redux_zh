@@ -1,5 +1,5 @@
-title: Food Shortages
-subtitle: We are suffering shortages of food
+title: 粮食短缺
+subtitle: 我们正遭受粮食短缺
 view-if: capital_strike_seen and spd_in_government and ((((class_war >= 1 and capital_strike_timer == 3 and (rural_spd+rural_kpd+rural_sapd <= rural_nsdap+rural_dnvp or (zca_formed and rural_spd+rural_kpd+rural_sapd <= rural_zca+rural_other+rural_dvp+rural_nsdap+rural_dnvp))) or socialized_land)) or (capital_flight and capital_strike_timer <= 5))
 tags: event
 max-visits: 2
@@ -10,12 +10,12 @@ on-arrival: capital_strike_timer -= 1; inflation += 2; inflation += 0.4 if not s
 
 As we attempt to transition to socialism in our ongoing rupture with the bourgeoisie, we have encountered an obstacle in the form of the rural petty-bourgeoisie, upon whom we largely rely upon for food. Long a bastion of reaction, [? if land_reform : albeit limited in this by our land reform programs, ?] they have begun hoarding food out of hostility to our socialist project, causing prices to rise sharply-
 
-- @state_buyer: We cannot begin to tackle this issue without a state buyer program.
-- @meet: We will meet them at their new prices.
-- @kill: We will force them to sell at the set price.
-- @lower_tariffs: We will lower tariffs, so as to facilitate for importing deficit food.
-- @reconcile_town_and_country: We will fund the development of urban agriculture, to work towards reconciling town and country.
-- @root: There is nothing we can do.
+- @state_buyer: 没有国家收购计划,我们就无从着手解决这个问题。
+- @meet: 我们将按他们的新价格成交。
+- @kill: 我们将迫使他们按既定价格出售。
+- @lower_tariffs: 我们将降低关税,以便进口短缺的粮食。
+- @reconcile_town_and_country: 我们将资助都市农业的发展,以致力于调和城乡。
+- @root: 我们无能为力。
 
 @state_buyer
 view-if: not state_buyer
@@ -30,9 +30,9 @@ on-arrival: bourgeois_power -= 0.05; budget -= 2; state_buyer = 1; inflation -= 
 
 By initiating a state buyer program, we have facilitated for the proper tackling of this issue. Given the circumstances, however, farmers do not appreciate the creation of a state monopoly on grain purchases, seeing it as preparation for coercion against them to make them lower their prices. 
 
-- @meet: They need not worry; we will meet their new prices.
-- @kill: That they defy the economic plan is no fault of ours.
-- @root: There is nothing more we can do.
+- @meet: 他们不必担心;我们将按他们的新价格成交。
+- @kill: 他们违抗经济计划,不是我们的错。
+- @root: 我们再无他法。
 
 @meet
 view-if: state_buyer
@@ -43,7 +43,7 @@ We cave to their demanded new prices. This helps ease the crisis significantly, 
 
 @kill
 view-if: state_buyer
-subtitle: This would spark quite the uproar against perceived Bolshevism.
+subtitle: 这会激起一场针对所谓布尔什维主义的轩然大波。
 on-arrival: socialism -= rural/10; socialism -= 6*bourgeois_power; black_market += (rural*(1-(rb_force+rfb_force)/100)); bourgeois_power -= 0.05; insurgency += 5; sh_militancy += 0.01; sa_militancy += 0.02; sa_strength += rural*insurgency; sh_strength += (rural*insurgency)/4; inflation -= 1; economic_growth -= black_market/10; rural_nsdap += 100; rural_dnvp += 100; rural_zca += 100 if zca_formed; rural_spd = 0; strife += 1; kpd_relation += 10; coup_progress += 5; west_relation -= 2; east_relation -= 2
 
 We refuse to budge from our set prices, demanding that the farmers sell at the agreed price and cracking down harshly on those who continue to withhold their grain and demand more for it. The results see short term success, though some fear we are creating the long term conditions for a conflict between the country and the town, quite contrary to the reconciliation Marx hoped for. Indeed, the Harzburg Front swells, recruiting from dejected farmers.
@@ -65,7 +65,7 @@ Farmers are hurt by this policy, as cheap imported grain leads to ruin for some 
 
 @reconcile_town_and_country
 view-if: not reconcile_town_and_country
-subtitle: -3 budget. Many are skeptical; this does little to address the immediate crisis.
+subtitle: -3 财政预算。许多人持怀疑态度;这对眼下的危机帮助不大。
 on-arrival: budget -= 3; inflation -= 0.2; inflation -= 0.5 if capital_flight; inflation -= nationalization_progress/10 if five_year_plan; coalition_dissent += 2; labor_dissent += 5; rural -= 1; workers += 1; reconcile_town_and_country += 1
 
 We have set aside significant funding towards the development of urban agriculture as a step towards the reconciliation of town and country, as advocated by Marx. In the short term, this yields very little results, and the issue of food shortages remains present on the minds of many who grow frustrated with our failure to address their immediate issues. We counter by saying that we are treating the cause and not the symptom, and that the long term crisis requires a fundamental re-evaluation of labor divisions. Unfortunately for us, it does not seem trade unions like being lectured to on Marxist theory. We will have to hope for results to vindicate our thesis.

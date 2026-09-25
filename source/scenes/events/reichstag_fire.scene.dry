@@ -1,5 +1,5 @@
-title: Reichstag Fire!
-subtitle: The Reichstag has been burned down, and the Nazis are using this as a pretext to consolidate power.
+title: 国会纵火案!
+subtitle: 国会大厦被烧毁,纳粹党正以此为借口巩固权力。
 view-if: impending_fire == 1 and (month = hitler_month + 1 or (year = hitler_year + 1 and hitler_month = 12)) and not victory_republic
 tags: event
 new-page: true

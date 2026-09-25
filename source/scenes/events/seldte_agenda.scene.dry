@@ -1,5 +1,5 @@
-title: The Seldte Agenda
-subtitle: The Harzburg Cabinet takes action...
+title: 泽尔特的议程
+subtitle: 哈茨堡内阁开始行动……
 view-if: chancellor == "Seldte" and (march_on_berlin_seen or president == "Seeckt") and ((president != "Braun" and president != "Schumacher" and president != "Juchacz") or seldte_enabled)
 new-page: true
 max-visits: 1
@@ -12,8 +12,8 @@ With the assumption of power by the Harzburg Cabinet [? if march_on_berlin_seen 
 
 Many in our party are calling for us to reverse course from our previous decision not to rebel, arguing that now may be the last chance to prevent a full reactionary victory. The Nazis have used the Harzburg Cabinet's suppression of the left to prepare a campaign of their own, and many fear that even if Seldte fails to fully bring down German democracy as Chancellor, Hitler will finish the job for him.
 
-- @fight: We will rise up now, before it is too late.
-- @submit: There is nothing we can do.
+- @fight: 我们要现在就起来反抗,趁还来得及。
+- @submit: 我们无能为力。
 
 @fight
 on-arrival: spd_rebel = 1

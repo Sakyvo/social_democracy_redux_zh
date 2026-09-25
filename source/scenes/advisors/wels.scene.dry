@@ -62,7 +62,7 @@ call: set_next_election_time
 我们已宣布举行新的选举,定于 [+ next_election_month : month +] [+ next_election_year +]。
 
 @debug_never
-title: DEBUG: Never
+title: DEBUG:绝不
 subtitle: Never = 1
 view-if: legislature_enabled
 on-arrival: never = 1

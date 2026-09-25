@@ -1,5 +1,5 @@
 title: 失业保险危机
-subtitle: Our unemployment insurance programs need additional funding...
+subtitle: 我们的失业保险计划需要额外资金……
 new-page: true
 view-if: spd_in_government = 1 and (year = 1930 or year = 1931 or year = 1932) and month == 3 and (spd_in_government and (in_grand_coalition = 0 or constructive_vonc or president == "Braun")) and unemployment_insurance_timer = 0 and unemployed >= unemployment_insurance_threshold + 4
 on-arrival: unemployment_insurance_crisis += 1; budget -= 1 if budget >= 1; unemployment_insurance_timer = 8; crisis_urgency += 1; unemployment_insurance_threshold = unemployed
@@ -12,9 +12,9 @@ The economic crisis has caused mass layoffs all throughout Germany, affecting th
 
 In the midst of all this, our unemployment insurance program is underfunded; the program was never budgeted for this much unemployment. We have to either increase funding or cut benefits.
 
-- @cut_benefits: Cut benefits.
-- @increase_employers: Increase employer contributions.
-- @balance: Increase both employer and employee contributions.
+- @cut_benefits: 削减给付。
+- @increase_employers: 提高雇主缴款。
+- @balance: 同时提高雇主与雇员的缴款。
 
 @cut_benefits
 subtitle: +1 财政预算. The workers will regard this as a betrayal.
@@ -30,7 +30,7 @@ For budgetary reasons, we have cut unemployment insurance benefits. Unfortunatel
 
 
 @increase_employers
-subtitle: Employers are strongly against this. [? if in_grand_coalition: The DVP will likely break the coalition. ?]
+subtitle: 雇主强烈反对此举。[? if in_grand_coalition: 人民党很可能会拆散联盟。 ?]
 on-arrival: increase_employers_vote = 1
 go-to: increase_employers_done if not legislature_enabled; legislative_menu if legislature_enabled
 
@@ -43,7 +43,7 @@ We have increased employer contributions to the unemployment insurance fund, all
 
 
 @balance
-subtitle: Neither workers nor employers will be entirely satisfied or dissatisfied. [? if in_grand_coalition and dvp_relation < 30: The DVP will likely consider the compromise unacceptable. ?][? if in_grand_coalition and dvp_relation >= 30: The DVP might grudgingly accept the compromise for now. ?]
+subtitle: 工人与雇主双方都不会完全满意,也不会完全不满。[? if in_grand_coalition and dvp_relation < 30: 人民党很可能会认为这项妥协无法接受。 ?][? if in_grand_coalition and dvp_relation >= 30: 人民党或许会勉强暂时接受这项妥协。 ?]
 on-arrival: balance_vote = 1
 go-to: balance_done if not legislature_enabled; legislative_menu if legislature_enabled
 

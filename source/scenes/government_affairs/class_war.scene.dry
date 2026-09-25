@@ -1,4 +1,4 @@
-title: Class War
+title: 阶级斗争
 new-page: true
 is-card: true
 on-arrival: class_war_timer += 2; month_actions += 1; nationalize_budget = 4; nationalize_budget -= 1 if works_councils >= 2; nationalize_budget -= 1 if works_councils >= 3; nationalize_budget -= 1 if socializations + nationalization_progress >= 2;
@@ -106,7 +106,7 @@ on-arrival: reconcile_business += 1; economic_growth += 0.3; unemployed -= 0.2; 
 我们会见了工商界的几位领袖,试图安抚他们的担忧。尽管进展甚微,我们认为至少建立了今后可以继续利用的联系渠道。
 
 @party_financing
-title: Ban private financing of political parties.
+title: 禁止对政党的私人资助。
 view-if: class_war >= 4
 max-visits: 1
 choose-if: ((left_coalition+sapd_r >= 50) or (popular_front+sapd_r >= 50 and z_relation >= 80 or (z_party_leader == "Joos" and z_relation >= 60))) and (judicial_reform >= 4)

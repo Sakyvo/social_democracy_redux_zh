@@ -1,4 +1,4 @@
-title: SPD Party Congress
+title: 社民党代表大会
 new-page: true
 tags: event
 priority: -1
@@ -13,7 +13,7 @@ set-jump: post_congress
 
 The Party congress is to be held now.
 
-- @faction_algorithm: May we do our best...
+- @faction_algorithm: 愿我们尽力而为……
 
 @faction_algorithm
 on-arrival: {!
@@ -296,48 +296,48 @@ go-to: coalition_menu
 
 @coalition_menu
 
-- @marxist_unity: Marxist Unity
-- @left_majority: The Left
-- @center_majority: The Center
-- @toleration_unity: The Pro-Toleration Wing
-- @pragmatic_unity: The Pragmatist Wing
+- @marxist_unity: 马克思主义团结
+- @left_majority: 左翼
+- @center_majority: 中间派
+- @toleration_unity: 支持容忍派
+- @pragmatic_unity: 务实派
 - @reformist_majority: 改良派
 - @neorevisionist_majority: 新修正派
 - @labor_majority: 工会派
 - @antitoleration_unity: 反容忍派
-- @lassalean_unity: Lassalean Unity
+- @lassalean_unity: 拉萨尔主义团结
 
 @marxist_unity
 view-if: marxist_unity >= 50
-subtitle: Left + Center ([+ marxist_unity +]%)
+subtitle: 左翼 + 中间派 ([+ marxist_unity +]%)
 on-arrival: reformist_strength -= 5; neorevisionist_strength -= 5; labor_strength -= 5; left_dissent -= 5; center_dissent -= 5
 
 The party retains a Marxist platform.
 
 @left_majority  
 view-if: left_c >= 50  
-subtitle: Left ([+ left_c +]%)  
+subtitle: 左翼 ([+ left_c +]%)  
 on-arrival: left_strength += 10; reformist_dissent += 10; neorevisionist_dissent += 10; labor_dissent += 5; center_dissent += 5
 
 The party is increasingly driven by the radical left.
 
 @center_majority  
 view-if: center_c >= 50  
-subtitle: Center ([+ center_c +]%)  
+subtitle: 中间派 ([+ center_c +]%)  
 on-arrival: center_strength += 10; left_dissent += 5; reformist_dissent += 5; neorevisionist_dissent += 5; labor_dissent += 5
 
 The party remains in the hands of the Centrist Marxists.
 
 @reformist_majority  
 view-if: reformist_c >= 50  
-subtitle: Reformists ([+ reformist_c +]%)  
+subtitle: 改良派 ([+ reformist_c +]%)  
 on-arrival: reformist_strength += 10; left_dissent += 10; center_dissent += 5; labor_dissent += 5
 
 The party emphasizes legal reform and parliamentary pragmatism over confrontation.
 
 @neorevisionist_majority  
 view-if: neorevisionist_c >= 50  
-subtitle: Neorevisionists ([+ neorevisionist_c +]%)  
+subtitle: 新修正派 ([+ neorevisionist_c +]%)  
 on-arrival: neorevisionist_strength += 10; left_dissent += 15; center_dissent += 10; labor_dissent += 5
 
 The party has fallen under the control of the neorevisionists.
@@ -351,14 +351,14 @@ The party has fallen under the control of the trade unions.
 
 @toleration_unity  
 view-if: toleration_unity >= 50 and spd_toleration and neorevisionism
-subtitle: Center + Reformists + Neorevisionists ([+ toleration_unity +]%)  
+subtitle: 中间派 + 改良派 + 新修正派 ([+ toleration_unity +]%)  
 on-arrival: labor_strength -= 5; left_strength -= 5; left_dissent += 5; z_relation += 5
 
 The party has taken a pro-toleration course.
 
 @pragmatic_unity
 view-if: pragmatic_unity >= 50 and (not spd_toleration or not neorevisionism)
-subtitle: Center + Reformists ([+ pragmatic_unity +]%)
+subtitle: 中间派 + 改良派 ([+ pragmatic_unity +]%)
 on-arrival: center_strength += 5; reformist_strength += 5
 
 The party pragmatists have won out in this congress.
@@ -372,7 +372,7 @@ The party has taken an anti-toleration course.
 
 @lassalean_unity  
 view-if: lassalean_unity >= 50  
-subtitle: Reformists + Neorevisionists ([+ lassalean_unity +]%)  
+subtitle: 改良派 + 新修正派 ([+ lassalean_unity +]%)  
 on-arrival: reformist_strength += 5; neorevisionist_strength += 5; left_dissent += 10; center_dissent += 5
 
 The party has taken a less than Marxist course.

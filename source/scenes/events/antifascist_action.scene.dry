@@ -1,6 +1,6 @@
-title: A United Front Against Fascism
+title: 反法西斯统一战线
 new-page: true
-subtitle: The KPD proposes to organize against the rising Nazi threat
+subtitle: 共产党提议组织起来,对抗日益上升的纳粹威胁
 tags: event
 view-if: communist_coalition >= 3 and kpd_relation >= 50 and nazi_urgency >= 2 and left_strength >= 50 and black_brown_seen = 1 and not spd_toleration
 max-visits: 1
@@ -11,8 +11,8 @@ As the bourgeois voters and industrialists flock to the Nazis following the rece
 
 What remains of the party's right-wing is highly opposed, but doing this would significantly bolster the strength of our forces on the left in case a confrontation with the fascists becomes inevitable. It may also instigate the reactionaries into preempting us, however.
 
-- @form_uf: Form the United Front between the SPD and KPD!
-- @literally_why_would_anyone_whos_at_this_point_in_the_game_choose_this_like_what: We'll have to turn the offer down.
+- @form_uf: 在社民党与共产党之间组建统一战线!
+- @literally_why_would_anyone_whos_at_this_point_in_the_game_choose_this_like_what: 我们只能拒绝这一提议。
 
 @form_uf
 on-arrival: antifa_formed = 1; kpd_relation += 10; rb_militancy += 0.03; rfb_militancy += 0.04; coup_progress += communist_coalition; workers_kpd += 4; workers_spd += 6*(1-dissent); unemployed_kpd += 5; unemployed_spd += 5*(1-dissent); new_middle_spd += 5*(1-dissent) if new_middle_conscious; workers_nsdap -= 2; new_middle_nsdap -= 2; unemployed_nsdap -= 2
@@ -22,11 +22,11 @@ We have formed a United Front, composed of the KPD and SPD's various affiliate o
 
 @uf_menu
 
-- @rally_resources: Launch an ambitious campaign through the United Front!
-- @rally_left: Rally behind the Left Plan!
-- @rally_iron_front: Rally the full force of the Iron Front behind the United Front!
+- @rally_resources: 通过统一战线发动一场雄心勃勃的竞选!
+- @rally_left: 支持左翼计划!
+- @rally_iron_front: 调动铁前线的全部力量支持统一战线!
 - @rally_afa: 调动西格弗里德·奥夫霍伊泽与自由职员总联合会支持统一战线!
-- @done: That is enough.
+- @done: 这就够了。
 
 @rally_resources
 max-visits: 1
@@ -67,7 +67,7 @@ on-arrival: old_middle_nsdap += uf_strength; rural_nsdap += uf_strength/2; new_m
 That is enough to get the United Front off of its feet and ready to fight fascism. United through this new organization, we shall stand strong. The Nazis grow further amongst the bourgeoisie, who are frightened by our unity, but it is in vain.
 
 @literally_why_would_anyone_whos_at_this_point_in_the_game_choose_this_like_what
-subtitle: [? if fun_value >= 61 and fun_value <= 67 : I know you're not picking this, bucko. ?]
+subtitle: [? if fun_value >= 61 and fun_value <= 67 : 我知道你不会选这个的,老兄。 ?]
 on-arrival: communist_coalition -= 1; kpd_relation -= 5; left_dissent += 15; reformist_strength += 10; reformist_dissent -= 20; sa_militancy += 0.02
 
 We politely turn the offer down, so as to retain the party's organizational independence. The dominant Left is perplexed.

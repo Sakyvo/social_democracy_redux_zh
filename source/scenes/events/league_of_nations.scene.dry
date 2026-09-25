@@ -1,5 +1,5 @@
-title: Germany joins the League of Nations!
-subtitle: Finally, Germany's reintegration into the world is progressing
+title: 德国加入国际联盟!
+subtitle: 德国重新融入世界的进程终于有了进展
 max-visits: 1
 view-if: year == 1926 and month >= 9
 new-page: true

@@ -1,5 +1,5 @@
-title: [+ year +] Nazi Party Congress
-subtitle: The Nazis adopt a new strategy...
+title: [+ year +] 年纳粹党代表大会
+subtitle: 纳粹采取了新策略……
 view-if: nsdap_banned != 1 and year >= 1935 and nazi_decline == 1 and not nazi_peak and nsdap_votes < pro_republic and nsdap_votes < dnvp_votes + kpd_votes and nsdap_r + dnvp_r + other_r + dvp_r < 50 and nsdap_votes < spd_votes and sa_force + sh_force < 50
 on-arrival: nazi_reform = 1; nazi_reform_timer = (nationalism/5); z_relation -= 5; dvp_relation -= 5; nazi_decline = 0; old_middle_nsdap += 4; rural_nsdap += 5; new_middle_nsdap += 4; workers_spd -= 2; unemployed_spd -= 2; sa_militancy -= 0.1; sa_strength -= 50; coup_progress *= 0.75; socialism -= 5
 max-visits: 1
@@ -12,8 +12,8 @@ After abandoning revolutionary tactics with the failure of the Beer Hall Putsch 
 
 Now, emerging from a long period of internal re-consolidation, the Nazis have unveiled their new party manifesto. On the surface a significant moderation, [+ nsdap_leader +]'s convictions and those of his party remain unchanged. The Nazis have simply undergone the next natural change in the strategy for destroying democracy, becoming a true trojan horse.
 
-- @concern: A troubling development.
-- @iron_front: Maintain pressure on the fascists with the Iron Front!
+- @concern: 事态堪忧。
+- @iron_front: 用铁前线对法西斯分子保持压力!
 
 @concern
 on-arrival: nazi_urgency += 1

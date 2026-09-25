@@ -1,5 +1,5 @@
 title: 戒严!
-subtitle: The Harzburg Cabinet has declared martial law
+subtitle: 哈茨堡内阁已宣布戒严
 view-if: seldte_times >= 1 and harzburg_r >= 50 and chancellor == "Seldte" and papen_chancellor_timer <= 0
 new-page: true
 on-arrival: sh_militancy += 0.03

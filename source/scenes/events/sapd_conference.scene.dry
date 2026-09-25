@@ -1,5 +1,5 @@
-title: Calls for an Einheitsfront
-subtitle: The SAPD has called on us and the KPD to reconcile and unite.
+title: 组建统一战线的呼声
+subtitle: 社会主义工人党呼吁我们与共产党和解并联合。
 max-visits: 1
 view-if: sapd_consolidated == 1 and sapd_r >= 5 and (nsdap_r + dnvp_r + unemployed >= 40)
 new-page: true
@@ -51,14 +51,14 @@ if (Q.kpd_leader == "Conciliators") {
 
 The SAPD, enjoying in its recent growth, has launched a manifesto and program calling for the SPD and KPD to put aside their differences and convene in an SAPD arbitrated conference for the formation of an "Einheitsfront" of the workers. If we refuse, it may reflect badly, especially on our working class base, and give the SAPD more ammunition.
 
-- @participate_good_faith_1: We will attend this conference as a means of reconciling with the KPD.
-- @participate_good_faith_2: We will attend this conference as a means of reconciling with the KPD.
-- @participate_good_faith_3: We will attend this conference as a means of reconciling with the KPD.
-- @participate_bad_faith_1: We will attend this conference as a means of showing that reconciliation is impossible and hopeless.
-- @participate_bad_faith_2: We will attend this conference as a means of showing that reconciliation is impossible and hopeless.
-- @participate_bad_faith_3: We will attend this conference as a means of showing that reconciliation is impossible and hopeless.
-- @refuse_1: Let the SAPD delude themselves with ideas of a united front, we will have no part in it.
-- @refuse_2: Let the SAPD delude themselves with ideas of a united front, we will have no part in it.
+- @participate_good_faith_1: 我们将出席这次会议,以此作为与共产党和解的途径。
+- @participate_good_faith_2: 我们将出席这次会议,以此作为与共产党和解的途径。
+- @participate_good_faith_3: 我们将出席这次会议,以此作为与共产党和解的途径。
+- @participate_bad_faith_1: 我们将出席这次会议,以表明和解既不可能也无望。
+- @participate_bad_faith_2: 我们将出席这次会议,以表明和解既不可能也无望。
+- @participate_bad_faith_3: 我们将出席这次会议,以表明和解既不可能也无望。
+- @refuse_1: 让社会主义工人党抱着统一战线的幻想自欺欺人吧,我们绝不参与。
+- @refuse_2: 让社会主义工人党抱着统一战线的幻想自欺欺人吧,我们绝不参与。
 
 @participate_good_faith_1
 view-if: kpd_good_faith and not (kpd_bad_faith or kpd_refuse)
@@ -74,12 +74,12 @@ on-arrival: reformist_dissent += 5; neorevisionist_dissent += 10; z_relation -= 
 
 We agree to the idea and participate in the conference that the SAPD calls. The KPD too participates, but seems to do so out of obligation rather than genuine goodwill. They, intransingent as always, set forth unreasonable demands, including [? if kpd_rectified_history = 0 : the expulsion of Noske from the party, ?][? if spd_toleration : the breaking of our toleration agreement, ?] the adoption of a more radically and revolutionary socialist agenda, and the breaking of ties with the Right.
 
-- @accept_kpd: We will accept these demands.
-- @refuse_kpd: We will refuse these outrageous demands.
+- @accept_kpd: 我们将接受这些要求。
+- @refuse_kpd: 我们将拒绝这些荒唐的要求。
 
 @accept_kpd
 choose-if: reformist_strength + neorevisionist_strength < left_strength + center_strength + labor_strength
-unavailable-subtitle: The SPD right would never allow this.
+unavailable-subtitle: 社民党右翼绝不会容许此事。
 on-arrival: {! 
 if (Q.kpd_rectified_history == 0) {
     Q.reformist_dissent += 12;
@@ -147,17 +147,17 @@ on-arrival: reformist_dissent += 5; neorevisionist_dissent += 10; z_relation -= 
 
 We attend the SAPD conference, though not out of genuine will to reconcile but to try and weaken the SAPD's propaganda and prove reconciliation impossible. Frustratingly, the KPD has not done the same, and appear more reasonable than us. We put forward demands that we know the KPD can never accept, such as a full acceptance of the Weimar constitution, disbanding of the RFB into the Reichsbanner, and the leaving of the Comintern in favor of the Second International.
 
-- @kpd_accept: The KPD shockingly accepts most of our demands.
-- @kpd_refuse_offer: The KPD, as expected, refuses.
+- @kpd_accept: 共产党竟出人意料地接受了我们的大部分要求。
+- @kpd_refuse_offer: 不出所料,共产党拒绝了。
 
 @kpd_accept
 choose-if: kpd_leader == "Conciliators" and kpd_relation >= 65 and communist_coalition >= 2 and pro_republic >= 80 and (rb_strength*rb_militancy >= rfb_strength*rfb_militancy)
-unavailable-subtitle: The KPD would never accept any of these outrageous demands.
+unavailable-subtitle: 共产党绝不会接受这些荒唐要求中的任何一条。
 
 To our surprise, the Conciliator KPD leadership has shown willingness to accept most of these demands. They have proposed a counteroffer, to integrate the RFB under the Reichsbanner while still maintaining its operational independence, and to promise to operate by the methods outlined in the constitution, rather than endorsing the constitution itself. Of course, though, the demand they leave the Comintern is unacceptable so long as Moscow retains its iron grip over worldwide communist parties.
 
-- @accept_counteroffer: We will accept this fair counteroffer.
-- @reject_counteroffer: We will refuse this counteroffer, despite our accidental progress.
+- @accept_counteroffer: 我们将接受这份公道的还价。
+- @reject_counteroffer: 尽管我们意外取得了进展,我们仍将拒绝这份还价。
 
 @accept_counteroffer
 on-arrival: kpd_relation = 50 if kpd_relation < 40; kpd_relation += 10 if kpd_relation >= 40; neorevisionist_dissent += 5; dvp_relation -= 5; workers_sapd += 3; workers_kpd -= 5; unemployed_kpd -= 8; rfb_strength *= 0.6; rfb_militancy -= 0.25; rb_strength += (rfb_strength*0.8); rb_militancy += 0.05; communist_coalition += 5; pro_republic += kpd_votes
@@ -165,7 +165,7 @@ on-arrival: kpd_relation = 50 if kpd_relation < 40; kpd_relation += 10 if kpd_re
 We may not have originally intended for reconciliation but this deal is too good to pass up. If the KPD is truly willing to abide by these, we will accept. This is a great day for German democracy.
 
 @reject_counteroffer
-subtitle: This will make us seem unreasonable.
+subtitle: 这会让我们显得不讲道理。
 on-arrival: kpd_relation -= 25; communist_coalition = 0; workers_spd -= 10; unemployed_spd -= 15; workers_sapd += 7; workers_kpd += 3; unemployed_sapd += 9; unemployed_kpd += 6; left_dissent += 15
 
 We had no intention of reconciliation and that we got this far is a miracle, but that changes nothing. We refuse, and the SAPD and KPD label us as traitors.

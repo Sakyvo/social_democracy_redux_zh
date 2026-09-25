@@ -1,5 +1,5 @@
-title: The Locarno Pact
-subtitle: Stresemann presents before the Reichstag several treaties
+title: 洛迦诺公约
+subtitle: 施特雷泽曼在国会提出若干项条约
 view-if: year == 1925 and month >= 11
 new-page: true
 on-arrival: locarno_seen = 1; west_relation += 1
@@ -12,7 +12,7 @@ Following negotiations with the powers of the former Entente, Stresemann has pre
 
 Though this seems to be a positive development, the DNVP has turned against the government of Luther in protest of their signing, leaving the government without a majority.
 
-- @resign: The government has resigned, and negotiations for a new one begin.
+- @resign: 政府已辞职,新政府的谈判随之开始。
 
 @resign
 on-arrival: dnvp_in_government = 0; in_right_coalition = 0; nationalism -= 2; new_middle_dnvp -= 3; old_middle_dnvp -= 2; rural_dnvp -= 2; new_middle_other += 2; old_middle_other += 2; rural_other += 2

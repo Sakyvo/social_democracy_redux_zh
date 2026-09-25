@@ -10,8 +10,8 @@ new-page: true
 
 Navy leaders are asking for the construction of a new battlecruiser, as promised by the previous government. Since we control the Reichswehr ministry, it is our decision as to whether to build the battlecruiser or not.
 
-- @vote_yes: Build the battlecruiser.
-- @vote_no: Do not build the battlecruiser.
+- @vote_yes: 建造这艘战列巡洋舰。
+- @vote_no: 不建造这艘战列巡洋舰。
 
 @vote_yes
 on-arrival: left_dissent += 10; labor_dissent += 10; center_dissent += 5; reformist_dissent += 5; neorevisionist_dissent += 5; reichswehr_loyalty += 0.1; panzerkreuzer_funded = 1; socialism -= 3

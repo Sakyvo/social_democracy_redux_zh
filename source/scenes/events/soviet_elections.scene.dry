@@ -475,7 +475,7 @@ if (window && d3) {
 - @coalition_menu: 召集社会民主党代表团。
 
 @coalition_menu
-subtitle: SPD - [+ spd_s +]%
+subtitle: 社民党 - [+ spd_s +]%
 
 通过召集社民党代表团,我们试图在委员会讨论之前统一党内各派系。最终,我们的代表团约占代表大会的 [+ effective_spd_s +]%。
 
@@ -589,12 +589,12 @@ on-departure: spd_turn = 0
 [? if spd_turn : 我们正力图让自己的候选人当选主席。为此,我们必须与同样觊觎此位的其他派系结成同盟。 ?]
 
 - @court_kpd: 争取共产党。
-- @court_sapd: Court the SAPD.
-- @court_unaffiliated: Court the unaffiliated.
-- @court_bourgeois: Court the bourgeois.
-- @court_catholics: Court the Center Party.
-- @unify_spd: Whip the SPD into line.
-- @drop_out: We should drop out.
+- @court_sapd: 拉拢社会主义工人党。
+- @court_unaffiliated: 拉拢无党籍者。
+- @court_bourgeois: 拉拢资产阶级。
+- @court_catholics: 拉拢中央党。
+- @unify_spd: 把社民党整肃到一条线上。
+- @drop_out: 我们该退出。
 
 @court_kpd
 view-if: communist_candidate and (kpd_relation >= 40 or kpd_party_leader == "Conciliators")
@@ -603,8 +603,8 @@ unavailable-subtitle: 他们认为我们应当支持他们。
 
 我们可以设法为竞选主席争取共产党人的支持。我们该如何说服他们?
 
-- @bribe_kpd: Use our resources.
-- @beg_kpd: Use our good relations.
+- @bribe_kpd: 动用我们的资源。
+- @beg_kpd: 动用我们的良好关系。
 - @nvm: 我们试试别的办法。
 
 @bribe_kpd
@@ -657,8 +657,8 @@ unavailable-subtitle: 他们不信任我们。
 
 我们可以设法为竞选主席争取天主教徒的支持。我们该如何说服他们?
 
-- @bribe_z: Use our resources.
-- @beg_z: Use our relations.
+- @bribe_z: 动用我们的资源。
+- @beg_z: 动用我们的关系。
 - @nvm: 我们试试别的办法。
 
 @bribe_z
@@ -695,19 +695,19 @@ go-to: competition
 我们试图进一步统一社民党代表团,以支持我们的候选人。
 
 @drop_out
-subtitle: Tune in, turn on...
+subtitle: 打开电视,放空身心……
 
 若我们赢不了,继续分散选票也毫无意义。但我们应当转而支持谁?
 
-- @back_kpd: Back the KPD.
-- @back_sapd: Back the SAPD.
-- @back_independent: Back the independents.
-- @back_bourgeois: Back the bourgeois.
+- @back_kpd: 支持共产党。
+- @back_sapd: 支持社会主义工人党。
+- @back_independent: 支持独立人士。
+- @back_bourgeois: 支持资产阶级。
 - @nvm: 我们试试别的办法。
 
 @back_kpd
 view-if: communist_candidate and left_strength > reformist_strength
-subtitle: [? if kpd_relation < 35 : They likely won't be at all grateful for this endorsement. ?]
+subtitle: [? if kpd_relation < 35 : 他们大概完全不会感激这一背书。 ?]
 on-arrival: {! 
 
 Q.center_labor_portion = Math.floor((Q.spd_center_s+Q.spd_labor_s)*(Q.effective_spd_s/Q.spd_s));
@@ -738,7 +738,7 @@ go-to: competition
 
 @back_bourgeois
 view-if: bourgeois_candidate and reformist_strength >= left_strength
-subtitle: [? if dvp_relation < 35 : They likely won't be at all grateful for this endorsement. ?]
+subtitle: [? if dvp_relation < 35 : 他们大概完全不会感激这一背书。 ?]
 on-arrival: {!
 
 Q.center_labor_portion = Math.floor((Q.spd_center_s+Q.spd_labor_s)*(Q.effective_spd_s/Q.spd_s));
@@ -760,14 +760,14 @@ on-departure: spd_turn = 1 if spd_candidate
 
 这场竞争中并非只有我们。其他每位角逐者都各行其是。
 
-- @communist_consolidation: The Communists consolidate the far-left.
-- @kpd_backs_sapd: The KPD backs the SAPD candidate.
-- @sapd_backs_kpd: The SAPD backs the KPD candidate.
-- @nsdap_backs_bourgeois: The NSDAP backs the bourgeois candidate.
-- @unaffiliate_backs_kpd: The unaffiliated back the KPD.
-- @unaffiliate_backs_sapd: The unaffiliated back the SAPD.
-- @unaffiliate_backs_bourgeois: The unaffiliated back the bourgeois.
-- @nothing: They do nothing.
+- @communist_consolidation: 共产党人整合了极左翼。
+- @kpd_backs_sapd: 共产党支持社会主义工人党的候选人。
+- @sapd_backs_kpd: 社会主义工人党支持共产党的候选人。
+- @nsdap_backs_bourgeois: 纳粹党支持资产阶级的候选人。
+- @unaffiliate_backs_kpd: 无党籍者支持共产党。
+- @unaffiliate_backs_sapd: 无党籍者支持社会主义工人党。
+- @unaffiliate_backs_bourgeois: 无党籍者支持资产阶级。
+- @nothing: 他们什么也不做。
 
 @communist_consolidation
 view-if: not comcon_seen and communist_candidate
@@ -845,7 +845,7 @@ go-to: faction_choices
 - @neorevisionist
 
 @left
-title: The Left.
+title: 左翼。
 subtitle: [+ spd_left_s +]%
 view-if: (((left_strength+center_strength >= reformist_strength+neorevisionist_strength+labor_strength) and (left_strength >= center_strength) and (center_dissent < center_strength)) or ((left_strength+labor_strength >= reformist_strength+neorevisionist_strength+center_strength) and (left_strength >= labor_strength) and (labor_dissent < labor_strength))) and ((spd_s - spd_reformist_s - spd_neorevisionist_s) >= 50) and not bourgeois_included 
 on-arrival: left_soviets = 1; left_strength += 5; pro_republic -= 2; socialism += 2; z_relation -= 3; dvp_relation -= 5; ddp_relation -= 5; kpd_relation += 3
@@ -854,7 +854,7 @@ go-to: optional_coalitions if effective_spd_s >= 50
 托尼·森德尔当选为委员会主席,在这一新机构的领导层中代表着一条坚定但不算过于强硬的左翼路线。
 
 @center
-title: The Center
+title: 中间派
 subtitle: [+ spd_center_s +]%
 view-if: (not (((((reformist_strength+neorevisionist_strength+center_strength >= left_strength+labor_strength) and (reformist_strength >= center_strength) and (center_dissent < center_strength)) or ((reformist_strength+neorevisionist_strength+labor_strength >= left_strength+center_strength) and (reformist_strength >= labor_strength) and (labor_dissent < labor_strength))) and spd_neorevisionist_s < 50) and ((spd_s - spd_left_s) >= 50)) and not ((((left_strength+center_strength >= reformist_strength+neorevisionist_strength+labor_strength) and (left_strength >= center_strength) and (center_dissent < center_strength)) or ((left_strength+labor_strength >= reformist_strength+neorevisionist_strength+center_strength) and (left_strength >= labor_strength) and (labor_dissent < labor_strength))) and ((spd_s - spd_reformist_s - spd_neorevisionist_s) >= 50)) and not (spd_neorevisionist_s >= 50)) and spd_center_s >= spd_labor_s
 on-arrival: center_soviets = 1; center_strength += 5
@@ -863,7 +863,7 @@ go-to: optional_coalitions if effective_spd_s >= 50
 鲁道夫·布赖特沙伊德当选为委员会主席,代表着革命派与改良派之间的一条中道。
 
 @reformist
-title: The Reformists
+title: 改良派
 subtitle: [+ spd_reformist_s +]%
 view-if: ((((reformist_strength+neorevisionist_strength+center_strength >= left_strength+labor_strength) and (reformist_strength >= center_strength) and (center_dissent < center_strength)) or ((reformist_strength+neorevisionist_strength+labor_strength >= left_strength+center_strength) and (reformist_strength >= labor_strength) and (labor_dissent < labor_strength))) and spd_neorevisionist_s < 50) and ((spd_s - spd_left_s) >= 50) and not kpd_included
 on-arrival: reformist_soviets = 1; reformist_strength += 5; socialism -= 2; pro_republic += 2; z_relation += 2; ddp_relation += 2; kpd_relation -= 4; left_dissent += 3
@@ -872,7 +872,7 @@ go-to: optional_coalitions if effective_spd_s >= 50
 玛丽·尤哈茨当选为委员会主席,代表着工人中一股强劲的改良主义倾向,也代表着他们似乎尚未准备好接管国家权力。
 
 @labor
-title: The Trade Unions
+title: 工会
 subtitle: [+ spd_labor_s +]%
 view-if: (not (((((reformist_strength+neorevisionist_strength+center_strength >= left_strength+labor_strength) and (reformist_strength >= center_strength) and (center_dissent < center_strength)) or ((reformist_strength+neorevisionist_strength+labor_strength >= left_strength+center_strength) and (reformist_strength >= labor_strength) and (labor_dissent < labor_strength))) and spd_neorevisionist_s < 50) and ((spd_s - spd_left_s) >= 50)) and not ((((left_strength+center_strength >= reformist_strength+neorevisionist_strength+labor_strength) and (left_strength >= center_strength) and (center_dissent < center_strength)) or ((left_strength+labor_strength >= reformist_strength+neorevisionist_strength+center_strength) and (left_strength >= labor_strength) and (labor_dissent < labor_strength))) and ((spd_s - spd_reformist_s - spd_neorevisionist_s) >= 50)) and not (spd_neorevisionist_s >= 50)) and spd_labor_s >= spd_center_s
 on-arrival: labor_soviets = 1; labor_strength += 5
@@ -881,7 +881,7 @@ go-to: optional_coalitions if effective_spd_s >= 50
 鲁道夫·维塞尔当选为委员会主席,在这一新兴的劳工组织形式中代表着工会与有组织劳工的利益。
 
 @neorevisionist
-title: The Neorevisionists
+title: 新修正派
 subtitle: [+ spd_neorevisionist_s +]%
 view-if: spd_neorevisionist_s >= 50 and not kpd_included
 on-arrival: neorevisionist_soviets = 1
@@ -896,24 +896,24 @@ go-to: oc_menu
 
 @oc_menu
 
-- @spd_only: Distribute positions exclusively within the party.
-- @invite_sapd: Invite the SAPD.
-- @invite_kpd: Invite the KPD.
-- @invite_unaffiliate: Invite the unaffiliated.
-- @invite_bourgeois: Invite the bourgeois-aligned.
-- @done: We are done. 
+- @spd_only: 职位只在党内分配。
+- @invite_sapd: 邀请社会主义工人党。
+- @invite_kpd: 邀请共产党。
+- @invite_unaffiliate: 邀请无党籍者。
+- @invite_bourgeois: 邀请亲资产阶级人士。
+- @done: 我们就到这里。 
 
 @spd_only
 view-if: not buttons_mashed
 on-arrival: socialism -= (10-(spd_s/10)); left_dissent -= 5; center_dissent -= 5; labor_dissent -= 5; reformist_dissent -= 5; neorevisionist_dissent -= 5
-subtitle: This may at least reduce dissent within the party.
+subtitle: 这至少或许能减少党内的异议。
 go-to: done
 
 我们不愿把职位分配给委员会内的其他力量,损害了这些委员会的正当性与能力。最终,执行机构被变成了一个实际上属于党的机关,而反对我党的那些力量则干脆鼓动各自所属的委员会不与这一执行机构合作。
 
 @invite_sapd
 view-if: not sapd_included and sapd_formed and sapd_s
-subtitle: Former Social Democrats, they are willing.
+subtitle: 他们是前社会民主党人,愿意合作。
 choose-if: not bourgeois_included
 unavailable-subtitle: 和资产阶级一起?想得美。
 on-arrival: buttons_mashed += 1; sapd_included = 1; socialism += 1; left_strength += 3; left_dissent -= 6; kpd_relation += 2; z_relation -= 2; ddp_relation -= 4; dvp_relation -= 5
@@ -923,7 +923,7 @@ go-to: oc_menu
 
 @invite_kpd
 view-if: not kpd_included and not reformist_soviets and not neorevisionist_soviets
-subtitle: The Communists are willing.
+subtitle: 共产党人愿意合作。
 choose-if: (left_soviets or kpd_relation >= 50) and not bourgeois_included
 unavailable-subtitle: 共产党不愿按现状进入执行机构,他们完全反对由我们担任主席。
 on-arrival: buttons_mashed += 1; kpd_included = 1; reichstag_enemy = 1; socialism += 2; kpd_relation += 5; left_strength += 5; left_dissent -= 5; z_relation -= 5; ddp_relation -= 6; dvp_relation -= 8
@@ -933,7 +933,7 @@ go-to: oc_menu
 
 @invite_unaffiliate
 view-if: not unaffiliate_included and unaffiliate_s
-subtitle: Independent workers' representatives with largely economic and sectorial concerns.
+subtitle: 独立的工人代表,其关切大体上属于经济与行业层面。
 on-arrival: buttons_mashed += 1; unaffiliate_included = 1; workers_spd += 3*(1-dissent); workers_other -= 3*(1-dissent)
 go-to: oc_menu
 
@@ -941,7 +941,7 @@ go-to: oc_menu
 
 @invite_bourgeois
 view-if: not bourgeois_included and not left_soviets
-subtitle: The bourgeois-aligned representatives who demand the dissolution of the councils.
+subtitle: 亲资产阶级的代表,他们要求解散这些委员会。
 choose-if: (reformist_soviets or neorevisionist_soviets or (reformist_strength > left_strength and dvp_relation >= 40)) and not kpd_included and not sapd_included
 unavailable-subtitle: 资产阶级代表断然拒绝。
 on-arrival: buttons_mashed += 1; bourgeois_included = 1; socialism -= 3; left_dissent += 10; left_strength -= 5; socialism -= 4; pro_republic += 4; kpd_relation -= 7; capital_strike_progress -= 1 if capital_strike_progress >= 6

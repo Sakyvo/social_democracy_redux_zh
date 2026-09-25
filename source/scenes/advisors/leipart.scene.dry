@@ -36,7 +36,7 @@ WTB 计划以其主要支持者沃伊京斯基、塔尔诺与巴德命名,已被
 
 @union_unity
 title: 工会与党的协调
-subtitle: Reduce dissent among the unions.
+subtitle: 减少工会内部的异议。
 choose-if: advisor_action_timer <= 0
 unavailable-subtitle: [? if advisor_action_timer > 0 : 距下次顾问行动还有 [+ advisor_action_timer +] 个月。 ?]
 on-arrival: advisor_action_timer = 6; labor_dissent -= 5; labor_strength += 5

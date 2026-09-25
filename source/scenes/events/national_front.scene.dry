@@ -1,6 +1,6 @@
-title: The National Front!
+title: 国家阵线!
 new-page: true
-subtitle: The reactionary parties have banded together
+subtitle: 各反动政党已勾结成伙
 tags: event
 view-if: national_front_progress >= 150 and dvp_relation < 30
 on-arrival: z_national = 1 if z_relation < 20 and z_party_leader != "Joos"
@@ -12,7 +12,7 @@ With the Nazis embracing their new tactic of subverting democracy truly from wit
 
 The moderate right, of course, believes that they are using the NSDAP's Reichstag seats to take power for themselves, but the NSDAP cannot be underestimated. Hitler is sure to try and ride the wave of the National Front to power if it ever so much as gets close to a parliamentary majority.
 
-- @worrying: Worrying.
+- @worrying: 令人担忧。
 
 @worrying
 on-arrival: {!

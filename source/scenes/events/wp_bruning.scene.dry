@@ -1,5 +1,5 @@
 title: 布吕宁政府垮台
-subtitle: The "Economic Party" has turned on Brüning
+subtitle: 「经济党」与布吕宁反目了
 new-page: true
 view-if: what_the_hell = 1 and in_bourgeois_coalition = 1 and ((year = 1930 and month >= 12) or (year >= 1931)) and not constructive_vonc and president == "Hindenburg"
 tags: event
@@ -9,8 +9,8 @@ max-visits: 1
 
 Despite winning a majority through defections from the DNVP, Brüning's austerity measures have still alienated many minor middle class and special interest parties, most prominently the Economic Party which has now turned on him, calling a vote of no confidence.
 
-- @vote_against: Vote for the motion of no confidence, and for new elections.
-- @vote_for: Vote against the motion of no confidence, effectively providing toleration.
+- @vote_against: 投票支持不信任案,并支持举行新的选举。
+- @vote_for: 投票反对不信任案,实际上提供容忍支持。
 
 @vote_against
 on-arrival: time_to_election = 3; what_the_hell = 0; in_bourgeois_coalition = 0

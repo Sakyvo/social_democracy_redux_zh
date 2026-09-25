@@ -1,4 +1,4 @@
-title: Saxon Landtag Elections
+title: 萨克森州议会选举
 new-page: true
 tags: event
 priority: -1
@@ -341,29 +341,29 @@ Anticommunist Coalition (ASPD + [+ ddp_name +] + Z + DVP + Others + DNVP + NSDAP
 - @brown_saxony
 
 @socdem_saxony
-title: A progressive coalition.
-subtitle: SPD + ASPD[? if sapd_formed : + SAPD?] ([+ s_progressive_coalition +]%)
+title: 一个进步联盟。
+subtitle: 社民党 + 萨克森旧社会民主党[? if sapd_formed : + 社会主义工人党?] ([+ s_progressive_coalition +]%)
 view-if: s_progressive_coalition >= 50 and spd_sl < 50
 on-arrival: workers_spd += 2*(1-dissent); left_dissent -= 5; reformist_dissent -= 5
 
 A moderate socialist coalition is formed with the backing of the ASPD[? if sapd_formed : and SAPD?].
 
 @bourgeois_saxony
-title: A center-right bourgeois coalition.
-subtitle: [+ ddp_name +] + Z + DVP + Others + DNVP ([+ s_center_right_coalition +]%)
+title: 一个中右资产阶级联盟。
+subtitle: [+ ddp_name +] + 中央党 + 人民党 + 其他 + 国家人民党 ([+ s_center_right_coalition +]%)
 view-if: s_center_right_coalition >= 50 or s_anticommunist_coalition >= 50
 choose-if: s_center_right_coalition >= 50 and (year < 1930 or dnvp_reform)
-unavailable-subtitle: Toleration from the NSDAP and/or ASPD is required.
+unavailable-subtitle: 需要纳粹党和/或萨克森旧社会民主党的容忍。
 on-arrival: saxon_dispute = 1
 
 Surprisingly, the center-right bourgeois parties are capable of a lone majority! [? if s_elections <= 1 : Max Heldt is replaced by a candidate from the DVP, Bünger. ?]
 
 @anticommunist_coalition
-title: An anticommunist coalition, of the bourgeois and their sympathizers.
-subtitle: ASPD + [+ ddp_name +] + Z + DVP + Others + DNVP + NSDAP ([+ s_anticommunist_coalition +]%)
+title: 一个反共联盟 —— 由资产阶级及其同情者组成。
+subtitle: 萨克森旧社会民主党 + [+ ddp_name +] + 中央党 + 人民党 + 其他 + 国家人民党 + 纳粹党 ([+ s_anticommunist_coalition +]%)
 view-if: s_anticommunist_coalition >= 50 or s_elections <= 1
 choose-if: s_anticommunist_coalition >= 50 and s_center_right_coalition < 50 and s_progressive_coalition < 50 and (year < 1930 or ((dnvp_reform and nazi_reform) or (s_neo_weimar_coalition < 50)))
-unavailable-subtitle: ASPD + [+ ddp_name +] + Z + DVP + Others + DNVP + NSDAP ([+ s_anticommunist_coalition +]%)[? if s_center_right_coalition >= 50 : - the bourgeois don't need the Nazis. ?][? if year >= 1930 : The bourgeois and the reactionaries are no longer open to cooperation. ?]
+unavailable-subtitle: 萨克森旧社会民主党 + [+ ddp_name +] + 中央党 + 人民党 + 其他 + 国家人民党 + 纳粹党 ([+ s_anticommunist_coalition +]%)[? if s_center_right_coalition >= 50 : - the bourgeois don't need the Nazis. ?][? if year >= 1930 : The bourgeois and the reactionaries are no longer open to cooperation. ?]
 on-arrival: saxon_dispute = 1; saxony_nsdap += 0.05 if saxony_nsdap < 1.2; reformist_strength -= 2; nazi_saxony = 1 if nsdap_sl >= s_center_right_coalition; saxony_nsdap += 0.05 if nazi_saxony; saxony_spd -= 0.05 if nazi_saxony; kpd_relation += 5 if nazi_saxony; nazi_urgency += 1 if nazi_saxony;
 
 With the bourgeois parties in Saxony deeply distrusting the regional SPD due to its intense left-wing leanings and a history of class war in the state unlike that of other states, an anticommunist coalition is formed. 
@@ -371,8 +371,8 @@ With the bourgeois parties in Saxony deeply distrusting the regional SPD due to 
 [? if nsdap_sl < s_center_right_coalition : The Nazis are content to simply tolerate the cabinet, luckily, though they are still legitimized through the bourgeois reliance on them to prevent new elections. ?][? if nsdap_sl >= s_center_right_coalition : The Nazis have entered into government, unwilling to be simply tolerating partners of the bourgeois. Immediately, left-wing parties are suppressed. ?]
 
 @red_saxony
-title: A "United Front" with the KPD.
-subtitle: KPD + SPD ([+ s_left_coalition +]%)
+title: 与共产党组成的「统一战线」。
+subtitle: 共产党 + 社民党 ([+ s_left_coalition +]%)
 view-if: s_left_coalition >= 50
 choose-if: kpd_relation >= 40 and communist_coalition >= 2
 unavailable-subtitle: 共产党对我们不够信任。
@@ -382,7 +382,7 @@ Together with the KPD, we have won a majority. The bourgeois parties are up in a
 
 @spd_majority
 title: 社民党或可单独执政。
-subtitle: SPD ([+ spd_sl +]%)
+subtitle: 社民党 ([+ spd_sl +]%)
 view-if: spd_sl >= 50
 on-arrival: saxony_spd -= 0.1; workers_spd += 3*(1-dissent); unemployed_spd += 3*(1-dissent)
 
@@ -400,7 +400,7 @@ There is no clear majority in the Landtag. As Saxony allows new elections to be 
 
 Ultimately, the decision is up to the regional SPD branch, though we can guide them.
 
-- @and: And the Saxon SPD decides...
+- @and: 而萨克森社民党决定……
 
 @and
 go-to: hung_landtag if s_popular_front_coalition >= 50 and kpd_saxony_warmed; new_elections_saxony if s_neo_weimar_coalition < 50; refused_toleration if s_neo_weimar_coalition >= 50 and left_strength >= 20; accepted_toleration if s_neo_weimar_coalition >= 50 and left_strength < 20
@@ -434,8 +434,8 @@ New elections are called.
 
 @thingamajig
 
-- @based: The Saxon SPD did the right thing.
-- @cringe: The Saxon SPD made a mistake.
+- @based: 萨克森社民党做得对。
+- @cringe: 萨克森社民党犯了个错误。
 
 @based
 on-arrival: left_strength += 5; left_dissent -= 10; reformist_dissent += 5; center_dissent += 5
@@ -459,7 +459,7 @@ The Saxon SPD, following the direction of the party away from the left, has deci
 
 @brown_saxony
 title: 纳粹党多数
-subtitle: NSDAP ([+ nsdap_sl +]%)
+subtitle: 纳粹党 ([+ nsdap_sl +]%)
 view-if: nsdap_sl >= 50
 on-arrival: saxony_nsdap += 0.25; workers_nsdap += 4; old_middle_nsdap += 5; rural_nsdap += 2
 

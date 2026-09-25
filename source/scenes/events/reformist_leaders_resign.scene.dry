@@ -1,6 +1,6 @@
-title: Reformist leaders resign
+title: 改良派领袖辞职
 new-page: true 
-subtitle: Reformist disagreements with our policies have grown too severe.
+subtitle: 改良派对我们政策的不满已过于严重。
 tags: event
 view-if: reformist_dissent >= 60
 on-arrival: reformist_strength *= 0.3; workers_spd -= 10; workers_others += 5; n_advisors -= 1 if braun_advisor == 1; n_advisors -= 1 if severing_advisor == 1; braun_advisor = 0; severing_advisor = 0; rb_strength -= 250; reformists_resign = 1; prussian_police_loyalty -= 0.05 if spd_prussia; socialism -= 3

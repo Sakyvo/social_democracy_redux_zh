@@ -1,5 +1,5 @@
 title: 秘密重整军备曝光!
-subtitle: We have found evidence of illegal rearmament by the Reichswehr
+subtitle: 我们发现了国防军非法重整军备的证据
 view-if: (year == 1926 and month >= 12) or year == 1927
 new-page: true
 on-arrival: pacifism += 1
@@ -15,13 +15,13 @@ We have found evidence of secret rearmament by the Reichswehr, and presented it 
 
 To avoid a crisis, the bourgeois parties, even including the DVP, have offered to reshuffle the government to include the SPD as part of a new grand coalition. However, much of the party is still outraged at the rearmament, and it may be difficult to convince the party to take this course of action.
 
-- @grand_coalition_marx: Enter the government.
-- @demand_resignation: Demand the government's resignation before anything else.
+- @grand_coalition_marx: 加入政府。
+- @demand_resignation: 首先要政府辞职。
 
 @grand_coalition_marx
-subtitle: SPD + Z + BVP + DDP + DVP ([+ grand_coalition +]%)
+subtitle: 社民党 + 中央党 + 巴伐利亚人民党 + 民主党 + 人民党 ([+ grand_coalition +]%)
 choose-if: left_strength+center_strength < reformist_strength
-unavailable-subtitle: SPD + Z + BVP + DDP + DVP ([+ grand_coalition +]%) - The party is too opposed.
+unavailable-subtitle: 社民党 + 中央党 + 巴伐利亚人民党 + 民主党 + 人民党 ([+ grand_coalition +]%) - The party is too opposed.
 on-arrival: left_dissent += 10; leverage = spd_r; leverage += 5; center_dissent += 5; labor_dissent += 5; pacifism -= 2; workers_spd -= 3; new_middle_spd -= 2; unemployed_spd -= 3; workers_kpd += 2; unemployed_kpd += 2; reichswehr_loyalty += 0.05; spd_toleration = 0; spd_in_government = 1
 go-to: election_1928.ministries
 
@@ -29,7 +29,7 @@ Despite the protests of our party's left and pacifist wings, we have entered gov
 
 @demand_resignation
 on-arrival: spd_toleration = 0; dvp_relation -= 5; ddp_relation -= 2; z_relation -= 2; marx_relation -= 5; marx_rearmament = 1
-subtitle: We shall present a motion of no confidence should they refuse.
+subtitle: 若他们拒绝,我们将提出不信任案。
 
 As expected, the cabinet refuses to resign. We attack the government for its complacency in allowing the Reichswehr to rearm and call a motion of no confidence. Though the far-right brand us traitors, they vote alongside us against the government anyway.
 
@@ -37,15 +37,15 @@ As expected, the cabinet refuses to resign. We attack the government for its com
 
 Though Gessler has promised to look into the activities, it is evidently not enough. There is but one thing to do.
 
-- @demand_resignation: Demand the government's resignation.
+- @demand_resignation: 要求政府辞职。
 
 @gov_menu
 on-arrival: coup_progress += 1; coalition_dissent += 1; reichswehr_loyalty -= 0.05
 
 The crisis has strained relations within the coalition. We demand a reform of the ranks of the Reichswehr, but nothing the bourgeois are willing to offer is satisfactory. There is a risk that the [+ chancellor +] cabinet may collapse.
 
-- @gov_collapse: The government collapses.
-- @compromise: We will compromise.
+- @gov_collapse: 政府垮台。
+- @compromise: 我们将妥协。
 
 @gov_collapse
 on-arrival: spd_in_government = 0; chancellor_party = "Z"; chancellor = "Marx" if president != "Marx"; chancellor = "Brüning" if president == "Marx"; marx_rearmament = 1; foreign_minister_party = "DVP"; interior_minister_party = "Z"; justice_minister_party = "I"; labor_minister_party = "Z"; reichswehr_minister_party = "I"; economic_minister_party = ddp_name; finance_minister_party = "DVP"; agriculture_minister_party = "Z"; labor_minister = "Stegerwald"; interior_minister = "Wirth"; finance_minister = "Moldenhauer"; economic_minister = "Curtius"; justice_minister = "Koch-Weser"; foreign_minister = "Stresemann"; agriculture_minister = "Dietrich"; reichswehr_minister = "Groener";  coalition_dissent = 0;
@@ -54,7 +54,7 @@ The government has collapsed, and the SPD's ministers have been sacked. [+ chanc
 
 @compromise
 choose-if: reformist_strength > left_strength+center_strength and coalition_dissent < 3
-unavailable-subtitle: A compromise is impossible
+unavailable-subtitle: 妥协是不可能的
 on-arrival: pacifism -= 1; coalition_dissent -= 1; workers_spd -= 2; new_middle_spd -= 3; unemployed_spd -= 3; left_dissent += 10
 
 We have compromised to preserve the coalition, discrediting our image as a pacifist party and angering our left wing. Still, the government is maintained. If we can secure greater gains for the workers in this position, then perhaps the compromise will have been worth it.

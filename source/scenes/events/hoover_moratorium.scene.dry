@@ -1,5 +1,5 @@
-title: Hoover Moratorium
-subtitle: Owing to the economic crisis, our debt payments have been paused...
+title: 胡佛延期偿付
+subtitle: 由于经济危机,我们的债务偿付已被暂停……
 new-page: true
 view-if: banking_crisis_seen = 1 and ((year == 1931 and month >= 6) or (year == 1932)) and reparations >= 0 and unemployed > 15
 on-arrival: budget += 1; reparations_negotiation += 2; hoover_moratorium_seen = 1; workers_dvp += 3 if foreign_minister_party == "DVP"; new_middle_dvp += 3 if foreign_minister_party == "DVP"; old_middle_dvp += 3 if foreign_minister_party == "DVP"; rural_dvp += 3 if foreign_minister_party == "DVP"; workers_z += 3 if foreign_minister_party == "Z"; new_middle_z += 3 if foreign_minister_party == "Z"; old_middle_z += 3 if foreign_minister_party == "Z"; rural_z += 3 if foreign_minister_party == "Z"; workers_spd += 3 if foreign_minister_party == "SPD"; new_middle_spd += 3 if foreign_minister_party == "SPD"; old_middle_spd += 3 if foreign_minister_party == "SPD"; rural_spd += 3 if foreign_minister_party == "SPD";

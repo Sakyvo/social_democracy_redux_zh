@@ -1,4 +1,4 @@
-title: Through the Eye of a Needle
+title: 穿过针眼
 subtitle: 连资产阶级也能找到通往社会主义的路。
 view-if: capital_strike_seen and not z_socialist and (capital_strike_timer == 0) and z_relation >= 75 and socialism >= 60 and class_war and (financing_banned or z_tension >= 12) and (in_weimar_coalition or in_popular_front) and pro_republic >= nationalism*2 and z_party_leader == "Joos"
 tags: event

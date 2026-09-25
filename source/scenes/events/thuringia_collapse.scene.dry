@@ -1,5 +1,5 @@
-title: Thuringian Government Collapses!
-subtitle: Disagreements between the moderate and radical wings of the right have finally caught up to them
+title: 图林根政府垮台!
+subtitle: 右翼温和派与激进派之间的分歧终于让他们自食其果
 new-page: true
 tags: event
 max-visits: 1
@@ -10,7 +10,7 @@ on-arrival: nazi_thuringia = 0
 
 The Thuringian government, a coalition of the bourgeois parties with the Nazis, has finally collapsed following intensified disputes between the DVP and WP (Economic Party) on one end and NSDAP on the other. The result is that the government threatens to fall, unless the local SPD branch provides toleration to the bourgeois so as to enable a smooth removal of Nazis from the state government.
 
-- @thuringia_spd: It is in the hands of the Thuringian SPD.
+- @thuringia_spd: 这掌握在图林根社民党手中。
 
 @thuringia_spd
 go-to: new_elections if left_strength >= 30 or uf_formed; toleration if left_strength < 30 and not uf_formed

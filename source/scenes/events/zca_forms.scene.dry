@@ -1,5 +1,5 @@
-title: The Centre Christian Alliance
-subtitle: The bourgeoisie unite into a new party.
+title: 中央党基督教联盟
+subtitle: 资产阶级联合成一个新政党。
 view-if: month == 3 and not z_banned and ((bourgeois_power - (socialism/100)) < 0.5) and spd_in_government and not in_grand_coalition and not in_weimar_coalition and ((capital_strike_seen and financing_banned and capital_strike_progress >= (z_relation/2) and (nsdap_banned or capital_nazi)) or (victory_republic and ((capital_strike_progress >= (z_relation/4) and left_strength >= reformist_strength and not kpd_banned) or dvp_banned))) and z_relation < 50 and ddp_relation < 50 and dvp_relation < 50
 max-visits: 1
 tags: event

@@ -1,5 +1,5 @@
-title: July Putsch in Austria!
-subtitle: Hitler has been shot by Austrofascist rebels!
+title: 奥地利七月政变!
+subtitle: 希特勒被奥地利法西斯叛军枪击!
 view-if: austria_sanctioned and year == 1934 and month >= 7 and not hitler_dead
 tags: event
 max-visits: 1
@@ -10,7 +10,7 @@ new-page: true
 
 Following the failure of Hitler's Austria to achieve diplomatic recognition, and its economic collapse under sanction from every Entente power and even Germany, Austrofascist rebels have attempted to seize back control. In a chaotic coup attempt, Hitler has been killed, while the rest of the country has been plunged into civil war.
 
-- @wow: Well...okay.
+- @wow: 嗯……好吧。
 
 @wow
 

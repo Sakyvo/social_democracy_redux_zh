@@ -1,5 +1,5 @@
 title: 总统选举
-subtitle: Finally, presidential elections can be held again...
+subtitle: 总统选举终于可以重新举行了……
 view-if: presidential_timer <= 0 and victory_republic and not presidency_abolished and presidency_vacated
 frequency: 1000
 max-visits: 1
@@ -21,14 +21,14 @@ set-jump: pres_election
 - @support_braun2: 推举奥托·布劳恩。
 - @support_schumacher: 推举库尔特·舒马赫。
 - @support_wirth: 支持约瑟夫·维尔特。
-- @support_thalmann: Support Ernst Thälmann.
+- @support_thalmann: 支持恩斯特·台尔曼。
 - @support_munzenberg: 支持维利·明岑贝格。
 - @support_gessler: 支持奥托·格斯勒。
 - @support_adenauer: 支持康拉德·阿登纳。
 
 @support_braun2
 view-if: (old_braun or not spd_prussia) and achievement_megatome
-subtitle: He's sleepy, but we can use the Megatome to enter his dreams.
+subtitle: 他很困倦,但我们可以用《万卷书》进入他的梦境。
 
 我们渐渐睡去……
 
@@ -45,7 +45,7 @@ go-to: pres_election
 @prospit
 view-if: bright_moon
 set-bg: img/Prospit.webp
-subtitle: The Kingdom of Light
+subtitle: 光明之国
 on-arrival: {!
 const toolsWrapper = document.getElementById('tools_wrapper');
 if (toolsWrapper) {
@@ -67,7 +67,7 @@ elements.forEach(el => {
 @derse
 view-if: dark_moon
 set-bg: img/Derse.webp
-subtitle: The Kingdom of Darkness
+subtitle: 黑暗之国
 on-arrival: {!
 const toolsWrapper = document.getElementById('tools_wrapper');
 if (toolsWrapper) {
@@ -98,7 +98,7 @@ go-to: spd_presidential
 库尔特·舒马赫欣然同意竞选总统,作为我们的候选人参加角逐。 [? if motivate_adenauer : 我们参选促使中央党推出康拉德·阿登纳与我们竞争。 ?][? if z_relation >= 50 : 中央党支持奥托·布劳恩。 ?]
 
 @support_wirth
-subtitle: The incumbent, interim president.
+subtitle: 现任的临时总统。
 view-if: wirth_campaign
 on-arrival: z_relation += 5
 
@@ -107,7 +107,7 @@ on-arrival: z_relation += 5
 - @final_election: 最终结果……
 
 @support_thalmann
-subtitle: Thälmann is very unpopular among the reformists.
+subtitle: 台尔曼在改良派中极不受欢迎。
 view-if: kpd_party_leader != "Conciliators"
 choose-if: kpd_relation >= 50 and reformist_strength < left_strength
 unavailable-subtitle: [? if kpd_relation < 50 : 我们与共产党的关系还不够好,他们甚至不愿接受我们的支持。 ?] [? if reformist_strength >= left_strength : 改良派能够劝住全党,不支持这一安排。 ?]
@@ -136,7 +136,7 @@ on-arrival: spd_support_munzenberg = 1; kpd_relation += 5; reformist_dissent += 
 - @final_election: 最终结果……
 
 @support_gessler
-subtitle: Otto Gessler is running as the DVP's candidate.
+subtitle: 奥托·格斯勒以人民党候选人的身份参选。
 view-if: not dvp_banned and gessler_campaign and not wirth_campaign
 on-arrival: left_dissent += 5; spd_support_gessler = 1; z_support_gessler = 1 if z_relation >= 45; adenauer_campaign = 0 if z_relation >= 45
 
@@ -145,7 +145,7 @@ on-arrival: left_dissent += 5; spd_support_gessler = 1; z_support_gessler = 1 if
 - @final_election: 最终结果……
 
 @support_adenauer
-subtitle: Konrad Adenauer may run as the Center Party's candidate.
+subtitle: 康拉德·阿登纳可能作为中央党的候选人参选。
 view-if: not wirth_campaign
 on-arrival: spd_support_adenauer = 1; adenauer_campaign = 1
 
@@ -157,8 +157,8 @@ on-arrival: spd_support_adenauer = 1; adenauer_campaign = 1
 
 @spd_presidential
 
-- @convince_z: Can we sway the Center Party?
-- @convince_kpd: Can we convince the KPD?
+- @convince_z: 我们能否说动中央党?
+- @convince_kpd: 我们能否说服共产党?
 - @final_election: 最终结果……
 
 @convince_z
@@ -168,8 +168,8 @@ unavailable-subtitle: 中央党不愿被说服。
 
 中央党目前并不支持我们的候选人,但愿意被说服。
 
-- @pay_z: Promise to front the resources needed for a joint campaign.
-- @appeal_hergt: Appeal to the threat of Oskar Hegt's election.
+- @pay_z: 承诺先行提供联合竞选所需的资源。
+- @appeal_hergt: 以奥斯卡·赫尔格特当选的威胁相劝。
 - @spd_presidential: 另找一个政党来支持我们。
 
 @pay_z
@@ -197,8 +197,8 @@ unavailable-subtitle: 共产党不愿被说服。
 共产党目前并不支持我们的候选人,但愿意被说服。
 
 - @use_relations: 动用我们的关系。
-- @pay_kpd: Promise to front the resources needed for a joint campaign.
-- @appeal_hergt_2: Appeal to the threat of Oskar Hegt's election.
+- @pay_kpd: 承诺先行提供联合竞选所需的资源。
+- @appeal_hergt_2: 以奥斯卡·赫尔格特当选的威胁相劝。
 - @spd_presidential: 另找一个政党来支持我们。
 
 @use_relations
@@ -543,10 +543,10 @@ set-jump: no_majority_round1
 
 - @round2_convince_z: 说服中央党把支持转给我们。
 - @round2_convince_kpd: 说服共产党把支持转给我们。 
-- @round2_adenauer: Switch our support to Adenauer.
-- @round2_gessler: Switch our support to Gessler.
-- @round2_thalmann: Switch our support to Thälmann.
-- @round2_munzenberg: Switch our support to Münzenberg.
+- @round2_adenauer: 把我们的支持转向阿登纳。
+- @round2_gessler: 把我们的支持转向格斯勒。
+- @round2_thalmann: 把我们的支持转向台尔曼。
+- @round2_munzenberg: 把我们的支持转向明岑贝格。
 - @round2_vote: 开始第二轮投票吧。
 
 @luther_back_hergt
@@ -605,10 +605,10 @@ max-visits: 1
 
 中央党目前并不支持我们的候选人,但愿意被说服。
 
-- @relation_z2: Use our relations.
-- @pay_z2: Promise to front the resources needed for a joint campaign.
-- @appeal_hergt2: Appeal to the threat of Oskar Hegt's election.
-- @no_majority_round1: Nevermind the Center Party.
+- @relation_z2: 动用我们的关系。
+- @pay_z2: 承诺先行提供联合竞选所需的资源。
+- @appeal_hergt2: 以奥斯卡·赫尔格特当选的威胁相劝。
+- @no_majority_round1: 别管中央党了。
 
 @relation_z2
 choose-if: z_relation >= 45
@@ -642,10 +642,10 @@ max-visits: 1
 
 共产党目前并不支持我们的候选人,但愿意被说服。
 
-- @use_relations2: Use our relations.
-- @pay_kpd2: Promise to front the resources needed for a joint campaign.
-- @appeal_hergt2_2: Appeal to the threat of Oskar Hegt's election.
-- @no_majority_round1: Nevermind the KPD.
+- @use_relations2: 动用我们的关系。
+- @pay_kpd2: 承诺先行提供联合竞选所需的资源。
+- @appeal_hergt2_2: 以奥斯卡·赫尔格特当选的威胁相劝。
+- @no_majority_round1: 别管共产党了。
 
 @use_relations2
 choose-if: kpd_relation >= 60 or (kpd_relation >= 50 and kpd_party_leader == "Conciliators")
@@ -696,8 +696,8 @@ max-visits: 1
 
 即便共产党人接受我们的支持,支持台尔曼在我党中也颇不受欢迎。你确定吗?
 
-- @round2_thalmann_2_2: Yes, we will support Thälmann, despite the reformists' pleas against it.
-- @no_majority_round1: Never mind.
+- @round2_thalmann_2_2: 好,尽管改良派苦苦反对,我们仍将支持台尔曼。
+- @no_majority_round1: 算了。
 
 @round2_thalmann_2_2
 on-arrival: spd_support_thalmann = 1; reformist_dissent += 15; center_dissent += 10; labor_dissent += 5; neorevisionist_dissent += 10; catholics_spd -= 5; workers_spd -= 3; kpd_relation += 10; communist_coalition += 2; z_relation -= 15; dvp_relation -= 15; ddp_relation -= 10; weimar_dissent += 3; wirth_campaign = 0; motivate_adenauer = 1 if z_relation < 50 and president == "Wirth"; adenauer_campaign = 1 if z_relation < 50

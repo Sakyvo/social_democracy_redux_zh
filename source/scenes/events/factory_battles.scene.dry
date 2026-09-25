@@ -1,5 +1,5 @@
-title: Industrial Conflict
-subtitle: The bourgeoisie attempt to retake their occupied factories!
+title: 工业冲突
+subtitle: 资产阶级试图夺回被占领的工厂!
 view-if: factory_takeovers > 0 and factory_battles_timer < 1 and not capital_flight and (not sa_banned or not sh_banned)
 tags: event
 on-arrival: factory_battles_timer += (6/bourgeois_power); sa_militancy += 0.05*bourgeois_power; picket_power = 0; scabber_power = 0; scabber_power += sa_strength*sa_militancy; scabber_power += sh_strength*sh_militancy; scabber_power += prussian_police_strength*prussian_police_militancy*(1-prussian_police_loyalty) if not spd_prussia; workers_nsdap -= 5; {!
@@ -23,14 +23,14 @@ new-page: true
 
 Following our policy of factory takeovers, the bourgeoisie have determined to break these occupations by force and take their property back. To this aim, they have enlisted forces of the Harzburg Front.
 
-- @defend: Deploy the Reichsbanner to defend occupied factories.
-- @police: Call the Prussian police to defend occupied factories.
-- @teamwork: The Reichsbanner and the Prussian police will work together to defend the occupied factories.
-- @back_down: There is nothing we can do.
+- @defend: 部署国旗团保卫被占领的工厂。
+- @police: 调动普鲁士警察保卫被占领的工厂。
+- @teamwork: 国旗团与普鲁士警察将协力保卫被占领的工厂。
+- @back_down: 我们无能为力。
 
 @defend
 choose-if: rb_militancy >= 0.15
-unavailable-subtitle: The Reichsbanner isn't militant enough.
+unavailable-subtitle: 国旗团还不够有战斗性。
 on-arrival: z_relation -= 3; ddp_relation -= 3; dvp_relation -= 7; picket_power += rb_strength*rb_militancy; picket_power += rfb_strength*rfb_militancy if kpd_relation >= 50 and kpd_truce; strife += 1
 go-to: pickets_maintained if picket_power >= scabber_power; scabbers_win if scabber_power >= picket_power
 
@@ -52,7 +52,7 @@ Our pickets have been broken, and factories retaken. Spirits have been hurt in t
 @teamwork
 view-if: spd_prussia and rb_militancy >= 0.15
 choose-if: prussian_police_loyalty >= 0.65
-unavailable-subtitle: The Prussian police cannot be trusted with this.
+unavailable-subtitle: 此事不能托付给普鲁士警察。
 on-arrival: picket_power += prussian_police_strength*2*prussian_police_militancy*prussian_police_loyalty; pro_republic += 2; picket_power += rb_strength*rb_militancy; picket_power += rfb_strength*rfb_militancy if kpd_relation >= 50 and kpd_truce; strife += 1
 go-to: pickets_maintained if picket_power >= scabber_power; scabbers_win if scabber_power >= picket_power
 

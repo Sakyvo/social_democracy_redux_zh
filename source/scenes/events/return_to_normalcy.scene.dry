@@ -1,5 +1,5 @@
-title: Return to Normalcy
-subtitle: Have we finally found our way out of the crisis?
+title: 回归常态
+subtitle: 我们终于找到走出危机的路了吗?
 new-page: true
 view-if: month = normalcy_month and ((year >= 1933 and pro_republic >= 50 and unemployed <= 20 and inflation < 8 and chancellor != "Papen" and chancellor != "Schleicher" and (coup_progress < 9 or (sh_banned and sa_banned and sa_force+sh_force+(army_force-loyal_army))) and (nsdap_normalized + dnvp_normalized + (unemployed/150)) <= 0.5) or (year >= 1934 and pro_republic >= 40 and unemployed <= 25 and inflation < 10 and chancellor != "Papen" and chancellor != "Schleicher" and (coup_progress < 10 or (sh_banned and sa_banned and sa_force+sh_force+(army_force-loyal_army))) and (nsdap_normalized + dnvp_normalized + (unemployed/150)) <= 0.55) or (year >= 1935 and pro_republic >= 35 and unemployed <= 30 and inflation < 10 and chancellor != "Papen" and chancellor != "Schleicher" and (coup_progress < 10 or (sh_banned and sa_banned and sa_force+sh_force+(army_force-loyal_army))) and (nsdap_normalized + dnvp_normalized + (unemployed/150)) <= 0.6))
 max-visits: 1

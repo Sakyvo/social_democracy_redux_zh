@@ -1,5 +1,5 @@
-title: [+ chancellor +]'s Economic Plan
-subtitle: The ruling cabinet takes a staunch pro-business stance
+title: [+ chancellor +] 的经济计划
+subtitle: 执政内阁采取了坚定的亲商立场
 view-if: year >= 1935 and papen_chancellor_timer <= 0 and (not spd_in_government or spd_toleration) and chancellor_party != "SPD" and chancellor_party != "KPD" and chancellor != "Wirth" and laissez_faire_timer <= 0
 on-arrival: welfare_cut = 0; tax_cut = 0; tariff_hike = 0; welfare_cut = 1 if welfare >= 2; welfare -= 2 if welfare_cut; budget += 2 if welfare_cut; budget += welfare if not welfare_cut and welfare >= 0; welfare = 0 if not welfare_cut; tax_cut = 1 if budget >= 2 and upper_tax_rates >= 1; budget -= 2 if tax_cut; upper_tax_rates -= 1 if tax_cut; inflation -= 0.5; economic_growth += 0.5; economic_growth += 0.4 if economic_growth < 2; economic_growth += 0.3 if eu; tariff_hike = 1 if budget <= 0; tariffs += 1 if tariff_hike; inflation += 1 if inflation > 0 and tariff_hike; inflation += 0.5 if inflation <= 0 and tariff_hike; unemployed += 1 if tariff_hike; budget += 2 if tariff_hike; west_relation -= 1 if tariff_hike; east_relation -= 1 if tariff_hike; reparations_negotiation -= 2 if tariff_hike; eu_progress -= 1 if eu_progress > 0 and tariff_hike; economic_growth -= 0.4 if tariff_hike;  {! 
 Q.laissez_faire_timer = Math.floor(Math.random() * (14 - 8 + 1)) + 8;
@@ -16,8 +16,8 @@ As the crisis begins to subside worldwide, the [+ chancellor +] cabinet, hoping 
 @menu 
 on-arrival: old_middle_dvp += 5; workers_kpd += 3; unemployed_kpd += 5; new_middle_dvp += 2; old_middle_other += 4
 
-- @bring_down: Bring down this government!
-- @no_choice: We have no choice but to continue toleration.
+- @bring_down: 搞垮这个政府!
+- @no_choice: 我们别无选择,只能继续容忍。
 - @support_strikes: 支持德国工会总联合会罢工,反抗这个政府。
 - @rally_: 集会反对政府!
 

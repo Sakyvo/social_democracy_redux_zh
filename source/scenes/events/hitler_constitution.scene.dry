@@ -1,5 +1,5 @@
 title: 希特勒发起公投!
-subtitle: Hitler is attempting to consolidate power…
+subtitle: 希特勒正试图巩固权力……
 view-if: president == "Hitler" and presidential_powers == 1 and sa_banned != 1
 new-page: true
 max-visits: 1
@@ -41,7 +41,7 @@ if (Q.dvp_relation < 30) {
 
 Our forces clash with Hitler's in the streets as the referendum is held, and, shockingly,[? if spd_prussia == 1 : with the help of the Prussian police force, ?] the SA is eventually beaten back allowing the referendum to be held unimpeded. 
 
-- @results_unimpeded: Now the results…
+- @results_unimpeded: 现在看结果……
 
 @prevention_failure
 on-arrival: rb_strength -= 50; workers_spd -= 2; unemployed_spd -= 2; {!
@@ -54,7 +54,7 @@ Q.nazi_reform *= ((Q.enemy_strength*4)/Q.defense_strength)
 
 Our forces clash with Hitler's and, despite our best efforts, the SA is triumphant. Emboldened by the defeat of the Reichsbanner, the SA ramps up their terror on the streets, making it unlikely that this referendum will be a fair one. 
 
-- @results_rigged: Now the results…
+- @results_rigged: 现在看结果……
 
 @prevention_civil_war
 on-arrival: spd_rebel = 1

@@ -1,5 +1,5 @@
 title: 兴登堡之死
-subtitle: The President has died...
+subtitle: 总统逝世了……
 new-page: true
 view-if: year = 1934 and month >= 7 and president = "Hindenburg"
 on-arrival: round = 0; hindenburg_dead = 1; president = "Bumke (acting)"; preisdent = "Großmann (acting)" if judicial_reform >= 4; spd_candidate = "Eckener"; kpd_candidate = "Thälmann"; kpd_candidate = "Münzenberg" if kpd_party_leader = "Conciliators"; z_candidate = "Adenauer"; ddp_candidate = "Gessler"; nsdap_candidate = "Hitler"; nsdap_candidate = "Göring" if hitler_deported; dnvp_candidate = "Seldte"; dvp_candidate = "Gessler"; other_candidate = "Seldte"; is_unity_candidate = 0; sapd_candidate = kpd_candidate;
@@ -17,7 +17,7 @@ tags: event
 
 # Hermann Großmann is the supreme court chief justice in judicial reform.
 
-- @candidates: Who are the candidates so far?
+- @candidates: 目前有哪些候选人?
 
 @candidates
 go-to: candidate_menu
@@ -50,15 +50,15 @@ go-to: candidate_menu
 
 @candidate_menu
 
-- @eckener_r1: Support Hugo Eckener as a joint Weimar Coalition candidate.
-- @adenauer_r1: Support Konrad Adenauer of the Center Party.
-- @gessler_r1: Support Otto Gessler of the [+ ddp_name +].
-- @thalmann_r1: Support Ernst Thälmann of the KPD.
-- @munzenberg_r1: Support Willi Münzenberg of the KPD.
-- @braun_r1: Support Otto Braun.
-- @schumacher_r1: Support Kurt Schumacher.
-- @juchacz_r1: Support Marie Juchacz.
-- @cultural_figure: Support a nonpartisan cultural figure?
+- @eckener_r1: 支持胡戈·埃克纳作为魏玛联盟的联合候选人。
+- @adenauer_r1: 支持中央党的康拉德·阿登纳。
+- @gessler_r1: 支持 [+ ddp_name +] 的奥托·格斯勒。
+- @thalmann_r1: 支持共产党的恩斯特·台尔曼。
+- @munzenberg_r1: 支持共产党的维利·明岑贝格。
+- @braun_r1: 支持奥托·布劳恩。
+- @schumacher_r1: 支持库尔特·舒马赫。
+- @juchacz_r1: 支持玛丽·尤哈茨。
+- @cultural_figure: 支持一位无党籍的文化名人?
 
 @eckener_r1
 subtitle: -1 资源 —— 提名他之后,我们仍须说服其他政党支持他。
@@ -94,7 +94,7 @@ unavailable-subtitle: [? if kpd_relation < 50 : 我们与共产党的关系还�
 即便共产党人接受我们的支持,支持台尔曼在我党中也颇不受欢迎。你确定吗?
 
 - @support_thalmann_2: 是的,尽管改良派恳求不要这样做,我们仍将支持台尔曼。
-- @candidate_menu: Who else can we support?
+- @candidate_menu: 我们还能支持谁?
 
 @support_thalmann_2
 on-arrival: spd_candidate = "Thälmann"; kpd_relation += 5; reformist_dissent += 10; center_dissent += 6; labor_dissent += 5; neorevisionist_dissent += 10; catholics_spd -= 5; new_middle_spd -= 5; old_middle_spd -= 5; rural_spd -= 5; ddp_relation -= 8; dvp_relation -= 15; z_relation -= 10; communist_coalition += 2; is_unity_candidate = 0
@@ -146,14 +146,14 @@ go-to: r1_menu
 
 @cultural_figure
 view-if: presidential_powers >= 1 and pro_republic >= 60 and pacifism >= 3 
-subtitle: The next president should be a symbol of the new Germany...
+subtitle: 下一任总统应当是新德国的象征……
 
 既然我们的改革已使总统大体上成为一个礼仪性职位,或许我们可以开创先例,提名一位来自文化、科学或文学领域的无党派亲民主人士。潜在人选很多……
 
-- @einstein_r1: Albert Einstein, physicist.
-- @mann_r1: Heinrich Mann, left-wing writer.
-- @ossietzky_r1: Carl von Ossietzky, pacifist journalist.
-- @candidate_menu: Actually, we should nominate someone else.
+- @einstein_r1: 阿尔伯特·爱因斯坦,物理学家。
+- @mann_r1: 海因里希·曼,左翼作家。
+- @ossietzky_r1: 卡尔·冯·奥西茨基,和平主义记者。
+- @candidate_menu: 其实,我们该提名别人。
 
 @einstein_r1
 subtitle: -2 资源
@@ -201,7 +201,7 @@ view-if: round = 0
 - @convince_dvp_spd
 - @convince_dvp_unity
 - @convince_kpd_spd
-- @round_1: Let the voting begin.
+- @round_1: 开始投票吧。
 
 
 # convincing Z to support a unity candidate
@@ -274,8 +274,8 @@ go-to: r1_menu if round = 0; r2_campaigning if round > 0
 中央党对我们的理由并不满意,但愿意被说服。如果我们先垫付资源,他们愿意与我们联合竞选。
 
 - @pay_z: 给他们所需的资源。
-- @r1_menu: Forget about the Center.
-- @r2_campaigning: Forget about the Center.
+- @r1_menu: 别管中央党了。
+- @r2_campaigning: 别管中央党了。
 
 @pay_z
 choose-if: resources >= 2
@@ -310,7 +310,7 @@ max-visits: 1
 [? if ddp_candidate != spd_candidate: 遗憾的是,[+ ddp_name +] 不愿支持 [+ spd_candidate +]。 ?]
 
 @convince_kpd_spd
-title: Convince the KPD to support [+ spd_candidate +].
+title: 说服共产党支持 [+ spd_candidate +]。
 view-if: (spd_candidate = "Braun" or spd_candidate = "Schumacher" or spd_candidate = "Juchacz" or is_cultural_candidate) and kpd_candidate != spd_candidate
 choose-if: spd_votes >= kpd_votes
 unavailable-subtitle: 共产党知道自己比我们更受欢迎;他们看不出有任何理由支持我们的候选人。
@@ -320,8 +320,8 @@ max-visits: 1
 
 - @kpd_resources: 动用我们的资源。
 - @kpd_relations: 动用我们的良好关系。
-- @r1_menu: Forget about the KPD.
-- @r2_campaigning: Forget about the KPD.
+- @r1_menu: 别管共产党了。
+- @r2_campaigning: 别管共产党了。
 
 @kpd_resources
 view-if: kpd_relation >= 50 and not historical_mode
@@ -649,11 +649,11 @@ go-to: r2_menu
 - @r2_endorse_adenauer
 - @r2_endorse_gessler
 - @r2_endorse_eckener
-- @r2_campaigning: Can we convince any of the parties to change their endorsements?
+- @r2_campaigning: 我们能说服哪个政党改变其背书吗?
 - @r2_vote: 开始投票吧。
 
 @r2_endorse_thalmann
-title: Switch our support to Thälmann of the KPD.
+title: 把我们的支持转向共产党的台尔曼。
 subtitle: 这会损害我党的支持度。
 view-if: spd_candidate != "Thälmann" and kpd_candidate = "Thälmann"
 choose-if: kpd_relation >= 50 and left_strength > reformist_strength
@@ -667,7 +667,7 @@ max-visits: 1
 - @r2_vote: 开始投票吧。
 
 @r2_endorse_munzenberg
-title: Switch our support to Münzenberg of the KPD.
+title: 把我们的支持转向共产党的明岑贝格。
 subtitle: 这会损害我党的支持度。
 view-if: spd_candidate != "Münzenberg" and kpd_candidate = "Münzenberg"
 choose-if: kpd_relation >= 50 and left_strength > reformist_strength
@@ -682,7 +682,7 @@ max-visits: 1
 
 
 @r2_endorse_adenauer
-title: Switch our support to Konrad Adenauer of the Center Party.
+title: 把我们的支持转向中央党的康拉德·阿登纳。
 view-if: z_candidate = "Adenauer" and spd_candidate != z_candidate
 on-departure: kpd_candidate = "Thälmann" if kpd_candidate == spd_candidate and kpd_party_leader != "Conciliators"; kpd_candidate = "Münzenberg" if kpd_candidate == spd_candidate and kpd_party_leader == "Conciliators"; sapd_candidate = kpd_candidate; spd_candidate = "Adenauer"; z_relation += 4; Adenauer_bonus -= 2.5 if z_relation < 40; Seldte_bonus += 2.5 if z_relation < 40; is_unity_candidate = 1
 go-to: r2_campaigning
@@ -695,7 +695,7 @@ go-to: r2_campaigning
 
 
 @r2_endorse_gessler
-title: Switch our support to Otto Gessler.
+title: 把我们的支持转向奥托·格斯勒。
 view-if: ddp_candidate = "Gessler" and spd_candidate != ddp_candidate
 on-departure: kpd_candidate = "Thälmann" if kpd_candidate == spd_candidate and kpd_party_leader != "Conciliators"; kpd_candidate = "Münzenberg" if kpd_candidate == spd_candidate and kpd_party_leader == "Conciliators"; sapd_candidate = kpd_candidate; spd_candidate = "Gessler"; ddp_relation += 4; dvp_candidate = "Seldte" if dvp_relation < 40; is_unity_candidate = 1
 go-to: r2_campaigning
@@ -709,7 +709,7 @@ go-to: r2_campaigning
 
 
 @r2_endorse_eckener
-title: Convince the Weimar Coalition parties to unite behind Hugo Eckener.
+title: 说服魏玛联盟各党团结在胡戈·埃克纳身后。
 subtitle: -2 资源
 unavailable-subtitle: [? if resources < 2 : -2 资源 —— 资源不足。 ?]
 choose-if: resources >= 2 and ((z_relation >= 50 and z_leader = "Kaas") or (z_relation >= 30 and z_leader = "Joos")) and ddp_relation >= 40
@@ -753,7 +753,7 @@ on-arrival: chancellor = "Hitler"; chancellor_party = "NSDAP"; hitler_seen = 0; 
 随着 [+ nsdap_candidate +] 获胜,纳粹毫不浪费时间地开始集权。 [? if president = "Göring": 他的第一个动作就是罢免现任总理,任命希特勒为总理,并先撤销对希特勒的驱逐。 ?][? if president = "Hitler": 他的第一个动作就是罢免现任总理,任命自己为总理,并动用冲锋队攻击任何反对者。 ?]
 
 - @hitler_takes_power: 接下来呢?
-- @hitler_constitutional: This is unconstitutional!
+- @hitler_constitutional: 这是违宪的!
 
 @seldte_victory
 on-arrival: chancellor = "Hitler"; chancellor_party = "NSDAP"; hitler_seen = 0
@@ -761,22 +761,22 @@ on-arrival: chancellor = "Hitler"; chancellor_party = "NSDAP"; hitler_seen = 0
 随着泽尔特胜出,力量的天平转向了纳粹。 [? if hitler_deported and not hitler_dead: 他的第一个动作就是罢免现任总理,任命阿道夫·希特勒为总理,并先撤销对希特勒的驱逐。 ?][? if not hitler_deported: 他的第一个动作就是罢免现任总理,任命阿道夫·希特勒为总理。 ?][? if hitler_dead : 他的第一个动作就是罢免现任总理,并用撒旦仪式让希特勒复活,为他打开一条通往权力的路。 ?]
 
 - @hitler_takes_power: 接下来呢?
-- @hitler_constitutional: This is blatantly unconstitutional!
+- @hitler_constitutional: 这是公然违宪!
 
 @hitler_constitutional
 view-if: presidential_powers
 
 我们通过了一项宪法修正案,禁止总统拥有任意解散政府的权力。为推翻它,极右翼发起了一场关于新宪法修正案的公民投票。冲锋队上街,"说服"选民支持他们的提案。德国正一步步逼近内战。
 
-- @fight: We will fight the fascists in the streets!
-- @defeat_democratic: We can only defeat the fascists through democratic means!
+- @fight: 我们要在街头与法西斯分子战斗!
+- @defeat_democratic: 我们只能通过民主手段击败法西斯分子!
 
 @fight
 
 我们明白这意味着什么吗?这意味着要对抗国家的全部武力,打一场内战。
 
 - @civil_war: 是。
-- @defeat_democratic: It is not too late to fight constitutionally.
+- @defeat_democratic: 以合宪的方式抗争还不算太晚。
 
 @defeat_democratic
 on-arrival: {!
@@ -793,7 +793,7 @@ on-arrival: constitutional_crisis = 1
 
 尽管面对纳粹的威胁,社民党及各民主政党的支持者仍拒绝为这场公投投票,使其达不到通过所必需的门槛。这是一场小小的胜利 —— 冲锋队仍在街头肆虐。通往绝对权力的宪制道路被堵住了,但这能挡住纳粹吗?
 
-- @game_over: The ending is yet to be seen...
+- @game_over: 结局尚待分晓……
 
 @ref_lose
 

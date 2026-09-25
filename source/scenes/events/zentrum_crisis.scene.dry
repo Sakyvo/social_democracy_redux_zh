@@ -1,6 +1,6 @@
-title: Zentrum in Crisis
+title: 中央党陷入危机
 new-page: true
-subtitle: The Center Party is split on the Weimar Plan...
+subtitle: 中间派 Party is split on the Weimar Plan...
 tags: event
 view-if: weimar_dissent >= 8 and z_party_leader == "Joos"
 on-arrival: joos_strength = (z_relation/3); joos_strength += catholics_spd_normalized; joos_strength += workers_z_normalized; joos_strength += (pro_republic/2); right_strength += ((100-pro_republic)/2); right_strength += (kpd_relation/3); right_strength += weimar_dissent; right_strength += economic_democracy; right_strength += land_reform; right_strength += womens_rights; right_strength += (homosexual_rights*2); right_strength += capital_strike_progress if not capital_strike_seen; right_strength += 15 if capital_strike_seen; right_strength += (coup_progress*2); right_strength += dvp_votes; right_strength += other_votes; right_strength += (spd_votes - z_votes); right_strength += (rb_militancy*rb_militarization_cost*10); {!
@@ -16,8 +16,8 @@ max-visits: 1
 
 As the crisis hitting Germany subsides, the necessity of the Weimar Plan has come into question. Despite Joos' best attempts to assuage concerns, the party right-wing has still turned on him and the plan, seeking to remove it from the party platform. For this task, a broad coalition has formed against Joos. It is impossible to say if Joos will win.
 
-- @vote: Let's hope for the best.
-- @help_joos: Let's help Joos with a minor media campaign.
+- @vote: 但愿一切顺利。
+- @help_joos: 我们以一场小规模媒体宣传来帮约斯一把。
 
 @help_joos
 subtitle: -1 资源.
@@ -25,17 +25,17 @@ on-arrival: resources -= 1; joos_strength += (radio+commercialized_media)
 
 We provide Joos's campaign with some financial aid and a minor media campaign. Let's hope this is enough to win him the congress.
 
-- @vote: Now the congress.
+- @vote: 现在是代表大会了。
 
 @vote
 
 Pro-Weimar Delegates: [+ joos_strength +]
 Anti-Weimar Delegates: [+ right_strength +]
 
-- @joos_victory_wide: The "Weimarists" win the vote.
-- @joos_victory_slim: The "Weimarists" narrowly win the vote.
-- @joos_loss_wide: The "Weimarists" lose the vote.
-- @joos_loss_slim: The "Weimarists" narrowly lose the vote.
+- @joos_victory_wide: 「魏玛派」赢得表决。
+- @joos_victory_slim: 「魏玛派」以微弱优势赢得表决。
+- @joos_loss_wide: 「魏玛派」输掉表决。
+- @joos_loss_slim: 「魏玛派」以微弱劣势输掉表决。
 
 @joos_victory_wide
 on-arrival: old_middle_z -= 6; rural_z -= 6; new_middle_z -= 3; catholics_z -= 3; workers_z += 2

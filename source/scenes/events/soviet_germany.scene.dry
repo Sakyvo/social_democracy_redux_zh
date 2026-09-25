@@ -1,5 +1,5 @@
-title: A New Soviet Germany
-subtitle: The KPD has risen to the forefront of German politics...
+title: 一个新的苏维埃德国
+subtitle: 共产党已跃居德国政治的前台……
 new-page: true
 view-if: kpd_influence >= 10 and (in_left_front or in_popular_front or (kpd_r >= 50 and chancellor_party == "KPD")) and (sa_banned and sh_banned) and ((president == "Münzenberg" or president == "Thälmann") or (red_banner == 1) or ((kpd_r*rfb_strength*rfb_militancy) >= (spd_r*rb_strength*rb_militancy*(1-dissent))))
 tags: event
@@ -15,8 +15,8 @@ Ever since the first entrance of the Communists into government they have worked
 
 Except, of course, what remains of our forces - the Reichsbanner, the ministries we hold, the Soviets in which we lead, the trade unions affiliated to us...
 
-- @resist: Together, we can stop the [? if president != "Thälmann" and president != "Münzenberg" and chancellor_party != "KPD" : [+ kpd_leader +] ?][? if president == "Thälmann" or president == "Münzenberg" : [+ president +] ?][? if chancellor_party == "KPD" and president != "Thälmann" and president != "Münzenberg" : [+ chancellor +] ?] putsch!
-- @cave: Germany embraces the revolution.
+- @resist: 只要同心协力,我们就能阻止 [? if president != "Thälmann" and president != "Münzenberg" and chancellor_party != "KPD" : [+ kpd_leader +] ?][? if president == "Thälmann" or president == "Münzenberg" : [+ president +] ?][? if chancellor_party == "KPD" and president != "Thälmann" and president != "Münzenberg" : [+ chancellor +] ?] 发动的政变!
+- @cave: 德国拥抱这场革命。
 
 @resist
 on-arrival: socialist_unity = 0; {!
@@ -117,7 +117,7 @@ Firefights erupt across the nation between the Reichsbanner and RFB. For one day
 
 Eventually, the communists emerge victorious. [? if chancellor_party != "KPD" : [+ chancellor +] is forced to resign, and a new all-communist government formed. Resisting ministries fall, and the nation is brought under communist control. ?]
 
-- @conclusion: We tried our best.
+- @conclusion: 我们已尽力而为。
 
 @victory
 on-arrival: in_left_front = 0; in_popular_front = 0; time_to_election = 3; kpd_influence = 0; communist_coalition -= 3; kpd_relation -= 60; rfb_militancy -= 0.5; rfb_strength *= 0.6; workers_kpd *= 0.7; unemployed_kpd *= 0.9; new_middle_kpd *= 0.9;
@@ -125,18 +125,18 @@ call: set_next_election_time
 
 Eventually, the RFB's forces fall, and putschist soviets brought under the Iron Front's control. The capital is secured, and all communist ministers sacked as the coup falls apart. Social Democracy has prevailed.
 
-- @ban_kpd: Crack down on the communists.
-- @forgive: What's done is done.
+- @ban_kpd: 镇压共产党人。
+- @forgive: 事已至此,无可挽回。
 
 @ban_kpd
 on-arrival: kpd_banned = 1; party_bans = 1; left_dissent += 25
 
 Putschism cannot be forgiven. The communists at our mercy, we put an end to their aspirations once and for all by banning the party. 
 
-- @unban_bourgeois: Unban the [+ ddp_name +] and Center.
-- @unban_ddp: Unban the [+ ddp_name +].
-- @unban_z: Unban the Center Party.
-- @maintain: Now and forever, Social Democracy shall reign.
+- @unban_bourgeois: 解除对 [+ ddp_name +] 与中央党的查禁。
+- @unban_ddp: 解除对 [+ ddp_name +] 的查禁。
+- @unban_z: 解除对中央党的查禁。
+- @maintain: 从今往后,永永远远,社会民主将统治一切。
 
 @unban_bourgeois
 view-if: ddp_banned and z_banned
@@ -147,7 +147,7 @@ Of course, we re-legalize the moderate liberal parties. The KPD fought hard to s
 
 @maintain
 view-if: ddp_banned or z_banned
-subtitle: Was it worth it?
+subtitle: 这一切值得吗?
 on-arrival: reformist_dissent += 20
 go-to: root
 
@@ -181,8 +181,8 @@ Germany's transformation is begun, and Social Democracy stands not in its way.
 
 Now, as the last state institutions are cleansed of anticommunists and bourgeois influences, the last reactionaries jailed or otherwise silenced, it seems that Germany truly shall join the USSR as the second Marxist-Leninist nation. All that remains to be asked is the fate of Social Democracy in this new future.
 
-- @sed: The reunification of our parties.
-- @kpd: The banning of the SPD.
+- @sed: 我们两党的重新统一。
+- @kpd: 对社民党的查禁。
 
 @sed
 view-if: socialist_unity

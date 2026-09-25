@@ -1,5 +1,5 @@
-title: Businesses Lose Confidence
-subtitle: Big businesses are losing confidence in our government's policies.
+title: 企业信心流失
+subtitle: 大企业对我们政府的政策正在失去信心。
 view-if: (capital_strike_progress >= 6 and capital_strike_progress < 10 and budget > -5) and spd_in_government and not capital_strike_seen and businesses_lose_confidence_timer <= 0
 new-page: true
 on-arrival: businesses_lose_confidence_timer += 6; businesses_lose_confidence_seen += 1; coalition_dissent += 1 if businesses_lose_confidence_seen; unemployed += 2*bourgeois_power; new_middle_spd -= 6*bourgeois_power; new_middle_spd += 1 if new_middle_conscious; old_middle_spd -= 6*bourgeois_power; rural_spd -= 5*bourgeois_power; workers_spd -= 4*bourgeois_power; unemployed_spd -= 4*bourgeois_power; dvp_relation -= 6; weimar_dissent += 1 if weimar_plan_adopted; coalition_dissent += 1 if in_grand_coalition; coalition_dissent += 1 if chancellor == "Scholz"; economic_growth -= 1*bourgeois_power; socialism -= 3*bourgeois_power
@@ -13,7 +13,7 @@ The business community has a variety of suggestions as to how we might improve t
 
 - @taxes: 降低高收入档的税收。
 - @welfare: 削减福利与社会开支。
-- @nothing: We will not take any action for now.
+- @nothing: 我们暂时不采取任何行动。
 - @watch: 等着瞧吧。经济*会*好转的。
 - @to_hell: 让工商界见鬼去吧。他们是敌人。
 

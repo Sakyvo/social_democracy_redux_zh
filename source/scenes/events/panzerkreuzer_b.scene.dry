@@ -1,4 +1,4 @@
-title: Panzerkreuzer B
+title: 装甲巡洋舰 B
 subtitle: 一个政治问题
 tags: event
 on-arrival: panzerkreuzer_b_seen = 1
@@ -14,7 +14,7 @@ Much of our party is deeply opposed to rearmament, while the center and right pa
 - @vote_yes: 投赞成票,建造这艘战列巡洋舰。
 - @vote_no: 投反对票,反对建造这艘战列巡洋舰。
 - @abstain: 弃权。
-- @ministry: Use the Reichswehr Ministry to prevent the construction.
+- @ministry: 利用国防部阻止这项建造。
 
 @vote_yes
 on-arrival: bill_support = bourgeois_coalition+far_right_coalition; bill_support += spd_r*(0.75-dissent) if not panzerkreuzer_funded; bill_support += spd_r*(1-dissent) if panzerkreuzer_funded; bill_support = 100*(bill_support/(100-(spd_r*dissent))); left_dissent += 10; labor_dissent += 5; center_dissent += 5; reformist_dissent += 5 if not panzerkreuzer_funded; neorevisionist_dissent += 5 if not panzerkreuzer_funded; panzerkreuzer_b_funded = 1; kpd_coalition_dissent += 1; kpd_relation -= 6; workers_spd -= 4; socialism -= 3; {!

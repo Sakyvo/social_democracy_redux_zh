@@ -11,11 +11,11 @@ Inflation has risen. People of all social classes are seeing their purchasing po
 
 The people and the press are clamoring for action to reduce inflation.
 
-- @taxes: Raise taxes.
+- @taxes: 加税。
 - @welfare: 削减福利与社会开支。
-- @price_controls: Impose price and wage controls.
-- @tighten_controls: Tighten price and wage controls.
-- @bank: Surely the Reichsbank has a plan this time?
+- @price_controls: 实施价格与工资管制。
+- @tighten_controls: 收紧价格与工资管制。
+- @bank: 国家银行这次总该有对策了吧?
 - @nothing: 现实地说,我们无能为力。
 
 @taxes

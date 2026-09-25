@@ -1,5 +1,5 @@
-title: KPD Party Conference
-subtitle: The KPD chooses their new central committee - will the Wittorf Affair have an influence on their choice?
+title: 共产党代表大会
+subtitle: 共产党正在选出新的中央委员会 —— 维托夫事件会影响他们的选择吗?
 new-page: true
 view-if: kpd_relation >= 50 and wittorf_soviet_union = 1 and year = 1929 and month >= 6 and month <= 8
 max-visits: 1
@@ -17,9 +17,9 @@ After our discussion with the Soviets, we are inclined to believe that Stalin is
 
 
 @conciliator_success
-title: The Conciliators are the new leadership of the KPD.
+title: 调和派成为共产党的新领导层。
 choose-if: (levi_advisor or rosenfeld_advisor) and (left_strength >= reformist_strength) and (kpd_relation >= 50) 
-unavailable-subtitle: [?  if not levi_advisor and not rosenfeld_advisor: Our party leadership is not left-wing enough. ?] [? if left_strength < reformist_strength: The Comintern doubts our commitment to socialism. ?]
+unavailable-subtitle: [? if not levi_advisor and not rosenfeld_advisor: 我党的领导层不够左。 ?] [? if left_strength < reformist_strength: 共产国际怀疑我们对社会主义的忠诚。 ?]
 on-arrival: kpd_party_leader = "Conciliators"; communist_coalition += 3; kpd_relation += 10*(1-dissent); left_strength += 5; left_dissent -= 8
 achievement: versohnler
 
@@ -27,6 +27,6 @@ With our support, the Conciliators have won the leadership contest! The new lead
 
 
 @conciliator_fail
-title: Thälmann retains his leadership position.
+title: 台尔曼保住了他的领导地位。
 
 Unfortunately, we could not influence the KPD leadership election against the hardliners. Thälmann quickly moves to consolidate absolute leadership, expelling or exiling his opponents.

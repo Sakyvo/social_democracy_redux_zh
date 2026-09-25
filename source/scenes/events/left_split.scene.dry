@@ -1,6 +1,6 @@
-title: Left-wing Split
+title: 左翼分裂
 new-page: true 
-subtitle: The Left's disagreements with our policies have grown too severe.
+subtitle: 左翼对我们政策的不满已过于严重。
 tags: event
 view-if: left_dissent >= 60
 on-arrival: left_split = 1; thuringia_spd -= 0.05; thuringia_sapd += 0.05; sapd_formed = 1 if centrists_resign = 1 or unions_independent = 1 or (left_strength > center_strength and left_strength > labor_strength and left_strength > reformist_strength and left_strength > neorevisionist_strength); left_strength = left_strength/2; workers_spd -= 5; unemployed_spd -= 5; workers_sapd += 5; workers_kpd += 3; n_advisors -= 1 if levi_advisor == 1; levi_advisor = 0; rb_strength -= 300; kpd_relation -= 5; rb_militancy -= 0.05 if rb_militancy >= 0.1; n_advisors -= 1 if seydewitz_advisor == 1; seydewitz_advisor = 0; n_advisors -= 1 if rosenfeld_advisor == 1; rosenfeld_advisor = 0; n_advisors -= 1 if siemsen_advisor == 1; siemsen_advisor = 0; socialism -= 4

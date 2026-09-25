@@ -1,4 +1,4 @@
-title: Schaumburg-Lippe Landtag Elections
+title: 绍姆堡-利珀州议会选举
 new-page: true
 tags: event
 priority: -1
@@ -293,29 +293,29 @@ Right-wing Coalition (Z + DVP + Others + DNVP): [+ sch_right_coalition +]%
 
 @spd_majority
 title: 社民党赢得了多数。
-subtitle: SPD ([+ spd_schl +]%)
+subtitle: 社民党 ([+ spd_schl +]%)
 view-if: spd_schl >= 50
 choose-if: never
-unavailable-subtitle: SPD ([+ spd_schl +]%) - The SPD wants to include the bourgeois in government.
+unavailable-subtitle: 社民党 ([+ spd_schl +]%) - The SPD wants to include the bourgeois in government.
 
 @social_liberal
-title: A "Social-Liberal" Coalition
-subtitle: SPD + [+ ddp_name +] ([+ sch_social_liberal +]%)
+title: 一个「社会自由主义」联盟
+subtitle: 社民党 + [+ ddp_name +] ([+ sch_social_liberal +]%)
 view-if: sch_social_liberal >= 50 or (sch_social_liberal < 50 and spd_schl < 50 and (sch_huh < 50 or (year >= 1930 and not dnvp_reform)))
 choose-if: year >= 1930 and not dnvp_reform
-unavailable-subtitle: SPD + [+ ddp_name +] ([+ sch_social_liberal +]%) - They want to include the DNVP in government.
+unavailable-subtitle: 社民党 + [+ ddp_name +] ([+ sch_social_liberal +]%) - They want to include the DNVP in government.
 
 A "Social-Liberal" coalition has been formed, including the [+ ddp_name +]. [? if spd_schl >= 50 : This is despite the SPD holding a majority. How queer. ?]
 
 @huh 
-title: ...Huh.
-subtitle: SPD + [+ ddp_name +] + DNVP ([+ sch_huh +]%)
+title: ……咦。
+subtitle: 社民党 + [+ ddp_name +] + 国家人民党 ([+ sch_huh +]%)
 view-if: sch_huh >= 50 and (year < 1930 or dnvp_reform)
 
 That's...peculiar. [? if spd_schl >= 50 : The SPD, despite holding a lone majority, has gone out of its way to...include the DNVP? ?][? if spd_schl < 50 and sch_social_liberal >= 50 : The SPD, despite holding a majority with just the [+ ddp_name +], has gone out of its way to...include the DNVP? ?]
 
-- @no_judging: The SPD doesn't judge. It may be a bit strange, but they must have had a good reason.
-- @judging: The SPD is *absolutely* judging. Why on earth would Schaumburg-Lippe do this?
+- @no_judging: 社民党不予评判。这或许有点奇怪,但他们一定有充分的理由。
+- @judging: 社民党*绝对*在评判。绍姆堡-利珀到底为什么要这么做?
 
 @judging
 

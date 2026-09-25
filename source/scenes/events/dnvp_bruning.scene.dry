@@ -1,5 +1,5 @@
-title: Hugenberg vs. Brüning
-subtitle: Hugenberg attempts to lead his party against Brüning's government
+title: 胡根贝格对布吕宁
+subtitle: 胡根贝格试图带领他的党对抗布吕宁政府
 new-page: true
 view-if: dnvp_toleration = 1 and year = 1930 and month >= 6 and not constructive_vonc and president == "Hindenburg"
 on-arrival: confrontation_seen = 1; {!
@@ -24,7 +24,7 @@ Following the dislodging of us from Brüning's government through the unemployme
 
 We stand to potentially be able to bring Brüning down by voting to override his recent emergency budget cuts, though whether or not we succeed to do so depends on the DNVP's decision.
 
-- @vote_against: Motion in the Reichstag to override Brüning's budget cuts.
+- @vote_against: 在国会动议推翻布吕宁的预算削减。
 
 @vote_against
 on-arrival: bourgeois_coalition += pro_bruning; rural_dnvp -= 5; old_middle_dnvp -= 3; new_middle_dnvp -= 3; catholics_dnvp -= 2; rural_other += 3; old_middle_other += 2; catholics_other += 2

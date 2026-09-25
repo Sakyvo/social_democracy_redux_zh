@@ -1,4 +1,4 @@
-title: Extraordinary [+ ddp_name +] Congress
+title: [+ ddp_name +] 特别代表大会
 subtitle: 连资产阶级也能找到通往社会主义的路。
 view-if: capital_strike_seen and not ddp_socialist and capital_strike_timer < 1 and ddp_relation >= 75 and socialism >= 60 and class_war and (financing_banned or ddp_tension >= 9) and (in_weimar_coalition or in_popular_front) and pro_republic >= nationalism*2
 tags: event

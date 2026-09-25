@@ -1,5 +1,5 @@
 title: 没收诸侯财产
-subtitle: Disputes arise over the status of princely lands
+subtitle: 关于诸侯领地地位的争执兴起
 view-if: (year == 1925 and month >= 12) or year == 1926
 on-arrival: workers_kpd += 5; unemployed_kpd += 2
 tags: event
@@ -14,12 +14,12 @@ The DDP, meanwhile, has also submitted a bill on the matter, which would empower
 
 At the same time, if we joined the initiative for referendum we would risk alienating our bourgeois parties, and certainly eliminate the chance of a Grand Coalition succeeding the Luther cabinet.
 
-- @early_initiative: Withdraw from coalition talks, and join the communist initiative.
-- @historical_one: Back the DDP's proposal for the time being.
+- @early_initiative: 退出联盟谈判,加入共产党发起的倡议。
+- @historical_one: 暂时支持民主党的提案。
 
 @early_initiative
 choose-if: left_strength > reformist_strength
-unavailable-subtitle: The majority of the party is skeptical.
+unavailable-subtitle: 党内多数持怀疑态度。
 on-arrival: princes_time = time+2; princes_initiated = 1; reformist_dissent += 5; kpd_relation += 5; dvp_relation -= 5; new_middle_spd -= 3; old_middle_spd -= 3; catholics_spd -= 1; marx_relation -= 5
 
 We surprise the bourgeois and party right by effectively withdrawing from coalition talks to focus on opposition politics through the backing of a referendum for the expropriation without compensation of the princes. Though there is no way we could directly back the communist suggestion, the ADGB has mediated a bill that both parties are able to agree on, and preparations for referendum are underway.

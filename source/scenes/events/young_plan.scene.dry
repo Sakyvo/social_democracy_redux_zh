@@ -1,6 +1,6 @@
 title: 杨格计划
 new-page: true
-subtitle: A new agreement on reparations
+subtitle: 一份关于赔款的新协议
 tags: event
 view-if: year = 1929 and month >= 7 and in_right_coalition = 0 and young_plan_seen = 0 and not dnvp_toleration
 on-arrival: young_plan_seen = 1; prussia_dnvp -= 0.1; prussia_nsdap += 0.1
@@ -12,15 +12,15 @@ The Young Plan is an agreement with the Western powers to reduce Germany's repar
 
 While this seems to be a positive development for the country, the Right is campaigning hard against this plan, as are the Communists for whatever reason. They claim that any reparations are a form of national slavery, and have organized a referendum against it.
 
-- @pro_plan: Campaign in favor of the Young Plan and against the referendum.
-- @no_plan: Do not campaign on the Young Plan, one way or another.
+- @pro_plan: 开展竞选,支持杨格计划,反对公投。
+- @no_plan: 不就杨格计划开展任何一方的竞选。
 
 @pro_plan
 
 How should we campaign in favor of the Plan?
 
-- @internationalism: As part of a broader campaign in favor of internationalism and pacifism.
-- @rational: The Young Plan is simply the most rational choice for Germany.
+- @internationalism: 作为一场支持国际主义与和平主义的更广泛竞选的一部分。
+- @rational: 杨格计划就是对德国而言最理性的选择,仅此而已。
 
 @internationalism
 go-to: marx if president == "Marx"

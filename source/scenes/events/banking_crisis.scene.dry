@@ -1,5 +1,5 @@
-title: Banking Crisis
-subtitle: The collapse of the German banking system...
+title: 银行业危机
+subtitle: 德国银行体系的崩溃……
 new-page: true
 on-arrival: banking_crisis_seen = 1; workers_kpd += 3; workers_kpd += 2 if sapd_consolidated == 0; workers_sapd += 2 if sapd_consolidated == 1; workers_nsdap += 3; new_middle_nsdap += 3; old_middle_nsdap += 4; rural_nsdap += 3; unemployed += 3; crisis_urgency += 1; workers_spd -= 4 if spd_in_government; new_middle_spd -= 5 if spd_in_government; old_middle_spd -= 5 if spd_in_government; rural_spd -= 4 if spd_in_government; economic_growth -= 1; socialism += 1
 tags: event
@@ -13,8 +13,8 @@ The Darmstädter und Nationalbank, or Danat Bank, has collapsed! Along with it g
 This is a bourgeois dispute, but the costs will be borne by the proletariat. The people are facing ever-increasing hunger and poverty, and perhaps we are partly to blame.
 
 - @nothing_to_do: 我们无能为力。
-- @stabilization: Take action to stabilize the economy!
-- @austerity: Chancellor [+ chancellor +]'s response is, as always, more austerity.
+- @stabilization: 采取行动稳定经济!
+- @austerity: [+ chancellor +] 总理的应对一如既往:更多紧缩。
 - @end_toleration: 我们受够了紧缩。终结容忍安排!
 
 @nothing_to_do

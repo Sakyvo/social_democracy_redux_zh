@@ -1,5 +1,5 @@
-title: A New Spain
-subtitle: The Spanish civil war has finally come to an end...
+title: 一个新的西班牙
+subtitle: 西班牙内战终于结束了……
 view-if: republic_strength <= 0 or national_strength <= 0 and spanish_civil_war
 max-visits: 1
 tags: event
@@ -10,8 +10,8 @@ new-page: true
 
 After intense and prolonged fighting between fundamentally opposed forces over the future of Spain, a clear winner has finally emerged from the dust, ready to lead Spain forward.
 
-- @republican_victory: The Republicans.
-- @nationalist_victory: The Nationalists.
+- @republican_victory: 共和派。
+- @nationalist_victory: 国民派。
 
 @republican_victory
 view-if: national_strength <= 0

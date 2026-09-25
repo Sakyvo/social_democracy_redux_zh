@@ -1,5 +1,5 @@
-title: Black Thursday
-subtitle: The great stock market crash...
+title: 黑色星期四
+subtitle: 大股灾……
 new-page: true
 on-arrival: black_thursday_seen = 1; workers_kpd += 3; workers_kpd += 2 if sapd_consolidated == 0; workers_sapd += 2 if sapd_consolidated == 1; workers_nsdap += 3; new_middle_nsdap += 4; old_middle_nsdap += 5; rural_nsdap += 5; unemployed_nsdap += 5; unemployed += 2; budget -= 1 if budget > 0; dues -= 1 if dues > 2; inflation -= 1; economic_growth -= 1; socialism += 2
 tags: event
@@ -11,9 +11,9 @@ max-visits: 1
 The stock market in America has had its biggest crash in history. It is too early to tell what the international effects will be, but it cannot be good. Our economy is already feeling the effects - unemployment will rise even more, and wages will fall. As always, it is the capitalists' crisis, and the workers' burden.
 
 
-- @cap: It is the nature of capitalism...
-- @do_something: We must do something to stop the suffering...
-- @blame: The previous right-wing government is clearly to blame!
+- @cap: 这就是资本主义的本性……
+- @do_something: 我们必须做点什么来阻止这苦难……
+- @blame: 显然该怪上届右翼政府!
 
 @cap
 on-arrival: socialism += 4

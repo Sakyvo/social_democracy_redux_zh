@@ -1,5 +1,5 @@
-title: Political Crisis
-subtitle: A political crisis wreaks havoc in Germany...
+title: 政治危机
+subtitle: 一场政治危机在德国肆虐……
 view-if: political_crisis_progress >= 3
 new-page: true
 tags: event
@@ -72,7 +72,7 @@ on-arrival: sh_strength *= 0.8; sh_strength *= 0.9 if president == "Eckener"; re
 
 Infuriated by this action, the Nazi SA launches an armed insurrection, attempting to seize and take over key infrastructure across the country as the army is deployed against them. Due to the circumstances of the uprising, the Harzburg Front is split, and many in the Stalhelm hesitate.
 
-- @civil_war: Nonetheless, it is a civil war.
+- @civil_war: 无论如何,这就是一场内战。
 
 # todo: SPD response section if no fascist uprising, eg general strike against martial law..?
 

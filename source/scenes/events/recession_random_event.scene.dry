@@ -1,5 +1,5 @@
-title: Recession
-subtitle: The economy is slackening, oh dear.
+title: 经济衰退
+subtitle: 经济正在放缓,哎呀。
 view-if: time >= recession_time and not capital_flight and year >= 1937
 on-arrival: {! 
 
@@ -49,7 +49,7 @@ new-page: true
 
 The global economy, including the German one, has entered into a recession. Hard times are ahead of us.
 
-- @it_happens: It happens.
+- @it_happens: 这种事总会发生。
 
 @it_happens
 on-arrival: socialism += recession_severity*(1-(0.5*bourgeois_power))

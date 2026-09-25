@@ -1,5 +1,5 @@
-title: Capital Flight
-subtitle: After failing to retake their country, the nation's business magnates pack up and leave
+title: 资本外逃
+subtitle: 在夺回国家的图谋失败后,这个国家的工商业巨头收拾行装离去
 view-if: capital_strike_seen and capital_strike_timer < 1 and ((class_war >= 7 and zca_formed and (((nationalization_progress+economic_democracy)/bourgeois_power) >= zca_votes) and (month < (fun_value/10)) and (socialism >= (1-bourgeois_power)*100)) or bourgeois_power < 0.05)
 tags: event
 new-page: true
@@ -29,7 +29,7 @@ After months of aggressive attempts by the bourgeoisie to reclaim state power an
 - @victory: 我们赢了。
 
 @victory
-subtitle: Now we must prove it before Germany and the world.
+subtitle: 现在我们必须向德国与世界证明这一点。
 
 With the working class in control of the state and now economy, we have won. Our decisive confrontation with the bourgeoisie has yielded as victory a nation in the hands of the proletariat. Now, however, remains a task before us. We must prove our victory.
 

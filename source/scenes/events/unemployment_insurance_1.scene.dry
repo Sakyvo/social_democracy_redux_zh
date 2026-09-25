@@ -1,5 +1,5 @@
 title: 失业保险危机
-subtitle: The right wing of our coalition presents an ultimatum.
+subtitle: 我们执政联盟中的右翼发出了最后通牒。
 new-page: true
 view-if: spd_in_government = 1 and (year = 1930 or year = 1931 or year = 1932) and (month >= 3) and in_grand_coalition = 1 and unemployment_insurance_timer = 0 and (unemployed >= unemployment_insurance_threshold + 4 or (unemployed >= 20 and unemployed >= unemployment_insurance_threshold)) and not constructive_vonc and (president == "Hindenburg" or ((dvp_relation-unemployed-capital_strike_progress) < 0))
 on-arrival: unemployment_insurance_crisis += 1; budget -= 1 if budget >= 1; unemployment_insurance_timer = 10; crisis_urgency += 1; unemployment_insurance_threshold = unemployed
@@ -15,8 +15,8 @@ In the midst of all this, our right-wing coalition partners in the DVP and Cente
 
 [? if unemployment_insurance_crisis = 2 : This is the second such ultimatum thrown by the Right. Obviously, the bourgeoisie are trying to remove us from the government. ?]
 
-- @tax_rich: Why can't we simply tax the rich?
-- @gift: This is a gift to the Communists.
+- @tax_rich: 我们为什么不干脆向富人征税?
+- @gift: 这是送给共产党的一份大礼。
 
 @tax_rich
 max-visits: 1
@@ -34,11 +34,11 @@ on-arrival: dvp_relation += 5 if chancellor = "Braun"
 
 But the crux of the matter is, what can we do?
 
-- @destroy: Fine. We will end this coalition.
-- @destroy_scholz: Fine. We will end this coalition.
-- @accept: Unfortunately, we must accept the Right's demands for the sake of stability.
-- @accept_weimar: We will accept on the condition that the Center and Democratic Parties adopt the Weimar Plan.
-- @compromise: Surely there is some compromise to be had?
+- @destroy: 好吧。我们将终结这个联盟。
+- @destroy_scholz: 好吧。我们将终结这个联盟。
+- @accept: 遗憾的是,为了稳定,我们必须接受右翼的要求。
+- @accept_weimar: 我们接受,条件是中央党与民主党采纳魏玛计划。
+- @compromise: 总该有某种妥协可寻吧?
 
 @destroy_scholz
 view-if: chancellor == "Scholz"
@@ -72,13 +72,13 @@ Unfortunately, we must accept this ultimatum if we are to maintain this coalitio
 The workers are furious at our betrayal, as are a good portion of our membership throughout the factions. Our loss is the KPD's gain, and even the NSDAP, those lapdogs of the bourgeoisie, have joined in criticizing us for our austerity.
 
 @compromise
-unavailable-subtitle: We do not have good enough relations with the right-wing parties. [? if chancellor == "Scholz" : Chancellor Scholz refuses to compromise. ?]
+unavailable-subtitle: 我们与右翼政党的关系还不够好。[? if chancellor == "Scholz" : 朔尔茨总理拒绝妥协。 ?]
 choose-if: dvp_relation >= 35 and chancellor != "Scholz"
 
 Thanks to our good relations, the DVP have offered a compromise that raises some taxes on the wealthy, along with lesser welfare cuts. Our members have mixed opinions on accepting this compromise. Reformists and Centrists support maintaining our government to keep the fascists and communists out, while Labor generally opposes any cuts, and the Left is opposed to compromises with the bourgeoisie.
 
-- @accept_compromise: Accept the compromise.
-- @destroy: Reject the compromise and let this government fall.
+- @accept_compromise: 接受这项妥协。
+- @destroy: 拒绝这项妥协,让这个政府垮台。
 
 @accept_compromise
 on-arrival: workers_spd -= 5; unemployed_spd -= 6; workers_kpd += 4; workers_kpd += 1 if sapd_consolidated == 0; workers_sapd += 1 if sapd_consolidated == 1; unemployed_kpd += 3; unemployed_nsdap += 3; left_dissent += 10; labor_dissent += 8; center_dissent += 5; welfare -= 1; budget += 1; month += 1; kpd_relation -= 4; inflation -= 1; economic_growth -= 0.3; socialism -= 1
@@ -88,6 +88,6 @@ We have accepted the compromise offered by the bourgeoisie. Many of the workers 
 @accept_weimar
 view-if: moderate_plan_adopted == 1 and weimar_rejected != 1 and weimar_plan_adopted != 1 and weimar_willingness == 1
 choose-if: weimar_support >= 100
-unavailable-subtitle: They have not been convinced enough of the plan's merits.
+unavailable-subtitle: 他们还未被充分说服,相信该计划的优点。
 on-arrival: workers_spd -= 0.15*workers_spd; umemployed_spd -= 0.3*unemployed_spd; workers_kpd += 5; workers_kpd += 2 if sapd_consolidated == 0; workers_sapd += 2 if sapd_consolidated == 1; workers_nsdap += 7; unemployed_kpd += 4; unemployed_kpd += 1 if sapd_consolidated == 0; unemployed_sapd += 1 if sapd_consolidated == 1; unemployed_nsdap += 5; left_dissent += 15; center_dissent += 10; labor_dissent += 15; reformist_dissent += 5; welfare -= 2; budget += 1; unemployed += 3; month += 1; pro_republic -= 4; kpd_relation -= 8; inflation -= 2; weimar_dissent += 1
 go-to: @weimar_plan.adopt_1

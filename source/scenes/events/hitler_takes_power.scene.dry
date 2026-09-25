@@ -1,4 +1,4 @@
-title: Hitler takes power.
+title: 希特勒掌权。
 subtitle: 终结的开端。
 view-if: (chancellor == "Hitler" or president == "Hitler" or chancellor_party == "NSDAP") and presidential_powers != 1 and not hitler_seen and not marx_appointed_hitler
 on-arrival: spd_in_government = 0; hitler_seen = 1; hitler_month = month; hitler_year = year; spd_disarray = 0; spd_toleration = 0

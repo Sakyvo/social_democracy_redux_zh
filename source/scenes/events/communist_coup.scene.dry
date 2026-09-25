@@ -1,5 +1,5 @@
-title: [+ chancellor +] arrested
-subtitle: Coup plot averted, or coup in motion?
+title: [+ chancellor +] 被捕
+subtitle: 政变阴谋被挫败,还是政变正在进行?
 new-page: true
 view-if: kpd_influence >= ((army_force+sa_force+sh_force)/10) and (interior_kpd_seen or (kpd_influence*rfb_force) >= 250) and kpd_influence >= (papen_chancellor_timer*3) and (rfb_force >= sa_force+army_force+sh_force) and not spd_in_government and not spd_caretaker and chancellor_party != "KPD" and chancellor_party != "SPD"
 tags: event
@@ -9,7 +9,7 @@ max-visits: 1
 
 One morning, when [+ chancellor +] is meeting with his ministers, a warrant is produced for him and his entire cabinet. All access to Berlin is suspended as they are arrested, and, over national radio, it is proclaimed that [+ chancellor +]'s government had been planning an illegal self-coup to destroy German democracy.
 
-- @naive: Wow, I can't believe [+ chancellor +] would do that!
+- @naive: 哇,我真不敢相信 [+ chancellor +] 会那样做!
 - @streetsmart: This  is clearly a putsch.
 
 @naive
@@ -23,7 +23,7 @@ Yeah, it's crazy, right? Thankfully we have the police forces to protect us from
 It is plain to see that this is a communist coup. Having secured so much influence over state institutions, and then deprived the management of those institutions, they seek to wrestle back power.
 
 - @rigged_election: 新的紧急选举已排定日程。
-- @soviet_germany.resist: Together, we can stop the [? if president != "Thälmann" and president != "Münzenberg" and chancellor_party != "KPD" : [+ kpd_leader +] ?][? if president == "Thälmann" or president == "Münzenberg" : [+ president +] ?][? if chancellor_party == "KPD" and president != "Thälmann" and president != "Münzenberg" : [+ chancellor +] ?] putsch!
+- @soviet_germany.resist: 只要同心协力,我们就能阻止 [? if president != "Thälmann" and president != "Münzenberg" and chancellor_party != "KPD" : [+ kpd_leader +] ?][? if president == "Thälmann" or president == "Münzenberg" : [+ president +] ?][? if chancellor_party == "KPD" and president != "Thälmann" and president != "Münzenberg" : [+ chancellor +] ?] 发动的政变!
 
 @rigged_election
 on-arrival: workers_kpd += rfb_force; workers_kpd += kpd_influence; unemployed_kpd += kpd_influence; unemployed_kpd += (rfb_force*2); new_middle_kpd += kpd_influence; rural_kpd += kpd_influence; time_to_election = 3; president = "Wirth"; old_middle -= 5; rural -= 5; workers += 5; catholics -= 5; {!

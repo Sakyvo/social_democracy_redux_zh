@@ -159,7 +159,7 @@ We have resigned our positions in the government.
 
 
 @braun_appoints_hitler
-title: We cannot do anything but appoint Hitler chancellor.
+title: 我们别无选择,只能任命希特勒为总理。
 view-if: president == "Braun" or president == "Schumacher" or president == "Juchacz"
 choose-if: nsdap_normalized >= 0.5 or largest_party == "NSDAP"
 unavailable-subtitle: [+ president +] 总统绝不可能做出如此露骨的反民主之举。

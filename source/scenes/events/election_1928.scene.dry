@@ -1,4 +1,4 @@
-title: Reichstag Elections
+title: 国会选举
 new-page: true
 tags: event
 priority: -1
@@ -384,7 +384,7 @@ go-to: coalition_menu if not vonc_formed; coalition_vonc if vonc_formed
 
 @coalition_vonc
 
-- @vonc_coalition: <span style="color: transparent;">VONC</span>
+- @vonc_coalition: <span style="color: transparent;">不信任联盟</span>
 
 @vonc_coalition
 on-arrival: in_vonc_coalition = 1; spd_in_government = 1; in_spd_majority = 1; 
@@ -439,7 +439,7 @@ on-arrival: secret_ending = 1
 
 @counterrevolution
 title: 反革命派赢得了多数。
-subtitle: ZCA & Friends ([+ counterrevolution_r +]%)
+subtitle: 中央党基督教联盟及其盟友 ([+ counterrevolution_r +]%)
 view-if: zca_formed and counterrevolution_r >= 50
 go-to: class_war if class_war; normal_bourgeois if not class_war
 
@@ -496,7 +496,7 @@ subtitle: [+ ddp_name +] ([+ ddp_r +]%)
 
 你说得对。他们只是通过了一些进步法令,搞了些私有化而已。
 
-- @awman: Damn.
+- @awman: 该死。
 
 @awman 
 
@@ -514,14 +514,14 @@ on-arrival: started = 0
 go-to: root
 
 @bourgeois_coalition
-title: A "Bourgeois" Coalition
+title: 一个「资产阶级」联盟
 subtitle: 中央党 + 巴伐利亚人民党 + [+ ddp_name +] [? if not dvp_banned : + 人民党 ?] + 其他 ([+ bourgeois_coalition +]%)
 view-if: bourgeois_coalition >= 50 and (weimar_coalition < 50 or z_willing != 1)
 
 拥护宪法的资产阶级政党已握有足够票数自行组阁,甚至无需我们容忍。除非我们出手阻止,这样一个政府很可能会成立。
 
 - @plead_grand: 恳请中央党改为与我们组成「大联盟」。
-- @let_it_form: Let it form.
+- @let_it_form: 随它去组吧。
 
 @plead_grand
 subtitle: SPD + Z + [+ bvp_name +] + [+ ddp_name +] + DVP  ([+ grand_coalition +]%)
@@ -564,8 +564,8 @@ view-if: z_party_leader != "Joos" or kpd_party_leader != "Conciliators"
 
 @popular_front_resources
 title: 动用我们的资源把事情摆平。
-unavailable-subtitle: Required: 4 resources
-subtitle: -4 resources
+unavailable-subtitle: 需要:4 点资源
+subtitle: -4 资源
 choose-if: resources >= 4
 on-arrival: resources -= 4
 go-to: popular_front_success
@@ -620,8 +620,8 @@ on-arrival: kpd_relation = 80; reichswehr_loyalty += 0.25; nazi_rebel = 1; labor
 
 
 @far_right_coalition
-title: Far-right coalition
-subtitle: NSDAP + DNVP ([+ far_right_coalition +]%)
+title: 极右翼联盟
+subtitle: 纳粹党 + 国家人民党 ([+ far_right_coalition +]%)
 view-if: far_right_coalition >= 50
 go-to: far_right_win if (year >= 1932 or nsdap_r >= 44) and president != "Braun" and not hitler_seen; far_right_fail if (year < 1932 and nsdap_r < 44) and president != "Braun" and not hitler_seen; far_right_braun if president == "Braun"; far_right_incumbent if hitler_seen
 priority: 2
@@ -804,7 +804,7 @@ go-to: enabling_act_passed2 if fun_value < 100; time_travel if fun_value == 100
 
 Germany is lost.
 
-- @time_traveller: Game ov...?
+- @time_traveller: 游戏结……?
 
 @time_traveller
 subtitle: 等等,门口那些人是谁?
@@ -820,7 +820,7 @@ subtitle: 把头低下!
 
 议场里枪声大作,我们的议员纷纷伏到座椅之下。子弹击穿家具,偶尔也击穿人体,呼喊与尖叫此起彼伏。希特勒肩膀中弹,在外围增援涌入之际被冲锋队撤走。那些自称时间旅行者的人虽持有确实更为先进的火器,却仍被逼出了大楼。
 
-- @okay_now_what: So...what happened?
+- @okay_now_what: 那么……发生了什么?
 - @doraemon: 哆啦A梦出现,带我们从国会侧面溜出去!
 
 @doraemon
@@ -897,7 +897,7 @@ view-if: (not achievement_postal_sylvan or postal_sprite_seen) and (not achievem
 随着我们的歌声告终,灵光噼啪作响地碎裂,被召唤到我们面前的精灵们合为一体,穿过大楼的屋顶直上云霄。
 
 - @gold_trigon: 一道辉煌而轰鸣的闪光中,**<span style="color:rgb(255, 208, 0);font-family:'Times New Roman',serif;font-weight:700;letter-spacing:0.5px;">黄金三角</span>** 现身了。
-- @nothing_happens: Nothing happens.
+- @nothing_happens: 什么也没发生。
 
 @nothing_happens
 view-if: not achievement_postal_sylvan or not achievement_antifa_sylvan or not achievement_capital_sylvan
@@ -908,7 +908,7 @@ view-if: not achievement_postal_sylvan or not achievement_antifa_sylvan or not a
 
 @gold_trigon
 view-if: achievement_antifa_sylvan and achievement_capital_sylvan and achievement_postal_sylvan
-subtitle: Miracles afoot!
+subtitle: 奇迹正在发生!
 
 随金色光芒的噼啪声,一阵狂风撼动国会大厦,我们能感到它穿透骨髓的共振。国会议员们在座椅间叫嚷着,拼命想要逃出去。希特勒的喊叫渐渐听不真切,他的追随者们在他身后连滚带爬,只想躲开这神明般的幻象。连哆啦A梦都怕了。
 
@@ -1063,7 +1063,7 @@ window.dendryUI.dendryEngine.state.visits = {}
 - @game_over: 游戏结束。
 
 @okay_now_what
-subtitle: Is Hitler dead?
+subtitle: 希特勒死了吗?
 
 枪战平息后,我们的议员小心翼翼地再次探出头来,显然国会仍处在纳粹的控制之下。有人把希望寄托在那些时间旅行者身上,但接下来几天便真相大白:他们在撤回时间机器时被某支警察部队抓获,而希特勒终究活了下来。时间旅行者被冲锋队就地处决;他们的武器 —— 时间机器里显然囤着大量存货,如今落入纳粹之手 —— 则被改用于纳粹的目的。
 
@@ -1093,11 +1093,11 @@ on-arrival: spd_rebel = 1; sa_militancy -= 0.2; sa_strength *= 0.8; reichswehr_l
 
 [? if president == "Hitler" or president == "Göring" : 不知怎的,我们竟阻止了希特勒通过授权法案,在场的支持票仅有 [+ enabling_r +]%![+ president +] 解散国会以举行新选举,其间以法令施政。希特勒试图在国会框架之外通过该法案,于是发起了一场宪法公投;街头随之爆发冲突 —— 国防军厌倦了这乱局,开始加入正在成形的反希特勒叛乱,内战席卷全国。 ?]
 
-- @civil_war: To victory!
+- @civil_war: 走向胜利!
 
 @left_coalition
 title: 有可能组成左翼联合联盟吗?
-subtitle: SPD + KPD ([+ left_coalition +]%)
+subtitle: 社民党 + 共产党 ([+ left_coalition +]%)
 unavailable-subtitle: 社民党 + 共产党 ([+ left_coalition +]%)。[? if kpd_relation < 50 : 我们与共产党的关系还不够。 ?][? if communist_coalition < 3 : 共产党人过于执着于其激进路线,不愿参与政府。 ?][? if president == "Hitler" or president == "Göring" or president == "Seldte" or president == "Seeckt" or president == "Hindenburg" : [+ president +] 拒绝在这样的执政安排下任命总理。 ?]
 view-if: left_coalition >= 50 or (sapd_formed == 1 and (left_coalition + sapd_r) >= 50)
 choose-if: (kpd_relation >= 50 or (kpd_party_leader == "Conciliators" and kpd_relation >= 40)) and communist_coalition >= 3 and president != "Hitler" and president != "Göring" and president != "Seldte" and president != "Seeckt" and (president != "Hindenburg" or year < 1929)
@@ -1106,7 +1106,7 @@ choose-if: (kpd_relation >= 50 or (kpd_party_leader == "Conciliators" and kpd_re
 
 若组成这样的联盟,极右翼或许会试图发动政变。
 
-- @left_coalition_impossible: This is impossible.
+- @left_coalition_impossible: 这不可能。
 - @left_coalition_possible: 这或许可行。
 
 @left_coalition_impossible
@@ -1152,7 +1152,7 @@ go-to: postwar_left
 
 @left_coalition_resources
 title: 动用我们的资源把事情摆平。
-unavailable-subtitle: Required: 3 resources
+unavailable-subtitle: 需要:3 点资源
 subtitle: -3 资源
 choose-if: resources >= 3
 on-arrival: resources -= 3
@@ -1368,7 +1368,7 @@ go-to: postwar_left
 
 @kpd_majority
 title: 共产党或可单独执政。
-subtitle: KPD ([+ kpd_r +]%)
+subtitle: 共产党 ([+ kpd_r +]%)
 view-if: kpd_r >= 50 and president == "Braun" or president == "Thälmann" or president == "Münzenberg" or president == "Schumacher" or president == "Juchacz"
 go-to: kpd_thalmann if president == "Thälmann" or president == "Münzenberg"; kpd_braun if president == "Braun" or president == "Schumacher" or president == "Juchacz"
 
@@ -1457,7 +1457,7 @@ on-arrival: chancellor = "Külz"; chancellor_party = ddp_name
 
 看不到任何明显可行的多数路径。[+ ddp_name +] 成员威廉·屈尔茨受格斯勒总统之托组阁 —— 总统厌倦了布吕宁屡屡组阁失败,并希望争取到我们的支持。
 
-- @toleration_kulz: We will tolerate Külz.
+- @toleration_kulz: 我们将容忍屈尔茨。
 - @new_elections: 我们将举行新的选举。
 - @new_elections_2: 我们将举行新的选举。
 
@@ -1557,7 +1557,7 @@ on-arrival: chancellor = "Hitler"; chancellor_party = "NSDAP"; sa_militancy -= 0
 谈判漫长而紧张,希特勒拒绝让出总理之位。最终,为了阻止可能让我们社会主义者得利的又一次选举,中央党不知怎的竟同意让希特勒出任总理,以换取多数内阁席位、冲锋队的逐步解除武装,以及对天主教徒安全的保证。布吕宁勉强退让,希特勒以 [+ hitler_right_coalition +]% 的支持宣誓就任总理。
 
 - @hitler_takes_power: 我们现在该怎么办?
-- @secret_path: What do we do now?
+- @secret_path: 我们现在该怎么办?
 
 @secret_path
 view-if: hitler_seen or presidential_powers
@@ -1593,7 +1593,7 @@ on-arrival: in_right_coalition = 1; nsdap_toleration = 1; judicial_reform -= 2; 
 @schleicher_coalition
 title: 施莱谢尔试图保住权力。
 view-if: dne_formed and chancellor == "Schleicher"
-subtitle: DNE ([+ dne_r +]%)
+subtitle: 国家人民阵线 ([+ dne_r +]%)
 go-to: schleicher_majority if dne_r >= 50 or constructive_vonc; schleicher_negotiate if dne_r < 50 and not constructive_vonc
 on-arrival: schleicher_support = dne_r
 
@@ -1611,11 +1611,11 @@ go-to: schleicher_menu
 
 @schleicher_menu
 
-- @schleicher_spd: The SPD?
-- @schleicher_ddp: The [+ ddp_name +]?
+- @schleicher_spd: 社民党?
+- @schleicher_ddp: [+ ddp_name +]?
 - @schleicher_z: 中央党?
-- @schleicher_dvp: The DVP?
-- @schleicher_dnvp: The DNVP?
+- @schleicher_dvp: 人民党?
+- @schleicher_dnvp: 国家人民党?
 - @no_majority_schleicher: 施莱谢尔未能凑出多数。
 - @schleicher_wins: 施莱谢尔成功凑出了多数。
 
@@ -1625,7 +1625,7 @@ max-visits: 1
 
 库尔特·冯·施莱谢尔再度向我党伸出橄榄枝:若我们支持他的政府,他承诺进一步推行公共工程,甚至让出若干部会。
 
-- @accept_schleicher: Accept.
+- @accept_schleicher: 接受。
 - @refuse_schleicher: 拒绝!这只是一时的结盟,我们不会支持一个独裁者!
 
 @accept_schleicher
@@ -1913,7 +1913,7 @@ on-arrival: chancellor = "Brüning"; chancellor_party = "Z"
 
 选举之后,尽管舞弊严重,[+ chancellor +] 仍未能掌握多数。然而,在许多共产党人乃至一些社会主义者身陷囹圄的情况下,不信任案还过得去吗?
 
-- @can_it_pass: Let's see.
+- @can_it_pass: 看看吧。
 
 @can_it_pass
 on-arrival: against_hitler += spd_r*(1-(left_strength/100)); against_hitler += ddp_r if ddp_relation >= 55; against_hitler += z_r if z_relation >= 55; against_hitler += dvp_r if dvp_relation >= 60
@@ -2307,7 +2307,7 @@ on-arrival: chancellor = "Hitler"; chancellor_party = "NSDAP"
 
 眼下已无通往多数派政府的道路。围绕兴登堡总统的种种算计,正指向唯一一条路 —— 阿道夫·希特勒出任总理。[? if largest_party == "NSDAP" : 既然他们已是第一大党,这并不完全违背议会程序,因此很难单以程序为由提出异议。 ?] [? if hitler_deported and not hitler_dead: 尽管希特勒先前被驱逐出境,纳粹领袖及其反动盟友还是设法让总统最终给了他德国国籍。 ?][? if hitler_dead : 尽管希特勒先前被驱逐出境、后又身亡,纳粹领袖及其反动盟友还是设法让总统动用高级灵能技术,把希特勒救活,并最终给了他德国国籍。 ?]
 
-- @hitler_takes_power: What now?
+- @hitler_takes_power: 现在怎么办?
 
 # if NSDAP is largest party and Hindenburg is president, then Hindenburg appoints Hitler chancellor.
 
@@ -2390,7 +2390,7 @@ go-to: emergency_menu
 - @wirth_emergency_chancellor: 由中央党的约瑟夫·维尔特出任,作为共和派团结的姿态。
 
 @braun_emergency_chancellor
-subtitle: This is unprecedented.
+subtitle: 这是史无前例的。
 view-if: (not historical_mode or not spd_prussia) and president == "Braun"
 on-arrival: chancellor = "Braun"; chancellor_party = "SPD"; spd_in_government = 1; pro_republic -= 5; foreign_minister_party = "SPD"; interior_minister_party = "SPD"; justice_minister_party = "SPD"; labor_minister_party = "SPD"; reichswehr_minister_party = "SPD"; economic_minister_party = "SPD"; finance_minister_party = "SPD"; agriculture_minister_party = "SPD"; reichswehr_loyalty -= 0.1; 
 
@@ -2458,7 +2458,7 @@ on-arrival: sh_strength += 150; sa_strength += 150; sh_militancy += 0.05; sa_mil
 
 许多反对出现一个统一的社会主义政府的政府雇员,壮大了他们的队伍。警察与士兵倒向冲锋队与钢盔团。
 
-- @civil_war: It is war.
+- @civil_war: 这就是战争。
 
 
 @emergency_no_confidence
@@ -2540,7 +2540,7 @@ achievement: minderheitsregierung
 
 @weimar_coalition
 title: 我们可以组成魏玛联盟。
-subtitle: SPD + Z + [+ ddp_name +] ([+ weimar_coalition +]%)
+subtitle: 社民党 + 中央党 + [+ ddp_name +] ([+ weimar_coalition +]%)
 choose-if: president != "Hitler" and z_willing == 1
 unavailable-subtitle: 社民党 + 中央党 + [+ ddp_name +] ([+ weimar_coalition +]%)—— [? if president == "Hitler" : 希特勒拒绝在这样的执政安排下任命总理。 ?][? if not z_willing : 中央党不愿与我们结盟。 ?]
 view-if: weimar_coalition >= 50 or (weimar_coalition + sapd_r >= 50 and kpd_relations >= 30)
@@ -2642,7 +2642,7 @@ on-arrival: spd_in_government = 0; spd_toleration = 0; chancellor = "Brüning"; 
 - @join_bruning: 加入布吕宁的联盟。
 - @toleration_bruning: 我们终究还是要容忍布吕宁。
 - @brauns_dilemma
-- @new_elections: New elections, it is!
+- @new_elections: 那就举行新的选举!
 
 
 @new_elections
@@ -3096,7 +3096,7 @@ on-arrival: dvp_relation -= 5
 
 - @call_bluff: 戳穿他们的虚张声势。
 - @scholz_chancellor: 提出让人民党的恩斯特·朔尔茨出任总理。
-- @drop_foreign: Concede.
+- @drop_foreign: 让步。
 
 @call_bluff
 go-to: right_coalition_2 if right_coalition >= 50 and bourgeois_coalition < 50 and dvp_relation < 55; let_it_form if bourgeois_coalition >= 50; new_elections_spd if bourgeois_coalition < 50 and right_coalition < 50 and dvp_relation < 35; ministries if (dvp_relation >= 55 and bourgeois_coalition < 50) or (dvp_relation >= 35 and bourgeois_coalition < 50 and right_coalition < 50)

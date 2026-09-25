@@ -1,5 +1,5 @@
-title: Second Italo-Ethiopian War
-subtitle: Italian forces have invaded Ethiopia!
+title: 第二次意埃战争
+subtitle: 意大利军队入侵了埃塞俄比亚!
 view-if: abysinnia_timer <= 0 and unresolved_abysinnia
 max-visits: 1
 tags: event

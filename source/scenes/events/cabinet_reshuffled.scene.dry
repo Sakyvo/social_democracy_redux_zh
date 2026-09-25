@@ -1,5 +1,5 @@
-title: The Right is expelling us from their government!
-subtitle: We have angered our coalition partners too much...
+title: 右翼正把我们逐出他们的政府!
+subtitle: 我们把执政伙伴惹得太狠了……
 new-page: true
 on-arrival: tried_supporting_kpd = 0; weimar_dissent += 1 if weimar_plan_adopted; marx_relation -= 5
 view-if: chancellor_party != "SPD" and chancellor_party != "KPD" and chancellor != "Koch-Weser" and chancellor != "Ossietzky" and spd_in_government = 1 and ((in_grand_coalition = 1 or in_popular_front = 1 or in_minority_government = 1) and (coalition_dissent >= 3 or (chancellor == "Scholz" and coalition_dissent >= 2))) or (in_weimar_coalition = 1 and coalition_dissent >= 4) and spd_r < 50
@@ -23,7 +23,7 @@ go-to: menu if chancellor != "Wirth"; wirth_resign_hindenburg if chancellor == "
 
 @try_assuage
 choose-if: chancellor != "Scholz" or dvp_relation >= 55
-unavailable-subtitle: Chancellor Scholz sees no room for compromise.
+unavailable-subtitle: 朔尔茨总理认为没有妥协余地。
 
 How do we assuage our partners?
 
@@ -46,7 +46,7 @@ Fine. We enacted a massive austerity program to cut welfare, in order to maintai
 
 @resources
 choose-if: resources >= 3
-unavailable-subtitle: We do not have enough resources.
+unavailable-subtitle: 我们没有足够的资源。
 subtitle: -3 资源
 on-arrival: resources -= 3; coalition_dissent -= 1;
 
@@ -55,7 +55,7 @@ By transferring resources to our coalition partners, we can reduce their dissent
 @right_coalition
 view-if: right_coalition >= 50 and bourgeois_coalition < 50
 choose-if: right_coalition_failed != 1 and (year < 1929 and (year < 1928 or month < 8))
-unavailable-subtitle: The DNVP isn't willing to enter government.
+unavailable-subtitle: 国家人民党不愿进入政府。
 go-to: election_1928.right_coalition_2
 
 @bourgeois_coalition
@@ -71,7 +71,7 @@ Due to our own constitutional reforms, we cannot bring [+ chancellor +] down. We
 @breitscheid_vonc
 view-if: constructive_vonc and ((right_coalition < 50 or right_coalition_failed or year >= 1929 or month >= 8) and bourgeois_coalition < 50) and (left_coalition >= 50 or kpd_relation >= 50)
 choose-if: left_coalition >= 50 and kpd_relation >= 50
-unavailable-subtitle: [? if left_coalition < 50 : We do not have a majority in favor of Breitscheid. ?][? if kpd_relation < 50 : The Communists are unwilling. ?]
+unavailable-subtitle: [? if left_coalition < 50 : 我们没有支持布赖特沙伊德的多数。 ?][? if kpd_relation < 50 : 共产党不愿。 ?]
 on-arrival: old_chancellor = chancellor; in_left_front = 1; in_grand_coalition = 0; in_weimar_coalition = 0; in_popular_front = 0; chancellor_party = "SPD"; chancellor = "Breitscheid"; labor_minister_party = "SPD"; interior_minister_party = "SPD"; finance_minister_party = "SPD"; economic_minister_party = "SPD"; justice_minister_party = "SPD"; foreign_minister_party = "SPD"; agriculture_minister_party = "SPD"; reichswehr_minister_party = "SPD"
 
 We have succesfully passed a motion of no confidence to replace [+ old_chancellor +] with Breitscheid. We are now ruling in a united front with the KPD.
@@ -79,7 +79,7 @@ We have succesfully passed a motion of no confidence to replace [+ old_chancello
 @sack_bruning
 view-if: constructive_vonc and president == "Braun" or president == "Schumacher" or president == "Juchacz"
 choose-if: presidential_powers != 1
-unavailable-subtitle: We don't have that power anymore. You really screwed us here with your reforms, you know that?
+unavailable-subtitle: 我们已经没有那个权力了。你的那些改革可把我们坑惨了,你知道吗?
 call: set_next_election_time
 on-arrival: time_to_election = 3; weimar_dissent += 1 if weimar_plan_adopted; spd_in_government = 0; in_grand_coalition = 0; in_weimar_coalition = 0; in_popular_front = 0; spd_toleration = 0; foreign_minister_party = "I"; interior_minister_party = "I"; justice_minister_party = "I"; labor_minister_party = "I"; reichswehr_minister_party = "I"; economic_minister_party = "I"; finance_minister_party = "I"; agriculture_minister_party = "I"; coalition_dissent = 0; pro_republic -= 5; old_middle_spd -= 3; new_middle_spd -= 2; workers_spd -= 3 if pro_republic < 50; workers_spd -= 4 if pro_republic < 40; old_middle_nsdap += 4 if pro_republic < 50; new_middle_nsdap += 3 if pro_republic < 50
 

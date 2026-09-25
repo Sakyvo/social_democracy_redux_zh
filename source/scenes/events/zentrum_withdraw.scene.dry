@@ -1,6 +1,6 @@
-title: The Weimar Plan Collapses!
+title: 魏玛计划瓦解!
 new-page: true
-subtitle: The Center Party has abandoned the Weimar Plan...
+subtitle: 中间派 Party has abandoned the Weimar Plan...
 tags: event
 view-if: weimar_dissent >= 6 and z_party_leader != "Joos" and weimar_plan_adopted
 on-arrival: weimar_plan_adopted = 0; weimar_rejected = 1; left_dissent += 5; center_dissent += 5; labor_dissent += 2; workers_spd -= 3; workers_z -= 2; new_middle_spd -= 2; new_middle_ddp -= 1; pro_republic -= 6; z_relation -= 15; workers_sapd += 2 if sapd_consolidated; workers_z -= 3 if unemployed >= 13; z_relation += 10 if return_to_normalcy; pro_republic += 4 if return_to_normalcy
@@ -12,11 +12,11 @@ A crisis! The Center Party has abandoned the Weimar Plan at a recent party congr
 
 The Left and Center have, feeling vindicated, renewed their dissent, with the Left calling for a pivot towards the Communists for reliable allies against fascism. Meanwhile the [+ ddp_name +]'s status is uncertain, with some in their party calling to also move on.
 
-- @break_toleration: No Weimar Plan, no governing mandate.
-- @troubling: Troubling developments...
+- @break_toleration: 没有魏玛计划,就没有执政授权。
+- @troubling: 令人不安的事态……
 
 @break_toleration
-subtitle: We will put forward a motion of no confidence in the Reichstag.
+subtitle: 我们将在国会提出一项不信任案。
 view-if: spd_toleration == 1
 on-arrival: next_election_time = time+3 if next_election_time >= time+3; next_election_month = month + 3 if next_election_time >= time+3; next_election_year = year if next_election_time >= time+3; next_election_year += 1 if next_election_month > 12; next_election_month -= 12 if next_election_month > 12; spd_in_government = 0; in_grand_coalition = 0; spd_toleration = 0;
 

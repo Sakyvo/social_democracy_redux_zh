@@ -1,4 +1,4 @@
-title: The Austrian Issue
+title: 奥地利问题
 tags: event
 on-arrival: global_tension += 3; time_left = 3+(resources*2); total_power = 0; {!
 
@@ -96,7 +96,7 @@ max-visits: 1
 
 在与我们现已平定的进军柏林行动相配合之下,奥地利军队曾越过边境进入巴伐利亚发动战争。尽管其国内盟友不再向我们举兵,奥地利问题却始终悬而未决。在希特勒号召以一场伟大的民族革命统一德意志民族的鼓动下,这些军队试图在纳粹民兵的协助下向慕尼黑汇合。
 
-- @war: So it is war.
+- @war: 那就开战吧。
 - @paramilitaries: 不过是些准军事组织。
 
 @war
@@ -116,14 +116,14 @@ on-arrival: resources_spent = 0
 
 剩余时间: [+ time_left +]
 
-- @strike: Are the unions ready to organize a general strike?
-- @reichsbanner: Is the Reichsbanner prepared to take a stand?
-- @kpd: Will the communists help defend the proletariat from this fascist assault?
-- @soviets: For that matter, what about the Soviets?
-- @reichswehr: Is the Reichswehr ready to defend Munich? Are they even loyal?
-- @entente: Will the Entente powers back us?
-- @mussolini: What about Mussolini?
-- @the_battle: The Battle of Munich.
+- @strike: 工会准备好组织总罢工了吗?
+- @reichsbanner: 国旗团准备好挺身而出了吗?
+- @kpd: 共产党人会帮助无产阶级抵御这场法西斯进攻吗?
+- @soviets: 说到这个,苏联那边又如何?
+- @reichswehr: 国防军准备好保卫慕尼黑了吗?他们究竟忠诚吗?
+- @entente: 协约国列强会支持我们吗?
+- @mussolini: 墨索里尼那边呢?
+- @the_battle: 慕尼黑之战。
 
 @strike
 max-visits: 1
@@ -328,8 +328,8 @@ go-to: battlemenu1
 
 @battlemenu1
 
-- @streetfights: The Reichsbanner and SA engage in the outskirts of Munich.
-- @border_clashes: The Reichswehr and Austrians engage across southern Bavaria.
+- @streetfights: 国旗团与冲锋队在慕尼黑郊外交火。
+- @border_clashes: 国防军与奥地利人在巴伐利亚南部沿线交战。
 
 @streetfights
 on-arrival: battles_seen += 1
@@ -337,9 +337,9 @@ max-visits: 1
 
 来自巴伐利亚乡间各处的冲锋队武装已拿起武器、扑向慕尼黑,协助希特勒发动进攻。我们只能寄望当地的国旗团力量足以击退他们。
 
-- @decisive_sa_victory: The battle is fought...
-- @indecisive: The battle is fought...
-- @decisive_rb_victory: The battle is fought...
+- @decisive_sa_victory: 战斗打响了……
+- @indecisive: 战斗打响了……
+- @decisive_rb_victory: 战斗打响了……
 
 @decisive_sa_victory
 view-if: sa_roll >= (rb_roll+3)
@@ -391,9 +391,9 @@ max-visits: 1
 
 希特勒指挥下的奥地利军队成千上万地越过边境,向慕尼黑发起一场对德国民主的盛大进攻。国防军尽管往往并不十分效忠德国民主,却仍将是我们的第一道防线。
 
-- @decisive_au_victory: The battle is fought...
-- @indecisive2: The battle is fought...
-- @decisive_rw_victory: The battle is fought...
+- @decisive_au_victory: 战斗打响了……
+- @indecisive2: 战斗打响了……
+- @decisive_rw_victory: 战斗打响了……
 
 @decisive_au_victory
 view-if: austria_roll >= (reichswehr_roll+3)
@@ -445,9 +445,9 @@ go-to: battlemenu1 if battles_seen < 2; battlemenu2 if battles_seen >= 2
 
 @battlemenu2
 
-- @scab_attempt: The SA assaults picket lines and barricades across Munich.
-- @battle_in_munich: The final battle.
-- @victory_against_hitler: So we have won.
+- @scab_attempt: 冲锋队袭击慕尼黑各处的纠察线与街垒。
+- @battle_in_munich: 最后一战。
+- @victory_against_hitler: 那么,我们赢了。
 
 @scab_attempt
 view-if: scabbing
@@ -492,9 +492,9 @@ Q.strike_roll = Q.strike_luck + Q.strike_bonus;
 
 自城市外围推进之后,冲锋队已进入慕尼黑,试图冲击并破坏城中的防御工事,为希特勒的军队开路。
 
-- @decisive_strike_victory: The battle is fought...
-- @indecisive3: The battle is fought...
-- @decisive_scab_victory: The battle is fought...
+- @decisive_strike_victory: 战斗打响了……
+- @indecisive3: 战斗打响了……
+- @decisive_scab_victory: 战斗打响了……
 
 @decisive_strike_victory
 view-if: strike_roll >= (sa_roll+3)
@@ -587,8 +587,8 @@ Q.assault_roll = Q.assault_luck + Q.assault_bonus;
 
 事情还是发生了:希特勒的奥地利军队已抵达慕尼黑。若我们输掉这一战,他们将占领这座城市,乃至更多。 [? if not strike_broken : 所幸,城中的罢工会助力防御。 ?][? if strike_broken : 遗憾的是,冲锋队已设法击破我们的罢工;我们将十分脆弱。 ?][? if scabbing : 冲锋队正加入这场战斗,再次扑向慕尼黑,协助纳粹夺取该城。 ?][? if rw_munich : 所幸,国防军已准备好保卫这座城市。 ?]
 
-- @defense_victory: The battle is fought...
-- @assault_victory: The battle is fought...
+- @defense_victory: 战斗打响了……
+- @assault_victory: 战斗打响了……
 
 @defense_victory
 view-if: defense_roll >= assault_roll
@@ -602,7 +602,7 @@ on-arrival: rb_strength -= bavaria_rb
 
 最坏的情况已经发生。我们的力量被击败,慕尼黑落入纳粹掌控。看来这将成为……一场**长期战争**。
 
-- @civil_war.long_war: Roll credits.
+- @civil_war.long_war: 字幕滚动。
 
 @victory_against_hitler
 view-if: not scabbing and not munich_advance

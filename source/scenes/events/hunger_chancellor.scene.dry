@@ -1,5 +1,5 @@
-title: The Hunger Chancellor
-subtitle: Popular discontent with Chancellor [+ chancellor +] rises.
+title: 饥饿总理
+subtitle: 民众对 [+ chancellor +] 总理的不满上升。
 new-page: true
 view-if: year >= 1931 and month >= 2 and unemployed >= 18 and welfare < 0 and works_program == 0
 on-arrival: workers_spd *= 0.9 if chancellor_party == "SPD"; workers_spd *= 0.9 if spd_in_government == 1; workers_nsdap += 5 if spd_in_government; workers_kpd += 5 if spd_in_government; unemployed_nsdap += 5 if spd_in_government; socialism += 1 if chancellor_party != "SPD"
@@ -12,11 +12,11 @@ People are calling Chancellor [+ chancellor +] the Hunger Chancellor because of 
 
 [? if spd_toleration == 1 : As we are currently tolerating the [+ chancellor +] government, this could very well reflect badly on us. ?]
 
-- @maintain_toleration: Maintain the current governing arrangement.
-- @break_toleration: Break toleration; vote against this government.
+- @maintain_toleration: 维持当前的执政安排。
+- @break_toleration: 结束容忍;投票反对这个政府。
 
 @maintain_toleration
-subtitle: It is necessary to preserve democracy.
+subtitle: 为了维护民主,这是必要的。
 view-if: spd_toleration == 1
 on-arrival: left_dissent += 10; workers_nsdap += 2; workers_kpd += 3; unemployed_nsdap += 4; workers_spd -= 2; pro_republic -= 4; kpd_relation -= 5
 

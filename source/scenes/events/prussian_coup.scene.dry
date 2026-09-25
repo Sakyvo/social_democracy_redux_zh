@@ -1,5 +1,5 @@
-title: Coup in Prussia
-subtitle: The Chancellor attempts to overthrow the Prussian government.
+title: 普鲁士政变
+subtitle: 总理试图推翻普鲁士政府。
 view-if: (((chancellor = "Papen" or chancellor = "Schleicher") and (president = "Hindenburg" or president = "Seeckt") and year >= 1932 and month >= 8) or (chancellor = "Seldte" and rb_force < sh_force + sa_force + army_force*(1-reichswehr_loyalty) and march_on_berlin_timer < 8 and president != "Braun" and president != "Schumacher" and president != "Juchacz")) and spd_in_government == 0 and spd_prussia = 1 and not presidential_powers
 on-arrival: prussian_coup_seen = 1
 new-page: true
@@ -48,8 +48,8 @@ on-arrival: rb_militancy *= 0.25; rb_strength *= (0.9*(1-dissent)); pro_republic
 
 Our forces confront the government troops and their reactionary auxiliaries, and, somehow, retreat without a fight. They were overwhelmed by the fascist display of strength, and have chosen to slink away.
 
-- @defend: They retreated without a fight?! Send them back, dammit! What the hell! 
-- @surrender: Well, I guess we have no choice but to surrender in the end after all...
+- @defend: 他们居然不战而退?!把人派回去,该死!怎么回事! 
+- @surrender: 好吧,看来我们终究只能投降了……
 
 @defend_2_civil_war
 on-arrival: spd_rebel = 1

@@ -1,5 +1,5 @@
-title: The Weimar Party System
-subtitle: Parties take actions
+title: 魏玛政党体系
+subtitle: 各政党采取行动
 view-if: (year >= 1935 or (year >= 1934 and month >= 4)) and (time >= next_party_time)
 #tags: event
 new-page: true
@@ -14,17 +14,17 @@ max-choices: 1
 
 德国有许多政党,每一个都是政治舞台上的活跃参与者,致力于推进其主要支持者与意识形态倡导者的利益。为此,它们继续主动作出决策。
 
-- @kpd: The Communist Party of Germany.
-- @sapd: The Socialist Workers' Party of Germany.
-- @ddp: The [? if ddp_name == "DDP" : German Democratic Party. ?][? if ddp_name == "DStP" : German State Party. ?][? if ddp_name == "RDP" : Radical Democratic Party. ?]
-- @z: The Center Party.
-- @zca: The Center Christian Alliance.
-- @dvp: The German People's Party.
-- @dnvp: The German National People's Party.
-- @nsdap: The National Socialist German Workers' Party.
+- @kpd: 德国共产党。
+- @sapd: 德国社会主义工人党。
+- @ddp: [? if ddp_name == "DDP" : 德国民主党。 ?][? if ddp_name == "DStP" : 德国国家党。 ?][? if ddp_name == "RDP" : 激进民主党。 ?]
+- @z: 中央党。
+- @zca: 中央党基督教联盟。
+- @dvp: 德国人民党。
+- @dnvp: 德国国家人民党。
+- @nsdap: 民族社会主义德意志工人党。
 
 @kpd
-subtitle: Revolutionary Marxist-Leninists dedicated to the overthrow of capitalism through force of arms.
+subtitle: 革命的马克思列宁主义者,致力于以武力推翻资本主义。
 max-choices: 1
 
 [? if kpd_r >= 20 : 共产党是德国政治中的主导政党,其决策影响举足轻重 —— 尤其是与它历史上作为边缘政党、屡遭迫害的处境相比。 ?]
@@ -35,15 +35,15 @@ max-choices: 1
 
 [? if kpd_r < 5 : 共产党已陷入衰败,面临无足轻重、一贫如洗的可能。它会竭力抗拒这一命运。 ?]
 
-- @kpd_workers: The Communists campaign amongst the workers.
-- @kpd_unemployed: The Communists campaign amongst the unemployed.
-- @kpd_third_period: The Communists rally against Social Democracy.
-- @kpd_united_left: The Communists rally for the united front.
-- @kpd_relations: The Communists seek to improve our relationship.
-- @kpd_policy: The Communists seek to implement policy through their ministries.
-- @rfb: The Communists funnel funds to the RFB.
-- @sabotage: The Communists engage in industrial sabotage.
-- @insurrection: The Communists engage in insurrectionary activity.
+- @kpd_workers: 共产党人在工人中开展宣传。
+- @kpd_unemployed: 共产党人在失业者中开展宣传。
+- @kpd_third_period: 共产党人集会反对社会民主。
+- @kpd_united_left: 共产党人集会支持统一战线。
+- @kpd_relations: 共产党人寻求改善与我们的关系。
+- @kpd_policy: 共产党人试图通过其掌握的部会推行政策。
+- @rfb: 共产党人向红色前线战士同盟输送资金。
+- @sabotage: 共产党人从事工业破坏活动。
+- @insurrection: 共产党人从事起义活动。
 
 @kpd_workers
 frequency: 200
@@ -102,7 +102,7 @@ on-arrival: strife += 1; rfb_militancy += 0.05; rfb_strength -= (sa_strength/100
 共产党人从事暴动活动,迫使 RFB 加剧街头战斗与暴动级别的行动。
 
 @sapd
-subtitle: Centrist Marxists dedicated to the building of a united proletarian front to lead the rupture with capital.
+subtitle: 中间派马克思主义者,致力于建立一个统一的无产阶级阵线,以引领与资本的决裂。
 view-if: sapd_formed
 max-choices: 1
 
@@ -110,13 +110,13 @@ max-choices: 1
 
 [? if sapd_consolidated : 社会主义工人党已成长为一个自己的大党;若我们不能为工人兑现承诺,它就会不断威胁着要从我们的左翼拉走支持者。 ?]
 
-- @sapd_workers: The Socialists campaign amongst the workers.
-- @sapd_unemployed: The Socialists campaign amongst the unemployed.
-- @sapd_new_middle: The Socialists campaign amongst the new middle class.
-- @sapd_rural: The Socialists campaign amongst the farmers. 
-- @sapd_united_frontism: The Socialists work towards a united front.
+- @sapd_workers: 社会主义者在工人中开展宣传。
+- @sapd_unemployed: 社会主义者在失业者中开展宣传。
+- @sapd_new_middle: 社会主义者在新中间阶层中开展宣传。
+- @sapd_rural: 社会主义者在农民中开展宣传。 
+- @sapd_united_frontism: 社会主义者致力于推动统一战线。
 - @sapd_centrists: 社会主义者试图吸引中间派。
-- @sapd_labor: The Socialists attempt to win over the trade unions.
+- @sapd_labor: 社会主义者试图争取工会。
 
 @sapd_workers
 frequency: 200
@@ -167,7 +167,7 @@ on-arrival: labor_dissent += (1+sapd_votes)
 社会主义工人党试图说服社民党中的工会倒戈,带着他们组织起来的工人过来,帮助该党成为一支更强大、更宏大的力量。
 
 @ddp
-subtitle: Liberals of a more republican and left-wing orientation.
+subtitle: 更偏向共和与左翼的自由派。
 max-choices: 1
 view-if: not ddp_banned
 
@@ -177,11 +177,11 @@ view-if: not ddp_banned
 
 [? if ddp_r < 5 : [+ ddp_name +] 近来表现不佳,面对着日益加剧的两极分化与激进化。或许有一天,它能从濒死状态中挣扎着爬回来。 ?]
 
-- @ddp_workers: The Democrats campaign amongst the workers.
-- @ddp_new_middle: The Democrats campaign amongst the new middle class.
-- @ddp_old_middle: The Democrats campaign amongst the old middle class.
-- @ddp_rural: The Democrats campaign in the countryside.
-- @ddp_democracy: The Democrats rally for democracy.
+- @ddp_workers: 民主党人在工人中开展宣传。
+- @ddp_new_middle: 民主党人在新中间阶层中开展宣传。
+- @ddp_old_middle: 民主党人在旧中间阶层中开展宣传。
+- @ddp_rural: 民主党人在乡村开展宣传。
+- @ddp_democracy: 民主党人集会支持民主。
 #- @ddp_policy: The Democrats implement their policy agendas.
 
 @ddp_workers
@@ -219,13 +219,13 @@ on-arrival: nationalism -= ddp_votes*(1-(pro_republic/100)); pro_republic += ddp
 民主党人为共和国而集会,反对右翼反动的民族主义;但受自身规模与共和国整体声望所限,他们的作为有其限度。
 
 @z
-subtitle: Catholics.
+subtitle: 天主教徒。
 max-choices: 1
 view-if: not z_banned and not zca_formed
 
 天主教中央党为教会、也为德国全体天主教徒的权利而斗争。
 
-- @catholics: The Center Party consolidates Catholics.
+- @catholics: 中央党整合天主教徒。
 
 @catholics
 on-arrival: catholics_z += 5; catholics_other -= 5
@@ -233,14 +233,14 @@ on-arrival: catholics_z += 5; catholics_other -= 5
 中央党代表德国的天主教徒,并在他们之中巩固自己的基础。
 
 @zca
-subtitle: The mass party of the whole bourgeoisie united against an ascendant socialism.
+subtitle: 整个资产阶级的群众性政党,团结起来对抗日益上升的社会主义。
 max-choices: 1
 view-if: zca_formed
 
 中央基督教联盟自成立以来,便对社会主义施政构成重大而称职的威胁,为恢复自由民主而不遗余力地斗争 —— 这种自由民主,曾是我们不遗余力地加以捍卫、以免落入妄图复辟反动专制者之手的东西,而如今却成了为历史继续前进而被弃置的东西。
 
 @dvp
-subtitle: Liberals of a more nationalistic and right-wing orientation, chained to industrialist interests.
+subtitle: 更偏向民族主义与右翼的自由派,被工业家利益所束缚。
 max-choices: 1
 view-if: not dvp_banned and not zca_formed
 
@@ -251,7 +251,7 @@ view-if: not dvp_banned and not zca_formed
 [? if dvp_r < 5 : 人民党近来表现不佳,面对着日益加剧的两极分化与激进化。或许有一天,它能从濒死状态中挣扎着爬回来。 ?]
 
 @dnvp
-subtitle: Virulent reactionaries and antisemites dedicated to the restoration of Imperial Germany.
+subtitle: 恶毒的反动派与反犹主义者,致力于复辟帝制德国。
 max-choices: 1
 view-if: not dnvp_banned
 
@@ -263,13 +263,13 @@ view-if: not dnvp_banned
 
 [? if dnvp_r < 5 : 国家人民党已归于默默无闻;随着对旧时代的怀恋在新的繁荣之下萎谢,它那狭窄利益集团支持的本质终于让它自食其果。 ?]
 
-- @dnvp_workers: The DNVP campaigns amongst workers.
-- @dnvp_middle: The DNVP campaigns amongst the middle class.
-- @dnvp_rural: The DNVP campaigns in the countryside.
+- @dnvp_workers: 国家人民党在工人中开展宣传。
+- @dnvp_middle: 国家人民党在中间阶层中开展宣传。
+- @dnvp_rural: 国家人民党在乡村开展宣传。
 - @dnvp_nationalism: 国家人民党为民族主义拉拢支持。
-- @dnvp_antirepublic: The DNVP rallies against the republic.
-- @hugenberg: Hugenberg commits the DNVP to *Katastrophenpolitik*.
-- @moderation: The DNVP tries to break from its reputation as an unworkable party.
+- @dnvp_antirepublic: 国家人民党集会反对共和国。
+- @hugenberg: 胡根贝格让国家人民党走上*灾难政治*之路。
+- @moderation: 国家人民党试图摆脱其「无法共事之党」的名声。
 
 @dnvp_workers
 view-if: dnvp_reform or ((workers_spd_normalized+workers_kpd_normalized+workers_sapd_normalized) >= nationalism)
@@ -333,7 +333,7 @@ on-arrival: z_relation -= dnvp_r/6; dvp_relation -= dnvp_r/3
 国家人民党宣布自己是一个建设性政党,愿意与其他资产阶级政党合作。
 
 @nsdap
-subtitle: Fascists seeking the imposition of their will upon the whole European continent through violent dictatorship, conquest, and war.
+subtitle: 法西斯分子,企图通过暴力独裁、征服与战争,把他们的意志强加于整个欧洲大陆。
 max-choices: 1
 
 纳粹是一场危险的、甚至是所有势力中最危险的运动。他们是法西斯主义在德国的变体,始终尖锐而持续地威胁着民主 —— 即便在相对稳定的时期也不例外。

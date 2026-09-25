@@ -1,5 +1,5 @@
 title: 没收诸侯财产
-subtitle: [? if princes_initiated: Campaigning for the referendum begins. ?] The Luther cabinet attempts to propose to us a compromise
+subtitle: [? if princes_initiated: 为公投展开的竞选宣传开始了。 ?] 路德内阁试图向我们提出一项妥协方案
 view-if: time = compromise_time and year == 1926 and not spd_in_government
 tags: event
 max-visits: 1
@@ -11,8 +11,8 @@ As the date for the petition on the expropriation of the princes draws nearer, t
 
 This law would create a special court, which would settle the disputes between princely houses and state governments. It is markedly worse than the DDP's suggestion of last year, but it seems to be the most that the Luther Cabinet is willing to concede.
 
-- @ddp_proposal: Pressure the Luther cabinet into backing the DDP's proposal.
-- @accept_luther: Accept the compromise, lackluster though it may be.
+- @ddp_proposal: 施压路德内阁,迫其支持民主党的提案。
+- @accept_luther: 接受这项妥协,尽管它乏善可陈。
 - @referendum_ftw: 我们将投票反对该妥协方案,继续推进公投。
 - @whoops: 我们将投票反对该妥协方案。
 

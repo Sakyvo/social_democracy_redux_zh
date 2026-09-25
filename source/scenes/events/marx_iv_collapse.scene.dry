@@ -1,5 +1,5 @@
-title: Fall of the [? if chancellor == "Marx" : Marx IV ?][? if chancellor == "Brüning" : Brüning II ?] government
-subtitle: The cabinet has collapsed on the issue of schooling
+title: [? if chancellor == "Marx" : 马克思第四届 ?][? if chancellor == "Brüning" : 布吕宁第二届 ?] 政府的倒台
+subtitle: 内阁因学校教育问题而垮台
 view-if: year == 1928 and month >= 2 and marx_iv_seen
 new-page: true
 max-visits: 1

@@ -1,5 +1,5 @@
-title: Heidelberg Conference
-subtitle: The SPD holds a party conference in Heidelberg
+title: 海德堡代表大会
+subtitle: 社民党在海德堡召开党的代表大会
 new-page: true
 tags: event
 view-if: year == 1925 and month >= 9
@@ -298,11 +298,11 @@ The first matter in the conference is what is to be done regarding the party pro
 
 Alternatively, the Görlitz program could be maintained, with revisions to match the changing times. With Heidelberg not even entirely satisfying the party left, this would certainly provoke quite the rebellion.
 
-- @heidelberg: Adopt a new party program as written by the Centrists.
-- @gorlitz: Retain the Görlitz program, but moderately revised.
+- @heidelberg: 通过一份由中间派起草的新党纲。
+- @gorlitz: 保留格尔利茨纲领,但作适度修订。
 
 @heidelberg
-subtitle: The Center ([+ center_c +]%) [? if center_c < 50 : - though the Centrists lack a majority, it can still pass as a compromise resolution. ?]
+subtitle: 中间派 ([+ center_c +]%)[? if center_c < 50 : —— 尽管中间派未占多数,它仍可作为妥协决议获得通过。 ?]
 choose-if: reformist_c < 50
 on-arrival: heidelberg_program = 1; center_strength += 5; reformist_strength -= 5; left_dissent -= 5; center_dissent -= 10; reformist_dissent += 5; dvp_relation -= 5; kpd_relation += 5
 go-to: coalition_issue
@@ -310,7 +310,7 @@ go-to: coalition_issue
 The party has adopted the Heidelberg program, written by Karl Kautsky of the party center and representing a return towards the party's Marxist roots. 
 
 @gorlitz
-subtitle: The Right ([+ reformist_c +]%) [? if reformist_c < 50 : - though the Reformists lack a majority, the trade unions may be convinced. ?]
+subtitle: 右翼 ([+ reformist_c +]%)[? if reformist_c < 50 : —— 尽管改良派未占多数,工会或许可以被说服。 ?]
 choose-if: (reformist_c+labor_c) >= 50
 on-arrival: gorlitz_program = 1; center_strength -= 5; marx_relation += 5; left_strength -= 5; reformist_strength += 10; left_dissent += 20; center_dissent += 15; reformist_dissent -= 5; peoples_party_support += 1; dvp_relation += 5; kpd_relation -= 5; labor_strength += 10 if reformist_c < 50; center_dissent += 5 if reformist_c < 50
 go-to: coalition_issue
@@ -321,12 +321,12 @@ The party has, surprisingly, chosen to retain the bulk of the Görlitz program. 
 
 Max Seydewitz of the left meanwhile has proposed before the conference what would amount to a rejection of coalitions with the bourgeois parties in order to represent the interests of the proletariat in all future struggles without regard to their opinions.
 
-- @seydewitz: The motion is passed by the conference.
-- @silly: The motion is defeated by the conference.
+- @seydewitz: 该动议在代表大会上获得通过。
+- @silly: 该动议在代表大会上被否决。
 
 @seydewitz
 choose-if: left_c >= 50 or ((left_c+labor_c >= 50 and not gorlitz_program) or (reformist_c < 50 and seydewitz_advisor and not gorlitz_program and left_c+labor_c >= center_c and president != "Marx" and dvp_relation < 40 and z_relation < 50))
-subtitle: The Left ([+ left_c +]%) [? if left_c < 50 : - though the Leftists lack a majority, the trade unions and dissident centrists may be convinced. ?]
+subtitle: 左翼 ([+ left_c +]%)[? if left_c < 50 : —— 尽管左翼未占多数,工会与持异议的中间派或许可以被说服。 ?]
 on-arrival: left_strength += 20; reformist_strength -= 10; reformist_dissent += 25; center_dissent += 10; labor_dissent += ((z_relation+dvp_relation)/10); marx_relation -= 10; z_relation -= 15; dvp_relation -= 15; ddp_relation -= 15; kpd_relation += 10; communist_coalition += 1
 #go-to: saxon_struggle
 
@@ -334,7 +334,7 @@ Surprisingly, the motion to reject cooperation with the bourgeoisie is passed th
 
 @silly
 choose-if: left_c < 50
-subtitle: The Center and Right ([+ pragmatic_unity +]%)
+subtitle: 中间派与右翼 ([+ pragmatic_unity +]%)
 on-arrival: reformist_dissent -= 5; left_dissent += 5
 #go-to: saxon_struggle
 

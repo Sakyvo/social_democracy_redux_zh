@@ -1,5 +1,5 @@
-title: Hindenburg Sacks [+ chancellor +]!
-subtitle: Hindenburg has turned on us...
+title: 兴登堡罢免 [+ chancellor +]!
+subtitle: 兴登堡与我们反目了……
 view-if: (president == "Hindenburg" and presidential_powers != 1 and spd_in_government == 1 and ((reichswehr_loyalty <= 0.05 or ((capital_strike_seen or in_left_front) and unemployed >= 20 and budget < 1 and economic_democracy+nationalization_progress >= 3 and land_reform > 0)) or (hindenburg_angry >= 100)) and ((coup_progress >= 3 and chancellor_party == "SPD") or (coup_progress >= 6 and chancellor_party == "Z"))) and papen_chancellor_timer <= 0 and chancellor != "Brüning"
 new-page: true
 on-arrival: dvp_relation -= 8; z_relation -= 4 if chancellor_party != "Z"; pro_republic -= 3; pro_republic -= 1 if spd_r >= 30; pro_republic -= 1 if weimar_coalition >= 50; coup_progress -= 1; spd_sackings += 1; judicial_reform -= 1
@@ -23,7 +23,7 @@ on-arrival: spd_in_government = 0; spd_toleration = 1; chancellor = "Brüning"; 
 Replacing us is Brüning of the Center Party, who has reorganized his cabinet to encompass the bourgeois parties. Although they lack a majority in the Reichstag, we could tolerate their government at the next session to prevent new elections, effectively acquiscing to Hindenburg's wishes.
 
 - @tolerate: 我们将达成容忍协议。
-- @dont_tolerate: No majority, no government. Elections it is!
+- @dont_tolerate: 没有多数,就没有政府。那就举行选举!
 
 @tolerate
 on-arrival: left_dissent += 5

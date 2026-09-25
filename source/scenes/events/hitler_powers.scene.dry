@@ -11,7 +11,7 @@ tags: event
 The far right is mobilizing. Paramilitary forces of the Stahlhelm and SA, organized under the Harzburg Front, have marched on Berlin, threatening to violently seize power. Forces of the Interior and Reichswehr ministries have been deployed in the streets under orders from their respective Nazi-controlled ministries and have begun securing key points across the country. Clearly, [+ president +] has tired of our attempts to constitutionally obstruct his plans and has decided to ignore the constitution.
 
 - @fight: 我们要在街头战斗,阻止希特勒掌权。
-- @give_up: There is nothing we can do.
+- @give_up: 我们无能为力。
 
 
 @fight
@@ -20,7 +20,7 @@ on-arrival: spd_rebel = 1
 我们明白这意味着什么吗?这意味着要对抗国家的全部武力,打一场内战。
 
 - @civil_war: 是。
-- @give_up: We are not ready for war. There is nothing we can do.
+- @give_up: 我们还没准备好开战。我们无能为力。
 
 @give_up
 

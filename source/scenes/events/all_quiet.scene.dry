@@ -1,5 +1,5 @@
-title: All Quiet on the Western Front
-subtitle: Censorship and violence over a movie...
+title: 西线无战事
+subtitle: 一部电影引发审查与暴力……
 view-if: year = 1930 and month = 12 and spd_prussia
 max-visits: 1
 tags: event
@@ -11,10 +11,10 @@ The American film *All Quiet on the Western Front*, based on the German novel *I
 
 As an anti-war film, it is the target of major protest by far-right actors, especially the Nazis and the Stahlhelm. They are calling for the government to ban the film. If we do not ban it, the SA threatens to violently stop the film from being shown or watched.
 
-- @ban: Ban the film, to prevent Nazi violence.
-- @allow: Allow the film to be shown.
-- @allow_protect: Allow the film to be shown, and use the Prussian police to prevent Nazi disruptions.
-- @everyone: In fact, everyone needs to learn the lessons of this film. Give free tickets to students and government employees.
+- @ban: 查禁这部电影,以防纳粹施暴。
+- @allow: 允许放映这部电影。
+- @allow_protect: 允许放映这部电影,并动用普鲁士警察阻止纳粹捣乱。
+- @everyone: 事实上,人人都该学学这部电影的教训。给学生与政府雇员发放免费票。
 
 @ban
 on-arrival: old_middle_nsdap += 5; new_middle_nsdap += 4; workers_nsdap += 2; unemployed_nsdap += 2; sa_strength += 50; nationalism += 6; pro_republic -= 5
@@ -30,14 +30,14 @@ While we allow the film, showings are marred by violence. Showings of the film e
 
 @allow_protect
 choose-if: prussian_police_loyalty >= 0.65
-unavailable-subtitle: The police are not willing to protect the film.
+unavailable-subtitle: 警察不愿保护这部电影。
 on-arrival: nationalism -= 4; pro_republic += 4*(1-dissent); strife += 1
 
 Under the protection of the police, the people are allowed to watch the film in peace. Nazi disturbances are kept to a minimum.
 
 @everyone
 choose-if: prussian_police_loyalty >= 0.75
-unavailable-subtitle: The police are unable to guarantee the safety of all the attendees.
+unavailable-subtitle: 警察无法保证所有到场者的安全。
 on-arrival: nationalism -= 5; pro_republic += 5*(1-dissent); workers_nsdap -= 3; unemployed_nsdap -= 3; new_middle_nsdap -= 3
 
 Under police protection, crowds throng the film's showings, as Nazis protest outside. The reception is mixed, but a new national conversation develops, reexamining the right-wing histories of the war. Quietly, many minds are changed, or at least affected in subtle ways.

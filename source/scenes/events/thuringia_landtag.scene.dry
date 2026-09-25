@@ -1,4 +1,4 @@
-title: Thuringian Landtag Elections
+title: 图林根州议会选举
 new-page: true
 tags: event
 priority: -1
@@ -307,20 +307,20 @@ Right-wing Coalition (Z + [+ bvp_name +] + DVP + Others + DNVP): [+ t_right_coal
 - @nsdap_majority
 
 @bourgeois_coalition
-title: A right-wing bourgeois coalition.
-subtitle: DVP + DNVP + Others ([+ t_bourgeois_coalition +]%)
+title: 一个右翼资产阶级联盟。
+subtitle: 人民党 + 国家人民党 + 其他 ([+ t_bourgeois_coalition +]%)
 view-if: t_bourgeois_coalition >= 50 or t_elections <= 1
 choose-if: t_bourgeois_coalition >= 50 or (t_elections <= 0 and t_bourgeois_coalition+ddp_tl+nsdap_tl >= 50)
-unavailable-subtitle: DVP + DNVP + Others ([+ t_bourgeois_coalition +]%) - The bourgeois have fallen short of a majority.
+unavailable-subtitle: 人民党 + 国家人民党 + 其他 ([+ t_bourgeois_coalition +]%) - The bourgeois have fallen short of a majority.
 
 The incumbent bourgeois coalition is able to survive[? if t_bourgeois_coalition >= 50 : , thankfully, without Nazi toleration. ?][? if t_bourgeois_coalition < 50 : , though only with the toleration of the Nazi Party is it able to do so. ?]
 
 @evil_coalition
-title: A reactionary coalition, extended to include the NSDAP.
-subtitle: DVP + DNVP + NSDAP + Others ([+ frick_coalition +]%)
+title: 一个扩及纳粹党的反动联盟。
+subtitle: 人民党 + 国家人民党 + 纳粹党 + 其他 ([+ frick_coalition +]%)
 view-if: frick_coalition >= 50 and t_bourgeois_coalition < 50
 choose-if: dvp_relation < 60 or t_anti_democratic_coalition >= 50
-unavailable-subtitle: Thankfully, the DVP does not see the need to include Nazis in government.
+unavailable-subtitle: 所幸,人民党并不认为有必要把纳粹纳入政府。
 on-arrival: nazi_thuringia = 1; thuringia_nazi_times += 1; new_middle_nsdap += 2; old_middle_nsdap += 2; unemployed_nsdap += 2
 
 The bourgeois parties of Thuringia deeply distrust us, as the regional SPD branch has always been particularly left-leaning. As a result, they have refused to even accept the idea of toleration from us, and instead include the NSDAP in government to secure a majority.
@@ -329,7 +329,7 @@ The bourgeois parties of Thuringia deeply distrust us, as the regional SPD branc
 
 @left_coalition
 title: 有可能组成「统一战线」吗?
-subtitle: KPD + SPD ([+ t_left_coalition +]%)
+subtitle: 共产党 + 社民党 ([+ t_left_coalition +]%)
 view-if: t_left_coalition >= 50
 choose-if: kpd_relation >= 45 and communist_coalition >= 2
 unavailable-subtitle: 共产党对我们不够信任。
@@ -339,7 +339,7 @@ Together with the KPD, we have won a majority. The bourgeois parties are up in a
 
 @spd_majority
 title: 社民党或可单独执政。
-subtitle: SPD ([+ spd_tl +]%)
+subtitle: 社民党 ([+ spd_tl +]%)
 view-if: spd_tl >= 50
 on-arrival: thuringia_spd -= 0.1; workers_spd += 3*(1-dissent); unemployed_spd += 3*(1-dissent)
 
@@ -357,7 +357,7 @@ title: 没有明确的多数。
 
 Ultimately, the decision is up to the regional SPD branch, though we can guide them.
 
-- @and: And the Thuringian SPD decides...
+- @and: 而图林根社民党决定……
 
 @and
 go-to: hung_landtag if kpd_thuringia_warmed and t_popular_front_coalition >= 50; new_elections_thuringia if t_neo_weimar_coalition < 50; refused_toleration if t_neo_weimar_coalition >= 50 and left_strength >= 25; accepted_toleration if t_neo_weimar_coalition >= 50 and left_strength < 25
@@ -414,7 +414,7 @@ The Thuringian SPD, following the direction of the party away from the left, has
 
 @nsdap_majority
 title: 纳粹党多数
-subtitle: NSDAP ([+ nsdap_tl +]%)
+subtitle: 纳粹党 ([+ nsdap_tl +]%)
 view-if: nsdap_tl >= 50
 on-arrival: workers_nsdap += 2; old_middle_nsdap += 6; unemployed_nsdap += 4; new_middle_nsdap += 3; rural_nsdap += 2; thuringia_nsdap += 0.25; nazi_thuringia = 1
 

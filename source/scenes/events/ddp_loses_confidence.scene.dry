@@ -1,5 +1,5 @@
-title: The [+ ddp_name +] loses confidence
-subtitle: We have turned the liberals against us
+title: [+ ddp_name +] 失去了信任
+subtitle: 我们让自由派转而反对我们
 tags: event
 view-if: in_spd_majority and spd_r < 50 and ddp_toleration and ddp_relation < 50
 on-arrival: time_to_election = 3; ddp_toleration = 0; new_middle_spd -= 5; new_middle_ddp += 5

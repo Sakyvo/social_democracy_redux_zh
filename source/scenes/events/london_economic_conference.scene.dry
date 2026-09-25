@@ -1,5 +1,5 @@
-title: London Economic Conference
-subtitle: The League of Nations unites to tackle the Great Depression...
+title: 伦敦经济会议
+subtitle: 国际联盟团结起来应对大萧条……
 view-if: year = 1933 and month >= 6
 on-arrival: london_economic_conference_seen = 1
 new-page: true
@@ -37,7 +37,7 @@ Germany, like the rest of the world, is still deep in the economic crisis, even 
 
 
 @stable_currency_out_of_gov
-title: German representatives call for stable currency, along with Britain and France.
+title: 德国代表与英国、法国一同呼吁稳定货币。
 view-if: not spd_in_government
 on-arrival: west_relation += 1
 
@@ -48,14 +48,14 @@ As expected, the conservative German bankers support Britain and France's plan t
 
 
 @support_roosevelt
-title: Support Roosevelt's ideas - we must devalue currency.
+title: 支持罗斯福的主张 —— 我们必须让货币贬值。
 view-if: spd_in_government
 
 
 We support Roosevelt's plan for controlled inflation, leaving us at odds with the European powers. In response to the continued support for fixed currency exchange rates by France and Britain and the impasse on debts, the Americans pull out of the conference, leaving it with no agreements whatsoever.
 
 @support_france
-title: Support France and Britain - we must have stable currency.
+title: 支持法国与英国 —— 我们必须维持货币稳定。
 view-if: spd_in_government
 on-arrival: west_relation += 1; eu_progress += 1
 
@@ -63,31 +63,31 @@ Our position brings us closer to other European powers. In response to the conti
 
 
 @salvage
-title: Can we try to salvage the negotiations?
+title: 我们能设法挽救这场谈判吗?
 view-if: spd_in_government
 
 How should we try to salvage the negotiations?
 
-- @salvage_currency: Try to convince France and Britain that slowly controlled inflation is possible and desirable.
-- @salvage_debts: Try to convince the US to reduce war debts for the sake of peace.
-- @no_business: Nothing can be done.
+- @salvage_currency: 设法说服法国与英国:缓慢且受控的通胀既可能,也可取。
+- @salvage_debts: 设法说服美国为了和平而削减战债。
+- @no_business: 无计可施。
 
 @salvage_currency
 choose-if: woytinsky_advisor = 1 and wtb_implemented > 1
-unavailable-subtitle: Wladimir Woytinsky would be extremely helpful right now.
+unavailable-subtitle: 此刻若有弗拉基米尔·沃伊京斯基相助,将极有帮助。
 on-arrival: unemployed -= 2 if unemployed >= 10; unemployed -= 1.5 if unemployed >= 5; inflation += 1.5; workers_spd += 4*(1-dissent); new_middle_spd += 3*(1-dissent); economic_growth += 1.5 if economic_growth < 3; socialism -= 2
 
 Wladimir Woytinsky, now part of our delegation to the conference, uses our successful implementation of the WTB-plan in order to argue for loosening currency valuation. The argument is at least somewhat convincing, and an agreement is reached, leading to increased inflation and demand stimulus throughout the world.
 
 @salvage_debts
 choose-if: reparations <= -2 and pacifism >= 3 and (rearmament_exposed or west_relation >= 3)
-unavailable-subtitle: We cannot argue for pacifism in our current state.
+unavailable-subtitle: 以我们目前的处境,无法为和平主义辩护。
 on-arrival: budget += 1; unemployed -= 1 if unemployed >= 10; unemployed -= 1 if unemployed >= 5; inflation += 1 if inflation < 0; new_middle_spd += 4*(1-dissent); workers_spd += 3*(1-dissent); economic_growth += 1 if economic_growth < 3; socialism -= 2
 
 We try to argue that reducing war debts will reduce the risk of a future European war, using our successful disarmament and the reduction in Versailles reparation payments as an argument. The argument is at least somewhat convincing to the Americans, leading to an agreement to reduce debts from the Great War. This indirectly also improves our economy.
 
 @no_business
-title: This conference is none of our concern.
+title: 这场会议与我们无关。
 view-if: spd_in_government
 
 The conference collapses, as expected. In response to the continued support for fixed currency exchange rates and the impasse on debts, the Americans pull out of the conference, leaving it with no agreements whatsoever.

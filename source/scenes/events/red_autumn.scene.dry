@@ -1,5 +1,5 @@
-title: Red Autumn
-subtitle: The communists attempt to rally the workers
+title: 红色之秋
+subtitle: 共产党人试图把工人动员起来
 view-if: schleichers_scheme_success and year >= 1933 and month >= 10 and month < 12
 on-arrival: rfb_militancy += 0.05; rfb_strength += 200; sa_strength -= 50; rb_strength -= 150; workers_kpd += 5; unemployed_nsdap -= 3; unemployed_kpd += 3; strife += 1; old_middle_nsdap -= 3; rural_nsdap -= 3; new_middle_nsdap -= 2; old_middle_dnvp -= 2; rural_dnvp -= 2; old_middle_dne += 5; rural_dne += 5; new_middle_dne += 4;
 tags: event
@@ -16,7 +16,7 @@ Schleicher has used this supposed threat of communist revolution to justify more
 
 @reichstag_fire_schleicher
 view-if: strife >= 12
-subtitle: The Reichstag has been burned down!
+subtitle: 国会大厦被烧毁了!
 
 The Reichstag has been burned to the ground by a foreign communist. [+ president +] signs the **Decree of the Reich President for the Protection of People and State**, or **Reichstag Fire Decree** suspending essential civil liberties under the pretext of preventing communist revolution. 
 

@@ -1,6 +1,6 @@
 title: 杨格计划
 new-page: true
-subtitle: The right-wing coalition has collapsed...
+subtitle: 右翼联盟已经垮台……
 tags: event
 view-if: year = 1929 and month >= 7 and young_plan_seen = 0 and (in_right_coalition or dnvp_toleration)
 on-arrival: young_plan_seen = 1; right_coalition_failed = 1; prussia_dnvp -= 0.1; prussia_nsdap += 0.1; dnvp_toleration = 0
@@ -19,8 +19,8 @@ We can either vote to bring down the government and hold new elections, or "tole
 - @no_matter
 
 @vonc_yes
-title: Support the vote of no confidence, voting against the government.
-subtitle: The government will collapse, and there may be new elections.
+title: 支持不信任投票,投票反对政府。
+subtitle: 政府将垮台,或许会举行新的选举。
 view-if: neo_weimar_coalition >= 50
 on-arrival: do_the_thing_after_this = 1 if president == "Marx"; spd_in_government = 0; in_right_coalition = 0; in_grand_coalition = 0; spd_toleration = 0; dvp_relation -= 5; z_relation -= 5;
 go-to: marx if president == "Marx"; thing_did if president != "Marx"
@@ -29,28 +29,28 @@ go-to: marx if president == "Marx"; thing_did if president != "Marx"
 
 @thing_did
 
-- @enter_government: We will enter government.
-- @new_elections: There will be new elections.
+- @enter_government: 我们将进入政府。
+- @new_elections: 将举行新的选举。
 
 @enter_government
 choose-if: grand_coalition >= 50 and (z_relation >= 45 or z_party_leader == "Joos") and (dvp_relation >= 30 or stresemann_dead == 0)
-subtitle: SPD + Z + BVP + DDP + DVP ([+ grand_coalition +]%)
+subtitle: 社民党 + 中央党 + 巴伐利亚人民党 + 民主党 + 人民党 ([+ grand_coalition +]%)
 on-arrival: leverage = spd_r
-unavailable-subtitle: SPD + Z + BVP + DDP + DVP ([+ grand_coalition +]%) - [? if grand_coalition < 50 : We do not have the votes. ?][? if (z_relation < 45 and z_party_leader != Joos) or (dvp_relation < 30 and stresemann_dead == 1) : The right would rather see their government fall than let us into government. ?]
+unavailable-subtitle: 社民党 + 中央党 + 巴伐利亚人民党 + 民主党 + 人民党 ([+ grand_coalition +]%) - [? if grand_coalition < 50 : We do not have the votes. ?][? if (z_relation < 45 and z_party_leader != Joos) or (dvp_relation < 30 and stresemann_dead == 1) : The right would rather see their government fall than let us into government. ?]
 go-to: election_1928.grand_coalition_z_lead
 
 We have entered government and taken the DNVP's place.
 
 @new_elections
-subtitle: With the Reichstag hung, [+ president +] will dissolve it
+subtitle: 由于国会陷入僵局,[+ president +] 将解散它
 on-arrival: time_to_election = 3; pro_republic -= 3; z_relation -= 2; dvp_relation -= 3; marx_relation -= 5
 call: set_next_election_time
 
 The Reichstag has been dissolved, as there is no clear governing majority.
 
 @vonc_no
-title: Support the rump Center-led government, voting in favor of the government.
-subtitle: We would essentially provide "toleration" to a bourgeois government.
+title: 支持这个由中央党领衔的残余政府,投票赞成该政府。
+subtitle: 我们实质上是在向一个资产阶级政府提供「容忍」支持。
 view-if: neo_weimar_coalition >= 50
 on-arrival: spd_toleration = 1; in_right_coalition = 0; left_dissent += 8; 
 go-to: marx if president == "Marx"
@@ -58,8 +58,8 @@ go-to: marx if president == "Marx"
 By supporting the government, we have essentially entered into a "toleration" arrangement with the [+ chancellor +] government. We do not have a voice in the government, but we are responsible for its continued stability. The left of our party opposes this plan, and would rather that we force new elections.
 
 @no_matter
-title: It does not matter what we do.
-subtitle: The anti-government parties have over 50% of the vote, no matter our choices.
+title: 我们怎么做都无关紧要。
+subtitle: 无论我们怎么选,反政府各党的票数都超过 50%。
 view-if: neo_weimar_coalition < 50
 call: set_next_election_time
 on-arrival: time_to_election = 3; spd_in_government = 0; in_right_coalition = 0; in_grand_coalition = 0; spd_toleration = 0; pro_republic -= 5

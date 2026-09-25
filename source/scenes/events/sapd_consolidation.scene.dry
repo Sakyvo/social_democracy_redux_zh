@@ -1,5 +1,5 @@
-title: The SAPD consolidates
-subtitle: As the SPD loses more and more of its base, the SAPD has increasingly consolidated as an alternative.
+title: 社会主义工人党完成整合
+subtitle: 随着社民党流失越来越多基本盘,社会主义工人党已日益整合为一个替代选项。
 view-if: sapd_formed == 1 and centrists_resign == 1 and (unions_independent == 1 or workers_spd_normalized < 35) 
 on-arrival: sapd_consolidated = 1; {!
 Q.workers_spd -= 10;
@@ -58,4 +58,4 @@ With the unions having left the SPD and the Left and Center defecting to form a 
 
 [? if economic_plan == 0 : Our failure to formulate an economic plan has only strengthened this bloc further as many unemployed supporters of our party join the SAPD in the hopes of getting their jobs back. ?] [? if moderate_plan_adopted == 1 : Our adoption of the moderate economic plan has only bolstered the SAPD further as many of the more radical members in our party feel it is inadequate and find accomodation elsewhere. ?]
 
-- @root: Disturbing.
+- @root: 令人不安。

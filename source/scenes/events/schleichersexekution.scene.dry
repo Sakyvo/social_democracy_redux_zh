@@ -1,5 +1,5 @@
-title: Schleicher's Reichsexekutions
-subtitle: Chancellor Schleicher works to bring state governments to heel
+title: 施莱谢尔的国家执行
+subtitle: 施莱谢尔总理正着力让各州政府俯首听命
 view-if: year >= 1933 and month >= 3 and chancellor = "Schleicher" and schleichers_scheme_success
 on-arrival: new_middle_dne += 5; strife -= 2; coup_progress += 5 if not dne_formed; landtags_enabled = 0
 new-page: true
@@ -11,7 +11,7 @@ tags: event
 
 In his work to eliminate the continued violence in the streets and any potential threat against him, Schleicher and [+ president +] have been imposing federal interventions against unruly or disobedient states, placing them under direct government control, and in areas without direct Reichsexekutions been forcing state governments to nonetheless essentially subjugate themselves to central government control and reshuffle their cabinets in accordance with Schleicher's rule.
 
-- @coup: The Nazis resist!
+- @coup: 纳粹党反抗了!
 
 @coup
 view-if: coup_progress >= 10
@@ -19,4 +19,4 @@ on-arrival: kpd_relation -= 100
 
 Claiming, funnily, to champion a fight for democracy and the constitution, the Nazis have mobilized the SA to defend the state governments to which they are sympathetic from Schleicher's imposition of military force. Fighting erupts and spirals into civil war.
 
-- @civil_war: Mobilize the Reichsbanner to defend Schleicher!
+- @civil_war: 动员国旗团保卫施莱谢尔!

@@ -11,8 +11,8 @@ Inflation has risen. People of all social classes are seeing their purchasing po
 
 The people and the press are clamoring for action to reduce inflation. Since we are in opposition, we stand to benefit, especially as the government turns to austerity as solution.
 
-- @campaign: Campaign against the government!
-- @toleration: We are in toleration.
+- @campaign: 展开反对政府的宣传!
+- @toleration: 我们处于容忍执政地位。
 - @do_nothing: 我们就等着熬过去。
 
 @campaign
@@ -29,7 +29,7 @@ on-arrival: workers_spd -= 4; unemployed_spd -= 4;
 
 An astute observation, sir. What should we do about it?
 
-- @break_toleration: End the toleration agreement!
+- @break_toleration: 终止容忍协议!
 - @do_nothing: 我们就等着熬过去。
 
 @do_nothing

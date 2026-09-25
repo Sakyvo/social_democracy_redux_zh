@@ -1,5 +1,5 @@
-title: Emergency budget cuts
-subtitle: Chancellor [+ chancellor +] proposes significant cuts to social spending.
+title: 紧急预算削减
+subtitle: [+ chancellor +] 总理提议大幅削减社会开支。
 new-page: true
 view-if: (year == 1929 or year == 1930 or year == 1931 or year == 1932) and month >= 12 and chancellor == "Brüning" and spd_in_government == 0 and (unemployed > 15 or (year == 1929 and unemployed > 10)) and welfare >= 0 and emergency_cuts_timer = 0
 on-arrival: emergency_cuts_seen = 1; emergency_cuts_timer = 12
@@ -24,7 +24,7 @@ The emergency policy passes under emergency rules, as the Reichstag is currently
 
 
 @vote_no
-title: Vote against this measure, ending the toleration agreement.
+title: 投票反对这项举措,终止容忍协议。
 view-if: spd_toleration
 on-arrival: time_to_election = 3; spd_in_government = 0; in_grand_coalition = 0; spd_toleration = 0; pro_republic -= 5; weimar_dissent += 1 if weimar_plan_adopted
 call: set_next_election_time
@@ -35,7 +35,7 @@ We have broken with the [+ chancellor +] government, and have voted against them
 
 
 @vote_yes
-title: Vote in favor of this measure to continue the toleration agreement.
+title: 投票赞成这项举措,延续容忍协议。
 view-if: spd_toleration
 on-arrival: welfare -= 1; unemployed += 2; left_dissent += 10; labor_dissent += 10; workers_spd *= 0.9; unemployed_spd *= 0.9; unemployed_nsdap += 5; unemployed_kpd += 4; unemployed_kpd += 1 if sapd_consolidated == 0; unemployed_sapd += 1 if sapd_consolidated == 1; workers_nsdap += 5; workers_kpd += 3; workers_kpd += 2 if sapd_consolidated == 0; workers_sapd += 2 if sapd_consolidated == 1; workers_spd -= 4 if welfare < 0; unemployed_spd -= 5 if welfare < 0; pro_republic -= 4; kpd_relation -= 8; budget += 1; inflation -= 2; economic_growth -= 0.5;
 

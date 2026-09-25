@@ -11,10 +11,10 @@ Tensions run high in Berlin. The Communists are planning a demonstration to comm
 
 Many non-communists are afraid of the possibility of another violent uprising, and our allies in the Prussian coalition are asking the Prussian Interior Ministry to ban the demonstrations.
 
-- @ban: Ban the demonstrations.
-- @allow_police: Allow the demonstrations to proceed, but maintain a heavy police presence.
-- @allow: Allow the demonstrations to proceed.
-- @join: Join in the demonstrations ourselves.
+- @ban: 查禁示威。
+- @allow_police: 允许示威进行,但布置重兵警戒。
+- @allow: 允许示威进行。
+- @join: 我们自己加入示威。
 
 @ban
 on-arrival: blutmai = 1; kpd_relation -= 25; z_relation += 5; dvp_relation += 5; workers_spd -= 3; unemployed_spd -= 3; workers_kpd += 3; unemployed_kpd += 3; communist_coalition -= 3; strife += 1; left_dissent += 5
@@ -24,8 +24,8 @@ We issued the order to ban the demonstrations, and sent police to enforce the ba
 
 This may end any attempt at reconciliation with the KPD, but the Center and People's parties approve of our action.
 
-- @corrupt_police: It is the fault of corrupt and reactionary elements within the police. Purge those responsible.
-- @communist_fault: It is the fault of the Communists for refusing to follow the rule of law.
+- @corrupt_police: 这要怪警察内部腐败与反动的分子。清洗相关责任人。
+- @communist_fault: 这要怪共产党拒绝遵守法治。
 - @no_fault: 这是本不该发生的不幸事件,但根本谁也不该怪。
 
 @corrupt_police
@@ -59,7 +59,7 @@ The demonstration proceeds peacefully, with a minimal police presence. Onlookers
 
 @join
 choose-if: kpd_relation >= 45
-unavailable-subtitle: The Communists do not trust us enough.
+unavailable-subtitle: 共产党对我们不够信任。
 on-arrival: kpd_relation += 15; volksmai = 1; workers_kpd += 5; unemployed_kpd += 5; workers_spd += 5; unemployed_spd += 5; new_middle_spd -= 5; new_middle_spd += 3 if new_middle_conscious; old_middle_spd -= 5; z_relation -= 10; dvp_relation -= 10; coalition_dissent += 2; communist_coalition += 2; rfb_strength += 100; rfb_militancy += 0.1; sa_strength += 50; sh_strength += 50; socialism += 5
 achievement: die_rote_fahne
 

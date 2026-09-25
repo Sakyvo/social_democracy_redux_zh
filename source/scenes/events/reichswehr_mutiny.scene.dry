@@ -1,5 +1,5 @@
-title: Crisis in the Army
-subtitle: The Reichswehr refuses to follow the Communists...
+title: 军队危机
+subtitle: 国防军拒绝听命于共产党人……
 new-page: true
 tags: event
 max-visits: 1
@@ -11,16 +11,16 @@ A crisis! With the KPD taking control over the Reichswehr Ministry in our most r
 
 The army demands we sack the KPD Reichswehr Minister, while the Communists stand ready to crush the mutinies by force with the RFB, expecting us to support them in this endeveour by arming loyal worker's militias and deploying the police alongside. What do we do?
 
-- @gegen_groener: We will assist the KPD in suppressing the mutiny.
-- @gegen_thalmann: We have no choice but to sack the Reichswehr Minister.
+- @gegen_groener: 我们将协助共产党镇压这场哗变。
+- @gegen_thalmann: 我们别无选择,只能解除国防部长之职。
 
 @gegen_groener
 on-arrival: government_strength = rfb_strength*rfb_militancy; government_strength += ((left_strength/100)*rb_strength*rb_militancy)/2; government_strength += (prussian_police_strength*prussian_police_militancy*prussian_police_loyalty); mutiny_strength = (reichswehr_strength*reichswehr_militancy*(1-(reichswehr_loyalty/2))); mutiny_strength += (sa_strength*sa_militancy) if sa_banned != 1; mutiny_strength += (sh_strength*sh_militancy) if sh_banned != 1
 
 We choose to crush the mutiny by force and stand by our coalition partners. The Communists however worry that this will not be enough, and call for us to arm SPD and KPD aligned workers into state-sanctioned militias to help occupy rebellious barracks.
 
-- @arm_workers: We will arm the workers.
-- @the_fight: This is too far. The law can handle this.
+- @arm_workers: 我们将武装工人。
+- @the_fight: 这太过分了。法律能处理此事。
 
 @arm_workers
 subtitle: -1 财政预算。
@@ -44,7 +44,7 @@ on-arrival: nationalism += 10; pro_republic -= 7; sa_strength += 100; sh_strengt
 
 We send our forces against the mutinies, but, despite hard-fought victories against some garrisons, it quickly becomes clear that even with the full force of the government on our side, we have been unable to restore order. Our attempts at suppressing the Reichswehr mutinies have only fully turned it against us, and, once the initial fighting settles down, they are quick to mobilize and march on Berlin.
 
-- @civil_war: It is a civil war, then.
+- @civil_war: 那就是一场内战。
 
 @gegen_thalmann
 on-arrival: reichswehr_minister_party = "I"; kpd_relation -= 15; kpd_coalition_dissent += 4; coup_progress += 2; reichswehr_loyalty -= 0.05; chancellor = "Breitscheid" if chancellor_party == "KPD"; chancellor_party = "SPD" if chancellor_party == "KPD"; left_dissent += 15; rb_strength -= 200; rfb_strength += 100

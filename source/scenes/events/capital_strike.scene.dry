@@ -1,5 +1,5 @@
-title: Capital Strike
-subtitle: Germany's industries are idling...
+title: 资本罢工
+subtitle: 德国的工业正在停摆……
 view-if: (capital_strike_progress >= (10+(dvp_relation/100))) and spd_in_government and not in_capital_strike
 new-page: true
 max-visits: 1
@@ -98,7 +98,7 @@ For the time being, we can make no grander statements as to the character of thi
 
 @seize
 title: 赋权工人夺取工厂!
-unavailable-subtitle: [? if left_strength <= reformist_strength + neorevisionist_strength : The bulk of the party does not support this radical action. ?] [? if judicial_reform < 3 : The judiciary would oppose this action. ?] [? if rb_militancy < 0.25 : If we increased the strength of our paramilitary forces, perhaps we could do this. ?] [? if works_councils < 1 : We need the support of the works councils first. ?][? if left_coalition+sapd_r < 50 : The Reichstag is opposed. ?][? if class_war < 1 : This is contrary to our strategy with regards to the crisis. ?]
+unavailable-subtitle: [? if left_strength <= reformist_strength + neorevisionist_strength : 党内多数不支持这一激进举措。 ?] [? if judicial_reform < 3 : 司法系统会反对这一举措。 ?] [? if rb_militancy < 0.25 : 若我们增强准军事力量的实力,或许就能这么做。 ?] [? if works_councils < 1 : 我们需要先得到工厂委员会的支持。 ?][? if left_coalition+sapd_r < 50 : 国会反对。 ?][? if class_war < 1 : 这与我们应对危机的策略相悖。 ?]
 choose-if: class_war >= 1 and left_strength > reformist_strength + neorevisionist_strength and (judicial_reform >= 3 or rb_militancy >= 0.25) and works_councils >= 1 and ((left_coalition+sapd_r >= 50) or (rb_force+rfb_force >= 50))
 on-arrival: class_war += 1; bourgeois_power -= 0.07; nationalization_progress += 1; coup_progress += 6; unemployed -= 2; unemployed -= 1 if works_councils >= 3; works_program += 1; workers_spd += 10*(1-dissent); unemployed_spd += 10*(1-dissent); coalition_dissent += 2; dvp_relation -= 4; workers_nsdap -= 8*(1-dissent); unemployed_nsdap -= 8*(1-dissent); left_strength += 15; reformist_dissent += 10; left_dissent -= 10; factory_takeovers += 1; economic_growth += 2; socialism += 3; capital_occupations = 1
 
@@ -108,7 +108,7 @@ If the capitalists are going to attack us, then we must hit them back. We have e
 @capital_controls
 title: 实施资本管制以减轻冲击。
 choose-if: judicial_reform >= 2 and (left_coalition+sapd_r >= 50) or (popular_front+sapd_r >= 50 and z_relation >= 60 or (z_party_leader == "Joos" and z_relation >= 40))
-unavailable-subtitle: [? if judicial_reform < 2 : The judiciary would never allow this. ?][? if judicial_reform >= 2 : The Reichstag is opposed. ?]
+unavailable-subtitle: [? if judicial_reform < 2 : 司法系统绝不会允许此事。 ?][? if judicial_reform >= 2 : 国会反对。 ?]
 on-arrival: unemployed -= 1.5; bourgeois_power -= 0.03; workers_spd += 6*(1-dissent); unemployed_spd += 6*(1-dissent); economic_growth += 2; capital_controls = 1
 
 Capital controls might blunt some of the worst economic components of the capital strike.
@@ -119,7 +119,7 @@ Capital controls might blunt some of the worst economic components of the capita
 title: 发动宣传攻势,把危机归咎于资本家。
 subtitle: -1 资源
 choose-if: (radio >= 2 or commercialized_media >= 3) and resources >= 1
-unavailable-subtitle: [? if radio < 2 and commercialized_media < 3 : We have not built up our media enough. ?] [? if resources < 1: We do not have enough resources. ?]
+unavailable-subtitle: [? if radio < 2 and commercialized_media < 3 : 我们的媒体建设得还不够。 ?] [? if resources < 1: 我们没有足够的资源。 ?]
 on-arrival: workers_spd += 7*(1-dissent); new_middle_spd += 6*(1-dissent); unemployed_spd += 6*(1-dissent); pro_republic += 5*(1-dissent); resources -= 1; socialism += 5; capital_propaganda = 1
 
 We launch a counter-propaganda campaign to blame the economic crisis on the capitalists, using all of our media channels to do so. Because of our existing media framework, this is moderately successful in directing popular criticisms towards the capitalists and away from us.
@@ -128,7 +128,7 @@ We launch a counter-propaganda campaign to blame the economic crisis on the capi
 @business
 title: 会见工商界领袖,设法把他们争取回来。
 choose-if: reformist_strength > left_strength+center_strength and dvp_relation >= 30 and reconcile_business >= 1
-unavailable-subtitle: [? if reformist_strength < left_strength+center_strength : The bulk of the party does not support this moderate action. ?][? if dvp_relation < 35 : We have no contacts with the business company. ?][? if reconcile_business < 1 : This is contrary to our strategy with regards to the crisis. ?]
+unavailable-subtitle: [? if reformist_strength < left_strength+center_strength : 党内多数不支持这一温和举措。 ?][? if dvp_relation < 35 : 我们与企业界没有联系。 ?][? if reconcile_business < 1 : 这与我们应对危机的策略相悖。 ?]
 on-arrival: reconcile_business += 1; economic_growth += 0.3; unemployed -= 0.2; inflation += 0.2; bourgeois_power += 0.02; socialism -= (5*bourgeois_power); coup_progress -= 1; coalition_dissent -= 1; dvp_relation += 3; reformist_strength += 15; left_dissent += 10; reformist_dissent -= 10; bourgeoisie_dnvp *= 0.9; bourgeoisie_nsdap *= 0.9; bourgeoisie_dvp += 5; capital_reconcile = 1
 
 We meet with several leaders from the business community to try and assuage their concerns. Though little progress is made, we think we have at least established contacts through which we might continue in the future.

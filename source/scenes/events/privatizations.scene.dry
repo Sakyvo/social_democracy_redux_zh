@@ -1,5 +1,5 @@
-title: Privatization
-subtitle: [+ chancellor +] seeks to reverse our socialist policies
+title: 私有化
+subtitle: [+ chancellor +] 试图逆转我们的社会主义政策
 view-if: nationalization_progress > 0 and papenomics_timer < 1 and not spd_in_government and not spd_caretaker and ((not (president == "Braun" or president == "Schumacher" or president == "Juchacz" or president == "Thälmann" or president == "Münzenberg")) or (in_bourgeois_coalition or in_right_coalition))
 tags: event
 new-page: true
@@ -16,7 +16,7 @@ In government, we have worked towards the socialization of the economy through t
 
 @break_toleration
 view-if: spd_toleration
-subtitle: This is difficult - the bourgeois are united on this.
+subtitle: 这很难办 —— 资产阶级在这一点上团结一致。
 go-to: break_toleration_success if left_coalition+sapd_r >= 50; break_toleration_failure if left_coalition+sapd_r < 50
 
 @break_toleration_success
@@ -38,7 +38,7 @@ With no leverage on the government, there is nothing we can do to stop the priva
 
 @no_choice
 view-if: spd_toleration
-subtitle: Our party will be incensed by this.
+subtitle: 我党将为此震怒。
 on-arrival: left_dissent += 10; left_strength -= 5; socialism -= 4; capital_strike_progress -= 2; bourgeois_power += 0.05; unemployed += 3.5 if unemployed < 6; unemployed += 1.2 if works_councils < 3; workers -= 2 if nationalization_progress >= 2; budget += 3; works_program -= 1; workers_kpd += 2*(1-dissent); unemployed_kpd += 3*(1-dissent); new_middle_spd -= 2; new_middle_spd += 1 if new_middle_conscious; old_middle_spd -= 3; inflation -= 2; economic_growth -= 1.7 if economic_growth >= 5; kpd_relation -= 5
 
 We cannot afford to trigger new elections now, so we have no choice but to continue toleration. Unfortunately, many in our party do not see things the same way, and the KPD benefits from our seeming abandonment of our legacy.
@@ -46,7 +46,7 @@ We cannot afford to trigger new elections now, so we have no choice but to conti
 @fight
 view-if: factory_takeovers
 choose-if: (rb_militancy*(left_strength/100)) >= 0.1
-unavailable-subtitle: The Reichsbanner isn't sufficiently militant.
+unavailable-subtitle: 国旗团的战斗性不足。
 on-arrival: reformist_dissent += 5
 
 Are we sure? This would mean obstruction of justice, at least in the eyes of the bourgeoisie and their courts. Even considering this option infuriates our reformist wing.

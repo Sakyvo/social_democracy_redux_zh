@@ -1,10 +1,10 @@
-title: Election Simulation
+title: 选举模拟
 set-jump: post_election
 
 
-- @1928: 1928 historical scenario
-- @1930: 1930 historical scenario
-- @1932: 1932 (July) historical scenario
+- @1928: 1928 年历史情景
+- @1930: 1930 年历史情景
+- @1932: 1932 年(7 月)历史情景
 
 @1928
 on-arrival: {!

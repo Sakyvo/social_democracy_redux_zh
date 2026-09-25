@@ -1,5 +1,5 @@
-title: Economic Sanctions
-subtitle: Our [? if not capital_flight : military buildup ?][? if capital_flight : socialist transformation ?] has caused sanctions from France and other countries.
+title: 经济制裁
+subtitle: 我们的[? if not capital_flight : 军备扩张 ?][? if capital_flight : 社会主义改造 ?]招致了法国及其他国家的制裁。
 new-page: true
 on-arrival: left_dissent += 5; center_dissent += 5; labor_dissent += 5; workers_nsdap += 3; new_middle_nsdap += 3; old_middle_nsdap += 4; rural_nsdap += 3; unemployed += 3; workers_spd -= 4 if spd_in_government; new_middle_spd -= 5 if spd_in_government; old_middle_spd -= 5 if spd_in_government; rural_spd -= 4 if spd_in_government; economic_growth -= 1; nationalism += 5; pacifism -= 1
 tags: event

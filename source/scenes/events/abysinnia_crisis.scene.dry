@@ -1,5 +1,5 @@
-title: Abysinnia Crisis
-subtitle: A crisis has risen over a border skirmish in Ogaden...
+title: 阿比西尼亚危机
+subtitle: 欧加登的一次边境冲突引发了一场危机……
 view-if: year == 1934 and month >= 12
 max-visits: 1
 tags: event
@@ -15,8 +15,8 @@ Ethiopia has requested League of Nations arbitration, with both sides demanding 
 
 @non_govt
 
-- @no_foreign: The Foreign Ministry backs France and Britain in their mediation of the crisis.
-- @kpd_foreign: The Foreign Ministry condemns Italian actions.
+- @no_foreign: 外交部支持法国与英国对这场危机的调停。
+- @kpd_foreign: 外交部谴责意大利的行径。
 
 @no_foreign
 view-if: foreign_minister_party != "KPD"
@@ -39,8 +39,8 @@ With our control of the Foreign Ministry, it is up to us to control Germany's po
 - @mediate: 同意共识,免除双方的责任。
 
 @hardline
-subtitle: [? if eu : We can use the European Union to pressure Italy into backing down. ?][? if not eu : We can work with France and Britain to sanction Italy should they refuse. ?]
-unavailable-subtitle: [? if west_relation < 7 : France and Britain would never back this. ?][? if not eu : We lack the leverage over Italy necessary. ?][? if unresolved_abysinnia : France and Britain still view us as a threat. ?]
+subtitle: [? if eu : 我们可以利用欧洲联盟向意大利施压,迫使其退让。 ?][? if not eu : 若意大利拒绝,我们可以与法国和英国一道对其实施制裁。 ?]
+unavailable-subtitle: [? if west_relation < 7 : 法国与英国绝不会支持此事。 ?][? if not eu : 我们缺乏对意大利施加影响所需的筹码。 ?][? if unresolved_abysinnia : 法国与英国仍视我们为威胁。 ?]
 choose-if: ((eu and west_relation >= 5) or (not eu and west_relation >= 7)) and not unresolved_abysinnia
 on-arrival: unemployed += 1; west_relation -= 1; unemployed += 0.8 if not eu; inflation += 0.2; inflation += 0.6 if not eu; workers_spd += 6*(1-dissent); new_middle_spd += 3*(1-dissent); pacifism += 2; soviet_relation += 1; left_dissent -= 5; kpd_relation += 3; z_relation += 3; abysinnia = 1
 
@@ -49,7 +49,7 @@ We act firmly and decisively to end Italian expansionism, and thanks to our good
 This has been a victory for peace in the world, and a defeat for fascists and militarists. 
 
 @mediate
-subtitle: We will back the French and British opinions on the matter.
+subtitle: 我们将在此事上支持法国与英国的立场。
 
 Influenced by France and Britain, and backed by Germany, the League of Nations absolves both sides of responsibility[? if not unresolved_abysinnia :, though Italy has been warned to halt its military buildup in the region. ?][? if unresolved_abysinnia :. ?][? if west_relation >= 3 and not unresolved_abysinnia : A general consensus has been reached between Germany and France to halt Italian expansion should they not relent in their ambitions on the region. ?]
 

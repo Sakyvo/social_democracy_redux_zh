@@ -1,4 +1,4 @@
-title: The KPD checks upon our progress in accomplishing the coalition's goals...
+title: 共产党来查问我们在实现联盟目标上的进展……
 view-if: (in_popular_front or in_left_front) and (kpd_ultimatum_timer = 0 or (welfare_goal_completed and agriculture_goal_completed and economy_goal_completed and finance_goal_completed and labor_goal_completed and reichswehr_goal_completed)) and kpd_goals_seen = 1 and kpd_ultimatum_seen = 0 and spd_in_government
 on-arrival: {!
 Q.kpd_ultimatum_seen = 1;
@@ -63,14 +63,14 @@ on-arrival: kpd_relation -= 10; workers_spd -= 8; unemployed_spd -= 8;
 
 Unfortunately, we have failed to accomplish all of the goals the KPD set out. They plan to call a vote of no confidence against our government, and have already begun mounting a propaganda campaign to delegitimize our government in the eyes of the workers.
 
-- @appeal: Appeal to the Communists to have patience - we are trying!
-- @kpd_vote_of_no_confidence.support_center: Could we form a new government based on the Center Party and [+ ddp_name +] (and possibly DVP)?
-- @kpd_vote_of_no_confidence.let_it_happen: Let the vote happen.
-- @no_vonc: They cannot call a vote of no confidence due to the constitutional reforms, but they can obstruct our government at every opportunity.
+- @appeal: 恳请共产党人耐心一些 —— 我们正在努力!
+- @kpd_vote_of_no_confidence.support_center: 我们能否以中央党与 [+ ddp_name +](或许还有人民党)为基础组建一个新政府?
+- @kpd_vote_of_no_confidence.let_it_happen: 让投票进行吧。
+- @no_vonc: 由于宪法改革,他们无法提出不信任案,但他们可以在每一个机会上阻挠我们的政府。
 
 @appeal
 choose-if: (kpd_score >= 4 and kpd_relation > 50 and kpd_appeal_seen = 0) or kpd_party_leader = "Conciliators"
-unavailable-subtitle: [? if kpd_score < 4: They do not see us as serious in trying to achieve the goals of the coalition. ?] [? if kpd_relation < 50: Our relations are too poor. ?] [? if kpd_appeal_seen = 1: we do not have any more time. ?]
+unavailable-subtitle: [? if kpd_score < 4: 他们不认为我们在认真争取实现联盟的目标。 ?] [? if kpd_relation < 50: 我们的关系太差。 ?] [? if kpd_appeal_seen = 1: 我们没有更多时间了。 ?]
 on-arrival: kpd_ultimatum_seen = 0; kpd_ultimatum_timer += 6; kpd_appeal_seen = 1
 
 We argue that we are working hard to achieve most of the coalition's goals, and in the name of proletarian solidarity, we must make this coalition function. Surprisingly, the KPD hears our pleas, and is willing to give us six more months before the coalition goals must be achieved.

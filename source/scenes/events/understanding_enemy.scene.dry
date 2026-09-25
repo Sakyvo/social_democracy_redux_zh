@@ -1,5 +1,5 @@
-title: Understanding the Enemy
-subtitle: Why did the Nazis gain so many votes?
+title: 认清敌人
+subtitle: 纳粹党为何赢得如此多的选票?
 view-if: year >= 1929 and year <= 1932 and nsdap_r >= 15 and understanding_enemy_seen = 0 and understanding_enemy_timer = 0 and neorevisionism = 0
 on-arrival: understanding_enemy_seen = 1
 max-visits: 1
@@ -29,10 +29,10 @@ It is possible that all or none of these hypotheses are correct. Whatever the ca
 
 # Carlo Mierendorff
 
-- @p1: The Nazis are the fault of the petit bourgeoisie. It is not our responsibility as a working-class party to stop them.
-- @p2: We can combat the Nazis by adopting a "People's Party" posture that might compete for support among the middle class.
-- @p3: We should use new Mierendorff's new propaganda methods to fight the the Nazis.
-- @p4: We must focus our work among the working class to prevent Nazi in-roads.
+- @p1: 纳粹是小资产阶级的产物。作为一个工人阶级政党,阻止他们不是我们的责任。
+- @p2: 我们可以采取「全民党」的姿态来对抗纳粹,以在中间阶层中争夺支持。
+- @p3: 我们应当采用米伦多夫的新宣传手段来对抗纳粹。
+- @p4: 我们必须把工作重心放在工人阶级之中,以防纳粹渗透。
 
 @p1
 on-arrival: socialism += 1

@@ -1,5 +1,5 @@
-title: Koch-Weser Resigns!
-subtitle: He is no longer able to keep the coalition together
+title: 科赫-韦泽辞职!
+subtitle: 他已无法维系这个联盟
 view-if: chancellor == "Koch-Weser" and coalition_dissent >= 3
 new-page: true
 tags: event
@@ -18,7 +18,7 @@ Hindenburg has asked to form a government Wilhelm Marx, who has formed a minorit
 - @dnvp_tolerates: 无论我们怎么投票,内阁都能赢得国会的信任。
 
 @dnvp_tolerates
-subtitle: The DNVP would vote against any vote of no confidence that we propose.
+subtitle: 国家人民党会反对我们提出的任何不信任案。
 on-arrival: spd_in_government = 0; spd_toleration = 0; foreign_minister_party = "DVP"; interior_minister_party = "Z"; justice_minister_party = "Z"; labor_minister_party = "Z"; reichswehr_minister_party = "I"; economic_minister_party = "Z"; finance_minister_party = "Z"; agriculture_minister_party = "Z"
 
 We have returned to opposition.

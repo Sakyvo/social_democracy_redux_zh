@@ -1,4 +1,4 @@
-title: Saar Referendum
+title: 萨尔公投
 subtitle: A referendum is to be held on the fate of the Saarland…
 view-if: year >= 1935
 max-visits: 1
@@ -11,8 +11,8 @@ Following Germany’s defeat in the Great War, the Saarland was made into a Leag
 
 The vote to rejoin Germany is widely expected to succeed, though ultimately the highly Catholic population of the region will be the deciding factor. 
 
-- @campaign_pro: Campaign in favor of rejoining Germany.
-- @campaign_anti: Campaign against rejoining Germany.
+- @campaign_pro: 开展竞选,支持重新并入德国。
+- @campaign_anti: 开展竞选,反对重新并入德国。
 
 @campaign_pro
 on-arrival: spd_saar = 1; saar_pro += (nationalism*2); saar_pro = catholics_spd_normalized; saar_pro += catholics_z_normalized if (z_relation >= 20 or not spd_in_government); saar_anti += (progressive_coalition/5); saar_anti += (homosexual_rights*8); saar_anti += (womens_rights*2); saar_pro += 25 if concordat; saar_anti += 10/(west_relation+1) if west_relation > 0; saar_anti += 20 if west_relation < 0; saar_pro += sa_force; {!

@@ -1,5 +1,5 @@
-title: Hyperinflation
-subtitle: The Reichsmark is collapsing from our deficit spending programs.
+title: 恶性通货膨胀
+subtitle: 国家马克正因我们的赤字开支计划而崩溃。
 view-if: inflation >= 25 and spd_in_government and hyperinflation >= 0.2
 new-page: true
 max-visits: 1
@@ -12,10 +12,10 @@ Inflation has skyrocketed. People of all classes have seen their purchasing powe
 
 We must take some action.
 
-- @taxes: We must raise taxes.
-- @welfare: We must reduce welfare and social spending.
-- @price_controls: Impose strict price and wage controls.
-- @volksmark: We must adopt a wholly new currency!
+- @taxes: 我们必须加税。
+- @welfare: 我们必须削减福利与社会开支。
+- @price_controls: 实施严格的价格与工资管制。
+- @volksmark: 我们必须启用一种全新的货币!
 - @nothing: 现实地说,我们无能为力。
 
 @taxes
@@ -35,7 +35,7 @@ Price controls are very unpopular with the bourgeoisie and their representatives
 
 @volksmark
 choose-if: year = 1935
-unavailable-subtitle: WIP
+unavailable-subtitle: 开发中
 
 Placeholder
 

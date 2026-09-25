@@ -1,5 +1,5 @@
-title: The DNE Consolidates
-subtitle: The pro-Schleicher NSDAP splinter has taken a new form...
+title: 国家人民阵线整合
+subtitle: 亲施莱谢尔的纳粹党分裂派已呈现出新形态……
 view-if: dne_timer <= 0 and dne_formed
 on-arrival: dne_reorganized = 1; labor_dissent += 15;
 max-visits: 1

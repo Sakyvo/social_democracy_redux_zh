@@ -1,5 +1,5 @@
-title: Disputes within the Popular Front
-subtitle: As expected, there are clashes between the KPD and Center Party.
+title: 人民阵线内部的争执
+subtitle: 不出所料,共产党与中央党之间发生了冲突。
 view-if: in_popular_front = 1 and popular_front_dispute_timer = 0 and (labor_minister_party = "Z" or economic_minister_party = "Z" or interior_minister_party = "Z" or agriculture_minister_party = "Z")
 new-page: true
 on-arrival: popular_front_dispute_timer = 5;
