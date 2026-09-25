@@ -71,7 +71,7 @@ choose-if: (neorevisionist_strength + (reformist_strength/2))-left_strength > 0
 unavailable-subtitle: 左翼绝不会允许这种事发生。
 on-arrival: weimar_support += ((10+unemployed+nsdap_r+kpd_r)*1.25)*(1-dissent)+((neorevisionist_strength+(reformist_strength/2))/5)-(left_strength/10)+((z_relation+ddp_relation)/5); left_strength -= 2; left_dissent += 4; kpd_relation -= 3; dvp_relation -= 3
 
-我们正设法说服中央党与民主党采纳我们的经济计划。提高与他们的关系会让此事更容易。 Pressure from President Braun has helped in our efforts to convince Zentrum and the DDP to adopt this plan. 
+我们正设法说服中央党与民主党采纳我们的经济计划。提高与他们的关系会让此事更容易。 布劳恩总统的施压有助于我们说服中央党与民主党采纳这一计划。 
 
 [? if weimar_support >= 25 and weimar_support <= 50 : 民主党已被说服:只要中央党采纳该计划,它也随之采纳;而中央党内部仍在辩论,无法得出结论。 ?] [? if weimar_support >= 50 and weimar_support <= 75 : 到目前为止,民主党已被说服采纳我们的计划,中央党方面也取得了重大进展,不过该党右翼仍在抵制这一构想。 ?] [? if weimar_support >= 75 and weimar_support <= 100 : 到目前为止,民主党与中央党的很大一部分已同意采纳我们的计划;在我们的盟友影响下,中央党右翼也变得愿意考虑该计划了。 ?] [? if weimar_support >= 100 : 到目前为止,民主党与中央党多数已同意支持我们的经济计划,一份共同纲领也已起草完毕,只待中央党右翼批准 —— 据传他们已同意有条件地支持它。 ?]
 
@@ -81,7 +81,7 @@ choose-if: (neorevisionist_strength + (reformist_strength/2))-left_strength > 0
 unavailable-subtitle: 左翼绝不会允许这种事发生。
 on-arrival: weimar_support += ((10+unemployed+nsdap_r+kpd_r)/1.5)*(1-dissent)+((neorevisionist_strength+(reformist_strength/2))/5)-(left_strength/10)+((z_relation+ddp_relation)/10)/coalition_dissent; left_strength -= 2; left_dissent += 4; kpd_relation -= 3; z_relation -= 1; coalition_dissent += 1; dvp_relation -= 3
 
-我们正设法说服执政伙伴采纳我们的经济计划。人民党在阻挠我们的努力,并影响中央党反对这一构想,使此事难上加难,并威胁到我们联盟的完整性。Pressure from President Braun has helped in our efforts to convince Zentrum and the DDP to adopt this plan. 
+我们正设法说服执政伙伴采纳我们的经济计划。人民党在阻挠我们的努力,并影响中央党反对这一构想,使此事难上加难,并威胁到我们联盟的完整性。布劳恩总统的施压有助于我们说服中央党与民主党采纳这一计划。 
 
 [? if weimar_support >= 25 and weimar_support <= 50 : 民主党已被说服:只要中央党采纳该计划,它也随之采纳;而中央党内部仍在辩论,无法得出结论。 ?] [? if weimar_support >= 50 and weimar_support <= 75 : 到目前为止,民主党已被说服采纳我们的计划,中央党方面也取得了重大进展,不过该党右翼仍在抵制这一构想。 ?] [? if weimar_support >= 75 and weimar_support <= 100 : 到目前为止,民主党与中央党的很大一部分已同意采纳我们的计划;在我们的盟友影响下,中央党右翼也变得愿意考虑该计划了。 ?] [? if weimar_support >= 100 : 到目前为止,民主党与中央党多数已同意支持我们的经济计划,一份共同纲领也已起草完毕,只待中央党右翼批准 —— 据传他们已同意有条件地支持它。 ?]
 
@@ -91,7 +91,7 @@ choose-if: (neorevisionist_strength + (reformist_strength/2))-left_strength > 0
 unavailable-subtitle: 左翼绝不会允许这种事发生。
 on-arrival: weimar_support += ((10+unemployed+nsdap_r+kpd_r)*2)*(1-dissent)+((neorevisionist_strength+(reformist_strength/2))/5)-(left_strength/10)+((z_relation+ddp_relation)/2)/coalition_dissent; left_strength -= 2; left_dissent += 4; kpd_relation -= 3; dvp_relation -= 3
 
-我们正设法说服执政伙伴采纳我们的经济计划。既有的执政联盟安排使此事容易得多。 Pressure from President Braun has helped in our efforts to convince Zentrum and the DDP to adopt this plan. 
+我们正设法说服执政伙伴采纳我们的经济计划。既有的执政联盟安排使此事容易得多。 布劳恩总统的施压有助于我们说服中央党与民主党采纳这一计划。 
 
 [? if weimar_support >= 25 and weimar_support <= 50 : 民主党已被说服:只要中央党采纳该计划,它也随之采纳;而中央党内部仍在辩论,无法得出结论。 ?] [? if weimar_support >= 50 and weimar_support <= 75 : 到目前为止,民主党已被说服采纳我们的计划,中央党方面也取得了重大进展,不过该党右翼仍在抵制这一构想。 ?] [? if weimar_support >= 75 and weimar_support <= 100 : 到目前为止,民主党与中央党的很大一部分已同意采纳我们的计划;在我们的盟友影响下,中央党右翼也变得愿意考虑该计划了。 ?] [? if weimar_support >= 100 : 到目前为止,民主党与中央党多数已同意支持我们的经济计划,一份共同纲领也已起草完毕,只待中央党右翼批准 —— 据传他们已同意有条件地支持它。 ?]
 
@@ -101,7 +101,7 @@ choose-if: (neorevisionist_strength + (reformist_strength/2))-left_strength > 0
 unavailable-subtitle: 左翼绝不会允许这种事发生。
 on-arrival: weimar_support += ((10+unemployed+nsdap_r+kpd_r)/2)*(1-dissent)+((neorevisionist_strength+(reformist_strength/2))/5)-(left_strength/10)+((z_relation+ddp_relation)/15); left_strength -= 2; left_dissent += 4; kpd_relation -= 3; z_relation -= 2; dvp_relation -= 4
 
-我们正设法说服中央党与民主党采纳我们的经济计划。人民党在阻挠我们的努力,并影响中央党反对这一构想,使此事难上加难 —— 尤其考虑到我们相对于人民党的处境。Pressure from President Braun has helped in our efforts to convince Zentrum and the DDP to adopt this plan. 
+我们正设法说服中央党与民主党采纳我们的经济计划。人民党在阻挠我们的努力,并影响中央党反对这一构想,使此事难上加难 —— 尤其考虑到我们相对于人民党的处境。布劳恩总统的施压有助于我们说服中央党与民主党采纳这一计划。 
 
 [? if weimar_support >= 25 and weimar_support <= 50 : 民主党已被说服:只要中央党采纳该计划,它也随之采纳;而中央党内部仍在辩论,无法得出结论。 ?] [? if weimar_support >= 50 and weimar_support <= 75 : 到目前为止,民主党已被说服采纳我们的计划,中央党方面也取得了重大进展,不过该党右翼仍在抵制这一构想。 ?] [? if weimar_support >= 75 and weimar_support <= 100 : 到目前为止,民主党与中央党的很大一部分已同意采纳我们的计划;在我们的盟友影响下,中央党右翼也变得愿意考虑该计划了。 ?] [? if weimar_support >= 100 : 到目前为止,民主党与中央党多数已同意支持我们的经济计划,一份共同纲领也已起草完毕,只待中央党右翼批准 —— 据传他们已同意有条件地支持它。 ?]
 
