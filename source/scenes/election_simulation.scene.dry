@@ -302,7 +302,7 @@ Q.neo_weimar_coalition = Q.spd_r + Q.ddp_r + Q.z_r + Q.dvp_r + Q.other_r;
 
 选举制度基本上是比例代表制,国会席位的比例大致等于得票比例。
  
-**Election results:**
+**选举结果：**
 
 # 1928: 30, 1930: 25, 1932: 22
 SPD: [+ spd_r +]

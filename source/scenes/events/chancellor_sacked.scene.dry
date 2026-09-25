@@ -6,7 +6,7 @@ on-arrival: dvp_relation -= 8; z_relation -= 4 if chancellor_party != "Z"; pro_r
 go-to: bruning_right if right_coalition >= 50 and not right_coalition_failed and year < 1929; no_majority if right_coalition < 50 or right_coalition_failed or year >= 1929
 tags: event
 
-= [+ chancellor +] Sacked
+= 罢免 [+ chancellor +]
 
 看来,在我们推行政策计划、拆解反动派对共和国所持权力的过程中,我们惹恼了兴登堡总统。他今天单方面解散了我们的政府 —— 遗憾地说,这按德国宪法是合法的。我党左翼一些人呼吁抵抗,但这似乎并非政变,至少现在还不是。
 

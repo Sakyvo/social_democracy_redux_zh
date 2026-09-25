@@ -6,7 +6,7 @@ max-visits: 1
 on-arrival: capital_strike_progress += 3; hyperinflation += 0.6; workers_spd -= 11; old_middle_spd -= 16; new_middle_spd -= 18; rural_spd -= 14; unemployed_spd -= 10; pro_republic -= 12; unemployed_kpd += 3; unemployed_kpd += 2 if sapd_consolidated == 0; unemployed_sapd += 2 if sapd_consolidated == 1; unemployed_nsdap += 5 if nazis_in_crisis_seen == 0; unemployed_kpd += 3 if nazis_in_crisis_seen == 1; unemployed_kpd += 2 if nazis_in_crisis_seen == 1 and sapd_consolidated == 0; unemployed_sapd += 2 if nazis_in_crisis_seen == 1 and sapd_consolidated == 1; coalition_dissent += 2
 tags: event
 
-= Hyperinflation
+= 恶性通货膨胀
 
 通胀已飞涨。各阶层的人都看到自己的购买力暴跌,并把矛头指向社民党,仿佛 1923 年又要重演。反对共和国的极端分子借机鼓噪[? if sapd_consolidated : ,社会主义工人党亦然 —— 它正集会反对我们 ?]。
 
