@@ -72,7 +72,7 @@ on-arrival: reichswehr_strength -= 20; sh_strength += 15; sa_strength += 5; unem
 @disband
 view-if: reichswehr_strength < 20 and reichswehr_militancy < 1
 
-WIP
+(内容待补充)
 
 @reform
 subtitle: -1 财政预算

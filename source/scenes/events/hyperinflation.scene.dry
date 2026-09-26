@@ -37,7 +37,7 @@ on-arrival: capital_strike_progress += 6; inflation *= 0.75; hyperinflation = 0;
 choose-if: year = 1935
 unavailable-subtitle: 开发中
 
-Placeholder
+(内容待补充)
 
 @nothing
 on-arrival: capital_strike_progress += 2; coalition_dissent += 1; hyperinflation += 0.1

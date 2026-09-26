@@ -1160,7 +1160,7 @@ go-to: menu
 
 @menu
 
-DEBUG: [+ negotiating_power +]
+调试: [+ negotiating_power +]
 
 - @chancellorship_kpd: 内阁。
 - @party_legality: 各政党。

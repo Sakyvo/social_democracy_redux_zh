@@ -56,7 +56,7 @@ on-arrival: austria_sanctioned = 1; coup_progress += 2; coup_progress += 1 if na
 
 @kpd_foreign
 
-WIP. 
+内容待补充。
 
 @customs_union
 view-if: not customs_union
