@@ -29,8 +29,15 @@ jobs:
           node-version: 20
       - name: 安装依赖
         run: npm install
+      - name: 拉取英文原版(供对照门禁使用)
+        uses: actions/checkout@v4
+        with:
+          repository: CuttleCraft/social_democracy_redux
+          path: .upstream
       - name: 构建
-        run: node scripts/build.js
+        run: |
+          export EN_ROOT="$PWD/.upstream/source/scenes"
+          node scripts/build.js
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:

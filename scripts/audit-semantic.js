@@ -6,8 +6,10 @@
 const fs = require('fs');
 const path = require('path');
 
-const ZH = process.env.ZH_ROOT || 'K:/Projects/website/raspd/zh/social_democracy_redux_zh/source/scenes';
-const EN = process.env.EN_ROOT || 'K:/Projects/website/raspd/origin/social_democracy_redux/source/scenes';
+const ZH = process.env.ZH_ROOT ||
+  path.resolve(__dirname, '..', 'source', 'scenes');
+const { resolveEnRoot } = require('./lib-en-root');
+const EN = resolveEnRoot(path.resolve(__dirname, '..'), process.argv[2]);
 const showIdx = process.argv.indexOf('--show');
 
 function walk(d, o = [], b = d) {

@@ -6,3 +6,5 @@ out/html/jquery-1.11.1.min.js
 out/html/index.html
 out/html/game.js
 out/html/game.css
+
+.upstream/
