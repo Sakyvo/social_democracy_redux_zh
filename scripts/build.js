@@ -40,5 +40,34 @@ if (scenes < 100) {
       否则事件判定 has_event 会恒为 0(汉化引擎字符串时的隐藏回归)。 */
 execSync('node scripts/check-continue-sentinel.js', { cwd: root, stdio: 'inherit' });
 
+/* 6. 构建门禁:以构建产物为准,任一失败即构建失败。
+      新增门禁前先做阳性对照(注入一处已知缺陷,确认脚本报错),否则 PASS 可能只是没检测到。 */
+const GATES = [
+  'audit-rendered.js',        // 主门禁:玩家可见拉丁党派缩写 / 纯英文
+  'audit-built-visible.js',   // 构建产物玩家可见英文片段
+  'audit-party-labels.js',    // 党派标签中文一致性
+  'audit-precision.js',       // 术语精确度(禁用词 / 误译)
+  'audit-semantic.js',        // 语义配对(EN/ZH 段落对齐)
+  'audit-duplicate-name.js',  // 「中文名(同一中文名)」重复翻译
+  'audit-malformed-insert.js',// 畸形插入标记 [ + var +]
+  'audit-mixed.js',           // 中英混排行
+  'check-untranslated.js',    // 未译英文残留
+];
+const failed = [];
+for (const g of GATES) {
+  try {
+    execSync('node scripts/' + g, { cwd: root, stdio: 'pipe' });
+  } catch (e) {
+    failed.push(g);
+    process.stdout.write('\n--- ' + g + ' 输出 ---\n' +
+      (e.stdout ? e.stdout.toString() : '') + (e.stderr ? e.stderr.toString() : ''));
+  }
+}
+if (failed.length) {
+  console.error('\n构建门禁失败(' + failed.length + '): ' + failed.join(', '));
+  process.exit(1);
+}
+console.log('构建门禁:' + GATES.length + ' 道全过');
+
 console.log('\n构建完成:' + scenes + ' 个场景,' +
   (fs.statSync(gameJson).size / 1048576).toFixed(2) + ' MB');
