@@ -50,7 +50,9 @@ const RULES = [
   [/希特勒/, /Hitler/, 'Hitler=希特勒'],
   [/台尔曼/, /Thälmann|Thalmann/, 'Thälmann=台尔曼'],
   [/希法亭/, /Hilferding/, 'Hilferding=希法亭'],
-  [/沃伊京斯基/, /Woytinsky/, 'Woytinsky=沃伊京斯基'],
+  // WTB 计划的全称「沃伊京斯基-塔尔诺-巴德计划」会在原本只写 WTB 的文件里出现人名,
+  // 这是术语表规定的首现展开(见 glossary.tsv「WTB Plan」条),故原文只含 WTB 也算合规。
+  [/沃伊京斯基/, /Woytinsky|WTB/, 'Woytinsky=沃伊京斯基'],
   [/布劳恩/, /Braun/, 'Braun=布劳恩'],
   [/舒马赫/, /Schumacher/, 'Schumacher=舒马赫'],
   [/韦尔斯/, /Wels/, 'Wels=韦尔斯'],
@@ -101,3 +103,5 @@ for (const rel of walk(EN).filter(x => x.endsWith('.dry'))) {
 }
 console.log('检查 ' + files + ' 个文件;译名缺原文依据的行:' + hits.length);
 hits.forEach(h => console.log(h));
+process.exit(hits.length ? 1 : 0);
+

@@ -9,8 +9,9 @@ const VARS={
   z_display:'中央党', dvp_display:'人民党', dnvp_display:'国家人民党',
   nsdap_display:'纳粹党', kpd_display:'共产党', spd_display:'社民党',
 };
+const ROOT=process.argv[2]||process.env.ZH_ROOT||path.resolve(__dirname,'..','source','scenes');
 let n=0;
-for(const f of walk('source/scenes').filter(x=>x.endsWith('.dry'))){
+for(const f of walk(ROOT).filter(x=>x.endsWith('.dry'))){
   if(/credits\.scene\.dry$/.test(f))continue;
   const L=fs.readFileSync(f,'utf8').split('\n');
   L.forEach((l,i)=>{
@@ -28,3 +29,6 @@ for(const f of walk('source/scenes').filter(x=>x.endsWith('.dry'))){
 }
 function escapeRe(s){return s.replace(/[.*+?^${}()|[\]\\]/g,'\\$&');}
 console.log('\n重复翻译:',n);
+
+// 退出码语义:0=干净。
+process.exit(n ? 1 : 0);

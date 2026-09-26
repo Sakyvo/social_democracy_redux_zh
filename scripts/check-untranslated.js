@@ -6,7 +6,7 @@
  *  - 若剔除内联标签([+..+] [?..?] <span>)后仍含 >=2 个拉丁单词 → 判为未译
  */
 const fs = require('fs'), path = require('path');
-const ROOT = process.argv[2] || 'source/scenes';
+const ROOT = process.argv[2] || process.env.ZH_ROOT || path.resolve(__dirname, '..', 'source', 'scenes');
 function walk(d, o = []) { for (const e of fs.readdirSync(d, { withFileTypes: true })) { const p = path.join(d, e.name); e.isDirectory() ? walk(p, o) : o.push(p); } return o; }
 
 const CODE_START = /^\s*(\{!|\/\/|#)/;
@@ -56,3 +56,4 @@ for (const f of walk(ROOT).filter(x => x.endsWith('.dry'))) {
 }
 console.log('未译文本行合计: ' + total);
 for (const [k, v] of Object.entries(byfile).sort((a, b) => b[1] - a[1])) console.log('  ' + String(v).padStart(4) + '  ' + k);
+process.exit(total ? 1 : 0);

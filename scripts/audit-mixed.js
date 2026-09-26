@@ -57,3 +57,5 @@ for (const [id, sc] of Object.entries(j.scenes || {})) {
 }
 console.log('中英混排可见文本:' + hits.length);
 hits.forEach(h => console.log(h));
+process.exit(hits.length ? 1 : 0);
+

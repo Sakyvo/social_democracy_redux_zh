@@ -124,7 +124,8 @@ for (const f of files) {
       zh++;
       mixed.push([f.replace(/\\/g, '/'), (i + 1) + ': ' + t]);
     } else {
-      totEn++; en++;
+      // credits 整场为档案出处,按范围决策保留原文,不计入门禁判据。
+      if (!/credits\.scene\.dry$/.test(f)) { totEn++; en++; }
       if (samples.length < 200) samples.push([f.replace(/\\/g, '/'), (i + 1) + ': ' + t]);
     }
     // 中文计数:任何含 CJK 的散文行
@@ -157,3 +158,7 @@ if (process.argv.includes('--mixed')) {
 }
 
 module.exports = { stripCodeLines, proseOf, latinWords, hasCJK, walk, isNonProse };
+
+/* 退出码:0 = 无「整行英文」残留(credits 除外),1 = 有。
+   作为 module 被 build 引用时不退出,只在直接运行时生效。 */
+if (require.main === module) process.exit(totEn ? 1 : 0);

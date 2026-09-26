@@ -6,7 +6,7 @@
  * 同时查条件块 [? if ... ?] 的同类形变(仅检 '[ ?' 与 '? ]')
  */
 const fs=require('fs'),path=require('path');
-const ROOT=process.argv[2]||'source/scenes';
+const ROOT=process.argv[2]||process.env.ZH_ROOT||path.resolve(__dirname,'..','source','scenes');
 function walk(d,o=[]){for(const e of fs.readdirSync(d,{withFileTypes:true})){const p=path.join(d,e.name);e.isDirectory()?walk(p,o):o.push(p);}return o;}
 const RULES=[
   [/\[\s\+/,  '「[ +」: 方括号后有空格'],

@@ -4,8 +4,11 @@
  */
 const fs = require('fs');
 const path = require('path');
-const ORIG = 'K:/Projects/website/raspd/origin/social_democracy_redux/source';
+const { resolveEnRoot } = require('./lib-en-root');
 const ZH = path.resolve(__dirname, '../source');
+/* origin 源:优先 EN_ROOT,其次仓库同级 ../origin/<game>/source(见 lib-en-root.js)。
+   项目名可用 ORIGIN_GAME 覆盖,默认 social_democracy_redux。 */
+const ORIG = resolveEnRoot(path.resolve(__dirname, '..'));
 const cjk = /[\u3400-\u9fff]/;
 
 function proseLines(file) {
@@ -58,3 +61,5 @@ console.log(`覆盖率 <80% 的可疑文件: ${bad.length}\n`);
 for (const [rel, note, op, zc] of bad) {
   console.log(String(Math.round(100 * zc / op)).padStart(4) + '%  ', rel, `(origin 散文 ${op} 行 / zh 含中文 ${zc} 行)`, note);
 }
+// 退出码语义:0=无可疑文件。缺文件或覆盖率 <80% 即失败。
+process.exit(bad.length ? 1 : 0);

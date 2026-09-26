@@ -136,3 +136,6 @@ if (showIdx >= 0) {
     console.log('ZH: ' + paragraphs(fs.readFileSync(zp, 'utf8')).slice(0, 2).join(' | ').slice(0, 200));
   });
 }
+
+// 退出码语义:0=干净(--show 为交互查看模式,不参与门禁)。
+process.exit(hits.length ? 1 : 0);

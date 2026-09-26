@@ -53,6 +53,8 @@ const GATES = [
   'audit-glossary.js',        // 术语表禁用词(国社党 / 帝国议会 / 巴本 …)
   'audit-mixed.js',           // 中英混排行
   'check-untranslated.js',    // 未译英文残留
+  'audit-prose.js',           // 行级散文分类(整行英文残留;credits 有意保留)
+  'audit-dup-assign.js',      // 重复赋值(批量替换打重痕迹)
 ];
 const failed = [];
 for (const g of GATES) {

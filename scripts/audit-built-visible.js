@@ -59,3 +59,5 @@ for (const [sid, sc] of Object.entries(g.scenes || {})) walkCode(sc, sid);
 
 console.log('玩家可见英文片段(构建产物):', hits.length);
 hits.forEach(h => console.log(' -', h[0], '|', h[1]));
+process.exit(hits.length ? 1 : 0);
+

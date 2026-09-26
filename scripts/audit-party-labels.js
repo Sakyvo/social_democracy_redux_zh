@@ -51,3 +51,6 @@ console.log('\n=== 单一体系 ===');
 for (const r of rows.filter(x => kinds(x).length === 1)) {
   console.log('  ' + kinds(r)[0] + '  ' + String(r.lat.length + r.v.length + r.zh.length).padStart(3) + '  ' + r.rel);
 }
+
+// 退出码语义:0=干净。多体系并存(同一文件里拉丁/变量/中文混用)即失败。
+process.exit(mixed.length ? 1 : 0);

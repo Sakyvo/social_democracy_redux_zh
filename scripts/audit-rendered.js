@@ -12,8 +12,9 @@
  *
  * 退出码 0 = 干净,1 = 有发现。
  */
-const fs=require('fs');
-const g=JSON.parse(fs.readFileSync('out/game.json','utf8'));
+const fs=require('fs'),path=require('path');
+const REPO=process.argv[2]||path.resolve(__dirname,'..');
+const g=JSON.parse(fs.readFileSync(path.join(REPO,'out/game.json'),'utf8'));
 
 const SKIP_KEY=/^(\$code|predicate|stateDependencies|onArrival|onDeparture|onDisplay|legend|name|id|audio|image|cardImage|faceImage|setMusic|setSprites)$/;
 const PAR=/\b(NSDAP|DNVP|DVP|DDP|KPD|SPD|BVP|ASPD|DNE|SAPD|DStP|RDP|ZCA|VONC|KAPD|BB)\b/;
