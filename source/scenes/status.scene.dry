@@ -143,9 +143,9 @@ if (Q.sa_strength) {
 
 国旗团军事化程度: [+ rb_militancy : militancy +]
 
-RFB 兵力: [+ rfb_strength_2 +] 千人
+红色前线兵力: [+ rfb_strength_2 +] 千人
 
-RFB 军事化程度: [+ rfb_militancy : militancy +]
+红色前线军事化程度: [+ rfb_militancy : militancy +]
 
 钢盔团兵力: [+ sh_strength_2 +] 千人
 

@@ -20,8 +20,8 @@ view-if: spd_in_government = 1 and interior_minister_party = "SPD"
 - @ban_sh: 取缔钢盔团。
 - @unban_sh: 解除对钢盔团的禁令。
 - @persecute_sh
-- @ban_rfb: 取缔共产党的 RFB。
-- @unban_rfb: 解除对 RFB 的禁令。
+- @ban_rfb: 取缔共产党的红色前线。
+- @unban_rfb: 解除对红色前线的禁令。
 - @persecute_rfb
 - @investigate_coup: 调查政变阴谋的传闻。
 - @root: 暂时不采取行动。
@@ -88,7 +88,7 @@ on-arrival: kpd_relation -= 15; rfb_strength -= 50; rfb_banned = 1; communist_co
 view-if: rfb_banned = 1
 on-arrival: rfb_banned = 0; kpd_relation += 5; rfb_strength += 50; prussian_police_loyalty -= 0.05; interior_police_loyalty -= 0.05
 
-共产党的 RFB 不再被禁。
+共产党的红色前线不再被禁。
 
 @investigate_coup
 on-arrival: sa_legal = 1 if sa_banned == 0; sa_legal = 0 if sa_banned == 1; sh_legal = 1 if sh_banned == 0; sh_legal = 0 if sh_banned == 1
@@ -143,8 +143,8 @@ on-arrival: coup_progress += 1; interior_police_loyalty -= 0.05; coalition_disse
 遗憾的是,我们的调查一无所获。有传闻说,政变策划者是被警察内部的渗透者通风报信了;若属实,这不仅意味着我们的努力白费,还很可能意味着策划者已加速了他们的计划。与此同时,我们的执政盟友颇为恼火,认为我们的怀疑纯属子虚乌有,并批评我们疑神疑鬼。
 
 @persecute_rfb
-title: 进一步打击 RFB。
+title: 进一步打击红色前线。
 view-if: rfb_banned = 1
 on-arrival: rfb_strength *= 0.7; rfb_militancy -= 0.05; kpd_relation -= 10; kpd_coalition_dissent += 1; z_relation += 5; dvp_relation += 5; prussian_police_loyalty += 0.1; interior_police_loyalty += 0.1; coalition_dissent -= 1 if coalition_dissent > 0 and n_rfb_persecuted = 0; n_rfb_persecuted += 1
 
-我们逮捕了更多 RFB 的领袖,并没收了他们的武器。
+我们逮捕了更多红色前线的领袖,并没收了他们的武器。

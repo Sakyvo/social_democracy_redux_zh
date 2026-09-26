@@ -18,8 +18,8 @@ card-image: img/braun.jpg
 - @bureaucracy: 清除官僚机构中的反动分子。
 - @ban_sa: 取缔纳粹准军事组织冲锋队。
 - @unban_sa: 撤销对冲锋队的禁令。
-- @ban_rfb: 取缔共产党准军事组织 RFB。
-- @unban_rfb: 撤销对 RFB 的禁令。
+- @ban_rfb: 取缔共产党准军事组织红色前线。
+- @unban_rfb: 撤销对红色前线的禁令。
 - @ban_sh: 取缔民族主义准军事组织钢盔团。
 - @unban_sh: 撤销对钢盔团的禁令。
 - @negotiate_concordat: 与梵蒂冈谈判一份政教协定。
@@ -82,7 +82,7 @@ on-arrival: kpd_relation -= 15; rfb_strength -= 50; rfb_banned = 1; communist_co
 view-if: rfb_banned = 1
 on-arrival: rfb_banned = 0; rfb_strength += 50; prussian_police_loyalty -= 0.1
 
-共产党的 RFB 不再被禁。
+共产党的红色前线不再被禁。
 
 @negotiate_concordat
 view-if: prussian_concordat_progress < 1

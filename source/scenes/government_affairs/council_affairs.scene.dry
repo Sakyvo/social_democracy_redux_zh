@@ -42,7 +42,7 @@ on-arrival: unemployed_kpd += unemployed/2; workers_kpd += unemployed/5; workers
 @kpd_militia
 on-arrival: rfb_strength += kpd_s; rfb_militancy += 0.01; rfb_militancy += socialism/1000; strife += 1; coup_progress += 2; sa_militancy += 0.05*bourgeois_power; sh_militancy += 0.025*bourgeois_power;
 
-共产党利用自己在委员会中的地位,把资金与资源输送给 RFB 中的民兵,将其扩充为德国委员会运动事实上的准军事翼。极右翼看到这一点,也开始武装自己,准备迎接对抗。
+共产党利用自己在委员会中的地位,把资金与资源输送给红色前线中的民兵,将其扩充为德国委员会运动事实上的准军事翼。极右翼看到这一点,也开始武装自己,准备迎接对抗。
 
 @pre_communist_revolution
 view-if: councils_initiative

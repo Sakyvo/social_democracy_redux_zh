@@ -19,7 +19,7 @@ on-departure: military_relations_timer += 5
 - @surrender_reichswehr: 将勒贝尔从国防部免职。
 #- @sack_breitscheid: Sack Breitscheid as chancellor.
 - @unban_sh: 解除对钢盔团的禁令。
-- @ban_rfb: 取缔 RFB。
+- @ban_rfb: 取缔红色前线。
 - @reichsexekute_kpd: 对左翼州政府实施国家执行。
 - @root: 不,我们不应做这些事中的任何一件。
 - @easy_discard
@@ -47,7 +47,7 @@ on-arrival: sh_banned = 0; army_relation += 5; sh_militancy += 0.05; sh_strength
 view-if: ((not presidential_powers) or (interior_minister_party == "SPD")) and not rfb_banned
 on-arrival: rfb_banned = 1; army_relation += 5; rfb_militancy -= 0.05; rfb_strength -= 20; coup_progress -= 1; kpd_relation -= 5; kpd_relation -= 5 if spd_in_government; left_dissent += 5 if spd_in_government
 
-我们取缔了 RFB,满足并履行了艾伯特—格勒纳协定的核心条件之一。
+我们取缔了红色前线,满足并履行了艾伯特—格勒纳协定的核心条件之一。
 
 @reichsexekute_kpd
 choose-if: not spd_in_government or reformist_strength >= 50

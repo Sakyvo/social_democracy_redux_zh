@@ -8,7 +8,7 @@ tags: party_affairs; antifascism
 
 = 街头战斗
 
-纳粹冲锋队、民族主义的钢盔团、共产党的红色前线战士同盟(RFB),以及我们自己的国旗团,在街头激战不休。在部分地区,局势已接近内战水平,每月都有数十人丧命。
+纳粹冲锋队、民族主义的钢盔团、共产党的红色前线战士同盟,以及我们自己的国旗团,在街头激战不休。在部分地区,局势已接近内战水平,每月都有数十人丧命。
 
 我们必须采取行动,保护工人免遭这些劫掠。
 
@@ -17,7 +17,7 @@ tags: party_affairs; antifascism
 - @if_training: 训练工会成员,使其作为铁前线的一部分参战。
 - @prussian_police_training: 动用普鲁士警察协助训练国旗团。
 - @peace: 尽可能避免一切武装对抗。
-- @truce_rfb: 设法与 RFB 议和。
+- @truce_rfb: 设法与红色前线议和。
 - @easy_discard
 
 @battle

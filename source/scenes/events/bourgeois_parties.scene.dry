@@ -85,7 +85,7 @@ frequency: 50
 view-if: not rfb_banned or communist_coalition < 3
 on-arrival: rfb_strength += kpd_votes; rfb_militancy += ((kpd_votes/1000)+0.02)
 
-共产党人向 RFB 输送资金,帮它武装、装备起来,以备最终的革命对决。
+共产党人向红色前线输送资金,帮它武装、装备起来,以备最终的革命对决。
 
 @sabotage
 frequency: 25
@@ -99,7 +99,7 @@ frequency: 150
 view-if: (chancellor_party == "NSDAP" or chancellor_party == "DNVP" or (third_period and kpd_relation < 0 and in_emergency_government) or kpd_banned) and rfb_force >= 1
 on-arrival: strife += 1; rfb_militancy += 0.05; rfb_strength -= (sa_strength/100)*(sa_militancy); sa_strength -= (rfb_strength/100)*(rfb_militancy); reichswehr_militancy -= (rfb_militancy*rfb_militancy); workers_kpd -= 6*(pro_republic/100)
 
-共产党人从事暴动活动,迫使 RFB 加剧街头战斗与暴动级别的行动。
+共产党人从事暴动活动,迫使红色前线加剧街头战斗与暴动级别的行动。
 
 @sapd
 subtitle: 中间派马克思主义者,致力于建立一个统一的无产阶级阵线,以引领与资本的决裂。

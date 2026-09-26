@@ -158,7 +158,7 @@ if (Q.bourgeois_power < 1) {
 !}
 go-to: resistance_2_win if council_power > reichstag_power; resistance_2_loss if council_power <= (reichstag_power*0.8); communist_revolution.kpd_survival if council_power <= reichstag_power and council_power > (reichstag_power*0.8)
 
-共产党人不愿袖手旁观、看着各委员会被国家力量驱散,于是大胆选择了抵抗。RFB 的力量占据了委员会代表大会,阻止国家力量进入。 [? if bourgeois_power < 1 : 哈茨堡阵线选择协助击破这场抵抗。 ?]
+共产党人不愿袖手旁观、看着各委员会被国家力量驱散,于是大胆选择了抵抗。红色前线的力量占据了委员会代表大会,阻止国家力量进入。 [? if bourgeois_power < 1 : 哈茨堡阵线选择协助击破这场抵抗。 ?]
 
 @resistance_2_win
 on-arrival: workers_spd -= 10; workers_kpd += 10; workers_kpd += workers_nsdap; workers_nsdap = 0; unemployed_spd -= 10; unemployed_nsdap -= 10; unemployed_kpd += 20; socialism += 5; pro_republic -= 4; nationalism -= 4; rfb_strength += (rb_strength*(left_strength/100)); rb_strength *= (1-(left_strength/100)); bourgeois_power -= 0.03; sa_strength *= bourgeois_power; sh_strength *= bourgeois_power; time_to_election = 3; councils_initiative = 1
@@ -169,7 +169,7 @@ call: set_next_election_time
 @resistance_2_loss
 on-arrival: rfb_banned = 1; soviets_exist = 0; rfb_strength *= 0.1; rfb_militancy *= 0.4; workers_kpd *= 0.4; unemployed_kpd *= 0.6; workers_spd *= 0.9; workers_nsdap += 10; unemployed_nsdap += 10; workers_dnvp += 10
 
-RFB 对委员会的保护连同各委员会本身一同被击碎。一场针对共产党领袖及整个政党的迫害浪潮随之掀起,重创了社会主义运动,也为反动势力反扑创造了时机。
+红色前线对委员会的保护连同各委员会本身一同被击碎。一场针对共产党领袖及整个政党的迫害浪潮随之掀起,重创了社会主义运动,也为反动势力反扑创造了时机。
 
 @nah
 view-if: left_strength > reformist_strength

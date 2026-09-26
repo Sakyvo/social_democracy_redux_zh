@@ -99,7 +99,7 @@ go-to: war_menu
 
 我们的敌人是民族主义的钢盔团,兵力 [+ sh_strength +] 千人;以及纳粹冲锋队,兵力 [+ sa_strength +] 千人。国防军([+ reichswehr_strength +] 千名正规军)与普鲁士警察([+ prussian_police_strength +] 千人)的忠诚尚不明朗。
 
-[? if chancellor_party == "KPD" or president == "Thälmann" : 共产党的准军事组织 RFB 正主导着这场战斗,而我们是他们的同袍。 ?]
+[? if chancellor_party == "KPD" or president == "Thälmann" : 共产党的准军事组织红色前线正主导着这场战斗,而我们是他们的同袍。 ?]
 
 我们这边有国旗团,成员 [+ rb_strength +] 千人。 [? if dissent > 0.15 and dissent <= 0.25: 它因党内异议而有所削弱,一些成员选择不参战。 ?][? if dissent > 0.25 and dissent < 0.5: 它因党内异议而削弱,许多成员选择不参战。 ?][? if dissent >= 0.5: 它因党内异议而严重削弱,相当一部分成员选择不参战。 ?]
 
@@ -130,7 +130,7 @@ view-if: chancellor_party != "KPD" and president != "Thälmann"
 go-to: war_menu
 on-arrival: war_choices += 1
 
-除支持共产党的工人之外,共产党的 RFB 还有 [+ rfb_strength +] 千名战士。
+除支持共产党的工人之外,共产党的红色前线还有 [+ rfb_strength +] 千名战士。
 
 [? if kpd_relation >= 60 : 由于我们关系良好,共产党完全站在我们这边。 ?][? if kpd_relation < 60 and kpd_relation >= 45 : 由于与我们关系良好,共产党多数站在我们这边。 ?][? if kpd_relation < 45 : 共产党不支持我们。 ?]
 
