@@ -38,7 +38,7 @@ card-image: img/portraits/SchmidtRobert.jpg
 - @easy_discard
 
 @wtb_2
-title: 继续实施 WTB 计划。
+title: 继续实施沃伊京斯基-塔尔诺-巴德计划(WTB 计划)。
 subtitle: -3 财政预算
 unavailable-subtitle: [? if unemployed <= 8 : 失业率已经够低,推行 WTB 计划的时机已过。 ?][? if economic_minister_party == "DVP" : 由人民党掌控的经济部正在阻挠我们的计划。 ?]
 view-if: wtb_implemented > 2 and budget >= 3 

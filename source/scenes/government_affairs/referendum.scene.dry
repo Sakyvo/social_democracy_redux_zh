@@ -26,7 +26,7 @@ unavailable-subtitle: [? if radio < 2 : -2 资源。 ?][? if radio >= 2 : -1 资
 
 - @land_reform_vote: 土地改革。
 - @nationalization_vote: 一项国有化计划。
-- @wtb_vote: 实施 WTB 计划。
+- @wtb_vote: 实施沃伊京斯基-塔尔诺-巴德计划(WTB 计划)。
 - @work_council_vote: 赋权工厂委员会。
 - @state_buyer_vote: 一项国家收购计划。
 - @abortion_vote: 使堕胎合法化。

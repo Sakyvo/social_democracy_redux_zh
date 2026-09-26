@@ -529,7 +529,7 @@ max-visits: 1
 on-arrival: workers_spd += 6*(1-dissent); workers_spd -= 2 if unemployed >= 15; workers_spd -= 2 if unemployed >= 25; workers_spd += 6*(1-dissent) if wtb_adopted = 1; workers_spd += 3*(1-dissent) if nationalization_progress >= 1;
 go-to: bc2
 
-我们加强了在工人中的宣传。 [? if unemployed >= 15: 高失业率使我们的宣传更加困难。 ?][? if wtb_adopted = 1 : 采纳 WTB 计划为我们提供了一个吸引工人的新号召点。 ?]
+我们加强了在工人中的宣传。 [? if unemployed >= 15: 高失业率使我们的宣传更加困难。 ?][? if wtb_adopted = 1 : 采纳沃伊京斯基-塔尔诺-巴德计划(WTB 计划)为我们提供了一个吸引工人的新号召点。 ?]
 
 @new_middle
 on-arrival: new_middle_spd += 6*(1-dissent); new_middle_spd -= 4 if socialism <= 49 and peoples_party == 0; peoples_party_support += 1;

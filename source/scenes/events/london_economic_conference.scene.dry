@@ -77,7 +77,7 @@ choose-if: woytinsky_advisor = 1 and wtb_implemented > 1
 unavailable-subtitle: 此刻若有弗拉基米尔·沃伊京斯基相助,将极有帮助。
 on-arrival: unemployed -= 2 if unemployed >= 10; unemployed -= 1.5 if unemployed >= 5; inflation += 1.5; workers_spd += 4*(1-dissent); new_middle_spd += 3*(1-dissent); economic_growth += 1.5 if economic_growth < 3; socialism -= 2
 
-弗拉基米尔·沃伊京斯基如今是我们出席这场会议代表团的一员,他利用我们成功实施 WTB 计划的经验,主张放宽货币估值。这一论证多少有些说服力,协议得以达成,从而在世界各地带来通胀上升与需求刺激。
+弗拉基米尔·沃伊京斯基如今是我们出席这场会议代表团的一员,他利用我们成功实施沃伊京斯基-塔尔诺-巴德计划(WTB 计划)的经验,主张放宽货币估值。这一论证多少有些说服力,协议得以达成,从而在世界各地带来通胀上升与需求刺激。
 
 @salvage_debts
 choose-if: reparations <= -2 and pacifism >= 3 and (rearmament_exposed or west_relation >= 3)

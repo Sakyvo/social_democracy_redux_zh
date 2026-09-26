@@ -15,7 +15,7 @@ new-page: true
 - @root: 返回主界面
 
 @plan
-title: 采纳 WTB 计划!
+title: 采纳沃伊京斯基-塔尔诺-巴德计划(WTB 计划)!
 subtitle: 说服党内其余成员支持 WTB 计划。
 choose-if: advisor_action_timer <= 0 and wtb_adopted == 0 and wtb_support >= 3 and black_thursday_seen and (not historical_mode or ((labor_strength >= center_strength) and (labor_strength >= left_strength) and (labor_strength >= reformist_strength)))
 on-arrival: advisor_action_timer = 6;
