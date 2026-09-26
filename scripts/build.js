@@ -50,6 +50,7 @@ const GATES = [
   'audit-semantic.js',        // 语义配对(EN/ZH 段落对齐)
   'audit-duplicate-name.js',  // 「中文名(同一中文名)」重复翻译
   'audit-malformed-insert.js',// 畸形插入标记 [ + var +]
+  'audit-glossary.js',        // 术语表禁用词(国社党 / 帝国议会 / 巴本 …)
   'audit-mixed.js',           // 中英混排行
   'check-untranslated.js',    // 未译英文残留
 ];
