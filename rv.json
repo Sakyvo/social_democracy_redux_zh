@@ -1,0 +1,669 @@
+[
+ {
+  "value": "&nbsp;",
+  "vars": [
+   "chancellor"
+  ]
+ },
+ {
+  "value": "Adenauer",
+  "vars": [
+   "chancellor",
+   "ddp_candidate",
+   "dvp_candidate",
+   "president",
+   "spd_candidate",
+   "z_candidate"
+  ]
+ },
+ {
+  "value": "Baade",
+  "vars": [
+   "agriculture_minister"
+  ]
+ },
+ {
+  "value": "BAP",
+  "vars": [
+   "bvp_name"
+  ]
+ },
+ {
+  "value": "Bracht",
+  "vars": [
+   "chancellor"
+  ]
+ },
+ {
+  "value": "Braun",
+  "vars": [
+   "chancellor",
+   "ddp_candidate",
+   "dvp_candidate",
+   "president",
+   "spd_candidate",
+   "z_candidate"
+  ]
+ },
+ {
+  "value": "Brauns",
+  "vars": [
+   "labor_minister"
+  ]
+ },
+ {
+  "value": "Breitscheid",
+  "vars": [
+   "chancellor",
+   "foreign_minister"
+  ]
+ },
+ {
+  "value": "Brüning",
+  "vars": [
+   "chancellor",
+   "z_leader"
+  ]
+ },
+ {
+  "value": "Bumke",
+  "vars": [
+   "president"
+  ]
+ },
+ {
+  "value": "Bumke (acting)",
+  "vars": [
+   "president"
+  ]
+ },
+ {
+  "value": "BVP",
+  "vars": [
+   "bvp_name"
+  ]
+ },
+ {
+  "value": "Conciliators",
+  "vars": [
+   "kpd_party_leader"
+  ]
+ },
+ {
+  "value": "Curtius",
+  "vars": [
+   "economic_minister",
+   "foreign_minister"
+  ]
+ },
+ {
+  "value": "DDP",
+  "vars": [
+   "agriculture_minister_party",
+   "chancellor_party",
+   "ddp_name",
+   "economic_minister_party",
+   "justice_minister_party",
+   "reichswehr_minister_party"
+  ]
+ },
+ {
+  "value": "Dietrich",
+  "vars": [
+   "agriculture_minister",
+   "economic_minister"
+  ]
+ },
+ {
+  "value": "DNVP",
+  "vars": [
+   "agriculture_minister_party",
+   "chancellor_party",
+   "economic_minister_party",
+   "finance_minister_party",
+   "interior_minister_party",
+   "justice_minister_party"
+  ]
+ },
+ {
+  "value": "DStP",
+  "vars": [
+   "ddp_name"
+  ]
+ },
+ {
+  "value": "DVP",
+  "vars": [
+   "chancellor_party",
+   "economic_minister_party",
+   "finance_minister_party",
+   "foreign_minister_party"
+  ]
+ },
+ {
+  "value": "Eberlein",
+  "vars": [
+   "chancellor",
+   "kpd_chancellor"
+  ]
+ },
+ {
+  "value": "Ebert",
+  "vars": [
+   "president"
+  ]
+ },
+ {
+  "value": "Eckener",
+  "vars": [
+   "ddp_candidate",
+   "president",
+   "spd_candidate",
+   "z_candidate"
+  ]
+ },
+ {
+  "value": "Einstein",
+  "vars": [
+   "ddp_candidate",
+   "spd_candidate"
+  ]
+ },
+ {
+  "value": "Empty",
+  "vars": [
+   "chancellor"
+  ]
+ },
+ {
+  "value": "Fillak",
+  "vars": [
+   "postal_affairs_minister"
+  ]
+ },
+ {
+  "value": "Fischer",
+  "vars": [
+   "kpd_party_leader"
+  ]
+ },
+ {
+  "value": "Frenken",
+  "vars": [
+   "justice_minister"
+  ]
+ },
+ {
+  "value": "Gessler",
+  "vars": [
+   "chancellor",
+   "ddp_candidate",
+   "dvp_candidate",
+   "president",
+   "reichswehr_minister",
+   "spd_candidate",
+   "z_candidate"
+  ]
+ },
+ {
+  "value": "Goebbels",
+  "vars": [
+   "nsdap_leader"
+  ]
+ },
+ {
+  "value": "Goring",
+  "vars": [
+   "president"
+  ]
+ },
+ {
+  "value": "Göring",
+  "vars": [
+   "dnvp_candidate",
+   "nsdap_candidate",
+   "other_candidate",
+   "president"
+  ]
+ },
+ {
+  "value": "Groener",
+  "vars": [
+   "chancellor",
+   "reichswehr_minister"
+  ]
+ },
+ {
+  "value": "Großmann",
+  "vars": [
+   "president"
+  ]
+ },
+ {
+  "value": "Hergt",
+  "vars": [
+   "justice_minister",
+   "president"
+  ]
+ },
+ {
+  "value": "Hermes",
+  "vars": [
+   "agriculture_minister"
+  ]
+ },
+ {
+  "value": "Hilferding",
+  "vars": [
+   "finance_minister"
+  ]
+ },
+ {
+  "value": "Hindenburg",
+  "vars": [
+   "former_president",
+   "president"
+  ]
+ },
+ {
+  "value": "Hitler",
+  "vars": [
+   "chancellor",
+   "dnvp_candidate",
+   "nsdap_candidate",
+   "nsdap_leader",
+   "other_candidate",
+   "president"
+  ]
+ },
+ {
+  "value": "Hugenberg",
+  "vars": [
+   "chancellor"
+  ]
+ },
+ {
+  "value": "I",
+  "vars": [
+   "agriculture_minister_party",
+   "chancellor_party",
+   "economic_minister_party",
+   "finance_minister_party",
+   "foreign_minister_party",
+   "interior_minister_party",
+   "justice_minister_party",
+   "labor_minister_party",
+   "postal_affairs_minister_party",
+   "prussian_government",
+   "reichswehr_minister",
+   "reichswehr_minister_party"
+  ]
+ },
+ {
+  "value": "Joos",
+  "vars": [
+   "z_leader",
+   "z_party_leader"
+  ]
+ },
+ {
+  "value": "Juchacz",
+  "vars": [
+   "ddp_candidate",
+   "dvp_candidate",
+   "president",
+   "spd_candidate",
+   "z_candidate"
+  ]
+ },
+ {
+  "value": "Kaas",
+  "vars": [
+   "z_leader",
+   "z_party_leader"
+  ]
+ },
+ {
+  "value": "Koch-Weser",
+  "vars": [
+   "chancellor",
+   "justice_minister"
+  ]
+ },
+ {
+  "value": "Köhler",
+  "vars": [
+   "finance_minister"
+  ]
+ },
+ {
+  "value": "KPD",
+  "vars": [
+   "agriculture_minister_party",
+   "chancellor_party",
+   "economic_minister_party",
+   "finance_minister_party",
+   "foreign_minister_party",
+   "interior_minister_party",
+   "justice_minister_party",
+   "labor_minister_party",
+   "largest_party",
+   "reichswehr_minister_party"
+  ]
+ },
+ {
+  "value": "Külz",
+  "vars": [
+   "chancellor"
+  ]
+ },
+ {
+  "value": "Leber",
+  "vars": [
+   "reichswehr_minister"
+  ]
+ },
+ {
+  "value": "Luther",
+  "vars": [
+   "chancellor",
+   "president"
+  ]
+ },
+ {
+  "value": "Mann",
+  "vars": [
+   "spd_candidate"
+  ]
+ },
+ {
+  "value": "Marx",
+  "vars": [
+   "chancellor",
+   "former_president",
+   "president",
+   "z_leader",
+   "z_party_leader"
+  ]
+ },
+ {
+  "value": "Moldenhauer",
+  "vars": [
+   "finance_minister"
+  ]
+ },
+ {
+  "value": "Müller",
+  "vars": [
+   "chancellor"
+  ]
+ },
+ {
+  "value": "Munzenberg",
+  "vars": [
+   "president"
+  ]
+ },
+ {
+  "value": "Münzenberg",
+  "vars": [
+   "kpd_candidate",
+   "president",
+   "spd_candidate"
+  ]
+ },
+ {
+  "value": "N/A",
+  "vars": [
+   "chancellor",
+   "president"
+  ]
+ },
+ {
+  "value": "Neuhaus",
+  "vars": [
+   "economic_minister"
+  ]
+ },
+ {
+  "value": "Nobody",
+  "vars": [
+   "postal_affairs_minister"
+  ]
+ },
+ {
+  "value": "NSDAP",
+  "vars": [
+   "agriculture_minister_party",
+   "chancellor_party",
+   "economic_minister_party",
+   "finance_minister_party",
+   "foreign_minister_party",
+   "interior_minister_party",
+   "justice_minister_party",
+   "labor_minister_party",
+   "largest_party",
+   "reichswehr_minister_party"
+  ]
+ },
+ {
+  "value": "Ossietzky",
+  "vars": [
+   "chancellor",
+   "spd_candidate"
+  ]
+ },
+ {
+  "value": "Papen",
+  "vars": [
+   "chancellor"
+  ]
+ },
+ {
+  "value": "Pieck",
+  "vars": [
+   "chancellor",
+   "kpd_chancellor"
+  ]
+ },
+ {
+  "value": "Radbruch",
+  "vars": [
+   "justice_minister"
+  ]
+ },
+ {
+  "value": "RDP",
+  "vars": [
+   "ddp_name"
+  ]
+ },
+ {
+  "value": "Schacht",
+  "vars": [
+   "chancellor"
+  ]
+ },
+ {
+  "value": "Schiele",
+  "vars": [
+   "agriculture_minister",
+   "interior_minister"
+  ]
+ },
+ {
+  "value": "Schleicher",
+  "vars": [
+   "chancellor"
+  ]
+ },
+ {
+  "value": "Schlieben",
+  "vars": [
+   "finance_minister"
+  ]
+ },
+ {
+  "value": "Schmidt",
+  "vars": [
+   "economic_minister"
+  ]
+ },
+ {
+  "value": "Scholz",
+  "vars": [
+   "chancellor"
+  ]
+ },
+ {
+  "value": "Schumacher",
+  "vars": [
+   "ddp_candidate",
+   "dvp_candidate",
+   "president",
+   "spd_candidate",
+   "z_candidate"
+  ]
+ },
+ {
+  "value": "Seeckt",
+  "vars": [
+   "president"
+  ]
+ },
+ {
+  "value": "Seldte",
+  "vars": [
+   "chancellor",
+   "dnvp_candidate",
+   "dvp_candidate",
+   "nsdap_candidate",
+   "other_candidate",
+   "president"
+  ]
+ },
+ {
+  "value": "Severing",
+  "vars": [
+   "interior_minister"
+  ]
+ },
+ {
+  "value": "Simons (acting)",
+  "vars": [
+   "president"
+  ]
+ },
+ {
+  "value": "SPD",
+  "vars": [
+   "agriculture_minister_party",
+   "chancellor_party",
+   "economic_minister_party",
+   "finance_minister_party",
+   "foreign_minister_party",
+   "interior_minister_party",
+   "justice_minister_party",
+   "labor_minister_party",
+   "largest_party",
+   "postal_affairs_minister_party",
+   "prussian_government",
+   "reichswehr_minister_party"
+  ]
+ },
+ {
+  "value": "Stegerwald",
+  "vars": [
+   "chancellor",
+   "labor_minister",
+   "z_party_leader"
+  ]
+ },
+ {
+  "value": "Streseman",
+  "vars": [
+   "foreign_minister"
+  ]
+ },
+ {
+  "value": "Stresemann",
+  "vars": [
+   "foreign_minister"
+  ]
+ },
+ {
+  "value": "Thälmann",
+  "vars": [
+   "chancellor",
+   "kpd_candidate",
+   "kpd_leader",
+   "kpd_party_leader",
+   "president",
+   "spd_candidate"
+  ]
+ },
+ {
+  "value": "Ulbricht",
+  "vars": [
+   "chancellor"
+  ]
+ },
+ {
+  "value": "von Kanitz",
+  "vars": [
+   "agriculture_minister"
+  ]
+ },
+ {
+  "value": "von Keudell",
+  "vars": [
+   "interior_minister"
+  ]
+ },
+ {
+  "value": "VONC",
+  "vars": [
+   "chancellor_party"
+  ]
+ },
+ {
+  "value": "Wels",
+  "vars": [
+   "chancellor"
+  ]
+ },
+ {
+  "value": "Wirth",
+  "vars": [
+   "chancellor",
+   "foreign_minister",
+   "interior_minister",
+   "president"
+  ]
+ },
+ {
+  "value": "Wissel",
+  "vars": [
+   "labor_minister"
+  ]
+ },
+ {
+  "value": "Wissell",
+  "vars": [
+   "labor_minister"
+  ]
+ },
+ {
+  "value": "Z",
+  "vars": [
+   "agriculture_minister_party",
+   "chancellor_party",
+   "economic_minister_party",
+   "finance_minister_party",
+   "foreign_minister_party",
+   "interior_minister_party",
+   "justice_minister_party",
+   "labor_minister_party"
+  ]
+ }
+]

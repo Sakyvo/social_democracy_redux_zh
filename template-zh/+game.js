@@ -344,10 +344,49 @@ window.setSworceryUI = function(active) {
     }
   };
 
-  
+  // 显示层映射:运行时状态值(人名 / 党派代码 / 占位符)一律译为中文。
+  // 引擎把 insert 求值结果作为独立字符串片段交给本函数,故可做精确整串匹配,
+  // 不会误伤正文散文。值必须与 .dry 中的赋值逐字一致(含 'Streseman' 等原版拼误)。
+  window.__zhValueMap = {
+    // ---- 党派代码 ----
+    SPD: '社民党', KPD: '共产党', NSDAP: '纳粹党', DNVP: '国家人民党',
+    DVP: '人民党', DDP: '德国民主党', DStP: '德国国家党', RDP: '激进民主党',
+    BVP: '巴伐利亚人民党', BAP: '巴伐利亚工人党', Z: '中央党',
+    VONC: '不信任联盟', I: '无党籍',
+    // ---- 人名(内阁席位 / 总统 / 党魁 / 候选人)----
+    Ebert: '艾伯特', Hindenburg: '兴登堡', Marx: '马克思',
+    Luther: '路德', Müller: '米勒', Brüning: '布吕宁', Braun: '布劳恩',
+    Wirth: '维尔特', Papen: '帕彭', Schleicher: '施莱谢尔', Hitler: '希特勒',
+    Seldte: '泽尔特', Scholz: '朔尔茨', Groener: '格勒纳', Gessler: '格斯勒',
+    'Koch-Weser': '科赫-韦泽', Külz: '屈尔茨', Bracht: '布拉赫特',
+    Wels: '韦尔斯', Schumacher: '舒马赫', Breitscheid: '布赖特沙伊德',
+    Juchacz: '尤哈茨', Seeckt: '泽克特', Bumke: '布姆克',
+    'Bumke (acting)': '布姆克(代理)', Großmann: '格罗斯曼', Simons: '西蒙斯',
+    'Simons (acting)': '西蒙斯(代理)', Thälmann: '台尔曼', Göring: '戈林',
+    Goring: '戈林', Münzenberg: '明岑贝格', Munzenberg: '明岑贝格',
+    Adenauer: '阿登纳', Einstein: '爱因斯坦', Eckener: '埃克纳', Mann: '曼',
+    Ossietzky: '奥西茨基', Kaas: '卡斯', Joos: '约斯',
+    Stegerwald: '施特格瓦尔德', Hilferding: '希法亭', Leber: '勒贝尔',
+    Wissell: '维塞尔', Wissel: '维塞尔', Radbruch: '拉德布鲁赫',
+    Severing: '泽韦林', Schacht: '沙赫特', Hugenberg: '胡根贝格',
+    Pieck: '皮克', Ulbricht: '乌布利希', Eberlein: '埃伯莱因',
+    Goebbels: '戈培尔', Baade: '巴德', Dietrich: '迪特里希',
+    Brauns: '布劳恩斯', Curtius: '库尔提乌斯', Moldenhauer: '莫尔登豪尔',
+    Köhler: '克勒', Schiele: '席勒', Schlieben: '施利本', Schmidt: '施密特',
+    Neuhaus: '诺伊豪斯', Frenken: '弗伦肯', Hermes: '赫尔梅斯',
+    Fillak: '菲拉克', Fischer: '菲舍尔', 'von Kanitz': '冯·卡尼茨',
+    'von Keudell': '冯·克伊德尔', "Streseman": '施特雷泽曼', Stresemann: '施特雷泽曼',
+    // ---- 占位 / 特殊值 ----
+    'N/A': '空缺', Empty: '空缺', Nobody: '无人', Conciliators: '调和派',
+    '&nbsp;': ''
+  };
+
   // This function allows you to modify the text before it's displayed.
   // E.g. wrapping chat-like messages in spans.
   window.displayText = function(text) {
+      if (typeof text === 'string' && window.__zhValueMap[text] !== undefined) {
+          return window.__zhValueMap[text];
+      }
       return text;
   };
 

@@ -125,13 +125,13 @@ if (Q.sa_strength) {
 
 = 力量分布
 
-SA: [+ sa_force +]%
+冲锋队: [+ sa_force +]%
 
 钢盔团: [+ sh_force +]%
 
 国旗团: [+ rb_force +]%
 
-RFB: [+ rfb_force +]%
+红色前线: [+ rfb_force +]%
 
 普鲁士: [+ prussia_force +]%
 

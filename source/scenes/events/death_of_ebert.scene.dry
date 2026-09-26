@@ -302,21 +302,21 @@ go-to: hindenburg_wins if hindenburg_majority == 1; marx_wins if marx_majority =
 
 [? if braun_campaign : 布劳恩 - [+ braun_votes_disp +]% ?]
 
-[? if hellpach_campaign : Hellpach - [+ hellpach_votes_disp +]% ?]
+[? if hellpach_campaign : 黑尔帕赫 - [+ hellpach_votes_disp +]% ?]
 
 [? if marx_campaign : 马克思 - [+ marx_votes_disp +]% ?]
 
 [? if gessler_campaign : 格斯勒 - [+ gessler_votes_disp +]% ?]
 
-[? if held_campaign : Held - [+ held_votes_disp +]% ?]
+[? if held_campaign : 黑尔德 - [+ held_votes_disp +]% ?]
 
-[? if jarres_campaign : Jarres - [+ jarres_votes_disp +]% ?]
+[? if jarres_campaign : 雅雷斯 - [+ jarres_votes_disp +]% ?]
 
 [? if hergt25_campaign : 赫尔特 - [+ hergt_votes_disp +]% ?]
 
-[? if hindenburg_campaign : Hindenburg - [+ hindenburg_votes_disp +]% ?]
+[? if hindenburg_campaign : 兴登堡 - [+ hindenburg_votes_disp +]% ?]
 
-[? if ludendorff_campaign : Ludendorff - [+ ludendorff_votes_disp +]% ?]
+[? if ludendorff_campaign : 鲁登道夫 - [+ ludendorff_votes_disp +]% ?]
 
 @hindenburg_wins
 on-arrival: former_president = "Hindenburg"; president = "Hindenburg"; pro_republic -= 5; nationalism += 5; workers_spd -= 6; unemployed_spd -= 6; workers_kpd += 4; unemployed_kpd += 4; west_relation -= 2; east_relation -= 2; dvp_relation -= 5; kpd_relation += 5; left_strength += 5; jarres_campaign = 0; marx_campaign = 0; held_campaign = 0; thalmann_campaign = 0; ludendorff_campaign = 0; hellpach_campaign = 0; gessler_campaign = 0; braun_campaign = 0; z_support_braun = 0; ddp_support_braun = 0; bvp_support_hindenburg = 0

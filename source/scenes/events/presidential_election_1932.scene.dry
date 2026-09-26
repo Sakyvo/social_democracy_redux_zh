@@ -434,7 +434,7 @@ go-to: hindenburg_wins if hindenburg_majority == 1; thalmann_wins if thalmann_ma
 
 [? if burgerblock_campaign : 格斯勒 - [+ gessler_votes_disp +]% ?]
 
-[? if hindenburg_running : Hindenburg - [+ hindenburg_votes_disp +]% ?]
+[? if hindenburg_running : 兴登堡 - [+ hindenburg_votes_disp +]% ?]
 
 [? if duesterburg_campaign : 杜斯特贝格 - [+ duesterburg_votes_disp +]% ?]
 
