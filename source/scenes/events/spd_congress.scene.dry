@@ -292,7 +292,7 @@ go-to: coalition_menu
 
 {!<tr><td><div class="box" style='background-color:#ff6ba9'> </div> !} 改良派: {!</td><td>!} [+ reformist_c +]% {!</td><td>!} [+ str_change_reformist +] {!</td></tr>!}
 
-[? if neorevisionism == 1 : {!<tr><td><div class="box" style='background-color:#ff14a5'> </div> !}Neorevisionists: {!</td><td>!} [+ neorevisionist_c +]% {!</td><td>!} [+ str_change_neorevisionist +] {!</td></tr>!} ?]
+[? if neorevisionism == 1 : {!<tr><td><div class="box" style='background-color:#ff14a5'> </div> !}新修正派: {!</td><td>!} [+ neorevisionist_c +]% {!</td><td>!} [+ str_change_neorevisionist +] {!</td></tr>!} ?]
 
 @coalition_menu
 

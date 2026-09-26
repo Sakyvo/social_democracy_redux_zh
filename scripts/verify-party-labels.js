@@ -9,8 +9,12 @@ const LATIN = ['SPD', 'SAPD', 'KPD', 'DDP', 'DVP', 'DNVP', 'NSDAP', 'BVP', 'Z + 
 const CHINESE = ['社民党', '社会民主党', '社会主义工人党', '共产党', '民主党', '人民党', '国家人民党', '纳粹党', '中央党', '巴伐利亚人民党'];
 
 const latHits = [], zhHits = [];
+/* 去掉 JS 注释后再统计:场景内的行注释与块注释是开发者笔记,
+   不是玩家可见文本,否则会把注释里的 `SPD:` 误报成标签位。 */
+const stripComments = (s) => s.replace(/\/\/[^\n]*/g, '').replace(/\/\*[\s\S]*?\*\//g, '');
+
 for (const [id, sc] of Object.entries(j.scenes)) {
-  const t = JSON.stringify(sc);
+  const t = stripComments(JSON.stringify(sc));
   for (const w of LATIN) {
     // 标签位: "XXX: " 紧邻(排除 chart data 的 "name": "SPD")
     const re = new RegExp('(?<!name\\\\": \\\\")(?<!legend\\\\": \\\\")' + w.replace(/[+]/g, '\\\\+') + ': ', 'g');

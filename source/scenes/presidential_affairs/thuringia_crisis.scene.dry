@@ -1,5 +1,5 @@
 title: 图林根问题
-#subtitle: The Nazis rule Thuringia, and are taking full advantage
+#subtitle: 纳粹党统治着图林根,并正充分利用这一点
 new-page: true
 is-card: true
 view-if: ((((((nsdap_votes*(1 + (sa_force/100)))+(unemployed/1.5)) >= 50) and dvp_relation < 50) or thuringia_seen and not landtags_enabled) or (landtags_enabled and nazi_thuringia)) and (president == "Braun" or president == "Schumacher" or president == "Juchacz") and (not presidential_powers and not victory_republic)

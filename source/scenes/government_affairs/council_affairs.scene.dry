@@ -5,7 +5,7 @@ on-arrival: council_policy_timer += 3; month_actions += 1; council_resources = 0
 view-if: soviets_exist and executive_formed and not supreme_soviet
 card-image: img/councils.jpg
 tags: govt_affairs
-#subtitle: The administration of Germany's workers' councils.
+#subtitle: 德国工人委员会的管理事务。
 #go-to: 
 
 = 委员会政策

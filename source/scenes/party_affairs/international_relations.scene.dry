@@ -6,7 +6,7 @@ view-if: international_relations_timer <= 0
 on-arrival: month_actions += 1; international_relations_timer += 12;
 card-image: img/international.jpg
 max-visits: 6
-#subtitle: Building ties with our fraternal socialist parties.
+#subtitle: 与各兄弟社会主义政党建立联系。
 
 在劳工与社会主义国际中,我们可以与欧洲乃至世界各地的兄弟社会主义政党建立联系。
 
