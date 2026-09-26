@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 // 校对:扫描译文与 glossary 的不一致用法
 const fs=require('fs'),path=require('path');
-const ROOT=process.argv[2]||'K:/Projects/website/raspd/zh/social_democracy_redux_zh/source/scenes';
+const ROOT=process.argv[2]||process.env.ZH_ROOT||path.resolve(__dirname,'..','source','scenes');
 
 // 禁用词 / 易错词 -> 正确用法
 const BAD=[
@@ -36,3 +36,5 @@ for(const f of walk(ROOT).filter(x=>x.endsWith('.dry'))){
 }
 console.log('=== 禁用词/易错词命中 ('+hits.length+') ===');
 for(const h of hits) console.log(h.f+':'+h.n+'  ['+h.msg+']  '+h.line);
+// 退出码语义:0=干净。带退出码才能接入构建门禁。
+process.exit(hits.length ? 1 : 0);
