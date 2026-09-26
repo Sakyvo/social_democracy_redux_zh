@@ -354,7 +354,7 @@ window.setSworceryUI = function(active) {
     BVP: '巴伐利亚人民党', BAP: '巴伐利亚工人党', Z: '中央党',
     VONC: '不信任联盟', I: '无党籍',
     // ---- 人名(内阁席位 / 总统 / 党魁 / 候选人)----
-    Ebert: '艾伯特', Hindenburg: '兴登堡', Marx: '马克思',
+    Ebert: '艾伯特', Hindenburg: '兴登堡', Marx: '马克思', Hergt: '赫尔格特',
     Luther: '路德', Müller: '米勒', Brüning: '布吕宁', Braun: '布劳恩',
     Wirth: '维尔特', Papen: '帕彭', Schleicher: '施莱谢尔', Hitler: '希特勒',
     Seldte: '泽尔特', Scholz: '朔尔茨', Groener: '格勒纳', Gessler: '格斯勒',
