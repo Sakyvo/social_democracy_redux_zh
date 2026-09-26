@@ -15,7 +15,7 @@ go-to: start_menu_2
 - @start: 开始游戏
 - @election_simulation: 选举模拟
 - @credits: 制作名单
-- @mod_info: Mod 说明
+- @mod_info: 模组说明
 - @game_over.achievements
 
 
