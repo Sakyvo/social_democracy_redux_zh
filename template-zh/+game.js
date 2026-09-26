@@ -194,7 +194,14 @@ window.setCombatHand = function(active) {
 
       const caption = document.createElement('span');
       caption.className = 'card-caption';
-      caption.textContent = choice.title || choice.id;
+      // choice.title 可能是富文本数组(含 insert/emphasis),必须经 contentToHTML
+      // 转换后再插入;直接赋 textContent 会把数组强制成 "a,b," 的形式。
+      const captionTitle = choice.title || choice.id;
+      if (typeof captionTitle === 'string') {
+        caption.textContent = captionTitle;
+      } else {
+        caption.innerHTML = window.dendryUI.contentToHTML.convertLine(captionTitle);
+      }
       card.appendChild(caption);
 
       card.addEventListener('click', function(event) {
