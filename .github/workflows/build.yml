@@ -29,10 +29,15 @@ jobs:
           node-version: 20
       - name: 安装依赖
         run: npm install
-      - name: 拉取英文原版(供对照门禁使用)
+      # 对照门禁需要英文原版。必须**钉在同一次翻译所依据的版本**上:
+      # upstream 仍在持续加内容,若跟随 main,原文一变对照门禁就必然报「实体缺失」,
+      # 那是「上游新写了段」而不是「我们漏译了」—— 门禁会失去意义。
+      # 升级原文基准时:改这里的 ref,然后按 .docs 流程补译新增段落。
+      - name: 拉取英文原版(供对照门禁使用,钉在翻译基准版本)
         uses: actions/checkout@v4
         with:
           repository: CuttleCraft/social_democracy_redux
+          ref: 0a378e2863bc0f39b4f5d048c2d2343706add16a
           path: .upstream
       - name: 构建
         run: |
