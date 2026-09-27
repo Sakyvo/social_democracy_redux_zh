@@ -4,7 +4,7 @@ tags: event
 priority: -1
 view-if: ((year = next_election_year and month >= next_election_month) or (year > next_election_year)) and not supreme_soviet
 on-arrival: gov_tension = 0; bb_failed = 0; status_quo = 0; reichswehr_loyalty -= 0.2 if reichswehr_loyalty >= 0.4 and chancellor == "Groener"; old_economic_health = economic_health; hindenburg_angry = 0; unity_refused = 0; wirth_lead = 0; dvp_willing = 0; dvp_willing = 1 if ((dvp_relation+spd_votes+(pro_republic/6)) >= ((100-pro_republic)+capital_strike_progress+(coup_progress/2))); z_willing = 0; z_willing = 1 if z_relation >= 50 or (z_relation >= 25 and bourgeois_coalition < 50)
-on-departure: month_actions += 1; in_election = 0; next_election_year = next_election_year + 4; n_elections += 1; next_election_time = time + 48; papen_chancellor_timer = 4;
+on-departure: month_actions += 1; in_election = 0; next_election_year = next_election_year + 4; n_elections += 1; next_election_time = time + 48; papen_chancellor_timer = 4; shuffler = 0
 set-jump: post_election_1928
 
 # the low priority means that this event is only seen after all other events are resolved for the month.
@@ -796,7 +796,14 @@ Q.enabling_r = Math.round((Q.enabling_r/total_r)*100);
 go-to: enabling_act_passed if enabling_r >= 67; enabling_act_failed if enabling_r < 67
 
 @enabling_act_passed
-go-to: enabling_act_passed2 if fun_value < 100; time_travel if fun_value == 100
+go-to: enabling_act_passed2 if fun_value < 100; time_travel if fun_value == 100; supersecret if fun_value > 100
+
+@supersecret
+
+尽管我们竭尽全力……授权法案还是……哇,等等,那是路德维希·卡斯吗?我的天,他身后跟着一大群人。我们要被踩死了。活活踩死。
+
+- @game_over: 我们确实如此。
+
 
 @time_travel
 
@@ -1070,6 +1077,15 @@ subtitle: 希特勒死了吗?
 德国终究还是沦陷了。世界亦然 —— 希特勒接着战胜了同盟国,把独裁统治扩展到整个地球。
 
 - @game_over: 游戏结束。
+
+@shuffle_cabinet_return
+view-if: shuffler
+title: 转念一想……
+subtitle: 眼下还是什么都别改吧。
+on-arrival: coalition_dissent -= 1; month_actions -= 1; shuffles += 1; shuffler = 0
+go-to: shuffle_cabinet
+tags: mins_1928
+
 
 @enabling_act_passed2
 
@@ -3022,7 +3038,7 @@ unavailable-subtitle: 我们的筹码不够。
 tags: mins_1928
 choose-if: leverage >= 5
 view-if: labor_minister_party != "SPD"
-on-arrival: leverage -= 5; labor_minister_party = "SPD"; labor_minister = "Wissell"
+on-arrival: leverage -= 5; labor_minister_party = "SPD"; labor_minister = "Wissell"; shuffler = 0
 go-to: ministries
 
 社民党的鲁道夫·维塞尔被任命为劳工部长。
@@ -3034,7 +3050,7 @@ unavailable-subtitle: 我们的筹码不够。
 tags: mins_1928
 choose-if: leverage >= 5
 view-if: interior_minister_party != "SPD"
-on-arrival: leverage -= 5; interior_minister_party = "SPD"; interior_minister = "Severing"
+on-arrival: leverage -= 5; interior_minister_party = "SPD"; interior_minister = "Severing"; shuffler = 0
 go-to: ministries
 
 社民党的卡尔·泽韦林被任命为内政部长。
@@ -3046,7 +3062,7 @@ unavailable-subtitle: 我们的筹码不够。
 tags: mins_1928
 choose-if: leverage >= 10 
 view-if: finance_minister_party != "SPD"
-on-arrival: leverage -= 10; finance_minister_party = "SPD"; finance_minister = "Hilferding"
+on-arrival: leverage -= 10; finance_minister_party = "SPD"; finance_minister = "Hilferding"; shuffler = 0
 go-to: ministries
 
 社民党的鲁道夫·希法亭被任命为财政部长。
@@ -3058,7 +3074,7 @@ unavailable-subtitle: 我们的筹码不够。
 tags: mins_1928
 choose-if: leverage >= 10 
 view-if: economic_minister_party != "SPD"
-on-arrival: leverage -= 10; economic_minister_party = "SPD"; economic_minister = "Schmidt"
+on-arrival: leverage -= 10; economic_minister_party = "SPD"; economic_minister = "Schmidt"; shuffler = 0
 go-to: ministries
 
 社民党的罗伯特·施密特被任命为经济部长。
@@ -3070,7 +3086,7 @@ unavailable-subtitle: 我们的筹码不够。
 tags: mins_1928
 choose-if: leverage >= 10 
 view-if: justice_minister_party != "SPD"
-on-arrival: leverage -= 10; justice_minister_party = "SPD"; justice_minister = "Radbruch"
+on-arrival: leverage -= 10; justice_minister_party = "SPD"; justice_minister = "Radbruch"; shuffler = 0
 go-to: ministries
 
 社民党的古斯塔夫·拉德布鲁赫被任命为司法部长。
@@ -3082,7 +3098,7 @@ unavailable-subtitle: 我们的筹码不够。
 tags: mins_1928
 choose-if: leverage >= 10 and year >= 1928
 view-if: foreign_minister_party != "SPD"
-on-arrival: leverage -= 10; foreign_minister_party = "SPD"; foreign_minister = "Breitscheid"
+on-arrival: leverage -= 10; foreign_minister_party = "SPD"; foreign_minister = "Breitscheid"; shuffler = 0
 go-to: ministries if (stresemann_dead = 1 or in_weimar_coalition or in_left_front or in_popular_front); foreign_fail if stresemann_dead != 1 and not (in_weimar_coalition or in_left_front or in_popular_front)
 
 [? if stresemann_dead = 1 or in_weimar_coalition or in_left_front or in_popular_front : 社民党的鲁道夫·布赖特沙伊德被任命为外交部长。 ?]
@@ -3116,7 +3132,7 @@ subtitle: 这并非我们惯常的领域。
 unavailable-subtitle: 我们的筹码不够。
 choose-if: leverage >= 10 
 view-if: agriculture_minister_party != "SPD"
-on-arrival: leverage -= 10; agriculture_minister_party = "SPD"; agriculture_minister = "Baade"
+on-arrival: leverage -= 10; agriculture_minister_party = "SPD"; agriculture_minister = "Baade"; shuffler = 0
 go-to: ministries
 tags: mins_1928
 
@@ -3129,19 +3145,19 @@ unavailable-subtitle: 我们的筹码不够。
 tags: mins_1928
 choose-if: leverage >= 15 and year >= 1928
 view-if: reichswehr_minister_party != "SPD"
-on-arrival: leverage -= 15; reichswehr_minister_party = "SPD"; reichswehr_minister = "Leber"; coup_progress += 1
+on-arrival: leverage -= 15; reichswehr_minister_party = "SPD"; reichswehr_minister = "Leber"; coup_progress += 1; shuffler = 0
 go-to: ministries
 
 社民党的尤利乌斯·勒贝尔被任命为国防部长。
 
 @postal_affairs
 title: 邮政事务部
-view-if: fun_value >= 62 and fun_value < 70 and postal_affairs_minister_party != "SPD"
+view-if: ((fun_value >= 62 and fun_value < 70) or shuffler) and postal_affairs_minister_party != "SPD"
 subtitle: 这不是我们惯常的地盘。除非你乐意玩些无厘头的笑话,否则不建议接手这个部。
 unavailable-subtitle: 我们的筹码不够。
 tags: mins_1928
-choose-if: leverage >= 35 and chancellor == "Wirth"
-on-arrival: leverage -= 35; postal_affairs_minister_party = "SPD"; postal_affairs_minister = "Fillak"
+choose-if: (leverage >= 35 and chancellor == "Wirth") or (shuffles >= 10)
+on-arrival: leverage -= 35; postal_affairs_minister_party = "SPD"; postal_affairs_minister = "Fillak"; shuffler = 0
 go-to: ministries
 
 社民党的托比亚斯·菲拉克被任命为邮政事务部长。
@@ -3159,56 +3175,56 @@ tags: mins_1928
 @drop_labor
 title: 放弃劳工部。
 view-if: labor_minister_party = "SPD"
-on-arrival: labor_minister_party = "Z"; labor_minister = "Stegerwald"; leverage += 5;
+on-arrival: labor_minister_party = "Z"; labor_minister = "Stegerwald"; leverage += 5; shuffler = 0
 tags: drop_mins_1928
 go-to: ministries
 
 @drop_interior
 title: 放弃内政部。
 view-if: interior_minister_party = "SPD"
-on-arrival: interior_minister_party = "Z"; interior_minister = "Wirth"; leverage += 5;
+on-arrival: interior_minister_party = "Z"; interior_minister = "Wirth"; leverage += 5; shuffler = 0
 tags: drop_mins_1928
 go-to: ministries
 
 @drop_finance
 title: 放弃财政部。
 view-if: finance_minister_party = "SPD"
-on-arrival: finance_minister_party = "DVP"; finance_minister = "Moldenhauer"; leverage += 10; finance_minister_party = "Z" if in_weimar_coalition or in_popular_front; finance_minister = "Köhler" if in_weimar_coalition or in_popular_front
+on-arrival: finance_minister_party = "DVP"; finance_minister = "Moldenhauer"; leverage += 10; finance_minister_party = "Z" if in_weimar_coalition or in_popular_front; finance_minister = "Köhler" if in_weimar_coalition or in_popular_front; shuffler = 0
 tags: drop_mins_1928
 go-to: ministries
 
 @drop_economic
 title: 放弃经济部。
 view-if: economic_minister_party = "SPD"
-on-arrival: economic_minister_party = "DVP"; economic_minister = "Curtius"; leverage += 10; economic_minister_party = ddp_name if in_weimar_coalition or in_popular_front; economic_minister = "Dietrich" if in_weimar_coalition or in_popular_front;
+on-arrival: economic_minister_party = "DVP"; economic_minister = "Curtius"; leverage += 10; economic_minister_party = ddp_name if in_weimar_coalition or in_popular_front; economic_minister = "Dietrich" if in_weimar_coalition or in_popular_front; shuffler = 0
 tags: drop_mins_1928
 go-to: ministries
 
 @drop_justice
 title: 放弃司法部。
 view-if: justice_minister_party = "SPD"
-on-arrival: justice_minister_party = ddp_name; justice_minister = "Koch-Weser"; leverage += 10;
+on-arrival: justice_minister_party = ddp_name; justice_minister = "Koch-Weser"; leverage += 10; shuffler = 0
 tags: drop_mins_1928
 go-to: ministries
 
 @drop_foreign
 title: 放弃外交部。
 view-if: foreign_minister_party = "SPD"
-on-arrival: foreign_minister_party = "DVP"; foreign_minister = "Stresemann"; foreign_minister = "Curtius" if stresemann_dead; leverage += 10; foreign_minister_party = "Z" if in_weimar_coalition or in_popular_front; foreign_minister = "Wirth" if in_weimar_coalition or in_popular_front;
+on-arrival: foreign_minister_party = "DVP"; foreign_minister = "Stresemann"; foreign_minister = "Curtius" if stresemann_dead; leverage += 10; foreign_minister_party = "Z" if in_weimar_coalition or in_popular_front; foreign_minister = "Wirth" if in_weimar_coalition or in_popular_front; shuffler = 0
 tags: drop_mins_1928
 go-to: ministries
 
 @drop_agriculture
 title: 放弃农业部。
 view-if: agriculture_minister_party = "SPD"
-on-arrival: agriculture_minister_party = ddp_name; agriculture_minister = "Dietrich"; leverage += 10; agriculture_minister_party = "Z" if in_weimar_coalition; agriculture_minister = "Hermes" if in_weimar_coalition
+on-arrival: agriculture_minister_party = ddp_name; agriculture_minister = "Dietrich"; leverage += 10; agriculture_minister_party = "Z" if in_weimar_coalition; agriculture_minister = "Hermes" if in_weimar_coalition; shuffler = 0
 tags: drop_mins_1928
 go-to: ministries
 
 @drop_reichswehr
 title: 放弃国防部。
 view-if: reichswehr_minister_party = "SPD"
-on-arrival: reichswehr_minister_party = "I"; reichswehr_minister = "Groener"; leverage += 15; coup_progress -= 1
+on-arrival: reichswehr_minister_party = "I"; reichswehr_minister = "Groener"; leverage += 15; coup_progress -= 1; shuffler = 0
 tags: drop_mins_1928
 go-to: ministries
 
@@ -3216,5 +3232,5 @@ go-to: ministries
 title: 放弃邮政事务部。
 view-if: postal_affairs_minister_party == "SPD"
 tags: drop_mins_1928
-on-arrival: leverage += 35; postal_affairs_minister_party = "I"; postal_affairs_minister = "Nobody"
+on-arrival: leverage += 35; postal_affairs_minister_party = "I"; postal_affairs_minister = "Nobody"; shuffler = 0
 go-to: ministries

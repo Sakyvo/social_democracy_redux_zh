@@ -207,3 +207,18 @@ subtitle: **……必须……**
 
 
 
+
+@aufhauser_generic
+tags: mind_reading
+title: 西格弗里德·奥夫霍伊泽
+subtitle: 唔……
+
+我在女人面前总是不自在。
+
+@aufhauser_specialized
+tags: mind_reading
+title: 西格弗里德·奥夫霍伊泽
+view-if: aufhauser_advisor
+subtitle: 好吧……
+
+那你到底是怎么领导一个政党的?

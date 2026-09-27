@@ -37,7 +37,7 @@ jobs:
         uses: actions/checkout@v4
         with:
           repository: CuttleCraft/social_democracy_redux
-          ref: 0a378e2863bc0f39b4f5d048c2d2343706add16a
+          ref: 15910ad3de614425061780aae5a1d079855d0381
           path: .upstream
       - name: 构建
         run: |

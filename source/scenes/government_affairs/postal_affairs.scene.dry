@@ -16,6 +16,9 @@ tags: govt_affairs
 
 - @postal_loyalty: 提升邮政部门的忠诚度。
 - @expand_postal: 扩充邮政部门。
+- @fanmail: 监视路德维希·卡斯的粉丝来信。
+- @intercept_fanmail: 截取路德维希·卡斯的粉丝来信。
+- @stuff_mailbox: 往路德维希·卡斯的信箱里塞进更多粉丝来信。
 #- @nuclear_research: Direct the postal services to nuclear research.
 - @distribute_vorwarts: 通过邮政部门投递《前进报》。
 - @infiltrate_far_right: 渗透并截取极右翼的邮件。
@@ -23,6 +26,89 @@ tags: govt_affairs
 - @leak_blackmail: 公布我们搜集的关于资产阶级政党的把柄。
 - @militarize: 让邮差军事化。
 - @sylvan_sprite
+
+@fanmail
+view-if: z_party_leader == "Kaas"
+on-arrival: fanmail_monitoring = 1
+max-visits: 1
+
+自卡斯成为中央党领袖以来,我们注意到路德维希·卡斯收到了大量粉丝来信。我们已开始监视这些信件的往来。
+
+@intercept_fanmail
+view-if: fanmail_monitoring
+choose-if: fun_value > 0 
+unavailable-subtitle: 路德维希·卡斯收不到粉丝来信。
+
+既然我们在监视路德维希·卡斯的粉丝来信,便可以选择扣下许多寄给他的信件,让它们无法送达。我们该扣下多少?
+
+- @minus_one: 一封信。
+- @minus_two: 两封信。
+- @minus_five: 五封信。
+- @minus_ten: 十封信。
+- @minus_twentyfive: 二十五封信。
+
+@minus_one
+on-arrival: fun_value -= 1
+
+我们扣下了一封信。
+
+@minus_two
+on-arrival: fun_value -= 2
+
+我们扣下了两封信。
+
+@minus_five
+on-arrival: fun_value -= 5
+
+我们扣下了五封信。
+
+@minus_ten
+on-arrival: fun_value -= 10
+
+我们扣下了十封信。
+
+@minus_twentyfive
+on-arrival: fun_value -= 25
+
+我们扣下了二十五封信。
+
+@stuff_mailbox
+view-if: fanmail_monitoring
+choose-if: fun_value <= 100
+unavailable-subtitle: 路德维希·卡斯的信箱已经塞不下更多信了。
+
+既然我们在监视路德维希·卡斯的粉丝来信,便可以选择伪造并复制更多寄给他的粉丝来信,把他的信箱塞满。我们该塞进多少?
+
+- @add_one: 一封信。
+- @add_two: 两封信。
+- @add_five: 五封信。
+- @add_ten: 十封信。
+- @add_twentyfive: 二十五封信。
+
+@add_one
+on-arrival: fun_value += 1
+
+我们投递了一封信。
+
+@add_two
+on-arrival: fun_value += 2
+
+我们投递了两封信。
+
+@add_five
+on-arrival: fun_value += 5
+
+我们投递了五封信。
+
+@add_ten
+on-arrival: fun_value += 10
+
+我们投递了十封信。
+
+@add_twentyfive
+on-arrival: fun_value += 25
+
+我们投递了二十五封信。
 
 @postal_loyalty
 on-arrival: postal_loyalty += 0.05
